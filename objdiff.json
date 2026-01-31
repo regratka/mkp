@@ -1,0 +1,24 @@
+{
+  "custom_make": "ninja",
+  "target_dir": "build/orig/",
+  "base_dir": "build/src/",
+  "build_base": true,
+  "build_target": false,
+  "watch_patterns": [
+    "*.c",
+    "*.cpp",
+    "*.h",
+    "*.hpp"
+  ],
+  "units": [
+    {
+      "name": "cMagLog",
+      "target_path": "build/orig/me2/cMagLog.obj",
+      "base_path": "build/src/me2/cMagLog.obj",
+      "reverse_fn_order": false,
+      "symbol_mappings": {
+        "cMagLog::Dummy.txt": "??_C@_09DHKPFBDL@Dummy?4txt?$AA@"
+      }
+    }
+  ]
+}

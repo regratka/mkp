@@ -1,0 +1,10 @@
+ninja_required_version = 1.5
+builddir = build/src/me2
+cl = build\compilers\msvc7\Bin\CL.exe
+cl_common_flags = /I src/me2 /I build/compilers/msvc7/include 
+cl_flags = $cl_common_flags /O2 /Zi 
+rule cc
+  command = $cl /nologo $cl_flags /c $in /Fd$out.pdb /Fo$out
+  deps = msvc
+
+build $builddir/cMagLog.obj: cc src/me2/cMagLog.cpp | src/me2/cMagLog.h
