@@ -1,10 +1,16 @@
 ninja_required_version = 1.5
 builddir = build/src/me2
-cl = build\compilers\msvc7\Bin\CL.exe
-cl_common_flags = /I src/me2 /I build/compilers/msvc7/include 
-cl_flags = $cl_common_flags /O2 /Zi 
-rule cc
-  command = $cl /nologo $cl_flags /c $in /Fd$out.pdb /Fo$out
+cl66 = build\compilers\msvc6.6\Bin\CL.exe
+cl7 = build\compilers\msvc7\Bin\CL.exe
+cl_common_flags = /I src/me2 /O2 /Zi /MT
+cl_flags_66 = $cl_common_flags  /I build/compilers/msvc6.6/include /I build/tools/dx8/include
+cl_flags_7 = $cl_common_flags  /I build/compilers/msvc7/include /I build/tools/dx8/include 
+rule cc66
+  command = $cl66 /nologo $cl_flags_66 /c $in /Fd$out.pdb /Fo$out
+  deps = msvc
+rule cc7
+  command = $cl7 /nologo $cl_flags_7 /c $in /Fd$out.pdb /Fo$out
   deps = msvc
 
-build $builddir/cMagLog.obj: cc src/me2/cMagLog.cpp | src/me2/cMagLog.h
+build $builddir/cMagLog.obj: cc7 src/me2/cMagLog.cpp | src/me2/cMagLog.h
+build $builddir/cMp3Player.obj: cc7 src/me2/cMp3Player.cpp | src/me2/cMp3Player.h

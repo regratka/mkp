@@ -19,6 +19,16 @@
       "symbol_mappings": {
         "cMagLog::Dummy.txt": "??_C@_09DHKPFBDL@Dummy?4txt?$AA@"
       }
+    },
+    {
+      "name": "cMp3Player",
+      "target_path": "build/orig/me2/cMp3Player.obj",
+      "base_path": "build/src/me2/cMp3Player.obj",
+      "reverse_fn_order": false,
+      "symbol_mappings": {
+        "??0cMp3Player@@QAE@ABV0@@Z": "??0cMp3Player@@QAE@AAV0@@Z",
+        "cMp3Player::scalar_destructor": "??_GcMp3Player@@UAEPAXI@Z"
+      }
     }
   ]
 }

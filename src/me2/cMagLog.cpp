@@ -72,7 +72,7 @@ void cMagLog::TexturesLog(char const * format, ...) {
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
     FILE* dataFile = fopen("Textures.txt", "a");
-    fprintf(dataFile, "%s", buffer);
+    fprintf(dataFile, "%s%f", buffer);
     fclose(dataFile);
     DebugLog(buffer);
 }
