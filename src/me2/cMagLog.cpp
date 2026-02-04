@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <windows.h>
 
+static char read_flag[] = "r";
+static char print_buf[] ="%s\n";
+
 cMagLog::cMagLog(){
     logEnabled = false;
     logFilename = "log.txt";
@@ -31,7 +34,7 @@ void cMagLog::DataLog(char const * format, ...) {
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
     FILE* dataFile = fopen("data.txt", "a");
-    fprintf(dataFile, "%s", buffer);
+    fprintf(dataFile, print_buf, buffer);
     fclose(dataFile);
 }
 
@@ -44,7 +47,7 @@ void cMagLog::CrashLog(char const * format, ...) {
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
     FILE* dataFile = fopen("crash.txt", "a");
-    fprintf(dataFile, "%s", buffer);
+    fprintf(dataFile, print_buf, buffer);
     fclose(dataFile);
     DebugLog(buffer);
 }
@@ -57,8 +60,8 @@ void cMagLog::TextureErrorLog(char const * format, ...) {
     va_list args;
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
-    FILE* dataFile = fopen("TextCrash.txt", "a");
-    fprintf(dataFile, "%s", buffer);
+    FILE* dataFile = fopen("TexCrash.txt", "a");
+    fprintf(dataFile, print_buf, buffer);
     fclose(dataFile);
     DebugLog(buffer);
 }
@@ -72,7 +75,7 @@ void cMagLog::TexturesLog(char const * format, ...) {
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
     FILE* dataFile = fopen("Textures.txt", "a");
-    fprintf(dataFile, "%s%f", buffer);
+    fprintf(dataFile, print_buf, buffer);
     fclose(dataFile);
     DebugLog(buffer);
 }
@@ -86,7 +89,7 @@ void cMagLog::FileLog(char const * format, ...) {
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
     FILE* dataFile = fopen(logFilename, "a");
-    fprintf(dataFile, "%s", buffer);
+    fprintf(dataFile, print_buf, buffer);
     fclose(dataFile);
     DebugLog(buffer);
 }
@@ -100,21 +103,7 @@ void cMagLog::DummyLog(char const * format, ...) {
     va_start(args, format);
     _snprintf(buffer, 0x200, format, args);
     FILE* dataFile = fopen("Dummy.txt", "a");
-    fprintf(dataFile, "%s", buffer);
-    fclose(dataFile);
-    DebugLog(buffer);
-}
-
-void cMagLog::ClientServerLog(char const * format, ...) {
-    if (logEnabled == false) {
-        return;
-    }
-    char buffer[512];
-    va_list args;
-    va_start(args, format);
-    _snprintf(buffer, 0x200, format, args);
-    FILE* dataFile = fopen("clientserver.txt", "a");
-    fprintf(dataFile, "%s", buffer);
+    fprintf(dataFile, print_buf, buffer);
     fclose(dataFile);
     DebugLog(buffer);
 }
@@ -131,8 +120,26 @@ void cMagLog::DebugLog(char const * format, ...) {
 }
 
 
+void cMagLog::DebugLog(D3DXMATRIX matrix) {
+    return;
+}
+
+void cMagLog::ClientServerLog(char const * format, ...) {
+    if (logEnabled == false) {
+        return;
+    }
+    char buffer[512];
+    va_list args;
+    va_start(args, format);
+    _snprintf(buffer, 0x200, format, args);
+    FILE* dataFile = fopen("clientserver.txt", "a");
+    fprintf(dataFile, print_buf, buffer);
+    fclose(dataFile);
+    DebugLog(buffer);
+}
+
 void cMagLog::ReadSettings(char* settingsPath) {
-    FILE* settingsFile = fopen(settingsPath, "r");
+    FILE* settingsFile = fopen(settingsPath, read_flag);
     if (settingsFile == NULL) {
         return;
     }
@@ -140,7 +147,7 @@ void cMagLog::ReadSettings(char* settingsPath) {
     while (!feof(settingsFile)) {
         fgets(buffer, 99, settingsFile);
         char* settingName = strtok(buffer," :,");
-        bool cmpRes = strcmp(settingName, "Log");
+        bool cmpRes = stricmp(settingName, "Log");
         if (cmpRes == 0) {
             char* settingVal = strtok(NULL," :");
             if (settingVal != NULL) {
@@ -149,4 +156,8 @@ void cMagLog::ReadSettings(char* settingsPath) {
         }
     }
     fclose(settingsFile);
+}
+
+void cMagLog::DebugLog(D3DXVECTOR3* vector) {
+    return;
 }

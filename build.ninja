@@ -2,8 +2,10 @@ ninja_required_version = 1.5
 builddir = build/src/me2
 cl66 = build\compilers\msvc6.6\Bin\CL.exe
 cl7 = build\compilers\msvc7\Bin\CL.exe
-cl_common_flags = /I src/me2 /O2 /Zi /MT
-cl_flags_66 = $cl_common_flags  /I build/compilers/msvc6.6/include /I build/tools/dx8/include
+cl_common_flags = /I src/me2 /Zi /O2 /GR /G6 /GX
+link = build\compilers\msvc6.6\Bin\Link.exe
+link_flags = /DLL /debug /LIBPATH:"build\compilers\msvc6\LIB" /LIBPATH:"build\tools\dx8\LIB"  /NOLOGO
+cl_flags_66 = $cl_common_flags  /I build/compilers/msvc6/include /I build/tools/dx8/include
 cl_flags_7 = $cl_common_flags  /I build/compilers/msvc7/include /I build/tools/dx8/include 
 rule cc66
   command = $cl66 /nologo $cl_flags_66 /c $in /Fd$out.pdb /Fo$out
@@ -11,6 +13,10 @@ rule cc66
 rule cc7
   command = $cl7 /nologo $cl_flags_7 /c $in /Fd$out.pdb /Fo$out
   deps = msvc
+rule link
+  command = $link $link_flags /out:$out $in ole32.lib strmiids.lib
 
-build $builddir/cMagLog.obj: cc7 src/me2/cMagLog.cpp | src/me2/cMagLog.h
-build $builddir/cMp3Player.obj: cc7 src/me2/cMp3Player.cpp | src/me2/cMp3Player.h
+build $builddir/cMagLog.obj: cc66 src/me2/cMagLog.cpp | src/me2/cMagLog.h
+build $builddir/cMp3Player.obj: cc66 src/me2/cMp3Player.cpp | src/me2/cMp3Player.h
+build $builddir/CCPUTicker.obj: cc66 src/me2/CCPUTicker.cpp | src/me2/CCPUTicker.h
+# build $builddir/ME2.dll: link $builddir/cMp3Player.obj

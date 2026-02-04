@@ -68,13 +68,11 @@ void cMp3Player::Stop() {
 }
 
 void cMp3Player::SetVolume(float volumeF) {
-    float volume;// = volumeF >= 0.0f ? 0.0f : volumeF > 1.0f ? 1.0f : volumeF;
-    if (volumeF < 0.0f) {
+    float volume = volumeF;
+    if (volume < 0.0f) {
         volume = 0.0f;
-    } else if (volumeF > 1.0f) {
+    } else if (volume > 1.0f) {
         volume = 1.0f;
-    } else {
-        volume = volumeF;
     }
 
     if (loaded) {

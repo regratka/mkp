@@ -17,7 +17,21 @@
       "base_path": "build/src/me2/cMagLog.obj",
       "reverse_fn_order": false,
       "symbol_mappings": {
-        "cMagLog::Dummy.txt": "??_C@_09DHKPFBDL@Dummy?4txt?$AA@"
+        "cMagLog::??_C@_01FNLH@a?$AA@": "??_C@_01FNLH@a?$AA@",
+        "cMagLog::??_C@_01LHO@r?$AA@": "_read_flag",
+        "cMagLog::??_C@_02CPFE@?5?3?$AA@": "??_C@_02CPFE@?5?3?$AA@",
+        "cMagLog::??_C@_02DILL@?$CFs?$AA@": "_print_buf",
+        "cMagLog::??_C@_03FEHG@Log?$AA@": "??_C@_03FEHG@Log?$AA@",
+        "cMagLog::??_C@_03MJCL@?5?3?0?$AA@": "??_C@_03MJCL@?5?3?0?$AA@",
+        "cMagLog::??_C@_07OIDI@log?4txt?$AA@": "??_C@_07OIDI@log?4txt?$AA@",
+        "cMagLog::??_C@_08KPKH@data?4txt?$AA@": "??_C@_08KPKH@data?4txt?$AA@",
+        "cMagLog::??_C@_09EJBA@crash?4txt?$AA@": "??_C@_09EJBA@crash?4txt?$AA@",
+        "cMagLog::??_C@_09FBGM@Dummy?4txt?$AA@": "??_C@_09FBGM@Dummy?4txt?$AA@",
+        "cMagLog::??_C@_0BB@MHNJ@clientserver?4txt?$AA@": "??_C@_0BB@MHNJ@clientserver?4txt?$AA@",
+        "cMagLog::??_C@_0BE@MJIK@data?2Ustawienia?4cfg?$AA@": "??_C@_0BE@MJIK@data?2Ustawienia?4cfg?$AA@",
+        "cMagLog::??_C@_0N@CLOB@TexCrash?4txt?$AA@": "??_C@_0N@CLOB@TexCrash?4txt?$AA@",
+        "cMagLog::??_C@_0N@KPGB@Textures?4txt?$AA@": "??_C@_0N@KPGB@Textures?4txt?$AA@",
+        "cMagLog::??_C@_0N@MCDH@loadtime?4txt?$AA@": "??_C@_0N@MCDH@loadtime?4txt?$AA@"
       }
     },
     {
@@ -26,8 +40,22 @@
       "base_path": "build/src/me2/cMp3Player.obj",
       "reverse_fn_order": false,
       "symbol_mappings": {
-        "??0cMp3Player@@QAE@ABV0@@Z": "??0cMp3Player@@QAE@AAV0@@Z",
         "cMp3Player::scalar_destructor": "??_GcMp3Player@@UAEPAXI@Z"
+      }
+    },
+    {
+      "name": "CCPUTicker",
+      "target_path": "build/orig/me2/CCPUTicker.obj",
+      "base_path": "build/src/me2/CCPUTicker.obj",
+      "reverse_fn_order": false,
+      "symbol_mappings": {
+        "?WriteRegistry@CCPUTicker@@SA_NPAD0@Z": "?WriteRegistry@CCPUTicker@@SAXPAD0@Z",
+        "CCPUTicker::BaseClassArray": "??_R2CCPUTicker@@8",
+        "CCPUTicker::BaseClassDescriptor": "??_R1A@?0A@A@CCPUTicker@@8",
+        "CCPUTicker::ClassHierarchyDescriptor": "??_R3CCPUTicker@@8",
+        "CCPUTicker::CompleteObjectLocator": "??_R4CCPUTicker@@6B@",
+        "CCPUTicker::RTTI_Type_Descriptor": "??_R0?AVCCPUTicker@@@8",
+        "CCPUTicker::scalar_destructor": "??_GCCPUTicker@@UAEPAXI@Z"
       }
     }
   ]
