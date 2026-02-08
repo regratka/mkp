@@ -1,4 +1,5 @@
 #include <Windows.h>
+#include <../globals.h>
 
 class CCPUTicker {
 
@@ -40,4 +41,4 @@ private:
     int measuresCount;
 };
 
-
+STATIC_ASSERT(sizeof(CCPUTicker) == 0x338);

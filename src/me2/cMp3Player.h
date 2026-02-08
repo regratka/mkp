@@ -1,4 +1,5 @@
 #include <Dshow.h>
+#include "../globals.h"
 
 class cMp3Player {
 
@@ -23,3 +24,5 @@ private:
     bool loaded;
 };
 
+
+STATIC_ASSERT(sizeof(cMp3Player) == 0x18);

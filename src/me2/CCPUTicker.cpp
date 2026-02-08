@@ -1,8 +1,16 @@
 #include "CCPUTicker.h"
 #include <stdio.h>
 #include <math.h>
+// #include <intrin>
 
 #define MAX_MEASURES 10
+
+BOOL CCPUTicker::m_bHasRDTSC = FALSE;
+BOOL CCPUTicker::m_bRunningOnNT = FALSE;
+BOOL CCPUTicker::m_bStaticsCalculated = FALSE;
+double CCPUTicker::m_deviation = 0.0;
+double CCPUTicker::m_freq = 0.0;
+BOOL CCPUTicker::m_bFrequencyCalculated = FALSE;
 
 LONGLONG CCPUTicker::GetTickCount() const {
     return tickCount;
@@ -93,20 +101,22 @@ BOOL CCPUTicker::RunningOnNT() {
 
 
 void CCPUTicker::Measure() {
+    LONGLONG count;
     if (CCPUTicker::m_bHasRDTSC == FALSE) {
-        tickCount = 0;
+        count = 0;
         return;
-    }
-    
-    if (CCPUTicker::m_bRunningOnNT == TRUE) {
-        __asm CLI
-    } 
+    } else {
 
-    tickCount = rdtsc();
-    if (CCPUTicker::m_bRunningOnNT == TRUE) {
-        __asm STI
-    } 
+        if (CCPUTicker::m_bRunningOnNT == TRUE) {
+            __asm CLI
+        } 
     
+        count = rdtsc();
+        if (CCPUTicker::m_bRunningOnNT == TRUE) {
+            __asm STI
+        } 
+    }
+    tickCount = count;
     
     if (CCPUTicker::m_bFrequencyCalculated != TRUE) {
       double dVar2 = GetTickCountAsSeconds();

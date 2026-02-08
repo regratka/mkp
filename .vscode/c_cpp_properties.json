@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/build/compilers/msvc6.6/**",
+                "${workspaceFolder}/build/tools/**",
+                "${workspaceFolder}/src/**"
+            ],
+            "defines": [
+            ],
+            "intelliSenseMode": "windows-msvc-x86"
+        }
+    ],
+    "version": 4
+}

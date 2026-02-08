@@ -139,11 +139,13 @@ void cMagLog::ClientServerLog(char const * format, ...) {
 }
 
 void cMagLog::ReadSettings(char* settingsPath) {
+    char buffer[100];
     FILE* settingsFile = fopen(settingsPath, read_flag);
     if (settingsFile == NULL) {
         return;
     }
-    char buffer[101] = {0};
+
+    memset(buffer, 0, sizeof(buffer));
     while (!feof(settingsFile)) {
         fgets(buffer, 99, settingsFile);
         char* settingName = strtok(buffer," :,");

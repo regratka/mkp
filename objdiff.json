@@ -57,6 +57,16 @@
         "CCPUTicker::RTTI_Type_Descriptor": "??_R0?AVCCPUTicker@@@8",
         "CCPUTicker::scalar_destructor": "??_GCCPUTicker@@UAEPAXI@Z"
       }
+    },
+    {
+      "name": "cMagKernel",
+      "target_path": "build/orig/me2/cMagKernel.obj",
+      "base_path": "build/src/me2/cMagKernel.obj",
+      "reverse_fn_order": false,
+      "symbol_mappings": {
+        "?SetObjectParam@cMagKernel@@UAEXH@Z": "?SetObjectParam@cMagKernel@@QAEXH@Z",
+        "cMagKernel::scalar_destructor": "??_GcMagKernel@@UAEPAXI@Z"
+      }
     }
   ]
 }

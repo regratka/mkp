@@ -1,4 +1,5 @@
 #include <d3dx8math.h>
+#include <globals.h>
 
 class cMagLog {
 public:
@@ -21,3 +22,5 @@ private:
     bool logEnabled;
     char* logFilename;
 };
+
+STATIC_ASSERT(sizeof(cMagLog) == 0x8);

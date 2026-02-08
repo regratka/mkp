@@ -2,7 +2,7 @@ ninja_required_version = 1.5
 builddir = build/src/me2
 cl66 = build\compilers\msvc6.6\Bin\CL.exe
 cl7 = build\compilers\msvc7\Bin\CL.exe
-cl_common_flags = /I src/me2 /Zi /O2 /GR /G6 /GX
+cl_common_flags = /I src /Zi /O2 /GR /G6 /GX
 link = build\compilers\msvc6.6\Bin\Link.exe
 link_flags = /DLL /debug /LIBPATH:"build\compilers\msvc6\LIB" /LIBPATH:"build\tools\dx8\LIB"  /NOLOGO
 cl_flags_66 = $cl_common_flags  /I build/compilers/msvc6/include /I build/tools/dx8/include
@@ -19,4 +19,5 @@ rule link
 build $builddir/cMagLog.obj: cc66 src/me2/cMagLog.cpp | src/me2/cMagLog.h
 build $builddir/cMp3Player.obj: cc66 src/me2/cMp3Player.cpp | src/me2/cMp3Player.h
 build $builddir/CCPUTicker.obj: cc66 src/me2/CCPUTicker.cpp | src/me2/CCPUTicker.h
+build $builddir/cMagKernel.obj: cc66 src/me2/cMagKernel.cpp | src/me2/cMagKernel.h
 # build $builddir/ME2.dll: link $builddir/cMp3Player.obj
