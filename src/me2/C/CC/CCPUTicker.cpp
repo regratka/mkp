@@ -1,7 +1,7 @@
 #include "CCPUTicker.h"
+
 #include <stdio.h>
 #include <math.h>
-// #include <intrin>
 
 #define MAX_MEASURES 10
 

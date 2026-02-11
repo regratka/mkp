@@ -1,0 +1,47 @@
+[
+    {
+        "name": "CCPUTicker",
+        "subpath": "C\\CC",
+        "symbols": [
+            {
+                "type": "function",
+                "name": "??0CCPUTicker@@QAE@XZ",
+                "demangled": "public: __thiscall CCPUTicker::CCPUTicker(void)",
+                "address": "0x00",
+                "size": "0x12"
+            }
+        ]
+    }, 
+    {
+        "name": "CCamera",
+        "subpath": "C\\CC"
+    },
+    {
+        "name": "StateObject_Str",
+        "subpath": ""
+    },
+    {
+        "name": "MagObject",
+        "subpath": "Mag"
+    },
+    {
+        "name": "cMagKernel",
+        "subpath": "c\\Mag"
+    },
+    {
+        "name": "cMp3Player",
+        "subpath": "c"
+    },
+    {
+        "name": "cMagObject",
+        "subpath": "c\\Mag"
+    },
+    {
+        "name": "cMagLog",
+        "subpath": "c\\Mag"
+    },
+    {
+        "name": "cMagMeshObject",
+        "subpath": "c\\Mag"
+    }
+]

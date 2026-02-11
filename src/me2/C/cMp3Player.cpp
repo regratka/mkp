@@ -113,6 +113,3 @@ bool cMp3Player::boCompleted() {
     }
     return evCode == EC_COMPLETE;
 }
-
-
-
