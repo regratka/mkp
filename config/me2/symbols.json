@@ -43,5 +43,39 @@
     {
         "name": "cMagMeshObject",
         "subpath": "c\\Mag"
+    },
+    {
+        "name": "cVideoPlayer",
+        "subpath": "c",
+        "size": "0xd64",
+        "functions": [
+            {
+                "mangled": "?Load@cVideoPlayer@@QAEXPAD@",
+                "start": "10088b80",
+                "end": "10088c80",
+                "name": "Load",
+                "visibility": "public",
+                "return": "void",
+                "args": [
+                    {
+                        "type": "char*",
+                        "name": "p_videoName"
+                    }
+                ]
+            },
+            {
+                "mangled": "??0cVideoPlayer@@QAE@ABV0@@",
+                "start": "10007760",
+                "end": "10007890",
+                "name": "cVideoPlayer",
+                "visibility": "public",
+                "args": [
+                    {
+                        "type": "cVideoPlayer*",
+                        "name": "p_other"
+                    }
+                ]
+            }
+        ]
     }
 ]
