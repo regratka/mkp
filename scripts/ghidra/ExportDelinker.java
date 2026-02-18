@@ -51,11 +51,6 @@ public class ExportDelinker extends GhidraScript
             }
         });
 
-        // We change the default option from "Prepend" to "Do Nothing"
-
-        Object doNothing = exporterOptions.get(1).getValueClass().getEnumConstants()[0];
-        Option newOptions = new Option("Leading underscore", doNothing);
-        exporterOptions.set(1, newOptions);
         exporter.setOptions(exporterOptions);
 
         File inFile = askFile("Config File", "Select");

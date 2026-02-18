@@ -14,6 +14,7 @@ cMp3Player::~cMp3Player() {
 }
 
 void cMp3Player::Cleanup() {
+    
     if (mediaControl != NULL) {
         mediaControl->Stop();
     }

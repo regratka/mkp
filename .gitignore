@@ -43,3 +43,4 @@
 build
 
 tools/**/
+scripts/__pycache__

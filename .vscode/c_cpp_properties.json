@@ -3,9 +3,9 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/build/compilers/msvc6.6/**",
-                "${workspaceFolder}/build/tools/**",
-                "${workspaceFolder}/src/**"
+                "${workspaceFolder}/tools/msvc6.6/**",
+                "${workspaceFolder}/tools/dx8/**",
+                "${workspaceFolder}/include/**"
             ],
             "defines": [
             ],
