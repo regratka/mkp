@@ -1,45 +1,45 @@
 {
-    "custom_make": "ninja",
-    "target_dir": "build\\me2\\orig",
-    "base_dir": "build\\me2\\src",
-    "build_base": true,
-    "build_target": false,
-    "watch_patters": [
-        "*.c",
-        "*.cpp",
-        "*.h",
-        "*.hpp"
-    ],
-    "units": [
-        {
-            "name": "cVideoPlayer",
-            "target_path": "build\\me2\\orig\\cVideoPlayer.obj",
-            "base_path": "build\\me2\\src\\cVideoPlayer.obj",
-            "reverse_fn_order": false
-        },
-        {
-            "name": "CCPUTicker",
-            "target_path": "build\\me2\\orig\\CCPUTicker.obj",
-            "base_path": "build\\me2\\src\\CCPUTicker.obj",
-            "reverse_fn_order": false
-        },
-        {
-            "name": "cMagLog",
-            "target_path": "build\\me2\\orig\\cMagLog.obj",
-            "base_path": "build\\me2\\src\\cMagLog.obj",
-            "reverse_fn_order": false
-        },
-        {
-            "name": "cMagKernel",
-            "target_path": "build\\me2\\orig\\cMagKernel.obj",
-            "base_path": "build\\me2\\src\\cMagKernel.obj",
-            "reverse_fn_order": false
-        },
-        {
-            "name": "cMp3Player",
-            "target_path": "build\\me2\\orig\\cMp3Player.obj",
-            "base_path": "build\\me2\\src\\cMp3Player.obj",
-            "reverse_fn_order": false
-        }
-    ]
+  "custom_make": "ninja",
+  "target_dir": "build\\me2\\orig",
+  "base_dir": "build\\me2\\src",
+  "build_base": true,
+  "build_target": false,
+  "watch_patterns": [
+    "*.c",
+    "*.cpp",
+    "*.h",
+    "*.hpp"
+  ],
+  "units": [
+    {
+      "name": "cVideoPlayer",
+      "target_path": "build\\me2\\orig\\cVideoPlayer.obj",
+      "base_path": "build\\me2\\src\\cVideoPlayer.obj",
+      "reverse_fn_order": false
+    },
+    {
+      "name": "CCPUTicker",
+      "target_path": "build\\me2\\orig\\CCPUTicker.obj",
+      "base_path": "build\\me2\\src\\CCPUTicker.obj",
+      "reverse_fn_order": false
+    },
+    {
+      "name": "cMagLog",
+      "target_path": "build\\me2\\orig\\cMagLog.obj",
+      "base_path": "build\\me2\\src\\cMagLog.obj",
+      "reverse_fn_order": false
+    },
+    {
+      "name": "cMagKernel",
+      "target_path": "build\\me2\\orig\\cMagKernel.obj",
+      "base_path": "build\\me2\\src\\cMagKernel.obj",
+      "reverse_fn_order": false
+    },
+    {
+      "name": "cMp3Player",
+      "target_path": "build\\me2\\orig\\cMp3Player.obj",
+      "base_path": "build\\me2\\src\\cMp3Player.obj",
+      "reverse_fn_order": false
+    }
+  ]
 }

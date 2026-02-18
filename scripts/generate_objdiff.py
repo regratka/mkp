@@ -10,7 +10,7 @@ def generateObjdiffConfig(target_dir: Path, base_dir: Path, units: list, output_
     config["base_dir"] = str(base_dir)
     config["build_base"] = True
     config["build_target"] = False
-    config["watch_patters"] = ["*.c","*.cpp","*.h","*.hpp"]
+    config["watch_patterns"] = ["*.c","*.cpp","*.h","*.hpp"]
     conf_units = []
 
     for unit in units:

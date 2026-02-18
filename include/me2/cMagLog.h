@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include <d3dx8math.h>
+
+
 class cMagLog {
 public:
 	/* 10030390 */ cMagLog();

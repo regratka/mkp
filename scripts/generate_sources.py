@@ -84,7 +84,10 @@ def generateUnitSourceFunction(source_file, fun: Function):
         source_file.write(f"{fun.returnType} ")
     source_file.write(f"{fun.namespace}::{fun.name}(")
     source_file.write(", ".join(f"{arg} param_{param_idx+1}" for param_idx, arg in enumerate(fun.args)))
-    source_file.write(") {\n\n}\n\n")
+    source_file.write(") {\n")
+    if fun.returnType != 'void' and fun.type is not FunctionType.CONSTRUCTOR:
+        source_file.write("\treturn 0;\n")
+    source_file.write("}\n\n")
 
 if __name__ == "__main__":
     workspacePath = Path(__file__).parent.parent

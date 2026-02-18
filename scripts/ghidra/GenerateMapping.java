@@ -24,40 +24,42 @@ public class GenerateMapping extends GhidraScript
         switch (ty.toString())
         {
         case "bool":
-        case "u8":
-        case "i8":
-        case "u16":
-        case "i16":
-        case "u32":
-        case "i32":
-        case "f32":
+        case "char":
+        case "uchar":
+        case "short":
+        case "ushort":
+        case "int":
+        case "uint":
+        case "long":
+        case "ulong":
+        case "float":
+        case "double":
             return ty.toString();
 
-        // Unsigned primitives
+        case "i8":
+            return "char";
         case "undefined":
         case "undefined1":
         case "byte":
-            return "u8";
+        case "u8":
+            return "uchar";
+
+        case "i16":
+            return "short";
         case "undefined2":
-        case "ushort":
-            return "u16";
+        case "u16":
+            return "ushort";
+
+        case "i32":
+            return "int";
         case "undefined4":
-        case "uint":
-            return "u32";
-        case "ulong":
-            return "unsigned long";
-
-        // Signed primitives
-        case "short":
-            return "i16";
-        case "int":
-            return "i32";
-        case "long":
-            return "long";
-
-        // Floats
-        case "float":
-            return "f32";
+        case "u32":
+            return "uint";
+            
+        case "f32":
+            return "float";
+        case "f64":
+            return "double";
         }
         if (ty instanceof Pointer)
         {
