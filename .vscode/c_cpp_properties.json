@@ -3,7 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/tools/msvc6.6/**",
+                "${workspaceFolder}/tools/msvc66/**",
                 "${workspaceFolder}/tools/dx8/**",
                 "${workspaceFolder}/include/**"
             ],
