@@ -40,6 +40,12 @@
       "target_path": "build\\me2\\orig\\cMp3Player.obj",
       "base_path": "build\\me2\\src\\cMp3Player.obj",
       "reverse_fn_order": false
+    },
+    {
+      "name": "StateObject_Str",
+      "target_path": "build\\me2\\orig\\StateObject_Str.obj",
+      "base_path": "build\\me2\\src\\StateObject_Str.obj",
+      "reverse_fn_order": false
     }
   ]
 }

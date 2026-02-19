@@ -56,34 +56,44 @@ def make_all_huge_name(name: str):
 
 def generateUnitHeaderClass(headerFile, funByNamespaces, ns):
     headerFile.write(f"class {ns} {{\n")
-    nsFunctions = funByNamespaces[ns]
-    headerFile.write("public:\n")
-    for fun in nsFunctions:
-        generateUnitHeaderFunction(headerFile, fun)
+    if ns in funByNamespaces:
+        nsFunctions = funByNamespaces[ns]
+        headerFile.write("public:\n")
+        for fun in nsFunctions:
+            generateUnitHeaderFunction(headerFile, fun)
     headerFile.write("};\n\n")
 
 def generateUnitHeaderFunction(headerFile, fun: Function):
-    headerFile.write(f"\t/* {fun.start:x} */ ")
+    headerFile.write(f"\t/* {fun.start:X} */ ")
     if fun.type is FunctionType.STATIC:
         headerFile.write("static ")
     if fun.type is not FunctionType.CONSTRUCTOR:
         headerFile.write(f"{fun.returnType} ")
     headerFile.write(f"{fun.name}(")
     headerFile.write(", ".join(f"{arg} param_{param_idx+1}" for param_idx, arg in enumerate(fun.args)))
+    if fun.hasVarArgs:
+        if len(fun.args) > 0:
+            headerFile.write(", ")
+        headerFile.write("...")
     headerFile.write(");\n")
 
 def generateUnitSource(source_file, funByNamespaces, unitName, unitNamespaces):
     source_file.write(f"#include \"{unitName}.h\"\n\n")
     for ns in unitNamespaces:
-        for fun in funByNamespaces[ns]:
-            generateUnitSourceFunction(source_file, fun)
+        if ns in funByNamespaces:
+            for fun in funByNamespaces[ns]:
+                generateUnitSourceFunction(source_file, fun)
 
 def generateUnitSourceFunction(source_file, fun: Function):
-    source_file.write(f"/* {fun.start:x}-{fun.end:x} {fun.size:05x}\t*/\n")
+    source_file.write(f"/* {fun.start:X}-{fun.end:X} {fun.size:05X}\t*/\n")
     if fun.type is not FunctionType.CONSTRUCTOR:
         source_file.write(f"{fun.returnType} ")
     source_file.write(f"{fun.namespace}::{fun.name}(")
     source_file.write(", ".join(f"{arg} param_{param_idx+1}" for param_idx, arg in enumerate(fun.args)))
+    if fun.hasVarArgs:
+        if len(fun.args) > 0:
+            source_file.write(", ")
+        source_file.write("...")
     source_file.write(") {\n")
     if fun.returnType != 'void' and fun.type is not FunctionType.CONSTRUCTOR:
         source_file.write("\treturn 0;\n")
