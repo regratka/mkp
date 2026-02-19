@@ -1032,7 +1032,7 @@ cMagLog::TexturesLog;0x10030560;0x77;__cdecl;varargs;void;cMagLog*;char*
 cMagLog::FileLog;0x100305e0;0x76;__cdecl;varargs;void;cMagLog*;char*
 cMagLog::DummyLog;0x10030660;0x77;__cdecl;varargs;void;cMagLog*;char*
 cMagLog::DebugLog;0x100306e0;0x44;__cdecl;varargs;void;cMagLog*;char*
-cMagLog::DebugLog;0x10030730;0x3;__thiscall;;void
+cMagLog::DebugLog;0x10030730;0x3;__thiscall;;void;cMagLog*;D3DXMATRIX
 MagnumMesh::CalculateDynamicVertexColor;0x10030740;0x3;__thiscall;;void
 cMagLog::ClientServerLog;0x10030750;0x77;__cdecl;varargs;void;cMagLog*;char*
 cMagLog::ReadSettings;0x100307d0;0x9c;__thiscall;;void;cMagLog*;char*
