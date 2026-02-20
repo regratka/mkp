@@ -44,3 +44,6 @@ build
 
 tools/**/
 scripts/__pycache__
+
+objdiff.json
+build.ninja
