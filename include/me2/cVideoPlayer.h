@@ -8,7 +8,7 @@ public:
 	/* 10007760 */ cVideoPlayer(cVideoPlayer* param_1);
 	/* 10007890 */ cVideoPlayer* operator=(cVideoPlayer* param_1);
 	/* 10088a60 */ cVideoPlayer();
-	/* 10088aa0 */ ~cVideoPlayer();
+	/* 10088aa0 */ virtual ~cVideoPlayer();
 	/* 10088af0 */ void Cleanup();
 	/* 10088b80 */ void Load(char* param_1);
 	/* 10088c80 */ void Play();

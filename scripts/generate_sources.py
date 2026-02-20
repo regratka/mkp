@@ -8,23 +8,9 @@ ME_CONFIG_PATH = "config\\me2\\"
 ME_SRC_PATH = "src\\me2"
 
 
-def generateSources(mapping_file:str, units_listing:str, source_dir: Path, include_dir: Path):
-    funByNamespaces = {}
-    with open(mapping_file) as mapping_f:
-        for csvLine in mapping_f.read().splitlines():
-            function = Function.create(csvLine)
-            ns = function.namespace
-            if ns in funByNamespaces:
-                funByNamespaces[ns].append(function)
-            else:
-                funByNamespaces[ns] = [function]
-
-    with open(units_listing) as units_f:
-        for unitLine in units_f.read().splitlines():
-            unitParts = unitLine.split(',')
-            unitName = unitParts[0]
-            unitNamespaces = unitParts[1:]
-            generateUnitSources(funByNamespaces, unitName, unitNamespaces, source_dir, include_dir)
+def generateSources(mappings, units, source_dir: Path, include_dir: Path):
+    for unit, namespaces in units.items():
+        generateUnitSources(mappings, unit, namespaces, source_dir, include_dir)
 
 def generateUnitSources(funByNamespaces, unitName, unitNamespaces, source_dir, include_dir):
     header_file = include_dir / (unitName + ".h") 

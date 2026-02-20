@@ -1,6 +1,5 @@
 cVideoPlayer,cVideoPlayer
 CCPUTicker,CCPUTicker
 cMagLog,cMagLog
-cMagKernel,cMagKernel
+cMagKernel,cMagKernel,StateObject_Str
 cMp3Player,cMp3Player
-StateObject_Str,StateObject_Str

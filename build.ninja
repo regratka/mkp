@@ -10,4 +10,3 @@ build $builddir/CCPUTicker.obj: cc src\me2\CCPUTicker.cpp | include\me2\CCPUTick
 build $builddir/cMagLog.obj: cc src\me2\cMagLog.cpp | include\me2\cMagLog.h
 build $builddir/cMagKernel.obj: cc src\me2\cMagKernel.cpp | include\me2\cMagKernel.h
 build $builddir/cMp3Player.obj: cc src\me2\cMp3Player.cpp | include\me2\cMp3Player.h
-build $builddir/StateObject_Str.obj: cc src\me2\StateObject_Str.cpp | include\me2\StateObject_Str.h

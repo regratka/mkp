@@ -3,20 +3,32 @@
 
 #include <globals.h>
 
+#include <Dshow.h>
+
 class cMp3Player {
 public:
-	/* 100076a0 */ cMp3Player(cMp3Player* param_1);
-	/* 100076d0 */ cMp3Player* operator=(cMp3Player* param_1);
-	/* 10088e30 */ cMp3Player();
-	/* 10088e60 */ ~cMp3Player();
-	/* 10088e70 */ void Cleanup();
-	/* 10088ed0 */ void Load(char* param_1);
-	/* 10088f60 */ void Play();
-	/* 10088f80 */ void Pause();
-	/* 10088fa0 */ void Stop();
-	/* 10088fc0 */ void SetVolume(float param_1);
+	/* 100076A0 */ cMp3Player(cMp3Player const & p_other);
+	/* 100076D0 */ cMp3Player& operator=(cMp3Player const & p_path);
+	/* 10088E30 */ cMp3Player();
+	/* 10088E60 */ virtual ~cMp3Player();
+	/* 10088E70 */ void Cleanup();
+	/* 10088ED0 */ void Load(char* param_1);
+	/* 10088F60 */ void Play();
+	/* 10088F80 */ void Pause();
+	/* 10088FA0 */ void Stop();
+	/* 10088FC0 */ void SetVolume(float p_volume);
 	/* 10089050 */ void Rewind();
-	/* 100890a0 */ bool boCompleted();
+	/* 100890A0 */ bool boCompleted();
+
+private:
+	/* 0x04 */	IUnknown*  unknown;
+    /* 0x08 */	IGraphBuilder* graphBuilder;
+    /* 0x0c */	IMediaControl* mediaControl;
+    /* 0x10 */	IMediaEventEx* mediaEventExt;
+    /* 0x14 */	bool loaded;
+
 };
+
+STATIC_ASSERT(sizeof(cMp3Player) == 0x18);
 
 #endif

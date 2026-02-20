@@ -293,9 +293,9 @@ cMagKernel::OnFrame;0x10011260;0x7d;__thiscall;;void;cMagKernel*
 FUN_100112e0;0x100112e0;0x1d;__stdcall;;void;cMagKernel*;uint;uint
 cMagKernel::OnInputKey;0x10011300;0xe0;__thiscall;;void;cMagKernel*;uchar*
 cMagKernel::OnInputMouse;0x100113e0;0xd5;__thiscall;;void;cMagKernel*;float;float;bool;bool
-cMagKernel::GetPosition;0x100114c0;0x3b;__thiscall;;D3DXVECTOR3*;cMagKernel*;D3DXVECTOR3*
-cMagKernel::GetWorldMat;0x10011500;0x1e;__thiscall;;D3DXMATRIX*;cMagKernel*;D3DXMATRIX*
-cMagKernel::GetTransformMatrix;0x10011520;0x9e;__thiscall;;D3DXMATRIX*;cMagKernel*;D3DXMATRIX*
+cMagKernel::GetPosition;0x100114c0;0x3b;__thiscall;;D3DXVECTOR*;cMagKernel*
+cMagKernel::GetWorldMat;0x10011500;0x1e;__thiscall;;D3DXMATRIX;cMagKernel*
+cMagKernel::GetTransformMatrix;0x10011520;0x9e;__thiscall;;D3DXMATRIX;cMagKernel*
 cMagKernel::GetObjectName;0x100115c0;0x4;__thiscall;;char*;cMagKernel*
 cMagKernel::SetObjectName;0x100115d0;0x2b;__thiscall;;void;cMagKernel*;char*
 cMagKernel::SetObjectID;0x10011600;0xd;__thiscall;;void;cMagKernel*;int
@@ -312,7 +312,7 @@ cMagKernel::OnDestinationDir;0x10011900;0x76;__thiscall;;void;cMagKernel*
 cMagKernel::OnInsideFrustumCull;0x10011980;0x65;__thiscall;;void;cMagKernel*
 cMagKernel::OnOutsideFrustumCull;0x100119f0;0x65;__thiscall;;void;cMagKernel*
 cMagKernel::OnParticleSequenceEnd;0x10011a60;0x65;__thiscall;;void;cMagKernel*
-cMagKernel::GetRotMat;0x10011ad0;0x17;__thiscall;;D3DXMATRIX*;cMagKernel*;D3DXMATRIX*
+cMagKernel::GetRotMat;0x10011ad0;0x17;__thiscall;;D3DXMATRIX;cMagKernel*
 cMagKernel::SetRotMat;0x10011af0;0x15;__thiscall;;void;cMagKernel*;D3DXMATRIX
 cMagKernel::OnProcessStateMachine;0x10011b10;0x5;__thiscall;;bool;cMagKernel*;StateObject_Str*;int;MsgObject*
 cMagKernel::OnAnimEnd;0x10011b20;0xca;__thiscall;;void;cMagKernel*;char*
@@ -340,7 +340,7 @@ cMagKernel::OnCrash;0x100123b0;0x79;__thiscall;;void;cMagKernel*
 cMagKernel::GetStatusOnPhysicsUpdate;0x10012430;0x7;__thiscall;;bool;cMagKernel*
 cMagKernel::SetObjectParam;0x10012440;0xa;__thiscall;;void;cMagKernel*;int
 cMagKernel::GetObjectParam;0x10012450;0x4;__thiscall;;int;cMagKernel*
-cMagKernel::Load;0x10012460;0x3;__thiscall;;void
+cMagKernel::Load;0x10012460;0x3;__thiscall;;void;cMagKernel*;std::ifstream*;_ED_CHUNK
 cMagKernel::OnAction;0x10012470;0x10;__thiscall;;void;cMagKernel*
 cMagKernel::OnAction;0x10012480;0x17;__thiscall;;void;cMagKernel*;char*
 cMagKernel::CallOnFrame;0x100124a0;0x19;__thiscall;;void;cMagKernel*
@@ -351,7 +351,7 @@ cMagKernel::CallOnCrash;0x10012560;0x19;__thiscall;;void;cMagKernel*
 cMagKernel::CallOnSlide;0x10012580;0x21;__thiscall;;void;cMagKernel*;cMagMeshObject*
 cMagKernel::CallOnDestTime;0x100125b0;0x29;__thiscall;;void;cMagKernel*;float
 cMagKernel::CallOnPathVerge;0x100125e0;0x13;__thiscall;;void;cMagKernel*
-cMagKernel::CallOnBonePositionUpdate;0x10012600;0xc9;__thiscall;;void;cMagKernel*;uint;uint;uint;uint;uchar;uchar;uchar;uchar;uchar;uchar
+cMagKernel::CallOnBonePositionUpdate;0x10012600;0xc9;__thiscall;;void;cMagKernel*;char*;D3DXVECTOR3;D3DXMATRIX;D3DXMATRIX
 cMagKernel::CallOnSlideObject;0x100126d0;0x23;__thiscall;;void;cMagKernel*;cMagMeshObject*
 cMagKernel::CallOnDetach;0x10012700;0x23;__thiscall;;void;cMagKernel*;cMagMeshObject*
 cMagKernel::CallOnAttach;0x10012730;0x23;__thiscall;;void;cMagKernel*;cMagMeshObject*
@@ -361,7 +361,7 @@ cMagKernel::CallOnMouseLeave;0x100127c0;0x29;__thiscall;;void;cMagKernel*;int
 cMagKernel::CallOnMouseArrive;0x100127f0;0x29;__thiscall;;void;cMagKernel*;int
 cMagKernel::CallOnAnimEnd;0x10012820;0x23;__thiscall;;void;cMagKernel*;char*
 cMagKernel::CallOnDestinationDir;0x10012850;0x13;__thiscall;;void;cMagKernel*
-cMagKernel::CallOnDestinationPos;0x10012870;0x4e;__thiscall;;void;cMagKernel*;uint;uint;uint
+cMagKernel::CallOnDestinationPos;0x10012870;0x4e;__thiscall;;void;cMagKernel*;D3DXVECTOR3
 cMagKernel::CallOnChangeMovement;0x100128c0;0x23;__thiscall;;void;cMagKernel*;int
 cMagKernel::CallOnActivateLevel;0x100128f0;0x13;__thiscall;;void;cMagKernel*
 CSplineControlPoint::~CSplineControlPoint;0x10012910;0x1;__thiscall;;void;CSplineControlPoint*

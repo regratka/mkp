@@ -11,17 +11,18 @@ def visualize(report_filepath: Path, output_file: Path):
         sizes_arr = []
         matches = []
         labels_arr = []
-        cmap = cm['brg']
+        cmap = cm['RdYlGn']
         for unit in units:
-            matched = unit["measures"]["matched_code_percent"]
+            meas = unit["measures"]
+            matched = meas["matched_code_percent"] if "matched_code_percent" in meas else 0
             matches.append(matched/100)
             sizes_arr.append(int(unit["measures"]["total_code"]))
             labels_arr.append(f"{unit["name"]} {matched:.2f}%")
-        squarify.plot(sizes=sizes_arr, label=labels_arr, color=cmap(matches))
+        squarify.plot(sizes=sizes_arr, label=labels_arr, color=cmap(matches), pad=True)
         plt.axis("off")
         plt.savefig(str(output_file))
 
 if __name__ == "__main__":
     workspacePath = Path(__file__).parent.parent
     
-    visualize(workspacePath / "out.json", workspacePath / "progres.png")
+    visualize(workspacePath / "report.json", workspacePath / "progress.png")
