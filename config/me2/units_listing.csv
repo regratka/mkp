@@ -3,3 +3,9 @@ CCPUTicker,CCPUTicker
 cMagLog,cMagLog
 cMagKernel,cMagKernel,StateObject_Str
 cMp3Player,cMp3Player
+cMagObjectList,cMagObjectList
+cMagGameObject,cMagGameObject
+MagState,MagState,MagState::DelayedMessage_Str
+cMagUtility,cMagUtility
+cMagMeshObject,cMagMeshObject
+CGame,CGame

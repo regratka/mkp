@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 34.76696,
-    "total_code": "11188",
-    "matched_code": "3072",
-    "matched_code_percent": 27.45799,
+    "fuzzy_match_percent": 24.364843,
+    "total_code": "21420",
+    "matched_code": "3694",
+    "matched_code_percent": 17.245565,
     "matched_data_percent": 100.0,
-    "total_functions": 138,
-    "matched_functions": 55,
-    "matched_functions_percent": 39.855072,
+    "total_functions": 185,
+    "matched_functions": 58,
+    "matched_functions_percent": 31.351353,
     "complete_data_percent": 100.0,
-    "total_units": 5
+    "total_units": 6
   },
   "units": [
     {
@@ -1360,6 +1360,452 @@
             "demangled_name": "public: bool __thiscall cMp3Player::boCompleted(void)"
           },
           "address": "692"
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "cMagObjectList",
+      "measures": {
+        "fuzzy_match_percent": 12.990829,
+        "total_code": "10232",
+        "matched_code": "622",
+        "matched_code_percent": 6.078968,
+        "matched_data_percent": 100.0,
+        "total_functions": 47,
+        "matched_functions": 3,
+        "matched_functions_percent": 6.382979,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "10232",
+          "fuzzy_match_percent": 12.990829,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "?begin@cMagObjectList@@QAEPAPAVcMagKernel@@XZ",
+          "size": "7",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class cMagKernel ** __thiscall cMagObjectList::begin(void)"
+          },
+          "address": "0"
+        },
+        {
+          "name": "?end@cMagObjectList@@QAEPAPAVcMagKernel@@XZ",
+          "size": "7",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class cMagKernel ** __thiscall cMagObjectList::end(void)"
+          },
+          "address": "7"
+        },
+        {
+          "name": "??0cMagObjectList@@QAE@ABV0@@Z",
+          "size": "1167",
+          "fuzzy_match_percent": 19.532051,
+          "metadata": {
+            "demangled_name": "public: __thiscall cMagObjectList::cMagObjectList(class cMagObjectList const &)"
+          },
+          "address": "14"
+        },
+        {
+          "name": "??4cMagObjectList@@QAEAAV0@ABV0@@Z",
+          "size": "931",
+          "fuzzy_match_percent": 0.5691057,
+          "metadata": {
+            "demangled_name": "public: class cMagObjectList & __thiscall cMagObjectList::operator=(class cMagObjectList const &)"
+          },
+          "address": "1181"
+        },
+        {
+          "name": "cMagObjectList::scalar_destructor",
+          "size": "87",
+          "metadata": {},
+          "address": "2112"
+        },
+        {
+          "name": "??0cMagObjectList@@QAE@XZ",
+          "size": "682",
+          "fuzzy_match_percent": 44.012123,
+          "metadata": {
+            "demangled_name": "public: __thiscall cMagObjectList::cMagObjectList(void)"
+          },
+          "address": "2199"
+        },
+        {
+          "name": "??1cMagObjectList@@UAE@XZ",
+          "size": "608",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall cMagObjectList::~cMagObjectList(void)"
+          },
+          "address": "2881"
+        },
+        {
+          "name": "?AddObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddObject(class cMagKernel *)"
+          },
+          "address": "3489"
+        },
+        {
+          "name": "?AddAlphaMeshObjects@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddAlphaMeshObjects(class cMagKernel *)"
+          },
+          "address": "3920"
+        },
+        {
+          "name": "?AddParticleObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddParticleObject(class cMagKernel *)"
+          },
+          "address": "4351"
+        },
+        {
+          "name": "?AddBillboardObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddBillboardObject(class cMagKernel *)"
+          },
+          "address": "4782"
+        },
+        {
+          "name": "?AddCameraObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddCameraObject(class cMagKernel *)"
+          },
+          "address": "5213"
+        },
+        {
+          "name": "?AddNoShadowObjects@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddNoShadowObjects(class cMagKernel *)"
+          },
+          "address": "5644"
+        },
+        {
+          "name": "?AddSkyBoxObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "15",
+          "fuzzy_match_percent": 35.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddSkyBoxObject(class cMagKernel *)"
+          },
+          "address": "6075"
+        },
+        {
+          "name": "?AddFogObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "15",
+          "fuzzy_match_percent": 35.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddFogObject(class cMagKernel *)"
+          },
+          "address": "6090"
+        },
+        {
+          "name": "?AddSunObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "15",
+          "fuzzy_match_percent": 35.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddSunObject(class cMagKernel *)"
+          },
+          "address": "6105"
+        },
+        {
+          "name": "?AddTerrainObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "15",
+          "fuzzy_match_percent": 35.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddTerrainObject(class cMagKernel *)"
+          },
+          "address": "6120"
+        },
+        {
+          "name": "?AddSpriteObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddSpriteObject(class cMagKernel *)"
+          },
+          "address": "6135"
+        },
+        {
+          "name": "?AddFxObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddFxObject(class cMagKernel *)"
+          },
+          "address": "6566"
+        },
+        {
+          "name": "?AddWaterObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddWaterObject(class cMagKernel *)"
+          },
+          "address": "6997"
+        },
+        {
+          "name": "?AddBlobObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddBlobObject(class cMagKernel *)"
+          },
+          "address": "7428"
+        },
+        {
+          "name": "?AddPortalObject@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddPortalObject(class cMagKernel *)"
+          },
+          "address": "7859"
+        },
+        {
+          "name": "?AddSector@cMagObjectList@@QAE_NPAVcMagKernel@@@Z",
+          "size": "431",
+          "fuzzy_match_percent": 1.117647,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::AddSector(class cMagKernel *)"
+          },
+          "address": "8290"
+        },
+        {
+          "name": "?RenderWaterList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderWaterList(void)"
+          },
+          "address": "8721"
+        },
+        {
+          "name": "?RenderBlobList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderBlobList(void)"
+          },
+          "address": "8774"
+        },
+        {
+          "name": "?RenderObjectList@cMagObjectList@@QAE_NXZ",
+          "size": "65",
+          "fuzzy_match_percent": 5.6,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderObjectList(void)"
+          },
+          "address": "8827"
+        },
+        {
+          "name": "?RenderAlphaList@cMagObjectList@@QAE_NXZ",
+          "size": "46",
+          "fuzzy_match_percent": 8.235294,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderAlphaList(void)"
+          },
+          "address": "8892"
+        },
+        {
+          "name": "?RenderAlphaMeshObjectsList@cMagObjectList@@QAE_NXZ",
+          "size": "46",
+          "fuzzy_match_percent": 8.235294,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderAlphaMeshObjectsList(void)"
+          },
+          "address": "8938"
+        },
+        {
+          "name": "?RenderParticleList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderParticleList(void)"
+          },
+          "address": "8984"
+        },
+        {
+          "name": "?RenderFxList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderFxList(void)"
+          },
+          "address": "9037"
+        },
+        {
+          "name": "?RenderSpriteList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderSpriteList(void)"
+          },
+          "address": "9090"
+        },
+        {
+          "name": "?RenderBillboardList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderBillboardList(void)"
+          },
+          "address": "9143"
+        },
+        {
+          "name": "?RenderNoShadowObjects@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderNoShadowObjects(void)"
+          },
+          "address": "9196"
+        },
+        {
+          "name": "?AddShadowsObject@cMagObjectList@@QAEXPAVcMagKernel@@@Z",
+          "size": "433",
+          "fuzzy_match_percent": 0.5882353,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagObjectList::AddShadowsObject(class cMagKernel *)"
+          },
+          "address": "9249"
+        },
+        {
+          "name": "?RenderShadowsList@cMagObjectList@@QAEXXZ",
+          "size": "44",
+          "fuzzy_match_percent": 6.25,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagObjectList::RenderShadowsList(void)"
+          },
+          "address": "9682"
+        },
+        {
+          "name": "?RenderPortalList@cMagObjectList@@QAE_NXZ",
+          "size": "46",
+          "fuzzy_match_percent": 8.235294,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderPortalList(void)"
+          },
+          "address": "9726"
+        },
+        {
+          "name": "?RenderSectors@cMagObjectList@@QAE_NXZ",
+          "size": "46",
+          "fuzzy_match_percent": 8.235294,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderSectors(void)"
+          },
+          "address": "9772"
+        },
+        {
+          "name": "?CallHandlerOnInputKey@cMagObjectList@@QAEXH_N@Z",
+          "size": "60",
+          "fuzzy_match_percent": 4.1666665,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagObjectList::CallHandlerOnInputKey(int, bool)"
+          },
+          "address": "9818"
+        },
+        {
+          "name": "?RenderCameraList@cMagObjectList@@QAE_NXZ",
+          "size": "53",
+          "fuzzy_match_percent": 7.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderCameraList(void)"
+          },
+          "address": "9878"
+        },
+        {
+          "name": "?RenderSkyBox@cMagObjectList@@QAE_NXZ",
+          "size": "24",
+          "fuzzy_match_percent": 22.222221,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderSkyBox(void)"
+          },
+          "address": "9931"
+        },
+        {
+          "name": "?RenderFog@cMagObjectList@@QAE_NXZ",
+          "size": "24",
+          "fuzzy_match_percent": 22.222221,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderFog(void)"
+          },
+          "address": "9955"
+        },
+        {
+          "name": "?RenderSun@cMagObjectList@@QAE_NXZ",
+          "size": "24",
+          "fuzzy_match_percent": 22.222221,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderSun(void)"
+          },
+          "address": "9979"
+        },
+        {
+          "name": "?RenderTerrain@cMagObjectList@@QAE_NXZ",
+          "size": "24",
+          "fuzzy_match_percent": 22.222221,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall cMagObjectList::RenderTerrain(void)"
+          },
+          "address": "10003"
+        },
+        {
+          "name": "?Find@cMagObjectList@@QAEPAVcMagKernel@@K@Z",
+          "size": "17",
+          "fuzzy_match_percent": 33.333332,
+          "metadata": {
+            "demangled_name": "public: class cMagKernel * __thiscall cMagObjectList::Find(unsigned long)"
+          },
+          "address": "10027"
+        },
+        {
+          "name": "?Find@cMagObjectList@@QAEPAVcMagKernel@@PAV2@@Z",
+          "size": "41",
+          "fuzzy_match_percent": 14.285714,
+          "metadata": {
+            "demangled_name": "public: class cMagKernel * __thiscall cMagObjectList::Find(class cMagKernel *)"
+          },
+          "address": "10044"
+        },
+        {
+          "name": "?CleanList@cMagObjectList@@QAEXXZ",
+          "size": "128",
+          "fuzzy_match_percent": 2.1276596,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagObjectList::CleanList(void)"
+          },
+          "address": "10085"
+        },
+        {
+          "name": "?RenderLensFlare@cMagObjectList@@QAEXXZ",
+          "size": "19",
+          "fuzzy_match_percent": 16.666666,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagObjectList::RenderLensFlare(void)"
+          },
+          "address": "10213"
         }
       ],
       "metadata": {}

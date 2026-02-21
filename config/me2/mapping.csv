@@ -14,8 +14,8 @@ cMagKernel::RemoveObject;0x100011f0;0xd;__thiscall;;void;cMagKernel*;bool
 cMagKernel::cMagKernel;0x10001200;0x11f;__thiscall;;uchar;cMagKernel*;cMagKernel*
 CState::operator=;0x10001320;0x132;__thiscall;;CState*;CState*;CState*
 cMagKernel::scalar_destructor;0x10001460;0x57;__thiscall;;cMagKernel*;cMagKernel*;uchar
-cMagObjectList::begin;0x100014c0;0x7;__thiscall;;cMagKernel**;cMagObjectList*
-cMagObjectList::end;0x100014d0;0x7;__thiscall;;cMagKernel**;cMagObjectList*
+cMagObjectList::begin;0x100014c0;0x7;__thiscall;;std::vector<cMagKernel*>::iterator;cMagObjectList*
+cMagObjectList::end;0x100014d0;0x7;__thiscall;;std::vector<cMagKernel*>::iterator;cMagObjectList*
 cMagObjectList::cMagObjectList;0x100014e0;0x48f;__thiscall;;cMagObjectList*;cMagObjectList*;cMagObjectList*
 cMagObjectList::operator=;0x10001970;0x3a3;__thiscall;;cMagObjectList*;cMagObjectList*;cMagObjectList*
 cMagObjectList::scalar_destructor;0x10001d20;0x57;__thiscall;;cMagObjectList*;cMagObjectList*;uchar
@@ -839,7 +839,7 @@ cMagGameObject::DrawObjectName;0x100278a0;0x19f;__thiscall;;void;cMagGameObject*
 cMagGameObject::GpgFrustum;0x10027a40;0x9b;__thiscall;;void;cMagGameObject*;double;double;double;double;double;double
 cMagGameObject::GpgPerspective;0x10027ae0;0x2de;__thiscall;;void;cMagGameObject*;double;double;double;double;int
 cMagGameObject::ScreenGrab;0x10027dc0;0x186;__thiscall;;long;cMagGameObject*;uchar;char*
-cMagGameObject::RenderTiled;0x10027f50;0x2e4;__thiscall;;long;cMagGameObject*;char*;uchar;int;_func_long*
+cMagGameObject::RenderTiled;0x10027f50;0x2e4;__thiscall;;long;cMagGameObject*;char*;IDirect3DDevice8*;int;_func_long*
 cMagGameObject::SetLastRender;0x10028240;0xad;__thiscall;;void;cMagGameObject*;cMagMeshObject*
 cMagGameObject::swapObject;0x100282f0;0x29;__thiscall;;void;cMagGameObject*;int;int
 cMagGameObject::swap;0x10028320;0x15;__thiscall;;void;cMagGameObject*;int*;int*
@@ -895,9 +895,9 @@ cMagGameObject::EnableSunRendering;0x10029c10;0x23;__thiscall;;void;cMagGameObje
 cMagGameObject::EnableLensFlareRendering;0x10029c40;0x2c;__thiscall;;void;cMagGameObject*;bool
 cMagGameObject::EnableFog;0x10029c70;0x25;__thiscall;;void;cMagGameObject*;bool
 cMagGameObject::ExitGame;0x10029ca0;0x9;__thiscall;;void;cMagGameObject*
-cMagGameObject::GetDistanceTo;0x10029cb0;0xb0;__thiscall;;float10;uint;uchar*;float;float
-cMagGameObject::GetDistanceTo;0x10029d60;0x56;__thiscall;;float10;uint;int*;float;float
-cMagGameObject::GetDistanceTo;0x10029dc0;0x232;__thiscall;;void;uint;void*;float;float;float;float
+cMagGameObject::GetDistanceTo;0x10029cb0;0xb0;__thiscall;;float;cMagGameObject*;char*;D3DXVECTOR3
+cMagGameObject::GetDistanceTo;0x10029d60;0x56;__thiscall;;float;cMagGameObject*;D3DXVECTOR3
+cMagGameObject::GetDistanceTo;0x10029dc0;0x232;__thiscall;;void;cMagGameObject*;char*;D3DXVECTOR3;std::vector<float>
 cMagGameObject::RenderTiled;0x1002a000;0x393;__thiscall;;long;cMagGameObject*;char*;IDirect3DDevice8*;int
 cMagGameObject::ScaleRender;0x1002a3a0;0x325;__thiscall;;long;cMagGameObject*
 cMagGameObject::AddLight;0x1002a6d0;0x14;__thiscall;;void;cMagGameObject*;_LIGHT*
@@ -906,7 +906,7 @@ cMagGameObject::SetActiveCamera;0x1002a700;0x2f;__thiscall;;void;cMagGameObject*
 cMagGameObject::GetActiveCamera;0x1002a730;0xe;__thiscall;;CCamera*;cMagGameObject*
 cMagGameObject::UpdateActiveCamera;0x1002a740;0x9b;__thiscall;;void;cMagGameObject*
 cMagGameObject::RenderActiveCamera;0x1002a7e0;0x22;__thiscall;;void;cMagGameObject*
-cMagGameObject::RotateVector;0x1002a810;0x5d;__thiscall;;uchar;uint;uint;uint;uint*;float
+cMagGameObject::RotateVector;0x1002a810;0x5d;__thiscall;;D3DXVECTOR3;cMagGameObject*;D3DXVECTOR3*;D3DXVECTOR3*;float
 cMagGameObject::GetLevelDirectory;0x1002a870;0xd;__thiscall;;char*;cMagGameObject*
 cMagGameObject::SetMagWindowTitle;0x1002a880;0x1b;__thiscall;;void;cMagGameObject*;char*
 cMagGameObject::DXDiags;0x1002a8a0;0x19e;__thiscall;;void;cMagGameObject*
@@ -921,7 +921,7 @@ cMagGameObject::GetPlayerObject;0x1002ac70;0xe;__thiscall;;cMagMeshObject*;cMagG
 cMagGameObject::EnableLinkMeshToSector;0x1002ac80;0x14;__thiscall;;void;cMagGameObject*;bool
 cMagGameObject::EnableLinkMeshToSector;0x1002aca0;0xe;__thiscall;;bool;cMagGameObject*
 cMagGameObject::LinkMeshToSector;0x1002acb0;0x5;__thiscall;;void;cMagGameObject*
-cMagGameObject::InSector;0x1002acc0;0x64;__thiscall;;ushort;cMagGameObject*;float;float;float;float;float;float;float;float;float
+cMagGameObject::InSector;0x1002acc0;0x64;__thiscall;;bool;cMagGameObject*;D3DXVECTOR3;D3DXVECTOR3;D3DXVECTOR3
 cMagGameObject::SetState;0x1002ad30;0xf9;__thiscall;;void;cMagGameObject*;char*
 cMagGameObject::SetState;0x1002ae30;0xb0;__thiscall;;void;cMagGameObject*;CState*
 cMagGameObject::GetAllFaceCount;0x1002aee0;0x3e;__thiscall;;int;cMagGameObject*
@@ -931,7 +931,7 @@ cMagGameObject::EnableHandlerOnFrame1;0x1002b2a0;0x14;__thiscall;;void;cMagGameO
 cMagGameObject::DrawBigSquareShadow;0x1002b2c0;0x2a8;__thiscall;;void;cMagGameObject*
 cMagGameObject::CreateBigSquareShadow;0x1002b570;0x18b;__thiscall;;void;cMagGameObject*
 cMagGameObject::EnableBigSquareShadow;0x1002b700;0xd;__thiscall;;void;cMagGameObject*;bool
-cMagGameObject::CreateTextureFromFileInZip;0x1002b710;0xf3;__thiscall;;long;cMagGameObject*;uchar;char*;char*;uchar
+cMagGameObject::CreateTextureFromFileInZip;0x1002b710;0xf3;__thiscall;;long;cMagGameObject*;IDirect3DDevice8*;char*;char*;IDirect3DTexture8**
 FUN_1002b810;0x1002b810;0x3d;__fastcall;;uchar;int
 FUN_1002b850;0x1002b850;0x182;__thiscall;;int;void*;int
 FUN_1002b9e0;0x1002b9e0;0x83;__thiscall;;uchar*;void*;uchar*
@@ -1833,7 +1833,7 @@ cMagMeshObject::SetLightingObject;0x1005a120;0xd;__thiscall;;void;cMagMeshObject
 cMagMeshObject::SetAmbient;0x1005a130;0x17;__thiscall;;void;cMagMeshObject*;float;float;float
 cMagMeshObject::JumpEnabled;0x1005a150;0x14;__thiscall;;bool;cMagMeshObject*
 cMagMeshObject::ClassifyPoint;0x1005a170;0x63;__thiscall;;uint;cMagMeshObject*;float;float;float;float;float;float;float;float;float
-cMagMeshObject::GetMagnitude;0x1005a1e0;0x36;__thiscall;;float10;uint;float;float;float
+cMagMeshObject::GetMagnitude;0x1005a1e0;0x36;__thiscall;;float;uint;float;float;float
 cMagMeshObject::GetHelperPosition;0x1005a220;0x69;__thiscall;;uint*;cMagMeshObject*;uint*;uchar*
 cMagMeshObject::SetPhysicsType;0x1005a290;0x165;__thiscall;;void;cMagMeshObject*;uchar
 cMagMeshObject::GetPhysicsType;0x1005a410;0x7;__thiscall;;uchar;cMagMeshObject*

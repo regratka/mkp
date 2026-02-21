@@ -7,9 +7,7 @@
 
 #include "cMagLog.h"
 
-class cMagMeshObject {
-
-};
+class cMagMeshObject;
 
 struct MsgObject;
 struct StateObject_Str;
