@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cMagMeshObject.h"
+
 class IStudioMesh {
 public:
 	/* 10006C70 */ IStudioMesh(IStudioMesh* param_1);

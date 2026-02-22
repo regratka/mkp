@@ -2,6 +2,11 @@
 #define _C_DIRECT_X_FONT
 
 #include <globals.h>
+#include <d3d8.h>
+
+struct FONTVERTEX {
+
+};
 
 class CDirectXFont {
 public:

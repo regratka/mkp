@@ -2,6 +2,7 @@
 #define _C_MUSIC_SCRIPT
 
 #include <globals.h>
+#include <dmusici.h>
 
 class CMusicScript {
 public:

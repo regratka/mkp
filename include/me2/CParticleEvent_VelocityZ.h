@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+
 class CParticleEvent_VelocityZ {
 public:
 	/* 1001F1A0 */ CParticleEvent_VelocityZ();

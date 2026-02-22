@@ -3,6 +3,10 @@
 
 #include <globals.h>
 
+class Axis {
+
+};
+
 class pgVec2 {
 public:
 	/* 1000A9C0 */ float* operator[](uint param_1);

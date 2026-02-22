@@ -184,7 +184,7 @@ uchar MagnumMesh::CalculateColor(float* param_1, float param_2, float param_3, f
 }
 
 /* 100375F0-10037623 00033	*/
-float10 MagnumMesh::Odleglosc(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6) {
+float MagnumMesh::Odleglosc(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6) {
 	return 0;
 }
 

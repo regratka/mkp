@@ -3,6 +3,23 @@
 
 #include <globals.h>
 
+#include "pgVec2.h"
+#include "pgTerrainPatchBase.h"
+#include "cMagFrustumCull.h"
+#include "pgImage.h"
+
+class pgVec3 {
+
+};
+
+class pgPlane {
+
+};
+
+struct MultiPassInfo {
+
+};
+
 class pgTerrain {
 public:
 	/* 1000C2A0 */ pgTerrainPatchBase** getActiveList();

@@ -2,6 +2,11 @@
 #define _C_PARTICLE_EVENT_SEQUENCE
 
 #include <globals.h>
+#include <string>
+#include <d3dx8.h>
+
+#include "CMinMax.h"
+#include "CParticle.h"
 
 class CParticleEventSequence {
 public:
@@ -15,12 +20,12 @@ public:
 	/* 1001F6D0 */ void SetDestBlendMode(int param_1);
 	/* 1001F6E0 */ CMinMax<float> GetEmitRate(uint* param_1);
 	/* 1001F710 */ void SetEmitRate(uint param_1, uint param_2);
-	/* 1001F730 */ CMinMax<struct_D3DXVECTOR3> GetEmitRadius(uint* param_1);
-	/* 1001F760 */ void SetEmitRadius(CMinMax<struct_D3DXVECTOR3>* param_1);
-	/* 1001F780 */ CMinMax<struct_D3DXVECTOR3> GetGravity(uint* param_1);
-	/* 1001F7B0 */ void SetGravity(CMinMax<struct_D3DXVECTOR3>* param_1);
+	/* 1001F730 */ CMinMax<D3DXVECTOR3> GetEmitRadius(uint* param_1);
+	/* 1001F760 */ void SetEmitRadius(CMinMax<D3DXVECTOR3>* param_1);
+	/* 1001F780 */ CMinMax<D3DXVECTOR3> GetGravity(uint* param_1);
+	/* 1001F7B0 */ void SetGravity(CMinMax<D3DXVECTOR3>* param_1);
 	/* 1001F7D0 */ CParticleEventSequence* GetName(CParticleEventSequence* param_1);
-	/* 1001F900 */ void SetName(basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_>* param_1);
+	/* 1001F900 */ void SetName(std::string* param_1);
 	/* 1001FA40 */ int GetNumActiveParticles();
 	/* 1001FA60 */ int GetNumParticles();
 	/* 1001FA70 */ void SetNumParticles(int param_1);
@@ -37,8 +42,8 @@ public:
 	/* 1001FB30 */ void SetAnimDelay(uint param_1, uint param_2);
 	/* 1001FB50 */ void GetAnimDelay();
 	/* 1001FB80 */ bool IsEnableAnim();
-	/* 1001FB90 */ CMinMax<struct_D3DXVECTOR3> GetSpawnDir(uint* param_1);
-	/* 1001FBC0 */ void SetSpawnDir(CMinMax<struct_D3DXVECTOR3>* param_1);
+	/* 1001FB90 */ CMinMax<D3DXVECTOR3> GetSpawnDir(uint* param_1);
+	/* 1001FBC0 */ void SetSpawnDir(CMinMax<D3DXVECTOR3>* param_1);
 	/* 1001FBE0 */ CParticleEventSequence* GetTextureFilename(CParticleEventSequence* param_1);
 	/* 1001FD10 */ uchar GetTexture();
 	/* 1001FD20 */ void DeleteAllParticles();

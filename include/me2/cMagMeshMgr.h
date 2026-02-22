@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cStaticMesh.h"
+
 class cMagMeshMgr {
 public:
 	/* 10005570 */ cMagMeshMgr(cMagMeshMgr* param_1);

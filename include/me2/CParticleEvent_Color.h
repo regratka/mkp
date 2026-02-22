@@ -2,11 +2,16 @@
 #define _C_PARTICLE_EVENT__COLOR
 
 #include <globals.h>
+#include <d3dx8math.h>
+
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+#include "CMinMax.h"
 
 class CParticleEvent_Color {
 public:
-	/* 1001DB00 */ CMinMax<struct_D3DXCOLOR> GetColor(uint* param_1);
-	/* 1001DB30 */ void SetColor(CMinMax<struct_D3DXCOLOR>* param_1);
+	/* 1001DB00 */ CMinMax<D3DXCOLOR> GetColor(uint* param_1);
+	/* 1001DB30 */ void SetColor(CMinMax<D3DXCOLOR>* param_1);
 	/* 1001DB50 */ CParticleEvent_Color();
 	/* 1001DBC0 */ CParticleEvent_Color(CParticleEvent_Color* param_1);
 	/* 1001DD00 */ CParticleEvent_Color* operator=(CParticleEvent_Color* param_1);

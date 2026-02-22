@@ -92,7 +92,7 @@ void CSimpleLine::BuildArrowVertexBuffer(float* param_1, int param_2) {
 }
 
 /* 1002FFA0-1003011F 0017F	*/
-long CSimpleLine::BuildVertexBuffer(vector<struct_D3DXVECTOR3,class_std::allocator<struct_D3DXVECTOR3>_>* param_1) {
+long CSimpleLine::BuildVertexBuffer(std::vector<D3DXVECTOR3>* param_1) {
 	return 0;
 }
 
@@ -110,7 +110,7 @@ long CSimpleLine::BuildPointsVertexBuffer(std::vector<D3DXVECTOR3>* param_1) {
 }
 
 /* 100302B0-100302D7 00027	*/
-void CSimpleLine::PolyLine(vector<struct_D3DXVECTOR3,class_std::allocator<struct_D3DXVECTOR3>_>* param_1, char* param_2) {
+void CSimpleLine::PolyLine(std::vector<D3DXVECTOR3>* param_1, char* param_2) {
 }
 
 /* 100302E0-10030341 00061	*/

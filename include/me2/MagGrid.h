@@ -2,6 +2,7 @@
 #define _MAG_GRID
 
 #include <globals.h>
+#include <d3d8.h>
 
 class MagGrid {
 public:

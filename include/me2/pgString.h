@@ -7,7 +7,6 @@ class pgString {
 public:
 	/* 1000B420 */ pgString();
 	/* 1000B430 */ int getLength();
-	/* 1000B440 */ char* operator_char_const*();
 	/* 1000B450 */ char operator[](int param_1);
 	/* 100821E0 */ pgString(pgString* param_1);
 	/* 10082200 */ pgString(char* param_1);

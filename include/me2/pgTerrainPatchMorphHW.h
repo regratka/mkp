@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "pgTerrain.h"
+
 class pgTerrainPatchMorphHW {
 public:
 	/* 1007BF90 */ static bool setupVertexShader();

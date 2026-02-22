@@ -2,6 +2,8 @@
 #define _C_PHYSICS_MOTORBOAT
 
 #include <globals.h>
+#include "cMagMeshObject.h"
+#include "ColObject.h"
 
 class CPhysicsMotorboat {
 public:

@@ -2,6 +2,7 @@
 #define _C_CAMERA
 
 #include <globals.h>
+#include <d3dx8math.h>
 
 class CCamera {
 public:

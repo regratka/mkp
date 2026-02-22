@@ -45,7 +45,7 @@ void cMagFrustumCull::CullObjects() {
 
 /* 1008A790-1008B55F 00DCF	*/
 CULLSTATE cMagFrustumCull::CullObject(CULLINFO* param_1, uchar param_2, D3DXPLANE* param_3) {
-	return 0;
+	return CULLSTATE();
 }
 
 /* 1008B560-1008B7D6 00276	*/

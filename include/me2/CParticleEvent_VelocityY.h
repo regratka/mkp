@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+
 class CParticleEvent_VelocityY {
 public:
 	/* 1001EF60 */ CParticleEvent_VelocityY();

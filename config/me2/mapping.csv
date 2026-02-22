@@ -3555,7 +3555,7 @@ FUN_100b8fd0;0x100b8fd0;0xc;__stdcall;;uchar
 FUN_100b9000;0x100b9000;0xa;__stdcall;;uchar
 FUN_100b9010;0x100b9010;0xc;__stdcall;;uchar
 FUN_100b9030;0x100b9030;0x1e;__thiscall;;uint*;void*;uchar
-CClassParameter::~CClassParameter;0x100b9050;0x7;__fastcall;;void;CClassParameter*
+CClassParameter::~CClassParameter;0x100b9050;0x7;__thiscall;;void;CClassParameter*
 CClassParameter::CClassParameter;0x100b9060;0x2a;__thiscall;;uint*;CClassParameter*;std_basic_ifstream*
 CClassParameter::FUN_100b9090;0x100b9090;0x22;__thiscall;;uint;CClassParameter*
 FUN_100b90c0;0x100b90c0;0x4;__fastcall;;uchar;int

@@ -2,6 +2,8 @@
 #define _C_COLLISION_CAMERA
 
 #include <globals.h>
+#include "CCamera.h"
+#include "cMagMeshObject.h"
 
 class CCollisionCamera {
 public:

@@ -2,6 +2,18 @@
 #define _C_PARTICLE_EMITTER
 
 #include <globals.h>
+#include <d3dx8math.h>
+#include <string>
+
+#include "CParticleEmitterToken.h"
+#include "CParticleEventSequence.h"
+#include "CParticleEvent.h"
+#include "CParticle.h"
+#include "CMinMax.h"
+
+struct TIMER_COMMAND {
+	
+};
 
 class CParticleEmitter {
 public:
@@ -9,8 +21,8 @@ public:
 	/* 10020580 */ void Stop();
 	/* 100205E0 */ bool IsRunning();
 	/* 100205F0 */ void DeleteAllParticles();
-	/* 10020650 */ CMinMax<struct_D3DXVECTOR3> GetPosRange(uint* param_1);
-	/* 10020680 */ void SetPosRange(CMinMax<struct_D3DXVECTOR3>* param_1);
+	/* 10020650 */ CMinMax<D3DXVECTOR3> GetPosRange(uint* param_1);
+	/* 10020680 */ void SetPosRange(CMinMax<D3DXVECTOR3>* param_1);
 	/* 100206A0 */ int GetVBSize();
 	/* 100206B0 */ void SetVBSize(int param_1);
 	/* 100206C0 */ void Reset();
@@ -45,7 +57,7 @@ public:
 	/* 10071B50 */ void Pause(bool param_1);
 	/* 10071B80 */ void SetPosition(uint param_1, uint param_2, uint param_3);
 	/* 10071BA0 */ uchar GetPosition(uint* param_1);
-	/* 10071BD0 */ bool LoadFileIntoString(char* param_1, basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_>* param_2);
+	/* 10071BD0 */ bool LoadFileIntoString(char* param_1, std::string* param_2);
 	/* 10071E00 */ void InitAnimFrames(char* param_1);
 	/* 10071EB0 */ float DXUtil_Timer(TIMER_COMMAND param_1);
 };

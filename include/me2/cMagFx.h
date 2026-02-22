@@ -3,6 +3,10 @@
 
 #include <globals.h>
 
+struct TIMER_COMMAND {
+
+};
+
 class cMagFx {
 public:
 	/* 10023440 */ cMagFx(cMagFx* param_1);

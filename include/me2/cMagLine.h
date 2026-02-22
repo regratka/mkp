@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cMagGameObject.h"
+
 class cMagLine {
 public:
 	/* 10006950 */ int GetSize();

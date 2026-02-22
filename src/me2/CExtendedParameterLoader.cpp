@@ -10,11 +10,11 @@ uchar CExtendedParameterLoader::FUN_100ba4a0(CClassPrototype* param_1, CClassPar
 }
 
 /* 100BA570-100BA781 00211	*/
-void CExtendedParameterLoader::LoadClassPrototype(std_basic_ifstream* param_1) {
+void CExtendedParameterLoader::LoadClassPrototype(std::ifstream* param_1) {
 }
 
 /* 100BA790-100BA955 001C5	*/
-uchar CExtendedParameterLoader::loadJavaMeshExtension(std_basic_ifstream* param_1, cMagMeshObject* param_2) {
+uchar CExtendedParameterLoader::loadJavaMeshExtension(std::ifstream* param_1, cMagMeshObject* param_2) {
 	return 0;
 }
 

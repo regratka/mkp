@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "pgTerrain.h"
+
 class pgTerrainPatchMorphSW {
 public:
 	/* 1000B560 */ pgTerrainPatchMorphSW(pgTerrainPatchMorphSW* param_1);

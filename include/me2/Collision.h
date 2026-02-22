@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cMagMeshObject.h"
+
 class Collision {
 public:
 	/* 10011000 */ uchar operator=(uchar param_1);

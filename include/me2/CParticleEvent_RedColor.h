@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+
 class CParticleEvent_RedColor {
 public:
 	/* 1001DEE0 */ CParticleEvent_RedColor();

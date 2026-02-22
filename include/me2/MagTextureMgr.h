@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include <d3dx8tex.h>
+
 class MagTextureMgr {
 public:
 	/* 10004040 */ MagTextureMgr(MagTextureMgr* param_1);

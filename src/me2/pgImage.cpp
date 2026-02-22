@@ -7,7 +7,7 @@ bool pgImage::isCompressed() {
 
 /* 1000B480-1000B485 00005	*/
 _D3DFORMAT pgImage::getD3DFormat(FORMAT param_1) {
-	return 0;
+	return _D3DFORMAT();
 }
 
 /* 1000B490-1000B4BF 0002F	*/

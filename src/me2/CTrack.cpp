@@ -23,6 +23,6 @@ CTrack::~CTrack() {
 }
 
 /* 100B8510-100B87A4 00294	*/
-void CTrack::Load(basic_ifstream<char,struct_std::char_traits<char>_>* param_1) {
+void CTrack::Load(std::ifstream* param_1) {
 }
 

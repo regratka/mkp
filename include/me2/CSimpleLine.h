@@ -2,6 +2,10 @@
 #define _C_SIMPLE_LINE
 
 #include <globals.h>
+#include <vector>
+#include <d3dx8math.h>
+
+#include "MagnumMesh.h"
 
 class CSimpleLine {
 public:
@@ -26,11 +30,11 @@ public:
 	/* 1002FB60 */ void SetTexture(char* param_1);
 	/* 1002FB80 */ void Arrow(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXVECTOR3 param_3, char* param_4);
 	/* 1002FE20 */ void BuildArrowVertexBuffer(float* param_1, int param_2);
-	/* 1002FFA0 */ long BuildVertexBuffer(vector<struct_D3DXVECTOR3,class_std::allocator<struct_D3DXVECTOR3>_>* param_1);
+	/* 1002FFA0 */ long BuildVertexBuffer(std::vector<D3DXVECTOR3>* param_1);
 	/* 10030120 */ void SetPrimitiveType(D3DPRIMITIVETYPE param_1);
 	/* 10030130 */ void SetPointSize(float param_1);
 	/* 10030140 */ long BuildPointsVertexBuffer(std::vector<D3DXVECTOR3>* param_1);
-	/* 100302B0 */ void PolyLine(vector<struct_D3DXVECTOR3,class_std::allocator<struct_D3DXVECTOR3>_>* param_1, char* param_2);
+	/* 100302B0 */ void PolyLine(std::vector<D3DXVECTOR3>* param_1, char* param_2);
 	/* 100302E0 */ void SetPosition();
 	/* 10030350 */ void EnableZBuffer(bool param_1);
 };

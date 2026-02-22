@@ -28,7 +28,7 @@ COctree,COctree
 CParticle,CParticle
 CParticleEmitter,CParticleEmitter
 CParticleEmitterToken,CParticleEmitterToken
-CParticleEvent,CParticleEvent,
+CParticleEvent,CParticleEvent
 CParticleEventSequence,CParticleEventSequence
 CParticleEvent_Alpha,CParticleEvent_Alpha
 CParticleEvent_BlueColor,CParticleEvent_BlueColor

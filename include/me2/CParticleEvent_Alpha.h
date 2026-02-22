@@ -3,6 +3,10 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+#include "CMinMax.h"
+
 class CParticleEvent_Alpha {
 public:
 	/* 1001D8B0 */ bool FadeAllowed();

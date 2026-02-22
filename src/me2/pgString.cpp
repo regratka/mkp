@@ -9,11 +9,6 @@ int pgString::getLength() {
 	return 0;
 }
 
-/* 1000B440-1000B44C 0000C	*/
-char* pgString::operator_char_const*() {
-	return 0;
-}
-
 /* 1000B450-1000B45C 0000C	*/
 char pgString::operator[](int param_1) {
 	return 0;

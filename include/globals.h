@@ -11,3 +11,5 @@ typedef __int64 longlong;
 typedef unsigned __int64 ulonglong; 
 
 typedef int BOOL;
+
+#include <d3dx8math.h>

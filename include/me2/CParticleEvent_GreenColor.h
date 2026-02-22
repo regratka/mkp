@@ -3,6 +3,10 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+
+
 class CParticleEvent_GreenColor {
 public:
 	/* 1001E120 */ CParticleEvent_GreenColor();

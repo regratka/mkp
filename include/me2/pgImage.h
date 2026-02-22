@@ -2,6 +2,11 @@
 #define PG_IMAGE
 
 #include <globals.h>
+#include "pgString.h"
+
+struct FORMAT {
+
+};
 
 class pgImage {
 public:

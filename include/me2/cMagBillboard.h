@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cMagGameObject.h"
+
 class cMagBillboard {
 public:
 	/* 1000FF70 */ bool GetStatusRemoveObject();

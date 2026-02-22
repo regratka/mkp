@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "cMagGameObject.h"
+#include "cMagFrustumCull.h"
+
 class cMagEngineMgr {
 public:
 	/* 10003E90 */ void SetEngine(IDirect3DDevice8* param_1);

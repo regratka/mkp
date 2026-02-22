@@ -2,6 +2,7 @@
 #define C_MAG_SKY_BOX
 
 #include <globals.h>
+#include <d3dx8math.h>
 
 class cMagSkyBox {
 public:

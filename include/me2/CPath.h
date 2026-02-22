@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cMagMeshObject.h"
+
 class CPath {
 public:
 	/* 1000A850 */ uint* scalar_destructor(uchar param_1);

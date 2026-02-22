@@ -2,6 +2,7 @@
 #define _C_CLIENT_SERVER_PLAYER
 
 #include <globals.h>
+#include <d3dx8math.h>
 
 class CClientServerPlayer {
 public:

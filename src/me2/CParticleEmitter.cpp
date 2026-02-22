@@ -18,12 +18,12 @@ void CParticleEmitter::DeleteAllParticles() {
 }
 
 /* 10020650-10020674 00024	*/
-CMinMax<struct_D3DXVECTOR3> CParticleEmitter::GetPosRange(uint* param_1) {
-	return 0;
+CMinMax<D3DXVECTOR3> CParticleEmitter::GetPosRange(uint* param_1) {
+	return CMinMax<D3DXVECTOR3>();
 }
 
 /* 10020680-10020698 00018	*/
-void CParticleEmitter::SetPosRange(CMinMax<struct_D3DXVECTOR3>* param_1) {
+void CParticleEmitter::SetPosRange(CMinMax<D3DXVECTOR3>* param_1) {
 }
 
 /* 100206A0-100206A7 00007	*/
@@ -177,7 +177,7 @@ uchar CParticleEmitter::GetPosition(uint* param_1) {
 }
 
 /* 10071BD0-10071DF8 00228	*/
-bool CParticleEmitter::LoadFileIntoString(char* param_1, basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_>* param_2) {
+bool CParticleEmitter::LoadFileIntoString(char* param_1, std::string* param_2) {
 	return 0;
 }
 

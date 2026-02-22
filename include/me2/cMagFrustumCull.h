@@ -3,6 +3,14 @@
 
 #include <globals.h>
 
+struct CULLSTATE {
+
+};
+
+struct CULLINFO {
+
+};
+
 class cMagFrustumCull {
 public:
 	/* 10003A00 */ cMagFrustumCull(cMagFrustumCull* param_1);

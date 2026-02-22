@@ -2,6 +2,13 @@
 #define _C_SPLINE_CAMERA
 
 #include <globals.h>
+#include <vector>
+#include <d3dx8math.h>
+
+#include "CSplineControlPoint.h"
+
+#include "cMagMeshObject.h"
+
 
 class CSplineCamera {
 public:

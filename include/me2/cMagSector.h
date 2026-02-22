@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "cMagMeshObject.h"
+
 class cMagSector {
 public:
 	/* 10024950 */ cMagSector(cMagSector* param_1);

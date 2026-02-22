@@ -2,6 +2,13 @@
 #define _K_TEKSTURY_VIDEO_DIRECT_X
 
 #include <globals.h>
+#include <d3dx8.h>
+
+#include "cMagSprite.h"
+
+class CMediaType;
+class IMediaSample;
+
 
 class KTeksturyVideoDirectX {
 public:

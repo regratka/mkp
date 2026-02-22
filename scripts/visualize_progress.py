@@ -18,8 +18,10 @@ def visualize(report_filepath: Path, output_file: Path):
             matches.append(matched/100)
             sizes_arr.append(int(unit["measures"]["total_code"]))
             labels_arr.append(f"{unit["name"]}\n{matched:.1f}%")
-    
-        squarify.plot(sizes=sizes_arr, norm_x=400, norm_y=400, label=labels_arr, color=cmap(matches), pad=True)
+        
+        fig, axs = plt.subplots(1,1, figsize=(40,40))
+        plt.rcParams.update({'font.size': 10})
+        squarify.plot(sizes=sizes_arr, norm_x=1000, norm_y=1000, label=labels_arr, color=cmap(matches), pad=True, ax=axs)
         plt.axis("off")
         plt.savefig(str(output_file))
 

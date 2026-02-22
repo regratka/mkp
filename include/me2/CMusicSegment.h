@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include <dmusici.h>
+
 class CMusicSegment {
 public:
 	/* 100020F0 */ CMusicSegment(CMusicSegment* param_1);

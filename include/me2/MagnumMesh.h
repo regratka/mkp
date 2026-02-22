@@ -47,7 +47,7 @@ public:
 	/* 10036F20 */ void SetAlpha(ulong param_1, ulong param_2);
 	/* 10036F40 */ void CalculateVertexColor();
 	/* 100373F0 */ uchar CalculateColor(float* param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7);
-	/* 100375F0 */ float10 Odleglosc(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6);
+	/* 100375F0 */ float Odleglosc(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6);
 	/* 10037630 */ void SetAlphaGreatereQual(ulong param_1);
 	/* 10037650 */ ulong GetAlphaGreatereQual();
 	/* 10037660 */ void CreateStaticMesh();

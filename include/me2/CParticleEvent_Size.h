@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+
 class CParticleEvent_Size {
 public:
 	/* 1001D8C0 */ CParticleEvent_Size();

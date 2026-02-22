@@ -2,6 +2,9 @@
 #define _MAG_TERRAIN
 
 #include <globals.h>
+#include <d3dx8math.h>
+
+#include "pgImage.h"
 
 class MagTerrain {
 public:

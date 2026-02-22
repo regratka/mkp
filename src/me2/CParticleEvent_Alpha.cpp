@@ -33,7 +33,7 @@ CParticleEvent_Alpha* CParticleEvent_Alpha::scalar_destructor(uchar param_1) {
 
 /* 1001ECF0-1001ED12 00022	*/
 CMinMax<float> CParticleEvent_Alpha::GetAlpha() {
-	return 0;
+	return CMinMax<float>();
 }
 
 /* 1006B5E0-1006B6C9 000E9	*/

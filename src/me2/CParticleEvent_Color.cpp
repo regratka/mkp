@@ -1,12 +1,12 @@
 #include "CParticleEvent_Color.h"
 
 /* 1001DB00-1001DB24 00024	*/
-CMinMax<struct_D3DXCOLOR> CParticleEvent_Color::GetColor(uint* param_1) {
-	return 0;
+CMinMax<D3DXCOLOR> CParticleEvent_Color::GetColor(uint* param_1) {
+	return CMinMax<D3DXCOLOR>();
 }
 
 /* 1001DB30-1001DB48 00018	*/
-void CParticleEvent_Color::SetColor(CMinMax<struct_D3DXCOLOR>* param_1) {
+void CParticleEvent_Color::SetColor(CMinMax<D3DXCOLOR>* param_1) {
 }
 
 /* 1001DB50-1001DBBD 0006D	*/

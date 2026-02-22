@@ -3,6 +3,12 @@
 
 #include <globals.h>
 
+class pgTerrain;
+class PATCHVERTEX;
+class pgVec3;
+class pgPlane;
+class pgVec2;
+
 class pgTerrainPatchBase {
 public:
 	/* 1000ACE0 */ int render(uchar param_1);

@@ -9,11 +9,6 @@ cBlob* cBlob::operator=(cBlob* param_1) {
 	return 0;
 }
 
-/* 10018F50-10018FA7 00057	*/
-cBlob* cBlob::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 10030930-10030BCE 0029E	*/
 cBlob::cBlob() {
 }

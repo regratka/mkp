@@ -3,11 +3,12 @@
 
 #include <globals.h>
 
+class cMagMeshObject;
+
 class cBlob {
 public:
 	/* 100188D0 */ cBlob(cBlob* param_1);
 	/* 10018A30 */ cBlob* operator=(cBlob* param_1);
-	/* 10018F50 */ cBlob* scalar_destructor(uchar param_1);
 	/* 10030930 */ cBlob();
 	/* 10030BD0 */ ~cBlob();
 	/* 10030BE0 */ void InitBlob(char* param_1, cMagMeshObject* param_2);

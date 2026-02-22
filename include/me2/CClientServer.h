@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "CGame.h"
+
 class CClientServer {
 public:
 	/* 1008E580 */ CClientServer(CClientServer* param_1);

@@ -2,6 +2,11 @@
 #define _C_OCTREE
 
 #include <globals.h>
+#include <d3dx8math.h>
+
+class COctreeSegment {
+
+};
 
 class COctree {
 public:

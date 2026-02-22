@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+
 class CParticleEvent_VelocityX {
 public:
 	/* 1001ED20 */ CParticleEvent_VelocityX();

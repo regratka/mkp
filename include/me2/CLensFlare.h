@@ -3,6 +3,10 @@
 
 #include <globals.h>
 
+#include "CMinMax.h"
+#include "cMagGameObject.h"
+#include "CLensFlareSpot.h"
+
 class CLensFlare {
 public:
 	/* 10022600 */ CMinMax<float> GetIntensity(uint* param_1);

@@ -3,6 +3,11 @@
 
 #include <globals.h>
 
+#include <d3dx8math.h>
+
+struct Rect;
+struct D3DTLVERTEXS;
+
 class cMagSprite {
 public:
 	/* 1000A9B0 */ void PlayMovie(bool param_1);

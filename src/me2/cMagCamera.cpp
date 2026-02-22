@@ -27,10 +27,6 @@ cMagCamera* cMagCamera::operator=(cMagCamera* param_1) {
 	return 0;
 }
 
-/* 10021640-1002165E 0001E	*/
-void cMagCamera::`default_constructor_closure'() {
-}
-
 /* 10021660-100216B7 00057	*/
 cMagCamera* cMagCamera::scalar_destructor(uchar param_1) {
 	return 0;

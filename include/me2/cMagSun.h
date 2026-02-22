@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include <d3dx8math.h>
+
 class cMagSun {
 public:
 	/* 10021C20 */ void SetScale(uint param_1, uint param_2);

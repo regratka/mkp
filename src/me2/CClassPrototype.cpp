@@ -1,11 +1,11 @@
 #include "CClassPrototype.h"
 
 /* 100B91C0-100B922A 0006A	*/
-CClassPrototype::CClassPrototype(std_basic_ifstream* param_1) {
+CClassPrototype::CClassPrototype(std::ifstream* param_1) {
 }
 
 /* 100B9250-100B92F1 000A1	*/
-void CClassPrototype::~CClassPrototype(CClassPrototype* param_1) {
+CClassPrototype::~CClassPrototype() {
 }
 
 /* 100B9300-100B930D 0000D	*/
@@ -24,6 +24,6 @@ int CClassPrototype::GetParametersCount() {
 }
 
 /* 100B9340-100B9587 00247	*/
-void CClassPrototype::FUN_100b9340(std_basic_ifstream* param_1) {
+void CClassPrototype::FUN_100b9340(std::ifstream* param_1) {
 }
 

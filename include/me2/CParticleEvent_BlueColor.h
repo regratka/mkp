@@ -3,6 +3,10 @@
 
 #include <globals.h>
 
+#include "CParticleEmitterToken.h"
+#include "CParticle.h"
+#include "CMinMax.h"
+
 class CParticleEvent_BlueColor {
 public:
 	/* 1001E360 */ CParticleEvent_BlueColor();
