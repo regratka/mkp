@@ -329,7 +329,7 @@ void CGame::MULTIPLAY_CreateServerPalayer() {
 }
 
 /* 10097DD0-10097E14 00044	*/
-void CGame::MULTIPLAY_SetServerPosition(float param_1, float param_2, float param_3, uint param_4, uint param_5, uint param_6) {
+void CGame::MULTIPLAY_SetServerPosition(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
 }
 
 /* 10097E20-10097E64 00044	*/

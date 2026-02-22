@@ -95,7 +95,7 @@ public:
 	/* 10097B60 */ void MULTIPLAY_CreateClientPalayer();
 	/* 10097C70 */ void MULTIPLAY_SetPosition(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10097CC0 */ void MULTIPLAY_CreateServerPalayer();
-	/* 10097DD0 */ void MULTIPLAY_SetServerPosition(float param_1, float param_2, float param_3, uint param_4, uint param_5, uint param_6);
+	/* 10097DD0 */ void MULTIPLAY_SetServerPosition(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10097E20 */ void MULTIPLAY_SetServerStateIdle(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10097E70 */ void MULTIPLAY_SetClientStateIdle(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10097EC0 */ CClientServer* GetClientServer();

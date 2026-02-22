@@ -3071,7 +3071,7 @@ CGame::SetPort;0x10097b40;0x1a;__thiscall;;void;CGame*;char*
 CGame::MULTIPLAY_CreateClientPalayer;0x10097b60;0x106;__thiscall;;void;CGame*
 CGame::MULTIPLAY_SetPosition;0x10097c70;0x44;__thiscall;;void;CGame*;D3DXVECTOR3;D3DXVECTOR3
 CGame::MULTIPLAY_CreateServerPalayer;0x10097cc0;0x106;__thiscall;;void;CGame*
-CGame::MULTIPLAY_SetServerPosition;0x10097dd0;0x44;__thiscall;;void;CGame*;float;float;float;uint;uint;uint
+CGame::MULTIPLAY_SetServerPosition;0x10097dd0;0x44;__thiscall;;void;CGame*;D3DXVECTOR3;D3DXVECTOR3
 CGame::MULTIPLAY_SetServerStateIdle;0x10097e20;0x44;__thiscall;;void;CGame*;D3DXVECTOR3;D3DXVECTOR3
 CGame::MULTIPLAY_SetClientStateIdle;0x10097e70;0x44;__thiscall;;void;CGame*;D3DXVECTOR3;D3DXVECTOR3
 CGame::GetClientServer;0x10097ec0;0x7;__thiscall;;CClientServer*;CGame*
@@ -3376,7 +3376,7 @@ FUN_100ac310;0x100ac310;0xf63;__cdecl;;uint;float*;float*;float*;float*;float*;f
 FUN_100ad280;0x100ad280;0xe3;__cdecl;;uchar;float*;float*;float*;float;float;float;float;float;float;float*;float*;float*;float*
 CColTreeNode::CColTreeNode;0x100ad370;0x8f;__thiscall;;CColTreeNode*;CColTreeNode*
 CColTreeNode::FUN_100ad400;0x100ad400;0x1e;__thiscall;;uint*;CColTreeNode*;uchar
-CColTreeNode::CColTreeNode;0x100ad420;0x93;__thiscall;;CColTreeNode*;CColTreeNode*;uint
+CColTreeNode::CColTreeNode2;0x100ad420;0x93;__thiscall;;CColTreeNode*;CColTreeNode*;uint
 CColTreeNode::~CColTreeNode;0x100ad4c0;0x114;__thiscall;;CColTreeNode*;CColTreeNode*
 Catch@100ad524;0x100ad524;0x6;__stdcall;;uchar*
 FUN_100ad5f0;0x100ad5f0;0x20f;__thiscall;;uchar;void*;uint;float*;float*
@@ -3578,7 +3578,7 @@ FUN_100b9610;0x100b9610;0xa;__stdcall;;uchar
 FUN_100b9620;0x100b9620;0xc;__stdcall;;uchar
 CDynObjTree::CDynObjTree;0x100b9640;0x16f;__thiscall;;uint*;CDynObjTree*;uint
 FUN_100b97b0;0x100b97b0;0x1e;__thiscall;;uint*;void*;uchar
-CDynObjTree::CDynObjTree;0x100b97d0;0x169;__thiscall;;uint*;CDynObjTree*
+CDynObjTree::CDynObjTree2;0x100b97d0;0x169;__thiscall;;uint*;CDynObjTree*
 CDynObjTree::~CDynObjTree;0x100b9940;0xed;__thiscall;;void;CDynObjTree*
 Catch@100b999a;0x100b999a;0x6;__stdcall;;uchar*
 FUN_100b9a40;0x100b9a40;0x135;__thiscall;;uchar;void*;float;uint;float;float;uint;float;void*
