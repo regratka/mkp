@@ -20,6 +20,7 @@ import ghidra.framework.model.DomainFile;
 import ghidra.framework.model.DomainObject;
 import ghidra.program.model.address.AddressSet;
 import ghidra.program.model.listing.GhidraClass;
+import ghidra.program.model.address.AddressRange;
 import ghidra.program.model.mem.Memory;
 import ghidra.program.model.symbol.Namespace;
 import ghidra.program.model.symbol.Symbol;
@@ -101,7 +102,12 @@ public class ExportDelinker extends GhidraScript
                 printf("No namespaces found for %s.obj, skipping.\n", objClass);
                 continue;
             }
-            exporter.export(outFile, currentProgram, set, monitor);
+            
+            boolean success = exporter.export(outFile, currentProgram, set, monitor);
+            if (!success) {
+                printf("Failed exporting %s.obj to %s file.\n", objClass, outFile);
+                printf("Export log: %s.\n", exporter.getMessageLog().toString());
+            }
         }
     }
 }

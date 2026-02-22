@@ -76,6 +76,7 @@ public class ImportFromCsv extends GhidraScript
             }
             catch (DuplicateNameException ex)
             {
+                printf("DuplicateNameException for %s at %x\n", name, addr.getOffset());
             }
         }
 
