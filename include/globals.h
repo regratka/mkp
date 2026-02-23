@@ -12,4 +12,8 @@ typedef unsigned __int64 ulonglong;
 
 typedef int BOOL;
 
+#define NULL 0
+#define TRUE 1
+#define FALSE 0
+
 #include <d3dx8math.h>

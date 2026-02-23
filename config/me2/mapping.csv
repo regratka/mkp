@@ -2165,11 +2165,11 @@ FUN_100661e0;0x100661e0;0x32;__stdcall;;uchar;uint*;int;uint*
 FUN_10066220;0x10066220;0x18;__cdecl;;uchar;uint*;uint*
 CDirectXFont::CDirectXFont;0x10066270;0x20;__thiscall;;uchar;CDirectXFont*
 CDirectXFont::~CDirectXFont;0x10066290;0x7;__thiscall;;void;CDirectXFont*
-CDirectXFont::CreateFontA;0x100662a0;0x3ee;__thiscall;;long;CDirectXFont*;IDirect3DDevice8*;char*;long
+CDirectXFont::CreateFontA;0x100662a0;0x3ee;__thiscall;;HRESULT;CDirectXFont*;IDirect3DDevice8*;char*;long
 CDirectXFont::DrawDebug;0x10066690;0x1a2;__thiscall;;void;CDirectXFont*;float;float
 CDirectXFont::DrawTextA;0x10066840;0x11f;__thiscall;;void;CDirectXFont*;float;float;char*;ulong
-CDirectXFont::CreateStaticText;0x10066960;0xc3;__thiscall;;IDirect3DVertexBuffer8*;CDirectXFont*;float;float;IDirect3DVertexBuffer8*;ulong
-CDirectXFont::DrawStaticText;0x10066a30;0x93;__thiscall;;void;CDirectXFont*;uchar;long;long
+CDirectXFont::CreateStaticText;0x10066960;0xc3;__thiscall;;IDirect3DVertexBuffer8*;CDirectXFont*;float;float;char*;ulong
+CDirectXFont::DrawStaticText;0x10066a30;0x93;__thiscall;;void;CDirectXFont*;IDirect3DVertexBuffer8*;long;long
 CDirectXFont::DestroyStaticText;0x10066ad0;0x11;__thiscall;;void;CDirectXFont*;IDirect3DVertexBuffer8*
 CDirectXFont::DestroyFont;0x10066af0;0x71;__thiscall;;void;CDirectXFont*
 CDirectXFont::FillCharacter;0x10066b70;0x1b7;__thiscall;;void;CDirectXFont*;char;FONTVERTEX**;float;float*;float*;ulong
