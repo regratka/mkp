@@ -14,7 +14,7 @@ def visualize(report_filepath: Path, output_file: Path):
         cmap = cm['RdYlGn']
         for unit in units:
             meas = unit["measures"]
-            matched = meas["matched_code_percent"] if "matched_code_percent" in meas else 0
+            matched = meas["fuzzy_match_percent"] if "fuzzy_match_percent" in meas else 0
             matches.append(matched/100)
             sizes_arr.append(int(unit["measures"]["total_code"]))
             labels_arr.append(f"{unit["name"]}\n{matched:.1f}%")
