@@ -186,55 +186,53 @@ void CDirectXFont::DrawDebug(float p_drawXPos, float p_drawYPos) {
 }
 
 /* 10066840-1006695F 0011F	*/
-void CDirectXFont::DrawTextA(float param_1, float param_2, char* p_text, ulong param_4) {
+void CDirectXFont::DrawTextA(float param_1, float param_2, char* p_text, ulong p_color) {
 	if (directTexture == NULL) {
 		return;
 	}
 	directDevice->CaptureStateBlock(blockToken2);
 	directDevice->ApplyStateBlock(blockToken1);
-	FONTVERTEX* bufferData = NULL;
 	float startX = param_1;
+	FONTVERTEX* bufferData = NULL;
 	directVertexBuffer->Lock(0, 0, (BYTE**)&bufferData, 0);
 
-	char* character = p_text;
 	uint primitivesToDraw = 0;
-	
-	
-	while (*character != '\0') {
-		FillCharacter(*character, &bufferData, startX, &param_1, &param_2, param_4);
-		character++;
+	int characterIndex = 0;
+
+	while (p_text[characterIndex] != '\0') {
+		FillCharacter(p_text[characterIndex++], &bufferData, startX, &param_1, &param_2, p_color);
 		primitivesToDraw += 2;
-		if (primitivesToDraw * 3 > 594) {
-			directVertexBuffer->Unlock();
-			directDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0, primitivesToDraw);
-			primitivesToDraw = 0;
-			bufferData = NULL;
-			directVertexBuffer->Lock(0, 0, (BYTE**)&bufferData, 0);
+		if (primitivesToDraw * 3 <= 594) {
+			continue;
 		}
+		directVertexBuffer->Unlock();
+		directDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0, primitivesToDraw);
+		primitivesToDraw = 0;
+		bufferData = NULL;
+		directVertexBuffer->Lock(0, 0, (BYTE**)&bufferData, 0);
 	}
 	directVertexBuffer->Unlock();
-	directDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0,
-		 primitivesToDraw);
+	directDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0, primitivesToDraw);
 	directDevice->ApplyStateBlock(blockToken2);
 }
 
 /* 10066960-10066A23 000C3	*/
-IDirect3DVertexBuffer8* CDirectXFont::CreateStaticText(float param_1, float param_2, char* p_text, ulong param_4) {
+IDirect3DVertexBuffer8* CDirectXFont::CreateStaticText(float param_1, float param_2, char* p_text, ulong p_color) {
 	size_t textLen = strlen(p_text);
 	IDirect3DVertexBuffer8* vertexBuffer;
 	HRESULT result = directDevice->CreateVertexBuffer(textLen * 0xa8, 0x208, 0x144, D3DPOOL_DEFAULT, &vertexBuffer);
 	if (result < 0) {
 		return NULL;
 	}
+	
+	float c_param_1 = param_1;
 
 	FONTVERTEX* vertexesData = NULL;
 	vertexBuffer->Lock(0, 0, (BYTE**) &vertexesData, 0x2000);
 
-	float c_param_1;
 	char* character = p_text;
 	while (*character != '\0') {
-		FillCharacter(*character, &vertexesData, c_param_1, &param_1, &param_2, param_4);
-		character++;
+		FillCharacter(*character++, &vertexesData, c_param_1, &param_1, &param_2, p_color);
 	}
 
 	vertexBuffer->Unlock();
@@ -282,18 +280,19 @@ void CDirectXFont::DestroyFont() {
 }
 
 /* 10066B70-10066D27 001B7	*/
-void CDirectXFont::FillCharacter(char param_1, FONTVERTEX** p_vertexesArrayPointer, float p_globalXStartPos, float* p_charXPos, float* p_charYPos, ulong p_color) {
-	if (param_1 == '\n') {
+void CDirectXFont::FillCharacter(char p_char, FONTVERTEX** p_vertexesArrayPointer, float p_globalXStartPos, float* p_charXPos, float* p_charYPos, ulong p_color) {
+	if (p_char == '\n') {
 		*p_charXPos = p_globalXStartPos;
-		*p_charYPos += (charactersInfo[0].yEndPos - charactersInfo[0].yStartPos) * bitmapWidth;
+		int yPosChange = bitmapWidth * (charactersInfo[0].yEndPos - charactersInfo[0].yStartPos);
+		*p_charYPos += yPosChange;
 		return;
 	}
-	if (param_1 >= 32) {
-		FontCharacterInfo* charInfo = &charactersInfo[param_1-32];
-		float bitmapCharXStart = charInfo->xStartPos;
-		float bitmapCharYStart = charInfo->yStartPos;
-		float bitmapCharXEnd = charInfo->xEndPos;
-		float bitmapCharYEnd = charInfo->yEndPos;
+	if (p_char >= ' ') {
+		int charIndex = p_char- ' ';
+		float bitmapCharXStart = charactersInfo[charIndex].xStartPos;
+		float bitmapCharYStart = charactersInfo[charIndex].yStartPos;
+		float bitmapCharXEnd = charactersInfo[charIndex].xEndPos;
+		float bitmapCharYEnd = charactersInfo[charIndex].yEndPos;
 		float bitmapCharWidth = (bitmapCharXEnd - bitmapCharXStart) * bitmapWidth;
 		float bitmapCharHeight = (bitmapCharYEnd - bitmapCharYStart) * bitmapWidth;
 
