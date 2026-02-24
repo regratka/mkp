@@ -22,14 +22,14 @@ CDirectXFont::~CDirectXFont() {
 }
 
 /* 100662A0-1006668E 003EE	*/
-HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* param_1, char* p_typeFaceName, long param_3) {
+HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* p_device, char* p_typeFaceName, long param_3) {
+	directDevice = p_device;
 	HDC deviceContext = CreateCompatibleDC(NULL);
 	SetTextColor(deviceContext, RGB(0xff, 0xff, 0xff));
 	SetBkColor(deviceContext, 0);
 	SetTextAlign(deviceContext, 0);
 	SetMapMode(deviceContext, MM_TEXT);
-	int pixelsPerLogicalInchHeight = GetDeviceCaps(deviceContext, LOGPIXELSY);
-	int characterHeight = MulDiv(param_3, pixelsPerLogicalInchHeight, 72);
+	int characterHeight = MulDiv(param_3, GetDeviceCaps(deviceContext, LOGPIXELSY), 72);
 
 	HFONT fontHandle = ::CreateFont(characterHeight, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE, DEFAULT_CHARSET, 
 		OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, ANTIALIASED_QUALITY, FF_DONTCARE | VARIABLE_PITCH, p_typeFaceName);
@@ -37,15 +37,16 @@ HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* param_1, char* p_typeFaceNam
 		return E_FAIL;
 	}
 	HGDIOBJ replacedFont = SelectObject(deviceContext, fontHandle);
-	if (param_3 < 0x15) {
-		bitmapWidth = 256;
-	} else if (param_3 < 0x29) {
+	if (param_3 > 0x28) {
+		bitmapWidth = 1024;
+	} else if (param_3 > 0x14) {
 		bitmapWidth = 512;
 	} else {
-		bitmapWidth = 1024;
+		bitmapWidth = 256;
 	}
-
-	BITMAPINFO bitmapInfo = {0};
+	
+	BITMAPINFO bitmapInfo;
+	ZeroMemory(&bitmapInfo.bmiHeader, sizeof(BITMAPINFOHEADER));
 
 	bitmapInfo.bmiHeader.biWidth = bitmapWidth;
 	bitmapInfo.bmiHeader.biHeight = -bitmapWidth;
@@ -60,14 +61,15 @@ HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* param_1, char* p_typeFaceNam
 
 	long characterXPosition = 0;
 	int characterYPosition = 0;
-	char characterToCreate = ' ';
 	SIZE characterSize;
-	while (characterToCreate <= '~') {
+	// char characterToCreate = 0x20;
+	for (char characterToCreate = 0x20; characterToCreate < 0x7f; characterToCreate++) {
+	// while (characterToCreate < 0x7f) {
 		GetTextExtentPoint32(deviceContext, &characterToCreate, sizeof(char), &characterSize);
 
-		if (bitmapWidth < characterXPosition + characterSize.cx + 1) {
-			characterYPosition += characterHeight + 1;
+		if ( characterXPosition + characterSize.cx + 1 > bitmapWidth) {
 			characterXPosition = 0;
+			characterYPosition += characterHeight + 1;
 		}
 
 		ExtTextOut(deviceContext, characterXPosition, characterYPosition, ETO_OPAQUE, NULL, &characterToCreate, sizeof(char), NULL);
@@ -76,44 +78,56 @@ HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* param_1, char* p_typeFaceNam
 		charactersInfo[characterIndex].yStartPos = characterYPosition / (float)bitmapWidth;
 		charactersInfo[characterIndex].xEndPos = (characterXPosition + characterSize.cx) / (float)bitmapWidth;
 		charactersInfo[characterIndex].yEndPos = (characterYPosition  + characterSize.cy) / (float)bitmapWidth;
-		characterToCreate++;
 		characterXPosition += characterSize.cx + 10;
+		// characterToCreate++;
 	}
-	HRESULT result = directDevice->CreateTexture(bitmapWidth, bitmapWidth, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, &directTexture);
+	HRESULT result = p_device->CreateTexture(bitmapWidth, bitmapWidth, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, &this->directTexture);
 	if (result < 0) {
 		return E_FAIL;
 	}
 	D3DLOCKED_RECT lockedRect;
 	directTexture->LockRect(0, &lockedRect, NULL, 0);
-	memcpy(lockedRect.pBits, dibBits, bitmapWidth * bitmapWidth * 4);
+	for (int index = 0; index < bitmapWidth * bitmapWidth * 4; index) {
+
+		char val = ((char*)dibBits)[index];
+		((char*)lockedRect.pBits)[index] = val;
+		((char*)lockedRect.pBits)[index+1] = val;
+		((char*)lockedRect.pBits)[index+2] = val;
+		((char*)lockedRect.pBits)[index+3] = val;
+		index += 4;
+	}
+
 	directTexture->UnlockRect(0);
 	SelectObject(deviceContext, replacedBitMap);
 	DeleteObject(bitMap);
 	SelectObject(deviceContext, replacedFont);
 	DeleteObject(fontHandle);
 	DeleteDC(deviceContext);
-	result = directDevice->CreateVertexBuffer(16800, 0, D3DFVF_TEX1|D3DFVF_DIFFUSE|D3DFVF_XYZRHW, D3DPOOL_MANAGED, &directVertexBuffer);
+	result = p_device->CreateVertexBuffer(16800, 0, D3DFVF_TEX1|D3DFVF_DIFFUSE|D3DFVF_XYZRHW, D3DPOOL_MANAGED, &directVertexBuffer);
 	if (result < 0) {
 		return E_FAIL;
 	}
 
-	for (int tokenId = 0; tokenId < 2; tokenId++) {
+	int tokenId = 0;
+	while (tokenId < 2) {
 		directDevice->BeginStateBlock();
 		directDevice->SetTexture(0, directTexture);
 		directDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, 1);
 		directDevice->SetRenderState(D3DRS_SRCBLEND, 5);
 		directDevice->SetRenderState(D3DRS_DESTBLEND, 6);
-		directDevice->SetRenderState(D3DRS_ALPHABLENDENABLE, 1);
+		directDevice->SetRenderState(D3DRS_ALPHATESTENABLE, 1);
 		directDevice->SetRenderState(D3DRS_ALPHAREF, 0x10);
 		directDevice->SetRenderState(D3DRS_ALPHAFUNC, 7);
 		directDevice->SetRenderState(D3DRS_ZENABLE, 0);
 		directDevice->SetVertexShader(0x144);
 		directDevice->SetStreamSource(0, directVertexBuffer, 0x1c);
-		if (blockToken1 == 0) {
+
+		if (tokenId == 0) {
 			directDevice->EndStateBlock(&blockToken1);
 		} else {
 			directDevice->EndStateBlock(&blockToken2);
 		}
+		tokenId++;
 	}
 	return 0;
 }
@@ -178,16 +192,16 @@ void CDirectXFont::DrawTextA(float param_1, float param_2, char* p_text, ulong p
 	}
 	directDevice->CaptureStateBlock(blockToken2);
 	directDevice->ApplyStateBlock(blockToken1);
-	BYTE* bufferData = NULL;
+	FONTVERTEX* bufferData = NULL;
 	float startX = param_1;
-	directVertexBuffer->Lock(0, 0, &bufferData, 0);
+	directVertexBuffer->Lock(0, 0, (BYTE**)&bufferData, 0);
 
 	char* character = p_text;
 	uint primitivesToDraw = 0;
 	
 	
 	while (*character != '\0') {
-		FillCharacter(*character, (FONTVERTEX**)bufferData, startX, &param_1, &param_2, param_4);
+		FillCharacter(*character, &bufferData, startX, &param_1, &param_2, param_4);
 		character++;
 		primitivesToDraw += 2;
 		if (primitivesToDraw * 3 > 594) {
@@ -195,9 +209,8 @@ void CDirectXFont::DrawTextA(float param_1, float param_2, char* p_text, ulong p
 			directDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0, primitivesToDraw);
 			primitivesToDraw = 0;
 			bufferData = NULL;
-			directVertexBuffer->Lock(0, 0, &bufferData, 0);
+			directVertexBuffer->Lock(0, 0, (BYTE**)&bufferData, 0);
 		}
-
 	}
 	directVertexBuffer->Unlock();
 	directDevice->DrawPrimitive(D3DPT_TRIANGLELIST, 0,
