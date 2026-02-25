@@ -1,14 +1,5 @@
 #include "cMp3Player.h"
 
-/* 100076A0-100076CD 0002D	*/
-cMp3Player::cMp3Player(cMp3Player const & p_other) {
-}
-
-/* 100076D0-100076F7 00027	*/
-cMp3Player& cMp3Player::operator=(cMp3Player const & p_other) {
-	return *this;
-}
-
 /* 10088E30-10088E55 00025	*/
 cMp3Player::cMp3Player() {
 	unknown = NULL;

@@ -2,13 +2,11 @@
 #define C_MP3_PLAYER
 
 #include <globals.h>
-
 #include <Dshow.h>
 
-class cMp3Player {
+class __declspec(dllexport) cMp3Player {
 public:
-	/* 100076A0 */ cMp3Player(cMp3Player const & p_other);
-	/* 100076D0 */ cMp3Player& operator=(cMp3Player const & p_path);
+
 	/* 10088E30 */ cMp3Player();
 	/* 10088E60 */ virtual ~cMp3Player();
 	/* 10088E70 */ void Cleanup();

@@ -1,13 +1,10 @@
 #include "CDirectXFont.h"
 
-/* 1000A870-1000A8D2 00062	*/
-CDirectXFont::CDirectXFont(CDirectXFont const & p_other) {
-}
 
-/* 1000A8E0-1000A948 00068	*/
-CDirectXFont& CDirectXFont::operator=(CDirectXFont const & p_other) {
-	return *this;
-}
+#define XStartPos(index) charactersPositionInfo[index*4 + 0]
+#define YStartPos(index) charactersPositionInfo[index*4 + 1]
+#define XEndPos(index) charactersPositionInfo[index*4 + 2]
+#define YEndPos(index) charactersPositionInfo[index*4 + 3]
 
 /* 10066270-10066290 00020	*/
 CDirectXFont::CDirectXFont() {
@@ -62,9 +59,8 @@ HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* p_device, char* p_typeFaceNa
 	long characterXPosition = 0;
 	int characterYPosition = 0;
 	SIZE characterSize;
-	// char characterToCreate = 0x20;
+
 	for (char characterToCreate = 0x20; characterToCreate < 0x7f; characterToCreate++) {
-	// while (characterToCreate < 0x7f) {
 		GetTextExtentPoint32(deviceContext, &characterToCreate, sizeof(char), &characterSize);
 
 		if ( characterXPosition + characterSize.cx + 1 > bitmapWidth) {
@@ -74,13 +70,14 @@ HRESULT CDirectXFont::CreateFontA(IDirect3DDevice8* p_device, char* p_typeFaceNa
 
 		ExtTextOut(deviceContext, characterXPosition, characterYPosition, ETO_OPAQUE, NULL, &characterToCreate, sizeof(char), NULL);
 		int characterIndex = characterToCreate - ' ';
-		charactersInfo[characterIndex].xStartPos = characterXPosition / (float)bitmapWidth;
-		charactersInfo[characterIndex].yStartPos = characterYPosition / (float)bitmapWidth;
-		charactersInfo[characterIndex].xEndPos = (characterXPosition + characterSize.cx) / (float)bitmapWidth;
-		charactersInfo[characterIndex].yEndPos = (characterYPosition  + characterSize.cy) / (float)bitmapWidth;
+		
+		XStartPos(characterIndex) = characterXPosition / (float)bitmapWidth;
+		YStartPos(characterIndex) = characterYPosition / (float)bitmapWidth;
+		XEndPos(characterIndex)  = (characterXPosition + characterSize.cx) / (float)bitmapWidth;
+		YEndPos(characterIndex)  = (characterYPosition  + characterSize.cy) / (float)bitmapWidth;
 		characterXPosition += characterSize.cx + 10;
-		// characterToCreate++;
 	}
+	
 	HRESULT result = p_device->CreateTexture(bitmapWidth, bitmapWidth, 1, 0, D3DFMT_A8R8G8B8, D3DPOOL_MANAGED, &this->directTexture);
 	if (result < 0) {
 		return E_FAIL;
@@ -150,13 +147,11 @@ void CDirectXFont::DrawDebug(float p_drawXPos, float p_drawYPos) {
 	fontVertexes[0].u = 0.0f;
 	fontVertexes[0].v = 0.0f;
 
-
 	fontVertexes[1].x = p_drawXPos;
 	fontVertexes[1].y = p_drawYPos + 300.0f;
 	fontVertexes[1].z = 1.0f;
 	fontVertexes[1].u = 0.0f;
 	fontVertexes[1].v = 1.0f;
-
 
 	fontVertexes[2].x = p_drawXPos + 300.0f;
 	fontVertexes[2].y = p_drawYPos;
@@ -164,14 +159,13 @@ void CDirectXFont::DrawDebug(float p_drawXPos, float p_drawYPos) {
 	fontVertexes[2].u = 1.0f;
 	fontVertexes[2].v = 0.0f;
 
-
 	fontVertexes[3].x = p_drawXPos + 300.0f;
 	fontVertexes[3].y = p_drawYPos + 300.0f;
 	fontVertexes[3].z = 1.0f;
 	fontVertexes[3].u = 1.0f;
 	fontVertexes[3].v = 1.0f;
 
-	
+
 	fontVertexes[3].rhw = 1.0f;
 	fontVertexes[2].rhw = 1.0f;
 	fontVertexes[1].rhw = 1.0f;
@@ -283,16 +277,16 @@ void CDirectXFont::DestroyFont() {
 void CDirectXFont::FillCharacter(char p_char, FONTVERTEX** p_vertexesArrayPointer, float p_globalXStartPos, float* p_charXPos, float* p_charYPos, ulong p_color) {
 	if (p_char == '\n') {
 		*p_charXPos = p_globalXStartPos;
-		int yPosChange = bitmapWidth * (charactersInfo[0].yEndPos - charactersInfo[0].yStartPos);
+		int yPosChange = bitmapWidth * (charactersPositionInfo[3] - charactersPositionInfo[1]);
 		*p_charYPos += yPosChange;
 		return;
 	}
 	if (p_char >= ' ') {
 		int charIndex = p_char- ' ';
-		float bitmapCharXStart = charactersInfo[charIndex].xStartPos;
-		float bitmapCharYStart = charactersInfo[charIndex].yStartPos;
-		float bitmapCharXEnd = charactersInfo[charIndex].xEndPos;
-		float bitmapCharYEnd = charactersInfo[charIndex].yEndPos;
+		float bitmapCharXStart = XStartPos(charIndex); 
+		float bitmapCharYStart = YStartPos(charIndex);
+		float bitmapCharXEnd = XEndPos(charIndex);
+		float bitmapCharYEnd = YEndPos(charIndex);
 		float bitmapCharWidth = (bitmapCharXEnd - bitmapCharXStart) * bitmapWidth;
 		float bitmapCharHeight = (bitmapCharYEnd - bitmapCharYStart) * bitmapWidth;
 

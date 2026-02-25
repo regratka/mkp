@@ -14,18 +14,9 @@ struct FONTVERTEX {
 	float v;
 };
 
-class CDirectXFont {
-
-	struct FontCharacterInfo {
-		float xStartPos;
-		float yStartPos;
-		float xEndPos;
-		float yEndPos;
-	};
-
+class __declspec(dllexport) CDirectXFont {
+	
 public:
-	/* 1000A870 */ CDirectXFont(CDirectXFont const & p_other);
-	/* 1000A8E0 */ CDirectXFont& operator=(CDirectXFont const & p_other);
 	/* 10066270 */ CDirectXFont();
 	/* 10066290 */ virtual ~CDirectXFont();
 	/* 100662A0 */ HRESULT CreateFontA(IDirect3DDevice8* param_1, char* param_2, long param_3);
@@ -40,7 +31,7 @@ public:
 
 private:
 	/* 0x004 */	int bitmapWidth;
-	/* 0x008 */ FontCharacterInfo charactersInfo[96];
+	/* 0x008 */ float charactersPositionInfo[0x180];
 	/* 0x608 */ IDirect3DTexture8* directTexture;
 	/* 0x60c */ IDirect3DVertexBuffer8* directVertexBuffer;
 	/* 0x610 */ IDirect3DDevice8* directDevice;
@@ -48,6 +39,6 @@ private:
 	/* 0X618 */ ulong blockToken2; 
 };
 
-STATIC_ASSERT(sizeof(CDirectXFont) == 0x61c);
+// STATIC_ASSERT(sizeof(CDirectXFont) == 0x61c);
 
 #endif

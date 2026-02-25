@@ -1,3 +1,6 @@
+#ifndef _GLOBAL
+#define _GLOBAL
+
 #define GLUE(a, b) a##b
 
 #define STATIC_ASSERT(cond) typedef char GLUE(static_assertion_failed, __LINE__)[(cond) ? 1 : -1]
@@ -16,4 +19,4 @@ typedef int BOOL;
 #define TRUE 1
 #define FALSE 0
 
-#include <d3dx8math.h>
+#endif
