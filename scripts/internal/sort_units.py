@@ -10,5 +10,5 @@ def sort(unit_listing: Path):
         out.writelines(unit_lines)
 
 if __name__ == '__main__':
-    paths = Path(__file__).parent.parent / "config" / "me2" / "units_listing.csv"
+    paths = Path(__file__).parent.parent.parent / "config" / "me2" / "units_listing.csv"
     sort(paths)

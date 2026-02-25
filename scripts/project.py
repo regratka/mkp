@@ -7,12 +7,10 @@ class FunctionType(Enum):
     CONSTRUCTOR = 4,
     UNKNOWN = 5
 
-
-
-
 class Function:
     def __init__(self):
         self.type = FunctionType.UNKNOWN
+        self.mangledName = ''
         self.namespace = ''
         self.name = ''
         self.start = 0
@@ -29,20 +27,21 @@ class Function:
     def create(csv_record: str): 
         func = Function()
         csv_values = csv_record.split(';')
-        full_name = csv_values[0]
+        mangled_name = csv_values[0]
+        full_name = csv_values[1]
         name_parts = full_name.split("::")
         func.namespace = "::".join(name_parts[0: len(name_parts)-1])
         func.name = name_parts[-1]
-        func.start = int(csv_values[1], 16)
-        func.size = int(csv_values[2], 16)
+        func.start = int(csv_values[2], 16)
+        func.size = int(csv_values[3], 16)
         func.end = func.start + func.size
         
-        convention = csv_values[3]
-        if csv_values[4] != '':
+        convention = csv_values[4]
+        if csv_values[5] != '':
             func.hasVarArgs = True
-        func.returnType = csv_values[5]
+        func.returnType = csv_values[6]
         
-        for arg_index in range(6, len(csv_values)):
+        for arg_index in range(7, len(csv_values)):
             func.args.append(csv_values[arg_index])
 
         if convention == '__thiscall':

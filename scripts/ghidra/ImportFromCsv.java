@@ -36,9 +36,10 @@ public class ImportFromCsv extends GhidraScript
         {
             String v = sc.nextLine();
             String[] values = v.split(";");
-            String name = values[0];
-            Address addr = this.toAddr(values[1]);
-            Long size = Long.decode(values[2]);
+            String mangledName = values[0];
+            String name = values[1];
+            Address addr = this.toAddr(values[2]);
+            Long size = Long.decode(values[3]);
             AddressSet range = new AddressSet(addr, size > 0 ? addr.add(size - 1) : addr);
 
             // Get the parent namespace.
@@ -69,12 +70,16 @@ public class ImportFromCsv extends GhidraScript
                 fun = this.getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range,
                                                                                    SourceType.USER_DEFINED);
             }
+
+            if (!mangledName.isEmpty() && getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
+                this.getCurrentProgram().getSymbolTable().createLabel(addr, mangledName, SourceType.USER_DEFINED);
+            }
+
             fun.setParentNamespace(curNamespace);
             try
             {
                 fun.setName(funName, SourceType.USER_DEFINED);
-            }
-            catch (DuplicateNameException ex)
+            } catch (DuplicateNameException ex)
             {
                 printf("DuplicateNameException for %s at %x\n", name, addr.getOffset());
             }

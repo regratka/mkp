@@ -5,14 +5,19 @@ import ghidra.app.script.GhidraScript;
 import ghidra.program.model.data.DataType;
 import ghidra.program.model.data.Pointer;
 import ghidra.program.model.data.TypeDef;
+import ghidra.program.model.symbol.Symbol;
+import ghidra.program.model.symbol.SymbolType;
 import ghidra.program.model.listing.Function;
 import ghidra.program.model.listing.FunctionIterator;
 import ghidra.program.model.listing.Parameter;
 import java.io.File;
 import java.nio.file.Files;
 
+import java.util.regex.Pattern;
+
 public class GenerateMapping extends GhidraScript
 {
+    private static final Pattern MSVC_MANGLING = Pattern.compile("\\?.*");
 
     private String transformType(DataType ty)
     {
@@ -89,6 +94,12 @@ public class GenerateMapping extends GhidraScript
                 continue;
             }
 
+
+            Symbol mangledSymbol = getMangledNameSymbol(func);
+            if (mangledSymbol != null) {
+                builder.append(mangledSymbol.getName());
+            }
+            builder.append(";");
             builder.append(func.getName(true));
             builder.append(";0x");
             builder.append(Long.toHexString(func.getEntryPoint().getOffset()));
@@ -109,6 +120,16 @@ public class GenerateMapping extends GhidraScript
         }
 
         return builder.toString();
+    }
+
+    private Symbol getMangledNameSymbol(Function function) {
+       Symbol[] functionStartSymbols = currentProgram.getSymbolTable().getSymbols(function.getEntryPoint());
+       for (Symbol symbol : functionStartSymbols) {
+            if (MSVC_MANGLING.matcher(symbol.getName(true)).matches()) {
+                return symbol;
+            }
+       }
+       return null;
     }
 
     // TODO: handle duplicated
