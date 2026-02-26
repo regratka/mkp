@@ -1,19 +1,5 @@
 #include "cMagKernel.h"
 
-/* 100011e0-100011e7 00007	*/
-bool cMagKernel::GetStatusRemoveObject() {
-	return this->statusRemoveObject;
-}
-
-/* 100011f0-100011fd 0000d	*/
-void cMagKernel::RemoveObject(bool p_removeObject) {
-	this->statusRemoveObject = p_removeObject;
-}
-
-/* 10001200-1000131f 0011f	*/
-cMagKernel::cMagKernel(cMagKernel* p_other) {
-}
-
 /* 100111a0-10011244 000a4	*/
 cMagKernel::cMagKernel() : cMagLog(), log() {
     delegator1 = NULL;
@@ -100,8 +86,8 @@ int cMagKernel::GetObjectID() {
 }
 
 /* 10011620-1001164e 0002e	*/
-void cMagKernel::SetClassName(char* param_1) {
-    strcpy(this->className, className);
+void cMagKernel::SetClassName(char* p_className) {
+    strcpy(this->className, p_className);
 }
 
 /* 10011650-10011657 00007	*/
@@ -234,36 +220,40 @@ void cMagKernel::DisableCallHandler(char* param_1) {
 
 /* 100121f0-100121f7 00007	*/
 bool cMagKernel::GetStatusOnAttachChild() {
-	return 0;
+	return enabledOnAttachChild;
 }
 
 /* 10012200-10012207 00007	*/
 bool cMagKernel::GetStatusOnFrame() {
-	return 0;
+	return enableOnFrameHandler;
 }
 
 /* 10012210-10012217 00007	*/
 bool cMagKernel::GetStatusOnInputKey() {
-	return 0;
+	return enableOnInputKeyHandler;
 }
 
 /* 10012220-10012227 00007	*/
 bool cMagKernel::GetStatusOnInputMouse() {
-	return 0;
+	return enabledOnInputMouseHandler3;
 }
 
 /* 10012230-10012237 00007	*/
 bool cMagKernel::GetStatusOnCollisionObject() {
-	return 0;
+	return enabledOnCollisionObjectHandler;
 }
 
 /* 10012240-1001225b 0001b	*/
 void cMagKernel::DisableAllHandlers() {
+    enableOnFrameHandler = false;
+    enableOnInputKeyHandler = false;
+    enabledOnInputMouseHandler3 = false;
+    enabledOnCollisionObjectHandler = false;
 }
 
 /* 10012260-10012266 00006	*/
 char* cMagKernel::GetFileMeshName() {
-	return 0;
+	return "No name";
 }
 
 /* 10012270-10012303 00093	*/
@@ -283,7 +273,7 @@ void cMagKernel::OnCrash() {
 
 /* 10012430-10012437 00007	*/
 bool cMagKernel::GetStatusOnPhysicsUpdate() {
-	return 0;
+	return enabledOnPhysicsUpdate;
 }
 
 /* 10012440-1001244a 0000a	*/
@@ -293,11 +283,12 @@ void cMagKernel::SetObjectParam(int param_1) {
 
 /* 10012450-10012454 00004	*/
 int cMagKernel::GetObjectParam() {
-	return 0;
+	return objectParam;
 }
 
 /* 10012460-10012463 00003	*/
 void cMagKernel::Load(std::ifstream& stream, _ED_CHUNK chunk) {
+
 }
 
 /* 10012470-10012480 00010	*/
@@ -410,5 +401,10 @@ void cMagKernel::CallOnActivateLevel() {
 
 /* 10012920-10012939 00019	*/
 void cMagKernel::CallOnNavigationPathEnd() {
+    if (delegator1 != NULL) {
+        delegator1->OnNavigationPathEnd();
+        return;
+    }
+    OnNavigationPathEnd();
 }
 

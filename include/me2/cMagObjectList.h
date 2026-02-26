@@ -6,12 +6,18 @@
 
 #include "cMagKernel.h"
 
-class cMagObjectList : public cMagKernel {
+class __declspec(dllexport) cMagObjectList : public cMagKernel {
 public:
-	/* 100014C0 */ std::vector<cMagKernel*>::iterator begin();
-	/* 100014D0 */ std::vector<cMagKernel*>::iterator end();
-	/* 100014E0 */ cMagObjectList(cMagObjectList const & p_other);
-	/* 10001970 */ cMagObjectList& operator=(cMagObjectList const & param_1);
+	/* 100014C0-100014C7 00007	*/
+	std::vector<cMagKernel*>::iterator cMagObjectList::begin() {
+		return objects.begin();
+	}
+
+	/* 100014D0-100014D7 00007	*/
+	std::vector<cMagKernel*>::iterator cMagObjectList::end() {
+		return objects.end();
+	}
+
 	/* 100167E0 */ cMagObjectList();
 	/* 10016A90 */ virtual ~cMagObjectList();
 	/* 10016CF0 */ bool AddObject(cMagKernel* param_1);
@@ -57,15 +63,16 @@ public:
 
 private:
 	/* 0x1dc */	std::vector<cMagKernel*> objects;
-	/* 0x1ec */	std::vector<void*> f_1ec;
+	/* 0x1ec */	std::vector<float> f_1ec;
 	/* 0x1fc */	std::vector<void*> f_1fc;
 	/* 0x20c */	std::vector<void*> f_20c;
 	/* 0x21c */	std::vector<void*> f_21c;
 	/* 0x22c */	std::vector<void*> f_22c;
-	/* 0x23c */	char f_23c[0x244 - 0x23c];
-	/* 0x244 */	void* fog;
-	/* 0x248 */ int f_248;
-	/* 0x24c */ int f_24c;
+	/* 0x23c */	cMagKernel* skyBoxObject;
+	/* 0x240 */	cMagKernel* sunObject;
+	/* 0x244 */	cMagKernel* fogObject;
+	/* 0x248 */ cMagKernel* lensFlare;
+	/* 0x24c */ cMagKernel* terrainObject;
 	/* 0x250 */ std::vector<void*> f_250;
 	/* 0x260 */ std::vector<void*> f_260;
 	/* 0x270 */ std::vector<void*> f_270;

@@ -1,26 +1,19 @@
 #include "cMagObjectList.h"
 
-/* 100014C0-100014C7 00007	*/
-std::vector<cMagKernel*>::iterator cMagObjectList::begin() {
-	return objects.begin();
-}
-
-/* 100014D0-100014D7 00007	*/
-std::vector<cMagKernel*>::iterator cMagObjectList::end() {
-	return objects.end();
-}
-
-/* 100014E0-1000196F 0048F	*/
-cMagObjectList::cMagObjectList(cMagObjectList const & p_other) {
-}
-
-/* 10001970-10001D13 003A3	*/
-cMagObjectList& cMagObjectList::operator=(cMagObjectList const & param_1) {
-	return *this;
-}
-
 /* 100167E0-10016A8A 002AA	*/
 cMagObjectList::cMagObjectList() {
+	SetObjectName("No name");
+	SetClassName("cMagObjectList");
+	skyBoxObject = NULL;
+	sunObject = NULL;
+	lensFlare = NULL;
+	terrainObject = NULL;
+	f_280.clear();
+	f_250.clear();
+	f_2c0.clear();
+	f_260.clear();
+	f_270.clear();
+	f_2b0.clear();
 }
 
 /* 10016A90-10016CF0 00260	*/
