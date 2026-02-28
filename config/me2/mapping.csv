@@ -13,12 +13,12 @@
 ?RemoveObject@cMagKernel@@UAEX_N@Z;cMagKernel::RemoveObject;0x100011f0;0xd;__thiscall;;void;cMagKernel*;bool
 ??0cMagKernel@@QAE@ABV0@@Z;cMagKernel::cMagKernel;0x10001200;0x11f;__thiscall;;uchar;cMagKernel*;cMagKernel*
 ??4cMagKernel@@QAEAAV0@ABV0@@Z;CState::operator=;0x10001320;0x132;__thiscall;;CState*;CState*;CState*
-;cMagKernel::scalar_destructor;0x10001460;0x57;__thiscall;;cMagKernel*;cMagKernel*;uchar
+??_EcMagKernel@@UAEPAXI@Z;cMagKernel::vector_destructor;0x10001460;0x57;__thiscall;;cMagKernel*;cMagKernel*;uchar
 ?begin@cMagObjectList@@QAEPAPAVcMagKernel@@XZ;cMagObjectList::begin;0x100014c0;0x7;__thiscall;;std::vector<cMagKernel*>::iterator;cMagObjectList*
 ?end@cMagObjectList@@QAEPAPAVcMagKernel@@XZ;cMagObjectList::end;0x100014d0;0x7;__thiscall;;std::vector<cMagKernel*>::iterator;cMagObjectList*
 ??0cMagObjectList@@QAE@ABV0@@Z;cMagObjectList::cMagObjectList;0x100014e0;0x48f;__thiscall;;cMagObjectList*;cMagObjectList*;cMagObjectList*
 ??4cMagObjectList@@QAEAAV0@ABV0@@Z;cMagObjectList::operator=;0x10001970;0x3a3;__thiscall;;cMagObjectList*;cMagObjectList*;cMagObjectList*
-;cMagObjectList::scalar_destructor;0x10001d20;0x57;__thiscall;;cMagObjectList*;cMagObjectList*;uchar
+??_EcMagObjectList@@UAEPAXI@Z;cMagObjectList::vector_destructor;0x10001d20;0x57;__thiscall;;cMagObjectList*;cMagObjectList*;uchar
 ?Restore@MagGrid@@QAEJXZ;MagGrid::Restore;0x10001d80;0x5;__thiscall;;long;MagGrid*
 ?Invalidate@MagGrid@@QAEJXZ;MagGrid::Invalidate;0x10001d90;0x2f;__thiscall;;long;MagGrid*
 ??0MagGrid@@QAE@ABV0@@Z;MagGrid::MagGrid;0x10001dc0;0x51;__thiscall;;uchar;MagGrid*;MagGrid*
@@ -5130,7 +5130,7 @@
 ;FUN_1010ebfe;0x1010ebfe;0x1b;__thiscall;;bool;void*;int
 ;FUN_1010ec19;0x1010ec19;0x17;__stdcall;;uchar
 ;FUN_1010ec30;0x1010ec30;0x38;__stdcall;;uchar
-;FUN_1010ec68;0x1010ec68;0x68;__stdcall;;uchar;uint;uint;int;uchar*
+??_M@YGXPAXIHP6EX0@Z@Z;FUN_1010ec68;0x1010ec68;0x68;__stdcall;;uchar;uint;uint;int;uchar*
 ;FUN_1010ecd0;0x1010ecd0;0x18;__stdcall;;uchar
 ;FUN_1010ece8;0x1010ece8;0x51;__stdcall;;uchar;uint;uint;int;uchar*
 ;FUN_1010ed5c;0x1010ed5c;0x2d;__stdcall;;uchar;uchar*

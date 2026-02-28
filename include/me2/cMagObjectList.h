@@ -63,25 +63,25 @@ public:
 
 private:
 	/* 0x1dc */	std::vector<cMagKernel*> objects;
-	/* 0x1ec */	std::vector<float> f_1ec;
-	/* 0x1fc */	std::vector<void*> f_1fc;
-	/* 0x20c */	std::vector<void*> f_20c;
-	/* 0x21c */	std::vector<void*> f_21c;
-	/* 0x22c */	std::vector<void*> f_22c;
+	/* 0x1ec */	std::vector<cMagKernel*> particleObjects;
+	/* 0x1fc */	std::vector<cMagKernel*> billboardObjects;
+	/* 0x20c */	std::vector<cMagKernel*> cameraObjects;
+	/* 0x21c */	std::vector<cMagKernel*> spriteObjects;
+	/* 0x22c */	std::vector<cMagKernel*> fxObjects;
 	/* 0x23c */	cMagKernel* skyBoxObject;
 	/* 0x240 */	cMagKernel* sunObject;
 	/* 0x244 */	cMagKernel* fogObject;
 	/* 0x248 */ cMagKernel* lensFlare;
 	/* 0x24c */ cMagKernel* terrainObject;
-	/* 0x250 */ std::vector<void*> f_250;
-	/* 0x260 */ std::vector<void*> f_260;
-	/* 0x270 */ std::vector<void*> f_270;
-	/* 0x280 */ std::vector<void*> f_280;
-	/* 0x290 */ std::vector<void*> f_290;
-	/* 0x2a0 */ std::vector<void*> f_2a0;
-	/* 0x2b0 */ std::vector<void*> f_2b0;
-	/* 0x2c0 */ std::vector<void*> f_2c0;
-	/* 0x2d0 */ std::vector<void*> f_2d0;
+	/* 0x250 */ std::vector<cMagKernel*> waterObjects;
+	/* 0x260 */ std::vector<cMagKernel*> blobObjects;
+	/* 0x270 */ std::vector<cMagKernel*> alphaMeshObjects;
+	/* 0x280 */ std::vector<cMagKernel*> noShadowObjects;
+	/* 0x290 */ std::vector<cMagKernel*> f_290;
+	/* 0x2a0 */ std::vector<cMagKernel*> shadowObjects;
+	/* 0x2b0 */ std::vector<cMagKernel*> f_2b0;
+	/* 0x2c0 */ std::vector<cMagKernel*> portalObjects;
+	/* 0x2d0 */ std::vector<cMagKernel*> sectors;
 };
 
 STATIC_ASSERT(sizeof(cMagObjectList) == 0x2e0);

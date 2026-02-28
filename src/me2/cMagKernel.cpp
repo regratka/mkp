@@ -307,14 +307,29 @@ void cMagKernel::OnAction(char* param_1) {
 
 /* 100124a0-100124b9 00019	*/
 void cMagKernel::CallOnFrame() {
+    if (this->delegator1 != NULL) {
+        this->delegator1->OnFrame();
+    } else {
+        OnFrame();
+    }
 }
 
 /* 100124c0-100124e9 00029	*/
 void cMagKernel::CallOnInputKey(uchar* param_1) {
+    if (this->delegator1 != NULL) {
+        this->delegator1->OnInputKey(param_1);
+    } else {
+        OnInputKey(param_1);
+    }
 }
 
 /* 100124f0-10012537 00047	*/
 void cMagKernel::CallOnInputMouse(float param_1, float param_2, bool param_3, bool param_4) {
+    if (this->delegator1 != NULL) {
+        this->delegator1->OnInputMouse(param_1, param_2, param_3, param_4);
+    } else {
+        OnInputMouse(param_1, param_2, param_3, param_4);
+    }
 }
 
 /* 10012540-10012559 00019	*/
@@ -328,72 +343,152 @@ void cMagKernel::CallOnAction() {
 
 /* 10012560-10012579 00019	*/
 void cMagKernel::CallOnCrash() {
+    if (delegator1 != NULL) {
+        delegator1->OnCrash();
+    } else {
+        OnCrash();
+    }
 }
 
 /* 10012580-100125a1 00021	*/
 void cMagKernel::CallOnSlide(cMagMeshObject* param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnSlide(param_1);
+    } else {
+        OnSlide(param_1);
+    }
 }
 
 /* 100125b0-100125d9 00029	*/
 void cMagKernel::CallOnDestTime(float param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnDestTime(param_1);
+    } else {
+        OnDestTime(param_1);
+    }
 }
 
 /* 100125e0-100125f3 00013	*/
 void cMagKernel::CallOnPathVerge() {
+    if (delegator1 != NULL) {
+        delegator1->OnPathVerge();
+    } else {
+        OnPathVerge();
+    }
 }
 
 /* 10012600-100126c9 000c9	*/
 void cMagKernel::CallOnBonePositionUpdate(char* param_1, D3DXVECTOR3 param_2, D3DXMATRIX param_3, D3DXMATRIX param_4) {
+    if (delegator1 != NULL) {
+        delegator1->OnBonePositionUpdate(param_1, param_2, param_3, param_4);
+    } else {
+        OnBonePositionUpdate(param_1, param_2, param_3, param_4);
+    }
 }
 
 /* 100126d0-100126f3 00023	*/
 void cMagKernel::CallOnSlideObject(cMagMeshObject* param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnSlideObject(param_1);
+    } else {
+        OnSlideObject(param_1);
+    }
 }
 
 /* 10012700-10012723 00023	*/
 void cMagKernel::CallOnDetach(cMagMeshObject* param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnDetach(param_1);
+    } else {
+        OnDetach(param_1);
+    }
 }
 
 /* 10012730-10012753 00023	*/
 void cMagKernel::CallOnAttach(cMagMeshObject* param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnAttach(param_1);
+    } else {
+        OnAttach(param_1);
+    }
 }
 
 /* 10012760-10012783 00023	*/
 void cMagKernel::CallOnCollisionObject(cMagMeshObject* param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnCollisionObject(param_1);
+    } else {
+        OnCollisionObject(param_1);
+    }
 }
 
 /* 10012790-100127b9 00029	*/
 void cMagKernel::CallOnMouseEnter(int param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnMouseEnter(param_1);
+    } else {
+        OnMouseEnter(param_1);
+    }
 }
 
 /* 100127c0-100127e9 00029	*/
 void cMagKernel::CallOnMouseLeave(int param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnMouseLeave(param_1);
+    } else {
+        OnMouseLeave(param_1);
+    }
 }
 
 /* 100127f0-10012819 00029	*/
 void cMagKernel::CallOnMouseArrive(int param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnMouseArrive(param_1);
+    } else {
+        OnMouseArrive(param_1);
+    }
 }
 
 /* 10012820-10012843 00023	*/
 void cMagKernel::CallOnAnimEnd(char* param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnAnimEnd(param_1);
+    } else {
+        OnAnimEnd(param_1);
+    }
 }
 
 /* 10012850-10012863 00013	*/
 void cMagKernel::CallOnDestinationDir() {
+    if (delegator1 != NULL) {
+        delegator1->OnDestinationDir();
+    } else {
+        OnDestinationDir();
+    }
 }
 
 /* 10012870-100128be 0004e	*/
 void cMagKernel::CallOnDestinationPos(D3DXVECTOR3 param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnDestinationPos(param_1);
+    } else {
+        OnDestinationPos(param_1);
+    }
 }
 
 /* 100128c0-100128e3 00023	*/
 void cMagKernel::CallOnChangeMovement(int param_1) {
+    if (delegator1 != NULL) {
+        delegator1->OnChangeMovement(param_1);
+    } else {
+        OnChangeMovement(param_1);
+    }
 }
 
 /* 100128f0-10012903 00013	*/
 void cMagKernel::CallOnActivateLevel() {
-    if (this->delegator1 != NULL) {
-        this->delegator1->OnActivateLevel();
+    if (delegator1 != NULL) {
+        delegator1->OnActivateLevel();
     } else {
         OnActivateLevel();
     }
@@ -403,8 +498,8 @@ void cMagKernel::CallOnActivateLevel() {
 void cMagKernel::CallOnNavigationPathEnd() {
     if (delegator1 != NULL) {
         delegator1->OnNavigationPathEnd();
-        return;
+    } else {
+        OnNavigationPathEnd();
     }
-    OnNavigationPathEnd();
 }
 
