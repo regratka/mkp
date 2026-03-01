@@ -303,8 +303,9 @@ bool cMagObjectList::RenderTerrain() {
 
 /* 10018730-10018741 00011	*/
 cMagKernel* cMagObjectList::Find(ulong param_1) {
-    cMagKernel* found = objects[0];
-	return NULL;
+	cMagKernel* found = this;
+	found = *begin();
+	return found;
 }
 
 /* 10018750-10018779 00029	*/

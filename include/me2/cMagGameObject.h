@@ -4,8 +4,10 @@
 #include <globals.h>
 #include <Windows.h>
 #include <vector>
+#include <CMATH>
 
 #include "cMagObjectList.h"
+#include "MagGrid.h"
 
 typedef long (*windowCallback) (HWND, uint, uint, long);
 typedef long (*renderCallback) ();
@@ -23,18 +25,52 @@ class Mesh;
 
 struct _LIGHT;
 
-class cMagGameObject : public cMagObjectList {
+class __declspec(dllexport) cMagGameObject : public cMagObjectList {
 public:
-	/* 10002260 */ void SetLevelDirectory(char* param_1);
-	/* 100022A0 */ uchar GetViewMatrix();
-	/* 100022B0 */ uchar GetProjMatrix();
-	/* 100022C0 */ bool GetStatusRemoveObject();
-	/* 100022D0 */ void RemoveObject(bool param_1);
-	/* 100022E0 */ float GetClipNear();
-	/* 100022F0 */ float GetClipFar();
-	/* 10002300 */ float GpgDegToRad(float param_1);
-	/* 10002310 */ cMagGameObject(cMagGameObject* param_1);
-	/* 10002D60 */ cMagGameObject* operator=(cMagGameObject* param_1);
+	/* 10002260-100022A0 00040	*/
+	void SetLevelDirectory(char* param_1) {
+		strcpy(levelDirectory, param_1);
+		char* lastSlash = strrchr(levelDirectory, '\\');
+		if (lastSlash != NULL) {
+			*lastSlash = '\0';
+		}
+	}
+
+	/* 100022A0-100022A7 00007	*/
+	D3DXMATRIX& GetViewMatrix() {
+		return viewMatrix;
+	}
+
+	/* 100022B0-100022B7 00007	*/
+	D3DXMATRIX& GetProjMatrix() {
+		return projectionMatrix;
+	}
+
+	/* 100022C0-100022C7 00007	*/
+	virtual bool GetStatusRemoveObject() {
+		return removeObject;
+	}
+
+	/* 100022D0-100022DD 0000D	*/
+	virtual void RemoveObject(bool param_1) {
+		removeObject = param_1;
+	}
+
+	/* 100022E0-100022E7 00007	*/
+	float GetClipNear() {
+		return nearPlane;
+	}
+
+	/* 100022F0-100022F7 00007	*/
+	float GetClipFar() {
+		return farPlane;
+	}
+
+	/* 10002300-1000230D 0000D	*/
+	float cMagGameObject::GpgDegToRad(float param_1) {
+		return param_1 * (D3DX_PI / 180.0f);
+	}
+
 	/* 10024C60 */ cMagGameObject();
 	/* 10024F40 */ ~cMagGameObject();
 	/* 10025020 */ void SetWindowTitle(char* param_1);
@@ -170,6 +206,36 @@ public:
 	/* 1006CED0 */ ulong GetDXVersion();
 	/* 1009CC10 */ uint FUN_1009cc10(char* param_1);
 	/* 1009DF70 */ int CreateObject(char* param_1);
+
+private:
+	/* 0x2e0 */ cMagGameObject* levelObject;
+	/* 0x2e4 */ uchar f_2e4[0x2f4-0x2e4];
+	/* 0x2f4 */ char levelDirectory[300];
+	/* 0x420 */ char windowTitle[254];
+	/* 0x51e */ uchar f_51e[0x784-0x51e];
+	/* 0x784 */ D3DDISPLAYMODE displayMode;
+	/* 0x794 */ uchar f_794[0x7a4-0x794];
+	/* 0x7a4 */ D3DPRESENT_PARAMETERS presentParameters;
+	/* 0x7d8 */ IDirect3D8* direct3D;
+	/* 0x7dc */ IDirect3DDevice8* device3D;
+	/* 0x7e0 */ uchar f_7e0[0x8a0-0x7e0];
+	/* 0x8a0 */ D3DLIGHT8 light;
+	/* 0x908 */ uchar f_908[0x9e0-0x908];
+	/* 0x9e0 */ D3DXMATRIX projectionMatrix;
+	/* 0xa20 */ D3DXMATRIX viewMatrix;
+	/* 0xa60 */ uchar f_a60[0xb00-0xa60];
+	/* 0xb00 */ bool removeObject;
+	/* 0xb01 */ uchar f_b01[0xb08-0xb01];
+	/* 0xb08 */ MagGrid* grid;
+	/* 0xb0c */ uchar f_b0c[0xb24-0xb0c];
+	/* 0xb24 */ uint backBufferHeight;
+	/* 0xb28 */ uint backBufferWidth;
+	/* 0xb2c */ uchar f_b2c[0xbf8-0xb2c];
+	/* 0xbf8 */ float nearPlane;
+	/* 0xbfc */ float farPlane;
+	/* 0xc00 */ uchar f_c00[0xd10-0xc00];
 };
+
+STATIC_ASSERT(sizeof(cMagGameObject) == 0xd10);
 
 #endif

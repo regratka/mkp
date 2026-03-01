@@ -38,8 +38,8 @@
 ??4CMusicScript@@QAEAAV0@ABV0@@Z;CMusicScript::operator=;0x100021e0;0x1b;__thiscall;;CMusicScript*;CMusicScript*;CMusicScript*
 ;CMusicScript::scalar_destructor;0x10002200;0x54;__thiscall;;CMusicScript*;CMusicScript*;uchar
 ?SetLevelDirectory@cMagGameObject@@QAEXPAD@Z;cMagGameObject::SetLevelDirectory;0x10002260;0x40;__thiscall;;void;cMagGameObject*;char*
-?GetViewMatrix@cMagGameObject@@QAEAAUD3DXMATRIX@@XZ;cMagGameObject::GetViewMatrix;0x100022a0;0x7;__thiscall;;uchar;cMagGameObject*
-?GetProjMatrix@cMagGameObject@@QAEAAUD3DXMATRIX@@XZ;cMagGameObject::GetProjMatrix;0x100022b0;0x7;__thiscall;;uchar;cMagGameObject*
+?GetViewMatrix@cMagGameObject@@QAEAAUD3DXMATRIX@@XZ;cMagGameObject::GetViewMatrix;0x100022a0;0x7;__thiscall;;D3DXMATRIX*;cMagGameObject*
+?GetProjMatrix@cMagGameObject@@QAEAAUD3DXMATRIX@@XZ;cMagGameObject::GetProjMatrix;0x100022b0;0x7;__thiscall;;D3DXMATRIX*;cMagGameObject*
 ?GetStatusRemoveObject@cMagGameObject@@UAE_NXZ;cMagGameObject::GetStatusRemoveObject;0x100022c0;0x7;__thiscall;;bool;cMagGameObject*
 ?RemoveObject@cMagGameObject@@UAEX_N@Z;cMagGameObject::RemoveObject;0x100022d0;0xd;__thiscall;;void;cMagGameObject*;bool
 ?GetClipNear@cMagGameObject@@QAEMXZ;cMagGameObject::GetClipNear;0x100022e0;0x7;__thiscall;;float;cMagGameObject*
@@ -194,7 +194,7 @@
 ??4pgImage@@QAEAAV0@ABV0@@Z;pgImage::operator=;0x1000b4c0;0x2f;__thiscall;;pgImage*;pgImage*;pgImage*
 ??1pgImage@@QAE@XZ;pgImage::~pgImage;0x1000b4f0;0x8;__thiscall;;void;pgImage*
 ?getDataX@pgTerrainPVS@@QBEHXZ;cMagEngineMgr::GetGameObject;0x1000b500;0x3;__thiscall;;cMagGameObject*;cMagEngineMgr*
-?GetLoader@CMusicManager@@QAEPAUIDirectMusicLoader8@@XZ;cMagEngineMgr::GetEngine;0x1000b510;0x4;__thiscall;;uchar;cMagEngineMgr*
+?GetLoader@CMusicManager@@QAEPAUIDirectMusicLoader8@@XZ;cMagEngineMgr::GetEngine;0x1000b510;0x4;__thiscall;;IDirect3DDevice8*;cMagEngineMgr*
 ?getDataZ@pgTerrainPVS@@QBEHXZ;CMusicManager::GetPerformance;0x1000b520;0x4;__thiscall;;uchar;CMusicManager*
 ?getData@pgImage@@QAEPAEXZ;cMagEngineMgr::GetFrustumCull;0x1000b530;0x4;__thiscall;;cMagFrustumCull*;cMagEngineMgr*
 ??4pgTerrainPVS@@QAEAAV0@ABV0@@Z;pgTerrainPVS::operator=;0x1000b540;0x16;__thiscall;;pgTerrainPVS*;pgTerrainPVS*;pgTerrainPVS*

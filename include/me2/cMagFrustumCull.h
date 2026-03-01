@@ -17,7 +17,7 @@ public:
 	/* 10003B50 */ cMagFrustumCull* operator=(cMagFrustumCull* param_1);
 	/* 10003E30 */ cMagFrustumCull* scalar_destructor(uchar param_1);
 	/* 10089A80 */ cMagFrustumCull();
-	/* 10089B60 */ ~cMagFrustumCull();
+	/* 10089B60 */ virtual ~cMagFrustumCull();
 	/* 10089C50 */ uint ComputeBoundingBox(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6);
 	/* 10089F90 */ void UpdateBB(float param_1, float param_2, float param_3, uint* param_4, float param_5, float param_6);
 	/* 1008A1A0 */ void DrawBoundingBox(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5, uchar param_6, uchar param_7, uchar param_8, uchar param_9, uchar param_10);

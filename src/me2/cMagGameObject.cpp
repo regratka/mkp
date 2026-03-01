@@ -1,67 +1,117 @@
 #include "cMagGameObject.h"
 
-/* 10002260-100022A0 00040	*/
-void cMagGameObject::SetLevelDirectory(char* param_1) {
-}
-
-/* 100022A0-100022A7 00007	*/
-uchar cMagGameObject::GetViewMatrix() {
-	return 0;
-}
-
-/* 100022B0-100022B7 00007	*/
-uchar cMagGameObject::GetProjMatrix() {
-	return 0;
-}
-
-/* 100022C0-100022C7 00007	*/
-bool cMagGameObject::GetStatusRemoveObject() {
-	return 0;
-}
-
-/* 100022D0-100022DD 0000D	*/
-void cMagGameObject::RemoveObject(bool param_1) {
-}
-
-/* 100022E0-100022E7 00007	*/
-float cMagGameObject::GetClipNear() {
-	return 0;
-}
-
-/* 100022F0-100022F7 00007	*/
-float cMagGameObject::GetClipFar() {
-	return 0;
-}
-
-/* 10002300-1000230D 0000D	*/
-float cMagGameObject::GpgDegToRad(float param_1) {
-	return 0;
-}
-
-/* 10002310-10002D5D 00A4D	*/
-cMagGameObject::cMagGameObject(cMagGameObject* param_1) {
-}
-
-/* 10002D60-10003995 00C35	*/
-cMagGameObject* cMagGameObject::operator=(cMagGameObject* param_1) {
-	return 0;
-}
+#include "cMagEngineMgr.h"
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
+
+	levelObject = NULL;
+	SetObjectName("No name");
+	SetClassName("cMagGameObject");
+	strcpy(windowTitle, "MagnumEngine ver 2.0");
+	removeObject = false;
+	nearPlane = 10.0f;
+	farPlane = 550000.0f;
+	D3DXMatrixIdentity(&projectionMatrix);
+	D3DXMatrixIdentity(&viewMatrix);
+
 }
 
 /* 10024F40-10025018 000D8	*/
 cMagGameObject::~cMagGameObject() {
+	DebugLog("cMagGameObject::~cMagGameObject");
 }
 
 /* 10025020-1002504E 0002E	*/
 void cMagGameObject::SetWindowTitle(char* param_1) {
+	strcpy(windowTitle, param_1);
 }
 
 /* 10025050-1002543E 003EE	*/
 long cMagGameObject::InitD3D(HWND__* param_1) {
-	return 0;
+	DeleteLog();
+	FileLog("[--- Magnum Engine ver 2.0 ---]");
+	FileLog("--- Begin CreateDevice3D ... ");
+	direct3D = Direct3DCreate8(D3D_SDK_VERSION);
+	if (direct3D == NULL) {
+		CrashLog("Direct3DCreate8... (error)");
+		return E_FAIL;
+	}
+	D3DDISPLAYMODE displayMode;
+	HRESULT result = direct3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &displayMode);
+	if (result < NO_ERROR) {
+		CrashLog("GetAdapterDisplayMode... (error)");
+		return E_FAIL;
+	}
+	backBufferWidth = 800;
+	backBufferHeight = 600;
+	ZeroMemory(&presentParameters,sizeof(D3DPRESENT_PARAMETERS));
+	presentParameters.BackBufferWidth = 800;
+	presentParameters.BackBufferFormat = displayMode.Format;
+	presentParameters.BackBufferCount = 1;
+	presentParameters.Windowed = TRUE;
+	presentParameters.SwapEffect = D3DSWAPEFFECT_DISCARD;
+	presentParameters.EnableAutoDepthStencil = TRUE;
+	presentParameters.AutoDepthStencilFormat = D3DFMT_D16;
+	presentParameters.BackBufferHeight = 600;
+
+	result = direct3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, param_1, 0x20, &presentParameters, &device3D);
+	if (result < NO_ERROR) {
+		CrashLog("InitD3D CreateDevice... (error)");
+		return E_FAIL;
+	}
+	cMagEngineMgr::getInstance()->engine = device3D;
+	cMagEngineMgr::getInstance()->gameObject = this;
+	cMagEngineMgr::getInstance()->CreateFrustumCull();
+
+	D3DMATERIAL8 material;
+	ZeroMemory(&material, sizeof(D3DMATERIAL8));
+	material.Specular.r = 0.0f;
+	material.Specular.g = 0.0f;
+	material.Specular.b = 0.0f;
+	material.Diffuse.r = 1.0f;
+	material.Diffuse.g = 1.0f;
+	material.Diffuse.b = 1.0f;
+	material.Ambient.r = 0.25f;
+	material.Ambient.g = 0.25f;
+	material.Ambient.b = 0.25f;
+	cMagEngineMgr::getInstance()->engine->SetMaterial(&material);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_AMBIENT, D3DCOLOR_ARGB(0xff, 0x3f, 0x3f, 0x3f));
+
+	ZeroMemory(&light, sizeof(D3DLIGHT8));
+	light.Diffuse.b = 0.25f;
+	light.Diffuse.g = 0.25f;
+	light.Diffuse.r = 0.25f;
+	light.Direction.x = 0.0f; 
+	light.Direction.y = 0.0f; 
+	light.Direction.z = -1.0f;
+	light.Position.x = 0.0f; 
+	light.Position.y = 0.0f; 
+	light.Position.z = 0.0f; 
+	light.Type = D3DLIGHT_DIRECTIONAL;
+	light.Range = 10000.0f;
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_DITHERENABLE, FALSE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_SPECULARENABLE, FALSE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_SHADEMODE, D3DSHADE_GOURAUD);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, TRUE); 
+	cMagEngineMgr::getInstance()->engine->SetLight(0, &light);
+
+	float shaderConstant[4] = {0.0f, 0.0f, 1.0f, 0.0f};
+	cMagEngineMgr::getInstance()->engine->SetVertexShaderConstant(1, shaderConstant, 1);
+	IDirect3DSurface8* surface;
+	cMagEngineMgr::getInstance()->engine->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
+	cMagEngineMgr::getInstance()->engine->GetDisplayMode(&displayMode);
+	surface->Release();
+	
+	grid = new MagGrid();
+
+	grid->InitDeviceObjects(cMagEngineMgr::getInstance()->engine);
+	grid->Create(150, 150, 200.0f);
+	grid->BuildVertexBuffer();
+
+	FileLog("--- End CreateDevice3D ... OK");
+	return S_OK;
 }
 
 /* 10025440-10025515 000D5	*/
