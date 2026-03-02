@@ -860,7 +860,7 @@
 ?ReplaceTexture@cMagGameObject@@QAEPAUIDirect3DTexture8@@PAD0@Z;cMagGameObject::ReplaceTexture;0x10029040;0x18;__thiscall;;uchar;cMagGameObject*;char*;char*
 ?DeleteTexture@cMagGameObject@@QAEXPAD@Z;cMagGameObject::DeleteTexture;0x10029060;0x13;__thiscall;;void;cMagGameObject*;char*
 ?ShowGird@cMagGameObject@@QAEX_N@Z;cMagGameObject::ShowGird;0x10029080;0x14;__thiscall;;void;cMagGameObject*;bool
-?GetEngine@cMagGameObject@@QAEPAUIDirect3DDevice8@@XZ;cMagGameObject::GetEngine;0x100290a0;0x9;__thiscall;;uchar;cMagGameObject*
+?GetEngine@cMagGameObject@@QAEPAUIDirect3DDevice8@@XZ;cMagGameObject::GetEngine;0x100290a0;0x9;__thiscall;;IDirect3DDevice8*;cMagGameObject*
 ?GetFOV@cMagGameObject@@QAEMXZ;cMagGameObject::GetFOV;0x100290b0;0x7;__thiscall;;float;cMagGameObject*
 ?SetFOV@cMagGameObject@@QAEXM@Z;cMagGameObject::SetFOV;0x100290c0;0xd;__thiscall;;void;cMagGameObject*;float
 ?DrawTextA@cMagGameObject@@QAEXHHPAD@Z;cMagGameObject::DrawTextA;0x100290d0;0x49;__thiscall;;void;cMagGameObject*;int;int;char*

@@ -130,7 +130,7 @@ public:
 	/* 10029040 */ uchar ReplaceTexture(char* param_1, char* param_2);
 	/* 10029060 */ void DeleteTexture(char* param_1);
 	/* 10029080 */ void ShowGird(bool param_1);
-	/* 100290A0 */ uchar GetEngine();
+	/* 100290A0 */ IDirect3DDevice8* GetEngine();
 	/* 100290B0 */ float GetFOV();
 	/* 100290C0 */ void SetFOV(float param_1);
 	/* 100290D0 */ void DrawTextA(int param_1, int param_2, char* param_3);
@@ -209,37 +209,64 @@ public:
 
 private:
 	/* 0x2e0 */ cMagGameObject* levelObject;
+
 	/* 0x2e4 */ uchar f_2e4[0x2f4-0x2e4];
+
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
+
 	/* 0x51e */ uchar f_51e[0x630-0x51e];
+
 	/* 0x630 */ HWND hWnd;
+
 	/* 0x634 */ uchar f_634[0x638-0x634];
+
 	/* 0x638 */ int windowWidth;
 	/* 0x63c */ int windowHeight;
 	/* 0x640 */ int rgbChannels;
 	/* 0x644 */ bool enableFullscreen;
+
 	/* 0x645 */ uchar f_645[0x784-0x645];
+
 	/* 0x784 */ D3DDISPLAYMODE displayMode;
+
 	/* 0x794 */ uchar f_794[0x7a4-0x794];
+
 	/* 0x7a4 */ D3DPRESENT_PARAMETERS presentParameters;
 	/* 0x7d8 */ IDirect3D8* direct3D;
 	/* 0x7dc */ IDirect3DDevice8* device3D;
+
 	/* 0x7e0 */ uchar f_7e0[0x8a0-0x7e0];
+
 	/* 0x8a0 */ D3DLIGHT8 light;
-	/* 0x908 */ uchar f_908[0x9e0-0x908];
+
+	/* 0x908 */ uchar f_908[0x9dc-0x908];
+
+	/* 0x9dc */ bool showCursor;
+
+	/* 0x9dd */ uchar f_9dd[0x9e0-0x9dd];
+
 	/* 0x9e0 */ D3DXMATRIX projectionMatrix;
 	/* 0xa20 */ D3DXMATRIX viewMatrix;
+
 	/* 0xa60 */ uchar f_a60[0xb00-0xa60];
+
 	/* 0xb00 */ bool removeObject;
+
 	/* 0xb01 */ uchar f_b01[0xb08-0xb01];
+
 	/* 0xb08 */ MagGrid* grid;
+
 	/* 0xb0c */ uchar f_b0c[0xb24-0xb0c];
+
 	/* 0xb24 */ uint backBufferHeight;
 	/* 0xb28 */ uint backBufferWidth;
+
 	/* 0xb2c */ uchar f_b2c[0xbf8-0xb2c];
+
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
+
 	/* 0xc00 */ uchar f_c00[0xd10-0xc00];
 
 private:

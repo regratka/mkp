@@ -285,19 +285,27 @@ bool cMagGameObject::InitWindow(int param_1, int param_2, int param_3, bool para
 
 /* 10025C70-10025C87 00017	*/
 void cMagGameObject::UpdateMagWindowSize(int param_1, int param_2) {
+	windowWidth = param_1;
+	windowHeight = param_2;
 }
 
 /* 10025C90-10025CA4 00014	*/
 void cMagGameObject::ShowGameCursor(bool param_1) {
+	cMagEngineMgr::getInstance()->gameObject->showCursor = param_1;
 }
 
 /* 10025CB0-10025CBE 0000E	*/
 bool cMagGameObject::EnableGameCursor() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->showCursor;
 }
 
 /* 10025CC0-10025CE6 00026	*/
 void cMagGameObject::RenderGameCursor() {
+	if (cMagEngineMgr::getInstance()->gameObject->showCursor) {
+		cMagEngineMgr::getInstance()->engine->ShowCursor(TRUE);
+	} else {
+		cMagEngineMgr::getInstance()->engine->ShowCursor(FALSE);
+	}
 }
 
 /* 10025CF0-10025E29 00139	*/
@@ -339,6 +347,9 @@ void cMagGameObject::OnPreRender() {
 
 /* 10026300-1002632E 0002E	*/
 void cMagGameObject::OnPostRender() {
+	RenderGameCursor();
+	cMagEngineMgr::getInstance()->engine->EndScene();
+	cMagEngineMgr::getInstance()->engine->Present(NULL, NULL, NULL, NULL);
 }
 
 /* 10026330-1002669D 0036D	*/
@@ -475,7 +486,7 @@ int cMagGameObject::GetWindowHeight() {
 	return 0;
 }
 
-/* 10028EF0-10028EFE 0000E	*/
+/* 10028EF0-10028EFE 0000E  */
 int cMagGameObject::GetWindowWidth() {
 	return 0;
 }
@@ -503,8 +514,8 @@ void cMagGameObject::ShowGird(bool param_1) {
 }
 
 /* 100290A0-100290A9 00009	*/
-uchar cMagGameObject::GetEngine() {
-	return 0;
+IDirect3DDevice8* cMagGameObject::GetEngine() {
+	return cMagEngineMgr::getInstance()->engine;
 }
 
 /* 100290B0-100290B7 00007	*/
