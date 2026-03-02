@@ -61,7 +61,7 @@ public:
 	/* 10018780 */ void CleanList();
 	/* 10018800 */ void RenderLensFlare();
 
-private:
+protected:
 	/* 0x1dc */	std::vector<cMagKernel*> objects;
 	/* 0x1ec */	std::vector<cMagKernel*> particleObjects;
 	/* 0x1fc */	std::vector<cMagKernel*> billboardObjects;

@@ -1,6 +1,7 @@
 #include "cMagGameObject.h"
 
 #include "cMagEngineMgr.h"
+#include "cMagSprite.h"
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
@@ -221,6 +222,60 @@ long cMagGameObject::AppInit(HINSTANCE__* param_1, bool param_2) {
 
 /* 100258C0-10025AA6 001E6	*/
 void cMagGameObject::SetDeviceMode(int param_1, int param_2) {
+	backBufferWidth = param_1;
+	backBufferHeight = param_2;
+	windowWidth = param_1;
+	windowHeight = param_2;
+	DebugLog("WindowWidth: %d  WindowHeight: %d", param_1, param_2);
+
+	ZeroMemory(&cMagGameObject::PRESENT_PARAMETERS, sizeof(D3DPRESENT_PARAMETERS));
+	device3D->Reset(&cMagGameObject::PRESENT_PARAMETERS);
+	cMagGameObject::PRESENT_PARAMETERS.BackBufferCount = 3;
+	cMagGameObject::PRESENT_PARAMETERS.BackBufferWidth = windowWidth;
+	cMagGameObject::PRESENT_PARAMETERS.BackBufferHeight = windowHeight;
+	cMagGameObject::PRESENT_PARAMETERS.SwapEffect = D3DSWAPEFFECT_DISCARD;
+	SetWindowPos(hWnd, NULL, 0, 0, windowWidth, windowHeight, 0);
+
+	int channels;
+	if (enableFullscreen) {
+		cMagGameObject::PRESENT_PARAMETERS.Windowed = FALSE;
+		rgbChannels = 0x20;
+		channels = 0x20;
+		cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
+		cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
+		cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
+		FileLog("Tryb: %d , FullScreen", channels);
+	} else {
+		cMagGameObject::PRESENT_PARAMETERS.Windowed = TRUE;
+		D3DDISPLAYMODE displayMode;
+		HRESULT result = direct3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &displayMode);
+		if (result < 0) {
+			return;
+		}
+		if (displayMode.Format == D3DFMT_X8R8G8B8 || displayMode.Format == D3DFMT_A8R8G8B8) {
+			rgbChannels = 0x20;
+			channels = 0x20;
+			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
+			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
+			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
+			FileLog("Tryb: %d , okno", channels);
+		} else {
+			rgbChannels = 0x10;
+			channels = 0x10;
+			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
+			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D16;
+			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_R5G6B5;
+			FileLog("Tryb: %d , okno", channels);
+		}
+	}
+	ShowWindow(hWnd, 5);
+	UpdateWindow(hWnd);
+	SetForegroundWindow(hWnd);
+	SetCapture(hWnd);
+	SetFocus(hWnd);
+	for(std::vector<cMagKernel*>::iterator it = spriteObjects.begin(); it != spriteObjects.end(); it++) {
+		((cMagSprite*)(*it))->Restore();
+	}
 }
 
 /* 10025AB0-10025C6F 001BF	*/
