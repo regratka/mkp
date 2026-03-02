@@ -45,7 +45,7 @@ long cMagGameObject::InitD3D(HWND__* param_1) {
 	}
 	backBufferWidth = 800;
 	backBufferHeight = 600;
-	ZeroMemory(&presentParameters,sizeof(D3DPRESENT_PARAMETERS));
+	ZeroMemory(&presentParameters, sizeof(D3DPRESENT_PARAMETERS));
 	presentParameters.BackBufferWidth = 800;
 	presentParameters.BackBufferFormat = displayMode.Format;
 	presentParameters.BackBufferCount = 1;
@@ -82,13 +82,11 @@ long cMagGameObject::InitD3D(HWND__* param_1) {
 	light.Diffuse.b = 0.25f;
 	light.Diffuse.g = 0.25f;
 	light.Diffuse.r = 0.25f;
-	light.Direction.x = 0.0f; 
-	light.Direction.y = 0.0f; 
-	light.Direction.z = -1.0f;
-	light.Position.x = 0.0f; 
-	light.Position.y = 0.0f; 
-	light.Position.z = 0.0f; 
+	D3DVECTOR lightDir =  {0.0f, 0.0f, -1.0f};
+	light.Direction = lightDir;
 	light.Type = D3DLIGHT_DIRECTIONAL;
+	D3DVECTOR lightPos = {0.0f, 0.0f, 0.0f};
+	light.Position = lightPos;
 	light.Range = 10000.0f;
 
 	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_DITHERENABLE, FALSE);
@@ -116,11 +114,109 @@ long cMagGameObject::InitD3D(HWND__* param_1) {
 
 /* 10025440-10025515 000D5	*/
 void cMagGameObject::Cleanup() {
+	if (direct3D != NULL) {
+		direct3D->Release();
+	}
+	FileLog("Cleanup... OK");
 }
 
 /* 10025550-100258B5 00365	*/
 long cMagGameObject::AppInit(HINSTANCE__* param_1, bool param_2) {
-	return 0;
+	FileLog("--- Begin CreateDevice3D ... ");
+	direct3D = Direct3DCreate8(D3D_SDK_VERSION);
+	if (direct3D == NULL) {
+		CrashLog("Direct3DCreate8... (error)");
+		return E_FAIL;
+	}
+
+	if (logEnabled) {
+		int adapterModeCount = direct3D->GetAdapterModeCount(D3DADAPTER_DEFAULT);
+		for (int mode = 0; mode < adapterModeCount; mode++) {
+			D3DDISPLAYMODE displayMode;
+			direct3D->EnumAdapterModes(D3DADAPTER_DEFAULT, mode, &displayMode);
+			uint rgbChannels = 0;
+			if (displayMode.Format == D3DFMT_X1R5G5B5) {
+				rgbChannels = 0x10;
+			} else if (displayMode.Format == D3DFMT_R5G6B5) {
+				rgbChannels = 0x10;
+			} else if (displayMode.Format == D3DFMT_A1R5G5B5) {
+				rgbChannels = 0x10;
+			} else if (displayMode.Format == D3DFMT_A4R4G4B4) {
+				rgbChannels = 0x10;
+			} else if (displayMode.Format == D3DFMT_X4R4G4B4) {
+				rgbChannels = 0x10;
+			} else if (displayMode.Format == D3DFMT_R8G8B8) {
+				rgbChannels = 0x18;
+			} else if (displayMode.Format == D3DFMT_X8R8G8B8 || displayMode.Format == D3DFMT_A8R8G8B8 ) {
+				rgbChannels = 0x20;
+			} 
+			char buffer[16];
+			sprintf(buffer, "%dx%dx%d _ %dhz", displayMode.Width, displayMode.Height, rgbChannels, displayMode.RefreshRate);
+			FileLog(buffer);
+		}
+	}
+
+	ZeroMemory(&cMagGameObject::PRESENT_PARAMETERS, sizeof(D3DPRESENT_PARAMETERS)); 
+	cMagGameObject::PRESENT_PARAMETERS.BackBufferCount = 3;
+	cMagGameObject::PRESENT_PARAMETERS.BackBufferWidth = windowWidth;
+	cMagGameObject::PRESENT_PARAMETERS.BackBufferHeight = windowHeight;
+	cMagGameObject::PRESENT_PARAMETERS.SwapEffect = D3DSWAPEFFECT_DISCARD;
+	if (enableFullscreen) {
+		cMagGameObject::PRESENT_PARAMETERS.Windowed = FALSE;
+		rgbChannels = 0x20;
+		cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
+		cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
+		cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
+		FileLog("Tryb: %d , FullScreen", rgbChannels);
+	} else {
+		cMagGameObject::PRESENT_PARAMETERS.Windowed = TRUE;
+		D3DDISPLAYMODE displayMode;
+		HRESULT result = direct3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &displayMode);
+		if (result < 0) {
+			return E_FAIL;
+		}
+		if (displayMode.Format == D3DFMT_X8R8G8B8 || displayMode.Format == D3DFMT_A8R8G8B8) {
+			rgbChannels = 0x20;
+			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
+			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
+			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
+			FileLog("Tryb: %d , okno", rgbChannels);
+		} else {
+			rgbChannels = 0x10;
+			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D16;
+			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_R5G6B5;
+			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
+			FileLog("Tryb: %d , okno", rgbChannels);
+		}
+	}
+	D3DCAPS8 caps;
+	HRESULT result;
+	direct3D->GetDeviceCaps(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, &caps);
+	if (caps.MaxPrimitiveCount == 0xfffe0101) {
+		char buffer[272];
+		sprintf(buffer, "%s   %s", windowTitle, "[HV]");
+		SetWindowText(hWnd, buffer);
+		FileLog("[HV]");
+		result = direct3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, 0x40, &cMagGameObject::PRESENT_PARAMETERS, &device3D);
+	} else {
+		char buffer[272];
+		sprintf(buffer, "%s   %s", windowTitle, "[SV]");
+		SetWindowText(hWnd, buffer);
+		FileLog("[SV]");
+		result = direct3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, 0x20, &cMagGameObject::PRESENT_PARAMETERS, &device3D);
+	}
+
+	if (result < 0) {
+		CrashLog("CreateDevice... (error)");
+		return E_FAIL;
+	}
+
+	SetCursor(NULL);
+	cMagEngineMgr::getInstance()->engine = device3D;
+	cMagEngineMgr::getInstance()->gameObject = this;
+	cMagEngineMgr::getInstance()->CreateFrustumCull();
+	FileLog("--- End CreateDevice3D ...OK");
+	return S_OK;
 }
 
 /* 100258C0-10025AA6 001E6	*/

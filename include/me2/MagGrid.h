@@ -17,6 +17,8 @@ public:
 	/* 1002E650 */ long InitDeviceObjects(IDirect3DDevice8* param_1);
 	/* 1002E670 */ long BuildVertexBuffer();
 	/* 1002E9C0 */ long Render();
+private:
+	/* 0x00 */ uchar f_00[0x30-0x00];
 };
 
 #endif

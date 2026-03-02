@@ -21,7 +21,7 @@ public:
 	/* 100307D0 */ void ReadSettings(char* param_1);
 	/* 1005A5E0 */ void DebugLog(D3DXVECTOR3* param_1);
 
-private:
+protected:
 	/* 0x00 */ bool logEnabled;
 	/* 0x04 */ char* logFilename;
 };

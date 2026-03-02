@@ -212,7 +212,14 @@ private:
 	/* 0x2e4 */ uchar f_2e4[0x2f4-0x2e4];
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
-	/* 0x51e */ uchar f_51e[0x784-0x51e];
+	/* 0x51e */ uchar f_51e[0x630-0x51e];
+	/* 0x630 */ HWND hWnd;
+	/* 0x634 */ uchar f_634[0x638-0x634];
+	/* 0x638 */ int windowWidth;
+	/* 0x63c */ int windowHeight;
+	/* 0x640 */ int rgbChannels;
+	/* 0x644 */ bool enableFullscreen;
+	/* 0x645 */ uchar f_645[0x784-0x645];
 	/* 0x784 */ D3DDISPLAYMODE displayMode;
 	/* 0x794 */ uchar f_794[0x7a4-0x794];
 	/* 0x7a4 */ D3DPRESENT_PARAMETERS presentParameters;
@@ -234,6 +241,9 @@ private:
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
 	/* 0xc00 */ uchar f_c00[0xd10-0xc00];
+
+private:
+	static D3DPRESENT_PARAMETERS PRESENT_PARAMETERS;
 };
 
 STATIC_ASSERT(sizeof(cMagGameObject) == 0xd10);
