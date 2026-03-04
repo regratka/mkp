@@ -807,7 +807,7 @@
 ?Cleanup@cMagGameObject@@QAEXXZ;cMagGameObject::Cleanup;0x10025440;0xd5;__thiscall;;void;cMagGameObject*
 ?AppInit@cMagGameObject@@QAEJPAUHINSTANCE__@@_N@Z;cMagGameObject::AppInit;0x10025550;0x365;__thiscall;;long;cMagGameObject*;HINSTANCE__*;bool
 ?SetDeviceMode@cMagGameObject@@QAEXHH@Z;cMagGameObject::SetDeviceMode;0x100258c0;0x1e6;__thiscall;;void;cMagGameObject*;int;int
-?InitWindow@cMagGameObject@@QAE_NHHH_NPAUHINSTANCE__@@P6GJPAUHWND__@@IIJ@ZPAD@Z;cMagGameObject::InitWindow;0x10025ab0;0x1bf;__thiscall;;bool;cMagGameObject*;int;int;int;bool;HINSTANCE__*;_func_long_HWND___ptr_uint_uint_long*;char*
+?InitWindow@cMagGameObject@@QAE_NHHH_NPAUHINSTANCE__@@P6GJPAUHWND__@@IIJ@ZPAD@Z;cMagGameObject::InitWindow;0x10025ab0;0x1bf;__thiscall;;bool;cMagGameObject*;int;int;int;bool;HINSTANCE__*;WNDPROC;char*
 ?UpdateMagWindowSize@cMagGameObject@@QAEXHH@Z;cMagGameObject::UpdateMagWindowSize;0x10025c70;0x17;__thiscall;;void;cMagGameObject*;int;int
 ?ShowGameCursor@cMagGameObject@@QAEX_N@Z;cMagGameObject::ShowGameCursor;0x10025c90;0x14;__thiscall;;void;cMagGameObject*;bool
 ?EnableGameCursor@cMagGameObject@@QAE_NXZ;cMagGameObject::EnableGameCursor;0x10025cb0;0xe;__thiscall;;bool;cMagGameObject*

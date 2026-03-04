@@ -278,9 +278,46 @@ void cMagGameObject::SetDeviceMode(int param_1, int param_2) {
 	}
 }
 
+LRESULT CALLBACK ME2WNDPROC(HWND, UINT, WPARAM, LPARAM) {
+	return NULL;
+}
+
 /* 10025AB0-10025C6F 001BF	*/
-bool cMagGameObject::InitWindow(int param_1, int param_2, int param_3, bool param_4, HINSTANCE__* param_5, windowCallback param_6, char* param_7) {
-	return 0;
+bool cMagGameObject::InitWindow(int param_1, int param_2, int param_3, bool param_4, HINSTANCE__* param_5, WNDPROC param_6, char* param_7) {
+	DeleteLog();
+	FileLog("[-----------------------------]");
+	FileLog("[--- Magnum Engine ver 2.0 ---]");
+	FileLog("[-----------------------------]");
+	windowWidth = param_1;
+	windowHeight = param_2;
+	rgbChannels = param_3;
+	enableFullscreen = param_4;
+	strcpy(windowTitle, param_7);
+
+	WNDCLASSEX classEx = {sizeof(WNDCLASSEX), CS_CLASSDC, ME2WNDPROC, 0, 0, GetModuleHandle(NULL), 
+		NULL, NULL, NULL, NULL, "Magnum", NULL};
+	classEx.hbrBackground = (HBRUSH) GetStockObject(BLACK_BRUSH);
+	HINSTANCE dllHandle = GetModuleHandle("ME2.dll");
+	classEx.hIcon = LoadIcon(dllHandle, MAKEINTRESOURCE(109));
+	RegisterClassEx(&classEx);
+
+	hWnd = CreateWindowEx(WS_EX_LEFT, "Magnum", param_7, WS_VISIBLE|WS_CAPTION|WS_SYSMENU, 0,0, windowWidth, windowHeight, 
+		GetDesktopWindow(), NULL, classEx.hInstance, NULL);
+	
+	if (hWnd == NULL) {
+		CrashLog("InitWindow... (error)");
+		KillWindowDx();
+		return false;
+	}
+	ShowWindow(hWnd, 5);
+	UpdateWindow(hWnd);
+	SetForegroundWindow(hWnd);
+	SetCapture(hWnd);
+	SetFocus(hWnd);
+	SetCursor(NULL);
+	FileLog("--- End InitWindow... OK");
+
+	return true;
 }
 
 /* 10025C70-10025C87 00017	*/

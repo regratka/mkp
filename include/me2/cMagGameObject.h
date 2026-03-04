@@ -9,7 +9,6 @@
 #include "cMagObjectList.h"
 #include "MagGrid.h"
 
-typedef long (*windowCallback) (HWND, uint, uint, long);
 typedef long (*renderCallback) ();
 
 class CGame;
@@ -78,7 +77,7 @@ public:
 	/* 10025440 */ void Cleanup();
 	/* 10025550 */ long AppInit(HINSTANCE__* param_1, bool param_2);
 	/* 100258C0 */ void SetDeviceMode(int param_1, int param_2);
-	/* 10025AB0 */ bool InitWindow(int param_1, int param_2, int param_3, bool param_4, HINSTANCE__* param_5, windowCallback param_6, char* param_7);
+	/* 10025AB0 */ bool InitWindow(int param_1, int param_2, int param_3, bool param_4, HINSTANCE__* param_5, WNDPROC param_6, char* param_7);
 	/* 10025C70 */ void UpdateMagWindowSize(int param_1, int param_2);
 	/* 10025C90 */ void ShowGameCursor(bool param_1);
 	/* 10025CB0 */ bool EnableGameCursor();
