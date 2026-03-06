@@ -278,8 +278,9 @@ void cMagGameObject::SetDeviceMode(int param_1, int param_2) {
 	}
 }
 
+
 LRESULT CALLBACK ME2WNDPROC(HWND, UINT, WPARAM, LPARAM) {
-	return NULL;
+	return 0;
 }
 
 /* 10025AB0-10025C6F 001BF	*/
@@ -346,23 +347,91 @@ void cMagGameObject::RenderGameCursor() {
 }
 
 /* 10025CF0-10025E29 00139	*/
-long cMagGameObject::MsgProc(HWND__* param_1, uint param_2, uint param_3, long param_4) {
-	return 0;
+long cMagGameObject::MsgProc(HWND param_1, uint param_2, uint param_3, long param_4) {
+	switch(param_2) {
+		case WM_DESTROY:
+		case WM_CLOSE:
+			PostQuitMessage(0); // case 0
+			return 0;
+		case WM_SETCURSOR:
+			SetCursor(NULL); // case 1
+			break;
+		case WM_KEYDOWN: {
+			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->f_cf8; // case 2
+			if (obj != NULL) {
+				obj->OnInputKey(param_3, true);
+			}
+			break;
+		}
+		case WM_KEYUP: {
+			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->f_cf8; // case 2
+			if (obj != NULL) {
+				obj->OnInputKey(param_3, false);
+			}
+			break;
+		}
+		case WM_CHAR: {
+			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->f_cf8; // case 2
+			if (obj != NULL) {
+				obj->OnInputChar(param_3);
+			}
+			break;
+		}
+		case WM_MOUSEMOVE:
+			POINT mousePos;
+			GetCursorPos(&mousePos);
+			ScreenToClient(hWnd, &mousePos);
+			cMagEngineMgr::getInstance()->engine->SetCursorPosition(mousePos.x, mousePos.y, 0);
+			RenderGameCursor();
+			break;
+		case WM_MOVE:
+		case WM_SIZE:
+		case WM_ACTIVATE:
+		case WM_SETFOCUS:
+		case WM_KILLFOCUS:
+		case WM_ENABLE:
+		case WM_SETREDRAW:
+		default:
+			break; // case 3
+	}
+	return DefWindowProc(param_1, param_2, param_3, param_4);
 }
 
 /* 10025F40-10025FA0 00060	*/
 bool cMagGameObject::KillWindowDx() {
-	return 0;
+	if (hdc != NULL) {
+		if (ReleaseDC(hWnd, hdc) == 0) {
+			hdc = NULL;
+		}
+	}
+
+	if (hWnd != NULL) {
+		if (!DestroyWindow(hWnd)) {
+			hWnd = NULL;
+		}
+	}
+	
+	if (!UnregisterClass("Magnum", hInstance)) {
+		hInstance = NULL;
+	}
+	return true;
 }
 
 /* 10025FA0-10025FF7 00057	*/
 bool cMagGameObject::HandleMessages() {
-	return 0;
+	while (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE)) {
+		TranslateMessage(&msg);
+		DispatchMessage(&msg);
+		if (msg.message == WM_QUIT) {
+			return false;
+		}
+	}
+	return true;
 }
 
 /* 10026000-10026083 00083	*/
 bool cMagGameObject::Run() {
-	return 0;
+	return false;
 }
 
 /* 10026090-10026149 000B9	*/

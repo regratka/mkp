@@ -812,7 +812,7 @@
 ?ShowGameCursor@cMagGameObject@@QAEX_N@Z;cMagGameObject::ShowGameCursor;0x10025c90;0x14;__thiscall;;void;cMagGameObject*;bool
 ?EnableGameCursor@cMagGameObject@@QAE_NXZ;cMagGameObject::EnableGameCursor;0x10025cb0;0xe;__thiscall;;bool;cMagGameObject*
 ?RenderGameCursor@cMagGameObject@@QAEXXZ;cMagGameObject::RenderGameCursor;0x10025cc0;0x26;__thiscall;;void;cMagGameObject*
-?MsgProc@cMagGameObject@@QAEJPAUHWND__@@IIJ@Z;cMagGameObject::MsgProc;0x10025cf0;0x139;__thiscall;;long;cMagGameObject*;HWND__*;uint;uint;long
+?MsgProc@cMagGameObject@@QAEJPAUHWND__@@IIJ@Z;cMagGameObject::MsgProc;0x10025cf0;0x139;__thiscall;;long;cMagGameObject*;HWND;uint;uint;long
 ?KillWindowDx@cMagGameObject@@QAE_NXZ;cMagGameObject::KillWindowDx;0x10025f40;0x60;__thiscall;;bool;cMagGameObject*
 ?HandleMessages@cMagGameObject@@QAE_NXZ;cMagGameObject::HandleMessages;0x10025fa0;0x57;__thiscall;;bool;cMagGameObject*
 ?Run@cMagGameObject@@QAE_NXZ;cMagGameObject::Run;0x10026000;0x83;__thiscall;;bool;cMagGameObject*

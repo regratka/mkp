@@ -82,7 +82,7 @@ public:
 	/* 10025C90 */ void ShowGameCursor(bool param_1);
 	/* 10025CB0 */ bool EnableGameCursor();
 	/* 10025CC0 */ void RenderGameCursor();
-	/* 10025CF0 */ long MsgProc(HWND__* param_1, uint param_2, uint param_3, long param_4);
+	/* 10025CF0 */ long MsgProc(HWND param_1, uint param_2, uint param_3, long param_4);
 	/* 10025F40 */ bool KillWindowDx();
 	/* 10025FA0 */ bool HandleMessages();
 	/* 10026000 */ bool Run();
@@ -214,12 +214,15 @@ private:
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
 
-	/* 0x51e */ uchar f_51e[0x630-0x51e];
+	/* 0x51e */ uchar f_51e[0x53c-0x51e];
 
+	/* 0x53c */ MSG msg;
+
+	/* 0x558 */ uchar f_558[0x62c-0x558];
+	
+	/* 0x62c */ HINSTANCE hInstance;
 	/* 0x630 */ HWND hWnd;
-
-	/* 0x634 */ uchar f_634[0x638-0x634];
-
+	/* 0x634 */ HDC hdc;
 	/* 0x638 */ int windowWidth;
 	/* 0x63c */ int windowHeight;
 	/* 0x640 */ int rgbChannels;
@@ -266,7 +269,9 @@ private:
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
 
-	/* 0xc00 */ uchar f_c00[0xd10-0xc00];
+	/* 0xc00 */ uchar f_c00[0xcf8-0xc00];
+	/* 0xcf8 */ cMagGameObject* f_cf8;
+	/* 0xcfc */ uchar f_cfc[0xd10-0xcfc];
 
 private:
 	static D3DPRESENT_PARAMETERS PRESENT_PARAMETERS;

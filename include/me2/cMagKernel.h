@@ -69,9 +69,7 @@ public:
 	virtual void vtb_0x88(); /* vtbl 0x88 */
 	/* 10011300 */ virtual void OnInputKey(uchar* param_1); /* vtbl 0x90 */
 	virtual void OnInputKey(int, bool);  /* vtbl 0x8c */
-
-
-	virtual void vtb_0x94(); /* vtbl 0x94 */
+	virtual void OnInputChar(char); /* vtbl 0x94 */
 
 	/* 100113e0 */ virtual void OnInputMouse(float param_1, float param_2, bool param_3, bool param_4); /* vtbl 0x98 */
 	/* 100114c0 */ virtual D3DXVECTOR3 GetPosition(); /* vtbl 0x9c */
