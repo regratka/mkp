@@ -849,7 +849,7 @@
 ?swapMeshObject@cMagGameObject@@QAEXHH@Z;cMagGameObject::swapMeshObject;0x10028e30;0x29;__thiscall;;void;cMagGameObject*;int;int
 ?ShowObjectName@cMagGameObject@@QAEX_N@Z;cMagGameObject::ShowObjectName;0x10028e60;0x14;__thiscall;;void;cMagGameObject*;bool
 ?SetDataPath@cMagGameObject@@QAEXPAD@Z;cMagGameObject::SetDataPath;0x10028e80;0x19;__thiscall;;void;cMagGameObject*;char*
-?GetGame@cMagGameObject@@QAEPAVCGame@@XZ;cMagGameObject::GetGame;0x10028ea0;0xe;__thiscall;;uchar;cMagGameObject*
+?GetGame@cMagGameObject@@QAEPAVCGame@@XZ;cMagGameObject::GetGame;0x10028ea0;0xe;__thiscall;;CGame*;cMagGameObject*
 ?SetGame@cMagGameObject@@QAEXPAVCGame@@@Z;cMagGameObject::SetGame;0x10028eb0;0xd;__thiscall;;void;cMagGameObject*;CGame*
 ?SetClipNear@cMagGameObject@@QAEXM@Z;cMagGameObject::SetClipNear;0x10028ec0;0xd;__thiscall;;void;cMagGameObject*;float
 ?SetClipFar@cMagGameObject@@QAEXM@Z;cMagGameObject::SetClipFar;0x10028ed0;0xd;__thiscall;;void;cMagGameObject*;float

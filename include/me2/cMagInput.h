@@ -12,6 +12,11 @@ public:
 	/* 1002CF90 */ bool Kill();
 	/* 1002CFF0 */ bool Update();
 	/* 1002D0D0 */ bool IsKeyDown();
+
+private:
+	/* 0x00 */ uchar f_00[0x134 - 0x00];
 };
+
+STATIC_ASSERT(sizeof(cMagInput) == 0x134);
 
 #endif

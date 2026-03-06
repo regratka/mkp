@@ -1,5 +1,6 @@
 #include "cMagGameObject.h"
 
+#include "CGame.h"
 #include "cMagEngineMgr.h"
 #include "cMagSprite.h"
 
@@ -431,6 +432,27 @@ bool cMagGameObject::HandleMessages() {
 
 /* 10026000-10026083 00083	*/
 bool cMagGameObject::Run() {
+	while (true) {
+		if (gameInstance != NULL) {
+			gameInstance->FrameTime();
+		}
+		GetGame()->LoadLevel();
+		if (!HandleMessages()) {
+			break;
+		}
+		RenderScene();
+		if (!cMagEngineMgr::getInstance()->gameObject->input.Update()) {
+			break;
+		}
+	}
+
+	if (gameInstance != NULL) {
+		gameInstance->Clean();
+	}
+	cMagEngineMgr::getInstance()->gameObject->input.Kill();
+	KillWindowDx();
+	DestroySoundManager();
+	Cleanup();
 	return false;
 }
 
@@ -445,6 +467,8 @@ void cMagGameObject::ClearInputKey() {
 
 /* 100261A0-100261D6 00036	*/
 void cMagGameObject::OnPreRenderEdytor() {
+	cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET | D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB(0xff, 0x7f, 0x7f, 0x7f), 1.0f, 0);
+	cMagEngineMgr::getInstance()->engine->BeginScene();
 }
 
 /* 100261E0-100262F9 00119	*/
@@ -571,8 +595,8 @@ void cMagGameObject::SetDataPath(char* param_1) {
 }
 
 /* 10028EA0-10028EAE 0000E	*/
-uchar cMagGameObject::GetGame() {
-	return 0;
+CGame* cMagGameObject::GetGame() {
+	return cMagEngineMgr::getInstance()->gameObject->gameInstance;
 }
 
 /* 10028EB0-10028EBD 0000D	*/

@@ -8,6 +8,7 @@
 
 #include "cMagObjectList.h"
 #include "MagGrid.h"
+#include "CMagInput.h"
 
 typedef long (*renderCallback) ();
 
@@ -89,7 +90,7 @@ public:
 	/* 10026090 */ bool CreateWinDx(HINSTANCE__* param_1, bool param_2, int param_3, int param_4, int param_5, char* param_6, bool param_7);
 	/* 10026150 */ void ClearInputKey();
 	/* 100261A0 */ void OnPreRenderEdytor();
-	/* 100261E0 */ void OnPreRender();
+	/* 100261E0 */ virtual void OnPreRender();
 	/* 10026300 */ void OnPostRender();
 	/* 10026330 */ bool Render();
 	/* 100266A0 */ void RenderScene();
@@ -118,7 +119,7 @@ public:
 	/* 10028E30 */ void swapMeshObject(int param_1, int param_2);
 	/* 10028E60 */ void ShowObjectName(bool param_1);
 	/* 10028E80 */ void SetDataPath(char* param_1);
-	/* 10028EA0 */ uchar GetGame();
+	/* 10028EA0 */ CGame* GetGame();
 	/* 10028EB0 */ void SetGame(CGame* param_1);
 	/* 10028EC0 */ void SetClipNear(float param_1);
 	/* 10028ED0 */ void SetClipFar(float param_1);
@@ -228,8 +229,9 @@ private:
 	/* 0x640 */ int rgbChannels;
 	/* 0x644 */ bool enableFullscreen;
 
-	/* 0x645 */ uchar f_645[0x784-0x645];
+	/* 0x645 */ uchar f_645[0x650-0x645];
 
+	/* 0x650 */ cMagInput input;
 	/* 0x784 */ D3DDISPLAYMODE displayMode;
 
 	/* 0x794 */ uchar f_794[0x7a4-0x794];
@@ -269,8 +271,14 @@ private:
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
 
-	/* 0xc00 */ uchar f_c00[0xcf8-0xc00];
+	/* 0xc00 */ uchar f_c00[0xcd4-0xc00];
+
+	/* 0xcd4 */ CGame* gameInstance;
+
+	/* 0xcd8 */ uchar f_cd8[0xcf8-0xcd8];
+
 	/* 0xcf8 */ cMagGameObject* f_cf8;
+
 	/* 0xcfc */ uchar f_cfc[0xd10-0xcfc];
 
 private:
