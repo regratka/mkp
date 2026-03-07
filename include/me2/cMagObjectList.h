@@ -10,12 +10,12 @@ class __declspec(dllexport) cMagObjectList : public cMagKernel {
 public:
 	/* 100014C0-100014C7 00007	*/
 	std::vector<cMagKernel*>::iterator cMagObjectList::begin() {
-		return objects.begin();
+		return meshObjects.begin();
 	}
 
 	/* 100014D0-100014D7 00007	*/
 	std::vector<cMagKernel*>::iterator cMagObjectList::end() {
-		return objects.end();
+		return meshObjects.end();
 	}
 
 	/* 100167E0 */ cMagObjectList();
@@ -62,7 +62,7 @@ public:
 	/* 10018800 */ void RenderLensFlare();
 
 protected:
-	/* 0x1dc */	std::vector<cMagKernel*> objects;
+	/* 0x1dc */	std::vector<cMagKernel*> meshObjects;
 	/* 0x1ec */	std::vector<cMagKernel*> particleObjects;
 	/* 0x1fc */	std::vector<cMagKernel*> billboardObjects;
 	/* 0x20c */	std::vector<cMagKernel*> cameraObjects;
@@ -77,7 +77,7 @@ protected:
 	/* 0x260 */ std::vector<cMagKernel*> blobObjects;
 	/* 0x270 */ std::vector<cMagKernel*> alphaMeshObjects;
 	/* 0x280 */ std::vector<cMagKernel*> noShadowObjects;
-	/* 0x290 */ std::vector<cMagKernel*> f_290;
+	/* 0x290 */ std::vector<cMagKernel*> objects;
 	/* 0x2a0 */ std::vector<cMagKernel*> shadowObjects;
 	/* 0x2b0 */ std::vector<cMagKernel*> f_2b0;
 	/* 0x2c0 */ std::vector<cMagKernel*> portalObjects;

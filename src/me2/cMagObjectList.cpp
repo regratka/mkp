@@ -22,7 +22,7 @@ cMagObjectList::~cMagObjectList() {
 
 /* 10016CF0-10016E9F 001AF	*/
 bool cMagObjectList::AddObject(cMagKernel* param_1) {
-	objects.push_back(param_1);
+	meshObjects.push_back(param_1);
 	return true;
 }
 
@@ -249,8 +249,8 @@ bool cMagObjectList::RenderSectors() {
 
 /* 10018630-1001866C 0003C	*/
 void cMagObjectList::CallHandlerOnInputKey(int param_1, bool param_2) {
-	for (std::vector<cMagKernel*>::iterator it = objects.begin(); 
-			it != objects.end(); it++) {
+	for (std::vector<cMagKernel*>::iterator it = meshObjects.begin(); 
+			it != meshObjects.end(); it++) {
 		(*it)->OnInputKey(param_1, param_2);
 	}
 }
@@ -310,8 +310,8 @@ cMagKernel* cMagObjectList::Find(ulong param_1) {
 
 /* 10018750-10018779 00029	*/
 cMagKernel* cMagObjectList::Find(cMagKernel* param_1) {
-	for (std::vector<cMagKernel*>::iterator it = objects.begin(); 
-			it != objects.end(); it++) {
+	for (std::vector<cMagKernel*>::iterator it = meshObjects.begin(); 
+			it != meshObjects.end(); it++) {
 		if (*it == param_1) {
 			return *it;
 		}
@@ -321,9 +321,9 @@ cMagKernel* cMagObjectList::Find(cMagKernel* param_1) {
 
 /* 10018780-10018800 00080	*/
 void cMagObjectList::CleanList() {
-	while (objects.begin() != objects.end()) {
-		cMagKernel* first =  dynamic_cast<cMagKernel*>(objects[0]);
-		objects.erase(objects.begin());
+	while (meshObjects.begin() != meshObjects.end()) {
+		cMagKernel* first =  dynamic_cast<cMagKernel*>(meshObjects[0]);
+		meshObjects.erase(meshObjects.begin());
 		if (first != NULL) {
 			delete first;
 		}

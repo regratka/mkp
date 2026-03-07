@@ -112,7 +112,7 @@ public:
 	/* 10027F50 */ long RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4);
 	/* 10028240 */ void SetLastRender(cMagMeshObject* param_1);
 	/* 100282F0 */ void swapObject(int param_1, int param_2);
-	/* 10028320 */ void swap(int* param_1, int* param_2);
+	/* 10028320 */ void swap(int& param_1, int& param_2);
 	/* 10028340 */ void qsort(int* param_1, int param_2, int param_3);
 	/* 10028400 */ void SortObject();
 	/* 10028D70 */ void QSortMeshObject(int* param_1, int param_2, int param_3);
@@ -257,11 +257,14 @@ private:
 
 	/* 0xb00 */ bool removeObject;
 
-	/* 0xb01 */ uchar f_b01[0xb08-0xb01];
+	/* 0xb01 */ uchar f_b01[0xb04-0xb01];
 
+	/* 0xb04 */ char* dataPath;
 	/* 0xb08 */ MagGrid* grid;
 
-	/* 0xb0c */ uchar f_b0c[0xb24-0xb0c];
+	/* 0xb0c */ bool showGrid;
+
+	/* 0xb0d */ uchar f_b0d[0xb24-0xb0d];
 
 	/* 0xb24 */ uint backBufferHeight;
 	/* 0xb28 */ uint backBufferWidth;
@@ -271,15 +274,24 @@ private:
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
 
-	/* 0xc00 */ uchar f_c00[0xcd4-0xc00];
+	/* 0xc00 */ bool showFPS;
+	/* 0xc01 */ bool showObjectName;
+	/* 0xc06 */ uchar f_c06[0xcd4-0xc02];
 
 	/* 0xcd4 */ CGame* gameInstance;
 
-	/* 0xcd8 */ uchar f_cd8[0xcf8-0xcd8];
+	/* 0xcd8 */ float fov;
+	/* 0xcdc */ uchar f_cdc[0xcec-0xcdc];
+	/* 0xcec */ cMagMeshObject* playerObject;
+	/* 0xcf0 */ uchar f_cf0[0xcf5-0xcf0];
 
-	/* 0xcf8 */ cMagGameObject* f_cf8;
+	/* 0xcf5 */ bool enableLinkMeshToSector;
+	/* 0xcf8 */ cMagGameObject* callHandlerWindowKey;
 
-	/* 0xcfc */ uchar f_cfc[0xd10-0xcfc];
+	/* 0xcfc */ bool enableHandlerOnFrame1;
+	/* 0xcfd */ uchar f_cfd[0xd04-0xcfd];
+	/* 0xd04 */ bool enableBigSquareShadow;
+	/* 0xd05 */ uchar f_d05[0xd10-0xd05];
 
 private:
 	static D3DPRESENT_PARAMETERS PRESENT_PARAMETERS;

@@ -358,21 +358,21 @@ long cMagGameObject::MsgProc(HWND param_1, uint param_2, uint param_3, long para
 			SetCursor(NULL); // case 1
 			break;
 		case WM_KEYDOWN: {
-			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->f_cf8; // case 2
+			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->callHandlerWindowKey; // case 2
 			if (obj != NULL) {
 				obj->OnInputKey(param_3, true);
 			}
 			break;
 		}
 		case WM_KEYUP: {
-			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->f_cf8; // case 2
+			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->callHandlerWindowKey; // case 2
 			if (obj != NULL) {
 				obj->OnInputKey(param_3, false);
 			}
 			break;
 		}
 		case WM_CHAR: {
-			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->f_cf8; // case 2
+			cMagGameObject* obj = cMagEngineMgr::getInstance()->gameObject->callHandlerWindowKey; // case 2
 			if (obj != NULL) {
 				obj->OnInputChar(param_3);
 			}
@@ -521,6 +521,7 @@ void cMagGameObject::Fps() {
 
 /* 10027450-10027464 00014	*/
 void cMagGameObject::ShowFPS(bool param_1) {
+	cMagEngineMgr::getInstance()->gameObject->showFPS = param_1;
 }
 
 /* 10027470-1002762B 001BB	*/
@@ -542,6 +543,23 @@ void cMagGameObject::DrawObjectName() {
 
 /* 10027A40-10027ADB 0009B	*/
 void cMagGameObject::GpgFrustum(double param_1, double param_2, double param_3, double param_4, double param_5, double param_6) {
+	float sum_5_5 = param_5 + param_5;
+	float sub_2_1 = param_2 - param_1;
+	float val_1 = sum_5_5 / sub_2_1;
+
+	float sub_4_3 = param_4 - param_3;
+	float val_2 = sum_5_5 / sub_4_3;
+
+	float sum_1_2 = param_1 + param_2;
+	float val_3 = sum_1_2 / sub_2_1;
+
+	float sum_3_4 = param_3 + param_4;
+	float val_4 = sum_3_4 / sub_4_3;
+
+	float sub_6_5 = param_6 - param_5;
+	float val_5 = -param_6 / sub_6_5;
+
+	D3DXMatrixPerspectiveOffCenterRH(&projectionMatrix, val_1, val_2, val_3, val_4, val_5, -1.0f);
 }
 
 /* 10027AE0-10027DBE 002DE	*/
@@ -564,14 +582,34 @@ void cMagGameObject::SetLastRender(cMagMeshObject* param_1) {
 
 /* 100282F0-10028319 00029	*/
 void cMagGameObject::swapObject(int param_1, int param_2) {
+	cMagKernel* first = objects[param_1];
+	objects[param_1] = objects[param_2];
+	objects[param_2] = first;
 }
 
 /* 10028320-10028335 00015	*/
-void cMagGameObject::swap(int* param_1, int* param_2) {
+void cMagGameObject::swap(int& param_1, int& param_2) {
+	int temp = param_1;
+	param_1 = param_2;
+	param_2 = temp;
 }
 
 /* 10028340-100283FE 000BE	*/
 void cMagGameObject::qsort(int* param_1, int param_2, int param_3) {
+	while (param_2 < param_3) {
+		int pivotIndex = param_2;
+		for (int j = param_2 + 1; j <= param_3; j++) {
+			if (param_1[param_2] < param_1[j]) {
+				pivotIndex++;
+				swap(param_1[pivotIndex], param_1[j]);
+				swapObject(pivotIndex, j);
+			}
+		}
+		swap(param_1[param_2], param_1[pivotIndex]);
+		swapObject(param_2, pivotIndex);
+		qsort(param_1, param_2, pivotIndex-1);
+		param_2 = pivotIndex+1;
+	}
 }
 
 /* 10028400-10028D63 00963	*/
@@ -580,18 +618,38 @@ void cMagGameObject::SortObject() {
 
 /* 10028D70-10028E2E 000BE	*/
 void cMagGameObject::QSortMeshObject(int* param_1, int param_2, int param_3) {
+	while (param_2 < param_3) {
+		int pivotIndex = param_2;
+		for (int j = param_2 + 1; j <= param_3; j++) {
+			if (param_1[param_2] < param_1[j]) {
+				pivotIndex++;
+				swap(param_1[pivotIndex], param_1[j]);
+				swapMeshObject(pivotIndex, j);
+			}
+		}
+		swap(param_1[param_2], param_1[pivotIndex]);
+		swapMeshObject(param_2, pivotIndex);
+		QSortMeshObject(param_1, param_2, pivotIndex-1);
+		param_2 = pivotIndex+1;
+	}
 }
 
 /* 10028E30-10028E59 00029	*/
 void cMagGameObject::swapMeshObject(int param_1, int param_2) {
+	cMagKernel* first = meshObjects[param_1];
+	meshObjects[param_1] = meshObjects[param_2];
+	meshObjects[param_2] = first;
 }
 
 /* 10028E60-10028E74 00014	*/
 void cMagGameObject::ShowObjectName(bool param_1) {
+	cMagEngineMgr::getInstance()->gameObject->showObjectName = param_1;
 }
 
 /* 10028E80-10028E99 00019	*/
 void cMagGameObject::SetDataPath(char* param_1) {
+	dataPath = param_1;
+	cMagEngineMgr::getInstance()->SetDataPath(param_1);
 }
 
 /* 10028EA0-10028EAE 0000E	*/
@@ -601,24 +659,27 @@ CGame* cMagGameObject::GetGame() {
 
 /* 10028EB0-10028EBD 0000D	*/
 void cMagGameObject::SetGame(CGame* param_1) {
+	gameInstance = param_1;
 }
 
 /* 10028EC0-10028ECD 0000D	*/
 void cMagGameObject::SetClipNear(float param_1) {
+	nearPlane = param_1;
 }
 
 /* 10028ED0-10028EDD 0000D	*/
 void cMagGameObject::SetClipFar(float param_1) {
+	farPlane = param_1;
 }
 
 /* 10028EE0-10028EEE 0000E	*/
 int cMagGameObject::GetWindowHeight() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->windowHeight;
 }
 
 /* 10028EF0-10028EFE 0000E  */
 int cMagGameObject::GetWindowWidth() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->windowWidth;
 }
 
 /* 10028F00-10029006 00106	*/
@@ -641,6 +702,7 @@ void cMagGameObject::DeleteTexture(char* param_1) {
 
 /* 10029080-10029094 00014	*/
 void cMagGameObject::ShowGird(bool param_1) {
+	cMagEngineMgr::getInstance()->gameObject->showGrid = param_1;
 }
 
 /* 100290A0-100290A9 00009	*/
@@ -650,11 +712,12 @@ IDirect3DDevice8* cMagGameObject::GetEngine() {
 
 /* 100290B0-100290B7 00007	*/
 float cMagGameObject::GetFOV() {
-	return 0;
+	return fov;
 }
 
 /* 100290C0-100290CD 0000D	*/
 void cMagGameObject::SetFOV(float param_1) {
+	fov = param_1;
 }
 
 /* 100290D0-10029119 00049	*/
@@ -805,6 +868,7 @@ void cMagGameObject::EnableFog(bool param_1) {
 
 /* 10029CA0-10029CA9 00009	*/
 void cMagGameObject::ExitGame() {
+	PostQuitMessage(0);
 }
 
 /* 10029CB0-10029D60 000B0	*/
@@ -863,11 +927,13 @@ D3DXVECTOR3 cMagGameObject::RotateVector(D3DXVECTOR3* param_1, D3DXVECTOR3* para
 
 /* 1002A870-1002A87D 0000D	*/
 char* cMagGameObject::GetLevelDirectory() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->levelDirectory;
 }
 
 /* 1002A880-1002A89B 0001B	*/
 void cMagGameObject::SetMagWindowTitle(char* param_1) {
+	cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+	SetWindowText(gameObject->GetHandleWindow(), param_1);
 }
 
 /* 1002A8A0-1002AA3E 0019E	*/
@@ -904,24 +970,27 @@ CSoundManager* cMagGameObject::GetSoundManager() {
 
 /* 1002AC50-1002AC64 00014	*/
 void cMagGameObject::MememberPlayerObject(cMagMeshObject* param_1) {
+	cMagEngineMgr::getInstance()->gameObject->playerObject = param_1;
 }
 
 /* 1002AC70-1002AC7E 0000E	*/
 cMagMeshObject* cMagGameObject::GetPlayerObject() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->playerObject;
 }
 
 /* 1002AC80-1002AC94 00014	*/
 void cMagGameObject::EnableLinkMeshToSector(bool param_1) {
+	cMagEngineMgr::getInstance()->gameObject->enableLinkMeshToSector = param_1;
 }
 
 /* 1002ACA0-1002ACAE 0000E	*/
 bool cMagGameObject::EnableLinkMeshToSector() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->enableLinkMeshToSector;
 }
 
 /* 1002ACB0-1002ACB5 00005	*/
 void cMagGameObject::LinkMeshToSector() {
+	EnableLinkMeshToSector();
 }
 
 /* 1002ACC0-1002AD24 00064	*/
@@ -948,10 +1017,12 @@ void cMagGameObject::CreateDxFont() {
 
 /* 1002B280-1002B294 00014	*/
 void cMagGameObject::EnableCallHandlerWindowKey(cMagGameObject* param_1) {
+	callHandlerWindowKey = param_1;
 }
 
 /* 1002B2A0-1002B2B4 00014	*/
 void cMagGameObject::EnableHandlerOnFrame1(cMagGameObject* param_1) {
+	enableHandlerOnFrame1 = param_1;
 }
 
 /* 1002B2C0-1002B568 002A8	*/
@@ -964,6 +1035,7 @@ void cMagGameObject::CreateBigSquareShadow() {
 
 /* 1002B700-1002B70D 0000D	*/
 void cMagGameObject::EnableBigSquareShadow(bool param_1) {
+	enableBigSquareShadow = param_1;
 }
 
 /* 1002B710-1002B803 000F3	*/
