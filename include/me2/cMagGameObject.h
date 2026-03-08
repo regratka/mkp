@@ -103,8 +103,8 @@ public:
 	/* 10027330 */ void CameraLookAt(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, float param_9);
 	/* 100273C0 */ void Fps();
 	/* 10027450 */ void ShowFPS(bool param_1);
-	/* 10027470 */ uint TestViewObjest();
-	/* 10027630 */ void VectorToScreen();
+	/* 10027470 */ bool TestViewObjest(D3DXVECTOR3 param_1, D3DXMATRIX param_2);
+	/* 10027630 */ void VectorToScreen(D3DXVECTOR3 param_1, D3DXMATRIX param_2, float& param_3, float& param_4);
 	/* 100276E0 */ void DrawTexts(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5);
 	/* 100278A0 */ void DrawObjectName();
 	/* 10027A40 */ void GpgFrustum(double param_1, double param_2, double param_3, double param_4, double param_5, double param_6);
@@ -233,10 +233,7 @@ private:
 	/* 0x645 */ uchar f_645[0x650-0x645];
 
 	/* 0x650 */ cMagInput input;
-	/* 0x784 */ D3DDISPLAYMODE displayMode;
-
-	/* 0x794 */ uchar f_794[0x7a4-0x794];
-
+	/* 0x784 */ D3DSURFACE_DESC surfaceDesc;
 	/* 0x7a4 */ D3DPRESENT_PARAMETERS presentParameters;
 	/* 0x7d8 */ IDirect3D8* direct3D;
 	/* 0x7dc */ IDirect3DDevice8* device3D;

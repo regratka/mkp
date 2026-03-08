@@ -64,7 +64,7 @@ long cMagGameObject::InitD3D(HWND__* param_1) {
 
 	result = direct3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, param_1, 0x20, &presentParameters, &device3D);
 	if (result < NO_ERROR) {
-		CrashLog("InitD3D CreateDevice... (error)");
+		magLog.CrashLog( "InitD3D CreateDevice... (error)");
 		return E_FAIL;
 	}
 	cMagEngineMgr::getInstance()->engine = device3D;
@@ -106,7 +106,8 @@ long cMagGameObject::InitD3D(HWND__* param_1) {
 	cMagEngineMgr::getInstance()->engine->SetVertexShaderConstant(1, shaderConstant, 1);
 	IDirect3DSurface8* surface;
 	cMagEngineMgr::getInstance()->engine->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
-	cMagEngineMgr::getInstance()->engine->GetDisplayMode(&displayMode);
+	surface->GetDesc(&surfaceDesc);
+	// cMagEngineMgr::getInstance()->engine->GetDisplayMode(&this->displayMode);
 	surface->Release();
 	
 	grid = new MagGrid();
@@ -171,31 +172,33 @@ long cMagGameObject::AppInit(HINSTANCE__* param_1, bool param_2) {
 	if (enableFullscreen) {
 		cMagGameObject::PRESENT_PARAMETERS.Windowed = FALSE;
 		rgbChannels = 0x20;
+		cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
 		cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
 		cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
-		cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
-		FileLog("Tryb: %d , FullScreen", rgbChannels);
+		FileLog("Tryb: %d , FullScreen", 0x20);
 	} else {
 		cMagGameObject::PRESENT_PARAMETERS.Windowed = TRUE;
 		D3DDISPLAYMODE displayMode;
 		HRESULT result = direct3D->GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &displayMode);
-		if (result < 0) {
+		if (result >= S_OK) {
 			return E_FAIL;
-		}
-		if (displayMode.Format == D3DFMT_X8R8G8B8 || displayMode.Format == D3DFMT_A8R8G8B8) {
-			rgbChannels = 0x20;
-			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
-			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
-			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
-			FileLog("Tryb: %d , okno", rgbChannels);
-		} else {
+		} 
+
+		if (displayMode.Format != D3DFMT_X8R8G8B8 && displayMode.Format != D3DFMT_A8R8G8B8) {
 			rgbChannels = 0x10;
+			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
 			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D16;
 			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_R5G6B5;
+			FileLog("Tryb: %d , okno", 0x10);
+		} else {
+			rgbChannels = 0x20;
 			cMagGameObject::PRESENT_PARAMETERS.EnableAutoDepthStencil = TRUE;
-			FileLog("Tryb: %d , okno", rgbChannels);
+			cMagGameObject::PRESENT_PARAMETERS.AutoDepthStencilFormat = D3DFMT_D24S8;
+			cMagGameObject::PRESENT_PARAMETERS.BackBufferFormat = D3DFMT_X8R8G8B8;
+			FileLog("Tryb: %d , okno", 0x20);
 		}
 	}
+
 	D3DCAPS8 caps;
 	HRESULT result;
 	direct3D->GetDeviceCaps(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, &caps);
@@ -213,7 +216,7 @@ long cMagGameObject::AppInit(HINSTANCE__* param_1, bool param_2) {
 		result = direct3D->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, 0x20, &cMagGameObject::PRESENT_PARAMETERS, &device3D);
 	}
 
-	if (result < 0) {
+	if (result < S_OK) {
 		CrashLog("CreateDevice... (error)");
 		return E_FAIL;
 	}
@@ -446,7 +449,8 @@ bool cMagGameObject::Run() {
 			break;
 		}
 		RenderScene();
-		if (!cMagEngineMgr::getInstance()->gameObject->input.Update()) {
+		cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+		if (!gameObject->input.Update()) {
 			break;
 		}
 	}
@@ -790,12 +794,23 @@ void cMagGameObject::ShowFPS(bool param_1) {
 }
 
 /* 10027470-1002762B 001BB	*/
-uint cMagGameObject::TestViewObjest() {
+bool cMagGameObject::TestViewObjest(D3DXVECTOR3 param_1, D3DXMATRIX param_2) {
+	D3DVIEWPORT8 viewport;
+	cMagEngineMgr::getInstance()->engine->GetViewport(&viewport);
+	DebugLog("Viewport: <fClipWidth2:%f fClipHeight2:%f>", 800.0, 600.0);
 	return 0;
 }
 
 /* 10027630-100276D8 000A8	*/
-void cMagGameObject::VectorToScreen() {
+void cMagGameObject::VectorToScreen(D3DXVECTOR3 param_1, D3DXMATRIX param_2, float& param_3, float& param_4) {
+	D3DVIEWPORT8 viewport;
+	cMagEngineMgr::getInstance()->engine->GetViewport(&viewport);
+	viewport.MinZ = 1.0f;
+	viewport.MaxZ = 1.0f;
+	D3DMATRIX projection;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &projection);
+	D3DMATRIX view;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_VIEW, &view);
 }
 
 /* 100276E0-100278A0 001C0	*/
