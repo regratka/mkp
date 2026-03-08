@@ -264,12 +264,19 @@ private:
 
 	/* 0xb0c */ bool showGrid;
 
-	/* 0xb0d */ uchar f_b0d[0xb24-0xb0d];
+	/* 0xb0d */ uchar f_b0d[0xb10-0xb0d];
+	
+	/* 0xb10 */ uint renderedMeshObjects;
+	/* 0xb14 */ uint renderedObjects;
+	/* 0xb18 */ uint renderedBillboards;
+
+	/* 0xb1c */ uchar f_b1c[0xb24-0xb1c];
 
 	/* 0xb24 */ uint backBufferHeight;
 	/* 0xb28 */ uint backBufferWidth;
 
-	/* 0xb2c */ uchar f_b2c[0xbf8-0xb2c];
+	/* 0xb2c */ bool enabledFog;
+	/* 0xb2d */ uchar f_b2d[0xbf8-0xb2d];
 
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
@@ -283,13 +290,13 @@ private:
 	/* 0xcd8 */ float fov;
 	/* 0xcdc */ uchar f_cdc[0xcec-0xcdc];
 	/* 0xcec */ cMagMeshObject* playerObject;
-	/* 0xcf0 */ uchar f_cf0[0xcf5-0xcf0];
-
+	/* 0xcf0 */ ID3DXFont* dxFont;
+	/* 0xcf4 */ bool unkn_cf4;
 	/* 0xcf5 */ bool enableLinkMeshToSector;
 	/* 0xcf8 */ cMagGameObject* callHandlerWindowKey;
 
-	/* 0xcfc */ bool enableHandlerOnFrame1;
-	/* 0xcfd */ uchar f_cfd[0xd04-0xcfd];
+	/* 0xcfc */ cMagGameObject* callHandlerOnFrame1;
+	/* 0xd00 */ uchar f_d00[0xd04-0xd00];
 	/* 0xd04 */ bool enableBigSquareShadow;
 	/* 0xd05 */ uchar f_d05[0xd10-0xd05];
 

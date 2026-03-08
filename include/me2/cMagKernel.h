@@ -173,7 +173,9 @@ private:
     /* 0x0bc */	int objectID;
     /* 0x0c0 */	char className[255];
     /* 0x1bf */	bool statusRemoveObject;
-    /* 0x1c0 */	cMagLog log;
+protected:
+    /* 0x1c0 */	cMagLog magLog;
+private:
     /* 0x1c8 */	unsigned char* onInputHandlerParam;
     /* 0x1cc */	float mouseParam1;
     /* 0x1d0 */	float mouseParam2;

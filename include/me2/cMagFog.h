@@ -17,7 +17,7 @@ public:
 	/* 10072680 */ void EnableFog();
 	/* 100726B0 */ void DisableFog();
 	/* 100726E0 */ void SetColorFog(ulong param_1);
-	/* 100726F0 */ ulong GetColorFog();
+	/* 100726F0 */ D3DCOLOR GetColorFog();
 	/* 10072700 */ void Enable(bool param_1);
 };
 

@@ -1844,7 +1844,7 @@
 ?EnableNBFacesCollision@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::EnableNBFacesCollision;0x1005a5c0;0xd;__thiscall;;void;cMagMeshObject*;bool
 ?EnableNBFacesCollision@cMagMeshObject@@QAE_NXZ;cMagMeshObject::EnableNBFacesCollision;0x1005a5d0;0x7;__thiscall;;bool;cMagMeshObject*
 ?DisableRenderingMeshInSector@cMagSector@@QAEXPAVcMagMeshObject@@@Z;cMagLog::DebugLog;0x1005a5e0;0x3;__thiscall;;void;cMagLog*;D3DXVECTOR3*
-?DebugLog@cMagLog@@QAEXPADPAUD3DXVECTOR3@@@Z;cMagGameObject::AddLightmapMesh;0x1005a5f0;0x3;__thiscall;;void;cMagGameObject*;Mesh*;char*
+?AddLightmapMesh@cMagGameObject@@QAEXPAUMesh@@PAD@Z;cMagGameObject::AddLightmapMesh;0x1005a5f0;0x3;__thiscall;;void;cMagGameObject*;Mesh*;char*
 ?ActivateLightMap@cMagMeshObject@@QAEXH@Z;cMagMeshObject::ActivateLightMap;0x1005a600;0xd;__thiscall;;void;cMagMeshObject*;int
 ?SetEllipsoid@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetEllipsoid;0x1005a610;0x31;__thiscall;;void;cMagMeshObject*;uint;uint;uint
 ?GetEllipsoid@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetEllipsoid;0x1005a650;0x2a;__thiscall;;uchar;cMagMeshObject*;uint*
@@ -2376,7 +2376,7 @@
 ?EnableFog@cMagFog@@QAEXXZ;cMagFog::EnableFog;0x10072680;0x25;__thiscall;;void;cMagFog*
 ?DisableFog@cMagFog@@QAEXXZ;cMagFog::DisableFog;0x100726b0;0x25;__thiscall;;void;cMagFog*
 ?SetColorFog@cMagFog@@QAEXK@Z;cMagFog::SetColorFog;0x100726e0;0xd;__thiscall;;void;cMagFog*;ulong
-?GetColorFog@cMagFog@@QAEKXZ;cMagFog::GetColorFog;0x100726f0;0x7;__thiscall;;ulong;cMagFog*
+?GetColorFog@cMagFog@@QAEKXZ;cMagFog::GetColorFog;0x100726f0;0x7;__thiscall;;D3DCOLOR;cMagFog*
 ?Enable@cMagFog@@QAEX_N@Z;cMagFog::Enable;0x10072700;0x32;__thiscall;;void;cMagFog*;bool
 ;FUN_10072780;0x10072780;0xa;__stdcall;;uchar
 ;FUN_10072790;0x10072790;0xc;__stdcall;;uchar

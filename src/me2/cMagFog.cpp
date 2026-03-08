@@ -51,7 +51,7 @@ void cMagFog::SetColorFog(ulong param_1) {
 }
 
 /* 100726F0-100726F7 00007	*/
-ulong cMagFog::GetColorFog() {
+D3DCOLOR cMagFog::GetColorFog() {
 	return 0;
 }
 

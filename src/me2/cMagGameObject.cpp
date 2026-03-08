@@ -1,8 +1,13 @@
 #include "cMagGameObject.h"
 
 #include "CGame.h"
+
 #include "cMagEngineMgr.h"
+#include "MagTextureMgr.h"
+
 #include "cMagSprite.h"
+
+#include "CMagFog.h"
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
@@ -458,7 +463,29 @@ bool cMagGameObject::Run() {
 
 /* 10026090-10026149 000B9	*/
 bool cMagGameObject::CreateWinDx(HINSTANCE__* param_1, bool param_2, int param_3, int param_4, int param_5, char* param_6, bool param_7) {
-	return 0;
+	backBufferWidth = param_4;
+	backBufferHeight = param_5;
+	bool success = InitWindow(param_4, param_5, param_3, param_2, param_1, NULL, param_6);
+	if (!success) {
+		magLog.CrashLog("InitWindow ... (error)");
+		return false;
+	}
+
+	if (AppInit(param_1, param_7) < 0) {
+		magLog.CrashLog("InitD3D ... (error)");
+		return false;
+	}
+
+	cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+	if (!gameObject->input.Init(hWnd, param_1)) {
+		magLog.CrashLog("InitInput ... (error) ");
+		return false;
+	}
+	InitSoundManager();
+	CreateBigSquareShadow();
+	EnableBigSquareShadow(true);
+	CreateDxFont();
+	return true;
 }
 
 /* 10026150-10026195 00045	*/
@@ -473,6 +500,82 @@ void cMagGameObject::OnPreRenderEdytor() {
 
 /* 100261E0-100262F9 00119	*/
 void cMagGameObject::OnPreRender() {
+	CGame* game = GetGame();
+	if (game == NULL) {
+		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB(0xff, 0x7f, 0x7f, 0x7f), 1.0f, 0);
+		cMagEngineMgr::getInstance()->engine->BeginScene();
+		return; 
+	} 
+
+	// if (!enabledFog && rgbChannels == 0x20) {
+	// 	cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER|D3DCLEAR_STENCIL, D3DCOLOR_ARGB(0xff, 0x0f, 0x0f, 0x0f), 1.0f, 0);
+	// 	cMagEngineMgr::getInstance()->engine->BeginScene();
+	// 	return;
+	// }
+
+	// if (!enabledFog && rgbChannels != 0x20) {
+	// 	cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB(0xff, 0x0f, 0x0f, 0x0f), 1.0f, 0);
+	// 	cMagEngineMgr::getInstance()->engine->BeginScene();	
+	// 	return;
+	// }
+
+
+	// if(rgbChannels == 0x20) {
+	// 		D3DCOLOR fogColor = GetFog()->GetColorFog();
+	// 		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER|D3DCLEAR_STENCIL, fogColor, 1.0f, 0);
+	// 		cMagEngineMgr::getInstance()->engine->BeginScene();
+	// 		return;
+	// 	} else {
+	// 		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, GetFog()->GetColorFog(), 1.0f, 0);
+	// 		cMagEngineMgr::getInstance()->engine->BeginScene();
+	// 		return;
+	// 	}
+
+	// if (!enabledFog) {
+	// 	if (rgbChannels == 0x20) {
+	// 		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER|D3DCLEAR_STENCIL, D3DCOLOR_ARGB(0xff, 0x0f, 0x0f, 0x0f), 1.0f, 0);
+	// 		cMagEngineMgr::getInstance()->engine->BeginScene();
+	// 	} else {
+	// 		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB(0xff, 0x0f, 0x0f, 0x0f), 1.0f, 0);
+	// 		cMagEngineMgr::getInstance()->engine->BeginScene();
+	// 	}
+
+	// } else {
+	// 	if (rgbChannels == 0x20) {
+	// 		D3DCOLOR fogColor = GetFog()->GetColorFog();
+	// 		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER|D3DCLEAR_STENCIL, fogColor, 1.0f, 0);
+	// 		cMagEngineMgr::getInstance()->engine->BeginScene();
+			
+	// 	} else {
+	// 	cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, GetFog()->GetColorFog(), 1.0f, 0);
+	// 	cMagEngineMgr::getInstance()->engine->BeginScene();
+	// 	}
+	// }
+ 	
+
+	if (enabledFog && rgbChannels == 0x20) {
+		D3DCOLOR fogColor = GetFog()->GetColorFog();
+		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER|D3DCLEAR_STENCIL, fogColor, 1.0f, 0);
+		cMagEngineMgr::getInstance()->engine->BeginScene();
+		return;
+	} 
+	
+	if (enabledFog && rgbChannels != 0x20) {
+		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, GetFog()->GetColorFog(), 1.0f, 0);
+		cMagEngineMgr::getInstance()->engine->BeginScene();
+		return;
+	} 
+	
+	if (rgbChannels == 0x20) {
+		cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER|D3DCLEAR_STENCIL, D3DCOLOR_ARGB(0xff, 0x0f, 0x0f, 0x0f), 1.0f, 0);
+		cMagEngineMgr::getInstance()->engine->BeginScene();
+		return;
+	} 
+
+	cMagEngineMgr::getInstance()->engine->Clear(0, NULL, D3DCLEAR_TARGET|D3DCLEAR_ZBUFFER, D3DCOLOR_ARGB(0xff, 0x0f, 0x0f, 0x0f), 1.0f, 0);
+	cMagEngineMgr::getInstance()->engine->BeginScene();
+	return;
+
 }
 
 /* 10026300-1002632E 0002E	*/
@@ -484,11 +587,117 @@ void cMagGameObject::OnPostRender() {
 
 /* 10026330-1002669D 0036D	*/
 bool cMagGameObject::Render() {
-	return 0;
+	D3DMATRIX worldMatrix;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_WORLD, &worldMatrix);
+	SortObject();
+
+	if (showGrid) {
+		grid->Render();
+	}
+
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, FALSE);
+	}
+	RenderSkyBox();
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, TRUE);		
+	}
+
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, FALSE);
+	}
+	RenderSun();
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	}
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZENABLE, TRUE);
+	RenderTerrain();
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, TRUE);
+	renderedMeshObjects = 0;
+	renderedObjects = 0;
+	RenderObjectList();
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+	RenderShadowsList();
+
+	if (enableBigSquareShadow && rgbChannels == 0x20) {
+		DrawBigSquareShadow();
+	}
+
+	RenderNoShadowObjects();
+
+	MagTextureMgr::getInstance()->BeginFilterTexture();
+	MagTextureMgr::getInstance()->BeginFilterVertexColorTexture();
+	MagTextureMgr::getInstance()->BeginAlphaTexture();
+	RenderAlphaMeshObjectsList();
+	RenderAlphaList();
+	RenderWaterList();
+	
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, FALSE);
+	}
+	RenderFxList();
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	}
+
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, FALSE);
+	}
+	RenderParticleList();
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	}
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHATESTENABLE, TRUE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHAREF, 2);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHAFUNC, D3DCMP_GREATEREQUAL);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+
+	MagTextureMgr::getInstance()->BeginFilterTexture();
+	MagTextureMgr::getInstance()->BeginAlphaTexture();
+	MagTextureMgr::getInstance()->BeginFilterVertexColorTexture();
+
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ALPHAOP, D3DTOP_SELECTARG1);
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_TEXTURETRANSFORMFLAGS, D3DTTFF_DISABLE);
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ADDRESSU, D3DTADDRESS_CLAMP);
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ADDRESSV, D3DTADDRESS_CLAMP);
+
+	renderedBillboards = 0;
+	RenderBillboardList();
+
+	MagTextureMgr::getInstance()->EndAlphaTexture();
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
+	RenderFog();
+	RenderLensFlare();
+	RenderBlobList();
+	RenderSpriteList();
+
+	cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &worldMatrix);
+	return true;
 }
 
 /* 100266A0-10026785 000E5	*/
 void cMagGameObject::RenderScene() {
+	HRESULT result = cMagEngineMgr::getInstance()->engine->TestCooperativeLevel();
+
+	if (result >= S_OK) {
+		unkn_cf4 = false;
+	} else if (result == D3DERR_DEVICELOST) {
+		unkn_cf4 = true;
+		return;
+	} else if (result == D3DERR_DEVICENOTRESET) {
+
+		unkn_cf4 = true;
+		HRESULT result = cMagEngineMgr::getInstance()->engine->Reset(&cMagGameObject::PRESENT_PARAMETERS);
+		if (result < S_OK) {
+			return;
+		}
+		RestoreScene();
+	}
+
 }
 
 /* 10026790-10026B4A 003BA	*/
@@ -1022,7 +1231,7 @@ void cMagGameObject::EnableCallHandlerWindowKey(cMagGameObject* param_1) {
 
 /* 1002B2A0-1002B2B4 00014	*/
 void cMagGameObject::EnableHandlerOnFrame1(cMagGameObject* param_1) {
-	enableHandlerOnFrame1 = param_1;
+	cMagEngineMgr::getInstance()->gameObject->callHandlerOnFrame1 = param_1;
 }
 
 /* 1002B2C0-1002B568 002A8	*/

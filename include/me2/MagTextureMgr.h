@@ -7,6 +7,10 @@
 
 class MagTextureMgr {
 public:
+    static MagTextureMgr* getInstance() {
+		return instance;
+	}
+
 	/* 10004040 */ MagTextureMgr(MagTextureMgr* param_1);
 	/* 10004140 */ MagTextureMgr* operator=(MagTextureMgr* param_1);
 	/* 10004380 */ MagTextureMgr* scalar_destructor(uchar param_1);
@@ -36,6 +40,11 @@ public:
 	/* 10087FE0 */ uchar ComputeBumpMap(char* param_1);
 	/* 100881F0 */ uchar GetTextureBoundingBox();
 	/* 10088210 */ uchar GetTextureGird();
+
+private:
+	static MagTextureMgr* instance;
 };
+
+MagTextureMgr* MagTextureMgr::instance = NULL;
 
 #endif
