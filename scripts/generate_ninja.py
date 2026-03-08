@@ -10,7 +10,7 @@ def generateNinja(units: dict[str, list[str]], mappings: dict[str, object], buil
         writer.variable("ninja_required_version", "1.5")
         writer.variable("builddir", str(build_dir))
         writer.variable("cl", "tools\\msvc66\\Bin\\CL.exe")
-        writer.variable("cl_flags", f"/Zi /O2 /GR /G6 /GX /I include/ /I {str(include_dir)} /I tools/msvc66/include /I tools/dx8/include")
+        writer.variable("cl_flags", f"/Zi /O2 /GR /G6 /GX /I include/ /I {str(include_dir)} /I tools/msvc66/include /I tools/dx81/include")
 
         writer.rule("cc", "$cl /nologo $cl_flags /c $in /Fd$out.pdb /Fo$out", deps="msvc")
         

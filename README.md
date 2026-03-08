@@ -1,7 +1,6 @@
 # regratka
 Recompilation project of "Magiczna kula Papatki"
 
-
  ![Progress](progress.png)
 
 Configure project
@@ -25,3 +24,7 @@ Update progress visualization
 ```shell
 python scripts\visualize_progress.py
 ```
+
+Setup:
+* msvc 6.6
+* directX 8.1
