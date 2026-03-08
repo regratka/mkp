@@ -98,7 +98,7 @@ cPortalEngine,cPortalEngine
 cStaticMesh,cStaticMesh
 cTGA,cTGA
 cVideoPlayer,cVideoPlayer
-collision,collision
+CollisionManager,collision
 pgImage,pgImage
 pgString,pgString
 pgTerrain,pgTerrain

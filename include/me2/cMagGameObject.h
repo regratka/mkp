@@ -6,6 +6,7 @@
 #include <vector>
 #include <CMATH>
 
+#include "CollisionManager.h"
 #include "cMagObjectList.h"
 #include "MagGrid.h"
 #include "CMagInput.h"
@@ -90,7 +91,7 @@ public:
 	/* 10026090 */ bool CreateWinDx(HINSTANCE__* param_1, bool param_2, int param_3, int param_4, int param_5, char* param_6, bool param_7);
 	/* 10026150 */ void ClearInputKey();
 	/* 100261A0 */ void OnPreRenderEdytor();
-	/* 100261E0 */ virtual void OnPreRender();
+	/* 100261E0 */ void OnPreRender();
 	/* 10026300 */ void OnPostRender();
 	/* 10026330 */ bool Render();
 	/* 100266A0 */ void RenderScene();
@@ -288,7 +289,8 @@ private:
 	/* 0xcd4 */ CGame* gameInstance;
 
 	/* 0xcd8 */ float fov;
-	/* 0xcdc */ uchar f_cdc[0xcec-0xcdc];
+	/* 0xcdc */ collision* collision;
+	/* 0xce0 */ uchar f_ce0[0xcec-0xce0];
 	/* 0xcec */ cMagMeshObject* playerObject;
 	/* 0xcf0 */ ID3DXFont* dxFont;
 	/* 0xcf4 */ bool unkn_cf4;

@@ -683,21 +683,40 @@ bool cMagGameObject::Render() {
 void cMagGameObject::RenderScene() {
 	HRESULT result = cMagEngineMgr::getInstance()->engine->TestCooperativeLevel();
 
-	if (result >= S_OK) {
-		unkn_cf4 = false;
-	} else if (result == D3DERR_DEVICELOST) {
+	if (result < S_OK) {
 		unkn_cf4 = true;
-		return;
-	} else if (result == D3DERR_DEVICENOTRESET) {
-
-		unkn_cf4 = true;
-		HRESULT result = cMagEngineMgr::getInstance()->engine->Reset(&cMagGameObject::PRESENT_PARAMETERS);
-		if (result < S_OK) {
+		if (result == D3DERR_DEVICELOST) {
 			return;
 		}
-		RestoreScene();
+ 		if (result == D3DERR_DEVICENOTRESET) {
+			if (dxFont != NULL) {
+				if (dxFont->OnLostDevice() != S_OK) {
+					dxFont->OnResetDevice();
+				}
+			}
+
+			HRESULT result = cMagEngineMgr::getInstance()->engine->Reset(&cMagGameObject::PRESENT_PARAMETERS);
+			if (result < S_OK) {
+				return;
+			}
+			RestoreScene();
+		}
+	} else {
+		unkn_cf4 = false;
 	}
 
+	RenderActiveCamera();
+	UpdateActiveCamera();
+	CallHandlerOnUpdate_();
+	OnPreRender();
+	Render();
+	OnPostRender();
+	if (collision != NULL) {
+		collision->FUN_100a5af0();
+	}
+	
+	cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+	CallAllHandler(&gameObject->input.unkn_1c, gameObject->input.unkn_11c, gameObject->input.unkn_120, gameObject->input.unkn_128, gameObject->input.unkn_129);
 }
 
 /* 10026790-10026B4A 003BA	*/
@@ -706,10 +725,47 @@ void cMagGameObject::RestoreScene() {
 
 /* 10026B70-10026C82 00112	*/
 void cMagGameObject::CallHandlerOnUpdate_() {
+	for (std::vector<cMagKernel*>::iterator mit = meshObjects.begin(); 
+			mit != meshObjects.end(); mit++) {
+		(*mit)->OnUpdate_();
+	}
+	for (std::vector<cMagKernel*>::iterator bit = billboardObjects.begin(); 
+			bit != billboardObjects.end(); bit++) {
+		(*bit)->OnUpdate_();
+	}
+	for (std::vector<cMagKernel*>::iterator cit = cameraObjects.begin(); 
+			cit != cameraObjects.end(); cit++) {
+		(*cit)->OnUpdate_();
+	}
+	for (std::vector<cMagKernel*>::iterator sit = spriteObjects.begin(); 
+			sit != spriteObjects.end(); sit++) {
+		(*sit)->OnUpdate_();
+	}
+	for (std::vector<cMagKernel*>::iterator nit = noShadowObjects.begin(); 
+			nit != noShadowObjects.end(); nit++) {
+		(*nit)->OnUpdate_();
+	}
+	for (std::vector<cMagKernel*>::iterator wit = waterObjects.begin(); 
+			wit != waterObjects.end(); wit++) {
+		(*wit)->OnUpdate_();
+	}
+	for (std::vector<cMagKernel*>::iterator ait = alphaMeshObjects.begin(); 
+			ait != alphaMeshObjects.end(); ait++) {
+		(*ait)->OnUpdate_();
+	}
 }
 
 /* 10026C90-10026D0B 0007B	*/
 void cMagGameObject::CallOnUpdateMenuSettings() {
+	for (std::vector<cMagKernel*>::iterator mit = cMagEngineMgr::getInstance()->gameObject->meshObjects.begin(); 
+			mit != cMagEngineMgr::getInstance()->gameObject->meshObjects.end(); mit++) {
+		(*mit)->OnUpdateMenuSettings();
+	}
+
+	for (std::vector<cMagKernel*>::iterator sit = spriteObjects.begin(); 
+			sit != spriteObjects.end(); sit++) {
+		(*sit)->OnUpdateMenuSettings();
+	}
 }
 
 /* 10026D10-1002701F 0030F	*/

@@ -41,7 +41,7 @@ public:
 	/* 100116e0 */ virtual void OnActivateLevel(); /* vtbl 0x34 */
 	
 	virtual void vtbl_0x38(); /* vtbl 0x38 */
-	virtual void vtbl_0x3c(); /* vtbl 0x3c */
+	virtual void OnPreRender(); /* vtbl 0x3c */
 
 	/* 10011980 */ virtual void OnInsideFrustumCull(); /* vtbl 0x40 */
 	/* 100119f0 */ virtual void OnOutsideFrustumCull(); /* vtbl 0x44 */
@@ -105,10 +105,12 @@ public:
 	virtual void vtb_0xe0(); /* vtbl 0xe0 */
 	virtual void vtb_0xe4(); /* vtbl 0xe4 */
 	virtual void vtb_0xe8(); /* vtbl 0xe8 */
+
 	virtual void OnRender(); /* vtbl 0xec */
-	virtual void vtb_0xf0(); /* vtbl 0xf0 */
-	virtual void vtb_0xf4(); /* vtbl 0xf4 */
 	
+	virtual void vtb_0xf0(); /* vtbl 0xf0 */
+
+	virtual void OnUpdate_(); /* vtbl 0xf4 */
 	/* 10011fa0 */ virtual void OnBonePositionUpdate(char* param_1, D3DXVECTOR3 param_2, D3DXMATRIX param_3, D3DXMATRIX param_4); /* vtbl 0xf8 */
 	/* 10012090 */ virtual void EnableCallHandler(char* param_1); /* vtbl 0xfc */
 	/* 10012140 */ virtual void DisableCallHandler(char* param_1); /* vtbl 0x100 */
@@ -116,19 +118,25 @@ public:
 	/* 10012240 */ virtual void DisableAllHandlers(); /* vtbl 0x104 */
 	/* 10012470 */ virtual void OnAction(); /* vtbl 0108 */
 	/* 10012480 */ virtual void OnAction(char* param_1); /* vtbl 0x10c */
+
 	virtual void vtb_0x110(); /* vtbl 0x110 */
 
 	/* 10012460 */ virtual void Load(std::ifstream&, _ED_CHUNK);  /* vtbl 0x114 */
+
 	virtual void vtb_0x118(); /* vtbl 0x118 */
 	virtual void vtb_0x11c(); /* vtbl 0x11c */
+
 	/* 10012270 */ virtual void OnDestTime(float param_1); /* vtbl 0x120 */
+
 	virtual void vtb_0x124(); /* vtbl 0x124 */
 	virtual void vtb_0x128(); /* vtbl 0x128 */
-	/* 100123b0 */ virtual void OnCrash(); /* vtbl 0x12c */
-	virtual void vtb_0x130(); /* vtbl 0x130 */
-	virtual void OnNavigationPathEnd(); /* vtbl 0x134 */
-	virtual void vtb_0x138(); /* vtbl 0x138 */
 
+	/* 100123b0 */ virtual void OnCrash(); /* vtbl 0x12c */
+
+	virtual void vtb_0x130(); /* vtbl 0x130 */
+
+	virtual void OnNavigationPathEnd(); /* vtbl 0x134 */
+	virtual void OnUpdateMenuSettings(); /* vtbl 0x138 */
 	virtual void GetBoundingBox(D3DXVECTOR3&, D3DXVECTOR3&, int);  /* vtbl 0x13c */
 
 	/* 10011660 */ void InitOnInputHandlerParam(uchar* param_1);

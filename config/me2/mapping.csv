@@ -3291,7 +3291,7 @@
 ;FUN_100a5050;0x100a5050;0x903;__thiscall;;ulong;void*;int
 ;FUN_100a5960;0x100a5960;0x1e;__thiscall;;uint*;void*;uchar
 ;FUN_100a5980;0x100a5980;0x170;__fastcall;;uchar;int
-;FUN_100a5af0;0x100a5af0;0x2cf;__fastcall;;uchar;void*
+;collision::FUN_100a5af0;0x100a5af0;0x2cf;__thiscall;;void;collision*
 ;FUN_100a5dc0;0x100a5dc0;0x236;__thiscall;;uchar;void*;cMagMeshObject*
 ;FUN_100a6000;0x100a6000;0x111;__fastcall;;uchar;int
 ;FUN_100a6120;0x100a6120;0x1d6;__thiscall;;uchar;void*;int

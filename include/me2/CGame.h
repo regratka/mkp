@@ -100,6 +100,8 @@ public:
 	/* 10097E70 */ void MULTIPLAY_SetClientStateIdle(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10097EC0 */ CClientServer* GetClientServer();
 	/* 100C97D0 */ cMagGameObject* JLoadMesh(char* param_1);
+
+
 };
 
 #endif
