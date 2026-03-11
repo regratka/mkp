@@ -797,8 +797,25 @@ void cMagGameObject::ShowFPS(bool param_1) {
 bool cMagGameObject::TestViewObjest(D3DXVECTOR3 param_1, D3DXMATRIX param_2) {
 	D3DVIEWPORT8 viewport;
 	cMagEngineMgr::getInstance()->engine->GetViewport(&viewport);
-	DebugLog("Viewport: <fClipWidth2:%f fClipHeight2:%f>", 800.0, 600.0);
-	return 0;
+	magLog.DebugLog("Viewport: <fClipWidth2:%f fClipHeight2:%f>", 800.0, 600.0);
+
+	D3DXMATRIX localMatrix = param_2;
+	D3DXMATRIX result;
+	D3DXMATRIX view;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_VIEW, &view);
+	D3DXMATRIX projection;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &projection);
+
+	D3DXMatrixMultiply(&result, &localMatrix, &view);
+	D3DXMatrixMultiply(&result, &result, &projection);
+	float var_1 = 1.0f / (result(0,3) * param_1.x + result(1,3) * param_1.y + result(2,3) * param_1.z  + result(3,3));
+	float screenXPos = ((result(0,0) * param_1.x + result(1,0) * param_1.y + result(2,0) * param_1.z + result(3,0)) * var_1 + 1.0f) * 400.0f;
+	float screenYPos = (1.0f - var_1 * (result(0,1) * param_1.x + result(1,1) * param_1.y + result(2,1) * param_1.z + result(3,1))) * 300.0f;
+
+	if (screenXPos >= 0.0f && screenXPos <= 800.0f && screenYPos >= 0.0f && screenYPos <= 600.0f) {
+		return true;
+	} 
+	return false;
 }
 
 /* 10027630-100276D8 000A8	*/
@@ -807,14 +824,42 @@ void cMagGameObject::VectorToScreen(D3DXVECTOR3 param_1, D3DXMATRIX param_2, flo
 	cMagEngineMgr::getInstance()->engine->GetViewport(&viewport);
 	viewport.MinZ = 1.0f;
 	viewport.MaxZ = 1.0f;
-	D3DMATRIX projection;
+	D3DXMATRIX projection;
 	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &projection);
-	D3DMATRIX view;
+	D3DXMATRIX view;
 	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_VIEW, &view);
+	
+	D3DXVECTOR3 result;
+	D3DXVec3Project(&result, &param_1, &viewport, &projection, &view, &param_2);
+	param_3 = result.x;
+	param_4 = result.y;
 }
 
 /* 100276E0-100278A0 001C0	*/
-void cMagGameObject::DrawTexts(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5) {
+void cMagGameObject::DrawTexts(char const* param_1, float param_2, float param_3, float param_4, D3DXMATRIX param_5) {
+	float width = windowWidth;
+	float height = windowHeight;
+	D3DXMATRIX localMatrix = param_5;
+	float halfWidth = width * 0.5f;
+	float halfHeight = height * 0.5f;
+	D3DXMATRIX view;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_VIEW, &view);
+	D3DXMATRIX projection;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &projection);
+	D3DXMATRIX result;
+	D3DXMatrixMultiply(&result, &localMatrix, &view);
+	D3DXMatrixMultiply(&result, &result, &projection);
+	float normalizedX = param_2 - halfWidth;
+	float normalizedY = param_3 - halfHeight;
+	float var_1 = 1.0f / (result(0,3) * normalizedX + result(1,3) * normalizedY + result(2,3) * param_4  + result(3,3));
+	float screenXPos = ((result(0,0) * normalizedX + result(1,0) * normalizedY + result(2,0) * param_4 + result(3,0)) 
+		* var_1 + 1.0f) * halfWidth;
+	float screenYPos = (1.0f - var_1 * (result(0,1) * normalizedX + result(1,1) * normalizedY + result(2,1) * param_4 + result(3,1))) * halfHeight;
+
+	char buffer[80];
+	if (screenXPos >= 0.0f && screenXPos <= width && screenYPos >= 0.0f && screenYPos <= height) {
+		strcpy(buffer, param_1);
+	} 
 }
 
 /* 100278A0-10027A3F 0019F	*/

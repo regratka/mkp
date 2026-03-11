@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "d3d8.h"
+
 class cMagFog {
 public:
 	/* 10022D00 */ cMagFog(cMagFog* param_1);

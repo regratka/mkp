@@ -61,7 +61,7 @@ public:
 	/* 10054FE0 */ void OnRender();
 	/* 10055620 */ void OnRenderShadow();
 	/* 100556A0 */ void SetShadowType(int param_1);
-	/* 100556E0 */ int GetShadowType();
+	/* 100556E0 */ ulong GetShadowType();
 	/* 100556F0 */ cMagGameObject* GetEngine();
 	/* 10055700 */ void SetDirection(float param_1, float param_2, float param_3);
 	/* 10055C70 */ void SetDirection(D3DXVECTOR3 param_1);

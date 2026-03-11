@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "d3dx8math.h"
+
 struct CULLSTATE {
 
 };

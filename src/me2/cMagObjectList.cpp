@@ -138,8 +138,8 @@ bool cMagObjectList::RenderBlobList() {
 
 /* 100181F0-10018231 00041	*/
 bool cMagObjectList::RenderObjectList() {
-	for (std::vector<cMagKernel*>::iterator it = f_290.begin(); 
-			it != f_290.end(); it++) {
+	for (std::vector<cMagKernel*>::iterator it = objects.begin(); 
+			it != objects.end(); it++) {
 		if ((*it)->GetShadowType() != 2) {
 			(*it)->vtbl_0x4c();
 			(*it)->OnRender();

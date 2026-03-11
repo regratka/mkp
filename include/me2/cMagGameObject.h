@@ -105,7 +105,7 @@ public:
 	/* 10027450 */ void ShowFPS(bool param_1);
 	/* 10027470 */ bool TestViewObjest(D3DXVECTOR3 param_1, D3DXMATRIX param_2);
 	/* 10027630 */ void VectorToScreen(D3DXVECTOR3 param_1, D3DXMATRIX param_2, float& param_3, float& param_4);
-	/* 100276E0 */ void DrawTexts(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5);
+	/* 100276E0 */ void DrawTexts(char const* param_1, float param_2, float param_3, float param_4, D3DXMATRIX param_5);
 	/* 100278A0 */ void DrawObjectName();
 	/* 10027A40 */ void GpgFrustum(double param_1, double param_2, double param_3, double param_4, double param_5, double param_6);
 	/* 10027AE0 */ void GpgPerspective(double param_1, double param_2, double param_3, double param_4, int param_5);

@@ -3,6 +3,7 @@
 
 #include <globals.h>
 #include "pgString.h"
+#include "d3d8.h"
 
 struct FORMAT {
 

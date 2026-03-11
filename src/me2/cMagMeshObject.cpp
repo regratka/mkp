@@ -236,7 +236,7 @@ void cMagMeshObject::SetShadowType(int param_1) {
 }
 
 /* 100556E0-100556E7 00007	*/
-int cMagMeshObject::GetShadowType() {
+ulong cMagMeshObject::GetShadowType() {
 	return 0;
 }
 

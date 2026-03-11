@@ -1,7 +1,7 @@
 #include "cMagKernel.h"
 
 /* 100111a0-10011244 000a4	*/
-cMagKernel::cMagKernel() : cMagLog(), log() {
+cMagKernel::cMagKernel() : cMagLog(), magLog() {
     delegator1 = NULL;
     delegator2 = NULL;
     SetObjectName("cMagKernel");

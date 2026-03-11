@@ -3,6 +3,9 @@
 
 #include <globals.h>
 
+#include "d3d8.h"
+#include "d3dx8math.h"
+
 class CLensFlareSpot {
 public:
 	/* 100222A0 */ void SetTexture(IDirect3DTexture8* param_1);

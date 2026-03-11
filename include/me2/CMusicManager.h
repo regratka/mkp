@@ -2,8 +2,6 @@
 #define _C_MUSIC_MANAGER
 
 #include <globals.h>
-#include <dmusici.h>
-
 #include "CMusicSegment.h"
 #include "CMusicScript.h"
 

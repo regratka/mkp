@@ -834,7 +834,7 @@
 ?ShowFPS@cMagGameObject@@QAEX_N@Z;cMagGameObject::ShowFPS;0x10027450;0x14;__thiscall;;void;cMagGameObject*;bool
 ?TestViewObjest@cMagGameObject@@QAE_NUD3DXVECTOR3@@UD3DXMATRIX@@@Z;cMagGameObject::TestViewObjest;0x10027470;0x1bb;__thiscall;;bool;cMagGameObject*;D3DXVECTOR3;D3DXMATRIX
 ?VectorToScreen@cMagGameObject@@QAEXUD3DXVECTOR3@@UD3DXMATRIX@@AAM2@Z;cMagGameObject::VectorToScreen;0x10027630;0xa8;__thiscall;;void;D3DXVECTOR3;D3DXMATRIX;float*;float*
-?DrawTexts@cMagGameObject@@QAEXPBDMMMUD3DXMATRIX@@@Z;cMagGameObject::DrawTexts;0x100276e0;0x1c0;__thiscall;;void;cMagGameObject*;uchar;uchar;uchar;uchar;uchar
+?DrawTexts@cMagGameObject@@QAEXPBDMMMUD3DXMATRIX@@@Z;cMagGameObject::DrawTexts;0x100276e0;0x1c0;__thiscall;;void;cMagGameObject*;char*;float;float;float;D3DXMATRIX
 ?DrawObjectName@cMagGameObject@@QAEXXZ;cMagGameObject::DrawObjectName;0x100278a0;0x19f;__thiscall;;void;cMagGameObject*
 ?GpgFrustum@cMagGameObject@@QAEXNNNNNN@Z;cMagGameObject::GpgFrustum;0x10027a40;0x9b;__thiscall;;void;cMagGameObject*;double;double;double;double;double;double
 ?GpgPerspective@cMagGameObject@@QAEXNNNNH@Z;cMagGameObject::GpgPerspective;0x10027ae0;0x2de;__thiscall;;void;cMagGameObject*;double;double;double;double;int

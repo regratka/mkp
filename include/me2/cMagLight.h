@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include "d3d8.h"
+
 class cMagLight {
 public:
 	/* 10007340 */ cMagLight(cMagLight* param_1);
