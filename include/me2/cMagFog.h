@@ -11,7 +11,7 @@ public:
 	/* 10022E20 */ cMagFog* operator=(cMagFog* param_1);
 	/* 10022F30 */ cMagFog* scalar_destructor(uchar param_1);
 	/* 10072470 */ cMagFog();
-	/* 10072500 */ ~cMagFog();
+	/* 10072500 */ virtual ~cMagFog();
 	/* 10072560 */ void TypeFog(ulong param_1);
 	/* 10072570 */ void InitFog();
 	/* 10072610 */ void SetFogRangeNear(float param_1);

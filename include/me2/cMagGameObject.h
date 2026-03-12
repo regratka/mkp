@@ -216,8 +216,12 @@ private:
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
 
-	/* 0x51e */ uchar f_51e[0x53c-0x51e];
+	/* 0x51e */ uchar f_51e[0x534-0x51e];
+	
+	/* 0x534 */ HRESULT createFontIndirectResult;
 
+	/* 0x538 */ uchar f_538[0x53c-0x538];
+	
 	/* 0x53c */ MSG msg;
 
 	/* 0x558 */ uchar f_558[0x62c-0x558];

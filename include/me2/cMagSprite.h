@@ -5,15 +5,17 @@
 
 #include <d3dx8math.h>
 
+#include "cMagUtility.h"
+
 struct Rect;
 struct D3DTLVERTEXS;
 
-class cMagSprite {
+class cMagSprite : public cMagUtility {
 public:
 	/* 1000A9B0 */ void PlayMovie(bool param_1);
 	/* 10062870 */ cMagSprite();
 	/* 10062BE0 */ cMagSprite* scalar_destructor(uchar param_1);
-	/* 10062C40 */ ~cMagSprite();
+	/* 10062C40 */ virtual~cMagSprite();
 	/* 10062DA0 */ void SetTextColor(int param_1, float param_2, float param_3, float param_4, float param_5);
 	/* 10062E50 */ void ShowText(int param_1, bool param_2);
 	/* 10062ED0 */ void SetText(int param_1, char* param_2);

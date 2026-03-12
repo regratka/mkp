@@ -823,7 +823,7 @@
 ?OnPostRender@cMagGameObject@@QAEXXZ;cMagGameObject::OnPostRender;0x10026300;0x2e;__thiscall;;void;cMagGameObject*
 ?Render@cMagGameObject@@QAE_NXZ;cMagGameObject::Render;0x10026330;0x36d;__thiscall;;bool;cMagGameObject*
 ?RenderScene@cMagGameObject@@QAEXXZ;cMagGameObject::RenderScene;0x100266a0;0xe5;__thiscall;;void;cMagGameObject*
-?RestoreScene@cMagGameObject@@QAEXXZ;cMagGameObject::RestoreScene;0x10026790;0x3ba;__thiscall;;void;cMagGameObject*
+?RestoreScene@cMagGameObject@@QAEXXZ;cMagGameObject::RestoreScene;0x10026790;0x3e0;__thiscall;;void;cMagGameObject*
 ;Catch@10026b1d;0x10026b1d;0x1a;__fastcall;;uchar*;cMagLog*
 ?CallHandlerOnUpdate_@cMagGameObject@@QAEXXZ;cMagGameObject::CallHandlerOnUpdate_;0x10026b70;0x112;__thiscall;;void;cMagGameObject*
 ?CallOnUpdateMenuSettings@cMagGameObject@@QAEXXZ;cMagGameObject::CallOnUpdateMenuSettings;0x10026c90;0x7b;__thiscall;;void;cMagGameObject*

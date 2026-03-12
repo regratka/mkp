@@ -723,8 +723,81 @@ void cMagGameObject::RenderScene() {
 	CallAllHandler(&gameObject->input.unkn_1c, gameObject->input.unkn_11c, gameObject->input.unkn_120, gameObject->input.unkn_128, gameObject->input.unkn_129);
 }
 
-/* 10026790-10026B4A 003BA	*/
+/* 10026790-10026B70 003E0	*/
 void cMagGameObject::RestoreScene() {
+	if (dxFont != NULL) {
+		dxFont->Release();
+		if (GetWindowWidth() == 320 && GetWindowHeight() == 240) {
+			LOGFONT logFont = {
+				14, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE, EASTEUROPE_CHARSET, 
+				OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, 
+				DEFAULT_PITCH | FF_DONTCARE, "Comic Sans MS"
+			};
+			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
+			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontIndirectResult < D3D_OK) {
+				CrashLog("Nie mo¿na utworzyæ czcionki");
+			}
+		}
+
+		if (GetWindowWidth() == 640 && GetWindowHeight() == 480) {
+			LOGFONT logFont = {
+				18, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE, EASTEUROPE_CHARSET, 
+				OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, 
+				DEFAULT_PITCH | FF_DONTCARE, "Comic Sans MS"
+			};
+
+			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
+			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontIndirectResult < D3D_OK) {
+				CrashLog("Nie mo¿na utworzyæ czcionki");
+			}
+		}
+
+		if (GetWindowWidth() == 800 && GetWindowHeight() == 600) {
+			LOGFONT logFont = {
+				22, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE, EASTEUROPE_CHARSET, 
+				OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, 
+				DEFAULT_PITCH | FF_DONTCARE, "Comic Sans MS"
+			};
+			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
+			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontIndirectResult < D3D_OK) {
+				CrashLog("Nie mo¿na utworzyæ czcionki");
+			}
+		}
+
+		if (GetWindowWidth() == 1024 && GetWindowHeight() == 768) {
+			LOGFONT logFont = {
+				28, 0, 0, 0, FW_BOLD, FALSE, FALSE, FALSE, EASTEUROPE_CHARSET, 
+				OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, 
+				DEFAULT_PITCH | FF_DONTCARE, "Comic Sans MS"
+			};
+
+			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
+			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontIndirectResult < D3D_OK) {
+				CrashLog("Nie mo¿na utworzyæ czcionki");
+			}
+		}
+	}
+
+	if (enabledFog) {
+		if (GetFog() != NULL) {
+			GetFog()->InitFog();
+		}
+	}
+
+	try {
+		for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->spriteObjects.size(); index++) {
+			((cMagSprite*)(spriteObjects[index]))->Restore();
+		}
+	} catch(...) {
+		CrashLog("[CRACH] Restore sprite error");
+	}
+
+	SetCapture(GetHandleWindow());
+	SetCursor(NULL);
 }
 
 /* 10026B70-10026C82 00112	*/
