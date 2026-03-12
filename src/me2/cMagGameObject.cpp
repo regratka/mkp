@@ -736,7 +736,7 @@ void cMagGameObject::RestoreScene() {
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
 			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
 			if (createFontIndirectResult < D3D_OK) {
-				CrashLog("Nie mo¿na utworzyæ czcionki");
+				CrashLog("Nie moï¿½na utworzyï¿½ czcionki");
 			}
 		}
 
@@ -750,7 +750,7 @@ void cMagGameObject::RestoreScene() {
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
 			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
 			if (createFontIndirectResult < D3D_OK) {
-				CrashLog("Nie mo¿na utworzyæ czcionki");
+				CrashLog("Nie moï¿½na utworzyï¿½ czcionki");
 			}
 		}
 
@@ -763,7 +763,7 @@ void cMagGameObject::RestoreScene() {
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
 			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
 			if (createFontIndirectResult < D3D_OK) {
-				CrashLog("Nie mo¿na utworzyæ czcionki");
+				CrashLog("Nie moï¿½na utworzyï¿½ czcionki");
 			}
 		}
 
@@ -777,7 +777,7 @@ void cMagGameObject::RestoreScene() {
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
 			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
 			if (createFontIndirectResult < D3D_OK) {
-				CrashLog("Nie mo¿na utworzyæ czcionki");
+				CrashLog("Nie moï¿½na utworzyï¿½ czcionki");
 			}
 		}
 	}
@@ -847,18 +847,189 @@ void cMagGameObject::CallOnUpdateMenuSettings() {
 
 /* 10026D10-1002701F 0030F	*/
 void cMagGameObject::CallAllHandler(uchar* param_1, float param_2, float param_3, bool param_4, bool param_5) {
+	if (cMagEngineMgr::getInstance()->gameObject->callHandlerOnFrame1 != NULL) {
+		cMagEngineMgr::getInstance()->gameObject->callHandlerOnFrame1->OnFrame1();
+	}
+	if (terrainObject != NULL) {
+		if (terrainObject->GetStatusOnFrame()) {
+			terrainObject->OnFrame();
+		}
+	}
+	if (GetStatusOnFrame()) {
+		OnFrame();
+	}
+	if (GetStatusOnInputKey()) {
+		OnInputKey(param_1);
+	}
+	if (GetStatusOnInputMouse()) {
+		OnInputMouse(param_2, param_3, param_4, param_5);
+	}
+	if (gameInstance != NULL && gameInstance->activeLevel != NULL) {
+		if (gameInstance->activeLevel->GetStatusOnFrame()) {
+			gameInstance->activeLevel->OnFrame();
+		}
+	}
+	if (gameInstance != NULL && gameInstance->activeLevel != NULL) {
+		if (gameInstance->activeLevel->GetStatusOnInputKey()) {
+			gameInstance->activeLevel->OnInputKey(param_1);
+		}
+	}
+
+	for (std::vector<cMagKernel*>::iterator mit = meshObjects.begin(); 
+				mit != meshObjects.end(); mit++) {
+		if ((*mit)->GetStatusOnFrame()) {
+			(*mit)->CallOnFrame();
+		}
+		if ((*mit)->GetStatusOnInputKey()) {
+			(*mit)->CallOnInputKey(param_1);
+		}
+		if ((*mit)->GetStatusOnInputMouse()) {
+			(*mit)->CallOnInputMouse(param_2, param_3, param_4, param_5);
+		}
+	}
+
+	for (std::vector<cMagKernel*>::iterator cit = cameraObjects.begin(); 
+				cit != cameraObjects.end(); cit++) {
+		if ((*cit)->GetStatusOnFrame()) {
+			(*cit)->OnFrame();
+		}
+		if ((*cit)->GetStatusOnInputKey()) {
+			(*cit)->OnInputKey(param_1);
+		}
+		if ((*cit)->GetStatusOnInputMouse()) {
+			(*cit)->OnInputMouse(param_2, param_3, param_4, param_5);
+		}
+	}
+
+	for (std::vector<cMagKernel*>::iterator sit = spriteObjects.begin(); 
+				sit != spriteObjects.end(); sit++) {
+		if ((*sit)->GetStatusOnFrame()) {
+			(*sit)->CallOnFrame();
+		}
+		if ((*sit)->GetStatusOnInputKey()) {
+			(*sit)->CallOnInputKey(param_1);
+		}
+		if ((*sit)->GetStatusOnInputMouse()) {
+			(*sit)->CallOnInputMouse(param_2, param_3, param_4, param_5);
+		}
+	}
+
+	for (std::vector<cMagKernel*>::iterator bit = billboardObjects.begin(); 
+				bit != billboardObjects.end(); bit++) {
+		if ((*bit)->GetStatusOnFrame()) {
+			(*bit)->OnFrame();
+		}
+		if ((*bit)->GetStatusOnInputKey()) {
+			(*bit)->OnInputKey(param_1);
+		}
+		if ((*bit)->GetStatusOnInputMouse()) {
+			(*bit)->OnInputMouse(param_2, param_3, param_4, param_5);
+		}
+	}
+
+	for (std::vector<cMagKernel*>::iterator pit = particleObjects.begin(); 
+				pit != particleObjects.end(); pit++) {
+		if ((*pit)->GetStatusOnFrame()) {
+			(*pit)->OnFrame();
+		}
+		if ((*pit)->GetStatusOnInputKey()) {
+			(*pit)->OnInputKey(param_1);
+		}
+		if ((*pit)->GetStatusOnInputMouse()) {
+			(*pit)->OnInputMouse(param_2, param_3, param_4, param_5);
+		}
+	}
 }
 
 /* 10027020-1002732C 0030C	*/
 void cMagGameObject::CreateObject(cMagKernel* param_1) {
+	cMagKernel* object;
+	object->OnActivate();
+	FileLog("CreateObject: %s", object->GetObjectName());
+	if (stricmp(object->GetClassNameA(), "cMagParticleSystem") == 0) {
+		cMagEngineMgr::getInstance()->gameObject->AddParticleObject(object);
+		object->vtbl_0x50();
+		return;
+	} 
+	 if (stricmp(object->GetClassNameA(), "cMagFx") != 0) {
+		if (stricmp(object->GetClassNameA(), "cGlow") != 0) {
+			if (stricmp(object->GetClassNameA(), "CSplineCamera") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->splineCameras.push_back(param_1);
+				object->vtbl_0x50();
+			} else if (stricmp(object->GetClassNameA(), "cMagBillboard") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddBillboardObject(object);
+				object->vtbl_0x50();
+			} else if (stricmp(object->GetClassNameA(), "cMagCamera") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddCameraObject(object);
+				object->vtbl_0x50();
+			} else if(stricmp(object->GetClassNameA(), "cMagSkyBox") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddSkyBoxObject(object);
+			} else if (stricmp(object->GetClassNameA(), "cMagSun") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddSunObject(object);
+			} else if (stricmp(object->GetClassNameA(), "CLensFlare") == 0) {
+				lensFlare = object;
+			} else if (stricmp(object->GetClassNameA(), "MagTerrain") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddTerrainObject(object);
+			} else if(stricmp(object->GetClassNameA(), "cMagSprite") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddSpriteObject(object);
+				object->vtbl_0x50();
+			} else if(stricmp(object->GetClassNameA(), "cMagFog") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddFogObject(object);
+			} else if(stricmp(object->GetClassNameA(), "cWater") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddWaterObject(object);
+				object->vtbl_0x50();
+			} else if (stricmp(object->GetClassNameA(), "cBlob") == 0) {
+				cMagEngineMgr::getInstance()->gameObject->AddBlobObject(object);
+				object->vtbl_0x50();
+			}
+		} else {
+			cMagEngineMgr::getInstance()->gameObject->AddObject(object);
+			object->OnPreRender();
+			object->vtbl_0x50();
+		}
+	} else {
+		cMagEngineMgr::getInstance()->gameObject->AddFxObject(object);
+		object->vtbl_0x50();
+	}
 }
 
 /* 10027330-100273BA 0008A	*/
 void cMagGameObject::CameraLookAt(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, float param_9) {
+	eye.x = param_1;
+	eye.y = param_2;
+	eye.z = param_3;
+	
+	at.x = param_4;
+	at.y = param_5;
+	at.z = param_6;
+
+	up.x = param_7;
+	up.y = param_8;
+	up.z = param_9;
+
+	D3DXMatrixLookAtLH(&viewMatrix, &eye, &at, &up);
+	cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_VIEW, &viewMatrix);
 }
 
 /* 100273C0-1002744E 0008E	*/
 void cMagGameObject::Fps() {
+	static float FRAMES_PER_SECOND = 0;
+	static float LAST_MEASURE_TIME = 0;
+	static uint FRAME_COUNT = 0;
+	
+	uint time = timeGetTime();
+	float timeDiff = time * 0.001f - LAST_MEASURE_TIME;
+	FRAME_COUNT++;
+	if (timeDiff > 1.0f) {
+		uint counts = FRAME_COUNT;
+		FRAME_COUNT = 0;
+		FRAMES_PER_SECOND = counts / timeDiff;
+		LAST_MEASURE_TIME = time * 0.001f;
+	}
+	
+	
+	char buffer[80];
+	sprintf(buffer, "%s %7.02f", "fps", FRAMES_PER_SECOND);
 }
 
 /* 10027450-10027464 00014	*/

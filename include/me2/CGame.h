@@ -3,9 +3,9 @@
 
 #include <globals.h>
 
-#include "cMagKernel.h"
+#include "cMagGameObject.h"
+#include "CLevel.h"
 
-class CLevel;
 class MagTerrain;
 class CState;
 class CClientServer;
@@ -14,7 +14,7 @@ class cMagGameObject;
 struct JNIEnv_;
 
 
-class CGame : public cMagKernel {
+class CGame : public cMagGameObject {
 public:
 	/* 10018FB0 */ CGame(CGame* param_1);
 	/* 10019B10 */ CGame* operator=(CGame* param_1);
@@ -101,7 +101,14 @@ public:
 	/* 10097EC0 */ CClientServer* GetClientServer();
 	/* 100C97D0 */ cMagGameObject* JLoadMesh(char* param_1);
 
+public:
+	/* 0xd10 */  uchar f_d10[0x1180-0xd10];
+	/* 0x1180 */ CLevel* activeLevel;
+	/* 0x1184 */  uchar f_1184[0x19f0-0x1184];
+
 
 };
+
+STATIC_ASSERT(sizeof(CGame) == 0x19f0);
 
 #endif

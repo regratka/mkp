@@ -216,8 +216,10 @@ private:
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
 
-	/* 0x51e */ uchar f_51e[0x534-0x51e];
-	
+	/* 0x51e */ uchar f_51e[0x520-0x51e];
+
+	/* 0x520 */ std::vector<cMagKernel*>  splineCameras;
+	/* 0x530 */ CCamera* activeCamera;
 	/* 0x534 */ HRESULT createFontIndirectResult;
 
 	/* 0x538 */ uchar f_538[0x53c-0x538];
@@ -255,7 +257,10 @@ private:
 	/* 0x9e0 */ D3DXMATRIX projectionMatrix;
 	/* 0xa20 */ D3DXMATRIX viewMatrix;
 
-	/* 0xa60 */ uchar f_a60[0xb00-0xa60];
+	/* 0xa60 */ D3DXVECTOR3 at;
+	/* 0xa6c */ D3DXVECTOR3 eye;
+	/* 0xa78 */ D3DXVECTOR3 up;
+	/* 0xa84 */ uchar f_a84[0xb00-0xa84];
 
 	/* 0xb00 */ bool removeObject;
 

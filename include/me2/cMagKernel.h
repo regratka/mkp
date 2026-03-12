@@ -66,8 +66,10 @@ public:
 	/* 10011250 */ virtual ~cMagKernel(); /* vtbl 0x80 */
 	/* 10011260 */ virtual void OnFrame(); /* vtbl 0x84 */
 
-	virtual void vtb_0x88(); /* vtbl 0x88 */
+	virtual void OnFrame1(); /* vtbl 0x88 */
+
 	/* 10011300 */ virtual void OnInputKey(uchar* param_1); /* vtbl 0x90 */
+	
 	virtual void OnInputKey(int, bool);  /* vtbl 0x8c */
 	virtual void OnInputChar(char); /* vtbl 0x94 */
 

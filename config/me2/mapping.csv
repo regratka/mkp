@@ -4018,9 +4018,9 @@
 ;FUN_100ce5c8;0x100ce5c8;0x2e;__stdcall;;uchar;uint;uint;uint;uint
 ;FUN_100ce5fc;0x100ce5fc;0x11;__stdcall;;uchar
 ;FUN_100ce613;0x100ce613;0x27;__stdcall;;uchar;uint;uint;uint;uint;uint
-;FUN_100ce73b;0x100ce73b;0x171;__stdcall;;float*;float*;float*;float*;float*
-;computeProjectionMatrix;0x100ce8ac;0xa1;__stdcall;;float*;D3DMATRIX*;float;float;float;float
-;D3DXMatrixPerspectiveOffCenterLH;0x100ce94d;0xa9;__stdcall;;uchar;float*;float;float;float;float;float;float
+;D3DXMatrixLookAtLH;0x100ce73b;0x171;__stdcall;;D3DXMATRIX*;D3DXMATRIX*;D3DXVECTOR3*;D3DXVECTOR3*;D3DXVECTOR3*
+;D3DXMatrixPerspectiveFovLH;0x100ce8ac;0xa1;__stdcall;;D3DXMATRIX*;D3DXMATRIX*;float;float;float;float
+;D3DXMatrixPerspectiveOffCenterLH;0x100ce94d;0xa9;__stdcall;;D3DXMATRIX*;D3DXMATRIX*;float;float;float;float;float;float
 ;FUN_100ce9f6;0x100ce9f6;0x78;__stdcall;;uchar;float*;float;float;float;float
 ;FUN_100cea6e;0x100cea6e;0x11;__stdcall;;uchar
 ;[28]FUN_100cea7f;0x100cea7f;0x11;__stdcall;;uchar

@@ -3,10 +3,9 @@
 
 #include <globals.h>
 
-#include "cMagGameObject.h"
+#include "cMagUtility.h"
 
-
-class CLevel {
+class CLevel : public cMagUtility {
 public:
 	/* 10023B60 */ CLevel(CLevel* param_1);
 	/* 10023CA0 */ CLevel* operator=(CLevel* param_1);

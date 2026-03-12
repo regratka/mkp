@@ -22,6 +22,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Iterator;
 
 public class ImportFromCsv extends GhidraScript
 {
@@ -63,13 +64,22 @@ public class ImportFromCsv extends GhidraScript
             }
 
             // Check if a function already exists.
-            Function fun;
-            if ((fun = this.getFunctionContaining(addr)) == null)
+            Function fun = this.getFunctionContaining(addr);
+
+            if (fun == null)
             {
                 printf("No function exist for %s at %x - creating\n", name, addr.getOffset());
-                fun = this.getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range,
-                                                                                   SourceType.USER_DEFINED);
+                fun = getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range, SourceType.USER_DEFINED);
             }
+            //  else if( !fun.getBody().equals(range)) {
+            //     printf("Updating the body scope for %s from %s to %s\n", name, fun.getBody().toString(), range.toString());
+            //     Iterator<Function> overFuns = getCurrentProgram().getFunctionManager().getFunctionsOverlapping(range);
+            //     while(overFuns.hasNext()) {
+            //         Function overlap = overFuns.next();
+            //         getCurrentProgram().getFunctionManager().removeFunction(overlap.getEntryPoint());
+            //     }
+            //     fun = getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range, SourceType.USER_DEFINED);
+            // }
 
             if (!mangledName.isEmpty() && getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
                 printf("Creating label %s\n", mangledName);
