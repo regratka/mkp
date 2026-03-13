@@ -29,6 +29,10 @@ public:
 	/* 10089920 */ void GOUpdateRelay(StateObject_Str* param_1);
 	/* 100899A0 */ void SendOnAnimEnd();
 
+private:
+	/* 0xd10 */ uchar f_d10[0xd2c-0xd10];
 };
+
+STATIC_ASSERT(sizeof(MagState) == 0xd2c);
 
 #endif

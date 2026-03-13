@@ -21,6 +21,11 @@ public:
 	/* 1002E0A0 */ void PrintChar(int param_1, int param_2, char param_3, int param_4, ulong param_5, ulong* param_6, int param_7);
 	/* 1002E270 */ void PrintString(int param_1, int param_2, char* param_3, int param_4, ulong param_5, ulong* param_6, int param_7);
 	/* 1002E2F0 */ long CopySurfaceToSurface(tagRECT* param_1, IDirect3DSurface8* param_2, tagPOINT* param_3, IDirect3DSurface8* param_4, int param_5, ulong param_6);
+
+private:
+	/* 0xd2c */ uchar f_d2c[0xd4c-0xd2c];
 };
+
+STATIC_ASSERT(sizeof(cMagUtility) == 0xd4c);
 
 #endif

@@ -70,7 +70,7 @@ void cMagMeshObject::SetScale(D3DXVECTOR3 param_1) {
 }
 
 /* 10053BC0-10053C01 00041	*/
-uchar cMagMeshObject::GetPosition(uint* param_1) {
+D3DXVECTOR3 cMagMeshObject::GetPosition() {
 	return 0;
 }
 

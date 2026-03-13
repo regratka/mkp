@@ -23,7 +23,7 @@ public:
 	/* 100534C0 */ void LoadMesh(char* param_1);
 	/* 10053AA0 */ void SetPosition(D3DXVECTOR3 param_1);
 	/* 10053B30 */ void SetScale(D3DXVECTOR3 param_1);
-	/* 10053BC0 */ uchar GetPosition(uint* param_1);
+	/* 10053BC0 */ D3DXVECTOR3 GetPosition();
 	/* 10053C10 */ uchar GetScale(uint* param_1);
 	/* 10053C40 */ uchar GetRotateMatrix(uint* param_1);
 	/* 10053C60 */ void SetRotateMatrix(uchar param_1);
@@ -278,6 +278,13 @@ public:
 	/* 1005C610 */ int GetNaviPointsCount();
 	/* 1005C640 */ uchar GetNaviPointAt(uint* param_1, uint param_2);
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
+
+public:
+	/* 0xd4c  */ uchar f_d4c[0x133e - 0xd4c];
+	/* 0x133e */ bool unk_113e;
+	/* 0x133f */ uchar f_133f[0x2658 - 0x133f];
 };
+
+STATIC_ASSERT(sizeof(cMagMeshObject) == 0x2658);
 
 #endif

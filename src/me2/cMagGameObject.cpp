@@ -6,6 +6,7 @@
 #include "MagTextureMgr.h"
 
 #include "cMagSprite.h"
+#include "cMagMeshObject.h"
 
 #include "CMagFog.h"
 
@@ -843,6 +844,10 @@ void cMagGameObject::CallOnUpdateMenuSettings() {
 			sit != spriteObjects.end(); sit++) {
 		(*sit)->OnUpdateMenuSettings();
 	}
+
+	if (gameInstance != NULL && gameInstance->activeLevel != NULL) {
+		gameInstance->activeLevel->OnUpdateMenuSettings();
+	}
 }
 
 /* 10026D10-1002701F 0030F	*/
@@ -1108,6 +1113,28 @@ void cMagGameObject::DrawTexts(char const* param_1, float param_2, float param_3
 
 /* 100278A0-10027A3F 0019F	*/
 void cMagGameObject::DrawObjectName() {
+	for(std::vector<cMagKernel*>::iterator mit = meshObjects.begin(); mit != meshObjects.end(); mit++) {
+		cMagMeshObject* mesh = (cMagMeshObject*) *mit;
+		if (mesh != NULL && !mesh->unk_113e){
+			D3DXVECTOR3 position = mesh->GetPosition();
+			char* objectName = mesh->GetObjectName();
+			if (objectName == NULL) {
+				continue;
+			}
+
+			char buffer[100];
+			sprintf(buffer, "%s  pos:<%4.f,%4.f,%4.f>", objectName, position.x, position.y, position.z);
+
+			D3DXMATRIX matrix;
+			D3DXMatrixIdentity(&matrix);
+			
+			float f1 = 0;
+			float f2 = 0;
+			VectorToScreen(position, matrix, f1, f2);
+		}
+
+	}
+
 }
 
 /* 10027A40-10027ADB 0009B	*/
@@ -1133,11 +1160,111 @@ void cMagGameObject::GpgFrustum(double param_1, double param_2, double param_3, 
 
 /* 10027AE0-10027DBE 002DE	*/
 void cMagGameObject::GpgPerspective(double param_1, double param_2, double param_3, double param_4, int param_5) {
+	float fov_rad_2 = GpgDegToRad(param_1) / 2;
+	float fov_aspect = param_3 / (cos(fov_rad_2) / sin(fov_rad_2));
+
+	if (param_5 == -1) {
+		GpgFrustum(-fov_aspect*param_2, fov_aspect*param_2, -fov_aspect, fov_aspect, param_3, param_4);
+	} else if (param_5 == 0) {
+		GpgFrustum(-fov_aspect*param_2, -fov_aspect*param_2/3, fov_aspect/3, fov_aspect * param_2, param_3, param_4);
+	} else if (param_5 == 1) {
+		GpgFrustum(-fov_aspect*param_2 / 3, fov_aspect*param_2/3, fov_aspect/3, fov_aspect, param_3, param_4);
+	} else if (param_5 == 2) {
+		GpgFrustum(fov_aspect*param_2 / 3, fov_aspect*param_2, fov_aspect/3, fov_aspect, param_3, param_4);
+	} else if (param_5 == 3) {
+		GpgFrustum(-fov_aspect*param_2, -fov_aspect*param_2/3, -fov_aspect/3, fov_aspect/3, param_3, param_4);
+	} else if (param_5 == 4) {
+    	GpgFrustum(-fov_aspect*param_2/3, fov_aspect*param_2/3, -fov_aspect/3,  fov_aspect/3, param_3, param_4);
+	} else if (param_5 == 5) {
+		GpgFrustum(fov_aspect*param_2/3, fov_aspect*param_2, -fov_aspect/3, fov_aspect/3, param_3, param_4);
+	} else if (param_5 == 6) {
+		GpgFrustum(-fov_aspect*param_2, -fov_aspect*param_2/3, -fov_aspect, -fov_aspect/3, param_3, param_4);
+	} else if (param_5 == 7) {
+		GpgFrustum(-fov_aspect*param_2/3, fov_aspect*param_2/3, -fov_aspect, -fov_aspect/3, param_3, param_4);
+	} else if (param_5 == 8) {
+		GpgFrustum(fov_aspect*param_2/3, fov_aspect*param_2, -fov_aspect, fov_aspect/3, param_3, param_4);
+	}
+
+	// switch(param_5) {
+	// 	case -1:
+	// 		GpgFrustum(-fov_aspect*param_2, fov_aspect*param_2, -fov_aspect, fov_aspect, param_3, param_4);
+	// 		break;
+	// 	case 0:
+	// 		GpgFrustum(-fov_aspect*param_2, -fov_aspect*param_2/3, fov_aspect/3, fov_aspect * param_2, param_3, param_4);
+	// 		break;
+	// 	case 1:
+	// 		GpgFrustum(-fov_aspect*param_2 / 3, fov_aspect*param_2/3, fov_aspect/3, fov_aspect, param_3, param_4);
+	// 		break;
+	// 	case 2:
+	// 		GpgFrustum(fov_aspect*param_2 / 3, fov_aspect*param_2, fov_aspect/3, fov_aspect, param_3, param_4);
+	// 		break;
+	// 	case 3:
+	// 		GpgFrustum(-fov_aspect*param_2, -fov_aspect*param_2/3, -fov_aspect/3, fov_aspect/3, param_3, param_4);
+	// 		break;
+	// 	case 4:
+	// 		GpgFrustum(-fov_aspect*param_2/3, fov_aspect*param_2/3, -fov_aspect/3,  fov_aspect/3, param_3, param_4);
+	// 		break;
+	// 	case 5:
+	// 		GpgFrustum(fov_aspect*param_2/3, fov_aspect*param_2, -fov_aspect/3, fov_aspect/3, param_3, param_4);
+	// 		break;
+	// 	case 6:
+	// 		GpgFrustum(-fov_aspect*param_2, -fov_aspect*param_2/3, -fov_aspect, -fov_aspect/3, param_3, param_4);
+	// 		break;
+	// 	case 7:
+	// 		GpgFrustum(-fov_aspect*param_2/3, fov_aspect*param_2/3, -fov_aspect, -fov_aspect/3, param_3, param_4);
+	// 		break;
+	// 	case 8:
+	// 		GpgFrustum(fov_aspect*param_2/3, fov_aspect*param_2, -fov_aspect, fov_aspect/3, param_3, param_4);
+	// 		break;
+	// }
 }
 
+
 /* 10027DC0-10027F46 00186	*/
-long cMagGameObject::ScreenGrab(uchar param_1, char* param_2) {
-	return 0;
+long cMagGameObject::ScreenGrab(IDirect3DDevice8* param_1, char* param_2) {
+	SYSTEMTIME systemTime;
+	GetLocalTime(&systemTime);
+
+	char buffer[256];
+	sprintf(buffer, "data\\screenshots\\screenshot%d%d%d%d.bmp", systemTime.wDay, systemTime.wHour, systemTime.wMinute, systemTime.wSecond);
+	IDirect3DSurface8* surface;
+	HRESULT result = param_1->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
+	if (result < D3D_OK) {
+		return D3D_OK;
+	}
+	D3DSURFACE_DESC surface_Desc;
+	result = surface->GetDesc(&surface_Desc);
+	if (result < D3D_OK) {
+		return D3D_OK;
+	}
+	IDirect3DSurface8* imageSurface;
+	result = param_1->CreateImageSurface(GetWindowWidth(), GetWindowHeight(), surface_Desc.Format, &imageSurface);
+	if (result < D3D_OK) {
+		surface->Release();
+		return D3D_OK;
+	}
+
+	RECT destRect; 
+	destRect.left = 0;
+	destRect.right = GetWindowWidth();
+	destRect.top = 0;
+	destRect.bottom = GetWindowHeight();
+
+	result = D3DXLoadSurfaceFromSurface(imageSurface, NULL, &destRect, surface, NULL, NULL, 2, 0);
+	surface->Release();
+	if (result < D3D_OK) {
+		imageSurface->Release();
+		return D3D_OK;
+	}
+	
+	result = D3DXSaveSurfaceToFile(buffer, D3DXIFF_BMP, imageSurface, NULL, NULL);
+	if (result < D3D_OK) {
+		imageSurface->Release();
+		return D3D_OK;
+	}
+
+	imageSurface->Release();
+	return result;
 }
 
 /* 10027F50-10028234 002E4	*/

@@ -69,7 +69,7 @@ public:
 
 	/* 10002300-1000230D 0000D	*/
 	float cMagGameObject::GpgDegToRad(float param_1) {
-		return param_1 * (D3DX_PI / 180.0f);
+		return  D3DXToRadian(param_1);
 	}
 
 	/* 10024C60 */ cMagGameObject();
@@ -109,7 +109,7 @@ public:
 	/* 100278A0 */ void DrawObjectName();
 	/* 10027A40 */ void GpgFrustum(double param_1, double param_2, double param_3, double param_4, double param_5, double param_6);
 	/* 10027AE0 */ void GpgPerspective(double param_1, double param_2, double param_3, double param_4, int param_5);
-	/* 10027DC0 */ long ScreenGrab(uchar param_1, char* param_2);
+	/* 10027DC0 */ long ScreenGrab(IDirect3DDevice8* param_1, char* param_2);
 	/* 10027F50 */ long RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4);
 	/* 10028240 */ void SetLastRender(cMagMeshObject* param_1);
 	/* 100282F0 */ void swapObject(int param_1, int param_2);

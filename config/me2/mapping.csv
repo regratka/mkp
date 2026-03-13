@@ -1638,7 +1638,7 @@
 ;FUN_10053a6e;0x10053a6e;0x32;__stdcall;;uchar
 ?SetPosition@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetPosition;0x10053aa0;0x85;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
 ?SetScale@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetScale;0x10053b30;0x85;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
-?GetPosition@cMagMeshObject@@UAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetPosition;0x10053bc0;0x41;__thiscall;;uchar;cMagMeshObject*;uint*
+?GetPosition@cMagMeshObject@@UAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetPosition;0x10053bc0;0x41;__thiscall;;D3DXVECTOR3;cMagMeshObject*;
 ?GetScale@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetScale;0x10053c10;0x21;__thiscall;;uchar;cMagMeshObject*;uint*
 ?GetRotateMatrix@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ;cMagMeshObject::GetRotateMatrix;0x10053c40;0x1a;__thiscall;;uchar;cMagMeshObject*;uint*
 ?SetRotateMatrix@cMagMeshObject@@QAEXUD3DXMATRIX@@@Z;cMagMeshObject::SetRotateMatrix;0x10053c60;0x18;__thiscall;;void;cMagMeshObject*;uchar
