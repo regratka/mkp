@@ -11,7 +11,7 @@
 #include "MagGrid.h"
 #include "CMagInput.h"
 
-typedef long (*renderCallback) ();
+typedef long (WINAPIV *renderCallback) ();
 
 class CGame;
 class MagTerrain;
@@ -110,7 +110,7 @@ public:
 	/* 10027A40 */ void GpgFrustum(double param_1, double param_2, double param_3, double param_4, double param_5, double param_6);
 	/* 10027AE0 */ void GpgPerspective(double param_1, double param_2, double param_3, double param_4, int param_5);
 	/* 10027DC0 */ long ScreenGrab(IDirect3DDevice8* param_1, char* param_2);
-	/* 10027F50 */ long RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4);
+	/* 10027F50 */ long RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4);
 	/* 10028240 */ void SetLastRender(cMagMeshObject* param_1);
 	/* 100282F0 */ void swapObject(int param_1, int param_2);
 	/* 10028320 */ void swap(int& param_1, int& param_2);
@@ -220,7 +220,7 @@ private:
 
 	/* 0x520 */ std::vector<cMagKernel*>  splineCameras;
 	/* 0x530 */ CCamera* activeCamera;
-	/* 0x534 */ HRESULT createFontIndirectResult;
+	/* 0x534 */ HRESULT createFontResult;
 
 	/* 0x538 */ uchar f_538[0x53c-0x538];
 	

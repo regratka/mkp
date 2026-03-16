@@ -9,6 +9,7 @@
 #include "cMagMeshObject.h"
 
 #include "CMagFog.h"
+#include "algorithm"
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
@@ -127,6 +128,10 @@ void cMagGameObject::Cleanup() {
 		direct3D->Release();
 	}
 	FileLog("Cleanup... OK");
+}
+
+LRESULT CALLBACK ME2WNDPROC(HWND, UINT, WPARAM, LPARAM) {
+	return 0;
 }
 
 /* 10025550-100258B5 00365	*/
@@ -288,10 +293,6 @@ void cMagGameObject::SetDeviceMode(int param_1, int param_2) {
 	}
 }
 
-
-LRESULT CALLBACK ME2WNDPROC(HWND, UINT, WPARAM, LPARAM) {
-	return 0;
-}
 
 /* 10025AB0-10025C6F 001BF	*/
 bool cMagGameObject::InitWindow(int param_1, int param_2, int param_3, bool param_4, HINSTANCE__* param_5, WNDPROC param_6, char* param_7) {
@@ -735,8 +736,8 @@ void cMagGameObject::RestoreScene() {
 				DEFAULT_PITCH | FF_DONTCARE, "Comic Sans MS"
 			};
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
-			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
-			if (createFontIndirectResult < D3D_OK) {
+			createFontResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontResult < D3D_OK) {
 				CrashLog("Nie mo�na utworzy� czcionki");
 			}
 		}
@@ -749,8 +750,8 @@ void cMagGameObject::RestoreScene() {
 			};
 
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
-			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
-			if (createFontIndirectResult < D3D_OK) {
+			createFontResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontResult < D3D_OK) {
 				CrashLog("Nie mo�na utworzy� czcionki");
 			}
 		}
@@ -762,8 +763,8 @@ void cMagGameObject::RestoreScene() {
 				DEFAULT_PITCH | FF_DONTCARE, "Comic Sans MS"
 			};
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
-			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
-			if (createFontIndirectResult < D3D_OK) {
+			createFontResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontResult < D3D_OK) {
 				CrashLog("Nie mo�na utworzy� czcionki");
 			}
 		}
@@ -776,8 +777,8 @@ void cMagGameObject::RestoreScene() {
 			};
 
 			IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
-			createFontIndirectResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
-			if (createFontIndirectResult < D3D_OK) {
+			createFontResult = D3DXCreateFontIndirect(engine, &logFont, &dxFont);
+			if (createFontResult < D3D_OK) {
 				CrashLog("Nie mo�na utworzy� czcionki");
 			}
 		}
@@ -1268,12 +1269,93 @@ long cMagGameObject::ScreenGrab(IDirect3DDevice8* param_1, char* param_2) {
 }
 
 /* 10027F50-10028234 002E4	*/
-long cMagGameObject::RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4) {
-	return 0;
+long cMagGameObject::RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4) {
+	IDirect3DSurface8* surface;
+	createFontResult = param_2->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
+	if (createFontResult < D3D_OK) {
+		return createFontResult;
+	}
+
+	D3DSURFACE_DESC surface_Desc;
+	createFontResult = surface->GetDesc(&surface_Desc);
+	surface->Release();
+	if (createFontResult < D3D_OK) {
+		return createFontResult;
+	}
+
+	DebugLog("--------------titled 1------------");
+	IDirect3DSurface8* imageSurface;
+	uint width = surface_Desc.Width * param_3;
+	uint height = surface_Desc.Height * param_3;
+	createFontResult = param_2->CreateImageSurface(width, height, surface_Desc.Format, &imageSurface);
+	if (createFontResult < D3D_OK) {
+		return createFontResult;
+	}
+
+	DebugLog("--------------titled 2------------");
+	D3DXMATRIX projectionMatrix;
+	param_2->GetTransform(D3DTS_PROJECTION, &projectionMatrix);
+	D3DXMATRIX matrix = projectionMatrix;
+	DebugLog("--------------titled 2-1------------");
+	matrix(0,0) *= param_3;
+	matrix(1,1) *= param_3;
+
+
+	for (int index1 = 0; index1 < param_3; index1++) {
+		matrix(2,0) = param_3 - 1 - (index1+index1);
+		for (int index2 = 0; index2 < param_3; index2++) {
+			matrix(2,1) =-(-param_3 - 1 - (index2 + index2));
+			param_2->SetTransform(D3DTS_PROJECTION, &matrix);
+			RenderScene();
+
+			DebugLog("--------------titled 2-2------------");
+			createFontResult = param_2->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
+			if (createFontResult < D3D_OK) {
+				imageSurface->Release();
+				return createFontResult;
+			}
+			DebugLog("--------------titled 3------------");
+
+			RECT destRect; 
+			destRect.left = index1 * surface_Desc.Width;
+			destRect.right = destRect.left + surface_Desc.Width;
+			destRect.top = index2 * surface_Desc.Height;
+			destRect.bottom = destRect.top + surface_Desc.Height;
+
+			createFontResult = D3DXLoadSurfaceFromSurface(imageSurface, NULL, &destRect, surface, NULL, NULL, 1, 0);
+			surface->Release();
+			if (createFontResult < D3D_OK) {
+				imageSurface->Release();
+				return createFontResult;
+			}
+			param_2->Present(NULL, NULL, NULL, NULL);
+		}
+	}
+
+	DebugLog("--------------titled 4------------");
+	param_2->SetTransform(D3DTS_PROJECTION, &projectionMatrix);
+	createFontResult = D3DXSaveSurfaceToFile(param_1, D3DXIFF_BMP, imageSurface, NULL, NULL);
+	imageSurface->Release();
+	DebugLog("--------------titled 5------------");
+
+	return createFontResult;
 }
 
 /* 10028240-100282ED 000AD	*/
 void cMagGameObject::SetLastRender(cMagMeshObject* param_1) {
+	int size = cMagEngineMgr::getInstance()->gameObject->meshObjects.size();
+	for (int index = 0; index < size; index++) {
+		char* param_name = param_1->GetObjectName();
+		cMagKernel* object = cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+		if (stricmp(param_name, object->GetObjectName()) == 0) {
+			cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+			int size2 = gameObject->meshObjects.size();
+			cMagKernel* temp = gameObject->meshObjects[size2-1];
+			gameObject->meshObjects[size2-1] = gameObject->meshObjects[index];
+			gameObject = cMagEngineMgr::getInstance()->gameObject;
+			gameObject->meshObjects[index] = temp;
+		}
+	}
 }
 
 /* 100282F0-10028319 00029	*/
