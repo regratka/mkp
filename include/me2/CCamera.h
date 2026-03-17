@@ -4,7 +4,9 @@
 #include <globals.h>
 #include <d3dx8math.h>
 
-class CCamera {
+#include "cMagGameObject.h"
+
+class CCamera : public cMagGameObject {
 public:
 	/* 1000BE30 */ CCamera(CCamera* param_1);
 	/* 1000BEE0 */ CCamera* operator=(CCamera* param_1);
@@ -29,9 +31,9 @@ public:
 	/* 1005FD00 */ void OnRender();
 	/* 1005FDA0 */ void UpdateWindowSize(int param_1, int param_2);
 	/* 1005FDC0 */ int GetID();
-	/* 1005FDD0 */ void OnActivateView();
+	/* 1005FED0 */ virtual void OnDeactivateView();
+	/* 1005FDD0 */ virtual void OnActivateView();
 	/* 1005FE20 */ void Rotate(D3DXVECTOR3 param_1, float param_2, bool param_3);
-	/* 1005FED0 */ void OnDeactivateView();
 	/* 1005FF10 */ void SetFreeRotationMatrix(bool param_1);
 	/* 1005FF20 */ bool GetFreeRotationMatrix();
 	/* 1005FF30 */ void SetUp(D3DXVECTOR3 param_1);

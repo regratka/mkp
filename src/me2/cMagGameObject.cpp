@@ -4,6 +4,7 @@
 
 #include "cMagEngineMgr.h"
 
+#include "CCamera.h"
 #include "cMagSprite.h"
 #include "cMagMeshObject.h"
 
@@ -1739,6 +1740,7 @@ long cMagGameObject::ScaleRender() {
 
 /* 1002A6D0-1002A6E4 00014	*/
 void cMagGameObject::AddLight(_LIGHT* param_1) {
+	DebugLog("--------- Dodaje swiatlo -------------");
 }
 
 /* 1002A6F0-1002A6FB 0000B	*/
@@ -1747,11 +1749,18 @@ void cMagGameObject::ClearMeshList() {
 
 /* 1002A700-1002A72F 0002F	*/
 void cMagGameObject::SetActiveCamera(CCamera* param_1) {
+	if (activeCamera != NULL) {
+		activeCamera->OnDeactivateView();
+	}
+	activeCamera = param_1;
+	if (param_1 != NULL) {
+		param_1->OnActivateView();
+	}
 }
 
 /* 1002A730-1002A73E 0000E	*/
 CCamera* cMagGameObject::GetActiveCamera() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->activeCamera;
 }
 
 /* 1002A740-1002A7DB 0009B	*/
@@ -1760,6 +1769,10 @@ void cMagGameObject::UpdateActiveCamera() {
 
 /* 1002A7E0-1002A802 00022	*/
 void cMagGameObject::RenderActiveCamera() {
+	if (activeCamera != NULL) {
+		activeCamera->OnRender();
+		activeCamera->vtbl_0x4c();
+	}
 }
 
 /* 1002A810-1002A86D 0005D	*/
@@ -1850,7 +1863,14 @@ void cMagGameObject::SetState(CState* param_1) {
 
 /* 1002AEE0-1002AF1E 0003E	*/
 int cMagGameObject::GetAllFaceCount() {
-	return 0;
+	int faceCount = 0;
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		cMagMeshObject* meshObject = (cMagMeshObject*) cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+		if (meshObject != NULL) {
+			faceCount += meshObject->GetFaceCount();
+		}
+	}
+	return faceCount;
 }
 
 /* 1002AF20-1002B27C 0035C	*/
@@ -1859,7 +1879,7 @@ void cMagGameObject::CreateDxFont() {
 
 /* 1002B280-1002B294 00014	*/
 void cMagGameObject::EnableCallHandlerWindowKey(cMagGameObject* param_1) {
-	callHandlerWindowKey = param_1;
+	cMagEngineMgr::getInstance()->gameObject->callHandlerWindowKey = param_1;
 }
 
 /* 1002B2A0-1002B2B4 00014	*/
