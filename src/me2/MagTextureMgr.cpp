@@ -52,7 +52,7 @@ int MagTextureMgr::GetID() {
 }
 
 /* 10086C10-10086CD4 000C4	*/
-uchar MagTextureMgr::ReplaceTexture(char* param_1, char* param_2) {
+IDirect3DTexture8* MagTextureMgr::ReplaceTexture(char* param_1, char* param_2) {
 	return 0;
 }
 

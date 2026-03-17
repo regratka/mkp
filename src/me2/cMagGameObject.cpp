@@ -3,7 +3,6 @@
 #include "CGame.h"
 
 #include "cMagEngineMgr.h"
-#include "MagTextureMgr.h"
 
 #include "cMagSprite.h"
 #include "cMagMeshObject.h"
@@ -1269,7 +1268,7 @@ long cMagGameObject::ScreenGrab(IDirect3DDevice8* param_1, char* param_2) {
 }
 
 /* 10027F50-10028234 002E4	*/
-long cMagGameObject::RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4) {
+HRESULT cMagGameObject::RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4) {
 	IDirect3DSurface8* surface;
 	createFontResult = param_2->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
 	if (createFontResult < D3D_OK) {
@@ -1297,14 +1296,16 @@ long cMagGameObject::RenderTiled(char const* param_1, IDirect3DDevice8* param_2,
 	param_2->GetTransform(D3DTS_PROJECTION, &projectionMatrix);
 	D3DXMATRIX matrix = projectionMatrix;
 	DebugLog("--------------titled 2-1------------");
-	matrix(0,0) *= param_3;
-	matrix(1,1) *= param_3;
+	matrix(0,0) = param_3 * matrix(0,0);
+	matrix(1,1) = param_3 * matrix(1,1);
+
 
 
 	for (int index1 = 0; index1 < param_3; index1++) {
-		matrix(2,0) = param_3 - 1 - (index1+index1);
+		float maxPos = param_3 - 1;
+		matrix(2,0) = maxPos - (12*index1); 
 		for (int index2 = 0; index2 < param_3; index2++) {
-			matrix(2,1) =-(-param_3 - 1 - (index2 + index2));
+			matrix(2,1) = - (maxPos - (index2 + index2));
 			param_2->SetTransform(D3DTS_PROJECTION, &matrix);
 			RenderScene();
 
@@ -1392,6 +1393,7 @@ void cMagGameObject::qsort(int* param_1, int param_2, int param_3) {
 
 /* 10028400-10028D63 00963	*/
 void cMagGameObject::SortObject() {
+
 }
 
 /* 10028D70-10028E2E 000BE	*/
@@ -1461,21 +1463,25 @@ int cMagGameObject::GetWindowWidth() {
 }
 
 /* 10028F00-10029006 00106	*/
-uint* cMagGameObject::GetTextureMgr(uint* param_1) {
-	return 0;
+MagTextureMgr cMagGameObject::GetTextureMgr() {
+	return *MagTextureMgr::getInstance();
 }
 
 /* 10029010-10029031 00021	*/
 void cMagGameObject::AllFiltersTexture() {
+	MagTextureMgr::getInstance()->BeginFilterTexture();
+	MagTextureMgr::getInstance()->BeginAlphaTexture();
+	MagTextureMgr::getInstance()->BeginFilterVertexColorTexture();
 }
 
 /* 10029040-10029058 00018	*/
-uchar cMagGameObject::ReplaceTexture(char* param_1, char* param_2) {
-	return 0;
+IDirect3DTexture8* cMagGameObject::ReplaceTexture(char* param_1, char* param_2) {
+	return MagTextureMgr::getInstance()->ReplaceTexture(param_1, param_2);
 }
 
 /* 10029060-10029073 00013	*/
 void cMagGameObject::DeleteTexture(char* param_1) {
+	MagTextureMgr::getInstance()->DeleteTexture(param_1);
 }
 
 /* 10029080-10029094 00014	*/
@@ -1500,21 +1506,52 @@ void cMagGameObject::SetFOV(float param_1) {
 
 /* 100290D0-10029119 00049	*/
 void cMagGameObject::DrawTextA(int param_1, int param_2, char* param_3) {
+	unkn_c08 = param_1;
+	unkn_c04 = param_2;
+	strcpy(cMagEngineMgr::getInstance()->gameObject->textToDraw, param_3);
 }
 
 /* 10029120-100291CE 000AE	*/
 cMagKernel* cMagGameObject::GetMeshObject(char* param_1) {
-	return 0;
+	char buffer[256];
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+		cMagKernel* object = gameObject->meshObjects[index];
+		strcpy(buffer, object->GetFileMeshName());
+		if (stricmp(buffer, param_1) == 0) {
+			return cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+		}
+	}
+	return NULL;
 }
 
 /* 100291D0-10029228 00058	*/
 cMagMeshObject* cMagGameObject::GetMeshObject(int param_1) {
-	return 0;
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		cMagKernel* object = cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+		if (object->GetObjectID() == param_1) {
+			return (cMagMeshObject*) cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+		}
+	}
+	return NULL;
 }
 
 /* 10029230-100292FE 000CE	*/
-uint cMagGameObject::GetObjectsInRadiusFromClass(float param_1, float param_2, float param_3, float param_4, uchar* param_5) {
-	return 0;
+cMagKernel* cMagGameObject::GetObjectsInRadiusFromClass(float param_1, D3DXVECTOR3 param_2, char* param_3) {
+	D3DXVECTOR3 vector;
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		char* className = cMagEngineMgr::getInstance()->gameObject->meshObjects[index]->GetClassNameA();
+		if (stricmp(className, param_3) == 0) {
+			cMagKernel* object = cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+			vector = object->GetPosition()-param_2;
+			float length = D3DXVec3Length(&vector);
+			if (length <= param_1) {
+				return cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+			}
+			
+		}
+	}
+	return NULL;
 }
 
 /* 10029300-10029550 00250	*/
@@ -1533,30 +1570,57 @@ void cMagGameObject::GetKokoPos(uint param_1, uint param_2, uint param_3) {
 
 /* 100296F0-10029704 00014	*/
 void cMagGameObject::SetVisibilityRange(float param_1) {
+	cMagEngineMgr::getInstance()->gameObject->visibilityRange = param_1;
+
 }
 
 /* 10029710-1002971E 0000E	*/
 float cMagGameObject::GetVisibilityRange() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->visibilityRange;
 }
 
 /* 10029720-10029734 00014	*/
 void cMagGameObject::SetSurfaceVisibilityRange(float param_1) {
+	cMagEngineMgr::getInstance()->gameObject->surfaceVisibilityRange = param_1;
 }
 
 /* 10029740-1002974E 0000E	*/
 float cMagGameObject::GetSurfaceVisibilityRange() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->surfaceVisibilityRange;
 }
 
 /* 10029750-1002975E 0000E	*/
 HWND__* cMagGameObject::GetHandleWindow() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->hWnd;
 }
 
 /* 10029760-100297FD 0009D	*/
 bool cMagGameObject::DestroyObject(cMagKernel* param_1) {
-	return 0;
+	if (DeleteMesh(param_1)) {
+		return true;
+	}
+	if (DeleteBillboard(param_1)) {
+		return true;
+	}
+	if (DeleteCamera(param_1)) {
+		return true;
+	}
+	if (DeleteParticle(param_1)) {
+		return true;
+	}
+	if (DeleteTerrain(param_1)) {
+		return true;
+	}
+	if (DeleteLensFlare(param_1)) {
+		return true;
+	}
+	if (DeleteSun(param_1)) {
+		return true;
+	}
+	if (DeleteSky(param_1)) {
+		return true;
+	}
+	return false;
 }
 
 /* 10029800-10029889 00089	*/

@@ -22,7 +22,7 @@ public:
 	/* 100869A0 */ IDirect3DTexture8* GetTexture(char* param_1);
 	/* 10086B20 */ uchar GetTextureMesh(char* param_1);
 	/* 10086C00 */ int GetID();
-	/* 10086C10 */ uchar ReplaceTexture(char* param_1, char* param_2);
+	/* 10086C10 */ IDirect3DTexture8* ReplaceTexture(char* param_1, char* param_2);
 	/* 10086CE0 */ void DeleteTexture(char* param_1);
 	/* 10086D70 */ bool IsTexture(char* param_1, int* param_2);
 	/* 10086DE0 */ uchar LoadTexture(char* param_1, _D3DXIMAGE_INFO* param_2, int param_3);

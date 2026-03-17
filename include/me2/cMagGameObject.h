@@ -9,6 +9,7 @@
 #include "CollisionManager.h"
 #include "cMagObjectList.h"
 #include "MagGrid.h"
+#include "MagTextureMgr.h"
 #include "CMagInput.h"
 
 typedef long (WINAPIV *renderCallback) ();
@@ -110,7 +111,7 @@ public:
 	/* 10027A40 */ void GpgFrustum(double param_1, double param_2, double param_3, double param_4, double param_5, double param_6);
 	/* 10027AE0 */ void GpgPerspective(double param_1, double param_2, double param_3, double param_4, int param_5);
 	/* 10027DC0 */ long ScreenGrab(IDirect3DDevice8* param_1, char* param_2);
-	/* 10027F50 */ long RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4);
+	/* 10027F50 */ HRESULT RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3, renderCallback param_4);
 	/* 10028240 */ void SetLastRender(cMagMeshObject* param_1);
 	/* 100282F0 */ void swapObject(int param_1, int param_2);
 	/* 10028320 */ void swap(int& param_1, int& param_2);
@@ -126,9 +127,9 @@ public:
 	/* 10028ED0 */ void SetClipFar(float param_1);
 	/* 10028EE0 */ int GetWindowHeight();
 	/* 10028EF0 */ int GetWindowWidth();
-	/* 10028F00 */ uint* GetTextureMgr(uint* param_1);
+	/* 10028F00 */ MagTextureMgr GetTextureMgr();
 	/* 10029010 */ void AllFiltersTexture();
-	/* 10029040 */ uchar ReplaceTexture(char* param_1, char* param_2);
+	/* 10029040 */ IDirect3DTexture8* ReplaceTexture(char* param_1, char* param_2);
 	/* 10029060 */ void DeleteTexture(char* param_1);
 	/* 10029080 */ void ShowGird(bool param_1);
 	/* 100290A0 */ IDirect3DDevice8* GetEngine();
@@ -137,7 +138,7 @@ public:
 	/* 100290D0 */ void DrawTextA(int param_1, int param_2, char* param_3);
 	/* 10029120 */ cMagKernel* GetMeshObject(char* param_1);
 	/* 100291D0 */ cMagMeshObject* GetMeshObject(int param_1);
-	/* 10029230 */ uint GetObjectsInRadiusFromClass(float param_1, float param_2, float param_3, float param_4, uchar* param_5);
+	/* 10029230 */ cMagKernel* GetObjectsInRadiusFromClass(float param_1, D3DXVECTOR3 param_2, char* param_3);
 	/* 10029300 */ uint GetObjectsInRadiusFromClass(float param_1, float param_2, float param_3, float param_4, void* param_5, int param_6);
 	/* 10029550 */ cMagKernel* MagGetObject(char* param_1);
 	/* 100296C0 */ void GetKokoPos(uint param_1, uint param_2, uint param_3);
@@ -248,8 +249,10 @@ private:
 
 	/* 0x8a0 */ D3DLIGHT8 light;
 
-	/* 0x908 */ uchar f_908[0x9dc-0x908];
-
+	/* 0x908 */ uchar f_908[0x9d4-0x908];
+	
+	/* 0x9d4 */ float visibilityRange;
+	/* 0x9d8 */ float surfaceVisibilityRange;
 	/* 0x9dc */ bool showCursor;
 
 	/* 0x9dd */ uchar f_9dd[0x9e0-0x9dd];
@@ -283,14 +286,16 @@ private:
 	/* 0xb28 */ uint backBufferWidth;
 
 	/* 0xb2c */ bool enabledFog;
-	/* 0xb2d */ uchar f_b2d[0xbf8-0xb2d];
+	/* 0xb2d */ char textToDraw[200];
 
 	/* 0xbf8 */ float nearPlane;
 	/* 0xbfc */ float farPlane;
 
 	/* 0xc00 */ bool showFPS;
 	/* 0xc01 */ bool showObjectName;
-	/* 0xc06 */ uchar f_c06[0xcd4-0xc02];
+	/* 0xc04 */ int unkn_c04;
+	/* 0xc08 */ int unkn_c08;
+	/* 0xc0c */ uchar f_c0c[0xcd4-0xc0c];
 
 	/* 0xcd4 */ CGame* gameInstance;
 

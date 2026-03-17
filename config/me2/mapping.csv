@@ -839,7 +839,7 @@
 ?GpgFrustum@cMagGameObject@@QAEXNNNNNN@Z;cMagGameObject::GpgFrustum;0x10027a40;0x9b;__thiscall;;void;cMagGameObject*;double;double;double;double;double;double
 ?GpgPerspective@cMagGameObject@@QAEXNNNNH@Z;cMagGameObject::GpgPerspective;0x10027ae0;0x2de;__thiscall;;void;cMagGameObject*;double;double;double;double;int
 ?ScreenGrab@cMagGameObject@@QAEJPAUIDirect3DDevice8@@PAD@Z;cMagGameObject::ScreenGrab;0x10027dc0;0x186;__thiscall;;long;cMagGameObject*;uchar;char*
-?RenderTiled@cMagGameObject@@QAEJPBDPAUIDirect3DDevice8@@HP6AJXZ@Z;cMagGameObject::RenderTiled;0x10027f50;0x2e4;__thiscall;;long;cMagGameObject*;char*;IDirect3DDevice8*;int;_func_long*
+?RenderTiled@cMagGameObject@@QAEJPBDPAUIDirect3DDevice8@@HP6AJXZ@Z;cMagGameObject::RenderTiled;0x10027f50;0x2e4;__thiscall;;HRESULT;cMagGameObject*;char*;IDirect3DDevice8*;int;_func_long*
 ?SetLastRender@cMagGameObject@@QAEXPAVcMagMeshObject@@@Z;cMagGameObject::SetLastRender;0x10028240;0xad;__thiscall;;void;cMagGameObject*;cMagMeshObject*
 ?swapObject@cMagGameObject@@QAEXHH@Z;cMagGameObject::swapObject;0x100282f0;0x29;__thiscall;;void;cMagGameObject*;int;int
 ?swap@cMagGameObject@@QAEXAAH0@Z;cMagGameObject::swap;0x10028320;0x15;__thiscall;;void;cMagGameObject*;int*;int*
@@ -855,9 +855,9 @@
 ?SetClipFar@cMagGameObject@@QAEXM@Z;cMagGameObject::SetClipFar;0x10028ed0;0xd;__thiscall;;void;cMagGameObject*;float
 ?GetWindowHeight@cMagGameObject@@QAEHXZ;cMagGameObject::GetWindowHeight;0x10028ee0;0xe;__thiscall;;int;cMagGameObject*
 ?GetWindowWidth@cMagGameObject@@QAEHXZ;cMagGameObject::GetWindowWidth;0x10028ef0;0xe;__thiscall;;int;cMagGameObject*
-?GetTextureMgr@cMagGameObject@@QAE?AVMagTextureMgr@@XZ;cMagGameObject::GetTextureMgr;0x10028f00;0x106;__thiscall;;uint*;cMagGameObject*;uint*
+?GetTextureMgr@cMagGameObject@@QAE?AVMagTextureMgr@@XZ;cMagGameObject::GetTextureMgr;0x10028f00;0x106;__thiscall;;MagTextureMgr;cMagGameObject*;
 ?AllFiltersTexture@cMagGameObject@@QAEXXZ;cMagGameObject::AllFiltersTexture;0x10029010;0x21;__thiscall;;void;cMagGameObject*
-?ReplaceTexture@cMagGameObject@@QAEPAUIDirect3DTexture8@@PAD0@Z;cMagGameObject::ReplaceTexture;0x10029040;0x18;__thiscall;;uchar;cMagGameObject*;char*;char*
+?ReplaceTexture@cMagGameObject@@QAEPAUIDirect3DTexture8@@PAD0@Z;cMagGameObject::ReplaceTexture;0x10029040;0x18;__thiscall;;IDirect3DDevice8*;cMagGameObject*;char*;char*
 ?DeleteTexture@cMagGameObject@@QAEXPAD@Z;cMagGameObject::DeleteTexture;0x10029060;0x13;__thiscall;;void;cMagGameObject*;char*
 ?ShowGird@cMagGameObject@@QAEX_N@Z;cMagGameObject::ShowGird;0x10029080;0x14;__thiscall;;void;cMagGameObject*;bool
 ?GetEngine@cMagGameObject@@QAEPAUIDirect3DDevice8@@XZ;cMagGameObject::GetEngine;0x100290a0;0x9;__thiscall;;IDirect3DDevice8*;cMagGameObject*
@@ -866,7 +866,7 @@
 ?DrawTextA@cMagGameObject@@QAEXHHPAD@Z;cMagGameObject::DrawTextA;0x100290d0;0x49;__thiscall;;void;cMagGameObject*;int;int;char*
 ?GetMeshObject@cMagGameObject@@QAEPAVcMagKernel@@PAD@Z;cMagGameObject::GetMeshObject;0x10029120;0xae;__thiscall;;cMagKernel*;cMagGameObject*;char*
 ?GetMeshObject@cMagGameObject@@QAEPAVcMagMeshObject@@H@Z;cMagGameObject::GetMeshObject;0x100291d0;0x58;__thiscall;;cMagMeshObject*;cMagGameObject*;int
-?GetObjectsInRadiusFromClass@cMagGameObject@@QAEPAVcMagKernel@@MUD3DXVECTOR3@@PAD@Z;cMagGameObject::GetObjectsInRadiusFromClass;0x10029230;0xce;__thiscall;;uint;uint;float;float;float;float;uchar*
+?GetObjectsInRadiusFromClass@cMagGameObject@@QAEPAVcMagKernel@@MUD3DXVECTOR3@@PAD@Z;cMagGameObject::GetObjectsInRadiusFromClass;0x10029230;0xce;__thiscall;;cMagKernel*;cMagGameObject*;float;D3DXVECTOR3;char*
 ?GetObjectsInRadiusFromClass@cMagGameObject@@QAE_NMUD3DXVECTOR3@@PADAAV?$vector@PAVcMagKernel@@V?$allocator@PAVcMagKernel@@@std@@@std@@@Z;cMagGameObject::GetObjectsInRadiusFromClass;0x10029300;0x250;__thiscall;;uint;uint;float;float;float;float;void*;int
 ?MagGetObject@cMagGameObject@@QAEPAVcMagKernel@@PAD@Z;cMagGameObject::MagGetObject;0x10029550;0x161;__thiscall;;cMagKernel*;cMagGameObject*;char*
 ?GetKokoPos@cMagGameObject@@QAEXUD3DXVECTOR3@@@Z;cMagGameObject::GetKokoPos;0x100296c0;0x24;__thiscall;;void;cMagGameObject*;uint;uint;uint
@@ -2743,7 +2743,7 @@
 ?GetTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z;MagTextureMgr::GetTexture;0x100869a0;0x173;__thiscall;;IDirect3DTexture8*;MagTextureMgr*;char*
 ?GetTextureMesh@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z;MagTextureMgr::GetTextureMesh;0x10086b20;0xde;__thiscall;;uchar;MagTextureMgr*;char*
 ?GetID@MagTextureMgr@@QAEHXZ;MagTextureMgr::GetID;0x10086c00;0x4;__thiscall;;int;MagTextureMgr*
-?ReplaceTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD0@Z;MagTextureMgr::ReplaceTexture;0x10086c10;0xc4;__thiscall;;uchar;MagTextureMgr*;char*;char*
+?ReplaceTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD0@Z;MagTextureMgr::ReplaceTexture;0x10086c10;0xc4;__thiscall;;IDirect3DTexture8*;MagTextureMgr*;char*;char*
 ?DeleteTexture@MagTextureMgr@@QAEXPAD@Z;MagTextureMgr::DeleteTexture;0x10086ce0;0x82;__thiscall;;void;MagTextureMgr*;char*
 ?IsTexture@MagTextureMgr@@QAE_NPADAAH@Z;MagTextureMgr::IsTexture;0x10086d70;0x6b;__thiscall;;bool;MagTextureMgr*;char*;int*
 ?LoadTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PADAAU_D3DXIMAGE_INFO@@H@Z;MagTextureMgr::LoadTexture;0x10086de0;0x4b0;__thiscall;;uchar;MagTextureMgr*;char*;_D3DXIMAGE_INFO*;int
