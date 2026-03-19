@@ -49,3 +49,5 @@ changes.json
 objdiff.json
 build.ninja
 report.json
+
+progress/

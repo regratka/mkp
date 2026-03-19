@@ -1858,16 +1858,38 @@ void cMagGameObject::ExitGame() {
 
 /* 10029CB0-10029D60 000B0	*/
 float cMagGameObject::GetDistanceTo(char* param_1, D3DXVECTOR3 param_2) {
-	return 0;
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		char* objectName = cMagEngineMgr::getInstance()->gameObject->meshObjects[index]->GetObjectName();
+		if (stricmp(objectName, param_1) == 0) {
+			cMagKernel* object = cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+			D3DXVECTOR3 vector = object->GetPosition() - param_2;
+			return D3DXVec3Length(&vector);
+		}
+	}
+	return 0.0f;
 }
 
 /* 10029D60-10029DB6 00056	*/
-float cMagGameObject::GetDistanceTo(D3DXVECTOR3 param_1) {
-	return 0;
+float cMagGameObject::GetDistanceTo(cMagGameObject* param_1, D3DXVECTOR3 param_2) {
+	if (param_1 == NULL) {
+		return 0.0f;
+	}
+
+	D3DXVECTOR3 diff = param_2 - param_1->GetPosition();
+	return D3DXVec3Length(&diff);
 }
 
 /* 10029DC0-10029FF2 00232	*/
-void cMagGameObject::GetDistanceTo(char* param_1, D3DXVECTOR3 param_2, std::vector<float>* param_3) {
+void cMagGameObject::GetDistanceTo(char* param_1, D3DXVECTOR3 param_2, std::vector<float>& param_3) {
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		char* className = cMagEngineMgr::getInstance()->gameObject->meshObjects[index]->GetClassNameA();
+		if (stricmp(className, param_1) == 0) {
+			cMagKernel* object = cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+			D3DXVECTOR3 pos = object->GetPosition();
+			D3DXVECTOR3 diff = pos - param_2;;
+			param_3.push_back(D3DXVec3Length(&diff));
+		}
+	}
 }
 
 /* 1002A000-1002A393 00393	*/

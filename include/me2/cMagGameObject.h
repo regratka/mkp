@@ -168,8 +168,8 @@ public:
 	/* 10029C70 */ void EnableFog(bool param_1);
 	/* 10029CA0 */ void ExitGame();
 	/* 10029CB0 */ float GetDistanceTo(char* param_1, D3DXVECTOR3 param_2);
-	/* 10029D60 */ float GetDistanceTo(D3DXVECTOR3 param_1);
-	/* 10029DC0 */ void GetDistanceTo(char* param_1, D3DXVECTOR3 param_2, std::vector<float>* param_3);
+	/* 10029D60 */ float GetDistanceTo(cMagGameObject* param_1, D3DXVECTOR3 param_2);
+	/* 10029DC0 */ void GetDistanceTo(char* param_1, D3DXVECTOR3 param_2, std::vector<float>& param_3);
 	/* 1002A000 */ long RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3);
 	/* 1002A3A0 */ long ScaleRender();
 	/* 1002A6D0 */ void AddLight(_LIGHT* param_1);

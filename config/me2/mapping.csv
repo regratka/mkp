@@ -867,9 +867,9 @@
 ?GetMeshObject@cMagGameObject@@QAEPAVcMagKernel@@PAD@Z;cMagGameObject::GetMeshObject;0x10029120;0xae;__thiscall;;cMagKernel*;cMagGameObject*;char*
 ?GetMeshObject@cMagGameObject@@QAEPAVcMagMeshObject@@H@Z;cMagGameObject::GetMeshObject;0x100291d0;0x58;__thiscall;;cMagMeshObject*;cMagGameObject*;int
 ?GetObjectsInRadiusFromClass@cMagGameObject@@QAEPAVcMagKernel@@MUD3DXVECTOR3@@PAD@Z;cMagGameObject::GetObjectsInRadiusFromClass;0x10029230;0xce;__thiscall;;cMagKernel*;cMagGameObject*;float;D3DXVECTOR3;char*
-?GetObjectsInRadiusFromClass@cMagGameObject@@QAE_NMUD3DXVECTOR3@@PADAAV?$vector@PAVcMagKernel@@V?$allocator@PAVcMagKernel@@@std@@@std@@@Z;cMagGameObject::GetObjectsInRadiusFromClass;0x10029300;0x250;__thiscall;;bool;cMagGameObject*;float;D3DXVECTOR3;char*;float;void*;std::vector<cMagKernel*>*
+?GetObjectsInRadiusFromClass@cMagGameObject@@QAE_NMUD3DXVECTOR3@@PADAAV?$vector@PAVcMagKernel@@V?$allocator@PAVcMagKernel@@@std@@@std@@@Z;cMagGameObject::GetObjectsInRadiusFromClass;0x10029300;0x250;__thiscall;;bool;cMagGameObject*;float;D3DXVECTOR3;char*;float;void*;std::vector<cMagKernel*>&
 ?MagGetObject@cMagGameObject@@QAEPAVcMagKernel@@PAD@Z;cMagGameObject::MagGetObject;0x10029550;0x161;__thiscall;;cMagKernel*;cMagGameObject*;char*
-?GetKokoPos@cMagGameObject@@QAEXUD3DXVECTOR3@@@Z;cMagGameObject::GetKokoPos;0x100296c0;0x24;__thiscall;;void;cMagGameObject*;D3DXVECTOR3
+?GetKokoPos@cMagGameObject@@QAEXUD3DXVECTOR3@@@Z;cMagGameObject::GetKokoPos;0x100296c0;0x24;__thiscall;;void;cMagGameObject*;cMagGameObject*;D3DXVECTOR3
 ?SetVisibilityRange@cMagGameObject@@QAEXM@Z;cMagGameObject::SetVisibilityRange;0x100296f0;0x14;__thiscall;;void;cMagGameObject*;float
 ?GetVisibilityRange@cMagGameObject@@QAEMXZ;cMagGameObject::GetVisibilityRange;0x10029710;0xe;__thiscall;;float;cMagGameObject*
 ?SetSurfaceVisibilityRange@cMagGameObject@@QAEXM@Z;cMagGameObject::SetSurfaceVisibilityRange;0x10029720;0x14;__thiscall;;void;cMagGameObject*;float
@@ -897,7 +897,7 @@
 ?ExitGame@cMagGameObject@@QAEXXZ;cMagGameObject::ExitGame;0x10029ca0;0x9;__thiscall;;void;cMagGameObject*
 ?GetDistanceTo@cMagGameObject@@QAEMPADUD3DXVECTOR3@@@Z;cMagGameObject::GetDistanceTo;0x10029cb0;0xb0;__thiscall;;float;cMagGameObject*;char*;D3DXVECTOR3
 ?GetDistanceTo@cMagGameObject@@QAEMPAV1@UD3DXVECTOR3@@@Z;cMagGameObject::GetDistanceTo;0x10029d60;0x56;__thiscall;;float;cMagGameObject*;D3DXVECTOR3
-?GetDistanceTo@cMagGameObject@@QAEXPADUD3DXVECTOR3@@AAV?$vector@MV?$allocator@M@std@@@std@@@Z;cMagGameObject::GetDistanceTo;0x10029dc0;0x232;__thiscall;;void;cMagGameObject*;char*;D3DXVECTOR3;std::vector<float>
+?GetDistanceTo@cMagGameObject@@QAEXPADUD3DXVECTOR3@@AAV?$vector@MV?$allocator@M@std@@@std@@@Z;cMagGameObject::GetDistanceTo;0x10029dc0;0x232;__thiscall;;void;cMagGameObject*;char*;D3DXVECTOR3;std::vector<float>&
 ?RenderTiled@cMagGameObject@@QAEJPBDPAUIDirect3DDevice8@@H@Z;cMagGameObject::RenderTiled;0x1002a000;0x393;__thiscall;;long;cMagGameObject*;char*;IDirect3DDevice8*;int
 ?ScaleRender@cMagGameObject@@QAEJXZ;cMagGameObject::ScaleRender;0x1002a3a0;0x325;__thiscall;;long;cMagGameObject*
 ?AddLight@cMagGameObject@@QAEXPAU_LIGHT@@@Z;cMagGameObject::AddLight;0x1002a6d0;0x14;__thiscall;;void;cMagGameObject*;_LIGHT*
