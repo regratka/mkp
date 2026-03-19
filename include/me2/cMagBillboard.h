@@ -3,9 +3,9 @@
 
 #include <globals.h>
 
-#include "cMagGameObject.h"
+#include "cMagUtility.h"
 
-class cMagBillboard {
+class cMagBillboard : public cMagUtility {
 public:
 	/* 1000FF70 */ bool GetStatusRemoveObject();
 	/* 1000FF80 */ void RemoveObject(bool param_1);

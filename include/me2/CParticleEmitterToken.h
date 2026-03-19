@@ -3,7 +3,9 @@
 
 #include <globals.h>
 
-class CParticleEmitterToken {
+#include "cMagUtility.h"
+
+class CParticleEmitterToken : public cMagUtility {
 public:
 	/* 1001B450 */ bool IsEmitRate();
 	/* 1001B510 */ bool IsPosition();

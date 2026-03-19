@@ -3,7 +3,9 @@
 
 #include <globals.h>
 
-class cMagCamera {
+#include "cMagUtility.h"
+
+class cMagCamera : public cMagUtility {
 public:
 	/* 10021350 */ void SetPosition(uint param_1, uint param_2, uint param_3);
 	/* 10021370 */ void SetView(uint param_1, uint param_2, uint param_3);

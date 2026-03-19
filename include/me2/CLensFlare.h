@@ -7,7 +7,7 @@
 #include "cMagGameObject.h"
 #include "CLensFlareSpot.h"
 
-class CLensFlare {
+class CLensFlare : public CLensFlareSpot {
 public:
 	/* 10022600 */ CMinMax<float> GetIntensity(uint* param_1);
 	/* 10022630 */ void SetIntensity(CMinMax<float>* param_1);

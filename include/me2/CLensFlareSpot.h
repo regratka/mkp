@@ -3,10 +3,12 @@
 
 #include <globals.h>
 
+#include "cMagUtility.h"
+
 #include "d3d8.h"
 #include "d3dx8math.h"
 
-class CLensFlareSpot {
+class CLensFlareSpot : public cMagUtility {
 public:
 	/* 100222A0 */ void SetTexture(IDirect3DTexture8* param_1);
 	/* 100222B0 */ uchar GetTexture();

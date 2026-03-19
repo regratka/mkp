@@ -1,4 +1,5 @@
 #include "cMagGameObject.h"
+#include "algorithm"
 
 #include "CGame.h"
 
@@ -9,7 +10,13 @@
 #include "cMagMeshObject.h"
 
 #include "CMagFog.h"
-#include "algorithm"
+#include "cMagBillboard.h"
+#include "cMagCamera.h"
+#include "CParticleEmitter.h"
+#include "MagTerrain.h"
+#include "CLensFlare.h"
+#include "cMagSun.h"
+#include "cMagSkyBox.h"
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
@@ -1556,17 +1563,58 @@ cMagKernel* cMagGameObject::GetObjectsInRadiusFromClass(float param_1, D3DXVECTO
 }
 
 /* 10029300-10029550 00250	*/
-uint cMagGameObject::GetObjectsInRadiusFromClass(float param_1, float param_2, float param_3, float param_4, void* param_5, int param_6) {
-	return 0;
+bool cMagGameObject::GetObjectsInRadiusFromClass(float param_1, D3DXVECTOR3 param_2, char* param_3, std::vector<cMagKernel*>& param_4) {
+	D3DXVECTOR3 vector;
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		char* className = cMagEngineMgr::getInstance()->gameObject->meshObjects[index]->GetClassNameA();
+		if (stricmp(className, param_3) == 0) {
+			cMagKernel* object = cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+			vector = object->GetPosition()-param_2;
+			float length = D3DXVec3Length(&vector);
+			if (length <= param_1) {
+				param_4.push_back(cMagEngineMgr::getInstance()->gameObject->meshObjects[index]);
+			}
+		}
+	}
+	return true;
 }
 
 /* 10029550-100296B1 00161	*/
 cMagKernel* cMagGameObject::MagGetObject(char* param_1) {
-	return 0;
+	for (int index = 0; index < cMagEngineMgr::getInstance()->gameObject->meshObjects.size(); index++) {
+		char* objectName = cMagEngineMgr::getInstance()->gameObject->meshObjects[index]->GetObjectName();
+		if (stricmp(objectName, param_1) == 0) {
+			return cMagEngineMgr::getInstance()->gameObject->meshObjects[index];
+		}
+	}
+
+	for (index = 0; index < cMagEngineMgr::getInstance()->gameObject->particleObjects.size(); index++) {
+		char* objectName = cMagEngineMgr::getInstance()->gameObject->particleObjects[index]->GetObjectName();
+		if (stricmp(objectName, param_1) == 0) {
+			return cMagEngineMgr::getInstance()->gameObject->particleObjects[index];
+		}
+	}
+
+	for (index = 0; index < cMagEngineMgr::getInstance()->gameObject->spriteObjects.size(); index++) {
+		char* objectName = cMagEngineMgr::getInstance()->gameObject->spriteObjects[index]->GetObjectName();
+		if (stricmp(objectName, param_1) == 0) {
+			return cMagEngineMgr::getInstance()->gameObject->spriteObjects[index];
+		}
+	}
+
+	for (index = 0; index < cMagEngineMgr::getInstance()->gameObject->splineCameras.size(); index++) {
+		char* objectName = cMagEngineMgr::getInstance()->gameObject->splineCameras[index]->GetObjectName();
+		if (stricmp(objectName, param_1) == 0) {
+			return cMagEngineMgr::getInstance()->gameObject->splineCameras[index];
+		}
+	}
+
+	return NULL;
 }
 
 /* 100296C0-100296E4 00024	*/
-void cMagGameObject::GetKokoPos(uint param_1, uint param_2, uint param_3) {
+void cMagGameObject::GetKokoPos(D3DXVECTOR3 param_1) {
+	cMagEngineMgr::getInstance()->gameObject->kokoPos = param_1;
 }
 
 /* 100296F0-10029704 00014	*/
@@ -1626,42 +1674,122 @@ bool cMagGameObject::DestroyObject(cMagKernel* param_1) {
 
 /* 10029800-10029889 00089	*/
 bool cMagGameObject::DeleteMesh(cMagKernel* param_1) {
-	return 0;
+	cMagGameObject* mesh = dynamic_cast<cMagGameObject*>(param_1);
+	if (mesh == NULL) {
+		return false;
+	}
+	
+	for (std::vector<cMagKernel*>::iterator it = meshObjects.begin(); 
+			it != meshObjects.end(); it++) {
+		if (*it == param_1) {
+			meshObjects.erase(it);
+			delete mesh;
+			return true;
+		}
+	}
+	return false;
 }
 
 /* 10029890-10029919 00089	*/
 bool cMagGameObject::DeleteBillboard(cMagKernel* param_1) {
-	return 0;
+	cMagBillboard* billboard = dynamic_cast<cMagBillboard*>(param_1);
+	if (billboard == NULL) {
+		return false;
+	}
+	
+	for (std::vector<cMagKernel*>::iterator it = billboardObjects.begin(); 
+			it != billboardObjects.end(); it++) {
+		if (*it == param_1) {
+			billboardObjects.erase(it);
+			delete billboard;
+			return true;
+		}
+	}
+	return false;
 }
 
 /* 10029920-100299A9 00089	*/
 bool cMagGameObject::DeleteCamera(cMagKernel* param_1) {
-	return 0;
+	cMagCamera* camera = dynamic_cast<cMagCamera*>(param_1);
+	if (camera == NULL) {
+		return false;
+	}
+	
+	for (std::vector<cMagKernel*>::iterator it = cameraObjects.begin(); 
+			it != cameraObjects.end(); it++) {
+		if (*it == param_1) {
+			cameraObjects.erase(it);
+			delete camera;
+			return true;
+		}
+	}
+	return false;
 }
 
 /* 100299B0-10029A39 00089	*/
 bool cMagGameObject::DeleteParticle(cMagKernel* param_1) {
-	return 0;
+	CParticleEmitter* particle = dynamic_cast<CParticleEmitter*>(param_1);
+	if (particle == NULL) {
+		return false;
+	}
+	
+	for (std::vector<cMagKernel*>::iterator it = particleObjects.begin(); 
+			it != particleObjects.end(); it++) {
+		if (*it == param_1) {
+			particleObjects.erase(it);
+			delete particle;
+			return true;
+		}
+	}
+	return false;
 }
 
 /* 10029A40-10029A84 00044	*/
 bool cMagGameObject::DeleteTerrain(cMagKernel* param_1) {
-	return 0;
+	MagTerrain* terrain = dynamic_cast<MagTerrain*>(param_1);
+	if (terrain == NULL) {
+		return false;
+	}
+
+	delete terrain;
+	terrainObject = NULL;
+	return true;
 }
 
 /* 10029A90-10029AD4 00044	*/
 bool cMagGameObject::DeleteLensFlare(cMagKernel* param_1) {
-	return 0;
+	CLensFlare* lensFlare = dynamic_cast<CLensFlare*>(param_1);
+	if (lensFlare == NULL) {
+		return false;
+	}
+
+	delete lensFlare;
+	this->lensFlare = NULL;
+	return true;
 }
 
 /* 10029AE0-10029B24 00044	*/
 bool cMagGameObject::DeleteSun(cMagKernel* param_1) {
-	return 0;
+	cMagSun* sun = dynamic_cast<cMagSun*>(param_1);
+	if (sun == NULL) {
+		return false;
+	}
+
+	delete sun;
+	sunObject = NULL;
+	return true;
 }
 
 /* 10029B30-10029B74 00044	*/
 bool cMagGameObject::DeleteSky(cMagKernel* param_1) {
-	return 0;
+	cMagSkyBox* sky = dynamic_cast<cMagSkyBox*>(param_1);
+	if (sky == NULL) {
+		return false;
+	}
+
+	delete sky;
+	skyBoxObject = NULL;
+	return true;
 }
 
 /* 10029B80-10029B8E 0000E	*/

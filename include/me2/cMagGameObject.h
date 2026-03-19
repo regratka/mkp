@@ -139,9 +139,9 @@ public:
 	/* 10029120 */ cMagKernel* GetMeshObject(char* param_1);
 	/* 100291D0 */ cMagMeshObject* GetMeshObject(int param_1);
 	/* 10029230 */ cMagKernel* GetObjectsInRadiusFromClass(float param_1, D3DXVECTOR3 param_2, char* param_3);
-	/* 10029300 */ uint GetObjectsInRadiusFromClass(float param_1, float param_2, float param_3, float param_4, void* param_5, int param_6);
+	/* 10029300 */ bool GetObjectsInRadiusFromClass(float param_1, D3DXVECTOR3 param_2, char* param_3, std::vector<cMagKernel*>& param_4);
 	/* 10029550 */ cMagKernel* MagGetObject(char* param_1);
-	/* 100296C0 */ void GetKokoPos(uint param_1, uint param_2, uint param_3);
+	/* 100296C0 */ void GetKokoPos(D3DXVECTOR3 param_1);
 	/* 100296F0 */ void SetVisibilityRange(float param_1);
 	/* 10029710 */ float GetVisibilityRange();
 	/* 10029720 */ void SetSurfaceVisibilityRange(float param_1);
@@ -249,8 +249,9 @@ private:
 
 	/* 0x8a0 */ D3DLIGHT8 light;
 
-	/* 0x908 */ uchar f_908[0x9d4-0x908];
+	/* 0x908 */ uchar f_908[0x9c8-0x908];
 	
+	/* 0x9c8 */ D3DXVECTOR3 kokoPos;
 	/* 0x9d4 */ float visibilityRange;
 	/* 0x9d8 */ float surfaceVisibilityRange;
 	/* 0x9dc */ bool showCursor;

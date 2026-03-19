@@ -3,7 +3,9 @@
 
 #include <globals.h>
 
-class MagnumMesh {
+#include "cMagUtility.h"
+
+class MagnumMesh : public cMagUtility {
 public:
 	/* 1000DA50 */ int GetNumVerts();
 	/* 1000DA60 */ int GetNumFaces();

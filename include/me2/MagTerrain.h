@@ -6,7 +6,9 @@
 
 #include "pgImage.h"
 
-class MagTerrain {
+#include "MagnumMesh.h"
+
+class MagTerrain : public MagnumMesh {
 public:
 	/* 1000F820 */ float GetHeightMapSizeX();
 	/* 1000F830 */ float GetHeightMapSizeY();

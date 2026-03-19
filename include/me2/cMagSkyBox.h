@@ -3,8 +3,9 @@
 
 #include <globals.h>
 #include <d3dx8math.h>
+#include "cMagMeshObject.h"
 
-class cMagSkyBox {
+class cMagSkyBox : public cMagMeshObject{
 public:
 	/* 100216C0 */ cMagSkyBox(cMagSkyBox* param_1);
 	/* 100218D0 */ cMagSkyBox* operator=(cMagSkyBox* param_1);

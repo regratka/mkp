@@ -2,10 +2,11 @@
 #define C_MAG_SUN
 
 #include <globals.h>
-
 #include <d3dx8math.h>
 
-class cMagSun {
+#include "cMagUtility.h"
+
+class cMagSun : public cMagUtility {
 public:
 	/* 10021C20 */ void SetScale(uint param_1, uint param_2);
 	/* 10021C40 */ D3DXVECTOR2 GetScale(uint* param_1);

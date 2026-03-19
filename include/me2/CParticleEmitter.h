@@ -15,7 +15,9 @@ struct TIMER_COMMAND {
 	
 };
 
-class CParticleEmitter {
+
+
+class CParticleEmitter : public CParticleEmitterToken{
 public:
 	/* 10020570 */ void Pause();
 	/* 10020580 */ void Stop();
