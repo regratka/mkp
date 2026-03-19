@@ -1794,47 +1794,61 @@ bool cMagGameObject::DeleteSky(cMagKernel* param_1) {
 
 /* 10029B80-10029B8E 0000E	*/
 MagTerrain* cMagGameObject::GetTerrain() {
-	return 0;
+	return (MagTerrain*) cMagEngineMgr::getInstance()->gameObject->terrainObject;
 }
 
 /* 10029B90-10029B9E 0000E	*/
 CLensFlare* cMagGameObject::GetLensFlare() {
-	return 0;
+	return (CLensFlare*) cMagEngineMgr::getInstance()->gameObject->lensFlare;
 }
 
 /* 10029BA0-10029BAE 0000E	*/
 cMagSun* cMagGameObject::GetSun() {
-	return 0;
+	return (cMagSun*) cMagEngineMgr::getInstance()->gameObject->sunObject;
 }
 
 /* 10029BB0-10029BBE 0000E	*/
 cMagSkyBox* cMagGameObject::GetSky() {
-	return 0;
+	return (cMagSkyBox*) cMagEngineMgr::getInstance()->gameObject->skyBoxObject;
 }
 
 /* 10029BC0-10029BCE 0000E	*/
 cMagFog* cMagGameObject::GetFog() {
-	return 0;
+	return (cMagFog*) cMagEngineMgr::getInstance()->gameObject->fogObject;
 }
 
 /* 10029BD0-10029BDB 0000B	*/
 void cMagGameObject::ClearTextures() {
+	MagTextureMgr::getInstance()->Clear();
 }
 
 /* 10029BE0-10029C01 00021	*/
 void cMagGameObject::EnableSkyRendering(bool param_1) {
+	if (GetSky() != NULL) {
+		GetSky()->EnableRendering(param_1);
+	}
 }
 
 /* 10029C10-10029C33 00023	*/
 void cMagGameObject::EnableSunRendering(bool param_1) {
+	if (GetSun() != NULL) {
+		GetSun()->EnableRendering(param_1);
+	}
 }
 
-/* 10029C40-10029C6C 0002C	*/
+/* -10029C6C 0002C	*/
 void cMagGameObject::EnableLensFlareRendering(bool param_1) {
+	if (cMagEngineMgr::getInstance()->gameObject->GetLensFlare() != NULL) {
+		cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+		gameObject->GetLensFlare()->EnableRendering(param_1);
+	}
 }
 
 /* 10029C70-10029C95 00025	*/
 void cMagGameObject::EnableFog(bool param_1) {
+	if (cMagEngineMgr::getInstance()->gameObject->enabledFog) {
+		cMagEngineMgr::getInstance()->gameObject->GetFog()->Enable(param_1);
+	}
 }
 
 /* 10029CA0-10029CA9 00009	*/

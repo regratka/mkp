@@ -5,7 +5,7 @@
 
 #include "cMagUtility.h"
 
-class cMagMeshObject : public cMagUtility {
+class __declspec(dllexport) cMagMeshObject : public cMagUtility {
 public:
 	/* 10007A10 */ char* GetFileMeshName();
 	/* 10007A20 */ bool GetStatusRemoveObject();
@@ -13,7 +13,12 @@ public:
 	/* 10007A40 */ uchar GetWorldMat(uint* param_1);
 	/* 10007A60 */ void ShowWireframe(bool param_1);
 	/* 10007A70 */ void EnableFrustum(bool param_1);
-	/* 10007A80 */ void EnableRendering(bool param_1);
+
+	/* 10007A80-10007A8D 0000D	*/
+	void EnableRendering(bool param_1) {
+		rendering = param_1;
+	}
+	
 	/* 10007A90 */ void EnablePortalRendering(bool param_1);
 	/* 10007AA0 */ cMagMeshObject(cMagMeshObject* param_1);
 	/* 10008D40 */ cMagMeshObject* operator=(cMagMeshObject* param_1);
@@ -280,9 +285,11 @@ public:
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
 
 public:
-	/* 0xd4c  */ uchar f_d4c[0x133e - 0xd4c];
+	/* 0xd4c */ uchar f_d4c[0x133e - 0xd4c];
 	/* 0x133e */ bool unk_113e;
-	/* 0x133f */ uchar f_133f[0x2658 - 0x133f];
+	/* 0x133f */ uchar f_133f[0x16a0 - 0x133f];
+	/* 0x16a0 */ bool rendering;
+	/* 0x16a1 */ uchar f_16a1[0x2658 - 0x16a1];
 };
 
 STATIC_ASSERT(sizeof(cMagMeshObject) == 0x2658);

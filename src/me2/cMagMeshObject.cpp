@@ -27,10 +27,6 @@ void cMagMeshObject::ShowWireframe(bool param_1) {
 void cMagMeshObject::EnableFrustum(bool param_1) {
 }
 
-/* 10007A80-10007A8D 0000D	*/
-void cMagMeshObject::EnableRendering(bool param_1) {
-}
-
 /* 10007A90-10007A9D 0000D	*/
 void cMagMeshObject::EnablePortalRendering(bool param_1) {
 }
