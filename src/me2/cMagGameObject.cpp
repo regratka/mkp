@@ -17,6 +17,8 @@
 #include "CLensFlare.h"
 #include "cMagSun.h"
 #include "cMagSkyBox.h"
+#include "cMagMeshMgr.h"
+
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
@@ -956,7 +958,7 @@ void cMagGameObject::CallAllHandler(uchar* param_1, float param_2, float param_3
 
 /* 10027020-1002732C 0030C	*/
 void cMagGameObject::CreateObject(cMagKernel* param_1) {
-	cMagKernel* object;
+	cMagKernel* object = param_1;
 	object->OnActivate();
 	FileLog("CreateObject: %s", object->GetObjectName());
 	if (stricmp(object->GetClassNameA(), "cMagParticleSystem") == 0) {
@@ -1234,7 +1236,7 @@ long cMagGameObject::ScreenGrab(IDirect3DDevice8* param_1, char* param_2) {
 	GetLocalTime(&systemTime);
 
 	char buffer[256];
-	sprintf(buffer, "data\\screenshots\\screenshot%d%d%d%d.bmp", systemTime.wDay, systemTime.wHour, systemTime.wMinute, systemTime.wSecond);
+	sprintf(buffer, "data\\screenshots\\Tiled%d%d%d%d.bmp", systemTime.wDay, systemTime.wHour, systemTime.wMinute, systemTime.wSecond);
 	IDirect3DSurface8* surface;
 	HRESULT result = param_1->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
 	if (result < D3D_OK) {
@@ -1308,10 +1310,9 @@ HRESULT cMagGameObject::RenderTiled(char const* param_1, IDirect3DDevice8* param
 	matrix(1,1) = param_3 * matrix(1,1);
 
 
-
 	for (int index1 = 0; index1 < param_3; index1++) {
 		float maxPos = param_3 - 1;
-		matrix(2,0) = maxPos - (12*index1); 
+		matrix(2,0) = maxPos - (2*index1); 
 		for (int index2 = 0; index2 < param_3; index2++) {
 			matrix(2,1) = - (maxPos - (index2 + index2));
 			param_2->SetTransform(D3DTS_PROJECTION, &matrix);
@@ -1893,13 +1894,169 @@ void cMagGameObject::GetDistanceTo(char* param_1, D3DXVECTOR3 param_2, std::vect
 }
 
 /* 1002A000-1002A393 00393	*/
-long cMagGameObject::RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3) {
-	return 0;
+HRESULT cMagGameObject::RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3) {
+	SYSTEMTIME systemTime;
+	GetLocalTime(&systemTime);
+	char buffer[256];
+	sprintf(buffer, "data\\screenshots\\Tiled%d%d%d%d.bmp", systemTime.wDay, systemTime.wHour, systemTime.wMinute, systemTime.wSecond);
+	FILE* tiledFile = fopen("Tiled.txt", "r");
+
+	if (tiledFile != NULL) {
+		char buffor[8];
+		fgets(buffor, 9, tiledFile);
+		param_3 = atoi(buffor);
+		fclose(tiledFile);
+	}
+
+	IDirect3DSurface8* surface;
+	HRESULT result = param_2->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
+	if (result < D3D_OK) {
+		return result;
+	}
+	D3DSURFACE_DESC surface_Desc;
+	result = surface->GetDesc(&surface_Desc);
+	surface->Release();
+	if (result < D3D_OK) {
+		return result;
+	}
+
+	IDirect3DSurface8* imageSurface;
+	result = param_2->CreateImageSurface(surface_Desc.Width * param_3, surface_Desc.Height * param_3, surface_Desc.Format, &imageSurface);
+	if (result < D3D_OK) {
+		surface->Release();
+		return result;
+	}
+
+	D3DXMatrixPerspectiveFovLH(&projectionMatrix, GpgDegToRad(GetActiveCamera()->GetFOV()), GetActiveCamera()->GetAspect(), 
+			GetActiveCamera()->GetNearPlane(), GetActiveCamera()->GetFarPlane());
+	cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_PROJECTION, &projectionMatrix);
+
+	D3DXMATRIX projectionMatrix;
+	param_2->GetTransform(D3DTS_PROJECTION, &projectionMatrix);
+	D3DXMATRIX matrix = projectionMatrix;
+	matrix(0,0) = param_3 * matrix(0,0);
+	matrix(1,1) = param_3 * matrix(1,1);
+
+	cMagEngineMgr::getInstance()->gameObject->unkn_ce0 = false;
+	for (int index1 = 0; index1 < param_3; index1++) {
+		float maxPos = param_3 - 1;
+		matrix(2,0) = maxPos - (2*index1); 
+		for (int index2 = 0; index2 < param_3; index2++) {
+			matrix(2,1) = - (maxPos - (index2 + index2));
+			param_2->SetTransform(D3DTS_PROJECTION, &matrix);
+			OnPreRender();
+			result = ScaleRender();
+			if (result < D3D_OK) {
+				imageSurface->Release();
+				cMagEngineMgr::getInstance()->gameObject->unkn_ce0 = true;
+				return result;
+			}
+			result = param_2->GetBackBuffer(0, D3DBACKBUFFER_TYPE_MONO, &surface);
+			if (result < D3D_OK) {
+				imageSurface->Release();
+				cMagEngineMgr::getInstance()->gameObject->unkn_ce0 = true;
+				return result;
+			}
+			RECT destRect; 
+			destRect.left = index1 * surface_Desc.Width;
+			destRect.right = destRect.left + surface_Desc.Width;
+			destRect.top = index2 * surface_Desc.Height;
+			destRect.bottom = destRect.top + surface_Desc.Height;
+
+			result = D3DXLoadSurfaceFromSurface(imageSurface, NULL, &destRect, surface, NULL, NULL, 1, 0);
+			surface->Release();
+			if (result < D3D_OK) {
+				imageSurface->Release();
+				cMagEngineMgr::getInstance()->gameObject->unkn_ce0 = true;
+				return result;
+			}
+			cMagEngineMgr::getInstance()->engine->EndScene();
+			cMagEngineMgr::getInstance()->engine->Present(NULL, NULL, NULL, NULL);
+		}
+	}
+	param_2->SetTransform(D3DTS_PROJECTION, &projectionMatrix);
+	result = D3DXSaveSurfaceToFile(param_1, D3DXIFF_BMP, imageSurface, NULL, NULL);
+	imageSurface->Release();
+	cMagEngineMgr::getInstance()->gameObject->unkn_ce0 = true;
+	return result;
 }
 
 /* 1002A3A0-1002A6C5 00325	*/
-long cMagGameObject::ScaleRender() {
-	return 0;
+HRESULT cMagGameObject::ScaleRender() {
+	D3DXMATRIX worldMatrix;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_WORLD, &worldMatrix);
+	if (showGrid) {
+		grid->Render();
+	}
+
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, FALSE);
+	}
+	RenderSkyBox();
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	}
+
+	RenderFog();
+	RenderSun();
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZENABLE, TRUE);
+
+	D3DMATERIAL8 material;
+	ZeroMemory(&material, sizeof(D3DMATERIAL8));
+	material.Diffuse.r = 1.0f;
+	material.Diffuse.g = 1.0f;
+	material.Diffuse.b = 1.0f;
+	material.Diffuse.a = 1.0f;
+	material.Ambient.r = 0.6f;
+	material.Ambient.g = 0.6f;
+	material.Ambient.b = 0.6f;
+	material.Ambient.a = 0.6f;
+	cMagEngineMgr::getInstance()->engine->SetMaterial(&material);
+
+	D3DLIGHT8 light;
+	ZeroMemory(&light, sizeof(D3DLIGHT8));
+	light.Type = D3DLIGHT_DIRECTIONAL;
+	light.Attenuation0 = 1.0f;
+	light.Diffuse.r = 1.0f;
+	light.Diffuse.g = 1.0f;
+	light.Diffuse.b = 1.0f;
+	D3DVECTOR lightDir =  {0.0f, -1.0f, 0.0f};
+	light.Direction = lightDir;
+	cMagEngineMgr::getInstance()->engine->SetLight(0, &light);
+	cMagEngineMgr::getInstance()->engine->LightEnable(0, TRUE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, TRUE);
+
+	float shaderConstant[4] = {0.0f, 0.0f, 1.0f, 0.0f};
+	cMagEngineMgr::getInstance()->engine->SetVertexShaderConstant(0, shaderConstant, 1);
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_SPECULARENABLE, TRUE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_AMBIENT, D3DCOLOR_ARGB(0xff, 0xe5, 0xe5, 0xe5));
+
+    cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, TRUE);
+	RenderTerrain();
+    cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, TRUE);
+	renderedMeshObjects = 0;
+	renderedObjects = 0;
+	RenderObjectList();
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+	RenderWaterList();
+	renderedBillboards = 0;
+	RenderBillboardList();
+
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, FALSE);
+	}
+	RenderFxList();
+	RenderParticleList();
+	if (enabledFog) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_FOGENABLE, TRUE);
+	}
+	RenderLensFlare();
+	RenderBlobList();
+	return D3D_OK;
 }
 
 /* 1002A6D0-1002A6E4 00014	*/
@@ -1909,6 +2066,8 @@ void cMagGameObject::AddLight(_LIGHT* param_1) {
 
 /* 1002A6F0-1002A6FB 0000B	*/
 void cMagGameObject::ClearMeshList() {
+	cMagMeshMgr::getInstance()->Clear();
+	
 }
 
 /* 1002A700-1002A72F 0002F	*/
@@ -1929,6 +2088,21 @@ CCamera* cMagGameObject::GetActiveCamera() {
 
 /* 1002A740-1002A7DB 0009B	*/
 void cMagGameObject::UpdateActiveCamera() {
+	if (activeCamera == NULL) {
+		return;
+	}
+
+	if (activeCamera->GetStatusOnFrame()) {
+		activeCamera->OnFrame();
+	}
+	if (activeCamera->GetStatusOnInputKey()) {
+		activeCamera->OnInputKey(&cMagEngineMgr::getInstance()->gameObject->input.unkn_1c);
+	}
+	if (activeCamera->GetStatusOnInputMouse()) {
+		cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+		activeCamera->OnInputMouse(gameObject->input.unkn_11c, gameObject->input.unkn_120, 
+		 		gameObject->input.unkn_128, gameObject->input.unkn_129);
+	}
 }
 
 /* 1002A7E0-1002A802 00022	*/
@@ -1940,8 +2114,12 @@ void cMagGameObject::RenderActiveCamera() {
 }
 
 /* 1002A810-1002A86D 0005D	*/
-D3DXVECTOR3 cMagGameObject::RotateVector(D3DXVECTOR3* param_1, D3DXVECTOR3* param_2, float param_4) {
-	return 0;
+D3DXVECTOR3 cMagGameObject::RotateVector(D3DXVECTOR3 const* param_1, D3DXVECTOR3* param_2, float param_3) {
+	D3DXMATRIX rotateMatrix;
+	D3DXMATRIX* mat = D3DXMatrixRotationAxis(&rotateMatrix, param_1, GpgDegToRad(param_3));
+	rotateMatrix = *mat;
+	D3DXVec3TransformCoord(param_2, param_2, &rotateMatrix);
+	return *param_2;
 }
 
 /* 1002A870-1002A87D 0000D	*/
@@ -1957,34 +2135,101 @@ void cMagGameObject::SetMagWindowTitle(char* param_1) {
 
 /* 1002A8A0-1002AA3E 0019E	*/
 void cMagGameObject::DXDiags() {
+	FILE* diagsFile = fopen("DXDiags.txt", "w");
+	fprintf(diagsFile, "%s\n", "----- System Information -----");
+	OSVERSIONINFO versionInfo;
+	ZeroMemory(&versionInfo, sizeof(OSVERSIONINFO));
+	versionInfo.dwOSVersionInfoSize = sizeof(OSVERSIONINFO);
+	char* versionName = "unknown";
+	if (GetVersionEx(&versionInfo) == FALSE) {
+		versionName = "could not be determined";
+	} else if (versionInfo.dwMajorVersion == 3) {
+			versionName = "Windows NT 3.51";
+	} else if (versionInfo.dwMajorVersion == 4) {
+		if (versionInfo.dwMinorVersion == 0) {
+			if (versionInfo.dwPlatformId == 1) {
+				versionName = "Windows 95";
+			} else {
+				versionName = "Windows NT 4.0";
+			}
+		} else if (versionInfo.dwMinorVersion == 10) {
+			versionName = "Windows 98";
+		} else if (versionInfo.dwMinorVersion == 90) {
+			versionName = "Windows ME";
+		}
+	} else if (versionInfo.dwMajorVersion == 5) {
+		if (versionInfo.dwMinorVersion == 0) {
+			versionName = "Windows 2000";
+		} else if (versionInfo.dwMinorVersion == 1) {
+			versionName = "Windows XP or .NET Server";
+		}
+	}
+	fprintf(diagsFile, "%s\n", versionName);	
+	SYSTEM_INFO systemInfo;
+	ZeroMemory(&systemInfo, sizeof(SYSTEM_INFO));
+	GetSystemInfo(&systemInfo);
+	OSVERSIONINFOEX versionInfoEx;
+	versionInfoEx.dwOSVersionInfoSize = sizeof(OSVERSIONINFOEX); 
+	char buffer[200];
+	sprintf(buffer, "%d.%d.%d", versionInfo.dwMajorVersion, versionInfo.dwMinorVersion, versionInfo.dwBuildNumber);
+	fprintf(diagsFile, "OS Version: %s\n", buffer);
+
+	if (GetVersionEx((OSVERSIONINFO*)&versionInfoEx)) {
+		sprintf(buffer, "%d.%d", versionInfoEx.wServicePackMajor, versionInfoEx.wServicePackMinor);
+		fprintf(diagsFile, "Service Pack Version: %s\n", buffer);
+	}
+	fclose(diagsFile);
 }
 
 /* 1002AA40-1002AB0E 000CE	*/
 bool cMagGameObject::InitMusicManager() {
-	return 0;
+	cMagEngineMgr::getInstance()->gameObject->musicManager = new CMusicManager();
+	cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+	HRESULT result = gameObject->musicManager->Initialize(GetHandleWindow(), 128, DMUS_APATH_DYNAMIC_STEREO);
+	if (result < S_OK) {
+		if (cMagEngineMgr::getInstance()->gameObject->musicManager != NULL) {
+			delete cMagEngineMgr::getInstance()->gameObject->musicManager;
+			cMagEngineMgr::getInstance()->gameObject->musicManager = NULL;
+		}
+		return false;
+	}
+	return true;
 }
-
 /* 1002AB10-1002AB46 00036	*/
 void cMagGameObject::DestroyMusicManager() {
+	if (cMagEngineMgr::getInstance()->gameObject->musicManager != NULL) {
+		delete cMagEngineMgr::getInstance()->gameObject->musicManager;
+		cMagEngineMgr::getInstance()->gameObject->musicManager = NULL;
+	}
 }
 
 /* 1002AB50-1002AB5E 0000E	*/
-uchar cMagGameObject::GetMusicManager() {
-	return 0;
+CMusicManager* cMagGameObject::GetMusicManager() {
+	return cMagEngineMgr::getInstance()->gameObject->musicManager;
 }
 
 /* 1002AB60-1002AC0C 000AC	*/
 bool cMagGameObject::InitSoundManager() {
-	return 0;
+	soundManager = new CSoundManager();
+	HRESULT result = soundManager->Initialize(GetHandleWindow(), 2, 2, 22050, 16);
+	if (result < S_OK) {
+		MessageBox(GetHandleWindow(), "Error initializing DirectSound", "error", 0);
+		return false;
+	}
+	return true;
 }
 
 /* 1002AC10-1002AC3B 0002B	*/
 void cMagGameObject::DestroySoundManager() {
+	if (soundManager != NULL) {
+		delete soundManager;
+		soundManager = NULL;
+	}
 }
 
 /* 1002AC40-1002AC4E 0000E	*/
 CSoundManager* cMagGameObject::GetSoundManager() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject->soundManager;
 }
 
 /* 1002AC50-1002AC64 00014	*/
@@ -2014,7 +2259,13 @@ void cMagGameObject::LinkMeshToSector() {
 
 /* 1002ACC0-1002AD24 00064	*/
 bool cMagGameObject::InSector(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXVECTOR3 param_3) {
-	return 0;
+	if (param_3.x > param_1.x && param_3.x < param_2.x 
+			&& param_3.y > param_1.y && param_3.y < param_2.y
+			&& param_3.z > param_1.z && param_3.z < param_2.z) {
+		return true;
+	}
+
+	return false;
 }
 
 /* 1002AD30-1002AE29 000F9	*/
@@ -2065,7 +2316,7 @@ void cMagGameObject::EnableBigSquareShadow(bool param_1) {
 }
 
 /* 1002B710-1002B803 000F3	*/
-long cMagGameObject::CreateTextureFromFileInZip(IDirect3DDevice8 * param_1, char* param_2, char* param_3, IDirect3DTexture8** param_4) {
+HRESULT cMagGameObject::CreateTextureFromFileInZip(IDirect3DDevice8 * param_1, char const* param_2, char const* param_3, IDirect3DTexture8** param_4) {
 	return 0;
 }
 

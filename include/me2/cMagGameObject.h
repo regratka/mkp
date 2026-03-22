@@ -11,6 +11,8 @@
 #include "MagGrid.h"
 #include "MagTextureMgr.h"
 #include "CMagInput.h"
+#include "CMusicManager.h"
+#include "CSoundManager.h"
 
 typedef long (WINAPIV *renderCallback) ();
 
@@ -21,7 +23,6 @@ class cMagSun;
 class cMagSkyBox;
 class cMagFog;
 class CCamera;
-class CSoundManager;
 class CState;
 class Mesh;
 
@@ -170,21 +171,21 @@ public:
 	/* 10029CB0 */ float GetDistanceTo(char* param_1, D3DXVECTOR3 param_2);
 	/* 10029D60 */ float GetDistanceTo(cMagGameObject* param_1, D3DXVECTOR3 param_2);
 	/* 10029DC0 */ void GetDistanceTo(char* param_1, D3DXVECTOR3 param_2, std::vector<float>& param_3);
-	/* 1002A000 */ long RenderTiled(char* param_1, IDirect3DDevice8* param_2, int param_3);
-	/* 1002A3A0 */ long ScaleRender();
+	/* 1002A000 */ HRESULT RenderTiled(char const* param_1, IDirect3DDevice8* param_2, int param_3);
+	/* 1002A3A0 */ HRESULT ScaleRender();
 	/* 1002A6D0 */ void AddLight(_LIGHT* param_1);
 	/* 1002A6F0 */ void ClearMeshList();
 	/* 1002A700 */ void SetActiveCamera(CCamera* param_1);
 	/* 1002A730 */ CCamera* GetActiveCamera();
 	/* 1002A740 */ void UpdateActiveCamera();
 	/* 1002A7E0 */ void RenderActiveCamera();
-	/* 1002A810 */ D3DXVECTOR3 RotateVector(D3DXVECTOR3* param_1, D3DXVECTOR3* param_2, float param_4);
+	/* 1002A810 */ D3DXVECTOR3 RotateVector(D3DXVECTOR3 const* param_1, D3DXVECTOR3* param_2, float param_3);
 	/* 1002A870 */ char* GetLevelDirectory();
 	/* 1002A880 */ void SetMagWindowTitle(char* param_1);
 	/* 1002A8A0 */ void DXDiags();
 	/* 1002AA40 */ bool InitMusicManager();
 	/* 1002AB10 */ void DestroyMusicManager();
-	/* 1002AB50 */ uchar GetMusicManager();
+	/* 1002AB50 */ CMusicManager* GetMusicManager();
 	/* 1002AB60 */ bool InitSoundManager();
 	/* 1002AC10 */ void DestroySoundManager();
 	/* 1002AC40 */ CSoundManager* GetSoundManager();
@@ -203,7 +204,7 @@ public:
 	/* 1002B2C0 */ void DrawBigSquareShadow();
 	/* 1002B570 */ void CreateBigSquareShadow();
 	/* 1002B700 */ void EnableBigSquareShadow(bool param_1);
-	/* 1002B710 */ long CreateTextureFromFileInZip(IDirect3DDevice8 * param_1, char* param_2, char* param_3, IDirect3DTexture8** param_4);
+	/* 1002B710 */ HRESULT CreateTextureFromFileInZip(IDirect3DDevice8* param_1, char const* param_2, char const* param_3, IDirect3DTexture8** param_4);
 	/* 1005A5F0 */ void AddLightmapMesh(Mesh* param_1, char* param_2);
 	/* 1006CED0 */ ulong GetDXVersion();
 	/* 1009CC10 */ uint FUN_1009cc10(char* param_1);
@@ -264,6 +265,7 @@ private:
 	/* 0xa60 */ D3DXVECTOR3 at;
 	/* 0xa6c */ D3DXVECTOR3 eye;
 	/* 0xa78 */ D3DXVECTOR3 up;
+
 	/* 0xa84 */ uchar f_a84[0xb00-0xa84];
 
 	/* 0xb00 */ bool removeObject;
@@ -296,22 +298,27 @@ private:
 	/* 0xc01 */ bool showObjectName;
 	/* 0xc04 */ int unkn_c04;
 	/* 0xc08 */ int unkn_c08;
+
 	/* 0xc0c */ uchar f_c0c[0xcd4-0xc0c];
 
 	/* 0xcd4 */ CGame* gameInstance;
 
 	/* 0xcd8 */ float fov;
 	/* 0xcdc */ collision* collision;
-	/* 0xce0 */ uchar f_ce0[0xcec-0xce0];
+	/* 0xce0 */ bool unkn_ce0;
+	/* 0xce4 */ CMusicManager* musicManager;
+	/* 0xce8 */ CSoundManager* soundManager;
 	/* 0xcec */ cMagMeshObject* playerObject;
 	/* 0xcf0 */ ID3DXFont* dxFont;
 	/* 0xcf4 */ bool unkn_cf4;
 	/* 0xcf5 */ bool enableLinkMeshToSector;
 	/* 0xcf8 */ cMagGameObject* callHandlerWindowKey;
-
 	/* 0xcfc */ cMagGameObject* callHandlerOnFrame1;
+
 	/* 0xd00 */ uchar f_d00[0xd04-0xd00];
+
 	/* 0xd04 */ bool enableBigSquareShadow;
+
 	/* 0xd05 */ uchar f_d05[0xd10-0xd05];
 
 private:
