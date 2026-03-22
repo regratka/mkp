@@ -4,7 +4,6 @@
 #include <globals.h>
 
 #include <windows.h>
-#include <dsound.h>
 #include <dmusici.h>
 
 class CMusicScript {

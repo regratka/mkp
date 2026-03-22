@@ -3,8 +3,7 @@
 
 #include <globals.h>
 
-#include "windows.h"
-#include <dsound.h>
+#include <windows.h>
 #include <dmusici.h>
 
 class CMusicSegment {

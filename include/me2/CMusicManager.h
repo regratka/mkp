@@ -2,6 +2,7 @@
 #define _C_MUSIC_MANAGER
 
 #include <globals.h>
+#include <windows.h>
 #include "CMusicSegment.h"
 #include "CMusicScript.h"
 
@@ -21,6 +22,13 @@ public:
 	/* 1009B000 */ long CreateChordMapFromFile(IDirectMusicChordMap** param_1, char* param_2);
 	/* 1009B050 */ long CreateStyleFromFile(IDirectMusicStyle8** param_1, char* param_2);
 	/* 1009B0A0 */ long GetMotifFromStyle(uchar param_1, char* param_2, char* param_3);
+
+private:
+	/* 0x00 */ BOOL initalizedCOMLibrary;
+	/* 0x04 */ IDirectMusicLoader8* musicLoader;
+	/* 0x08 */ IDirectMusicPerformance8* musicPerformance;
 };
+
+STATIC_ASSERT(sizeof(CMusicManager) == 0x0c);
 
 #endif
