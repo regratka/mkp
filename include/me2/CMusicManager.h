@@ -6,15 +6,18 @@
 #include "CMusicSegment.h"
 #include "CMusicScript.h"
 
-class CMusicManager {
+class __declspec(dllexport) CMusicManager {
 public:
-	/* 100020D0 */ uchar operator=(uchar param_1);
-	/* 1000B520 */ uchar GetPerformance();
+	/* 1000B520-1000B524 00004	*/
+	IDirectMusicPerformance8* GetPerformance() {
+		return musicPerformance;
+	}
+
 	/* 1009AAC0 */ CMusicManager();
 	/* 1009AAE0 */ ~CMusicManager();
-	/* 1009AB40 */ long Initialize(HWND__* param_1, ulong param_2, ulong param_3);
-	/* 1009ABC0 */ long SetSearchDirectory(char* param_1);
-	/* 1009AC20 */ uchar GetDefaultAudioPath();
+	/* 1009AB40 */ HRESULT Initialize(HWND__* param_1, ulong param_2, ulong param_3);
+	/* 1009ABC0 */ HRESULT SetSearchDirectory(char const* param_1);
+	/* 1009AC20 */ IDirectMusicAudioPath* GetDefaultAudioPath();
 	/* 1009AC50 */ void CollectGarbage();
 	/* 1009AC60 */ long CreateSegmentFromFile(CMusicSegment** param_1, char* param_2, int param_3, int param_4);
 	/* 1009AD80 */ long CreateSegmentFromResource(CMusicSegment** param_1, char* param_2, char* param_3, int param_4, int param_5);

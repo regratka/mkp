@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 7.939811,
-    "total_code": "487817",
-    "matched_code": "21101",
-    "matched_code_percent": 4.3255973,
+    "fuzzy_match_percent": 9.776253,
+    "total_code": "489327",
+    "matched_code": "28962",
+    "matched_code_percent": 5.9187417,
     "matched_data_percent": 100.0,
-    "total_functions": 2307,
-    "matched_functions": 214,
-    "matched_functions_percent": 9.276115,
+    "total_functions": 2184,
+    "matched_functions": 287,
+    "matched_functions_percent": 13.141026,
     "complete_data_percent": 100.0,
-    "total_units": 109
+    "total_units": 111
   },
   "units": [
     {
@@ -79,7 +79,7 @@
     {
       "name": "CCPUTicker",
       "measures": {
-        "fuzzy_match_percent": 51.567387,
+        "fuzzy_match_percent": 51.556793,
         "total_code": "1984",
         "matched_code": "698",
         "matched_code_percent": 35.18145,
@@ -94,7 +94,7 @@
         {
           "name": ".text",
           "size": "1984",
-          "fuzzy_match_percent": 51.567387,
+          "fuzzy_match_percent": 51.556793,
           "metadata": {}
         }
       ],
@@ -179,7 +179,7 @@
         {
           "name": "?GetCPUFrequency@CCPUTicker@@SAHAAN0KI@Z",
           "size": "950",
-          "fuzzy_match_percent": 27.238937,
+          "fuzzy_match_percent": 27.216814,
           "metadata": {
             "demangled_name": "public: static int __cdecl CCPUTicker::GetCPUFrequency(double &, double &, unsigned long, unsigned int)"
           },
@@ -263,10 +263,14 @@
     {
       "name": "CCamera",
       "measures": {
-        "fuzzy_match_percent": 2.0505688,
+        "fuzzy_match_percent": 3.2007504,
         "total_code": "4215",
+        "matched_code": "11",
+        "matched_code_percent": 0.2609727,
         "matched_data_percent": 100.0,
         "total_functions": 30,
+        "matched_functions": 1,
+        "matched_functions_percent": 3.3333335,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -274,7 +278,7 @@
         {
           "name": ".text",
           "size": "4215",
-          "fuzzy_match_percent": 2.0505688,
+          "fuzzy_match_percent": 3.2007504,
           "metadata": {}
         }
       ],
@@ -304,7 +308,7 @@
         {
           "name": "??0CCamera@@QAE@XZ",
           "size": "374",
-          "fuzzy_match_percent": 2.1538463,
+          "fuzzy_match_percent": 9.846154,
           "metadata": {
             "demangled_name": "public: __thiscall CCamera::CCamera(void)"
           },
@@ -313,6 +317,7 @@
         {
           "name": "??1CCamera@@UAE@XZ",
           "size": "11",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CCamera::~CCamera(void)"
           },
@@ -452,6 +457,7 @@
         {
           "name": "?OnRender@CCamera@@UAEXXZ",
           "size": "154",
+          "fuzzy_match_percent": 2.0833333,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCamera::OnRender(void)"
           },
@@ -478,6 +484,7 @@
         {
           "name": "?OnActivateView@CCamera@@UAEXXZ",
           "size": "68",
+          "fuzzy_match_percent": 4.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCamera::OnActivateView(void)"
           },
@@ -495,6 +502,7 @@
         {
           "name": "?OnDeactivateView@CCamera@@UAEXXZ",
           "size": "64",
+          "fuzzy_match_percent": 4.347826,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCamera::OnDeactivateView(void)"
           },
@@ -1201,14 +1209,14 @@
     {
       "name": "CDirectXFont",
       "measures": {
-        "fuzzy_match_percent": 95.84754,
+        "fuzzy_match_percent": 99.42087,
         "total_code": "3002",
-        "matched_code": "2426",
-        "matched_code_percent": 80.8128,
+        "matched_code": "2715",
+        "matched_code_percent": 90.439705,
         "matched_data_percent": 100.0,
         "total_functions": 14,
-        "matched_functions": 10,
-        "matched_functions_percent": 71.42857,
+        "matched_functions": 13,
+        "matched_functions_percent": 92.85714,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1216,7 +1224,7 @@
         {
           "name": ".text",
           "size": "3002",
-          "fuzzy_match_percent": 95.84754,
+          "fuzzy_match_percent": 99.42087,
           "metadata": {}
         }
       ],
@@ -1224,7 +1232,7 @@
         {
           "name": "??0CDirectXFont@@QAE@ABV0@@Z",
           "size": "98",
-          "fuzzy_match_percent": 41.666668,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CDirectXFont::CDirectXFont(class CDirectXFont const &)"
           },
@@ -1233,7 +1241,7 @@
         {
           "name": "??4CDirectXFont@@QAEAAV0@ABV0@@Z",
           "size": "104",
-          "fuzzy_match_percent": 73.333336,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CDirectXFont & __thiscall CDirectXFont::operator=(class CDirectXFont const &)"
           },
@@ -1242,7 +1250,7 @@
         {
           "name": "??_ECDirectXFont@@UAEPAXI@Z",
           "size": "87",
-          "fuzzy_match_percent": 74.28571,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CDirectXFont::`vector deleting destructor'(unsigned int)"
           },
@@ -1594,10 +1602,10 @@
     {
       "name": "CGame",
       "measures": {
-        "fuzzy_match_percent": 0.8483276,
+        "fuzzy_match_percent": 0.85434985,
         "total_code": "30473",
         "matched_data_percent": 100.0,
-        "total_functions": 90,
+        "total_functions": 85,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1605,7 +1613,7 @@
         {
           "name": ".text",
           "size": "30473",
-          "fuzzy_match_percent": 0.8483276,
+          "fuzzy_match_percent": 0.85434985,
           "metadata": {}
         }
       ],
@@ -1964,42 +1972,12 @@
         },
         {
           "name": "?AddCollisionObject@CGame@@QAEXPAVcMagMeshObject@@@Z",
-          "size": "36",
-          "fuzzy_match_percent": 3.0769231,
+          "size": "103",
+          "fuzzy_match_percent": 2.857143,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::AddCollisionObject(class cMagMeshObject *)"
           },
           "address": "21055"
-        },
-        {
-          "name": "switchD_10095804::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "21091"
-        },
-        {
-          "name": "switchD_10095804::caseD_0",
-          "size": "17",
-          "metadata": {},
-          "address": "21098"
-        },
-        {
-          "name": "switchD_10095804::caseD_1",
-          "size": "26",
-          "metadata": {},
-          "address": "21115"
-        },
-        {
-          "name": "switchD_10095804::caseD_2",
-          "size": "12",
-          "metadata": {},
-          "address": "21141"
-        },
-        {
-          "name": "switchD_10095804::caseD_5",
-          "size": "5",
-          "metadata": {},
-          "address": "21153"
         },
         {
           "name": "?RemoveCollisionObject@CGame@@QAEXPAVcMagMeshObject@@@Z",
@@ -2390,7 +2368,7 @@
     {
       "name": "CLensFlare",
       "measures": {
-        "fuzzy_match_percent": 0.6415159,
+        "fuzzy_match_percent": 0.91093254,
         "total_code": "9314",
         "matched_data_percent": 100.0,
         "total_functions": 27,
@@ -2401,7 +2379,7 @@
         {
           "name": ".text",
           "size": "9314",
-          "fuzzy_match_percent": 0.6415159,
+          "fuzzy_match_percent": 0.91093254,
           "metadata": {}
         }
       ],
@@ -2481,7 +2459,7 @@
         {
           "name": "??0CLensFlare@@QAE@XZ",
           "size": "206",
-          "fuzzy_match_percent": 3.0434783,
+          "fuzzy_match_percent": 12.23913,
           "metadata": {
             "demangled_name": "public: __thiscall CLensFlare::CLensFlare(void)"
           },
@@ -2490,6 +2468,7 @@
         {
           "name": "??1CLensFlare@@UAE@XZ",
           "size": "190",
+          "fuzzy_match_percent": 1.6326531,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CLensFlare::~CLensFlare(void)"
           },
@@ -2601,6 +2580,7 @@
         {
           "name": "?OnRender@CLensFlare@@UAEXXZ",
           "size": "189",
+          "fuzzy_match_percent": 1.6129032,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CLensFlare::OnRender(void)"
           },
@@ -2639,10 +2619,14 @@
     {
       "name": "CLensFlareSpot",
       "measures": {
-        "fuzzy_match_percent": 2.6953514,
+        "fuzzy_match_percent": 7.631066,
         "total_code": "988",
+        "matched_code": "11",
+        "matched_code_percent": 1.1133603,
         "matched_data_percent": 100.0,
         "total_functions": 14,
+        "matched_functions": 1,
+        "matched_functions_percent": 7.1428576,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -2650,7 +2634,7 @@
         {
           "name": ".text",
           "size": "988",
-          "fuzzy_match_percent": 2.6953514,
+          "fuzzy_match_percent": 7.631066,
           "metadata": {}
         }
       ],
@@ -2747,7 +2731,7 @@
         {
           "name": "??0CLensFlareSpot@@QAE@XZ",
           "size": "113",
-          "fuzzy_match_percent": 5.3846154,
+          "fuzzy_match_percent": 24.615385,
           "metadata": {
             "demangled_name": "public: __thiscall CLensFlareSpot::CLensFlareSpot(void)"
           },
@@ -2756,7 +2740,7 @@
         {
           "name": "??0CLensFlareSpot@@QAE@PAUIDirect3DTexture8@@MMUD3DXCOLOR@@@Z",
           "size": "83",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 28.40909,
           "metadata": {
             "demangled_name": "public: __thiscall CLensFlareSpot::CLensFlareSpot(struct IDirect3DTexture8*, float, float, struct D3DXCOLOR)"
           },
@@ -2765,6 +2749,7 @@
         {
           "name": "??1CLensFlareSpot@@UAE@XZ",
           "size": "11",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CLensFlareSpot::~CLensFlareSpot(void)"
           },
@@ -3096,10 +3081,14 @@
     {
       "name": "CMusicManager",
       "measures": {
-        "fuzzy_match_percent": 2.6054373,
+        "fuzzy_match_percent": 26.63773,
         "total_code": "1628",
+        "matched_code": "405",
+        "matched_code_percent": 24.87715,
         "matched_data_percent": 100.0,
         "total_functions": 14,
+        "matched_functions": 8,
+        "matched_functions_percent": 57.14286,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -3107,7 +3096,7 @@
         {
           "name": ".text",
           "size": "1628",
-          "fuzzy_match_percent": 2.6054373,
+          "fuzzy_match_percent": 26.63773,
           "metadata": {}
         }
       ],
@@ -3115,6 +3104,7 @@
         {
           "name": "??4CMusicManager@@QAEAAV0@ABV0@@Z",
           "size": "29",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CMusicManager & __thiscall CMusicManager::operator=(class CMusicManager const &)"
           },
@@ -3123,6 +3113,7 @@
         {
           "name": "?GetPerformance@CMusicManager@@QAEPAUIDirectMusicPerformance8@@XZ",
           "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct IDirectMusicPerformance8* __thiscall CMusicManager::GetPerformance(void)"
           },
@@ -3131,7 +3122,7 @@
         {
           "name": "??0CMusicManager@@QAE@XZ",
           "size": "31",
-          "fuzzy_match_percent": 13.928572,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CMusicManager::CMusicManager(void)"
           },
@@ -3140,7 +3131,7 @@
         {
           "name": "??1CMusicManager@@QAE@XZ",
           "size": "89",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CMusicManager::~CMusicManager(void)"
           },
@@ -3149,7 +3140,7 @@
         {
           "name": "?Initialize@CMusicManager@@QAEJPAUHWND__@@KK@Z",
           "size": "115",
-          "fuzzy_match_percent": 4.255319,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::Initialize(struct HWND__*, unsigned long, unsigned long)"
           },
@@ -3158,6 +3149,7 @@
         {
           "name": "?SetSearchDirectory@CMusicManager@@QAEJPBD@Z",
           "size": "85",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::SetSearchDirectory(char const *)"
           },
@@ -3166,6 +3158,7 @@
         {
           "name": "?GetDefaultAudioPath@CMusicManager@@QAEPAUIDirectMusicAudioPath@@XZ",
           "size": "38",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct IDirectMusicAudioPath * __thiscall CMusicManager::GetDefaultAudioPath(void)"
           },
@@ -3174,7 +3167,7 @@
         {
           "name": "?CollectGarbage@CMusicManager@@QAEXXZ",
           "size": "14",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CMusicManager::CollectGarbage(void)"
           },
@@ -3460,7 +3453,7 @@
         "fuzzy_match_percent": 0.42241308,
         "total_code": "6806",
         "matched_data_percent": 100.0,
-        "total_functions": 28,
+        "total_functions": 18,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -3558,71 +3551,11 @@
         },
         {
           "name": "?GetNodeCenter@COctree@@QAE?AUD3DXVECTOR3@@U2@MH@Z",
-          "size": "42",
+          "size": "530",
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall COctree::GetNodeCenter(struct D3DXVECTOR3, float, int)"
           },
           "address": "2796"
-        },
-        {
-          "name": "switchD_100b718a::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "2838"
-        },
-        {
-          "name": "switchD_100b718a::caseD_0",
-          "size": "55",
-          "metadata": {},
-          "address": "2845"
-        },
-        {
-          "name": "switchD_100b718a::caseD_1",
-          "size": "55",
-          "metadata": {},
-          "address": "2900"
-        },
-        {
-          "name": "switchD_100b718a::caseD_2",
-          "size": "59",
-          "metadata": {},
-          "address": "2955"
-        },
-        {
-          "name": "switchD_100b718a::caseD_3",
-          "size": "59",
-          "metadata": {},
-          "address": "3014"
-        },
-        {
-          "name": "switchD_100b718a::caseD_4",
-          "size": "55",
-          "metadata": {},
-          "address": "3073"
-        },
-        {
-          "name": "switchD_100b718a::caseD_5",
-          "size": "52",
-          "metadata": {},
-          "address": "3128"
-        },
-        {
-          "name": "switchD_100b718a::caseD_6",
-          "size": "56",
-          "metadata": {},
-          "address": "3180"
-        },
-        {
-          "name": "switchD_100b718a::caseD_7",
-          "size": "56",
-          "metadata": {},
-          "address": "3236"
-        },
-        {
-          "name": "switchD_100b718a::caseD_8",
-          "size": "34",
-          "metadata": {},
-          "address": "3292"
         },
         {
           "name": "?SetNode@COctree@@QAEXPAUD3DXVECTOR3@@H@Z",
@@ -3776,10 +3709,10 @@
     {
       "name": "CParticleEmitter",
       "measures": {
-        "fuzzy_match_percent": 0.37342587,
+        "fuzzy_match_percent": 0.6086661,
         "total_code": "15495",
         "matched_data_percent": 100.0,
-        "total_functions": 56,
+        "total_functions": 43,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -3787,7 +3720,7 @@
         {
           "name": ".text",
           "size": "15495",
-          "fuzzy_match_percent": 0.37342587,
+          "fuzzy_match_percent": 0.6086661,
           "metadata": {}
         }
       ],
@@ -3918,7 +3851,7 @@
         {
           "name": "??0CParticleEmitter@@QAE@XZ",
           "size": "1703",
-          "fuzzy_match_percent": 0.4057971,
+          "fuzzy_match_percent": 1.9101449,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitter::CParticleEmitter(void)"
           },
@@ -3935,6 +3868,7 @@
         {
           "name": "??1CParticleEmitter@@UAE@XZ",
           "size": "409",
+          "fuzzy_match_percent": 1.0840336,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticleEmitter::~CParticleEmitter(void)"
           },
@@ -3950,89 +3884,11 @@
         },
         {
           "name": "?ProcessEventSequenceBlock@CParticleEmitter@@QAE_NAAVCParticleEventSequence@@AAPAVCParticleEmitterToken@@1@Z",
-          "size": "410",
+          "size": "3863",
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitter::ProcessEventSequenceBlock(class CParticleEventSequence &, class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
           "address": "7369"
-        },
-        {
-          "name": "switchD_1006ff6a::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "7779"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_20",
-          "size": "453",
-          "metadata": {},
-          "address": "7786"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_10",
-          "size": "211",
-          "metadata": {},
-          "address": "8239"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_11",
-          "size": "224",
-          "metadata": {},
-          "address": "8450"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_12",
-          "size": "211",
-          "metadata": {},
-          "address": "8674"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_13",
-          "size": "223",
-          "metadata": {},
-          "address": "8885"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_14",
-          "size": "223",
-          "metadata": {},
-          "address": "9108"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_15",
-          "size": "215",
-          "metadata": {},
-          "address": "9331"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_21",
-          "size": "455",
-          "metadata": {},
-          "address": "9546"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_17",
-          "size": "285",
-          "metadata": {},
-          "address": "10001"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_e",
-          "size": "363",
-          "metadata": {},
-          "address": "10286"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_18",
-          "size": "426",
-          "metadata": {},
-          "address": "10649"
-        },
-        {
-          "name": "switchD_1006ff6a::caseD_f",
-          "size": "157",
-          "metadata": {},
-          "address": "11075"
         },
         {
           "name": "?ProcessParticleSystemBlock@CParticleEmitter@@QAE_NAAPAVCParticleEmitterToken@@0@Z",
@@ -4102,6 +3958,7 @@
         {
           "name": "?OnUpdate_@CParticleEmitter@@UAEXXZ",
           "size": "108",
+          "fuzzy_match_percent": 3.030303,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CParticleEmitter::OnUpdate_(void)"
           },
@@ -4128,6 +3985,7 @@
         {
           "name": "?OnRender@CParticleEmitter@@UAEXXZ",
           "size": "175",
+          "fuzzy_match_percent": 1.7857143,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CParticleEmitter::OnRender(void)"
           },
@@ -4233,10 +4091,10 @@
     {
       "name": "CParticleEmitterToken",
       "measures": {
-        "fuzzy_match_percent": 1.3803369,
+        "fuzzy_match_percent": 1.6776689,
         "total_code": "6222",
         "matched_data_percent": 100.0,
-        "total_functions": 57,
+        "total_functions": 22,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -4244,7 +4102,7 @@
         {
           "name": ".text",
           "size": "6222",
-          "fuzzy_match_percent": 1.3803369,
+          "fuzzy_match_percent": 1.6776689,
           "metadata": {}
         }
       ],
@@ -4395,226 +4253,16 @@
         },
         {
           "name": "?TypeAsString@CParticleEmitterToken@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ",
-          "size": "31",
+          "size": "2151",
           "metadata": {
             "demangled_name": "public: class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char> > __thiscall CParticleEmitterToken::TypeAsString(void)"
           },
           "address": "2864"
         },
         {
-          "name": "switchD_1001c06f::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "2895"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1",
-          "size": "92",
-          "metadata": {},
-          "address": "2902"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_2",
-          "size": "57",
-          "metadata": {},
-          "address": "2994"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_3",
-          "size": "57",
-          "metadata": {},
-          "address": "3051"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_4",
-          "size": "57",
-          "metadata": {},
-          "address": "3108"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_5",
-          "size": "57",
-          "metadata": {},
-          "address": "3165"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_6",
-          "size": "92",
-          "metadata": {},
-          "address": "3222"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_7",
-          "size": "57",
-          "metadata": {},
-          "address": "3314"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_8",
-          "size": "57",
-          "metadata": {},
-          "address": "3371"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_9",
-          "size": "57",
-          "metadata": {},
-          "address": "3428"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_a",
-          "size": "57",
-          "metadata": {},
-          "address": "3485"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_b",
-          "size": "57",
-          "metadata": {},
-          "address": "3542"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_c",
-          "size": "57",
-          "metadata": {},
-          "address": "3599"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_d",
-          "size": "57",
-          "metadata": {},
-          "address": "3656"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_e",
-          "size": "92",
-          "metadata": {},
-          "address": "3713"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_10",
-          "size": "57",
-          "metadata": {},
-          "address": "3805"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_11",
-          "size": "57",
-          "metadata": {},
-          "address": "3862"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_12",
-          "size": "57",
-          "metadata": {},
-          "address": "3919"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_13",
-          "size": "57",
-          "metadata": {},
-          "address": "3976"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_14",
-          "size": "57",
-          "metadata": {},
-          "address": "4033"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_15",
-          "size": "57",
-          "metadata": {},
-          "address": "4090"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_16",
-          "size": "57",
-          "metadata": {},
-          "address": "4147"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_17",
-          "size": "57",
-          "metadata": {},
-          "address": "4204"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_f",
-          "size": "92",
-          "metadata": {},
-          "address": "4261"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_18",
-          "size": "57",
-          "metadata": {},
-          "address": "4353"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_19",
-          "size": "57",
-          "metadata": {},
-          "address": "4410"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1a",
-          "size": "57",
-          "metadata": {},
-          "address": "4467"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1b",
-          "size": "57",
-          "metadata": {},
-          "address": "4524"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1c",
-          "size": "57",
-          "metadata": {},
-          "address": "4581"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1d",
-          "size": "57",
-          "metadata": {},
-          "address": "4638"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1e",
-          "size": "57",
-          "metadata": {},
-          "address": "4695"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_1f",
-          "size": "57",
-          "metadata": {},
-          "address": "4752"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_20",
-          "size": "92",
-          "metadata": {},
-          "address": "4809"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_21",
-          "size": "57",
-          "metadata": {},
-          "address": "4901"
-        },
-        {
-          "name": "switchD_1001c06f::caseD_21__default",
-          "size": "57",
-          "metadata": {},
-          "address": "4958"
-        },
-        {
           "name": "??0CParticleEmitterToken@@QAE@XZ",
           "size": "50",
-          "fuzzy_match_percent": 9.333333,
+          "fuzzy_match_percent": 41.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitterToken::CParticleEmitterToken(void)"
           },
@@ -4639,6 +4287,7 @@
         {
           "name": "??1CParticleEmitterToken@@UAE@XZ",
           "size": "80",
+          "fuzzy_match_percent": 3.3333333,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticleEmitterToken::~CParticleEmitterToken(void)"
           },
@@ -8695,7 +8344,7 @@
     {
       "name": "MagTerrain",
       "measures": {
-        "fuzzy_match_percent": 1.8126078,
+        "fuzzy_match_percent": 2.3399365,
         "total_code": "4855",
         "matched_data_percent": 100.0,
         "total_functions": 34,
@@ -8706,7 +8355,7 @@
         {
           "name": ".text",
           "size": "4855",
-          "fuzzy_match_percent": 1.8126078,
+          "fuzzy_match_percent": 2.3399365,
           "metadata": {}
         }
       ],
@@ -8769,7 +8418,7 @@
         {
           "name": "??0MagTerrain@@QAE@XZ",
           "size": "172",
-          "fuzzy_match_percent": 3.6842105,
+          "fuzzy_match_percent": 15.0,
           "metadata": {
             "demangled_name": "public: __thiscall MagTerrain::MagTerrain(void)"
           },
@@ -8778,6 +8427,7 @@
         {
           "name": "??1MagTerrain@@UAE@XZ",
           "size": "152",
+          "fuzzy_match_percent": 1.7021277,
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagTerrain::~MagTerrain(void)"
           },
@@ -8812,6 +8462,7 @@
         {
           "name": "?OnRender@MagTerrain@@UAEXXZ",
           "size": "380",
+          "fuzzy_match_percent": 0.93457943,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MagTerrain::OnRender(void)"
           },
@@ -9005,7 +8656,7 @@
     {
       "name": "MagTextureMgr",
       "measures": {
-        "fuzzy_match_percent": 0.5147115,
+        "fuzzy_match_percent": 0.5759701,
         "total_code": "7895",
         "matched_data_percent": 100.0,
         "total_functions": 29,
@@ -9016,7 +8667,7 @@
         {
           "name": ".text",
           "size": "7895",
-          "fuzzy_match_percent": 0.5147115,
+          "fuzzy_match_percent": 0.5759701,
           "metadata": {}
         }
       ],
@@ -9114,6 +8765,7 @@
         {
           "name": "?ReplaceTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD0@Z",
           "size": "196",
+          "fuzzy_match_percent": 2.4675324,
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::ReplaceTexture(char *, char *)"
           },
@@ -9269,7 +8921,7 @@
     {
       "name": "MagnumMesh",
       "measures": {
-        "fuzzy_match_percent": 0.6433092,
+        "fuzzy_match_percent": 0.6988758,
         "total_code": "38280",
         "matched_data_percent": 100.0,
         "total_functions": 70,
@@ -9280,7 +8932,7 @@
         {
           "name": ".text",
           "size": "38280",
-          "fuzzy_match_percent": 0.6433092,
+          "fuzzy_match_percent": 0.6988758,
           "metadata": {}
         }
       ],
@@ -9345,7 +8997,7 @@
         {
           "name": "??0MagnumMesh@@QAE@XZ",
           "size": "1342",
-          "fuzzy_match_percent": 0.4620462,
+          "fuzzy_match_percent": 1.8448845,
           "metadata": {
             "demangled_name": "public: __thiscall MagnumMesh::MagnumMesh(void)"
           },
@@ -9354,6 +9006,7 @@
         {
           "name": "??1MagnumMesh@@UAE@XZ",
           "size": "719",
+          "fuzzy_match_percent": 0.3773585,
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagnumMesh::~MagnumMesh(void)"
           },
@@ -10532,7 +10185,7 @@
     {
       "name": "cMagBillboard",
       "measures": {
-        "fuzzy_match_percent": 1.8189899,
+        "fuzzy_match_percent": 2.325013,
         "total_code": "5845",
         "matched_data_percent": 100.0,
         "total_functions": 37,
@@ -10543,7 +10196,7 @@
         {
           "name": ".text",
           "size": "5845",
-          "fuzzy_match_percent": 1.8189899,
+          "fuzzy_match_percent": 2.325013,
           "metadata": {}
         }
       ],
@@ -10559,6 +10212,7 @@
         {
           "name": "?RemoveObject@cMagBillboard@@UAEX_N@Z",
           "size": "13",
+          "fuzzy_match_percent": 33.333332,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagBillboard::RemoveObject(bool)"
           },
@@ -10703,7 +10357,7 @@
         {
           "name": "??0cMagBillboard@@QAE@XZ",
           "size": "345",
-          "fuzzy_match_percent": 1.7283951,
+          "fuzzy_match_percent": 6.345679,
           "metadata": {
             "demangled_name": "public: __thiscall cMagBillboard::cMagBillboard(void)"
           },
@@ -10712,6 +10366,7 @@
         {
           "name": "??1cMagBillboard@@UAE@XZ",
           "size": "257",
+          "fuzzy_match_percent": 1.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagBillboard::~cMagBillboard(void)"
           },
@@ -10764,6 +10419,7 @@
         {
           "name": "?OnUpdate_@cMagBillboard@@UAEXXZ",
           "size": "966",
+          "fuzzy_match_percent": 0.37453184,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagBillboard::OnUpdate_(void)"
           },
@@ -10772,6 +10428,7 @@
         {
           "name": "?OnRender@cMagBillboard@@UAEXXZ",
           "size": "347",
+          "fuzzy_match_percent": 0.9009009,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagBillboard::OnRender(void)"
           },
@@ -10871,10 +10528,14 @@
     {
       "name": "cMagCamera",
       "measures": {
-        "fuzzy_match_percent": 1.554641,
+        "fuzzy_match_percent": 3.1486719,
         "total_code": "1854",
+        "matched_code": "11",
+        "matched_code_percent": 0.5933118,
         "matched_data_percent": 100.0,
         "total_functions": 15,
+        "matched_functions": 1,
+        "matched_functions_percent": 6.666667,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -10882,7 +10543,7 @@
         {
           "name": ".text",
           "size": "1854",
-          "fuzzy_match_percent": 1.554641,
+          "fuzzy_match_percent": 3.1486719,
           "metadata": {}
         }
       ],
@@ -10952,6 +10613,7 @@
         {
           "name": "??1cMagCamera@@UAE@XZ",
           "size": "11",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagCamera::~cMagCamera(void)"
           },
@@ -10960,7 +10622,7 @@
         {
           "name": "??0cMagCamera@@QAE@MMMMMMMMM@Z",
           "size": "92",
-          "fuzzy_match_percent": 7.9166665,
+          "fuzzy_match_percent": 28.083334,
           "metadata": {
             "demangled_name": "public: __thiscall cMagCamera::cMagCamera(float, float, float, float, float, float, float, float, float)"
           },
@@ -11291,10 +10953,10 @@
     {
       "name": "cMagFrustumCull",
       "measures": {
-        "fuzzy_match_percent": 0.2525079,
+        "fuzzy_match_percent": 0.271502,
         "total_code": "11310",
         "matched_data_percent": 100.0,
-        "total_functions": 27,
+        "total_functions": 19,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11302,7 +10964,7 @@
         {
           "name": ".text",
           "size": "11310",
-          "fuzzy_match_percent": 0.2525079,
+          "fuzzy_match_percent": 0.271502,
           "metadata": {}
         }
       ],
@@ -11423,60 +11085,12 @@
         },
         {
           "name": "?UpdatePlaneVBs@cMagFrustumCull@@QAEJXZ",
-          "size": "60",
-          "fuzzy_match_percent": 5.909091,
+          "size": "902",
+          "fuzzy_match_percent": 0.6312292,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagFrustumCull::UpdatePlaneVBs(void)"
           },
           "address": "9215"
-        },
-        {
-          "name": "switchD_1008ba9c::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "9275"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_0",
-          "size": "134",
-          "metadata": {},
-          "address": "9282"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_1",
-          "size": "134",
-          "metadata": {},
-          "address": "9416"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_2",
-          "size": "134",
-          "metadata": {},
-          "address": "9550"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_3",
-          "size": "139",
-          "metadata": {},
-          "address": "9684"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_4",
-          "size": "134",
-          "metadata": {},
-          "address": "9823"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_5",
-          "size": "129",
-          "metadata": {},
-          "address": "9957"
-        },
-        {
-          "name": "switchD_1008ba9c::caseD_6",
-          "size": "31",
-          "metadata": {},
-          "address": "10086"
         },
         {
           "name": "?GetCenterBox@cMagFrustumCull@@QAE?AUD3DXVECTOR3@@XZ",
@@ -11629,14 +11243,14 @@
     {
       "name": "cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 46.088554,
+        "fuzzy_match_percent": 68.19664,
         "total_code": "34797",
-        "matched_code": "6383",
-        "matched_code_percent": 18.343534,
+        "matched_code": "10777",
+        "matched_code_percent": 30.971062,
         "matched_data_percent": 100.0,
-        "total_functions": 151,
-        "matched_functions": 57,
-        "matched_functions_percent": 37.748344,
+        "total_functions": 146,
+        "matched_functions": 107,
+        "matched_functions_percent": 73.287674,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11644,7 +11258,7 @@
         {
           "name": ".text",
           "size": "34797",
-          "fuzzy_match_percent": 46.088554,
+          "fuzzy_match_percent": 68.19664,
           "metadata": {}
         }
       ],
@@ -11724,7 +11338,7 @@
         {
           "name": "??0cMagGameObject@@QAE@ABV0@@Z",
           "size": "2637",
-          "fuzzy_match_percent": 69.89718,
+          "fuzzy_match_percent": 76.58707,
           "metadata": {
             "demangled_name": "public: __thiscall cMagGameObject::cMagGameObject(class cMagGameObject const &)"
           },
@@ -11733,7 +11347,7 @@
         {
           "name": "??4cMagGameObject@@QAEAAV0@ABV0@@Z",
           "size": "3125",
-          "fuzzy_match_percent": 75.08312,
+          "fuzzy_match_percent": 75.9534,
           "metadata": {
             "demangled_name": "public: class cMagGameObject & __thiscall cMagGameObject::operator=(class cMagGameObject const &)"
           },
@@ -11855,41 +11469,12 @@
         },
         {
           "name": "?MsgProc@cMagGameObject@@QAEJPAUHWND__@@IIJ@Z",
-          "size": "58",
+          "size": "313",
+          "fuzzy_match_percent": 66.62245,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagGameObject::MsgProc(struct HWND__*, unsigned int, unsigned int, long)"
           },
           "address": "10073"
-        },
-        {
-          "name": "switchD_10025d2a::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "10131"
-        },
-        {
-          "name": "switchD_10025d2a::caseD_20",
-          "size": "13",
-          "metadata": {},
-          "address": "10138"
-        },
-        {
-          "name": "switchD_10025d2a::caseD_100",
-          "size": "45",
-          "metadata": {},
-          "address": "10151"
-        },
-        {
-          "name": "switchD_10025d2a::caseD_2",
-          "size": "163",
-          "metadata": {},
-          "address": "10196"
-        },
-        {
-          "name": "switchD_10025d2a::caseD_3",
-          "size": "27",
-          "metadata": {},
-          "address": "10359"
         },
         {
           "name": "?KillWindowDx@cMagGameObject@@QAE_NXZ",
@@ -12020,7 +11605,7 @@
         {
           "name": "?CreateObject@cMagGameObject@@QAEXPAVcMagKernel@@@Z",
           "size": "780",
-          "fuzzy_match_percent": 90.45956,
+          "fuzzy_match_percent": 88.70956,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::CreateObject(class cMagKernel *)"
           },
@@ -12119,6 +11704,7 @@
         {
           "name": "?RenderTiled@cMagGameObject@@QAEJPBDPAUIDirect3DDevice8@@HP6AJXZ@Z",
           "size": "740",
+          "fuzzy_match_percent": 94.11354,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagGameObject::RenderTiled(char const *, struct IDirect3DDevice8*, int, long (__cdecl *)(void))"
           },
@@ -12127,7 +11713,7 @@
         {
           "name": "?SetLastRender@cMagGameObject@@QAEXPAVcMagMeshObject@@@Z",
           "size": "173",
-          "fuzzy_match_percent": 1.6949153,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetLastRender(class cMagMeshObject *)"
           },
@@ -12262,6 +11848,7 @@
         {
           "name": "?GetTextureMgr@cMagGameObject@@QAE?AVMagTextureMgr@@XZ",
           "size": "262",
+          "fuzzy_match_percent": 6.311828,
           "metadata": {
             "demangled_name": "public: class MagTextureMgr __thiscall cMagGameObject::GetTextureMgr(void)"
           },
@@ -12270,7 +11857,7 @@
         {
           "name": "?AllFiltersTexture@cMagGameObject@@QAEXXZ",
           "size": "33",
-          "fuzzy_match_percent": 6.6666665,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::AllFiltersTexture(void)"
           },
@@ -12279,6 +11866,7 @@
         {
           "name": "?ReplaceTexture@cMagGameObject@@QAEPAUIDirect3DTexture8@@PAD0@Z",
           "size": "24",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall cMagGameObject::ReplaceTexture(char *, char *)"
           },
@@ -12287,7 +11875,7 @@
         {
           "name": "?DeleteTexture@cMagGameObject@@QAEXPAD@Z",
           "size": "19",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::DeleteTexture(char *)"
           },
@@ -12332,7 +11920,7 @@
         {
           "name": "?DrawTextA@cMagGameObject@@QAEXHHPAD@Z",
           "size": "73",
-          "fuzzy_match_percent": 3.8461537,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::DrawTextA(int, int, char *)"
           },
@@ -12341,7 +11929,7 @@
         {
           "name": "?GetMeshObject@cMagGameObject@@QAEPAVcMagKernel@@PAD@Z",
           "size": "174",
-          "fuzzy_match_percent": 3.125,
+          "fuzzy_match_percent": 94.28125,
           "metadata": {
             "demangled_name": "public: class cMagKernel * __thiscall cMagGameObject::GetMeshObject(char *)"
           },
@@ -12350,7 +11938,7 @@
         {
           "name": "?GetMeshObject@cMagGameObject@@QAEPAVcMagMeshObject@@H@Z",
           "size": "88",
-          "fuzzy_match_percent": 5.757576,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject * __thiscall cMagGameObject::GetMeshObject(int)"
           },
@@ -12359,6 +11947,7 @@
         {
           "name": "?GetObjectsInRadiusFromClass@cMagGameObject@@QAEPAVcMagKernel@@MUD3DXVECTOR3@@PAD@Z",
           "size": "206",
+          "fuzzy_match_percent": 98.97143,
           "metadata": {
             "demangled_name": "public: class cMagKernel * __thiscall cMagGameObject::GetObjectsInRadiusFromClass(float, struct D3DXVECTOR3, char *)"
           },
@@ -12367,6 +11956,7 @@
         {
           "name": "?GetObjectsInRadiusFromClass@cMagGameObject@@QAE_NMUD3DXVECTOR3@@PADAAV?$vector@PAVcMagKernel@@V?$allocator@PAVcMagKernel@@@std@@@std@@@Z",
           "size": "592",
+          "fuzzy_match_percent": 99.65877,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::GetObjectsInRadiusFromClass(float, struct D3DXVECTOR3, char *, class std::vector<class cMagKernel *, class std::allocator<class cMagKernel *> > &)"
           },
@@ -12375,7 +11965,7 @@
         {
           "name": "?MagGetObject@cMagGameObject@@QAEPAVcMagKernel@@PAD@Z",
           "size": "353",
-          "fuzzy_match_percent": 1.496063,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagKernel * __thiscall cMagGameObject::MagGetObject(char *)"
           },
@@ -12384,6 +11974,7 @@
         {
           "name": "?GetKokoPos@cMagGameObject@@QAEXUD3DXVECTOR3@@@Z",
           "size": "36",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::GetKokoPos(struct D3DXVECTOR3)"
           },
@@ -12392,7 +11983,7 @@
         {
           "name": "?SetVisibilityRange@cMagGameObject@@QAEXM@Z",
           "size": "20",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetVisibilityRange(float)"
           },
@@ -12401,7 +11992,7 @@
         {
           "name": "?GetVisibilityRange@cMagGameObject@@QAEMXZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagGameObject::GetVisibilityRange(void)"
           },
@@ -12410,7 +12001,7 @@
         {
           "name": "?SetSurfaceVisibilityRange@cMagGameObject@@QAEXM@Z",
           "size": "20",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetSurfaceVisibilityRange(float)"
           },
@@ -12419,7 +12010,7 @@
         {
           "name": "?GetSurfaceVisibilityRange@cMagGameObject@@QAEMXZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagGameObject::GetSurfaceVisibilityRange(void)"
           },
@@ -12428,7 +12019,7 @@
         {
           "name": "?GetHandleWindow@cMagGameObject@@QAEPAUHWND__@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct HWND__* __thiscall cMagGameObject::GetHandleWindow(void)"
           },
@@ -12437,7 +12028,7 @@
         {
           "name": "?DestroyObject@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "157",
-          "fuzzy_match_percent": 1.8918918,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DestroyObject(class cMagKernel *)"
           },
@@ -12446,7 +12037,7 @@
         {
           "name": "?DeleteMesh@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "137",
-          "fuzzy_match_percent": 3.9215686,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteMesh(class cMagKernel *)"
           },
@@ -12455,7 +12046,7 @@
         {
           "name": "?DeleteBillboard@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "137",
-          "fuzzy_match_percent": 3.9215686,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteBillboard(class cMagKernel *)"
           },
@@ -12464,7 +12055,7 @@
         {
           "name": "?DeleteCamera@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "137",
-          "fuzzy_match_percent": 3.9215686,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteCamera(class cMagKernel *)"
           },
@@ -12473,7 +12064,7 @@
         {
           "name": "?DeleteParticle@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "137",
-          "fuzzy_match_percent": 3.9215686,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteParticle(class cMagKernel *)"
           },
@@ -12482,7 +12073,7 @@
         {
           "name": "?DeleteTerrain@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "68",
-          "fuzzy_match_percent": 8.695652,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteTerrain(class cMagKernel *)"
           },
@@ -12491,7 +12082,7 @@
         {
           "name": "?DeleteLensFlare@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "68",
-          "fuzzy_match_percent": 8.695652,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteLensFlare(class cMagKernel *)"
           },
@@ -12500,7 +12091,7 @@
         {
           "name": "?DeleteSun@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "68",
-          "fuzzy_match_percent": 8.695652,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteSun(class cMagKernel *)"
           },
@@ -12509,7 +12100,7 @@
         {
           "name": "?DeleteSky@cMagGameObject@@QAE_NPAVcMagKernel@@@Z",
           "size": "68",
-          "fuzzy_match_percent": 8.695652,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::DeleteSky(class cMagKernel *)"
           },
@@ -12518,7 +12109,7 @@
         {
           "name": "?GetTerrain@cMagGameObject@@QAEPAVMagTerrain@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class MagTerrain * __thiscall cMagGameObject::GetTerrain(void)"
           },
@@ -12527,7 +12118,7 @@
         {
           "name": "?GetLensFlare@cMagGameObject@@QAEPAVCLensFlare@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CLensFlare * __thiscall cMagGameObject::GetLensFlare(void)"
           },
@@ -12536,7 +12127,7 @@
         {
           "name": "?GetSun@cMagGameObject@@QAEPAVcMagSun@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagSun * __thiscall cMagGameObject::GetSun(void)"
           },
@@ -12545,7 +12136,7 @@
         {
           "name": "?GetSky@cMagGameObject@@QAEPAVcMagSkyBox@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagSkyBox * __thiscall cMagGameObject::GetSky(void)"
           },
@@ -12554,7 +12145,7 @@
         {
           "name": "?GetFog@cMagGameObject@@QAEPAVcMagFog@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagFog * __thiscall cMagGameObject::GetFog(void)"
           },
@@ -12563,7 +12154,7 @@
         {
           "name": "?ClearTextures@cMagGameObject@@QAEXXZ",
           "size": "11",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::ClearTextures(void)"
           },
@@ -12572,7 +12163,7 @@
         {
           "name": "?EnableSkyRendering@cMagGameObject@@QAEX_N@Z",
           "size": "33",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::EnableSkyRendering(bool)"
           },
@@ -12581,7 +12172,7 @@
         {
           "name": "?EnableSunRendering@cMagGameObject@@QAEX_N@Z",
           "size": "35",
-          "fuzzy_match_percent": 7.6923075,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::EnableSunRendering(bool)"
           },
@@ -12590,7 +12181,7 @@
         {
           "name": "?EnableLensFlareRendering@cMagGameObject@@QAEX_N@Z",
           "size": "44",
-          "fuzzy_match_percent": 7.6923075,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::EnableLensFlareRendering(bool)"
           },
@@ -12599,7 +12190,7 @@
         {
           "name": "?EnableFog@cMagGameObject@@QAEX_N@Z",
           "size": "37",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::EnableFog(bool)"
           },
@@ -12617,7 +12208,7 @@
         {
           "name": "?GetDistanceTo@cMagGameObject@@QAEMPADUD3DXVECTOR3@@@Z",
           "size": "176",
-          "fuzzy_match_percent": 2.2580645,
+          "fuzzy_match_percent": 97.8871,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagGameObject::GetDistanceTo(char *, struct D3DXVECTOR3)"
           },
@@ -12626,6 +12217,7 @@
         {
           "name": "?GetDistanceTo@cMagGameObject@@QAEMPAV1@UD3DXVECTOR3@@@Z",
           "size": "86",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagGameObject::GetDistanceTo(class cMagGameObject *, struct D3DXVECTOR3)"
           },
@@ -12634,6 +12226,7 @@
         {
           "name": "?GetDistanceTo@cMagGameObject@@QAEXPADUD3DXVECTOR3@@AAV?$vector@MV?$allocator@M@std@@@std@@@Z",
           "size": "562",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::GetDistanceTo(char *, struct D3DXVECTOR3, class std::vector<float, class std::allocator<float> > &)"
           },
@@ -12642,6 +12235,7 @@
         {
           "name": "?RenderTiled@cMagGameObject@@QAEJPBDPAUIDirect3DDevice8@@H@Z",
           "size": "915",
+          "fuzzy_match_percent": 81.8421,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagGameObject::RenderTiled(char const *, struct IDirect3DDevice8*, int)"
           },
@@ -12650,7 +12244,7 @@
         {
           "name": "?ScaleRender@cMagGameObject@@QAEJXZ",
           "size": "805",
-          "fuzzy_match_percent": 0.9661836,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagGameObject::ScaleRender(void)"
           },
@@ -12659,7 +12253,7 @@
         {
           "name": "?AddLight@cMagGameObject@@QAEXPAU_LIGHT@@@Z",
           "size": "20",
-          "fuzzy_match_percent": 16.666666,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::AddLight(struct _LIGHT *)"
           },
@@ -12668,7 +12262,7 @@
         {
           "name": "?ClearMeshList@cMagGameObject@@QAEXXZ",
           "size": "11",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::ClearMeshList(void)"
           },
@@ -12677,7 +12271,7 @@
         {
           "name": "?SetActiveCamera@cMagGameObject@@QAEXPAVCCamera@@@Z",
           "size": "47",
-          "fuzzy_match_percent": 6.6666665,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetActiveCamera(class CCamera *)"
           },
@@ -12686,7 +12280,7 @@
         {
           "name": "?GetActiveCamera@cMagGameObject@@QAEPAVCCamera@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CCamera * __thiscall cMagGameObject::GetActiveCamera(void)"
           },
@@ -12695,7 +12289,7 @@
         {
           "name": "?UpdateActiveCamera@cMagGameObject@@QAEXXZ",
           "size": "155",
-          "fuzzy_match_percent": 2.2222223,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::UpdateActiveCamera(void)"
           },
@@ -12704,7 +12298,7 @@
         {
           "name": "?RenderActiveCamera@cMagGameObject@@QAEXXZ",
           "size": "34",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::RenderActiveCamera(void)"
           },
@@ -12713,6 +12307,7 @@
         {
           "name": "?RotateVector@cMagGameObject@@QAE?AUD3DXVECTOR3@@PBU2@PAU2@M@Z",
           "size": "93",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagGameObject::RotateVector(struct D3DXVECTOR3const *, struct D3DXVECTOR3*, float)"
           },
@@ -12739,7 +12334,7 @@
         {
           "name": "?DXDiags@cMagGameObject@@QAEXXZ",
           "size": "414",
-          "fuzzy_match_percent": 0.8196721,
+          "fuzzy_match_percent": 81.11475,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::DXDiags(void)"
           },
@@ -12748,7 +12343,7 @@
         {
           "name": "?InitMusicManager@cMagGameObject@@QAE_NXZ",
           "size": "206",
-          "fuzzy_match_percent": 3.4482758,
+          "fuzzy_match_percent": 88.465515,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::InitMusicManager(void)"
           },
@@ -12757,7 +12352,7 @@
         {
           "name": "?DestroyMusicManager@cMagGameObject@@QAEXXZ",
           "size": "54",
-          "fuzzy_match_percent": 6.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::DestroyMusicManager(void)"
           },
@@ -12766,6 +12361,7 @@
         {
           "name": "?GetMusicManager@cMagGameObject@@QAEPAVCMusicManager@@XZ",
           "size": "14",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CMusicManager * __thiscall cMagGameObject::GetMusicManager(void)"
           },
@@ -12774,7 +12370,7 @@
         {
           "name": "?InitSoundManager@cMagGameObject@@QAE_NXZ",
           "size": "172",
-          "fuzzy_match_percent": 3.72549,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::InitSoundManager(void)"
           },
@@ -12783,7 +12379,7 @@
         {
           "name": "?DestroySoundManager@cMagGameObject@@QAEXXZ",
           "size": "43",
-          "fuzzy_match_percent": 6.6666665,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::DestroySoundManager(void)"
           },
@@ -12792,7 +12388,7 @@
         {
           "name": "?GetSoundManager@cMagGameObject@@QAEPAVCSoundManager@@XZ",
           "size": "14",
-          "fuzzy_match_percent": 35.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CSoundManager * __thiscall cMagGameObject::GetSoundManager(void)"
           },
@@ -12846,7 +12442,7 @@
         {
           "name": "?InSector@cMagGameObject@@QAE_NUD3DXVECTOR3@@00@Z",
           "size": "100",
-          "fuzzy_match_percent": 5.882353,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagGameObject::InSector(struct D3DXVECTOR3, struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -12873,7 +12469,7 @@
         {
           "name": "?GetAllFaceCount@cMagGameObject@@QAEHXZ",
           "size": "62",
-          "fuzzy_match_percent": 7.3076925,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagGameObject::GetAllFaceCount(void)"
           },
@@ -12891,7 +12487,7 @@
         {
           "name": "?EnableCallHandlerWindowKey@cMagGameObject@@QAEXPAV1@@Z",
           "size": "20",
-          "fuzzy_match_percent": 36.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::EnableCallHandlerWindowKey(class cMagGameObject *)"
           },
@@ -12936,6 +12532,7 @@
         {
           "name": "?CreateTextureFromFileInZip@cMagGameObject@@QAEJPAUIDirect3DDevice8@@PBD1PAPAUIDirect3DTexture8@@@Z",
           "size": "243",
+          "fuzzy_match_percent": 2.1052632,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagGameObject::CreateTextureFromFileInZip(struct IDirect3DDevice8*, char const *, char const *, struct IDirect3DTexture8**)"
           },
@@ -13055,14 +12652,14 @@
     {
       "name": "cMagKernel",
       "measures": {
-        "fuzzy_match_percent": 40.174454,
+        "fuzzy_match_percent": 40.63633,
         "total_code": "5771",
-        "matched_code": "1769",
-        "matched_code_percent": 30.653265,
+        "matched_code": "2143",
+        "matched_code_percent": 37.133945,
         "matched_data_percent": 100.0,
         "total_functions": 81,
-        "matched_functions": 54,
-        "matched_functions_percent": 66.66667,
+        "matched_functions": 56,
+        "matched_functions_percent": 69.1358,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -13070,7 +12667,7 @@
         {
           "name": ".text",
           "size": "5771",
-          "fuzzy_match_percent": 40.174454,
+          "fuzzy_match_percent": 40.63633,
           "metadata": {}
         }
       ],
@@ -13096,7 +12693,7 @@
         {
           "name": "??0cMagKernel@@QAE@ABV0@@Z",
           "size": "287",
-          "fuzzy_match_percent": 98.50746,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagKernel::cMagKernel(class cMagKernel const &)"
           },
@@ -13105,7 +12702,7 @@
         {
           "name": "??_EcMagKernel@@UAEPAXI@Z",
           "size": "87",
-          "fuzzy_match_percent": 74.28571,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall cMagKernel::`vector deleting destructor'(unsigned int)"
           },
@@ -14249,14 +13846,14 @@
     {
       "name": "cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 1.7586244,
+        "fuzzy_match_percent": 2.521776,
         "total_code": "51828",
-        "matched_code": "10",
-        "matched_code_percent": 0.01929459,
+        "matched_code": "23",
+        "matched_code_percent": 0.044377554,
         "matched_data_percent": 100.0,
-        "total_functions": 279,
-        "matched_functions": 2,
-        "matched_functions_percent": 0.71684587,
+        "total_functions": 271,
+        "matched_functions": 3,
+        "matched_functions_percent": 1.1070111,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14264,7 +13861,7 @@
         {
           "name": ".text",
           "size": "51828",
-          "fuzzy_match_percent": 1.7586244,
+          "fuzzy_match_percent": 2.521776,
           "metadata": {}
         }
       ],
@@ -14325,7 +13922,7 @@
         {
           "name": "?EnableRendering@cMagMeshObject@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableRendering(bool)"
           },
@@ -14343,6 +13940,7 @@
         {
           "name": "??0cMagMeshObject@@QAE@ABV0@@Z",
           "size": "4759",
+          "fuzzy_match_percent": 3.5249295,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(class cMagMeshObject const &)"
           },
@@ -14351,6 +13949,7 @@
         {
           "name": "??4cMagMeshObject@@QAEAAV0@ABV0@@Z",
           "size": "6831",
+          "fuzzy_match_percent": 2.8422782,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject & __thiscall cMagMeshObject::operator=(class cMagMeshObject const &)"
           },
@@ -14413,6 +14012,7 @@
         {
           "name": "?GetPosition@cMagMeshObject@@UAE?AUD3DXVECTOR3@@XZ",
           "size": "65",
+          "fuzzy_match_percent": 34.882355,
           "metadata": {
             "demangled_name": "public: virtual struct D3DXVECTOR3 __thiscall cMagMeshObject::GetPosition(void)"
           },
@@ -16110,60 +15710,12 @@
         },
         {
           "name": "?SetPhysicsType@cMagMeshObject@@QAEXE@Z",
-          "size": "76",
-          "fuzzy_match_percent": 2.0,
+          "size": "357",
+          "fuzzy_match_percent": 1.0638298,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetPhysicsType(unsigned char)"
           },
           "address": "43656"
-        },
-        {
-          "name": "switchD_1005a2dc::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "43732"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_1",
-          "size": "42",
-          "metadata": {},
-          "address": "43739"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_2",
-          "size": "43",
-          "metadata": {},
-          "address": "43781"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_3",
-          "size": "38",
-          "metadata": {},
-          "address": "43824"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_4",
-          "size": "38",
-          "metadata": {},
-          "address": "43862"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_5",
-          "size": "35",
-          "metadata": {},
-          "address": "43900"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_6",
-          "size": "47",
-          "metadata": {},
-          "address": "43935"
-        },
-        {
-          "name": "switchD_1005a2dc::caseD_6__default",
-          "size": "31",
-          "metadata": {},
-          "address": "43982"
         },
         {
           "name": "?GetPhysicsType@cMagMeshObject@@QAEEXZ",
@@ -16701,14 +16253,14 @@
     {
       "name": "cMagObjectList",
       "measures": {
-        "fuzzy_match_percent": 98.99,
+        "fuzzy_match_percent": 99.72603,
         "total_code": "10232",
-        "matched_code": "7902",
-        "matched_code_percent": 77.2283,
+        "matched_code": "10087",
+        "matched_code_percent": 98.58288,
         "matched_data_percent": 100.0,
         "total_functions": 47,
-        "matched_functions": 42,
-        "matched_functions_percent": 89.3617,
+        "matched_functions": 45,
+        "matched_functions_percent": 95.74468,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -16716,7 +16268,7 @@
         {
           "name": ".text",
           "size": "10232",
-          "fuzzy_match_percent": 98.99,
+          "fuzzy_match_percent": 99.72603,
           "metadata": {}
         }
       ],
@@ -16742,7 +16294,7 @@
         {
           "name": "??0cMagObjectList@@QAE@ABV0@@Z",
           "size": "1167",
-          "fuzzy_match_percent": 99.67949,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagObjectList::cMagObjectList(class cMagObjectList const &)"
           },
@@ -16751,7 +16303,7 @@
         {
           "name": "??4cMagObjectList@@QAEAAV0@ABV0@@Z",
           "size": "931",
-          "fuzzy_match_percent": 94.71545,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagObjectList & __thiscall cMagObjectList::operator=(class cMagObjectList const &)"
           },
@@ -16760,7 +16312,7 @@
         {
           "name": "??_EcMagObjectList@@UAEPAXI@Z",
           "size": "87",
-          "fuzzy_match_percent": 74.28571,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall cMagObjectList::`vector deleting destructor'(unsigned int)"
           },
@@ -17281,7 +16833,7 @@
     {
       "name": "cMagSkyBox",
       "measures": {
-        "fuzzy_match_percent": 0.74728864,
+        "fuzzy_match_percent": 1.631898,
         "total_code": "3375",
         "matched_data_percent": 100.0,
         "total_functions": 14,
@@ -17292,7 +16844,7 @@
         {
           "name": ".text",
           "size": "3375",
-          "fuzzy_match_percent": 0.74728864,
+          "fuzzy_match_percent": 1.631898,
           "metadata": {}
         }
       ],
@@ -17322,7 +16874,7 @@
         {
           "name": "??0cMagSkyBox@@QAE@XZ",
           "size": "227",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 12.510204,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSkyBox::cMagSkyBox(void)"
           },
@@ -17331,6 +16883,7 @@
         {
           "name": "??1cMagSkyBox@@UAE@XZ",
           "size": "124",
+          "fuzzy_match_percent": 4.3,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSkyBox::~cMagSkyBox(void)"
           },
@@ -17392,6 +16945,7 @@
         {
           "name": "?OnRender@cMagSkyBox@@UAEXXZ",
           "size": "47",
+          "fuzzy_match_percent": 5.5555553,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagSkyBox::OnRender(void)"
           },
@@ -18071,7 +17625,7 @@
     {
       "name": "cMagSun",
       "measures": {
-        "fuzzy_match_percent": 1.0040611,
+        "fuzzy_match_percent": 1.4688945,
         "total_code": "5327",
         "matched_data_percent": 100.0,
         "total_functions": 25,
@@ -18082,7 +17636,7 @@
         {
           "name": ".text",
           "size": "5327",
-          "fuzzy_match_percent": 1.0040611,
+          "fuzzy_match_percent": 1.4688945,
           "metadata": {}
         }
       ],
@@ -18144,7 +17698,7 @@
         {
           "name": "??0cMagSun@@QAE@XZ",
           "size": "394",
-          "fuzzy_match_percent": 1.4285715,
+          "fuzzy_match_percent": 6.255102,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSun::cMagSun(void)"
           },
@@ -18153,6 +17707,7 @@
         {
           "name": "??1cMagSun@@UAE@XZ",
           "size": "193",
+          "fuzzy_match_percent": 1.6,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSun::~cMagSun(void)"
           },
@@ -18203,6 +17758,7 @@
         {
           "name": "?OnRender@cMagSun@@UAEXXZ",
           "size": "93",
+          "fuzzy_match_percent": 2.857143,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagSun::OnRender(void)"
           },
@@ -18656,14 +18212,14 @@
     {
       "name": "cMp3Player",
       "measures": {
-        "fuzzy_match_percent": 91.60989,
+        "fuzzy_match_percent": 100.0,
         "total_code": "780",
-        "matched_code": "612",
-        "matched_code_percent": 78.46154,
+        "matched_code": "780",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 13,
-        "matched_functions": 10,
-        "matched_functions_percent": 76.92308,
+        "matched_functions": 13,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18671,7 +18227,7 @@
         {
           "name": ".text",
           "size": "780",
-          "fuzzy_match_percent": 91.60989,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -18679,7 +18235,7 @@
         {
           "name": "??0cMp3Player@@QAE@ABV0@@Z",
           "size": "45",
-          "fuzzy_match_percent": 78.57143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMp3Player::cMp3Player(class cMp3Player const &)"
           },
@@ -18688,7 +18244,7 @@
         {
           "name": "??4cMp3Player@@QAEAAV0@ABV0@@Z",
           "size": "39",
-          "fuzzy_match_percent": 30.76923,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMp3Player & __thiscall cMp3Player::operator=(class cMp3Player const &)"
           },
@@ -18697,7 +18253,7 @@
         {
           "name": "??_EcMp3Player@@UAEPAXI@Z",
           "size": "84",
-          "fuzzy_match_percent": 65.71429,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall cMp3Player::`vector deleting destructor'(unsigned int)"
           },
@@ -19396,7 +18952,7 @@
         "fuzzy_match_percent": 0.6375502,
         "total_code": "996",
         "matched_data_percent": 100.0,
-        "total_functions": 30,
+        "total_functions": 13,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -19477,47 +19033,11 @@
         },
         {
           "name": "?getPixelSize@pgImage@@SAHW4FORMAT@1@@Z",
-          "size": "20",
+          "size": "54",
           "metadata": {
             "demangled_name": "public: static int __cdecl pgImage::getPixelSize(enum pgImage::FORMAT)"
           },
           "address": "355"
-        },
-        {
-          "name": "switchD_10081d04::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "375"
-        },
-        {
-          "name": "switchD_10081d04::caseD_1c",
-          "size": "6",
-          "metadata": {},
-          "address": "382"
-        },
-        {
-          "name": "switchD_10081d04::caseD_17",
-          "size": "6",
-          "metadata": {},
-          "address": "388"
-        },
-        {
-          "name": "switchD_10081d04::caseD_14",
-          "size": "6",
-          "metadata": {},
-          "address": "394"
-        },
-        {
-          "name": "switchD_10081d04::caseD_15",
-          "size": "6",
-          "metadata": {},
-          "address": "400"
-        },
-        {
-          "name": "switchD_10081d04::caseD_1b",
-          "size": "3",
-          "metadata": {},
-          "address": "406"
         },
         {
           "name": "?getFormatString@pgImage@@SA?AVpgString@@W4_D3DFORMAT@@@Z",
@@ -19529,77 +19049,11 @@
         },
         {
           "name": "?getFormatString@pgImage@@SA?AVpgString@@W4FORMAT@1@@Z",
-          "size": "49",
+          "size": "429",
           "metadata": {
             "demangled_name": "public: static class pgString __cdecl pgImage::getFormatString(enum pgImage::FORMAT)"
           },
           "address": "442"
-        },
-        {
-          "name": "switchD_10081dc1::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "491"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_1c",
-          "size": "21",
-          "metadata": {},
-          "address": "498"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_29",
-          "size": "21",
-          "metadata": {},
-          "address": "519"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_17",
-          "size": "21",
-          "metadata": {},
-          "address": "540"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_18",
-          "size": "21",
-          "metadata": {},
-          "address": "561"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_19",
-          "size": "21",
-          "metadata": {},
-          "address": "582"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_1a",
-          "size": "21",
-          "metadata": {},
-          "address": "603"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_14",
-          "size": "21",
-          "metadata": {},
-          "address": "624"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_15",
-          "size": "21",
-          "metadata": {},
-          "address": "645"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_16",
-          "size": "142",
-          "metadata": {},
-          "address": "666"
-        },
-        {
-          "name": "switchD_10081dc1::caseD_1b",
-          "size": "63",
-          "metadata": {},
-          "address": "808"
         },
         {
           "name": "?isCompressed@pgImage@@SA_NW4FORMAT@1@@Z",
@@ -20370,10 +19824,10 @@
     {
       "name": "pgTerrainPatchBase",
       "measures": {
-        "fuzzy_match_percent": 0.79312015,
+        "fuzzy_match_percent": 0.833261,
         "total_code": "12895",
         "matched_data_percent": 100.0,
-        "total_functions": 100,
+        "total_functions": 69,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -20381,7 +19835,7 @@
         {
           "name": ".text",
           "size": "12895",
-          "fuzzy_match_percent": 0.79312015,
+          "fuzzy_match_percent": 0.833261,
           "metadata": {}
         }
       ],
@@ -20824,60 +20278,12 @@
         },
         {
           "name": "?getPowerTwo@pgTerrainPatchBase@@SAHH@Z",
-          "size": "10",
-          "fuzzy_match_percent": 20.0,
+          "size": "59",
+          "fuzzy_match_percent": 7.368421,
           "metadata": {
             "demangled_name": "public: static int __cdecl pgTerrainPatchBase::getPowerTwo(int)"
           },
           "address": "5248"
-        },
-        {
-          "name": "switchD_1007c94a::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "5258"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_1",
-          "size": "6",
-          "metadata": {},
-          "address": "5265"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_2",
-          "size": "6",
-          "metadata": {},
-          "address": "5271"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_3",
-          "size": "6",
-          "metadata": {},
-          "address": "5277"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_4",
-          "size": "6",
-          "metadata": {},
-          "address": "5283"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_5",
-          "size": "6",
-          "metadata": {},
-          "address": "5289"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_6",
-          "size": "6",
-          "metadata": {},
-          "address": "5295"
-        },
-        {
-          "name": "switchD_1007c94a::caseD_6__default",
-          "size": "6",
-          "metadata": {},
-          "address": "5301"
         },
         {
           "name": "?createTessellation@pgTerrainPatchBase@@QAEXHHHHH@Z",
@@ -20922,41 +20328,11 @@
         },
         {
           "name": "?calculateDiagonalVertices@pgTerrainPatchBase@@QAEHHHHHHPAUPATCHVERTEX@1@AAMAAH12@Z",
-          "size": "66",
+          "size": "360",
           "metadata": {
             "demangled_name": "public: int __thiscall pgTerrainPatchBase::calculateDiagonalVertices(int, int, int, int, int, struct pgTerrainPatchBase::PATCHVERTEX *, float &, int &, float &, int &)"
           },
           "address": "6659"
-        },
-        {
-          "name": "switchD_1007cf42::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "6725"
-        },
-        {
-          "name": "switchD_1007cf42::caseD_1",
-          "size": "91",
-          "metadata": {},
-          "address": "6732"
-        },
-        {
-          "name": "switchD_1007cf42::caseD_2",
-          "size": "109",
-          "metadata": {},
-          "address": "6823"
-        },
-        {
-          "name": "switchD_1007cf42::caseD_3",
-          "size": "77",
-          "metadata": {},
-          "address": "6932"
-        },
-        {
-          "name": "switchD_1007cf42::caseD_0",
-          "size": "10",
-          "metadata": {},
-          "address": "7009"
         },
         {
           "name": "?addTriangleRow@pgTerrainPatchBase@@QAEXHH_N000@Z",
@@ -20987,120 +20363,12 @@
         },
         {
           "name": "?addLevel4PatchTriangles@pgTerrainPatchBase@@QAEX_N000@Z",
-          "size": "62",
-          "fuzzy_match_percent": 1.7391304,
+          "size": "2606",
+          "fuzzy_match_percent": 0.14992504,
           "metadata": {
             "demangled_name": "public: void __thiscall pgTerrainPatchBase::addLevel4PatchTriangles(bool, bool, bool, bool)"
           },
           "address": "9594"
-        },
-        {
-          "name": "switchD_1007daee::switchD",
-          "size": "7",
-          "metadata": {},
-          "address": "9656"
-        },
-        {
-          "name": "switchD_1007daee::caseD_0",
-          "size": "9",
-          "metadata": {},
-          "address": "9663"
-        },
-        {
-          "name": "switchD_1007daee::caseD_1",
-          "size": "169",
-          "metadata": {},
-          "address": "9672"
-        },
-        {
-          "name": "switchD_1007daee::caseD_2",
-          "size": "129",
-          "metadata": {},
-          "address": "9841"
-        },
-        {
-          "name": "switchD_1007daee::caseD_3",
-          "size": "112",
-          "metadata": {},
-          "address": "9970"
-        },
-        {
-          "name": "switchD_1007daee::caseD_4",
-          "size": "65",
-          "metadata": {},
-          "address": "10082"
-        },
-        {
-          "name": "switchD_1007daee::caseD_5",
-          "size": "153",
-          "metadata": {},
-          "address": "10147"
-        },
-        {
-          "name": "switchD_1007daee::caseD_6",
-          "size": "198",
-          "metadata": {},
-          "address": "10300"
-        },
-        {
-          "name": "switchD_1007daee::caseD_7",
-          "size": "160",
-          "metadata": {},
-          "address": "10498"
-        },
-        {
-          "name": "switchD_1007daee::caseD_8",
-          "size": "72",
-          "metadata": {},
-          "address": "10658"
-        },
-        {
-          "name": "switchD_1007daee::caseD_9",
-          "size": "229",
-          "metadata": {},
-          "address": "10730"
-        },
-        {
-          "name": "switchD_1007daee::caseD_a",
-          "size": "195",
-          "metadata": {},
-          "address": "10959"
-        },
-        {
-          "name": "switchD_1007daee::caseD_b",
-          "size": "160",
-          "metadata": {},
-          "address": "11154"
-        },
-        {
-          "name": "switchD_1007daee::caseD_c",
-          "size": "71",
-          "metadata": {},
-          "address": "11314"
-        },
-        {
-          "name": "switchD_1007daee::caseD_d",
-          "size": "195",
-          "metadata": {},
-          "address": "11385"
-        },
-        {
-          "name": "switchD_1007daee::caseD_e",
-          "size": "310",
-          "metadata": {},
-          "address": "11580"
-        },
-        {
-          "name": "switchD_1007daee::caseD_f",
-          "size": "306",
-          "metadata": {},
-          "address": "11890"
-        },
-        {
-          "name": "switchD_1007daee::caseD_10",
-          "size": "4",
-          "metadata": {},
-          "address": "12196"
         },
         {
           "name": "?getHeight@pgTerrainPatchBase@@QBEMHH@Z",
@@ -21663,6 +20931,100 @@
             "demangled_name": "public: float __thiscall pgVec2::normalize(void)"
           },
           "address": "827"
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "CSoundManager",
+      "measures": {
+        "total_code": "888",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "888",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CSoundManager::CSoundManager",
+          "size": "9",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CSoundManager::~CSoundManager",
+          "size": "23",
+          "metadata": {},
+          "address": "9"
+        },
+        {
+          "name": "CSoundManager::Initialize",
+          "size": "93",
+          "metadata": {},
+          "address": "32"
+        },
+        {
+          "name": "CSoundManager::FUN_1009b600",
+          "size": "214",
+          "metadata": {},
+          "address": "125"
+        },
+        {
+          "name": "CSoundManager::FUN_1009b6e0",
+          "size": "549",
+          "metadata": {},
+          "address": "339"
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "CSound",
+      "measures": {
+        "total_code": "622",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "622",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CSound::CSound",
+          "size": "123",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CSound::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "123"
+        },
+        {
+          "name": "CSound::~CSound",
+          "size": "109",
+          "metadata": {},
+          "address": "153"
+        },
+        {
+          "name": "CSound::FUN_1009ba20",
+          "size": "360",
+          "metadata": {},
+          "address": "262"
         }
       ],
       "metadata": {}

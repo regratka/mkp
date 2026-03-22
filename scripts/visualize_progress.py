@@ -12,6 +12,7 @@ def print_progress(file: Path, sizes, labels, matches):
     squarify.plot(sizes=sizes, norm_x=1000, norm_y=1000, label=labels, color=cmap(matches), pad=True, ax=axs)
     plt.axis("off")
     plt.savefig(str(file))
+    plt.close()
 
 def visualize_overall(report, output_file: Path):
     units = report["units"]

@@ -3145,9 +3145,9 @@
 ;FUN_1009aab0;0x1009aab0;0xc;__stdcall;;uchar
 ??0CMusicManager@@QAE@XZ;CMusicManager::CMusicManager;0x1009aac0;0x1f;__thiscall;;CMusicManager*;CMusicManager*
 ??1CMusicManager@@QAE@XZ;CMusicManager::~CMusicManager;0x1009aae0;0x59;__thiscall;;void;CMusicManager*
-?Initialize@CMusicManager@@QAEJPAUHWND__@@KK@Z;CMusicManager::Initialize;0x1009ab40;0x73;__thiscall;;long;CMusicManager*;HWND__*;ulong;ulong
-?SetSearchDirectory@CMusicManager@@QAEJPBD@Z;CMusicManager::SetSearchDirectory;0x1009abc0;0x55;__thiscall;;long;CMusicManager*;char*
-?GetDefaultAudioPath@CMusicManager@@QAEPAUIDirectMusicAudioPath@@XZ;CMusicManager::GetDefaultAudioPath;0x1009ac20;0x26;__thiscall;;uchar;CMusicManager*
+?Initialize@CMusicManager@@QAEJPAUHWND__@@KK@Z;CMusicManager::Initialize;0x1009ab40;0x73;__thiscall;;HRESULT;CMusicManager*;HWND__*;ulong;ulong
+?SetSearchDirectory@CMusicManager@@QAEJPBD@Z;CMusicManager::SetSearchDirectory;0x1009abc0;0x55;__thiscall;;HRESULT;CMusicManager*;char*
+?GetDefaultAudioPath@CMusicManager@@QAEPAUIDirectMusicAudioPath@@XZ;CMusicManager::GetDefaultAudioPath;0x1009ac20;0x26;__thiscall;;IDirectMusicAudioPath*;CMusicManager*
 ?CollectGarbage@CMusicManager@@QAEXXZ;CMusicManager::CollectGarbage;0x1009ac50;0xe;__thiscall;;void;CMusicManager*
 ?CreateSegmentFromFile@CMusicManager@@QAEJPAPAVCMusicSegment@@PADHH@Z;CMusicManager::CreateSegmentFromFile;0x1009ac60;0x11a;__thiscall;;long;CMusicManager*;CMusicSegment**;char*;int;int
 ?CreateSegmentFromResource@CMusicManager@@QAEJPAPAVCMusicSegment@@PAD1HH@Z;CMusicManager::CreateSegmentFromResource;0x1009ad80;0x19e;__thiscall;;long;CMusicManager*;CMusicSegment**;char*;char*;int;int
