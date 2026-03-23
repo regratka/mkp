@@ -15,7 +15,7 @@ CMusicScript* CMusicScript::scalar_destructor(uchar param_1) {
 }
 
 /* 1009B450-1009B470 00020	*/
-CMusicScript::CMusicScript(IDirectMusicPerformance8* param_1, IDirectMusicLoader8* param_2, uchar param_3) {
+CMusicScript::CMusicScript(IDirectMusicPerformance8* param_1, IDirectMusicLoader8* param_2, IDirectMusicScript8* param_3) {
 }
 
 /* 1009B470-1009B4A6 00036	*/

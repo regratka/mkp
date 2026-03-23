@@ -78,32 +78,151 @@ void CMusicManager::CollectGarbage() {
 }
 
 /* 1009AC60-1009AD7A 0011A	*/
-long CMusicManager::CreateSegmentFromFile(CMusicSegment** param_1, char* param_2, int param_3, int param_4) {
-	return 0;
+HRESULT CMusicManager::CreateSegmentFromFile(CMusicSegment** param_1, char* param_2, BOOL param_3, BOOL param_4) {
+	IDirectMusicSegment8* musicSegment = NULL;
+	wchar_t buffor[260];
+	mbtowc(buffor, param_2, 0xffffffff); // or mbstowcs
+	HRESULT result =  musicLoader->LoadObjectFromFile(CLSID_DirectMusicSegment, IID_IDirectMusicSegment8, buffor,(void**) &musicSegment);
+	if (result < S_OK) {
+		if (result == DMUS_E_LOADER_FAILEDOPEN) {
+			return DMUS_E_LOADER_FAILEDOPEN;
+		}
+		return result;
+	}
+
+	*param_1 = new CMusicSegment(musicPerformance, musicLoader, musicSegment);
+	if (*param_1 == NULL) {
+		return E_OUTOFMEMORY;
+	}
+
+	if (param_4) {
+		result = musicSegment->SetParam(GUID_StandardMIDIFile, 0xffffffff, 0, 0, NULL);
+		if (result < S_OK) {
+			return result;
+		}
+	    
+	}
+	if (param_3) {
+		result = (*param_1)->Download(NULL);
+		if (result < S_OK) {
+			return result;
+		}
+	}
+	return S_OK;
 }
 
 /* 1009AD80-1009AF1E 0019E	*/
-long CMusicManager::CreateSegmentFromResource(CMusicSegment** param_1, char* param_2, char* param_3, int param_4, int param_5) {
-	return 0;
+HRESULT CMusicManager::CreateSegmentFromResource(CMusicSegment** param_1, char* param_2, char* param_3, BOOL param_4, BOOL param_5) {
+	IDirectMusicSegment8* musicSegment = NULL;
+	HRSRC hrsrc = FindResource(NULL, param_2, param_3);
+	if (hrsrc == NULL) {
+		return E_FAIL;
+	}
+
+	HGLOBAL hGlobal = LoadResource(NULL, hrsrc);
+	if (!hGlobal) {
+		return E_FAIL;
+	}
+
+	DMUS_OBJECTDESC dmusObjectDesc;
+	DWORD resourceSize = SizeofResource(NULL, hrsrc);
+	ZeroMemory(&dmusObjectDesc, sizeof(DMUS_OBJECTDESC));
+	dmusObjectDesc.guidClass = CLSID_DirectMusicSegment;
+	dmusObjectDesc.dwSize = sizeof(DMUS_OBJECTDESC);
+	dmusObjectDesc.dwValidData = DMUS_OBJ_MEMORY | DMUS_OBJ_CLASS;
+	dmusObjectDesc.llMemLength = resourceSize;
+	dmusObjectDesc.pbMemData = NULL;
+	HRESULT result = musicLoader->GetObjectA(&dmusObjectDesc, IID_IDirectMusicSegment8, (void**) &musicSegment);
+	if (result < S_OK) {
+		if (result == DMUS_E_LOADER_FAILEDOPEN) {
+			return DMUS_E_LOADER_FAILEDOPEN;
+		}
+		return result;
+	}
+
+	*param_1 = new CMusicSegment(musicPerformance, musicLoader, musicSegment);
+	if (*param_1 == NULL) {
+		return E_OUTOFMEMORY;
+	}
+
+	if (param_5) {
+		result = musicSegment->SetParam(GUID_StandardMIDIFile, 0xffffffff, 0, 0, NULL);
+		if (result < S_OK) {
+			return result;
+		}  
+	}
+
+	if (param_4) {
+		result = (*param_1)->Download(NULL);
+		if (result < S_OK) {
+			return result;
+		}
+	}
+	return S_OK;
 }
 
 /* 1009AF20-1009AFF7 000D7	*/
-long CMusicManager::CreateScriptFromFile(CMusicScript** param_1, char* param_2) {
-	return 0;
+HRESULT CMusicManager::CreateScriptFromFile(CMusicScript** param_1, char* param_2) {
+	IDirectMusicScript8* musicScript = NULL;
+	wchar_t buffor[260];
+	mbtowc(buffor, param_2, 0xffffffff); // or mbstowcs
+	HRESULT result =  musicLoader->LoadObjectFromFile(CLSID_DirectMusicScript, IID_IDirectMusicScript8, buffor,(void**) &musicScript);
+	if (result < S_OK) {
+		return result;
+	}
+
+	result = musicScript->Init(musicPerformance, NULL);
+	if (result < S_OK) {
+		return result;
+	}
+	*param_1 = new CMusicScript(musicPerformance, musicLoader, musicScript);
+	if (*param_1 == NULL) {
+		return E_OUTOFMEMORY;
+	}
+	return result;
 }
 
 /* 1009B000-1009B047 00047	*/
-long CMusicManager::CreateChordMapFromFile(IDirectMusicChordMap** param_1, char* param_2) {
-	return 0;
+HRESULT CMusicManager::CreateChordMapFromFile(IDirectMusicChordMap8** param_1, char* param_2) {
+	wchar_t buffor[260];
+	mbtowc(buffor, param_2, 0xffffffff); // or mbstowcs
+	return musicLoader->LoadObjectFromFile(CLSID_DirectMusicChordMap, IID_IDirectMusicChordMap8, buffor, (void**)param_1);
 }
 
 /* 1009B050-1009B097 00047	*/
-long CMusicManager::CreateStyleFromFile(IDirectMusicStyle8** param_1, char* param_2) {
-	return 0;
+HRESULT CMusicManager::CreateStyleFromFile(IDirectMusicStyle8** param_1, char* param_2) {
+	wchar_t buffor[260];
+	mbtowc(buffor, param_2, 0xffffffff); // or mbstowcs
+	return musicLoader->LoadObjectFromFile(CLSID_DirectMusicStyle, IID_IDirectMusicStyle8, buffor, (void**)param_1);
 }
 
 /* 1009B0A0-1009B14A 000AA	*/
-long CMusicManager::GetMotifFromStyle(uchar param_1, char* param_2, char* param_3) {
-	return 0;
+HRESULT CMusicManager::GetMotifFromStyle(IDirectMusicSegment8** param_1, char* param_2, char* param_3) {
+	IDirectMusicStyle8* style = NULL;
+	IDirectMusicSegment* segment = NULL;
+	HRESULT result = CreateStyleFromFile(&style, param_2);
+	if (result < S_OK) {
+		return result;
+	}
+
+	if (style == NULL) {
+		return S_OK;
+	}
+
+	
+	wchar_t buffor[260];
+	mbtowc(buffor, param_3, 0xffffffff); // or mbstowcs
+	result = style->GetMotif(buffor, &segment);
+	if (style != NULL) {
+		style->Release();
+		style = NULL;
+	}
+
+	if (result < S_OK) {
+		return result;
+	}
+
+	segment->QueryInterface(IID_IDirectMusicSegment8, (void**)param_1);
+	return S_OK;
 }
 

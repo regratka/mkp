@@ -21,6 +21,9 @@ public:
 	/* 1009B3D0 */ long Stop(ulong param_1);
 	/* 1009B400 */ long SetRepeats(ulong param_1);
 	/* 1009B420 */ long GetStyle(IDirectMusicStyle8** param_1, ulong param_2);
+
+private:
+	/* 0x00 */ uchar f_00[0x18];
 };
 
 #endif

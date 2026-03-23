@@ -48,9 +48,9 @@ def visualize(report_filepath: Path, output_folder: Path):
         visualize_overall(report, output_folder/"progress.png")
 
         for unit in report["units"]:
-            visualize_unit(unit, output_folder/unit["name"])
+            visualize_unit(unit, output_folder/"progress"/unit["name"])
 
 if __name__ == "__main__":
     workspacePath = Path(__file__).parent.parent
     
-    visualize(workspacePath / "report.json", workspacePath / "progress")
+    visualize(workspacePath / "report.json", workspacePath)

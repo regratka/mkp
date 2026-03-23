@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 9.776253,
+    "fuzzy_match_percent": 10.013433,
     "total_code": "489327",
-    "matched_code": "28962",
-    "matched_code_percent": 5.9187417,
+    "matched_code": "29771",
+    "matched_code_percent": 6.0840707,
     "matched_data_percent": 100.0,
     "total_functions": 2184,
-    "matched_functions": 287,
-    "matched_functions_percent": 13.141026,
+    "matched_functions": 292,
+    "matched_functions_percent": 13.369964,
     "complete_data_percent": 100.0,
     "total_units": 111
   },
@@ -3081,14 +3081,14 @@
     {
       "name": "CMusicManager",
       "measures": {
-        "fuzzy_match_percent": 26.63773,
+        "fuzzy_match_percent": 97.92746,
         "total_code": "1628",
-        "matched_code": "405",
-        "matched_code_percent": 24.87715,
+        "matched_code": "1214",
+        "matched_code_percent": 74.57002,
         "matched_data_percent": 100.0,
         "total_functions": 14,
-        "matched_functions": 8,
-        "matched_functions_percent": 57.14286,
+        "matched_functions": 13,
+        "matched_functions_percent": 92.85714,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -3096,7 +3096,7 @@
         {
           "name": ".text",
           "size": "1628",
-          "fuzzy_match_percent": 26.63773,
+          "fuzzy_match_percent": 97.92746,
           "metadata": {}
         }
       ],
@@ -3176,7 +3176,7 @@
         {
           "name": "?CreateSegmentFromFile@CMusicManager@@QAEJPAPAVCMusicSegment@@PADHH@Z",
           "size": "282",
-          "fuzzy_match_percent": 2.4096386,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::CreateSegmentFromFile(class CMusicSegment **, char *, int, int)"
           },
@@ -3185,7 +3185,7 @@
         {
           "name": "?CreateSegmentFromResource@CMusicManager@@QAEJPAPAVCMusicSegment@@PAD1HH@Z",
           "size": "414",
-          "fuzzy_match_percent": 1.6666666,
+          "fuzzy_match_percent": 91.85,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::CreateSegmentFromResource(class CMusicSegment **, char *, char *, int, int)"
           },
@@ -3194,7 +3194,7 @@
         {
           "name": "?CreateScriptFromFile@CMusicManager@@QAEJPAPAVCMusicScript@@PAD@Z",
           "size": "215",
-          "fuzzy_match_percent": 2.9411764,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::CreateScriptFromFile(class CMusicScript **, char *)"
           },
@@ -3203,7 +3203,7 @@
         {
           "name": "?CreateChordMapFromFile@CMusicManager@@QAEJPAPAUIDirectMusicChordMap@@PAD@Z",
           "size": "71",
-          "fuzzy_match_percent": 6.0869565,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::CreateChordMapFromFile(struct IDirectMusicChordMap **, char *)"
           },
@@ -3212,7 +3212,7 @@
         {
           "name": "?CreateStyleFromFile@CMusicManager@@QAEJPAPAUIDirectMusicStyle8@@PAD@Z",
           "size": "71",
-          "fuzzy_match_percent": 6.0869565,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::CreateStyleFromFile(struct IDirectMusicStyle8**, char *)"
           },
@@ -3221,6 +3221,7 @@
         {
           "name": "?GetMotifFromStyle@CMusicManager@@QAEJPAPAUIDirectMusicSegment8@@PAD1@Z",
           "size": "170",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall CMusicManager::GetMotifFromStyle(struct IDirectMusicSegment8**, char *, char *)"
           },

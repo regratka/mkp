@@ -19,12 +19,12 @@ public:
 	/* 1009ABC0 */ HRESULT SetSearchDirectory(char const* param_1);
 	/* 1009AC20 */ IDirectMusicAudioPath* GetDefaultAudioPath();
 	/* 1009AC50 */ void CollectGarbage();
-	/* 1009AC60 */ long CreateSegmentFromFile(CMusicSegment** param_1, char* param_2, int param_3, int param_4);
-	/* 1009AD80 */ long CreateSegmentFromResource(CMusicSegment** param_1, char* param_2, char* param_3, int param_4, int param_5);
-	/* 1009AF20 */ long CreateScriptFromFile(CMusicScript** param_1, char* param_2);
-	/* 1009B000 */ long CreateChordMapFromFile(IDirectMusicChordMap** param_1, char* param_2);
-	/* 1009B050 */ long CreateStyleFromFile(IDirectMusicStyle8** param_1, char* param_2);
-	/* 1009B0A0 */ long GetMotifFromStyle(uchar param_1, char* param_2, char* param_3);
+	/* 1009AC60 */ HRESULT CreateSegmentFromFile(CMusicSegment** param_1, char* param_2, BOOL param_3, BOOL param_4);
+	/* 1009AD80 */ HRESULT CreateSegmentFromResource(CMusicSegment** param_1, char* param_2, char* param_3, BOOL param_4, BOOL param_5);
+	/* 1009AF20 */ HRESULT CreateScriptFromFile(CMusicScript** param_1, char* param_2);
+	/* 1009B000 */ HRESULT CreateChordMapFromFile(IDirectMusicChordMap8** param_1, char* param_2);
+	/* 1009B050 */ HRESULT CreateStyleFromFile(IDirectMusicStyle8** param_1, char* param_2);
+	/* 1009B0A0 */ HRESULT GetMotifFromStyle(IDirectMusicSegment8** param_1, char* param_2, char* param_3);
 
 private:
 	/* 0x00 */ BOOL initalizedCOMLibrary;

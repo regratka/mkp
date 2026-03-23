@@ -3149,12 +3149,12 @@
 ?SetSearchDirectory@CMusicManager@@QAEJPBD@Z;CMusicManager::SetSearchDirectory;0x1009abc0;0x55;__thiscall;;HRESULT;CMusicManager*;char*
 ?GetDefaultAudioPath@CMusicManager@@QAEPAUIDirectMusicAudioPath@@XZ;CMusicManager::GetDefaultAudioPath;0x1009ac20;0x26;__thiscall;;IDirectMusicAudioPath*;CMusicManager*
 ?CollectGarbage@CMusicManager@@QAEXXZ;CMusicManager::CollectGarbage;0x1009ac50;0xe;__thiscall;;void;CMusicManager*
-?CreateSegmentFromFile@CMusicManager@@QAEJPAPAVCMusicSegment@@PADHH@Z;CMusicManager::CreateSegmentFromFile;0x1009ac60;0x11a;__thiscall;;long;CMusicManager*;CMusicSegment**;char*;int;int
-?CreateSegmentFromResource@CMusicManager@@QAEJPAPAVCMusicSegment@@PAD1HH@Z;CMusicManager::CreateSegmentFromResource;0x1009ad80;0x19e;__thiscall;;long;CMusicManager*;CMusicSegment**;char*;char*;int;int
-?CreateScriptFromFile@CMusicManager@@QAEJPAPAVCMusicScript@@PAD@Z;CMusicManager::CreateScriptFromFile;0x1009af20;0xd7;__thiscall;;long;CMusicManager*;CMusicScript**;char*
-?CreateChordMapFromFile@CMusicManager@@QAEJPAPAUIDirectMusicChordMap@@PAD@Z;CMusicManager::CreateChordMapFromFile;0x1009b000;0x47;__thiscall;;long;CMusicManager*;IDirectMusicChordMap**;char*
-?CreateStyleFromFile@CMusicManager@@QAEJPAPAUIDirectMusicStyle8@@PAD@Z;CMusicManager::CreateStyleFromFile;0x1009b050;0x47;__thiscall;;long;CMusicManager*;IDirectMusicStyle8**;char*
-?GetMotifFromStyle@CMusicManager@@QAEJPAPAUIDirectMusicSegment8@@PAD1@Z;CMusicManager::GetMotifFromStyle;0x1009b0a0;0xaa;__thiscall;;long;CMusicManager*;uchar;char*;char*
+?CreateSegmentFromFile@CMusicManager@@QAEJPAPAVCMusicSegment@@PADHH@Z;CMusicManager::CreateSegmentFromFile;0x1009ac60;0x11a;__thiscall;;HRESULT;CMusicManager*;CMusicSegment**;char*;BOOL;BOOL
+?CreateSegmentFromResource@CMusicManager@@QAEJPAPAVCMusicSegment@@PAD1HH@Z;CMusicManager::CreateSegmentFromResource;0x1009ad80;0x19e;__thiscall;;HRESULT;CMusicManager*;CMusicSegment**;char*;char*;BOOL;BOOL
+?CreateScriptFromFile@CMusicManager@@QAEJPAPAVCMusicScript@@PAD@Z;CMusicManager::CreateScriptFromFile;0x1009af20;0xd7;__thiscall;;HRESULT;CMusicManager*;CMusicScript**;char*
+?CreateChordMapFromFile@CMusicManager@@QAEJPAPAUIDirectMusicChordMap@@PAD@Z;CMusicManager::CreateChordMapFromFile;0x1009b000;0x47;__thiscall;;HRESULT;CMusicManager*;IDirectMusicChordMap8**;char*
+?CreateStyleFromFile@CMusicManager@@QAEJPAPAUIDirectMusicStyle8@@PAD@Z;CMusicManager::CreateStyleFromFile;0x1009b050;0x47;__thiscall;;HRESULT;CMusicManager*;IDirectMusicStyle8**;char*
+?GetMotifFromStyle@CMusicManager@@QAEJPAPAUIDirectMusicSegment8@@PAD1@Z;CMusicManager::GetMotifFromStyle;0x1009b0a0;0xaa;__thiscall;;HRESULT;CMusicManager*;IDirectMusicSegment8**;char*;char*
 ??0CMusicSegment@@QAE@PAUIDirectMusicPerformance8@@PAUIDirectMusicLoader8@@PAUIDirectMusicSegment8@@@Z;CMusicSegment::CMusicSegment;0x1009b150;0x6f;__thiscall;;CMusicSegment*;CMusicSegment*;IDirectMusicPerformance8*;IDirectMusicLoader8*;IDirectMusicSegment8*
 ??1CMusicSegment@@UAE@XZ;CMusicSegment::~CMusicSegment;0x1009b1c0;0x69;__thiscall;;void;CMusicSegment*
 ?Play@CMusicSegment@@QAEJKPAUIDirectMusicAudioPath@@@Z;CMusicSegment::Play;0x1009b230;0x59;__thiscall;;long;CMusicSegment*;ulong;uchar
@@ -3165,7 +3165,7 @@
 ?Stop@CMusicSegment@@QAEJK@Z;CMusicSegment::Stop;0x1009b3d0;0x2b;__thiscall;;long;CMusicSegment*;ulong
 ?SetRepeats@CMusicSegment@@QAEJK@Z;CMusicSegment::SetRepeats;0x1009b400;0x1d;__thiscall;;long;CMusicSegment*;ulong
 ?GetStyle@CMusicSegment@@QAEJPAPAUIDirectMusicStyle8@@K@Z;CMusicSegment::GetStyle;0x1009b420;0x21;__thiscall;;long;CMusicSegment*;IDirectMusicStyle8**;ulong
-??0CMusicScript@@QAE@PAUIDirectMusicPerformance8@@PAUIDirectMusicLoader8@@PAUIDirectMusicScript@@@Z;CMusicScript::CMusicScript;0x1009b450;0x20;__thiscall;;void;CMusicScript*;IDirectMusicPerformance8*;IDirectMusicLoader8*;uchar
+??0CMusicScript@@QAE@PAUIDirectMusicPerformance8@@PAUIDirectMusicLoader8@@PAUIDirectMusicScript@@@Z;CMusicScript::CMusicScript;0x1009b450;0x20;__thiscall;;void;CMusicScript*;IDirectMusicPerformance8*;IDirectMusicLoader8*;IDirectMusicScript8*
 ??1CMusicScript@@UAE@XZ;CMusicScript::~CMusicScript;0x1009b470;0x36;__thiscall;;void;CMusicScript*
 ?CallRoutine@CMusicScript@@QAEJPAD@Z;CMusicScript::CallRoutine;0x1009b4b0;0x37;__thiscall;;long;CMusicScript*;char*
 ?SetVariableNumber@CMusicScript@@QAEJPADJ@Z;CMusicScript::SetVariableNumber;0x1009b4f0;0x3f;__thiscall;;long;CMusicScript*;char*;long
