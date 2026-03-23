@@ -1,25 +1,52 @@
 #include "CMusicSegment.h"
 
-/* 100020F0-1000211D 0002D	*/
-CMusicSegment::CMusicSegment(CMusicSegment* param_1) {
-}
-
-/* 10002120-10002147 00027	*/
-CMusicSegment* CMusicSegment::operator=(CMusicSegment* param_1) {
-	return 0;
-}
-
-/* 10002150-100021A4 00054	*/
-CMusicSegment* CMusicSegment::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 1009B150-1009B1BF 0006F	*/
 CMusicSegment::CMusicSegment(IDirectMusicPerformance8* param_1, IDirectMusicLoader8* param_2, IDirectMusicSegment8* param_3) {
+	directMusicPerformance = param_1;
+	directMusicLoader = param_2;
+	directMusicSegment = param_3;
+
+	directMusicAudioPath = NULL;
+	downloaded = FALSE;
+
+	IUnknown* audioPathConfig = NULL;
+	HRESULT result = directMusicSegment->GetAudioPathConfig(&audioPathConfig);
+	if (result < S_OK) {
+		return;
+	}
+
+	directMusicPerformance->CreateAudioPath(audioPathConfig, TRUE, &directMusicAudioPath);
+	if (audioPathConfig != NULL) {
+		audioPathConfig->Release();
+	}
 }
 
 /* 1009B1C0-1009B229 00069	*/
 CMusicSegment::~CMusicSegment() {
+	if (directMusicSegment != NULL) {
+		if (directMusicLoader != NULL) {
+			directMusicLoader->ReleaseObjectByUnknown(directMusicSegment);
+		}
+
+		if (downloaded) {
+			if (directMusicAudioPath != NULL) {
+				directMusicSegment->Unload(directMusicAudioPath);
+			} else {
+				directMusicSegment->Unload(directMusicPerformance);
+			}
+		}
+
+		if (directMusicAudioPath != NULL) {
+			directMusicAudioPath->Release();
+			directMusicAudioPath = NULL;
+		}
+		
+		if (directMusicSegment != NULL) {
+			directMusicSegment->Release();
+			directMusicSegment = NULL;
+		}
+	}
+	directMusicPerformance = NULL;
 }
 
 /* 1009B230-1009B289 00059	*/
