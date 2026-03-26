@@ -28,3 +28,10 @@ def load_units(unitsPath: str):
             unitNamespaces = unitParts[1:]
             namespacesByUnit[unitName] = unitNamespaces
     return namespacesByUnit
+
+def load_completed(completePath: str):
+    completed  = set()
+    with open(completePath) as complete_f:
+        for line in complete_f.read().splitlines():
+            completed.add(line)
+    return completed

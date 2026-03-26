@@ -4,7 +4,7 @@ from helpers import has_functions
 
 WORKSPACE_PATH = Path(__file__).parent.parent
 
-def generateObjdiffConfig(target_dir: Path, base_dir: Path, units: dict[str, list[str]], mappings: dict[str, object], output_dir: Path):
+def generateObjdiffConfig(target_dir: Path, base_dir: Path, units: dict[str, list[str]], mappings: dict[str, object], completed: set[str], output_dir: Path):
     config = {}
     config["custom_make"] = "ninja"
     config["target_dir"] = str(target_dir)
@@ -22,6 +22,11 @@ def generateObjdiffConfig(target_dir: Path, base_dir: Path, units: dict[str, lis
         conf_unit["target_path"] = str(target_dir / (unit + ".obj"))
         conf_unit["base_path"] = str(base_dir / (unit + ".obj"))
         conf_unit["reverse_fn_order"] = False
+
+        if unit in completed:
+            metadata = {}
+            metadata["complete"] = True
+            conf_unit["metadata"] = metadata
         conf_units.append(conf_unit)
 
     config["units"] = conf_units
