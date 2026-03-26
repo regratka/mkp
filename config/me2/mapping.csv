@@ -33,10 +33,10 @@
 ??4CMusicManager@@QAEAAV0@ABV0@@Z;CMusicManager::operator=;0x100020d0;0x1d;__thiscall;;uchar;CMusicManager*;uchar
 ??0CMusicSegment@@QAE@ABV0@@Z;CMusicSegment::CMusicSegment;0x100020f0;0x2d;__thiscall;;uchar;CMusicSegment*;CMusicSegment*
 ??4CMusicSegment@@QAEAAV0@ABV0@@Z;CMusicSegment::operator=;0x10002120;0x27;__thiscall;;CMusicSegment*;CMusicSegment*;CMusicSegment*
-;CMusicSegment::scalar_destructor;0x10002150;0x54;__thiscall;;CMusicSegment*;CMusicSegment*;uchar
+??_ECMusicSegment@@UAEPAXI@Z;CMusicSegment::vector_deleting_constructor;0x10002150;0x54;__thiscall;;CMusicSegment*;CMusicSegment*;uchar
 ??0CMusicScript@@QAE@ABV0@@Z;CMusicScript::CMusicScript;0x100021b0;0x21;__thiscall;;uchar;CMusicScript*;CMusicScript*
 ??4CMusicScript@@QAEAAV0@ABV0@@Z;CMusicScript::operator=;0x100021e0;0x1b;__thiscall;;CMusicScript*;CMusicScript*;CMusicScript*
-;CMusicScript::scalar_destructor;0x10002200;0x54;__thiscall;;CMusicScript*;CMusicScript*;uchar
+??_ECMusicScript@@UAEPAXI@Z;CMusicScript::vector_deleting_constructor;0x10002200;0x54;__thiscall;;CMusicScript*;CMusicScript*;uchar
 ?SetLevelDirectory@cMagGameObject@@QAEXPAD@Z;cMagGameObject::SetLevelDirectory;0x10002260;0x40;__thiscall;;void;cMagGameObject*;char*
 ?GetViewMatrix@cMagGameObject@@QAEAAUD3DXMATRIX@@XZ;cMagGameObject::GetViewMatrix;0x100022a0;0x7;__thiscall;;D3DXMATRIX*;cMagGameObject*
 ?GetProjMatrix@cMagGameObject@@QAEAAUD3DXMATRIX@@XZ;cMagGameObject::GetProjMatrix;0x100022b0;0x7;__thiscall;;D3DXMATRIX*;cMagGameObject*
@@ -3167,9 +3167,9 @@
 ?GetStyle@CMusicSegment@@QAEJPAPAUIDirectMusicStyle8@@K@Z;CMusicSegment::GetStyle;0x1009b420;0x21;__thiscall;;HRESULT;CMusicSegment*;IDirectMusicStyle8**;ulong
 ??0CMusicScript@@QAE@PAUIDirectMusicPerformance8@@PAUIDirectMusicLoader8@@PAUIDirectMusicScript@@@Z;CMusicScript::CMusicScript;0x1009b450;0x20;__thiscall;;void;CMusicScript*;IDirectMusicPerformance8*;IDirectMusicLoader8*;IDirectMusicScript8*
 ??1CMusicScript@@UAE@XZ;CMusicScript::~CMusicScript;0x1009b470;0x36;__thiscall;;void;CMusicScript*
-?CallRoutine@CMusicScript@@QAEJPAD@Z;CMusicScript::CallRoutine;0x1009b4b0;0x37;__thiscall;;long;CMusicScript*;char*
-?SetVariableNumber@CMusicScript@@QAEJPADJ@Z;CMusicScript::SetVariableNumber;0x1009b4f0;0x3f;__thiscall;;long;CMusicScript*;char*;long
-?GetVariableNumber@CMusicScript@@QAEJPADPAJ@Z;CMusicScript::GetVariableNumber;0x1009b530;0x3f;__thiscall;;long;CMusicScript*;char*;long*
+?CallRoutine@CMusicScript@@QAEJPAD@Z;CMusicScript::CallRoutine;0x1009b4b0;0x37;__thiscall;;HRESULT;CMusicScript*;char*
+?SetVariableNumber@CMusicScript@@QAEJPADJ@Z;CMusicScript::SetVariableNumber;0x1009b4f0;0x3f;__thiscall;;HRESULT;CMusicScript*;char*;long
+?GetVariableNumber@CMusicScript@@QAEJPADPAJ@Z;CMusicScript::GetVariableNumber;0x1009b530;0x3f;__thiscall;;HRESULT;CMusicScript*;char*;long*
 ;CSoundManager::CSoundManager;0x1009b570;0x9;__thiscall;;CSoundManager*;CSoundManager*
 ;CSoundManager::~CSoundManager;0x1009b580;0x17;__thiscall;;void;CSoundManager*
 ;CSoundManager::Initialize;0x1009b5a0;0x5d;__thiscall;;HRESULT;CSoundManager*;HWND__*;uint;uint;uint;uint
