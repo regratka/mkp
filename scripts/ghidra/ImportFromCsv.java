@@ -60,6 +60,7 @@ public class ImportFromCsv extends GhidraScript
                     // Create the namespace
                     curNamespace = this.getCurrentProgram().getSymbolTable().createNameSpace(curNamespace, curElem,
                                                                                              SourceType.USER_DEFINED);
+                    printf("Created namespace %s\n", curNamespace.getName(true));
                 }
             }
 
@@ -80,12 +81,6 @@ public class ImportFromCsv extends GhidraScript
             //     }
             //     fun = getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range, SourceType.USER_DEFINED);
             // }
-
-            if (!mangledName.isEmpty() && getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
-                printf("Creating label %s\n", mangledName);
-                this.getCurrentProgram().getSymbolTable().createLabel(addr, mangledName, SourceType.USER_DEFINED);
-            }
-
             fun.setParentNamespace(curNamespace);
             try
             {
@@ -93,6 +88,11 @@ public class ImportFromCsv extends GhidraScript
             } catch (DuplicateNameException ex)
             {
                 printf("DuplicateNameException for %s at %x\n", name, addr.getOffset());
+            }
+
+            if (!mangledName.isEmpty() && getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
+                printf("Creating label %s\n", mangledName);
+                createLabel(addr, mangledName, false);
             }
         }
 

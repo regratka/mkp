@@ -3170,11 +3170,11 @@
 ?CallRoutine@CMusicScript@@QAEJPAD@Z;CMusicScript::CallRoutine;0x1009b4b0;0x37;__thiscall;;HRESULT;CMusicScript*;char*
 ?SetVariableNumber@CMusicScript@@QAEJPADJ@Z;CMusicScript::SetVariableNumber;0x1009b4f0;0x3f;__thiscall;;HRESULT;CMusicScript*;char*;long
 ?GetVariableNumber@CMusicScript@@QAEJPADPAJ@Z;CMusicScript::GetVariableNumber;0x1009b530;0x3f;__thiscall;;HRESULT;CMusicScript*;char*;long*
-;CSoundManager::CSoundManager;0x1009b570;0x9;__thiscall;;CSoundManager*;CSoundManager*
-;CSoundManager::~CSoundManager;0x1009b580;0x17;__thiscall;;void;CSoundManager*
-;CSoundManager::Initialize;0x1009b5a0;0x5d;__thiscall;;HRESULT;CSoundManager*;HWND__*;uint;uint;uint;uint
-;CSoundManager::FUN_1009b600;0x1009b600;0xd6;__thiscall;;HRESULT;CSoundManager*
-;CSoundManager::FUN_1009b6e0;0x1009b6e0;0x225;__thiscall;;int;CSoundManager*;uint*;char*;uint;uint;uint;uint;uint;uint
+??0CSoundManager@@QAE@XZ;CSoundManager::CSoundManager;0x1009b570;0x9;__thiscall;;CSoundManager*;CSoundManager*
+??1CSoundManager@@QAE@XZ;CSoundManager::~CSoundManager;0x1009b580;0x17;__thiscall;;void;CSoundManager*
+?Initialize@CSoundManager@@QAEJPAUHWND__@@IIII@Z;CSoundManager::Initialize;0x1009b5a0;0x5d;__thiscall;;HRESULT;CSoundManager*;HWND__*;uint;uint;uint;uint
+?FUN_1009b600@CSoundManager@@QAEJIII@Z;CSoundManager::FUN_1009b600;0x1009b600;0xd6;__thiscall;;HRESULT;CSoundManager*
+?FUN_1009b6e0@CSoundManager@@QAEHPAIPADIIIIII@Z;CSoundManager::FUN_1009b6e0;0x1009b6e0;0x225;__thiscall;;int;CSoundManager*;uint*;char*;uint;uint;uint;uint;uint;uint
 ;CSound::CSound;0x1009b910;0x7b;__thiscall;;CSound*;CSound*;int;uint;uint;uint
 ;CSound::scalar_destructor;0x1009b990;0x1e;__thiscall;;CSound*;CSound*;uchar
 ;CSound::~CSound;0x1009b9b0;0x6d;__thiscall;;void;CSound*

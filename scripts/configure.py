@@ -22,7 +22,7 @@ def configure(config_dir: Path, build_dir: Path, include_dir: Path, src_dir: Pat
     mappings = load_mappings(str(config_dir/"mapping.csv"))
     completed = load_completed(str(config_dir/"completed.csv"))
 
-    # exportObjs(str(config_dir/"mapping.csv"), str(config_dir/"units_listing.csv"), str(build_dir/"orig"), str(importFile))
+    exportObjs(str(config_dir/"mapping.csv"), str(config_dir/"units_listing.csv"), str(build_dir/"orig"), str(importFile))
     generateSources(mappings, units, src_dir, include_dir)
     generateNinja(units, mappings, build_dir/"src", src_dir, include_dir, config_dir.parent.parent)
     generateObjdiffConfig(build_dir/"orig", build_dir/"src", units, mappings, completed, config_dir.parent.parent)

@@ -120,18 +120,19 @@ HRESULT CMusicManager::CreateSegmentFromResource(CMusicSegment** param_1, char* 
 	}
 
 	HGLOBAL hGlobal = LoadResource(NULL, hrsrc);
-	if (!hGlobal) {
+	if (hGlobal == NULL) {
 		return E_FAIL;
 	}
-
-	DMUS_OBJECTDESC dmusObjectDesc;
 	DWORD resourceSize = SizeofResource(NULL, hrsrc);
+	
+	DMUS_OBJECTDESC dmusObjectDesc;
 	ZeroMemory(&dmusObjectDesc, sizeof(DMUS_OBJECTDESC));
 	dmusObjectDesc.guidClass = CLSID_DirectMusicSegment;
 	dmusObjectDesc.dwSize = sizeof(DMUS_OBJECTDESC);
 	dmusObjectDesc.dwValidData = DMUS_OBJ_MEMORY | DMUS_OBJ_CLASS;
 	dmusObjectDesc.llMemLength = resourceSize;
 	dmusObjectDesc.pbMemData = NULL;
+	
 	HRESULT result = musicLoader->GetObjectA(&dmusObjectDesc, IID_IDirectMusicSegment8, (void**) &musicSegment);
 	if (result < S_OK) {
 		if (result == DMUS_E_LOADER_FAILEDOPEN) {
