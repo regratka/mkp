@@ -4,11 +4,6 @@
 CSound::CSound(int param_1, uint param_2, uint param_3, uint param_4) {
 }
 
-/* 1009B990-1009B9AE 0001E	*/
-CSound* CSound::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 1009B9B0-1009BA1D 0006D	*/
 CSound::~CSound() {
 }

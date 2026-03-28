@@ -1,5 +1,6 @@
 #include "CSoundManager.h"
 
+#include "CSoundUnknClass.h"
 
 /* 1009B570-1009B579 00009	*/
 CSoundManager::CSoundManager() {
@@ -77,7 +78,31 @@ HRESULT CSoundManager::FUN1009b600(uint param_1, uint param_2, uint param_3) {
 }
 
 /* 1009B6E0-1009B905 00225	*/
-int CSoundManager::FUN1009b6e0(uint* param_1, char* param_2, uint param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8) {
+int CSoundManager::FUN1009b6e0(CSound** param_1, char* param_2, uint param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8) {
+	if (sound == NULL) {
+		return CO_E_NOTINITIALIZED;
+	}
+
+	if (param_2 == NULL || param_1 == NULL || param_8 == 0) {
+		return E_INVALIDARG;
+	}
+
+	IDirectSoundBuffer8** soundBuffers = new IDirectSoundBuffer8*[param_8];
+	if (soundBuffers == NULL) {
+		return E_OUTOFMEMORY;
+	}
+
+	CSoundUnknClass* soundUnkn = new CSoundUnknClass();
+	
+	if (soundUnkn == NULL) {
+		delete[] soundBuffers;
+		return E_OUTOFMEMORY;
+	}
+
+	soundUnkn->FUN1009bce0(param_2, NULL, 1);
+
+
+
 	return 0;
 }
 

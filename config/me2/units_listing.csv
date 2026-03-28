@@ -50,6 +50,9 @@ CSimpleLine,CSimpleLine
 CSplineCamera,CSplineCamera
 CSplineControlPoint,CSplineControlPoint
 CState,CState
+CSound,CSound
+CSoundManager,CSoundManager
+CSoundUnknClass,CSoundUnknClass
 CTrack,CTrack
 CTrackData,CTrackData
 CUSTOMVERTEXM,CUSTOMVERTEXM
@@ -107,5 +110,3 @@ pgTerrainPatchBase,pgTerrainPatchBase
 pgTerrainPatchMorphHW,pgTerrainPatchMorphHW
 pgTerrainPatchMorphSW,pgTerrainPatchMorphSW
 pgVec2,pgVec2
-CSoundManager,CSoundManager
-CSound,CSound

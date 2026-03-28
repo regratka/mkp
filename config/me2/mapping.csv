@@ -3173,8 +3173,8 @@
 ??0CSoundManager@@QAE@XZ;CSoundManager::CSoundManager;0x1009b570;0x9;__thiscall;;CSoundManager*;CSoundManager*
 ??1CSoundManager@@QAE@XZ;CSoundManager::~CSoundManager;0x1009b580;0x17;__thiscall;;void;CSoundManager*
 ?Initialize@CSoundManager@@QAEJPAUHWND__@@IIII@Z;CSoundManager::Initialize;0x1009b5a0;0x5d;__thiscall;;HRESULT;CSoundManager*;HWND__*;uint;uint;uint;uint
-?FUN_1009b600@CSoundManager@@QAEJIII@Z;CSoundManager::FUN_1009b600;0x1009b600;0xd6;__thiscall;;HRESULT;CSoundManager*
-?FUN_1009b6e0@CSoundManager@@QAEHPAIPADIIIIII@Z;CSoundManager::FUN_1009b6e0;0x1009b6e0;0x225;__thiscall;;int;CSoundManager*;uint*;char*;uint;uint;uint;uint;uint;uint
+?FUN1009b600@CSoundManager@@QAEJIII@Z;CSoundManager::FUN1009b600;0x1009b600;0xd6;__thiscall;;HRESULT;CSoundManager*
+?FUN1009b6e0@CSoundManager@@QAEHPAIPADIIIIII@Z;CSoundManager::FUN1009b6e0;0x1009b6e0;0x225;__thiscall;;int;CSoundManager*;CSound**;char*;uint;uint;uint;uint;uint;uint
 ;CSound::CSound;0x1009b910;0x7b;__thiscall;;CSound*;CSound*;int;uint;uint;uint
 ;CSound::scalar_destructor;0x1009b990;0x1e;__thiscall;;CSound*;CSound*;uchar
 ;CSound::~CSound;0x1009b9b0;0x6d;__thiscall;;void;CSound*
@@ -3182,10 +3182,10 @@
 ;FUN_1009bb90;0x1009bb90;0x72;__stdcall;;int;int*;uint*
 ;FUN_1009bc10;0x1009bc10;0x1e;__thiscall;;int;void*;uint
 ;FUN_1009bc30;0x1009bc30;0x58;__fastcall;;uint;int
-;FUN_1009bc90;0x1009bc90;0x19;__fastcall;;uchar;uint*
-;FUN_1009bcb0;0x1009bcb0;0x29;__fastcall;;uchar;uint*
-;FUN_1009bce0;0x1009bce0;0x1ee;__thiscall;;uint;void*;char*;short*;int
-;FUN_1009bed0;0x1009bed0;0x190;__fastcall;;uint;int*
+;CSoundUnknClass::CSoundUnknClass;0x1009bc90;0x19;__thiscall;;CSoundUnknClass*;CSoundUnknClass*
+;CSoundUnknClass::~CSoundUnknClass;0x1009bcb0;0x29;__thiscall;;void;CSoundUnknClass*
+;CSoundUnknClass::FUN1009bce0;0x1009bce0;0x1ee;__thiscall;;uint;CSoundUnknClass*;char*;short*;int
+;CSoundUnknClass::FUN1009bed0;0x1009bed0;0x190;__thiscall;;uint;CSoundUnknClass*
 ;FUN_1009c060;0x1009c060;0xb6;__fastcall;;uint;int
 ;FUN_1009c120;0x1009c120;0x17d;__thiscall;;uint;void*;uint*;uint;uint*
 ;FUN_1009c2a0;0x1009c2a0;0x14c;__fastcall;;uint;uint
@@ -3831,8 +3831,8 @@
 ;FUN_100c6c20;0x100c6c20;0x10;__stdcall;;uchar;int
 ;FUN_100c6c30;0x100c6c30;0x3a;__stdcall;;uint;uint;uint*
 ;CBaseVideoRenderer::CBaseVideoRenderer;0x100c6ce0;0x9d;__thiscall;;uint*;CBaseVideoRenderer*;_GUID*;char*;IUnknown*;long*
-;FUN_100c6d80;0x100c6d80;0x1e;__thiscall;;int*;void*;uchar
-;FUN_100c6da0;0x100c6da0;0x2d;__fastcall;;uchar;int*
+;CBaseVideoRenderer::scalar_destructor;0x100c6d80;0x1e;__thiscall;;int*;CBaseVideoRenderer*;uchar
+;CBaseVideoRenderer::~CBaseVideoRenderer;0x100c6da0;0x2d;__thiscall;;void;CBaseVideoRenderer*
 ;CBaseVideoRenderer::ResetStreamingTimes;0x100c6dd0;0xbf;__thiscall;;long;CBaseVideoRenderer*
 ;FUN_100c6ea0;0x100c6ea0;0x19;__fastcall;;uint;int
 ;FUN_100c6ec0;0x100c6ec0;0x17;__thiscall;;uchar;void*;uint;uint
