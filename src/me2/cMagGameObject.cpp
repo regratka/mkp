@@ -2329,10 +2329,6 @@ ulong cMagGameObject::GetDXVersion() {
 	return 0;
 }
 
-/* 1009CC10-1009CCD3 000C3	*/
-uint cMagGameObject::FUN_1009cc10(char* param_1) {
-	return 0;
-}
 
 /* 1009DF70-1009E862 008F2	*/
 int cMagGameObject::CreateObject(char* param_1) {

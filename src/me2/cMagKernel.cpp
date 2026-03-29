@@ -16,6 +16,7 @@ cMagKernel::cMagKernel() : cMagLog(), magLog() {
     this->enableOnInputKeyHandler = false;
     this->enabledOnInputMouseHandler3 = false;
     this->objectParam = 0;
+    
 }
 
 /* 10011250-10011257 00007	*/

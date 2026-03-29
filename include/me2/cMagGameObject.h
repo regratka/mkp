@@ -6,13 +6,15 @@
 #include <vector>
 #include <CMATH>
 
+#include <dmutil.h>
+#include <dsutil.h>
+
+
 #include "CollisionManager.h"
 #include "cMagObjectList.h"
 #include "MagGrid.h"
 #include "MagTextureMgr.h"
 #include "CMagInput.h"
-#include "CMusicManager.h"
-#include "CSoundManager.h"
 
 typedef long (WINAPIV *renderCallback) ();
 
@@ -207,7 +209,6 @@ public:
 	/* 1002B710 */ HRESULT CreateTextureFromFileInZip(IDirect3DDevice8* param_1, char const* param_2, char const* param_3, IDirect3DTexture8** param_4);
 	/* 1005A5F0 */ void AddLightmapMesh(Mesh* param_1, char* param_2);
 	/* 1006CED0 */ ulong GetDXVersion();
-	/* 1009CC10 */ uint FUN_1009cc10(char* param_1);
 	/* 1009DF70 */ int CreateObject(char* param_1);
 
 private:

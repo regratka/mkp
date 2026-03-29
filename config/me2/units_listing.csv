@@ -15,15 +15,13 @@ CDynObjTree,CDynObjTree
 CExtendedParameterLoader,CExtendedParameterLoader
 CFreeCamera,CFreeCamera
 CGame,CGame
+CJVMData,CJVMData
 CLensFlare,CLensFlare
 CLensFlareSpot,CLensFlareSpot
 CLevel,CLevel
 CLevelsManager,CLevelsManager
 CMagnumEngine,CMagnumEngine
 CMemoryManager,CMemoryManager
-CMusicManager,CMusicManager
-CMusicScript,CMusicScript
-CMusicSegment,CMusicSegment
 COctree,COctree
 CParticle,CParticle
 CParticleEmitter,CParticleEmitter
@@ -50,9 +48,6 @@ CSimpleLine,CSimpleLine
 CSplineCamera,CSplineCamera
 CSplineControlPoint,CSplineControlPoint
 CState,CState
-CSound,CSound
-CSoundManager,CSoundManager
-CSoundUnknClass,CSoundUnknClass
 CTrack,CTrack
 CTrackData,CTrackData
 CUSTOMVERTEXM,CUSTOMVERTEXM

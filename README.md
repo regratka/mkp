@@ -28,3 +28,4 @@ python scripts\visualize_progress.py
 Setup:
 * msvc 6.6
 * directX 8.1
+* directShow samples
