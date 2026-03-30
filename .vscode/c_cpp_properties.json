@@ -5,8 +5,9 @@
             "includePath": [
                 "${workspaceFolder}/tools/msvc66/**",
                 "${workspaceFolder}/tools/dx81/**",
-                "${workspaceFolder}/include/**",
-                "${workspaceFolder}/tools/Multimedia/Common/include**"
+                "${workspaceFolder}/tools/Multimedia/Common/include**",
+                "${workspaceFolder}/tools/jni/**",
+                "${workspaceFolder}/include/**"
             ],
             "defines": [
             ],

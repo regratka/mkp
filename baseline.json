@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 9.76826,
-    "total_code": "484918",
-    "matched_code": "28557",
-    "matched_code_percent": 5.8890367,
+    "fuzzy_match_percent": 9.783555,
+    "total_code": "486153",
+    "matched_code": "28752",
+    "matched_code_percent": 5.9141874,
     "matched_data_percent": 100.0,
-    "total_functions": 2140,
-    "matched_functions": 279,
-    "matched_functions_percent": 13.037384,
+    "total_functions": 2146,
+    "matched_functions": 280,
+    "matched_functions_percent": 13.04753,
     "complete_data_percent": 100.0,
-    "total_units": 106
+    "total_units": 107
   },
   "units": [
     {
@@ -2361,6 +2361,83 @@
             "demangled_name": "public: long __thiscall MagnumMesh::_SetMultipleTexture(float)"
           },
           "address": "30468"
+        }
+      ],
+      "metadata": {}
+    },
+    {
+      "name": "CJVMData",
+      "measures": {
+        "fuzzy_match_percent": 5.2419353,
+        "total_code": "3720",
+        "matched_code": "195",
+        "matched_code_percent": 5.2419353,
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "matched_functions": 1,
+        "matched_functions_percent": 12.5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3720",
+          "fuzzy_match_percent": 5.2419353,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CJVMData::CJVMData",
+          "size": "655",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CJVMData::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "655"
+        },
+        {
+          "name": "CJVMData::~CJVMData",
+          "size": "387",
+          "metadata": {},
+          "address": "685"
+        },
+        {
+          "name": "?NewObject@CJVMData@@QAEPAV_jobject@@PAD@Z",
+          "size": "195",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class _jobject * __thiscall CJVMData::NewObject(char *)"
+          },
+          "address": "1072"
+        },
+        {
+          "name": "CJVMData::CreateObject",
+          "size": "2290",
+          "metadata": {},
+          "address": "1267"
+        },
+        {
+          "name": "CJVMData::FUN_1009e960",
+          "size": "24",
+          "metadata": {},
+          "address": "3557"
+        },
+        {
+          "name": "CJVMData::FUN_1009e9f0",
+          "size": "119",
+          "metadata": {},
+          "address": "3581"
+        },
+        {
+          "name": "CJVMData::FUN_1009ec60",
+          "size": "20",
+          "metadata": {},
+          "address": "3700"
         }
       ],
       "metadata": {}
@@ -10874,22 +10951,22 @@
     {
       "name": "cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 68.19664,
-        "total_code": "34797",
+        "fuzzy_match_percent": 73.4414,
+        "total_code": "32312",
         "matched_code": "10777",
-        "matched_code_percent": 30.971062,
+        "matched_code_percent": 33.352936,
         "matched_data_percent": 100.0,
-        "total_functions": 146,
+        "total_functions": 144,
         "matched_functions": 107,
-        "matched_functions_percent": 73.287674,
+        "matched_functions_percent": 74.30556,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "34797",
-          "fuzzy_match_percent": 68.19664,
+          "size": "32312",
+          "fuzzy_match_percent": 73.4414,
           "metadata": {}
         }
       ],
@@ -12185,18 +12262,6 @@
             "demangled_name": "public: unsigned long __thiscall cMagGameObject::GetDXVersion(void)"
           },
           "address": "32309"
-        },
-        {
-          "name": "cMagGameObject::FUN_1009cc10",
-          "size": "195",
-          "metadata": {},
-          "address": "32312"
-        },
-        {
-          "name": "cMagGameObject::CreateObject",
-          "size": "2290",
-          "metadata": {},
-          "address": "32507"
         }
       ],
       "metadata": {}
