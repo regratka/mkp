@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 9.783555,
-    "total_code": "486153",
-    "matched_code": "28752",
-    "matched_code_percent": 5.9141874,
+    "fuzzy_match_percent": 10.699745,
+    "total_code": "490964",
+    "matched_code": "28991",
+    "matched_code_percent": 5.904914,
     "matched_data_percent": 100.0,
-    "total_functions": 2146,
-    "matched_functions": 280,
-    "matched_functions_percent": 13.04753,
+    "total_functions": 2149,
+    "matched_functions": 283,
+    "matched_functions_percent": 13.168916,
     "complete_data_percent": 100.0,
     "total_units": 107
   },
@@ -2368,42 +2368,51 @@
     {
       "name": "CJVMData",
       "measures": {
-        "fuzzy_match_percent": 5.2419353,
-        "total_code": "3720",
-        "matched_code": "195",
-        "matched_code_percent": 5.2419353,
+        "fuzzy_match_percent": 60.530396,
+        "total_code": "8531",
+        "matched_code": "434",
+        "matched_code_percent": 5.087329,
         "matched_data_percent": 100.0,
-        "total_functions": 8,
-        "matched_functions": 1,
-        "matched_functions_percent": 12.5,
+        "total_functions": 11,
+        "matched_functions": 4,
+        "matched_functions_percent": 36.363636,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "3720",
-          "fuzzy_match_percent": 5.2419353,
+          "size": "8531",
+          "fuzzy_match_percent": 60.530396,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CJVMData::CJVMData",
+          "name": "??0CJVMData@@QAE@PAUJNIEnv_@@@Z",
           "size": "655",
-          "metadata": {},
+          "fuzzy_match_percent": 21.263514,
+          "metadata": {
+            "demangled_name": "public: __thiscall CJVMData::CJVMData(struct JNIEnv_*)"
+          },
           "address": "0"
         },
         {
-          "name": "CJVMData::scalar_destructor",
+          "name": "??_GCJVMData@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CJVMData::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "655"
         },
         {
-          "name": "CJVMData::~CJVMData",
+          "name": "??1CJVMData@@UAE@XZ",
           "size": "387",
-          "metadata": {},
+          "fuzzy_match_percent": 10.447154,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CJVMData::~CJVMData(void)"
+          },
           "address": "685"
         },
         {
@@ -2416,28 +2425,67 @@
           "address": "1072"
         },
         {
-          "name": "CJVMData::CreateObject",
-          "size": "2290",
-          "metadata": {},
+          "name": "?FUN1009cd00@CJVMData@@QAEXXZ",
+          "size": "105",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CJVMData::FUN1009cd00(void)"
+          },
           "address": "1267"
         },
         {
-          "name": "CJVMData::FUN_1009e960",
+          "name": "?FUN1009cd70@CJVMData@@QAEXPAD@Z",
+          "size": "4602",
+          "fuzzy_match_percent": 98.55396,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CJVMData::FUN1009cd70(char *)"
+          },
+          "address": "1372"
+        },
+        {
+          "name": "?CreateObject@CJVMData@@QAEPAVcMagGameObject@@PAD@Z",
+          "size": "2290",
+          "fuzzy_match_percent": 0.252996,
+          "metadata": {
+            "demangled_name": "public: class cMagGameObject * __thiscall CJVMData::CreateObject(char *)"
+          },
+          "address": "5974"
+        },
+        {
+          "name": "?FUN1009e960@CJVMData@@QAEEI@Z",
           "size": "24",
-          "metadata": {},
-          "address": "3557"
+          "fuzzy_match_percent": 15.555555,
+          "metadata": {
+            "demangled_name": "public: unsigned char __thiscall CJVMData::FUN1009e960(unsigned int)"
+          },
+          "address": "8264"
         },
         {
-          "name": "CJVMData::FUN_1009e9f0",
+          "name": "?FUN1009e980@CJVMData@@QAEXPAD@Z",
+          "size": "104",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CJVMData::FUN1009e980(char *)"
+          },
+          "address": "8288"
+        },
+        {
+          "name": "?FUN1009e9f0@CJVMData@@QAEXXZ",
           "size": "119",
-          "metadata": {},
-          "address": "3581"
+          "fuzzy_match_percent": 0.9756098,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CJVMData::FUN1009e9f0(void)"
+          },
+          "address": "8392"
         },
         {
-          "name": "CJVMData::FUN_1009ec60",
+          "name": "?FUN1009ec60@CJVMData@@QAEEI@Z",
           "size": "20",
-          "metadata": {},
-          "address": "3700"
+          "fuzzy_match_percent": 20.0,
+          "metadata": {
+            "demangled_name": "public: unsigned char __thiscall CJVMData::FUN1009ec60(unsigned int)"
+          },
+          "address": "8511"
         }
       ],
       "metadata": {}
