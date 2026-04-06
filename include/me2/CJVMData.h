@@ -6,6 +6,57 @@
 
 #include "cMagGameObject.h"
 
+
+class MagKernelMetaData {
+
+public:
+	MagKernelMetaData();
+
+public:
+	/* 0x00 */ cMagLog log;
+	/* 0x08 */ jclass clazz;
+	/* 0x0c */ jmethodID OnFrameMethodID;
+	/* 0x10 */ jmethodID azz;
+	/* 0x14 */ jmethodID OnInputKeyMethodID;
+	/* 0x18 */ jmethodID OnActivateMethodID;
+	/* 0x1c */ jmethodID OnActivateLevelMethodID;
+	/* 0x20 */ jmethodID OnCollisionObjectMethodID;
+	/* 0x24 */ jmethodID OnDestinationDirMethodID;
+	/* 0x28 */ jmethodID OnDestinationPosMethodID;
+	/* 0x2c */ jmethodID OnChangeMovementMethodID;
+	/* 0x30 */ jmethodID OnAnimEndMethodID;
+	/* 0x34 */ jmethodID OnInputMouseMethodID;
+	/* 0x38 */ jmethodID OnMouseArriveMethodID;
+	/* 0x3c */ jmethodID OnMouseLeaveMethodID;
+
+	/* 0x40 */ jmethodID OnMouseEnterMethodID;
+	/* 0x44 */ jmethodID OnAttachMethodID;
+	/* 0x48 */ jmethodID OnDetachMethodID;
+	/* 0x4c */ jmethodID OnPathVergeMethodID;
+
+	/* 0x50 */ jmethodID OnInsideFrustumCullMethodID;
+	/* 0x54 */ jmethodID OnOutsideFrustumCullMethodID;
+	/* 0x58 */ jmethodID OnParticleSequenceEndMethodID;
+	/* 0x5c */ jmethodID OnDestTimeMethodID;
+
+	/* 0x60 */ jmethodID OnSlideMethodID;
+	/* 0x64 */ jmethodID OnFadeOutEndMethodID;
+	/* 0x68 */ jmethodID OnFadeInEndMethodID;
+	/* 0x6c */ jmethodID OnCrashMethodID;
+
+	/* 0x70 */ jmethodID OnDeactivateViewMethodID;
+	/* 0x74 */ jmethodID OnActivateViewMethodID;
+	/* 0x78 */ jmethodID OnDetachChildMethodID;
+	/* 0x7c */ jmethodID OnAttachChildMethodID;
+
+	/* 0x80 */ jmethodID OnCreateMethodID;
+	/* 0x84 */ jmethodID OnDestroyMethodID;
+	/* 0x88 */ char className[100];
+};
+
+STATIC_ASSERT(sizeof(MagKernelMetaData) == 0xec);
+
+
 class CJVMData : public cMagLog {
 public:
 	/* 1009C7D0 */ CJVMData(JNIEnv* param_1);
@@ -42,8 +93,8 @@ private:
 	/* 0x94 */ jfieldID collisionTexIDFieldID;
 	/* 0x98 */ jfieldID collisionDistFieldID;
 	/* 0x9c */ jfieldID rectLeftFieldID;
-	/* 0xa0 */ jfieldID rectRightFieldID;
-	/* 0xa4 */ jfieldID rectTopFieldID;
+	/* 0xa0 */ jfieldID rectTopFieldID;
+	/* 0xa4 */ jfieldID rectRightFieldID;
 	/* 0xa8 */ jfieldID rectBottomFieldID;
 	/* 0xac */ jfieldID lightTypeFieldID;
 	/* 0xb0 */ jfieldID lightDiffuseRFieldID;
@@ -66,9 +117,9 @@ private:
 	/* 0xf4 */ jfieldID lightDirectionZFieldID;
 	/* 0xf8 */ jfieldID lightRangeFieldID;
 	/* 0xfc */ jfieldID lightFalloffFieldID;
-	/* 0x100 */ jfieldID lightAttentuation0FieldID;
-	/* 0x104 */ jfieldID lightAttentuation1FieldID;
-	/* 0x108 */ jfieldID lightAttentuation2FieldID;
+	/* 0x100 */ jfieldID lightAttenuation0FieldID;
+	/* 0x104 */ jfieldID lightAttenuation1FieldID;
+	/* 0x108 */ jfieldID lightAttenuation2FieldID;
 	/* 0x10c */ jfieldID lightThetaFieldID;
 	/* 0x110 */ jfieldID lightPhiFieldID;
 	/* 0x114 */ jmethodID onInitializeMethodID;
@@ -81,7 +132,9 @@ private:
 	/* 0x130 */ uchar field_130[0x13c-0x130];
 	/* 0x13c */ jmethodID onPercentageLoadLevelMethodID;
 	/* 0x140 */ jmethodID lightInitMethodID;
-	/* 0x144 */ uchar field_144[0x174-0x144];
+	/* 0x144 */ uchar field_144[0x154-0x144];
+	/* 0x154 */ std::vector<MagKernelMetaData*> magKernelsMetaData;
+	/* 0x164 */ uchar field_164[0x174-0x164];
 	/* 0x174 */ jclass gameObjectClass;
 	/* 0x178 */ jclass meshObjectClass;
 	/* 0x17c */ jclass cameraClass;
@@ -99,7 +152,7 @@ private:
 	/* 0x1ac */ jclass particleClass;
 	/* 0x1b0 */ jclass lightClass;
 	/* 0x1b4 */ uchar field_1b4[0x1c0-0x1b4];
-	/* 0x1c0 */ char buffer[300];
+	/* 0x1c0 */ char initClassName[300];
 	/* 0x2ec */ uchar field_2ec[0x4ec-0x2ec];
 
 };

@@ -1,5 +1,9 @@
 #include "CJVMData.h"
 
+MagKernelMetaData::MagKernelMetaData() {
+	
+}
+
 /* 1009C7D0-1009CA5F 0028F	*/
 CJVMData::CJVMData(JNIEnv* param_1) {
 	jniEnv = param_1;
@@ -58,7 +62,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 		exit(1);
 	}
 
-	if (strcmp("GameObject", className) == 0) {
+	if (strcmp(className, "GameObject") == 0) {
 		gameObjectClass  = clazz;
 		thisID = jniEnv->GetFieldID(clazz, "ThisID", "I");
 		thisID = jniEnv->GetFieldID(clazz, "CurrentState", "LState;");
@@ -68,7 +72,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 		meshObjectClass = clazz;
 	}
 
-	if (strcmp(className, "Vector")) {
+	if (strcmp(className, "Vector") == 0) {
 		fxID = jniEnv->GetFieldID(clazz, "fX", "F");
 		fxID = jniEnv->GetFieldID(clazz, "fY", "F");
 		fzID = jniEnv->GetFieldID(clazz, "fZ", "F");
@@ -77,7 +81,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 		vectorClass = clazz;
 	}
 
-	if (strcmp("Matrix", className)) {
+	if (strcmp(className, "Matrix") == 00) {
 		for (int index1; index1 < 4; index1++) {
 			for (int index2; index2 < 4; index2++) {
 				char matrixFieldBuffer[8];
@@ -89,7 +93,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 		matrixClass = clazz;
 	}
 
-	if (strcmp("PatrolPoint", className)) {
+	if (strcmp(className, "PatrolPoint") == 0) {
 		patrolPointPosFieldID = jniEnv->GetFieldID(clazz, "vPos", "LVector;");
 		patrolPointRadiusFieldID = jniEnv->GetFieldID(clazz, "fRadius", "F");
 		patrolPointFloatFieldID = jniEnv->GetFieldID(clazz, "fFloat", "F");
@@ -98,7 +102,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 		patrolPointClass = clazz;
 	}
 	
-	if (strcmp("Collision", className)) {
+	if (strcmp(className, "Collision") == 0) {
 		collisionTexNameFieldID = jniEnv->GetFieldID(clazz, "sTexName", "Ljava/lang/String;");
 		collisionColliderFieldID = jniEnv->GetFieldID(clazz, "cCollider", "LMeshObject;");
 		collisionExcludeFieldID = jniEnv->GetFieldID(clazz, "cExclude", "LMeshObject;");
@@ -112,11 +116,201 @@ void CJVMData::FUN1009cd70(char* param_1) {
 		collisionClass = clazz;
 	}
 
-	if (strcmp("Rect", className)) {
-		
+	if (strcmp(className, "Rect") == 0) {
+		rectLeftFieldID = jniEnv->GetFieldID(clazz, "fLeft", "F");
+		rectRightFieldID = jniEnv->GetFieldID(clazz, "fRight", "F");
+		rectTopFieldID = jniEnv->GetFieldID(clazz, "fTop", "F");
+		rectBottomFieldID = jniEnv->GetFieldID(clazz, "fBottom", "F");
+		rectInitMethodID = jniEnv->GetMethodID(clazz, "<init>", "()V");
+		rectClass = clazz;
 	}
 
-	return;
+	if (strcmp(className, "LIGHT") == 0) {
+		lightTypeFieldID = jniEnv->GetFieldID(clazz, "Type", "I");
+		lightDiffuseRFieldID = jniEnv->GetFieldID(clazz, "DiffuseR", "F");
+		lightDiffuseGFieldID = jniEnv->GetFieldID(clazz, "DiffuseG", "F");
+		lightDiffuseBFieldID = jniEnv->GetFieldID(clazz, "DiffuseB", "F");
+		lightDiffuseAFieldID = jniEnv->GetFieldID(clazz, "DiffuseA", "F");
+		lightSpecularRFieldID = jniEnv->GetFieldID(clazz, "SpecularR", "F");
+		lightSpecularGFieldID = jniEnv->GetFieldID(clazz, "SpecularG", "F");
+		lightSpecularBFieldID = jniEnv->GetFieldID(clazz, "SpecularB", "F");
+		lightSpecularAFieldID = jniEnv->GetFieldID(clazz, "SpecularA", "F");
+		lightAmbientRFieldID = jniEnv->GetFieldID(clazz, "AmbientR", "F");
+		lightAmbientGFieldID = jniEnv->GetFieldID(clazz, "AmbientG", "F");
+		lightAmbientBFieldID = jniEnv->GetFieldID(clazz, "AmbientB", "F");
+		lightAmbientAFieldID = jniEnv->GetFieldID(clazz, "AmbientA", "F");
+		lightPositionXFieldID = jniEnv->GetFieldID(clazz, "PositionX", "F");
+		lightPositionYFieldID = jniEnv->GetFieldID(clazz, "PositionY", "F");
+		lightPositionZFieldID = jniEnv->GetFieldID(clazz, "PositionZ", "F");
+		lightDirectionXFieldID = jniEnv->GetFieldID(clazz, "DirectionX", "F");
+		lightDirectionYFieldID = jniEnv->GetFieldID(clazz, "DirectionY", "F");
+		lightDirectionZFieldID = jniEnv->GetFieldID(clazz, "DirectionZ", "F");
+		lightRangeFieldID = jniEnv->GetFieldID(clazz, "Range", "F");
+		lightFalloffFieldID = jniEnv->GetFieldID(clazz, "Falloff", "F");
+		lightAttenuation0FieldID = jniEnv->GetFieldID(clazz, "Attenuation0", "F");
+		lightAttenuation1FieldID = jniEnv->GetFieldID(clazz, "Attenuation1", "F");
+		lightAttenuation2FieldID = jniEnv->GetFieldID(clazz, "Attenuation2", "F");
+		lightThetaFieldID = jniEnv->GetFieldID(clazz, "Theta", "F");
+		lightPhiFieldID = jniEnv->GetFieldID(clazz, "Phi", "F");
+		lightInitMethodID = jniEnv->GetMethodID(clazz, "<init>", "()V");
+		lightClass = clazz;
+	}
+
+	if (strcmp(className, "Level") == 0) {
+		levelClass = clazz;
+	}
+	if (strcmp(className, "Camera") == 0) {
+		cameraClass = clazz;
+	}
+	if (strcmp(className, "FreeCamera") == 0) {
+		freeCameraClass = clazz;
+	}
+	if (strcmp(className, "CollisionCamera") == 0) {
+		collisionCameraClass = clazz;
+	}
+	if (strcmp(className, "Game") == 0) {
+		gameClass = clazz;
+	}
+	if (strcmp(className, "Sprite") == 0) {
+		spriteClass = clazz;
+	}
+	if (strcmp(className, "Billboard") == 0) {
+		billboardClass = clazz;
+	}
+	if (strcmp(className, "Particle") == 0) {
+		particleClass = clazz;
+	}
+
+	if (strcmp(className, this->initClassName) == 0) { // Is the main game class
+		onInitializeMethodID = jniEnv->GetMethodID(clazz, "OnInitialize", "()V");
+		onPercentageLoadLevelMethodID = jniEnv->GetMethodID(clazz, "OnPercentageLoadLevel", "(FI)V");
+	}
+
+	MagKernelMetaData* kernelData = new MagKernelMetaData();
+	strcpy(kernelData->className, className);
+
+	kernelData->OnFrameMethodID = jniEnv->GetMethodID(clazz, "OnFrame", "()V");
+	if (kernelData->OnFrameMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnActivateMethodID = jniEnv->GetMethodID(clazz, "OnActivate", "()V");
+	if (kernelData->OnActivateMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnActivateLevelMethodID = jniEnv->GetMethodID(clazz, "OnActivateLEvel", "()V");
+	if (kernelData->OnActivateLevelMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDestinationDirMethodID = jniEnv->GetMethodID(clazz, "OnDestinationDir", "()V");
+	if (kernelData->OnDestinationDirMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDestinationPosMethodID = jniEnv->GetMethodID(clazz, "OnDestinationPos", "(LVector;)V");
+	if (kernelData->OnDestinationPosMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnChangeMovementMethodID = jniEnv->GetMethodID(clazz, "OnChangeMovement", "(I)V");
+	if (kernelData->OnChangeMovementMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnInputKeyMethodID = jniEnv->GetMethodID(clazz, "OnInputKey", "([Z)V");
+	if (kernelData->OnInputKeyMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnCollisionObjectMethodID = jniEnv->GetMethodID(clazz, "OnCollisionObject", "(LMeshObject;)V");
+	if (kernelData->OnCollisionObjectMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnAnimEndMethodID = jniEnv->GetMethodID(clazz, "OnAnimEnd", "(Ljava/lang/String;)V");
+	if (kernelData->OnAnimEndMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnInputMouseMethodID = jniEnv->GetMethodID(clazz, "OnInputMouse", "(FFZZ)V");
+	if (kernelData->OnInputMouseMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnMouseArriveMethodID = jniEnv->GetMethodID(clazz, "OnMouseArrive", "(I)V");
+	if (kernelData->OnMouseArriveMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnMouseLeaveMethodID = jniEnv->GetMethodID(clazz, "OnMouseLeave", "(I)V");
+	if (kernelData->OnMouseLeaveMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnMouseEnterMethodID = jniEnv->GetMethodID(clazz, "OnMouseEnter", "(I)V");
+	if (kernelData->OnMouseEnterMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnAttachMethodID = jniEnv->GetMethodID(clazz, "OnAttach", "(LMeshObject;)V");
+	if (kernelData->OnAttachMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDetachMethodID = jniEnv->GetMethodID(clazz, "OnDetach", "(LMeshObject;)V");
+	if (kernelData->OnDetachMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnPathVergeMethodID = jniEnv->GetMethodID(clazz, "OnPathVerge", "()V");
+	if (kernelData->OnPathVergeMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnInsideFrustumCullMethodID = jniEnv->GetMethodID(clazz, "OnInsideFrustumCull", "()V");
+	if (kernelData->OnInsideFrustumCullMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnOutsideFrustumCullMethodID = jniEnv->GetMethodID(clazz, "OnOutsideFrustumCull", "()V");
+	if (kernelData->OnOutsideFrustumCullMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnParticleSequenceEndMethodID = jniEnv->GetMethodID(clazz, "OnParticleSequenceEnd", "()V");
+	if (kernelData->OnParticleSequenceEndMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDestTimeMethodID = jniEnv->GetMethodID(clazz, "OnDestTime", "(F)V");
+	if (kernelData->OnDestTimeMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnSlideMethodID = jniEnv->GetMethodID(clazz, "OnSlide", "(LMeshObject;)V");
+	if (kernelData->OnSlideMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnFadeInEndMethodID = jniEnv->GetMethodID(clazz, "OnFadeInEnd", "()V");
+	if (kernelData->OnFadeInEndMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnFadeOutEndMethodID = jniEnv->GetMethodID(clazz, "OnFadeOutEnd", "()V");
+	if (kernelData->OnFadeOutEndMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnCrashMethodID = jniEnv->GetMethodID(clazz, "OnCrash", "()V");
+	if (kernelData->OnCrashMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnActivateViewMethodID = jniEnv->GetMethodID(clazz, "OnActivateView", "()V");
+	if (kernelData->OnActivateViewMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDeactivateViewMethodID = jniEnv->GetMethodID(clazz, "OnDeactivateView", "()V");
+	if (kernelData->OnDeactivateViewMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnAttachChildMethodID = jniEnv->GetMethodID(clazz, "OnAttachChild", "(LMeshObject;)V");
+	if (kernelData->OnAttachChildMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDetachChildMethodID = jniEnv->GetMethodID(clazz, "OnDetachChild", "(LMeshObject;)V");
+	if (kernelData->OnDetachChildMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnCreateMethodID = jniEnv->GetMethodID(clazz, "OnCreate", "()V");
+	if (kernelData->OnCreateMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+	kernelData->OnDestroyMethodID = jniEnv->GetMethodID(clazz, "OnDestroy", "OnDestroy");
+	if (kernelData->OnDestroyMethodID == NULL) {
+		jniEnv->ExceptionClear();
+	}
+
+	magKernelsMetaData.push_back(kernelData);
 }
 
 /* 1009DF70-1009E862 008F2	*/
@@ -135,7 +329,7 @@ void CJVMData::FUN1009e980(char* param_1) {
 	char buffer[299];
 	GetCurrentDirectory(sizeof(buffer), buffer);
 	sprintf(buffer, "%s\\%s", buffer, param_1);
-	GetPrivateProfileString("Game", "Class", "", this->buffer, sizeof(this->buffer), buffer);
+	GetPrivateProfileString("Game", "Class", "", initClassName, sizeof(initClassName), buffer);
 }
 
 
