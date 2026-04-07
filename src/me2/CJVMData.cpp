@@ -65,7 +65,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 	if (strcmp(className, "GameObject") == 0) {
 		gameObjectClass  = clazz;
 		thisID = jniEnv->GetFieldID(clazz, "ThisID", "I");
-		thisID = jniEnv->GetFieldID(clazz, "CurrentState", "LState;");
+		currentStateID = jniEnv->GetFieldID(clazz, "CurrentState", "LState;");
 	}
 
 	if (strcmp(className, "MeshObject") == 0) {
@@ -74,7 +74,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 
 	if (strcmp(className, "Vector") == 0) {
 		fxID = jniEnv->GetFieldID(clazz, "fX", "F");
-		fxID = jniEnv->GetFieldID(clazz, "fY", "F");
+		fyID = jniEnv->GetFieldID(clazz, "fY", "F");
 		fzID = jniEnv->GetFieldID(clazz, "fZ", "F");
 		vectorInitMethodID = jniEnv->GetMethodID(clazz, "<init>", "()V");
 		vectorInitMethodID2 = jniEnv->GetMethodID(clazz, "<init>", "(FFF)V");
@@ -82,10 +82,10 @@ void CJVMData::FUN1009cd70(char* param_1) {
 	}
 
 	if (strcmp(className, "Matrix") == 00) {
-		for (int index1; index1 < 4; index1++) {
-			for (int index2; index2 < 4; index2++) {
+		for (int index1 = 0; index1 < 4; index1++) {
+			for (int index2= 0; index2 < 4; index2++) {
 				char matrixFieldBuffer[8];
-				sprintf(matrixFieldBuffer, "_%d%d", index1, index2);
+				sprintf(matrixFieldBuffer, "_%d%d", index1+1, index2+1);
 				matrixFieldsIDs[index1 * 4 + index2] = jniEnv->GetFieldID(clazz, matrixFieldBuffer, "F");
 			}
 		}
@@ -188,6 +188,7 @@ void CJVMData::FUN1009cd70(char* param_1) {
 
 	MagKernelMetaData* kernelData = new MagKernelMetaData();
 	strcpy(kernelData->className, className);
+	kernelData->clazz = clazz;
 
 	kernelData->OnFrameMethodID = jniEnv->GetMethodID(clazz, "OnFrame", "()V");
 	if (kernelData->OnFrameMethodID == NULL) {

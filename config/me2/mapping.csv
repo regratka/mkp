@@ -5245,7 +5245,7 @@
 ;FUN_101116b8;0x101116b8;0x9;__stdcall;;uchar
 ;FUN_10111806;0x10111806;0xb;__stdcall;;uchar
 ;FUN_1011185c;0x1011185c;0x2d;__stdcall;;uchar
-;FUN_10111889;0x10111889;0x11;__cdecl;;uchar;uint
+;_exit;0x10111889;0x11;__cdecl;;uchar;uint
 ;__exit;0x1011189a;0x11;__cdecl;;void;int
 ;FUN_101118ab;0x101118ab;0xf;__stdcall;;uchar
 ;FUN_101118ba;0x101118ba;0xa3;__cdecl;;uchar;uint;int;int
