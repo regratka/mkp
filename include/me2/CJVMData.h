@@ -11,6 +11,7 @@ class MagKernelMetaData {
 
 public:
 	MagKernelMetaData();
+	~MagKernelMetaData();
 
 public:
 	/* 0x00 */ cMagLog log;
@@ -62,13 +63,16 @@ public:
 	/* 1009C7D0 */ CJVMData(JNIEnv* param_1);
 	/* 1009CA80 */ virtual ~CJVMData();
 	/* 1009CC10 */ jobject NewObject(char* param_1);
-	/* 1009CD00 */ void FUN1009cd00();
-	/* 1009CD70 */ void FUN1009cd70(char* param_1);
+	/* 1009CD00 */ void LoadMetadata();
+	/* 1009CD70 */ void LoadClassMetadata(char* param_1);
 	/* 1009DF70 */ cMagGameObject* CreateObject(char* param_1);
-	/* 1009E960 */ uchar FUN1009e960(uint param_1);
-	/* 1009E980 */ void FUN1009e980(char* param_1);
-	/* 1009E9F0 */ void FUN1009e9f0();
-	/* 1009EC60 */ uchar FUN1009ec60(uint param_1);
+	/* 1009E870 */ D3DXVECTOR3 GetObjectPosition(jobject param_1);
+	/* 1009E8E0 */ MagKernelMetaData* FindClassMetaData(char* param_1);
+	/* 1009E960 */ jint GetObjectID(jobject param_1);
+	/* 1009E980 */ void LoadInitClassName(char* param_1);
+	/* 1009E9F0 */ void CreateInitClass(CGame* param_1);
+	/* 1009EA70 */ void DestroyObject(cMagGameObject* param_1);
+	/* 1009EC60 */ jstring CreateJString(char* param_1);
 
 private:
 	/* 0x0c */ JNIEnv* jniEnv;
@@ -97,24 +101,11 @@ private:
 	/* 0xa4 */ jfieldID rectRightFieldID;
 	/* 0xa8 */ jfieldID rectBottomFieldID;
 	/* 0xac */ jfieldID lightTypeFieldID;
-	/* 0xb0 */ jfieldID lightDiffuseRFieldID;
-	/* 0xb4 */ jfieldID lightDiffuseGFieldID;
-	/* 0xb8 */ jfieldID lightDiffuseBFieldID;
-	/* 0xbc */ jfieldID lightDiffuseAFieldID;
-	/* 0xc0 */ jfieldID lightSpecularRFieldID;
-	/* 0xc4 */ jfieldID lightSpecularGFieldID;
-	/* 0xc8 */ jfieldID lightSpecularBFieldID;
-	/* 0xcc */ jfieldID lightSpecularAFieldID;
-	/* 0xd0 */ jfieldID lightAmbientRFieldID;
-	/* 0xd4 */ jfieldID lightAmbientGFieldID;
-	/* 0xd8 */ jfieldID lightAmbientBFieldID;
-	/* 0xdc */ jfieldID lightAmbientAFieldID;
-	/* 0xe0 */ jfieldID lightPositionXFieldID;
-	/* 0xe4 */ jfieldID lightPositionYFieldID;
-	/* 0xe8 */ jfieldID lightPositionZFieldID;
-	/* 0xec */ jfieldID lightDirectionXFieldID;
-	/* 0xf0 */ jfieldID lightDirectionYFieldID;
-	/* 0xf4 */ jfieldID lightDirectionZFieldID;
+	/* 0xb0 */ jfieldID lightDiffuseFieldIDs[4];
+	/* 0xc0 */ jfieldID lightSpecularFieldIDs[4];
+	/* 0xd0 */ jfieldID lightAmbientFieldIDs[4];
+	/* 0xe0 */ jfieldID lightPositionFieldIDs[3];
+	/* 0xec */ jfieldID lightDirectionFieldIDs[3];
 	/* 0xf8 */ jfieldID lightRangeFieldID;
 	/* 0xfc */ jfieldID lightFalloffFieldID;
 	/* 0x100 */ jfieldID lightAttenuation0FieldID;
@@ -129,12 +120,14 @@ private:
 	/* 0x124 */ jmethodID patrolPointInitMethodID;
 	/* 0x128 */ jmethodID collisionInitMethodID;
 	/* 0x12c */ jmethodID rectInitMethodID;
-	/* 0x130 */ uchar field_130[0x13c-0x130];
+	/* 0x130 */ void* unkn_130;
+	/* 0x134 */ void* unkn_134;
+	/* 0x138 */ void* unkn_138;
 	/* 0x13c */ jmethodID onPercentageLoadLevelMethodID;
 	/* 0x140 */ jmethodID lightInitMethodID;
-	/* 0x144 */ uchar field_144[0x154-0x144];
+	/* 0x144 */ std::vector<cMagGameObject*> objects;
 	/* 0x154 */ std::vector<MagKernelMetaData*> magKernelsMetaData;
-	/* 0x164 */ uchar field_164[0x174-0x164];
+	/* 0x164 */ std::vector<void*> f_unkn164;
 	/* 0x174 */ jclass gameObjectClass;
 	/* 0x178 */ jclass meshObjectClass;
 	/* 0x17c */ jclass cameraClass;
@@ -151,9 +144,14 @@ private:
 	/* 0x1a8 */ jclass billboardClass;
 	/* 0x1ac */ jclass particleClass;
 	/* 0x1b0 */ jclass lightClass;
-	/* 0x1b4 */ uchar field_1b4[0x1c0-0x1b4];
+	/* 0x1b4 */ jclass terrainClass;
+	/* 0x1b8 */ jobject initClassInstance;
+	/* 0x1bc */ void* unkn_1bc;
 	/* 0x1c0 */ char initClassName[300];
-	/* 0x2ec */ uchar field_2ec[0x4ec-0x2ec];
+	/* 0x2ec */ uchar field_2ec[0x2f0-0x2ec];
+	/* 0x2f0 */ uint unkn_2f0;
+	/* 0x2f4 */ bool unkn_2f4;
+	/* 0x2f5 */ uchar field_2f5[0x4ec-0x2f5];
 
 };
 

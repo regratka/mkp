@@ -29,6 +29,11 @@ public:
 	/* 1001CB70 */ CParticleEmitterToken* operator=(CParticleEmitterToken* param_1);
 	/* 1001CD70 */ ~CParticleEmitterToken();
 	/* 1001CDC0 */ CParticleEmitterToken* scalar_destructor(uchar param_1);
+
+private:
+	/* 0xd4c */ uchar field_0xd4c[0xd60-0xd4c];
 };
+
+STATIC_ASSERT(sizeof(CParticleEmitterToken) == 0xd60);
 
 #endif

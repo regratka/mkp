@@ -2,7 +2,6 @@
 #define C_MAG_SPRITE
 
 #include <globals.h>
-
 #include <d3dx8math.h>
 
 #include "cMagUtility.h"
@@ -15,7 +14,7 @@ public:
 	/* 1000A9B0 */ void PlayMovie(bool param_1);
 	/* 10062870 */ cMagSprite();
 	/* 10062BE0 */ cMagSprite* scalar_destructor(uchar param_1);
-	/* 10062C40 */ virtual~cMagSprite();
+	/* 10062C40 */ virtual ~cMagSprite();
 	/* 10062DA0 */ void SetTextColor(int param_1, float param_2, float param_3, float param_4, float param_5);
 	/* 10062E50 */ void ShowText(int param_1, bool param_2);
 	/* 10062ED0 */ void SetText(int param_1, char* param_2);
@@ -68,6 +67,11 @@ public:
 	/* 10066020 */ void RysujDuszkiEx(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6);
 	/* 10066140 */ void SetScaleMovie(float param_1, float param_2);
 	/* 10066160 */ void SetRotateMovie(float param_1);
+
+private:
+	/* 0xd4c */ uchar field_0xd4c[0x1740 - 0xd4c];
 };
+
+STATIC_ASSERT(sizeof(cMagSprite) == 0x1740);
 
 #endif

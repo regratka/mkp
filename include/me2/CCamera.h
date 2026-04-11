@@ -38,6 +38,20 @@ public:
 	/* 1005FF20 */ bool GetFreeRotationMatrix();
 	/* 1005FF30 */ void SetUp(D3DXVECTOR3 param_1);
 	/* 10060210 */ void SetRight(D3DXVECTOR3 param_1);
+
+private:
+	/* 0xd10 */ bool isFreeRotationMatrix;
+	/* 0xd14 */ float fov;
+	/* 0xd18 */ float nearPlane;
+	/* 0xd1c */ float farPlane;
+	/* 0xd20 */ float aspectRatio;
+	/* 0xd24 */ D3DMATRIX cameraVectors;
+	/* 0xd64 */ D3DMATRIX viewMatrix;
+	/* 0xda4 */ D3DMATRIX projectionMatrix;
+	/* 0xde4 */ bool updateAspectByWindowSize;
+	/* 0xde8 */ int cameraID;
 };
+
+STATIC_ASSERT(sizeof(CCamera) == 0xdec);
 
 #endif

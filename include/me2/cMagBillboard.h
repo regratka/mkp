@@ -44,6 +44,11 @@ public:
 	/* 100689B0 */ bool EnableZBuffeWrite();
 	/* 100689C0 */ void EnableZBuffeWrite(bool param_1);
 	/* 100689D0 */ void SetHandlerObject(cMagGameObject* param_1);
+
+private:
+	/* 0xd4c */ uchar field_0xd4c[0x1008 - 0xd4c];
 };
+
+STATIC_ASSERT(sizeof(cMagBillboard) == 0x1008);
 
 #endif

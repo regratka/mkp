@@ -2,7 +2,7 @@
 #define PG_STRING
 
 #include <globals.h>
-
+;
 class pgString {
 public:
 	/* 1000B420 */ pgString();

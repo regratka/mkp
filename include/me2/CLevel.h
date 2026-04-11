@@ -19,6 +19,13 @@ public:
 	/* 100BB120 */ void SetEDCameraView(D3DXVECTOR3 param_1);
 	/* 100BB1E0 */ void SetFilePath(char* param_1);
 	/* 100BB210 */ char* GetFilePath();
+private: 
+	/* 0xd4c */ uchar field_d4c[0xd50 - 0xd4c];
+	/* 0xd50 */ D3DXVECTOR3 edCameraPositon;
+	/* 0xd5c */ D3DXVECTOR3 edCameraView;
+	/* 0xd68 */ char filepath[300];
 };
+
+STATIC_ASSERT(sizeof(CLevel) == 0xe94);
 
 #endif

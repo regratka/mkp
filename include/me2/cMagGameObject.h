@@ -8,7 +8,7 @@
 
 #include <dmutil.h>
 #include <dsutil.h>
-
+#include <jni.h>
 
 #include "CollisionManager.h"
 #include "cMagObjectList.h"
@@ -27,6 +27,7 @@ class cMagFog;
 class CCamera;
 class CState;
 class Mesh;
+class MagKernelMetaData;
 
 struct _LIGHT;
 
@@ -214,7 +215,12 @@ public:
 private:
 	/* 0x2e0 */ cMagGameObject* levelObject;
 
-	/* 0x2e4 */ uchar f_2e4[0x2f4-0x2e4];
+public: //HACK
+	/* 0x2e4 */ jobject javaGlobalRef;
+	/* 0x2e8 */ jobject unkn_GlobalRef; // maybe child/parent reference?
+	/* 0x2ec */ MagKernelMetaData* javaMetaData;
+private:
+	/* 0x2f0 */ uchar f_2f0[0x2f4-0x2f0];
 
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];

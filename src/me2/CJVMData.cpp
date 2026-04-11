@@ -1,20 +1,124 @@
 #include "CJVMData.h"
 
+#include "CGame.h"
+#include "cMagMeshObject.h"
+#include "CLevel.h"
+#include "CFreeCamera.h"
+#include "CCollisionCamera.h"
+#include "cMagSprite.h"
+#include "cMagBillboard.h"
+#include "CParticleEmitter.h"
+#include "MagTerrain.h"
+
 MagKernelMetaData::MagKernelMetaData() {
 	
 }
 
+MagKernelMetaData::~MagKernelMetaData() {
+
+}
+
 /* 1009C7D0-1009CA5F 0028F	*/
 CJVMData::CJVMData(JNIEnv* param_1) {
+	unkn_2f4 = true;
+	unkn_2f0 = FALSE;
 	jniEnv = param_1;
 	jniEnv->GetJavaVM(&javaVM);
-
-	FUN1009e980("game.ini");
-	FUN1009cd00();
+	onInitializeMethodID = NULL;
+	gameObjectClass = NULL;
+	meshObjectClass = NULL;
+	cameraClass = NULL;
+	freeCameraClass = NULL;
+	collisionCameraClass = NULL;
+	levelClass = NULL;
+	gameClass = NULL;
+	matrixClass = NULL;
+	vectorClass = NULL;
+	patrolPointClass = NULL;
+	collisionClass = NULL;
+	rectClass = NULL;
+	spriteClass = NULL;
+	billboardClass = NULL;
+	particleClass = NULL;
+	lightClass = NULL;
+	terrainClass =  NULL;
+	currentStateID = NULL;
+	fxID = NULL;
+	fyID = NULL;
+	fzID = NULL;
+	patrolPointRadiusFieldID = NULL;
+	patrolPointFloatFieldID = NULL;
+	patrolPointDataFieldID = NULL;
+	collisionTexNameFieldID = NULL;
+	collisionColliderFieldID = NULL;
+	collisionExcludeFieldID = NULL;
+	collisionOrygFieldID = NULL;
+	collisionDeltaFieldID = NULL;
+	collisionNormalFieldID = NULL;
+	collisionVertexFieldID = NULL;
+	collisionTexIDFieldID = NULL;
+	collisionDistFieldID = NULL;
+	rectBottomFieldID = NULL;
+	rectLeftFieldID = NULL;
+	rectRightFieldID = NULL;
+	rectTopFieldID = NULL;
+	lightTypeFieldID = NULL;
+	memset(lightDiffuseFieldIDs, 0, sizeof(lightDiffuseFieldIDs));
+	memset(lightSpecularFieldIDs, 0, sizeof(lightSpecularFieldIDs));
+	memset(lightAmbientFieldIDs, 0, sizeof(lightAmbientFieldIDs));
+	memset(lightPositionFieldIDs, 0, sizeof(lightPositionFieldIDs));
+	memset(lightDirectionFieldIDs, 0, sizeof(lightDirectionFieldIDs));
+	lightRangeFieldID = NULL;
+	lightFalloffFieldID = NULL;
+	lightAttenuation0FieldID = NULL;
+	lightAttenuation1FieldID = NULL;
+	lightAttenuation2FieldID = NULL;
+	lightThetaFieldID = NULL;
+	lightPhiFieldID = NULL;
+	memset(matrixFieldsIDs, 0, sizeof(matrixFieldsIDs)); 
+  	vectorInitMethodID = NULL;
+  	vectorInitMethodID2 = NULL;
+  	matrixInitMethodID = NULL;
+  	patrolPointInitMethodID = NULL;
+  	collisionInitMethodID = NULL;
+  	rectInitMethodID = NULL;
+	unkn_130 = NULL;
+	unkn_134 = NULL;
+	unkn_138 = NULL;
+	onPercentageLoadLevelMethodID = NULL;
+	lightInitMethodID = NULL;
+	initClassInstance = NULL;
+	unkn_1bc = NULL;
+	memset(initClassName, 0, sizeof(initClassName));
+	LoadInitClassName("game.ini");
+	LoadMetadata();
 }
 
 /* 1009CA80-1009CC03 00183	*/
 CJVMData::~CJVMData() {
+	for (int index = 0; index < objects.size(); index++) {
+		cMagGameObject* object = objects[index];
+		if (object != NULL) {
+			delete object;
+		}
+	}
+	objects.clear();
+	
+	for (int index2 = 0; index2 < magKernelsMetaData.size(); index2++) {
+		MagKernelMetaData* metadata = magKernelsMetaData[index2];
+		if (metadata != NULL) {
+			delete metadata;
+		}
+	}
+	// magKernelsMetaData.clear();
+
+	// for (int index3 = 0; index3 < f_unkn164.size(); index3++) {
+	// 	void* unkn = f_unkn164[index3];
+	// 	if (unkn != NULL) {
+	// 		delete unkn;
+	// 	}
+	// }
+	f_unkn164.clear();
 }
 
 /* 1009CC10-1009CCD3 000C3	*/
@@ -39,20 +143,20 @@ jobject CJVMData::NewObject(char* param_1) {
 }
 
 /* 1009CD00-1009CD69 00069	*/
-void CJVMData::FUN1009cd00() {
+void CJVMData::LoadMetadata() {
 	WIN32_FIND_DATA findData;
 	HANDLE handle = FindFirstFile("java\\*.class", &findData);
 	if (handle == INVALID_HANDLE_VALUE) {
 		exit(0);
 	}
-	FUN1009cd70(findData.cFileName);
+	LoadClassMetadata(findData.cFileName);
 	while(FindNextFile(handle, &findData)) {
-		FUN1009cd70(findData.cFileName);
+		LoadClassMetadata(findData.cFileName);
 	}
 }
 
 /* 1009CD70-1009DF6A 011FA	*/
-void CJVMData::FUN1009cd70(char* param_1) {
+void CJVMData::LoadClassMetadata(char* param_1) {
 	char* className = strtok(param_1, ".");
 	jclass clazz = jniEnv->FindClass(className);
 	if (clazz == NULL) {
@@ -127,24 +231,24 @@ void CJVMData::FUN1009cd70(char* param_1) {
 
 	if (strcmp(className, "LIGHT") == 0) {
 		lightTypeFieldID = jniEnv->GetFieldID(clazz, "Type", "I");
-		lightDiffuseRFieldID = jniEnv->GetFieldID(clazz, "DiffuseR", "F");
-		lightDiffuseGFieldID = jniEnv->GetFieldID(clazz, "DiffuseG", "F");
-		lightDiffuseBFieldID = jniEnv->GetFieldID(clazz, "DiffuseB", "F");
-		lightDiffuseAFieldID = jniEnv->GetFieldID(clazz, "DiffuseA", "F");
-		lightSpecularRFieldID = jniEnv->GetFieldID(clazz, "SpecularR", "F");
-		lightSpecularGFieldID = jniEnv->GetFieldID(clazz, "SpecularG", "F");
-		lightSpecularBFieldID = jniEnv->GetFieldID(clazz, "SpecularB", "F");
-		lightSpecularAFieldID = jniEnv->GetFieldID(clazz, "SpecularA", "F");
-		lightAmbientRFieldID = jniEnv->GetFieldID(clazz, "AmbientR", "F");
-		lightAmbientGFieldID = jniEnv->GetFieldID(clazz, "AmbientG", "F");
-		lightAmbientBFieldID = jniEnv->GetFieldID(clazz, "AmbientB", "F");
-		lightAmbientAFieldID = jniEnv->GetFieldID(clazz, "AmbientA", "F");
-		lightPositionXFieldID = jniEnv->GetFieldID(clazz, "PositionX", "F");
-		lightPositionYFieldID = jniEnv->GetFieldID(clazz, "PositionY", "F");
-		lightPositionZFieldID = jniEnv->GetFieldID(clazz, "PositionZ", "F");
-		lightDirectionXFieldID = jniEnv->GetFieldID(clazz, "DirectionX", "F");
-		lightDirectionYFieldID = jniEnv->GetFieldID(clazz, "DirectionY", "F");
-		lightDirectionZFieldID = jniEnv->GetFieldID(clazz, "DirectionZ", "F");
+		lightDiffuseFieldIDs[0] = jniEnv->GetFieldID(clazz, "DiffuseR", "F");
+		lightDiffuseFieldIDs[1] = jniEnv->GetFieldID(clazz, "DiffuseG", "F");
+		lightDiffuseFieldIDs[2] = jniEnv->GetFieldID(clazz, "DiffuseB", "F");
+		lightDiffuseFieldIDs[3] = jniEnv->GetFieldID(clazz, "DiffuseA", "F");
+		lightSpecularFieldIDs[0] = jniEnv->GetFieldID(clazz, "SpecularR", "F");
+		lightSpecularFieldIDs[1] = jniEnv->GetFieldID(clazz, "SpecularG", "F");
+		lightSpecularFieldIDs[2] = jniEnv->GetFieldID(clazz, "SpecularB", "F");
+		lightSpecularFieldIDs[3] = jniEnv->GetFieldID(clazz, "SpecularA", "F");
+		lightAmbientFieldIDs[0] = jniEnv->GetFieldID(clazz, "AmbientR", "F");
+		lightAmbientFieldIDs[1] = jniEnv->GetFieldID(clazz, "AmbientG", "F");
+		lightAmbientFieldIDs[2] = jniEnv->GetFieldID(clazz, "AmbientB", "F");
+		lightAmbientFieldIDs[3] = jniEnv->GetFieldID(clazz, "AmbientA", "F");
+		lightPositionFieldIDs[0] = jniEnv->GetFieldID(clazz, "PositionX", "F");
+		lightPositionFieldIDs[1] = jniEnv->GetFieldID(clazz, "PositionY", "F");
+		lightPositionFieldIDs[2] = jniEnv->GetFieldID(clazz, "PositionZ", "F");
+		lightDirectionFieldIDs[0] = jniEnv->GetFieldID(clazz, "DirectionX", "F");
+		lightDirectionFieldIDs[1] = jniEnv->GetFieldID(clazz, "DirectionY", "F");
+		lightDirectionFieldIDs[2] = jniEnv->GetFieldID(clazz, "DirectionZ", "F");
 		lightRangeFieldID = jniEnv->GetFieldID(clazz, "Range", "F");
 		lightFalloffFieldID = jniEnv->GetFieldID(clazz, "Falloff", "F");
 		lightAttenuation0FieldID = jniEnv->GetFieldID(clazz, "Attenuation0", "F");
@@ -316,17 +420,149 @@ void CJVMData::FUN1009cd70(char* param_1) {
 
 /* 1009DF70-1009E862 008F2	*/
 cMagGameObject* CJVMData::CreateObject(char* param_1) {
-	return 0;
+	jobject object = NewObject(param_1);
+	if (object == NULL) {
+		return NULL;
+	}
+
+	if (jniEnv->IsInstanceOf(object, meshObjectClass) == 1) {
+		cMagMeshObject* meshObject = new cMagMeshObject();
+		meshObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		meshObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)meshObject);
+		objects.push_back(meshObject);
+		if (meshObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(meshObject->javaGlobalRef, meshObject->javaMetaData->OnCreateMethodID);
+		}
+		return meshObject;
+	}
+
+	
+	if (jniEnv->IsInstanceOf(object, levelClass) == 1) {
+		CLevel* levelObject = new CLevel();
+		levelObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		levelObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)levelObject);
+		objects.push_back(levelObject);
+		if (levelObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(levelObject->javaGlobalRef, levelObject->javaMetaData->OnCreateMethodID);
+		}
+		return levelObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, freeCameraClass) == 1) {
+		CFreeCamera* cameraObject = new CFreeCamera();
+		cameraObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		cameraObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)cameraObject);
+		objects.push_back(cameraObject);
+		if (cameraObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(cameraObject->javaGlobalRef, cameraObject->javaMetaData->OnCreateMethodID);
+		}
+		return cameraObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, collisionCameraClass) == 1) {
+		CCollisionCamera* cameraObject = new CCollisionCamera();
+		cameraObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		cameraObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)cameraObject);
+		objects.push_back(cameraObject);
+		if (cameraObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(cameraObject->javaGlobalRef, cameraObject->javaMetaData->OnCreateMethodID);
+		}
+		return cameraObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, cameraClass) == 1) {
+		CCamera* cameraObject = new CCamera();
+		cameraObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		cameraObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)cameraObject);
+		objects.push_back(cameraObject);
+		if (cameraObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(cameraObject->javaGlobalRef, cameraObject->javaMetaData->OnCreateMethodID);
+		}
+		return cameraObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, spriteClass) == 1) {
+		cMagSprite* spriteObject = new cMagSprite();
+		spriteObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		spriteObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)spriteObject);
+		objects.push_back(spriteObject);
+		if (spriteObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(spriteObject->javaGlobalRef, spriteObject->javaMetaData->OnCreateMethodID);
+		}
+		return spriteObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, billboardClass) == 1) {
+		cMagBillboard* billboardObject = new cMagBillboard();
+		billboardObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		billboardObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)billboardObject);
+		objects.push_back(billboardObject);
+		if (billboardObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(billboardObject->javaGlobalRef, billboardObject->javaMetaData->OnCreateMethodID);
+		}
+		return billboardObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, particleClass) == 1) {
+		CParticleEmitter* particleObject = new CParticleEmitter();
+		particleObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		particleObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)particleObject);
+		objects.push_back(particleObject);
+		if (particleObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(particleObject->javaGlobalRef, particleObject->javaMetaData->OnCreateMethodID);
+		}
+		return particleObject;
+	}
+
+	if (jniEnv->IsInstanceOf(object, terrainClass) == 1) {
+		MagTerrain* terrainObject = new MagTerrain();
+		terrainObject->javaGlobalRef = jniEnv->NewGlobalRef(object);
+		terrainObject->javaMetaData = FindClassMetaData(param_1);
+		jniEnv->SetIntField(object, thisID, (jint)terrainObject);
+		objects.push_back(terrainObject);
+		if (terrainObject->javaMetaData->OnCreateMethodID != NULL) {
+			jniEnv->CallVoidMethod(terrainObject->javaGlobalRef, terrainObject->javaMetaData->OnCreateMethodID);
+		}
+		return terrainObject;
+	}
+
+	return NULL;
+}
+
+/* 1009E870-1009E8DC 0006C*/ 
+D3DXVECTOR3 CJVMData::GetObjectPosition(jobject param_1) {
+	D3DXVECTOR3 position;
+	position.x = jniEnv->GetFloatField(param_1, fxID);
+	position.y = jniEnv->GetFloatField(param_1, fyID);
+	position.z = jniEnv->GetFloatField(param_1, fzID);
+	return position;
+}
+
+/* 1009E8E0-1009E958 00078	*/
+MagKernelMetaData* CJVMData::FindClassMetaData(char* param_1) {
+	for (int index = 0; index < magKernelsMetaData.size(); index++) {
+		if (strcmp(magKernelsMetaData[index]->className, param_1) == 0) {
+			return magKernelsMetaData[index];
+		}
+	}
+	return NULL;
 }
 
 /* 1009E960-1009E978 00018	*/
-uchar CJVMData::FUN1009e960(uint param_1) {
-	return 0;
+jint CJVMData::GetObjectID(jobject param_1) {
+	return jniEnv->GetIntField(param_1, thisID);
 }
 
 /* 1009E980-1009E9E8 00068	*/
-void CJVMData::FUN1009e980(char* param_1) {
-
+void CJVMData::LoadInitClassName(char* param_1) {
 	char buffer[299];
 	GetCurrentDirectory(sizeof(buffer), buffer);
 	sprintf(buffer, "%s\\%s", buffer, param_1);
@@ -335,11 +571,38 @@ void CJVMData::FUN1009e980(char* param_1) {
 
 
 /* 1009E9F0-1009EA67 00077	*/
-void CJVMData::FUN1009e9f0() {
+void CJVMData::CreateInitClass(CGame* param_1) {
+	initClassInstance = NewObject(initClassName);
+	if (jniEnv->IsInstanceOf(initClassInstance, gameClass) == 1) {
+		param_1->javaMetaData = FindClassMetaData(initClassName);
+		param_1->javaGlobalRef = jniEnv->NewGlobalRef(initClassInstance);
+		jniEnv->CallVoidMethod(initClassInstance, onInitializeMethodID);
+	}
 }
 
+/* 1009EA70-1009EB17 000A7	*/
+void CJVMData::DestroyObject(cMagGameObject* param_1) {
+	if (param_1->javaGlobalRef != NULL) {
+		if (param_1->javaMetaData->OnDestroyMethodID != NULL) {
+			jniEnv->CallVoidMethod(param_1->javaGlobalRef, param_1->javaMetaData->OnDestroyMethodID);
+		}
+		jniEnv->DeleteGlobalRef(param_1->javaGlobalRef);
+	}
+	
+	if (param_1->unkn_GlobalRef != NULL) {
+		jniEnv->DeleteGlobalRef(param_1->unkn_GlobalRef);
+	}
+
+	for (std::vector<cMagGameObject*>::iterator it = objects.begin(); 
+			it != objects.end(); it++) {
+		if (param_1 == *it) {
+			objects.erase(it);
+			break;
+		}
+	}
+}
 /* 1009EC60-1009EC74 00014	*/
-uchar CJVMData::FUN1009ec60(uint param_1) {
-	return 0;
+jstring CJVMData::CreateJString(char* param_1) {
+	return jniEnv->NewStringUTF(param_1);
 }
 

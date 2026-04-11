@@ -77,6 +77,11 @@ public:
 	/* 10039FA0 */ void SetAnimTextureLightMap(uchar param_1);
 	/* 10039FB0 */ void SetBumpMap(uchar param_1);
 	/* 10039FC0 */ void SetDetailTile(float param_1);
+
+private:
+	/* 0xd4c */ uchar field_0xd4c[0x1950-0xd4c];
 };
+
+STATIC_ASSERT(sizeof(MagnumMesh) == 0x1950);
 
 #endif

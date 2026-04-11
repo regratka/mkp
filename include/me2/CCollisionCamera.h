@@ -5,7 +5,7 @@
 #include "CCamera.h"
 #include "cMagMeshObject.h"
 
-class CCollisionCamera {
+class CCollisionCamera : public CCamera {
 public:
 	/* 1001A6A0 */ CCollisionCamera(CCollisionCamera* param_1);
 	/* 1001A900 */ CCollisionCamera* operator=(CCollisionCamera* param_1);
@@ -34,6 +34,11 @@ public:
 	/* 100619E0 */ D3DXVECTOR3* GetObservedDirection(D3DXVECTOR3* param_1);
 	/* 10061A90 */ void Pause(bool param_1);
 	/* 10061AC0 */ void AfterPauseDelay(bool param_1);
+
+private:
+	/* 0xdec */ uchar field_0xdec[0xe84-0xdec];
 };
+
+STATIC_ASSERT(sizeof(CCollisionCamera) == 0xe84);
 
 #endif

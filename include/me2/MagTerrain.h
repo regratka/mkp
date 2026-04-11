@@ -44,6 +44,11 @@ public:
 	/* 10083A70 */ bool GetPositionGrassMap(int param_1, int param_2, uchar param_3);
 	/* 10083B30 */ int GetNumTris();
 	/* 10083B50 */ uint Pick(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float* param_7, uint param_8, int param_9);
+
+private:
+	/* 0x1950 */ uchar field_0x1950[0x1bf8-0x1950];
 };
+
+STATIC_ASSERT(sizeof(MagTerrain) == 0x1bf8);
 
 #endif

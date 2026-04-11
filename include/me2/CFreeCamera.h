@@ -3,7 +3,9 @@
 
 #include <globals.h>
 
-class CFreeCamera {
+#include "CCamera.h"
+
+class CFreeCamera : public CCamera {
 public:
 	/* 1000BFF0 */ CFreeCamera(CFreeCamera* param_1);
 	/* 1000C120 */ CFreeCamera* operator=(CFreeCamera* param_1);
@@ -17,6 +19,11 @@ public:
 	/* 100620C0 */ void SetSpeedValue(float param_1);
 	/* 100620D0 */ bool CheckWindowActivation();
 	/* 10062120 */ void ReadSettings(char* param_1);
+
+private:
+	/* 0xdec */ uchar field_0xdec[0xe18-0xdec];
 };
+
+STATIC_ASSERT(sizeof(CFreeCamera) == 0xe18);
 
 #endif

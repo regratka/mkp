@@ -5,7 +5,7 @@
 #include <d3dx8math.h>
 #include <string>
 
-#include "CParticleEmitterToken.h"
+#include "CParticleEmitterTokenizer.h"
 #include "CParticleEventSequence.h"
 #include "CParticleEvent.h"
 #include "CParticle.h"
@@ -15,9 +15,7 @@ struct TIMER_COMMAND {
 	
 };
 
-
-
-class CParticleEmitter : public CParticleEmitterToken{
+class CParticleEmitter : public CParticleEmitterTokenizer {
 public:
 	/* 10020570 */ void Pause();
 	/* 10020580 */ void Stop();
@@ -62,6 +60,11 @@ public:
 	/* 10071BD0 */ bool LoadFileIntoString(char* param_1, std::string* param_2);
 	/* 10071E00 */ void InitAnimFrames(char* param_1);
 	/* 10071EB0 */ float DXUtil_Timer(TIMER_COMMAND param_1);
+
+private:
+	/* 0xd70 */ uchar field_0xd70[0x11f8-0xd70];
 };
+
+STATIC_ASSERT(sizeof(CParticleEmitter) == 0x11f8)
 
 #endif

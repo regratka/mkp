@@ -26,6 +26,7 @@ COctree,COctree
 CParticle,CParticle
 CParticleEmitter,CParticleEmitter
 CParticleEmitterToken,CParticleEmitterToken
+CParticleEmitterTokenizer,CParticleEmitterTokenizer
 CParticleEvent,CParticleEvent
 CParticleEventSequence,CParticleEventSequence
 CParticleEvent_Alpha,CParticleEvent_Alpha
