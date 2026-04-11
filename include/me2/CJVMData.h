@@ -73,9 +73,15 @@ public:
 	/* 1009E9F0 */ void CreateInitClass(CGame* param_1);
 	/* 1009EA70 */ void DestroyObject(cMagGameObject* param_1);
 	/* 1009EC60 */ jstring CreateJString(char* param_1);
+	/* 1009FF60 */ void FUN1009ff60();
 
-private:
+	void CallVoidMethod(jobject ref, jmethodID methodId) {
+		jniEnv->CallVoidMethod(ref, methodId);
+	}
+	
+public: // HACK
 	/* 0x0c */ JNIEnv* jniEnv;
+private:
 	/* 0x10 */ JavaVM* javaVM;
 	/* 0x14 */ jfieldID thisID;
 	/* 0x18 */ jfieldID currentStateID;

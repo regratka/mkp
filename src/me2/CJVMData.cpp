@@ -606,3 +606,7 @@ jstring CJVMData::CreateJString(char* param_1) {
 	return jniEnv->NewStringUTF(param_1);
 }
 
+/* 1009FF60-100A0074 00114 */ 
+void CJVMData::FUN1009ff60() {
+}
+

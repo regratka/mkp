@@ -1,5 +1,8 @@
 #include "cMagKernel.h"
 
+#include "cMagEngineMgr.h"
+#include "CJVMData.h"
+
 /* 100111a0-10011244 000a4	*/
 cMagKernel::cMagKernel() : cMagLog(), magLog() {
     delegator1 = NULL;
@@ -27,6 +30,22 @@ cMagKernel::~cMagKernel() {
 void cMagKernel::OnFrame() {
     if (this->delegator2 != NULL) {
         this->delegator2->OnFrame();
+    }
+
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+    
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnFrameMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnFrameMethodID);
+        } else if (i_this->javaMetaData->OnFrameMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnFrameMethodID);
+        }
+    } else if (i_this->javaMetaData->OnFrameMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnFrameMethodID);
     }
 }
 
@@ -111,6 +130,17 @@ void cMagKernel::InitOnInputMouseHandlerParam(float param_1, float param_2, bool
 
 /* 100116a0-100116e0 00040	*/
 void cMagKernel::OnActivate() {
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL || i_this->javaMetaData == NULL) {
+        return;
+    }
+
+    if (i_this->javaMetaData->OnActivateMethodID != NULL) {
+        jvmData->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnActivateMethodID);
+        jvmData->FUN1009ff60();
+    }
+    
 }
 
 /* 100116e0-10011756 00076	*/

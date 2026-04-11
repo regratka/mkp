@@ -28,6 +28,7 @@ class CCamera;
 class CState;
 class Mesh;
 class MagKernelMetaData;
+class CJVMData;
 
 struct _LIGHT;
 
@@ -212,16 +213,13 @@ public:
 	/* 1006CED0 */ ulong GetDXVersion();
 	/* 1009DF70 */ int CreateObject(char* param_1);
 
-private:
-	/* 0x2e0 */ cMagGameObject* levelObject;
-
 public: //HACK
+	/* 0x2e0 */ CJVMData* jvmData;
 	/* 0x2e4 */ jobject javaGlobalRef;
 	/* 0x2e8 */ jobject unkn_GlobalRef; // maybe child/parent reference?
 	/* 0x2ec */ MagKernelMetaData* javaMetaData;
+	/* 0x2f0 */ MagKernelMetaData* unkn_MetaData; // maybe child/parent metadata?
 private:
-	/* 0x2f0 */ uchar f_2f0[0x2f4-0x2f0];
-
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
 
