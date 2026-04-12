@@ -3240,7 +3240,7 @@
 ;FUN_1009fb90;0x1009fb90;0x94;__thiscall;;uchar;void*;uint;uint*
 ;FUN_1009fc30;0x1009fc30;0x73;__thiscall;;uint;void*;uchar;uchar;uchar;uint;uint
 ;FUN_1009fcb0;0x1009fcb0;0x2a1;__thiscall;;uchar;void*;uint;uint
-;FUN_1009ff60;0x1009ff60;0x114;__fastcall;;uchar;int
+?TraceExceptions@CJVMData@@QAEXXZ;CJVMData::TraceExceptions;0x1009ff60;0x114;__thiscall;;void;CJVMData*
 ;FUN_100a0080;0x100a0080;0x1d;__cdecl;;uchar;int*;uint;uint
 ;FUN_100a00e0;0x100a00e0;0xa;__stdcall;;uchar
 ;FUN_100a00f0;0x100a00f0;0xc;__stdcall;;uchar

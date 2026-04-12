@@ -607,6 +607,34 @@ jstring CJVMData::CreateJString(char* param_1) {
 }
 
 /* 1009FF60-100A0074 00114 */ 
-void CJVMData::FUN1009ff60() {
+void CJVMData::TraceExceptions() {
+	jthrowable exception = jniEnv->ExceptionOccurred();
+	if (exception == NULL) {
+		return;
+	}
+
+	jniEnv->ExceptionDescribe();
+
+	jclass exceptionClass = jniEnv->GetObjectClass(exception);
+	if (exceptionClass == NULL) {
+		jniEnv->ExceptionClear();
+		DebugLog("CJVMData::TraceExceptions: GetObjectClass failed");
+		return;
+	}
+	
+	jmethodID toStringMethodID = jniEnv->GetMethodID(exceptionClass, "toString", "()Ljava/lang/String;");
+	if (toStringMethodID == NULL) {
+		DebugLog("CJVMData::TraceExceptions: GetMethodID failed");
+		jniEnv->ExceptionClear();
+		return;
+	}
+
+	jstring exceptionString = (jstring)jniEnv->CallObjectMethod(exception, toStringMethodID);
+	const char* exceptionChars = jniEnv->GetStringUTFChars(exceptionString, NULL);
+	char buffer[500];
+	strcpy(buffer, exceptionChars);
+	DebugLog(buffer);
+	jniEnv->ReleaseStringUTFChars(exceptionString, exceptionChars);
+	jniEnv->ExceptionClear();
 }
 

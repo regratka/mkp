@@ -73,7 +73,7 @@ public:
 	/* 1009E9F0 */ void CreateInitClass(CGame* param_1);
 	/* 1009EA70 */ void DestroyObject(cMagGameObject* param_1);
 	/* 1009EC60 */ jstring CreateJString(char* param_1);
-	/* 1009FF60 */ void FUN1009ff60();
+	/* 1009FF60 */ void TraceExceptions();
 
 	void CallVoidMethod(jobject ref, jmethodID methodId) {
 		jniEnv->CallVoidMethod(ref, methodId);
