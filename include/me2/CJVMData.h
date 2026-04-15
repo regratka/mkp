@@ -6,12 +6,19 @@
 
 #include "cMagGameObject.h"
 
+class __declspec(dllexport) String {
+public:
+	/* 100BEB80 */ String();
+	/* 100BEBA0 */ virtual ~String();
+
+public:
+	/* 0x04 */ char buffer[300];
+};
 
 class MagKernelMetaData {
 
 public:
-	MagKernelMetaData();
-	~MagKernelMetaData();
+	/* 100B9120 */ MagKernelMetaData();
 
 public:
 	/* 0x00 */ cMagLog log;
@@ -57,6 +64,23 @@ public:
 
 STATIC_ASSERT(sizeof(MagKernelMetaData) == 0xec);
 
+class CTimerMethod {
+public:
+	/* 100BECE0 */ CTimerMethod();
+	/* 100BED30 */ virtual ~CTimerMethod();
+
+public:
+	/* 0x04 */ char methodName[100];
+	/* 0x68 */ char field_0x68[100];
+	/* 0xcc */ jmethodID methodID;
+	/* 0xd0 */ jobject globalRef;
+	/* 0xd4 */ cMagGameObject* gameObject;
+	/* 0xd8 */ void* field_0xd8;
+	/* 0xdc */ float field_0xdc;
+	/* 0xe0 */ int repetitions;
+};
+
+STATIC_ASSERT(sizeof(CTimerMethod) == 0xe4);
 
 class CJVMData : public cMagLog {
 public:
@@ -72,7 +96,12 @@ public:
 	/* 1009E980 */ void LoadInitClassName(char* param_1);
 	/* 1009E9F0 */ void CreateInitClass(CGame* param_1);
 	/* 1009EA70 */ void DestroyObject(cMagGameObject* param_1);
+	/* 1009EB20 */ jobject NewVectorObject(D3DXVECTOR3 param_1);
+	/* 1009EB60 */ String GetString(jstring param_1);
 	/* 1009EC60 */ jstring CreateJString(char* param_1);
+	/* 1009EC80 */ void CreateTimerMethod(cMagGameObject* param_1, char* param_2, float param_3, int param_4);
+	/* 1009EEA0 */ void DisableCallMethod(cMagGameObject* param_1, char* param_2);
+
 	/* 1009FF60 */ void TraceExceptions();
 
 	void CallVoidMethod(jobject ref, jmethodID methodId) {
@@ -133,7 +162,7 @@ private:
 	/* 0x140 */ jmethodID lightInitMethodID;
 	/* 0x144 */ std::vector<cMagGameObject*> objects;
 	/* 0x154 */ std::vector<MagKernelMetaData*> magKernelsMetaData;
-	/* 0x164 */ std::vector<void*> f_unkn164;
+	/* 0x164 */ std::vector<CTimerMethod> timerMethods;
 	/* 0x174 */ jclass gameObjectClass;
 	/* 0x178 */ jclass meshObjectClass;
 	/* 0x17c */ jclass cameraClass;

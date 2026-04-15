@@ -10,11 +10,27 @@
 #include "CParticleEmitter.h"
 #include "MagTerrain.h"
 
+/* 100BEB80-100BEB99 00019 	*/
+String::String() {
+	memset(buffer, 0, sizeof(buffer));
+}
+
+/* 100BEBA0-100BEBA7 00007  */
+String::~String() {
+}
+
+/* 100B9120-100B913A 0001A  */
 MagKernelMetaData::MagKernelMetaData() {
 	
 }
 
-MagKernelMetaData::~MagKernelMetaData() {
+/* 100BECE0-100BED27 00047	*/
+CTimerMethod::CTimerMethod() {
+
+}
+
+/* 100BED30-100BED37 00007  */
+CTimerMethod::~CTimerMethod() {
 
 }
 
@@ -110,15 +126,8 @@ CJVMData::~CJVMData() {
 			delete metadata;
 		}
 	}
-	// magKernelsMetaData.clear();
 
-	// for (int index3 = 0; index3 < f_unkn164.size(); index3++) {
-	// 	void* unkn = f_unkn164[index3];
-	// 	if (unkn != NULL) {
-	// 		delete unkn;
-	// 	}
-	// }
-	f_unkn164.clear();
+	timerMethods.clear();
 }
 
 /* 1009CC10-1009CCD3 000C3	*/
@@ -601,9 +610,64 @@ void CJVMData::DestroyObject(cMagGameObject* param_1) {
 		}
 	}
 }
+
+/* 1009EB20-1009EB5D 0003D */ 
+jobject CJVMData::NewVectorObject(D3DXVECTOR3 param_1) {
+	return jniEnv->NewObject(vectorClass, vectorInitMethodID2, param_1.x, param_1.y, param_1.z);
+}
+
+/* 1009EB60-1009EC3F 000DF*/ 
+String CJVMData::GetString(jstring param_1) {
+	String string;
+	const char* utfChars = jniEnv->GetStringUTFChars(param_1, NULL);
+	strcpy(string.buffer, utfChars);
+	jniEnv->ReleaseStringUTFChars(param_1, utfChars);
+	return string;
+}
+
 /* 1009EC60-1009EC74 00014	*/
 jstring CJVMData::CreateJString(char* param_1) {
 	return jniEnv->NewStringUTF(param_1);
+}
+
+/* 1009EC80-1009EEA0 00220	*/
+void CJVMData::CreateTimerMethod(cMagGameObject* param_1, char* param_2, float param_3, int param_4) {
+	if (param_4 == 0 || param_3 == 0.0f) {
+		return;
+	}
+
+	for (int index = 0; index < timerMethods.size(); index++) {
+		if (param_1 == timerMethods[index].gameObject && strcmp(param_2, timerMethods[index].methodName) == 0) {
+			timerMethods[index].field_0xdc = param_3;
+			timerMethods[index].repetitions = param_4;
+			return;
+		}
+	}
+
+	jmethodID methodID = jniEnv->GetMethodID(param_1->javaMetaData->clazz, param_2, "()V");
+	if (methodID == NULL) {
+		jniEnv->ExceptionClear();
+		return;
+	}
+
+	CTimerMethod timerMethod;
+	strcpy(timerMethod.methodName, param_2);
+	timerMethod.field_0xdc = param_3;
+	timerMethod.gameObject = param_1;
+	timerMethod.globalRef = param_1->javaGlobalRef;
+	timerMethod.repetitions = param_4;
+	timerMethod.methodID = methodID;
+	timerMethods.push_back(timerMethod);
+}
+
+/* 1009EEA0-1009F032 00192 */ 
+void CJVMData::DisableCallMethod(cMagGameObject* param_1, char* param_2) {
+	for (int index = 0; index < timerMethods.size(); index++) {
+		if (param_1 == timerMethods[index].gameObject && strcmp(param_2, timerMethods[index].methodName) == 0) {
+			timerMethods.erase(timerMethods.begin()+index);
+			break;
+		}
+	}
 }
 
 /* 1009FF60-100A0074 00114 */ 

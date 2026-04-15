@@ -15,7 +15,7 @@ CDynObjTree,CDynObjTree
 CExtendedParameterLoader,CExtendedParameterLoader
 CFreeCamera,CFreeCamera
 CGame,CGame
-CJVMData,CJVMData
+CJVMData,CJVMData,String,CTimerMethod,MagKernelMetaData
 CLensFlare,CLensFlare
 CLensFlareSpot,CLensFlareSpot
 CLevel,CLevel

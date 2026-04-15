@@ -138,7 +138,7 @@ void cMagKernel::OnActivate() {
 
     if (i_this->javaMetaData->OnActivateMethodID != NULL) {
         jvmData->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnActivateMethodID);
-        jvmData->FUN1009ff60();
+        jvmData->TraceExceptions();
     }
     
 }

@@ -752,7 +752,7 @@
 ;_Java_GameObject_StateChanged@16;0x10024060;0xd7;__stdcall;;uchar;int*;uint;uint;int
 ;_Java_GameObject_EnableCallHandler@12;0x10024140;0x8f;__stdcall;;uchar;int*;uint;uint
 ;_Java_GameObject_DisableCallHandler@12;0x100241d0;0x8f;__stdcall;;uchar;int*;uint;uint
-;_Java_GameObject_CallMethodIn@16;0x10024260;0x6f;__stdcall;;uchar;uint;uint;uint;float
+;_Java_GameObject_CallMethodIn@16;0x10024260;0x6f;__stdcall;;void;JNIEnv*;jobject;jstring;float
 ;_Java_GameObject_CallMethodEvery@16;0x100242d0;0x6f;__stdcall;;uchar;uint;uint;uint;float
 ;_Java_GameObject_CallMethodRepeatCount@20;0x10024340;0x75;__stdcall;;uchar;uint;uint;uint;float;int
 ;_Java_GameObject_DisableCallMethod@12;0x100243c0;0x65;__stdcall;;uchar;uint;uint;uint
@@ -2978,7 +2978,7 @@
 ;_Java_Game_ShowLoadLevelBackground@8;0x100911c0;0xf;__stdcall;;uchar
 ;FUN_100911e0;0x100911e0;0x1d;__fastcall;;uchar;uint
 ;FUN_10091200;0x10091200;0xc;__stdcall;;uchar
-;FUN_10091240;0x10091240;0x1e;__thiscall;;uint*;void*;uchar
+;CTimerMethod::scalar_destructor;0x10091240;0x1e;__thiscall;;uint*;CTimerMethod*;uchar
 ;FUN_10091270;0x10091270;0xa;__stdcall;;uchar
 ;FUN_10091280;0x10091280;0xc;__stdcall;;uchar
 ;FUN_100912b0;0x100912b0;0x1d;__fastcall;;uchar;uint
@@ -3218,12 +3218,12 @@
 ?LoadInitClassName@CJVMData@@QAEXPAD@Z;CJVMData::LoadInitClassName;0x1009e980;0x68;__thiscall;;uchar;CJVMData*;char*
 ?CreateInitClass@CJVMData@@QAEXPAVCGame@@@Z;CJVMData::CreateInitClass;0x1009e9f0;0x77;__thiscall;;void;CJVMData*;CGame*
 ?DestroyObject@CJVMData@@QAEXPAVcMagGameObject@@@Z;CJVMData::DestroyObject;0x1009ea70;0xa7;__thiscall;;void;CJVMData*;cMagGameObject*
-;FUN_1009eb20;0x1009eb20;0x3d;__fastcall;;uchar;int;uchar;uint;uint;uint
-;FUN_1009eb60;0x1009eb60;0xdf;__thiscall;;uint*;void*;uint;uint
-;FUN_1009ec40;0x1009ec40;0x1e;__thiscall;;uint*;void*;uchar
+?NewVectorObject@CJVMData@@QAEPAV_jobject@@UD3DXVECTOR3@@@Z;CJVMData::NewVectorObject;0x1009eb20;0x3d;__thiscall;;jobject;CJVMData*;D3DXVECTOR3;
+?GetString@CJVMData@@QAE?AVString@@PAV_jstring@@@Z;CJVMData::GetString;0x1009eb60;0xdf;__thiscall;;String;CJVMData*;jstring
+??_GString@@UAEPAXI@Z;String::scalar_destructor;0x1009ec40;0x1e;__thiscall;;String*;String*
 ?CreateJString@CJVMData@@QAEPAV_jstring@@PAD@Z;CJVMData::CreateJString;0x1009ec60;0x14;__thiscall;;jstring;CJVMData*;char*
-;FUN_1009ec80;0x1009ec80;0x220;__thiscall;;uchar;void*;int;uchar*;float;int
-;FUN_1009eea0;0x1009eea0;0x192;__thiscall;;uchar;void*;int;uchar*
+?CreateTimerMethod@CJVMData@@QAEXPAVcMagGameObject@@PADMH@Z;CJVMData::CreateTimerMethod;0x1009ec80;0x220;__thiscall;;void;CJVMData*;cMagGameObject*;char*;float;int
+?DisableCallMethod@CJVMData@@QAEXPAVcMagGameObject@@PAD@Z;CJVMData::DisableCallMethod;0x1009eea0;0x192;__thiscall;;void;CJVMData*;cMagGameObject*;char*
 ;FUN_1009f040;0x1009f040;0x234;__thiscall;;uchar;void*;int
 ;FUN_1009f280;0x1009f280;0xdf;__fastcall;;uchar;int
 ;FUN_1009f360;0x1009f360;0x5d;__thiscall;;uchar;void*;float*;uint
@@ -3560,7 +3560,7 @@
 ;CClassParameter::FUN_100b9090;0x100b9090;0x22;__thiscall;;uint;CClassParameter*
 ;FUN_100b90c0;0x100b90c0;0x4;__fastcall;;uchar;int
 ;CClassParameter::FUN_100b90d0;0x100b90d0;0x12;__thiscall;;void;CClassParameter*;std_basic_ifstream*
-;FUN_100b9120;0x100b9120;0x1a;__fastcall;;cMagLog*;cMagLog*
+??0MagKernelMetaData@@QAE@XZ;MagKernelMetaData::MagKernelMetaData;0x100b9120;0x1a;__thiscall;;MagKernelMetaData*;MagKernelMetaData*
 ;FUN_100b9150;0x100b9150;0xa;__stdcall;;uchar
 ;FUN_100b9160;0x100b9160;0xc;__stdcall;;uchar
 ;FUN_100b9190;0x100b9190;0xa;__stdcall;;uchar
@@ -3730,8 +3730,8 @@
 ??1CState@@UAE@XZ;CState::~CState;0x100beb20;0xb;__thiscall;;void;CState*
 ?SetState@CState@@QAEXPAD@Z;CState::SetState;0x100beb30;0x10;__thiscall;;void;CState*;char*
 ?SetState@CState@@QAEXPAV1@@Z;CState::SetState;0x100beb40;0x10;__thiscall;;void;CState*;CState*
-;FUN_100beb80;0x100beb80;0x19;__fastcall;;uint*;uint*
-;FUN_100beba0;0x100beba0;0x7;__fastcall;;uchar;uint*
+??0String@@QAE@XZ;String::String;0x100beb80;0x19;__thiscall;;String*;String*
+??1String@@UAE@XZ;String::~String;0x100beba0;0x7;__thiscall;;void;String*
 ;FUN_100bebc0;0x100bebc0;0xa;__stdcall;;uchar
 ;FUN_100bebd0;0x100bebd0;0xc;__stdcall;;uchar
 ;FUN_100bec00;0x100bec00;0xa;__stdcall;;uchar
@@ -3740,8 +3740,8 @@
 ;FUN_100bec80;0x100bec80;0xc;__stdcall;;uchar
 ;FUN_100becb0;0x100becb0;0xa;__stdcall;;uchar
 ;FUN_100becc0;0x100becc0;0xc;__stdcall;;uchar
-;FUN_100bece0;0x100bece0;0x47;__fastcall;;uint*;uint*
-;FUN_100bed30;0x100bed30;0x7;__fastcall;;uchar;uint*
+??0CTimerMethod@@QAE@XZ;CTimerMethod::CTimerMethod;0x100bece0;0x47;__thiscall;;CTimerMethod*;CTimerMethod*
+??1CTimerMethod@@UAE@XZ;CTimerMethod::~CTimerMethod;0x100bed30;0x7;__thiscall;;void;CTimerMethod*
 ;FUN_100bed40;0x100bed40;0x37;__thiscall;;short;void*;float
 ;FUN_100bedb0;0x100bedb0;0x22ea;__stdcall;;char*;int
 ;FUN_100c1740;0x100c1740;0x32;__stdcall;;int
