@@ -670,6 +670,35 @@ void CJVMData::DisableCallMethod(cMagGameObject* param_1, char* param_2) {
 	}
 }
 
+/* 1009F040-1009F274 00234 */ 
+void CJVMData::DeleteCallMethods(std::vector<CTimerMethod> param_1) {
+	for (int index = 0; index < param_1.size(); index++) {
+		for (int index2 = 0; index2 < timerMethods.size(); index2++) {
+			if (param_1[index].gameObject == timerMethods[index2].gameObject
+				&& strcmp(param_1[index].methodName, timerMethods[index2].methodName) == 0) {
+				timerMethods.erase(timerMethods.begin()+index2);
+				break;
+			}
+		}
+	}
+}
+
+/* 1009F280-1009F35F 00DF */ 
+void CJVMData::CleanCallMethods() {
+	timerMethods.clear();
+}
+
+/* 1009F360-1009F3BD 0005D */ 
+void CJVMData::FUN1009f360(float* param_1, jobject param_2) {
+	float fieldValues[4][4];
+	for (int x; x < 4; x++) {
+		for (int y; y < 4; y++) {
+			fieldValues[x][y] = jniEnv->GetFloatField(param_2, matrixFieldsIDs[x*4+y]);
+		}
+	}
+	memcpy(param_1, fieldValues, sizeof(fieldValues));
+}
+
 /* 1009FF60-100A0074 00114 */ 
 void CJVMData::TraceExceptions() {
 	jthrowable exception = jniEnv->ExceptionOccurred();

@@ -101,7 +101,9 @@ public:
 	/* 1009EC60 */ jstring CreateJString(char* param_1);
 	/* 1009EC80 */ void CreateTimerMethod(cMagGameObject* param_1, char* param_2, float param_3, int param_4);
 	/* 1009EEA0 */ void DisableCallMethod(cMagGameObject* param_1, char* param_2);
-
+	/* 1009F040 */ void DeleteCallMethods(std::vector<CTimerMethod> param_1);
+	/* 1009F280 */ void CleanCallMethods();
+	/* 1009F360 */ void FUN1009f360(float* param_1, jobject param_2);
 	/* 1009FF60 */ void TraceExceptions();
 
 	void CallVoidMethod(jobject ref, jmethodID methodId) {

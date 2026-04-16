@@ -3224,9 +3224,9 @@
 ?CreateJString@CJVMData@@QAEPAV_jstring@@PAD@Z;CJVMData::CreateJString;0x1009ec60;0x14;__thiscall;;jstring;CJVMData*;char*
 ?CreateTimerMethod@CJVMData@@QAEXPAVcMagGameObject@@PADMH@Z;CJVMData::CreateTimerMethod;0x1009ec80;0x220;__thiscall;;void;CJVMData*;cMagGameObject*;char*;float;int
 ?DisableCallMethod@CJVMData@@QAEXPAVcMagGameObject@@PAD@Z;CJVMData::DisableCallMethod;0x1009eea0;0x192;__thiscall;;void;CJVMData*;cMagGameObject*;char*
-;FUN_1009f040;0x1009f040;0x234;__thiscall;;uchar;void*;int
-;FUN_1009f280;0x1009f280;0xdf;__fastcall;;uchar;int
-;FUN_1009f360;0x1009f360;0x5d;__thiscall;;uchar;void*;float*;uint
+?DeleteCallMethods@CJVMData@@QAEXV?$vector@VCTimerMethod@@V?$allocator@VCTimerMethod@@@std@@@std@@@Z;CJVMData::DeleteCallMethods;0x1009f040;0x234;__thiscall;;void;CJVMData*;std::vector<CTimerMethod>
+?CleanCallMethods@CJVMData@@QAEXXZ;CJVMData::CleanCallMethods;0x1009f280;0xdf;__thiscall;;void;CJVMData*
+?FUN1009f360@CJVMData@@QAEXPAMPAV_jobject@@@Z;CJVMData::FUN1009f360;0x1009f360;0x5d;__thiscall;;D3DXMATRIX;CJVMData*;jobject
 ;FUN_1009f3c0;0x1009f3c0;0x72;__fastcall;;uint;int;uchar;uint
 ;FUN_1009f440;0x1009f440;0x9e;__thiscall;;uint;void*;uint
 ;FUN_1009f4e0;0x1009f4e0;0x9e;__thiscall;;uint;void*;uint;uint
