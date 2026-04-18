@@ -65,6 +65,6 @@ private:
 	/* 0xd70 */ uchar field_0xd70[0x11f8-0xd70];
 };
 
-STATIC_ASSERT(sizeof(CParticleEmitter) == 0x11f8)
+STATIC_ASSERT(sizeof(CParticleEmitter) == 0x11f8);
 
 #endif

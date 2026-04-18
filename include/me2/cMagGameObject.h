@@ -319,9 +319,7 @@ private:
 	/* 0xcf5 */ bool enableLinkMeshToSector;
 	/* 0xcf8 */ cMagGameObject* callHandlerWindowKey;
 	/* 0xcfc */ cMagGameObject* callHandlerOnFrame1;
-
-	/* 0xd00 */ uchar f_d00[0xd04-0xd00];
-
+	/* 0xd00 */ IDirect3DVertexBuffer8* bigSquareShadowBuffer;
 	/* 0xd04 */ bool enableBigSquareShadow;
 
 	/* 0xd05 */ uchar f_d05[0xd10-0xd05];

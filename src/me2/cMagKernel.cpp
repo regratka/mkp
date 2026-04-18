@@ -34,12 +34,12 @@ void cMagKernel::OnFrame() {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
-    if (mgr->gameObject->jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
-    CJVMData* jvmData = mgr->gameObject->jvmData;
 
+    CJVMData* jvmData = gameObject->jvmData;
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnFrameMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnFrameMethodID);
@@ -58,12 +58,12 @@ void cMagKernel::OnInputKey(uchar* param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
-    if (mgr->gameObject->jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
 
-    CJVMData* jvmData = mgr->gameObject->jvmData;
+    CJVMData* jvmData = gameObject->jvmData;
     jbooleanArray booleans = jvmData->jniEnv->NewBooleanArray(256);
     if (booleans == NULL) {
         MessageBox(NULL, "CallAllHandler jsKey == NULL", "", 0);
@@ -92,12 +92,12 @@ void cMagKernel::OnInputMouse(float param_1, float param_2, bool param_3, bool p
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
-    if (mgr->gameObject->jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
-    
-    CJVMData* jvmData = mgr->gameObject->jvmData;
+    CJVMData* jvmData = gameObject->jvmData;
+
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnInputMouseMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnInputMouseMethodID, 
@@ -180,11 +180,12 @@ void cMagKernel::InitOnInputMouseHandlerParam(float param_1, float param_2, bool
 /* 100116a0-100116e0 00040	*/
 void cMagKernel::OnActivate() {
     cMagGameObject* i_this = (cMagGameObject*) this;
-    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
-    if (mgr->gameObject->jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
-    CJVMData* jvmData = mgr->gameObject->jvmData;
+
+    CJVMData* jvmData = gameObject->jvmData;
     if (jvmData == NULL || i_this->javaMetaData == NULL) {
         return;
     }
@@ -193,7 +194,7 @@ void cMagKernel::OnActivate() {
         jvmData->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnActivateMethodID);
         jvmData->TraceExceptions();
     }
-    
+
 }
 
 /* 100116e0-10011756 00076	*/
@@ -203,11 +204,12 @@ void cMagKernel::OnActivateLevel() {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
-    if (mgr->gameObject->jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
-    CJVMData* jvmData = mgr->gameObject->jvmData;
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnActivateLevelMethodID != NULL ) {
@@ -230,11 +232,12 @@ void cMagKernel::OnChangeMovement(int param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
 
+    CJVMData* jvmData = gameObject->jvmData;
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnChangeMovementMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnChangeMovementMethodID, param_1);
@@ -256,37 +259,12 @@ void cMagKernel::OnDestinationPos(D3DXVECTOR3 param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
 
-    // if (i_this->unkn_MetaData == NULL || i_this->unkn_MetaData->OnDestinationPosMethodID == NULL) {
-    //     if (i_this->javaMetaData->OnDestinationPosMethodID != NULL) {
-    //         jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
-    //         jvmData->TraceExceptions();
-    //     }
-    // } else {
-    //     jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
-    //     jvmData->TraceExceptions();
-    // }
-
-    // if (i_this->unkn_MetaData == NULL) {
-    //     if (i_this->javaMetaData->OnDestinationPosMethodID == NULL) {
-    //         return;
-    //     }
-    //     jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
-    //     jvmData->TraceExceptions();
-    // } else if (i_this->unkn_MetaData->OnDestinationPosMethodID == NULL) {
-    //     if (i_this->javaMetaData->OnDestinationPosMethodID == NULL) {
-    //         return;
-    //     }
-    //     jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
-    //     jvmData->TraceExceptions();
-    // } else {
-    //     jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
-    //     jvmData->TraceExceptions();
-    // }
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnDestinationPosMethodID != NULL ) {
@@ -309,11 +287,12 @@ void cMagKernel::OnDestinationDir() {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
 
+    CJVMData* jvmData = gameObject->jvmData;
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnDestinationDirMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationDirMethodID);
@@ -331,10 +310,12 @@ void cMagKernel::OnDestinationDir() {
 /* 10011980-100119e5 00065	*/
 void cMagKernel::OnInsideFrustumCull() {
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnInsideFrustumCullMethodID != NULL ) {
@@ -353,10 +334,12 @@ void cMagKernel::OnInsideFrustumCull() {
 /* 100119f0-10011a55 00065	*/
 void cMagKernel::OnOutsideFrustumCull() {
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnOutsideFrustumCullMethodID != NULL ) {
@@ -375,10 +358,12 @@ void cMagKernel::OnOutsideFrustumCull() {
 /* 10011a60-10011ac5 00065	*/
 void cMagKernel::OnParticleSequenceEnd() {
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnParticleSequenceEndMethodID != NULL ) {
@@ -411,16 +396,17 @@ bool cMagKernel::OnProcessStateMachine(StateObject_Str* param_1, int param_2, Ms
 
 /* 10011b20-10011bea 000ca	*/
 void cMagKernel::OnAnimEnd(char* param_1) {
+    cMagGameObject* i_this = (cMagGameObject*) this;
     if (delegator2 != NULL) {
         delegator2->OnAnimEnd(param_1);
     }
-
-    cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
-
+    
+    CJVMData* jvmData = gameObject->jvmData;
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnAnimEndMethodID != NULL ) {
             jstring string = jvmData->CreateJString(param_1);
@@ -445,10 +431,12 @@ void cMagKernel::OnMouseArrive(int param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnMouseArriveMethodID != NULL ) {
@@ -471,10 +459,12 @@ void cMagKernel::OnMouseLeave(int param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnMouseLeaveMethodID != NULL ) {
@@ -497,10 +487,12 @@ void cMagKernel::OnMouseEnter(int param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnMouseEnterMethodID != NULL ) {
@@ -523,11 +515,12 @@ void cMagKernel::OnCollisionObject(cMagMeshObject* param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
 
+    CJVMData* jvmData = gameObject->jvmData;
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnCollisionObjectMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnCollisionObjectMethodID, param_1->javaGlobalRef);
@@ -549,10 +542,12 @@ void cMagKernel::OnAttach(cMagMeshObject* param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnAttachMethodID != NULL ) {
@@ -575,10 +570,12 @@ void cMagKernel::OnDetach(cMagMeshObject* param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnDetachMethodID != NULL ) {
@@ -615,10 +612,12 @@ void cMagKernel::OnPathVerge() {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnPathVergeMethodID != NULL ) {
@@ -725,10 +724,12 @@ void cMagKernel::OnDestTime(float param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnDestTimeMethodID != NULL ) {
@@ -751,10 +752,12 @@ void cMagKernel::OnSlide(cMagMeshObject* param_1) {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
+
+    CJVMData* jvmData = gameObject->jvmData;
 
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnSlideMethodID != NULL ) {
@@ -777,11 +780,12 @@ void cMagKernel::OnCrash() {
     }
 
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
+    if (gameObject->jvmData == NULL) {
         return;
     }
 
+    CJVMData* jvmData = gameObject->jvmData;
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnCrashMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnCrashMethodID);

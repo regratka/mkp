@@ -22,8 +22,12 @@
 
 /* 10024C60-10024F31 002D1	*/
 cMagGameObject::cMagGameObject() {
-
-	levelObject = NULL;
+	
+	unkn_MetaData = NULL;
+	javaMetaData = NULL;
+	javaGlobalRef = NULL;
+	unkn_GlobalRef = NULL;
+	jvmData = NULL;
 	SetObjectName("No name");
 	SetClassName("cMagGameObject");
 	strcpy(windowTitle, "MagnumEngine ver 2.0");
@@ -136,6 +140,14 @@ void cMagGameObject::Cleanup() {
 	if (direct3D != NULL) {
 		direct3D->Release();
 	}
+	if (dxFont != NULL) {
+		dxFont->Release();
+		dxFont = NULL;
+	}
+	if (bigSquareShadowBuffer != NULL) {
+		bigSquareShadowBuffer->Release();
+	}
+	bigSquareShadowBuffer = NULL;
 	FileLog("Cleanup... OK");
 }
 
