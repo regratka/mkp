@@ -2,6 +2,7 @@
 
 #include "cMagEngineMgr.h"
 #include "CJVMData.h"
+#include "cMagMeshObject.h"
 
 /* 100111a0-10011244 000a4	*/
 cMagKernel::cMagKernel() : cMagLog(), magLog() {
@@ -32,12 +33,13 @@ void cMagKernel::OnFrame() {
         this->delegator2->OnFrame();
     }
 
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
-    if (jvmData == NULL) {
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
+    if (mgr->gameObject->jvmData == NULL) {
         return;
     }
-    
-    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = mgr->gameObject->jvmData;
+
     if (i_this->unkn_MetaData != NULL) {
         if (i_this->unkn_MetaData->OnFrameMethodID != NULL ) {
             jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnFrameMethodID);
@@ -50,9 +52,36 @@ void cMagKernel::OnFrame() {
 }
 
 /* 10011300-100113e0 000e0	*/
-void cMagKernel::OnInputKey(uchar* p_key) {
+void cMagKernel::OnInputKey(uchar* param_1) {
     if (this->delegator2 != NULL) {
-        this->delegator2->OnInputKey(p_key);
+        this->delegator2->OnInputKey(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
+    if (mgr->gameObject->jvmData == NULL) {
+        return;
+    }
+
+    CJVMData* jvmData = mgr->gameObject->jvmData;
+    jbooleanArray booleans = jvmData->jniEnv->NewBooleanArray(256);
+    if (booleans == NULL) {
+        MessageBox(NULL, "CallAllHandler jsKey == NULL", "", 0);
+    } else {
+        jboolean* booleanAccess = jvmData->jniEnv->GetBooleanArrayElements(booleans, NULL);
+        memcpy(booleanAccess, param_1, 256);
+        jvmData->jniEnv->ReleaseBooleanArrayElements(booleans, booleanAccess, JNI_COMMIT);
+    }
+
+    
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnInputKeyMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnInputKeyMethodID, booleans);
+        } else if (i_this->javaMetaData->OnInputKeyMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnInputKeyMethodID, booleans);
+        }
+    } else if (i_this->javaMetaData->OnInputKeyMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnInputKeyMethodID, booleans);
     }
 }
 
@@ -60,6 +89,26 @@ void cMagKernel::OnInputKey(uchar* p_key) {
 void cMagKernel::OnInputMouse(float param_1, float param_2, bool param_3, bool param_4) {
     if (this->delegator2 != NULL) {
         this->delegator2->OnInputMouse(param_1, param_2, param_3, param_4);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
+    if (mgr->gameObject->jvmData == NULL) {
+        return;
+    }
+    
+    CJVMData* jvmData = mgr->gameObject->jvmData;
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnInputMouseMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnInputMouseMethodID, 
+                param_1, param_2, param_3, param_3);
+        } else if (i_this->javaMetaData->OnInputMouseMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnInputMouseMethodID,
+                param_1, param_2, param_3, param_3);
+        }
+    } else if (i_this->javaMetaData->OnInputMouseMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnInputMouseMethodID,
+            param_1, param_2, param_3, param_3);
     }
 }
 
@@ -131,7 +180,11 @@ void cMagKernel::InitOnInputMouseHandlerParam(float param_1, float param_2, bool
 /* 100116a0-100116e0 00040	*/
 void cMagKernel::OnActivate() {
     cMagGameObject* i_this = (cMagGameObject*) this;
-    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
+    if (mgr->gameObject->jvmData == NULL) {
+        return;
+    }
+    CJVMData* jvmData = mgr->gameObject->jvmData;
     if (jvmData == NULL || i_this->javaMetaData == NULL) {
         return;
     }
@@ -148,12 +201,51 @@ void cMagKernel::OnActivateLevel() {
     if (this->delegator2 != NULL) {
         this->delegator2->OnActivateLevel();
     }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    cMagEngineMgr* mgr  = cMagEngineMgr::getInstance();
+    if (mgr->gameObject->jvmData == NULL) {
+        return;
+    }
+    CJVMData* jvmData = mgr->gameObject->jvmData;
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnActivateLevelMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnActivateLevelMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnActivateLevelMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnActivateLevelMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnActivateLevelMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnActivateLevelMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011760-100117e1 00081	*/
 void cMagKernel::OnChangeMovement(int param_1) {
     if (this->delegator2 != NULL) {
         this->delegator2->OnChangeMovement(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnChangeMovementMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnChangeMovementMethodID, param_1);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnChangeMovementMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnChangeMovementMethodID, param_1);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnChangeMovementMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnChangeMovementMethodID, param_1);
+        jvmData->TraceExceptions();
     }
 }
 
@@ -162,6 +254,52 @@ void cMagKernel::OnDestinationPos(D3DXVECTOR3 param_1) {
     if (this->delegator2 != NULL) {
         this->delegator2->OnDestinationPos(param_1);
     }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    // if (i_this->unkn_MetaData == NULL || i_this->unkn_MetaData->OnDestinationPosMethodID == NULL) {
+    //     if (i_this->javaMetaData->OnDestinationPosMethodID != NULL) {
+    //         jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+    //         jvmData->TraceExceptions();
+    //     }
+    // } else {
+    //     jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+    //     jvmData->TraceExceptions();
+    // }
+
+    // if (i_this->unkn_MetaData == NULL) {
+    //     if (i_this->javaMetaData->OnDestinationPosMethodID == NULL) {
+    //         return;
+    //     }
+    //     jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+    //     jvmData->TraceExceptions();
+    // } else if (i_this->unkn_MetaData->OnDestinationPosMethodID == NULL) {
+    //     if (i_this->javaMetaData->OnDestinationPosMethodID == NULL) {
+    //         return;
+    //     }
+    //     jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+    //     jvmData->TraceExceptions();
+    // } else {
+    //     jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+    //     jvmData->TraceExceptions();
+    // }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnDestinationPosMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnDestinationPosMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnDestinationPosMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationPosMethodID, jvmData->NewVectorObject(param_1));
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011900-10011976 00076	*/
@@ -169,18 +307,91 @@ void cMagKernel::OnDestinationDir() {
     if (this->delegator2 != NULL) {
         this->delegator2->OnDestinationDir();
     }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnDestinationDirMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestinationDirMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnDestinationDirMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationDirMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnDestinationDirMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestinationDirMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011980-100119e5 00065	*/
 void cMagKernel::OnInsideFrustumCull() {
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnInsideFrustumCullMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnInsideFrustumCullMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnInsideFrustumCullMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnInsideFrustumCullMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnInsideFrustumCullMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnInsideFrustumCullMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 100119f0-10011a55 00065	*/
 void cMagKernel::OnOutsideFrustumCull() {
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnOutsideFrustumCullMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnOutsideFrustumCullMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnOutsideFrustumCullMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnOutsideFrustumCullMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnOutsideFrustumCullMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnOutsideFrustumCullMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011a60-10011ac5 00065	*/
 void cMagKernel::OnParticleSequenceEnd() {
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnParticleSequenceEndMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnParticleSequenceEndMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnParticleSequenceEndMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnParticleSequenceEndMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnParticleSequenceEndMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnParticleSequenceEndMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011ad0-10011ae7 00017	*/
@@ -200,30 +411,187 @@ bool cMagKernel::OnProcessStateMachine(StateObject_Str* param_1, int param_2, Ms
 
 /* 10011b20-10011bea 000ca	*/
 void cMagKernel::OnAnimEnd(char* param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnAnimEnd(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnAnimEndMethodID != NULL ) {
+            jstring string = jvmData->CreateJString(param_1);
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnAnimEndMethodID, string);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnAnimEndMethodID != NULL) {
+            jstring string = jvmData->CreateJString(param_1);
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnAnimEndMethodID, string);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnAnimEndMethodID != NULL) {
+        jstring string = jvmData->CreateJString(param_1);
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnAnimEndMethodID, string);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011bf0-10011c74 00084	*/
 void cMagKernel::OnMouseArrive(int param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnMouseArrive(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnMouseArriveMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnMouseArriveMethodID, param_1);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnMouseArriveMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnMouseArriveMethodID, param_1);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnMouseArriveMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnMouseArriveMethodID, param_1);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011c80-10011d04 00084	*/
 void cMagKernel::OnMouseLeave(int param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnMouseLeave(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnMouseLeaveMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnMouseLeaveMethodID, param_1);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnMouseLeaveMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnMouseLeaveMethodID, param_1);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnMouseLeaveMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnMouseLeaveMethodID, param_1);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011d10-10011d94 00084	*/
 void cMagKernel::OnMouseEnter(int param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnMouseEnter(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnMouseEnterMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnMouseEnterMethodID, param_1);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnMouseEnterMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnMouseEnterMethodID, param_1);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnMouseEnterMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnMouseEnterMethodID, param_1);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011da0-10011e40 000a0	*/
 void cMagKernel::OnCollisionObject(cMagMeshObject* param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnCollisionObject(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnCollisionObjectMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnCollisionObjectMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnCollisionObjectMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnCollisionObjectMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnCollisionObjectMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnCollisionObjectMethodID, param_1->javaGlobalRef);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011e40-10011ee0 000a0	*/
 void cMagKernel::OnAttach(cMagMeshObject* param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnAttach(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnAttachMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnAttachMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnAttachMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnAttachMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnAttachMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnAttachMethodID, param_1->javaGlobalRef);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011ee0-10011f80 000a0	*/
 void cMagKernel::OnDetach(cMagMeshObject* param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnDetach(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnDetachMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDetachMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnDetachMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDetachMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnDetachMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDetachMethodID, param_1->javaGlobalRef);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10011f80-10011f94 00014	*/
@@ -235,18 +603,81 @@ void cMagKernel::OnSlideObject(cMagMeshObject* param_1) {
 
 /* 10011fa0-10012008 00068	*/
 void cMagKernel::OnBonePositionUpdate(char* param_1, D3DXVECTOR3 param_2, D3DXMATRIX param_3, D3DXMATRIX param_4) {
+    if (this->delegator2 != NULL) {
+        this->delegator2->OnBonePositionUpdate(param_1, param_2, param_3, param_4);
+    }
 }
 
 /* 10012010-10012086 00076	*/
 void cMagKernel::OnPathVerge() {
+    if (delegator2 != NULL) {
+        delegator2->OnPathVerge();
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnPathVergeMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnPathVergeMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnPathVergeMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnPathVergeMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnPathVergeMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnPathVergeMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10012090-1001213f 000af	*/
 void cMagKernel::EnableCallHandler(char* param_1) {
+    if (stricmp(param_1, "OnFrame") == 0) {
+        this->enableOnFrameHandler = true;
+    }
+    if (stricmp(param_1, "OnInputKey") == 0) {
+        this->enableOnInputKeyHandler = true;
+    }
+    if (stricmp(param_1, "OnInputMouse") == 0) {
+        this->enabledOnInputMouseHandler1 = false;
+        this->enabledOnInputMouseHandler2 = false;
+        this->enabledOnInputMouseHandler3 = true;
+    }
+    if (stricmp(param_1, "OnCollisionObject") == 0) {
+        this->enabledOnCollisionObjectHandler = true;
+    }
+    if (stricmp(param_1, "OnAttachChild") == 0) {
+        this->enabledOnAttachChild = true;
+    }
+    if (stricmp(param_1, "OnPhysicsUpdate") == 0) {
+        this->enabledOnPhysicsUpdate = true;
+    }
 }
 
 /* 10012140-100121e1 000a1	*/
 void cMagKernel::DisableCallHandler(char* param_1) {
+    if (stricmp(param_1, "OnFrame") == 0) {
+        this->enableOnFrameHandler = false;
+    }
+    if (stricmp(param_1, "OnInputKey") == 0) {
+        this->enableOnInputKeyHandler = false;
+    }
+    if (stricmp(param_1, "OnInputMouse") == 0) {
+        this->enabledOnInputMouseHandler3 = false;
+    }
+    if (stricmp(param_1, "OnCollisionObject") == 0) {
+        this->enabledOnCollisionObjectHandler = false;
+    }
+    if (stricmp(param_1, "OnAttachChild") == 0) {
+        this->enabledOnAttachChild = false;
+    }
+    if (stricmp(param_1, "OnPhysicsUpdate") == 0) {
+        this->enabledOnPhysicsUpdate = false;
+    }
 }
 
 /* 100121f0-100121f7 00007	*/
@@ -289,6 +720,28 @@ char* cMagKernel::GetFileMeshName() {
 
 /* 10012270-10012303 00093	*/
 void cMagKernel::OnDestTime(float param_1) {
+    if (delegator2 != NULL) {
+        delegator2->OnDestTime(param_1);
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnDestTimeMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnDestTimeMethodID, param_1);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnDestTimeMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestTimeMethodID, param_1);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnDestTimeMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnDestTimeMethodID, param_1);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10012310-100123af 0009f	*/
@@ -296,10 +749,51 @@ void cMagKernel::OnSlide(cMagMeshObject* param_1) {
     if (this->delegator2 != NULL) {
         this->delegator2->OnSlide(param_1);
     }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnSlideMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnSlideMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnSlideMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnSlideMethodID, param_1->javaGlobalRef);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnSlideMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnSlideMethodID, param_1->javaGlobalRef);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 100123b0-10012429 00079	*/
 void cMagKernel::OnCrash() {
+    if (this->delegator2 != NULL) {
+        this->delegator2->OnCrash();
+    }
+
+    cMagGameObject* i_this = (cMagGameObject*) this;
+    CJVMData* jvmData = cMagEngineMgr::getInstance()->gameObject->jvmData;
+    if (jvmData == NULL) {
+        return;
+    }
+
+    if (i_this->unkn_MetaData != NULL) {
+        if (i_this->unkn_MetaData->OnCrashMethodID != NULL ) {
+            jvmData->jniEnv->CallVoidMethod(i_this->unkn_GlobalRef, i_this->unkn_MetaData->OnCrashMethodID);
+            jvmData->TraceExceptions();
+        } else if (i_this->javaMetaData->OnCrashMethodID != NULL) {
+            jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnCrashMethodID);
+            jvmData->TraceExceptions();
+        }
+    } else if (i_this->javaMetaData->OnCrashMethodID != NULL) {
+        jvmData->jniEnv->CallVoidMethod(i_this->javaGlobalRef, i_this->javaMetaData->OnCrashMethodID);
+        jvmData->TraceExceptions();
+    }
 }
 
 /* 10012430-10012437 00007	*/
