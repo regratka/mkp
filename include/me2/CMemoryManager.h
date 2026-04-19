@@ -17,6 +17,9 @@ public:
 	/* 1009A750 */ void GenerateReport(char* param_1);
 	/* 1009A980 */ ulong GetTotalMemory();
 	/* 1009A9D0 */ ulong GetTotalItems();
+
+private: 
+	/* 0x00 */ uchar field_0000[0x28-0x0];
 };
 
 #endif

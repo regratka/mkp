@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 12.176664,
+    "fuzzy_match_percent": 13.322278,
     "total_code": "503267",
-    "matched_code": "34629",
-    "matched_code_percent": 6.880841,
+    "matched_code": "35306",
+    "matched_code_percent": 7.015362,
     "matched_data_percent": 100.0,
     "total_functions": 2181,
-    "matched_functions": 323,
-    "matched_functions_percent": 14.80972,
+    "matched_functions": 336,
+    "matched_functions_percent": 15.405777,
     "complete_data_percent": 100.0,
     "total_units": 108
   },
@@ -1487,10 +1487,14 @@
     {
       "name": "CFreeCamera",
       "measures": {
-        "fuzzy_match_percent": 1.2908452,
+        "fuzzy_match_percent": 2.8139312,
         "total_code": "2158",
+        "matched_code": "11",
+        "matched_code_percent": 0.50973123,
         "matched_data_percent": 100.0,
         "total_functions": 12,
+        "matched_functions": 1,
+        "matched_functions_percent": 8.333334,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1498,7 +1502,7 @@
         {
           "name": ".text",
           "size": "2158",
-          "fuzzy_match_percent": 1.2908452,
+          "fuzzy_match_percent": 2.8139312,
           "metadata": {}
         }
       ],
@@ -1528,7 +1532,7 @@
         {
           "name": "??0CFreeCamera@@QAE@XZ",
           "size": "184",
-          "fuzzy_match_percent": 4.318182,
+          "fuzzy_match_percent": 11.681818,
           "metadata": {
             "demangled_name": "public: __thiscall CFreeCamera::CFreeCamera(void)"
           },
@@ -1537,6 +1541,7 @@
         {
           "name": "??1CFreeCamera@@UAE@XZ",
           "size": "11",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CFreeCamera::~CFreeCamera(void)"
           },
@@ -1545,6 +1550,7 @@
         {
           "name": "?OnInputKey@CFreeCamera@@UAEXPAE@Z",
           "size": "23",
+          "fuzzy_match_percent": 11.111111,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CFreeCamera::OnInputKey(unsigned char *)"
           },
@@ -1553,6 +1559,7 @@
         {
           "name": "?OnInputMouse@CFreeCamera@@UAEXMM_N0@Z",
           "size": "617",
+          "fuzzy_match_percent": 0.5208333,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CFreeCamera::OnInputMouse(float, float, bool, bool)"
           },
@@ -1570,6 +1577,7 @@
         {
           "name": "?OnActivateView@CFreeCamera@@UAEXXZ",
           "size": "102",
+          "fuzzy_match_percent": 2.5,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CFreeCamera::OnActivateView(void)"
           },
@@ -1608,10 +1616,14 @@
     {
       "name": "CGame",
       "measures": {
-        "fuzzy_match_percent": 0.85434985,
+        "fuzzy_match_percent": 18.990665,
         "total_code": "30473",
+        "matched_code": "666",
+        "matched_code_percent": 2.1855414,
         "matched_data_percent": 100.0,
         "total_functions": 85,
+        "matched_functions": 12,
+        "matched_functions_percent": 14.117648,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1619,7 +1631,7 @@
         {
           "name": ".text",
           "size": "30473",
-          "fuzzy_match_percent": 0.85434985,
+          "fuzzy_match_percent": 18.990665,
           "metadata": {}
         }
       ],
@@ -1627,6 +1639,7 @@
         {
           "name": "??0CGame@@QAE@ABV0@@Z",
           "size": "2449",
+          "fuzzy_match_percent": 68.664696,
           "metadata": {
             "demangled_name": "public: __thiscall CGame::CGame(class CGame const &)"
           },
@@ -1635,6 +1648,7 @@
         {
           "name": "??4CGame@@QAEAAV0@ABV0@@Z",
           "size": "2760",
+          "fuzzy_match_percent": 58.303265,
           "metadata": {
             "demangled_name": "public: class CGame & __thiscall CGame::operator=(class CGame const &)"
           },
@@ -1649,7 +1663,7 @@
         {
           "name": "??0CGame@@QAE@XZ",
           "size": "1369",
-          "fuzzy_match_percent": 1.4960213,
+          "fuzzy_match_percent": 78.17772,
           "metadata": {
             "demangled_name": "public: __thiscall CGame::CGame(void)"
           },
@@ -1658,7 +1672,7 @@
         {
           "name": "??0CGame@@QAE@PAUHINSTANCE__@@@Z",
           "size": "457",
-          "fuzzy_match_percent": 4.3931623,
+          "fuzzy_match_percent": 61.48718,
           "metadata": {
             "demangled_name": "public: __thiscall CGame::CGame(struct HINSTANCE__*)"
           },
@@ -1667,7 +1681,7 @@
         {
           "name": "??1CGame@@UAE@XZ",
           "size": "350",
-          "fuzzy_match_percent": 1.517647,
+          "fuzzy_match_percent": 86.564705,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CGame::~CGame(void)"
           },
@@ -1684,7 +1698,7 @@
         {
           "name": "?SetLoadLevelBackground@CGame@@QAEXPAD@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetLoadLevelBackground(char *)"
           },
@@ -1693,7 +1707,7 @@
         {
           "name": "?SetLoadLevelBackground@CGame@@QAEXH@Z",
           "size": "93",
-          "fuzzy_match_percent": 3.5714285,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetLoadLevelBackground(int)"
           },
@@ -1747,7 +1761,7 @@
         {
           "name": "?LoadLevel@CGame@@QAEXXZ",
           "size": "34",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::LoadLevel(void)"
           },
@@ -2220,7 +2234,7 @@
         {
           "name": "?LoadTrack@CGame@@QAEXXZ",
           "size": "109",
-          "fuzzy_match_percent": 2.9411764,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::LoadTrack(void)"
           },
@@ -2265,7 +2279,7 @@
         {
           "name": "?SetServerName@CGame@@QAEXPAD@Z",
           "size": "46",
-          "fuzzy_match_percent": 5.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetServerName(char *)"
           },
@@ -2274,7 +2288,7 @@
         {
           "name": "?SetPlayerName@CGame@@QAEXPAD@Z",
           "size": "46",
-          "fuzzy_match_percent": 5.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetPlayerName(char *)"
           },
@@ -2283,7 +2297,7 @@
         {
           "name": "?SetIP@CGame@@QAEXPAD@Z",
           "size": "46",
-          "fuzzy_match_percent": 5.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetIP(char *)"
           },
@@ -2309,7 +2323,7 @@
         {
           "name": "?MULTIPLAY_SetPosition@CGame@@QAEXUD3DXVECTOR3@@0@Z",
           "size": "68",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::MULTIPLAY_SetPosition(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -2327,7 +2341,7 @@
         {
           "name": "?MULTIPLAY_SetServerPosition@CGame@@QAEXUD3DXVECTOR3@@0@Z",
           "size": "68",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::MULTIPLAY_SetServerPosition(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -2336,7 +2350,7 @@
         {
           "name": "?MULTIPLAY_SetServerStateIdle@CGame@@QAEXUD3DXVECTOR3@@0@Z",
           "size": "68",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::MULTIPLAY_SetServerStateIdle(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -2345,7 +2359,7 @@
         {
           "name": "?MULTIPLAY_SetClientStateIdle@CGame@@QAEXUD3DXVECTOR3@@0@Z",
           "size": "68",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::MULTIPLAY_SetClientStateIdle(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -2354,7 +2368,7 @@
         {
           "name": "?GetClientServer@CGame@@QAEPAVCClientServer@@XZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CClientServer * __thiscall CGame::GetClientServer(void)"
           },
@@ -11297,7 +11311,7 @@
     {
       "name": "cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 73.314804,
+        "fuzzy_match_percent": 73.960495,
         "total_code": "32312",
         "matched_code": "10777",
         "matched_code_percent": 33.352936,
@@ -11312,7 +11326,7 @@
         {
           "name": ".text",
           "size": "32312",
-          "fuzzy_match_percent": 73.314804,
+          "fuzzy_match_percent": 73.960495,
           "metadata": {}
         }
       ],
@@ -11401,7 +11415,7 @@
         {
           "name": "??4cMagGameObject@@QAEAAV0@ABV0@@Z",
           "size": "3125",
-          "fuzzy_match_percent": 74.28338,
+          "fuzzy_match_percent": 78.976074,
           "metadata": {
             "demangled_name": "public: class cMagGameObject & __thiscall cMagGameObject::operator=(class cMagGameObject const &)"
           },
@@ -11416,7 +11430,7 @@
         {
           "name": "??0cMagGameObject@@QAE@XZ",
           "size": "721",
-          "fuzzy_match_percent": 55.448277,
+          "fuzzy_match_percent": 58.220688,
           "metadata": {
             "demangled_name": "public: __thiscall cMagGameObject::cMagGameObject(void)"
           },
@@ -11452,7 +11466,7 @@
         {
           "name": "?Cleanup@cMagGameObject@@QAEXXZ",
           "size": "213",
-          "fuzzy_match_percent": 21.02817,
+          "fuzzy_match_percent": 40.74648,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::Cleanup(void)"
           },
@@ -16295,7 +16309,7 @@
     {
       "name": "cMagObjectList",
       "measures": {
-        "fuzzy_match_percent": 99.72603,
+        "fuzzy_match_percent": 99.69973,
         "total_code": "10232",
         "matched_code": "10087",
         "matched_code_percent": 98.58288,
@@ -16310,7 +16324,7 @@
         {
           "name": ".text",
           "size": "10232",
-          "fuzzy_match_percent": 99.72603,
+          "fuzzy_match_percent": 99.69973,
           "metadata": {}
         }
       ],
@@ -16705,7 +16719,7 @@
         {
           "name": "?Find@cMagObjectList@@QAEPAVcMagKernel@@K@Z",
           "size": "17",
-          "fuzzy_match_percent": 49.166668,
+          "fuzzy_match_percent": 33.333332,
           "metadata": {
             "demangled_name": "public: class cMagKernel * __thiscall cMagObjectList::Find(unsigned long)"
           },

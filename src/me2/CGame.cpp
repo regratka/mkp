@@ -1,24 +1,71 @@
 #include "CGame.h"
-
-/* 10018FB0-10019941 00991	*/
-CGame::CGame(CGame* param_1) {
-}
-
-/* 10019B10-1001A5D8 00AC8	*/
-CGame* CGame::operator=(CGame* param_1) {
-	return 0;
-}
+#include "CTrack.h"
 
 /* 10091750-10091CA9 00559	*/
 CGame::CGame() {
+	CGame::TIMER_PTR = 0;
+	this->m_frameTime = 0.0f;
+	this->lastTickCount = 0.0f;
+	CGame::CLEANED_CALL_METHODS = FALSE;
+	parameterLoader = NULL;
+	activeLevel = NULL;
+	levelsManager = new CLevelsManager();
+	memset(unkn_11a0, 0, sizeof(unkn_11a0));
+	memset(levelDirectory, 0, sizeof(levelDirectory));
+	memset(levelPath, 0, sizeof(levelPath));
+	SetGame(this);
+	unkn_1170 = NULL;
+	terrain = NULL;
+	memoryUsage = 0;
+	memset(unkn_1538, 0, sizeof(unkn_1538));
+	progressBarPos.x = 0.1f;
+	progressBarPos.y = 0.9f;
+	backgroundPos.x = 0.5f;
+	backgroundPos.y = 0.9f;
+	magSprite = NULL;
+	meshObjects.reserve(3000);
+	alphaMeshObjects.reserve(1000);
+	billboardObjects.reserve(3000);
+	particleObjects.reserve(1000);
+	fxObjects.reserve(500);
+	spriteObjects.reserve(1000);
+	objects.reserve(3000);
+	shadowObjects.reserve(256);
+	f_2b0.reserve(1024);
+	sectors.reserve(1000);
+	clientServer = NULL;
+	isClient = false;
+	isServer = false;
+	serverPort = 25857;
+	strcpy(playerName, "Player");
+	strcpy(serverIP, "127.0.0.1");
+	strcpy(serverSessionName, "Session01");
+	clientPlayer = NULL;
+	serverPlayer = NULL;
 }
 
 /* 10091CD0-10091E99 001C9	*/
 CGame::CGame(HINSTANCE__* param_1) {
+	bool created = CreateWinDx(param_1, false, 16, 800, 600, "Magnum", false);
+	if (!created) {
+		log.CrashLog("CreateWinDx ... (error)");
+	}
+	memset(exeFilename, 0, sizeof(exeFilename));
+	activeLevel = NULL;
+	levelsManager = new CLevelsManager();
+	memset(unkn_11a0, 0, sizeof(unkn_11a0));
+	memset(levelDirectory, 0, sizeof(levelDirectory));
+	SetGame(this);
+	unkn_1170 = NULL;
+	terrain = NULL;
+	memoryUsage = 0;
 }
 
 /* 10091EA0-10091FFE 0015E	*/
 CGame::~CGame() {
+	if (jvmData != NULL) {
+		delete jvmData;
+	}
 }
 
 /* 10092000-100920B7 000B7	*/
@@ -28,10 +75,24 @@ CLevel* CGame::CreateLevelObject(_iobuf* param_1) {
 
 /* 100920C0-100920CD 0000D	*/
 void CGame::SetLoadLevelBackground(char* param_1) {
+	loadLevelBackground = param_1;
 }
 
 /* 100920D0-1009212D 0005D	*/
-void CGame::SetLoadLevelBackground(int param_1) {
+void CGame::SetLoadLevelBackground(BOOL param_1) {
+	if (magSprite == NULL) {
+		return;
+	}
+
+	switch(param_1) {
+		case 1:
+			magSprite->Hide(unkn_d44);
+			magSprite->Show(unkn_d40);	
+			break;
+		case 0:
+			magSprite->Hide(unkn_d40);
+			magSprite->Show(unkn_d44);
+	}
 }
 
 /* 10092130-100922A3 00173	*/
@@ -56,6 +117,10 @@ void CGame::Restore() {
 
 /* 100926E0-10092702 00022	*/
 void CGame::LoadLevel() {
+	if (unkn_11a0[0] != '\0') {
+		LoadLevel_(unkn_11a0);
+		memset(unkn_11a0, 0, sizeof(unkn_11a0));
+	}
 }
 
 /* 10092710-100927C5 000B5	*/
@@ -281,6 +346,9 @@ void CGame::LinkObjects() {
 
 /* 100976B0-1009771D 0006D	*/
 void CGame::LoadTrack() {
+	CTrack* track = new CTrack();
+	track->Load(&fileStream);
+	CreateObject(track);
 }
 
 /* 10097720-10097762 00042	*/
@@ -302,18 +370,22 @@ void CGame::ReadSettingsClientServer(char* param_1) {
 
 /* 10097AB0-10097ADE 0002E	*/
 void CGame::SetServerName(char* param_1) {
+	strcpy(serverSessionName, param_1);
 }
 
 /* 10097AE0-10097B0E 0002E	*/
 void CGame::SetPlayerName(char* param_1) {
+	strcpy(playerName, param_1);
 }
 
 /* 10097B10-10097B3E 0002E	*/
 void CGame::SetIP(char* param_1) {
+	strcpy(serverIP, param_1);
 }
 
 /* 10097B40-10097B5A 0001A	*/
 void CGame::SetPort(char* param_1) {
+	serverPort = atoi(param_1);
 }
 
 /* 10097B60-10097C66 00106	*/
@@ -322,6 +394,9 @@ void CGame::MULTIPLAY_CreateClientPalayer() {
 
 /* 10097C70-10097CB4 00044	*/
 void CGame::MULTIPLAY_SetPosition(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
+	if (clientPlayer != NULL) {
+		clientPlayer->SetPosition(param_1, param_2);
+	}
 }
 
 /* 10097CC0-10097DC6 00106	*/
@@ -330,23 +405,32 @@ void CGame::MULTIPLAY_CreateServerPalayer() {
 
 /* 10097DD0-10097E14 00044	*/
 void CGame::MULTIPLAY_SetServerPosition(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
+	if (serverPlayer != NULL) {
+		serverPlayer->SetPosition(param_1, param_2);
+	}
 }
 
 /* 10097E20-10097E64 00044	*/
 void CGame::MULTIPLAY_SetServerStateIdle(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
+	if (serverPlayer != NULL) {
+		serverPlayer->SetStateIdle(param_1, param_2);
+	}
 }
 
 /* 10097E70-10097EB4 00044	*/
 void CGame::MULTIPLAY_SetClientStateIdle(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
+	if (clientPlayer != NULL) {
+		clientPlayer->SetStateIdle(param_1, param_2);
+	}
 }
 
 /* 10097EC0-10097EC7 00007	*/
 CClientServer* CGame::GetClientServer() {
-	return 0;
+	return clientServer;
 }
 
 /* 100C97D0-100C97D5 00005	*/
 cMagGameObject* CGame::JLoadMesh(char* param_1) {
-	return 0;
+	return NULL;
 }
 

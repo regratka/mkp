@@ -2990,7 +2990,7 @@
 ??1CGame@@UAE@XZ;CGame::~CGame;0x10091ea0;0x15e;__thiscall;;void;CGame*
 ?CreateLevelObject@CGame@@IAEPAVCLevel@@PAU_iobuf@@@Z;CGame::CreateLevelObject;0x10092000;0xb7;__thiscall;;CLevel*;CGame*;_iobuf*
 ?SetLoadLevelBackground@CGame@@QAEXPAD@Z;CGame::SetLoadLevelBackground;0x100920c0;0xd;__thiscall;;void;CGame*;char*
-?SetLoadLevelBackground@CGame@@QAEXH@Z;CGame::SetLoadLevelBackground;0x100920d0;0x5d;__thiscall;;void;CGame*;int
+?SetLoadLevelBackground@CGame@@QAEXH@Z;CGame::SetLoadLevelBackground;0x100920d0;0x5d;__thiscall;;void;CGame*;BOOL
 ?LoadLevel@CGame@@QAEXPAD@Z;CGame::LoadLevel;0x10092130;0x173;__thiscall;;void;CGame*;char*
 ;Catch@100922a3;0x100922a3;0x21;__fastcall;;uchar*;cMagLog*
 ;FUN_100922c7;0x100922c7;0x170;__stdcall;;uchar

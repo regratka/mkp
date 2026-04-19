@@ -1,12 +1,18 @@
 #ifndef _C_GAME
 #define _C_GAME
 
+#include <fstream>
 #include <globals.h>
 
 #include "cMagGameObject.h"
 #include "CLevel.h"
+#include "CLevelsManager.h"
+#include "CMemoryManager.h"
+#include "CExtendedParameterLoader.h"
+#include "cMagSprite.h"
+#include "CClientServerPlayer.h"
+#include "CCPUTicker.h"
 
-class MagTerrain;
 class CState;
 class CClientServer;
 class cMagGameObject;
@@ -14,16 +20,20 @@ class cMagGameObject;
 struct JNIEnv_;
 
 
-class CGame : public cMagGameObject {
+struct CGameTextureData {
+	/* 0x00  */ char textureName[255];
+	/* 0x100 */ int textureId;
+	/* 0x104 */ int directTexture;
+};
+
+class __declspec(dllexport) CGame : public cMagGameObject {
 public:
-	/* 10018FB0 */ CGame(CGame* param_1);
-	/* 10019B10 */ CGame* operator=(CGame* param_1);
 	/* 10091750 */ CGame();
 	/* 10091CD0 */ CGame(HINSTANCE__* param_1);
 	/* 10091EA0 */ ~CGame();
 	/* 10092000 */ CLevel* CreateLevelObject(_iobuf* param_1);
 	/* 100920C0 */ void SetLoadLevelBackground(char* param_1);
-	/* 100920D0 */ void SetLoadLevelBackground(int param_1);
+	/* 100920D0 */ void SetLoadLevelBackground(BOOL param_1);
 	/* 10092130 */ void LoadLevel(char* param_1);
 	/* 10092440 */ void LoadBackgroundSettings(char* param_1);
 	/* 10092610 */ void SetProgressBarPos(D3DXVECTOR2 param_1);
@@ -102,11 +112,52 @@ public:
 	/* 100C97D0 */ cMagGameObject* JLoadMesh(char* param_1);
 
 public:
-	/* 0xd10 */  uchar f_d10[0x1180-0xd10];
+	/* 0xd10  */ CExtendedParameterLoader* parameterLoader;
+	/* 0xd14  */ uchar f_d14[0xd24-0xd14];
+	/* 0xd24  */ char* loadLevelBackground;
+	/* 0xd28  */ D3DXVECTOR2 progressBarPos;
+	/* 0xd30  */ D3DXVECTOR2 backgroundPos;
+	/* 0xd38  */ BOOL loadedProgressBar;
+	/* 0xd3c  */ BOOL loadedProgressBackground;
+	/* 0xd40  */ int unkn_d40;
+	/* 0xd44  */ int unkn_d44;
+	/* 0xd48  */ uchar f_d48[0xe30-0xd48];
+	/* 0xe30  */ CCPUTicker ticker;
+	/* 0x1168 */ cMagSprite* magSprite;
+	/* 0x116c */ MagTerrain* terrain;
+	/* 0x1170 */ cMagKernel* unkn_1170;
+	/* 0x1174 */ D3DXVECTOR3 cameraProperty1;
 	/* 0x1180 */ CLevel* activeLevel;
-	/* 0x1184 */  uchar f_1184[0x19f0-0x1184];
-
-
+	/* 0x1184 */ CLevelsManager* levelsManager;
+	/* 0x1188 */ std::vector<CGameTextureData*> texturesData;
+	/* 0x1198 */ cMagLog log;
+	/* 0x11a0 */ char unkn_11a0[256];
+	/* 0x12a0 */ char levelDirectory[256];
+	/* 0x13a0 */ char levelPath[256];
+	/* 0x14a0 */ std::ifstream fileStream;
+	/* 0x1530 */ int loadedObjects;
+	/* 0x1534 */ int memoryUsage;
+	/* 0x1538 */ uchar unkn_1538[40];
+	/* 0x1560 */ char exeFilename[300];
+	/* 0x168c */ float lastTickCount;
+	/* 0x1690 */ float m_frameTime;
+	/* 0x1694 */ CMemoryManager memoryManager;
+	/* 0x16bc */ CClientServer* clientServer;
+	/* 0x16c0 */ bool isClient;
+	/* 0x16c1 */ bool isServer;
+	/* 0x16c4 */ int serverPort;
+	/* 0x16c8 */ char playerName[256];
+	/* 0x17c8 */ uchar f_17c8[0x17cc-0x17c8];
+	/* 0x17cc */ char serverIP[256];
+	/* 0x18cc */ uchar f_18cc[0x18d0-0x18cc];
+	/* 0x18d0 */ char serverSessionName[256];
+	/* 0x19d0 */ uchar f_19d0[0x19d4-0x19d0];
+	/* 0x19d4 */ CClientServerPlayer* clientPlayer; 
+	/* 0x19d8 */ CClientServerPlayer* serverPlayer; 
+	/* 0x19dc */ uchar f_19dc[0x19f0-0x19dc];
+private:
+	static UINT_PTR TIMER_PTR;
+	static bool CLEANED_CALL_METHODS;
 };
 
 STATIC_ASSERT(sizeof(CGame) == 0x19f0);
