@@ -2,22 +2,24 @@
 #define _C_TRACK
 
 #include <globals.h>
+#include <vector>
 #include <fstream>
 
 #include "cMagKernel.h"
+#include "CTrackData.h"
 
-class CTrack : public cMagKernel {
+class __declspec(dllexport) CTrack : public cMagKernel {
 public:
-	/* 10090A50 */ CTrack(CTrack* param_1);
-	/* 10090D50 */ CTrack* operator=(CTrack* param_1);
-	/* 100910A0 */ CTrack* scalar_destructor(uchar param_1);
 	/* 100B8220 */ CTrack();
 	/* 100B83E0 */ ~CTrack();
-	/* 100B8510 */ void Load(std::ifstream* param_1);
+	/* 100B8510 */ void Load(std::ifstream& param_1);
 
 private: 
-	/* 0x1dc */ uchar field_0x1dc[0x1f0-0x1dc];
+	/* 0x1dc */ std::vector<CTrackData> dataVector;
+	/* 0x1ec */ int trackPointCoords;
 };
+
+STATIC_ASSERT(sizeof(CTrack) == 0x1f0);
 
 
 #endif

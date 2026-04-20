@@ -174,7 +174,7 @@ public:
 	/* 100128f0 */ void CallOnActivateLevel();
 	/* 10012920 */ void CallOnNavigationPathEnd();
 
-private:
+protected:
 	/* 0x00c */	cMagKernel* delegator1;
     /* 0x010 */	cMagKernel* delegator2;
     /* 0x014 */	int objectParam;
