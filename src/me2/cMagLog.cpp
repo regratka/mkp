@@ -150,11 +150,11 @@ void cMagLog::ReadSettings(char* p_settingsPath) {
         return;
     }
 
-    memset(buffer, 0, sizeof(buffer));
+   memset(buffer, 0, sizeof(buffer));
     while (!feof(settingsFile)) {
         fgets(buffer, 99, settingsFile);
         char* settingName = strtok(buffer," :,");
-        bool cmpRes = stricmp(settingName, "Log");
+        int cmpRes = stricmp(settingName, "Log");
         if (cmpRes == 0) {
             char* settingVal = strtok(NULL," :");
             if (settingVal != NULL) {

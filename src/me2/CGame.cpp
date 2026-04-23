@@ -105,14 +105,28 @@ void CGame::LoadBackgroundSettings(char* param_1) {
 
 /* 10092610-1009266A 0005A	*/
 void CGame::SetProgressBarPos(D3DXVECTOR2 param_1) {
+	this->progressBarPos = param_1;
+	if (this->magSprite != NULL) {
+		this->magSprite->SetScale(loadedProgressBar, 0.0f, 0.75f);
+		this->magSprite->SetPos(loadedProgressBar, this->progressBarPos.x, this->progressBarPos.y, 0);
+	}
 }
+
 
 /* 10092670-100926CD 0005D	*/
 void CGame::SetProgressBarBackgroundPos(D3DXVECTOR2 param_1) {
+	this->backgroundPos = param_1;
+	if (this->magSprite != NULL) {
+		this->magSprite->SetScale(loadedProgressBackground, 10.0f, 0.8f);
+		this->magSprite->SetPos(loadedProgressBackground, this->backgroundPos.x, this->backgroundPos.y, 0);
+	}
 }
 
 /* 100926D0-100926E0 00010	*/
 void CGame::Restore() {
+	if (magSprite != NULL) {
+		this->magSprite->Restore();
+	}
 }
 
 /* 100926E0-10092702 00022	*/
@@ -321,7 +335,7 @@ void CGame::FrameTime() {
 
 /* 10096C60-10096C67 00007	*/
 float CGame::GetFrameTime() {
-	return 0;
+	return this->m_frameTime;
 }
 
 /* 10096C70-1009709F 0042F	*/
@@ -347,7 +361,7 @@ void CGame::LinkObjects() {
 /* 100976B0-1009771D 0006D	*/
 void CGame::LoadTrack() {
 	CTrack* track = new CTrack();
-	track->Load(&fileStream);
+	track->Load(fileStream);
 	CreateObject(track);
 }
 
@@ -361,11 +375,72 @@ void CGame::_PausePhysics(bool param_1) {
 
 /* 10097860-10097895 00035	*/
 CState* CGame::CreateState(char* param_1) {
-	return 0;
+	CState* state = NULL;
+	HMODULE library = LoadLibrary(this->exeFilename);
+	FARPROC procAddress = GetProcAddress(library, param_1);
+	if (procAddress != NULL) {
+		state = (CState*) procAddress();
+	}
+	FreeLibrary(library);
+	return state;
 }
 
 /* 100978A0-10097AAF 0020F	*/
 void CGame::ReadSettingsClientServer(char* param_1) {
+	char buffer[100];
+	FILE* serverSettingsFile = fopen(param_1, "r");
+	if (serverSettingsFile == NULL) {
+		return;
+	}
+
+	memset(buffer, 0, sizeof(buffer));
+	while (!feof(serverSettingsFile)) {
+		fgets(buffer, 99, serverSettingsFile);
+		char* settingName = strtok(buffer, " :,");
+		int cmpRes = stricmp(settingName, "Client");
+		if (cmpRes == 0) {
+			char* settingVal = strtok(NULL, " :");
+			if (settingVal != NULL) {
+				this->isClient = atoi(settingVal);
+			}
+		}
+		cmpRes = stricmp(settingName, "Server");
+		if (cmpRes == 0) {
+			char* settingVal = strtok(NULL, " :");
+			if (settingVal != NULL) {
+				this->isServer = atoi(settingVal);
+			}
+		}
+		cmpRes = stricmp(settingName, "SessionName");
+		if (cmpRes == 0) {
+			char* settingVal = strtok(NULL, " :");
+			if (settingVal != NULL) {
+				strcpy(this->serverSessionName, settingVal);
+			}
+		}
+		cmpRes = stricmp(settingName, "PlayerName");
+		if (cmpRes == 0) {
+			char* settingVal = strtok(NULL, " :");
+			if (settingVal != NULL) {
+				strcpy(this->playerName, settingVal);
+			}
+		}
+		cmpRes = stricmp(settingName, "Port");
+		if (cmpRes == 0) {
+			char* settingVal = strtok(NULL, " :");
+			if (settingVal != NULL) {
+				this->serverPort = atoi(settingVal);
+			}
+		}
+		cmpRes = stricmp(settingName, "ServerIP");
+		if (cmpRes == 0) {
+			char* settingVal = strtok(NULL, " :");
+			if (settingVal != NULL) {
+				strcpy(this->serverIP, settingVal);
+			}
+		}
+	}
+	fclose(serverSettingsFile);
 }
 
 /* 10097AB0-10097ADE 0002E	*/

@@ -37,7 +37,7 @@ uchar MagTextureMgr::GetTexture(char* param_1, _D3DXIMAGE_INFO* param_2) {
 }
 
 /* 100869A0-10086B13 00173	*/
-IDirect3DTexture8* MagTextureMgr::GetTexture(char* param_1) {
+IDirect3DTexture8* MagTextureMgr::GetTexture(char const* param_1) {
 	return 0;
 }
 

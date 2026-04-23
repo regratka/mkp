@@ -1,14 +1,5 @@
 #include "cMagUtility.h"
 
-/* 10006450-10006525 000D5	*/
-cMagUtility::cMagUtility(cMagUtility* param_1) {
-}
-
-/* 10006530-100065F9 000C9	*/
-cMagUtility* cMagUtility::operator=(cMagUtility* param_1) {
-	return 0;
-}
-
 /* 1002D170-1002D1EE 0007E	*/
 cMagUtility::cMagUtility() {
 }

@@ -1,35 +1,7 @@
 #include "MagnumMesh.h"
 
-/* 1000DA50-1000DA57 00007	*/
-int MagnumMesh::GetNumVerts() {
-	return 0;
-}
-
-/* 1000DA60-1000DA67 00007	*/
-int MagnumMesh::GetNumFaces() {
-	return 0;
-}
-
-/* 1000DA70-1000DA7D 0000D	*/
-void MagnumMesh::EnableScaleTile(bool param_1) {
-}
-
-/* 1000DA80-1000E382 00902	*/
-MagnumMesh::MagnumMesh(MagnumMesh* param_1) {
-}
-
-/* 1000E390-1000EC78 008E8	*/
-MagnumMesh* MagnumMesh::operator=(MagnumMesh* param_1) {
-	return 0;
-}
-
-/* 1000EC80-1000ECD7 00057	*/
-MagnumMesh* MagnumMesh::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 10030740-10030743 00003	*/
-void MagnumMesh::CalculateDynamicVertexColor() {
+void MagnumMesh::CalculateDynamicVertexColor(D3DXVECTOR3 param_1) {
 }
 
 /* 10031850-10031D8E 0053E	*/
@@ -76,6 +48,7 @@ long MagnumMesh::CreateTextures(char* param_1) {
 
 /* 100364E0-100364E5 00005	*/
 void MagnumMesh::RenderMagMesh() {
+	RenderStaticMesh();
 }
 
 /* 100364F0-100364FD 0000D	*/
@@ -92,6 +65,7 @@ void MagnumMesh::InitWater() {
 
 /* 10036570-1003657F 0000F	*/
 long MagnumMesh::SetAlpha(int param_1) {
+	SetStaticMeshAlpha(param_1);
 	return 0;
 }
 
@@ -287,17 +261,27 @@ void MagnumMesh::EnableAnimTextureMove(bool param_1) {
 
 /* 10039F50-10039F95 00045	*/
 void MagnumMesh::Pause(bool param_1) {
+	if (!paused || param_1) {
+		paused = param_1;
+		return;
+	}
+
+	cpuTicker.Reset();
+	
 }
 
 /* 10039FA0-10039FAD 0000D	*/
-void MagnumMesh::SetAnimTextureLightMap(uchar param_1) {
+void MagnumMesh::SetAnimTextureLightMap(IDirect3DTexture8* param_1) {
+	this->animTextureLightMap = param_1;
 }
 
 /* 10039FB0-10039FBD 0000D	*/
-void MagnumMesh::SetBumpMap(uchar param_1) {
+void MagnumMesh::SetBumpMap(IDirect3DTexture8* param_1) {
+	this->bumpMap = param_1;
 }
 
 /* 10039FC0-10039FCD 0000D	*/
 void MagnumMesh::SetDetailTile(float param_1) {
+	this->detailTile = param_1;
 }
 

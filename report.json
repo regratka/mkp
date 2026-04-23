@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 13.322278,
+    "fuzzy_match_percent": 14.719859,
     "total_code": "503267",
-    "matched_code": "35306",
-    "matched_code_percent": 7.015362,
+    "matched_code": "38502",
+    "matched_code_percent": 7.650412,
     "matched_data_percent": 100.0,
     "total_functions": 2181,
-    "matched_functions": 336,
-    "matched_functions_percent": 15.405777,
+    "matched_functions": 364,
+    "matched_functions_percent": 16.689592,
     "complete_data_percent": 100.0,
     "total_units": 108
   },
@@ -1616,14 +1616,14 @@
     {
       "name": "CGame",
       "measures": {
-        "fuzzy_match_percent": 18.990665,
+        "fuzzy_match_percent": 21.403023,
         "total_code": "30473",
-        "matched_code": "666",
-        "matched_code_percent": 2.1855414,
+        "matched_code": "925",
+        "matched_code_percent": 3.035474,
         "matched_data_percent": 100.0,
         "total_functions": 85,
-        "matched_functions": 12,
-        "matched_functions_percent": 14.117648,
+        "matched_functions": 17,
+        "matched_functions_percent": 20.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1631,7 +1631,7 @@
         {
           "name": ".text",
           "size": "30473",
-          "fuzzy_match_percent": 18.990665,
+          "fuzzy_match_percent": 21.403023,
           "metadata": {}
         }
       ],
@@ -1734,7 +1734,7 @@
         {
           "name": "?SetProgressBarPos@CGame@@QAEXUD3DXVECTOR2@@@Z",
           "size": "90",
-          "fuzzy_match_percent": 4.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetProgressBarPos(struct D3DXVECTOR2)"
           },
@@ -1743,7 +1743,7 @@
         {
           "name": "?SetProgressBarBackgroundPos@CGame@@QAEXUD3DXVECTOR2@@@Z",
           "size": "93",
-          "fuzzy_match_percent": 4.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::SetProgressBarBackgroundPos(struct D3DXVECTOR2)"
           },
@@ -1752,7 +1752,7 @@
         {
           "name": "?Restore@CGame@@QAEXXZ",
           "size": "16",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::Restore(void)"
           },
@@ -2180,7 +2180,7 @@
         {
           "name": "?GetFrameTime@CGame@@QAEMXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CGame::GetFrameTime(void)"
           },
@@ -2261,7 +2261,7 @@
         {
           "name": "?CreateState@CGame@@QAEPAVCState@@PAD@Z",
           "size": "53",
-          "fuzzy_match_percent": 9.047619,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CState * __thiscall CGame::CreateState(char *)"
           },
@@ -2270,7 +2270,7 @@
         {
           "name": "?ReadSettingsClientServer@CGame@@QAEXPAD@Z",
           "size": "527",
-          "fuzzy_match_percent": 0.5464481,
+          "fuzzy_match_percent": 94.726776,
           "metadata": {
             "demangled_name": "public: void __thiscall CGame::ReadSettingsClientServer(char *)"
           },
@@ -7105,10 +7105,14 @@
     {
       "name": "CTrack",
       "measures": {
-        "fuzzy_match_percent": 0.15829892,
+        "fuzzy_match_percent": 90.05989,
         "total_code": "3078",
+        "matched_code": "1599",
+        "matched_code_percent": 51.949318,
         "matched_data_percent": 100.0,
         "total_functions": 6,
+        "matched_functions": 2,
+        "matched_functions_percent": 33.333336,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -7116,7 +7120,7 @@
         {
           "name": ".text",
           "size": "3078",
-          "fuzzy_match_percent": 0.15829892,
+          "fuzzy_match_percent": 90.05989,
           "metadata": {}
         }
       ],
@@ -7124,6 +7128,7 @@
         {
           "name": "??0CTrack@@QAE@ABV0@@Z",
           "size": "762",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CTrack::CTrack(class CTrack const &)"
           },
@@ -7132,6 +7137,7 @@
         {
           "name": "??4CTrack@@QAEAAV0@ABV0@@Z",
           "size": "837",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CTrack & __thiscall CTrack::operator=(class CTrack const &)"
           },
@@ -7146,7 +7152,7 @@
         {
           "name": "??0CTrack@@QAE@XZ",
           "size": "442",
-          "fuzzy_match_percent": 1.1023622,
+          "fuzzy_match_percent": 85.874016,
           "metadata": {
             "demangled_name": "public: __thiscall CTrack::CTrack(void)"
           },
@@ -7155,6 +7161,7 @@
         {
           "name": "??1CTrack@@UAE@XZ",
           "size": "290",
+          "fuzzy_match_percent": 58.41111,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CTrack::~CTrack(void)"
           },
@@ -7163,6 +7170,7 @@
         {
           "name": "?Load@CTrack@@QAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "660",
+          "fuzzy_match_percent": 94.55882,
           "metadata": {
             "demangled_name": "public: void __thiscall CTrack::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &)"
           },
@@ -8989,10 +8997,14 @@
     {
       "name": "MagnumMesh",
       "measures": {
-        "fuzzy_match_percent": 0.6988758,
+        "fuzzy_match_percent": 2.7011914,
         "total_code": "38280",
+        "matched_code": "71",
+        "matched_code_percent": 0.18547544,
         "matched_data_percent": 100.0,
         "total_functions": 70,
+        "matched_functions": 7,
+        "matched_functions_percent": 10.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -9000,7 +9012,7 @@
         {
           "name": ".text",
           "size": "38280",
-          "fuzzy_match_percent": 0.6988758,
+          "fuzzy_match_percent": 2.7011914,
           "metadata": {}
         }
       ],
@@ -9008,7 +9020,7 @@
         {
           "name": "?GetNumVerts@MagnumMesh@@QAEHXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall MagnumMesh::GetNumVerts(void)"
           },
@@ -9017,7 +9029,7 @@
         {
           "name": "?GetNumFaces@MagnumMesh@@QAEHXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall MagnumMesh::GetNumFaces(void)"
           },
@@ -9026,7 +9038,7 @@
         {
           "name": "?EnableScaleTile@MagnumMesh@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::EnableScaleTile(bool)"
           },
@@ -9035,6 +9047,7 @@
         {
           "name": "??0MagnumMesh@@QAE@ABV0@@Z",
           "size": "2306",
+          "fuzzy_match_percent": 13.822878,
           "metadata": {
             "demangled_name": "public: __thiscall MagnumMesh::MagnumMesh(class MagnumMesh const &)"
           },
@@ -9043,6 +9056,7 @@
         {
           "name": "??4MagnumMesh@@QAEAAV0@ABV0@@Z",
           "size": "2280",
+          "fuzzy_match_percent": 11.65625,
           "metadata": {
             "demangled_name": "public: class MagnumMesh & __thiscall MagnumMesh::operator=(class MagnumMesh const &)"
           },
@@ -9065,7 +9079,7 @@
         {
           "name": "??0MagnumMesh@@QAE@XZ",
           "size": "1342",
-          "fuzzy_match_percent": 1.8448845,
+          "fuzzy_match_percent": 6.0033,
           "metadata": {
             "demangled_name": "public: __thiscall MagnumMesh::MagnumMesh(void)"
           },
@@ -9074,7 +9088,7 @@
         {
           "name": "??1MagnumMesh@@UAE@XZ",
           "size": "719",
-          "fuzzy_match_percent": 0.3773585,
+          "fuzzy_match_percent": 7.957547,
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagnumMesh::~MagnumMesh(void)"
           },
@@ -9146,7 +9160,7 @@
         {
           "name": "?RenderMagMesh@MagnumMesh@@QAEXXZ",
           "size": "5",
-          "fuzzy_match_percent": 40.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RenderMagMesh(void)"
           },
@@ -9589,7 +9603,7 @@
         {
           "name": "?Pause@MagnumMesh@@QAEX_N@Z",
           "size": "69",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 35.38095,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::Pause(bool)"
           },
@@ -9598,6 +9612,7 @@
         {
           "name": "?SetAnimTextureLightMap@MagnumMesh@@QAEXPAUIDirect3DTexture8@@@Z",
           "size": "13",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetAnimTextureLightMap(struct IDirect3DTexture8*)"
           },
@@ -9606,6 +9621,7 @@
         {
           "name": "?SetBumpMap@MagnumMesh@@QAEXPAUIDirect3DTexture8@@@Z",
           "size": "13",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetBumpMap(struct IDirect3DTexture8*)"
           },
@@ -9614,7 +9630,7 @@
         {
           "name": "?SetDetailTile@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetDetailTile(float)"
           },
@@ -9899,10 +9915,14 @@
     {
       "name": "cFX_Shockwave",
       "measures": {
-        "fuzzy_match_percent": 0.7373314,
+        "fuzzy_match_percent": 72.27764,
         "total_code": "2755",
+        "matched_code": "1221",
+        "matched_code_percent": 44.31942,
         "matched_data_percent": 100.0,
         "total_functions": 15,
+        "matched_functions": 12,
+        "matched_functions_percent": 80.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -9910,7 +9930,7 @@
         {
           "name": ".text",
           "size": "2755",
-          "fuzzy_match_percent": 0.7373314,
+          "fuzzy_match_percent": 72.27764,
           "metadata": {}
         }
       ],
@@ -9918,7 +9938,7 @@
         {
           "name": "??0cFX_Shockwave@@QAE@XZ",
           "size": "68",
-          "fuzzy_match_percent": 8.75,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cFX_Shockwave::cFX_Shockwave(void)"
           },
@@ -9927,6 +9947,7 @@
         {
           "name": "?Begin@cFX_Shockwave@@UAEXXZ",
           "size": "8",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cFX_Shockwave::Begin(void)"
           },
@@ -9935,6 +9956,7 @@
         {
           "name": "?Pause@cFX_Shockwave@@UAEXXZ",
           "size": "8",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cFX_Shockwave::Pause(void)"
           },
@@ -9943,6 +9965,7 @@
         {
           "name": "?Stop@cFX_Shockwave@@UAEXXZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cFX_Shockwave::Stop(void)"
           },
@@ -9951,7 +9974,7 @@
         {
           "name": "?ShockwaveUpdate@cFX_Shockwave@@QAEXM@Z",
           "size": "117",
-          "fuzzy_match_percent": 3.3333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cFX_Shockwave::ShockwaveUpdate(float)"
           },
@@ -9960,6 +9983,7 @@
         {
           "name": "?Pos@cFX_Shockwave@@QAEAAUD3DXVECTOR3@@XZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3& __thiscall cFX_Shockwave::Pos(void)"
           },
@@ -9968,6 +9992,7 @@
         {
           "name": "?GetVB@cFX_Shockwave@@QAEPAUIDirect3DVertexBuffer8@@XZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct IDirect3DVertexBuffer8* __thiscall cFX_Shockwave::GetVB(void)"
           },
@@ -9976,6 +10001,7 @@
         {
           "name": "??0cFX_Shockwave@@QAE@ABV0@@Z",
           "size": "391",
+          "fuzzy_match_percent": 49.426666,
           "metadata": {
             "demangled_name": "public: __thiscall cFX_Shockwave::cFX_Shockwave(class cFX_Shockwave const &)"
           },
@@ -9984,20 +10010,25 @@
         {
           "name": "??4cFX_Shockwave@@QAEAAV0@ABV0@@Z",
           "size": "373",
+          "fuzzy_match_percent": 56.13889,
           "metadata": {
             "demangled_name": "public: class cFX_Shockwave & __thiscall cFX_Shockwave::operator=(class cFX_Shockwave const &)"
           },
           "address": "639"
         },
         {
-          "name": "cFX_Shockwave::scalar_destructor",
+          "name": "??_EcFX_Shockwave@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cFX_Shockwave::`vector deleting destructor'(unsigned int)"
+          },
           "address": "1012"
         },
         {
           "name": "??1cFX_Shockwave@@UAE@XZ",
           "size": "100",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cFX_Shockwave::~cFX_Shockwave(void)"
           },
@@ -10006,6 +10037,7 @@
         {
           "name": "?RestoreDeviceObjects@cFX_Shockwave@@QAEJPBDMMHMM@Z",
           "size": "770",
+          "fuzzy_match_percent": 47.739315,
           "metadata": {
             "demangled_name": "public: long __thiscall cFX_Shockwave::RestoreDeviceObjects(char const *, float, float, int, float, float)"
           },
@@ -10014,7 +10046,7 @@
         {
           "name": "?SetAlpha@cFX_Shockwave@@QAEXH@Z",
           "size": "96",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cFX_Shockwave::SetAlpha(int)"
           },
@@ -10023,7 +10055,7 @@
         {
           "name": "?InvalidateDeviceObjects@cFX_Shockwave@@QAEXXZ",
           "size": "57",
-          "fuzzy_match_percent": 5.5555553,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cFX_Shockwave::InvalidateDeviceObjects(void)"
           },
@@ -10032,7 +10064,7 @@
         {
           "name": "?ShockwaveRender@cFX_Shockwave@@QAEXXZ",
           "size": "633",
-          "fuzzy_match_percent": 0.7194245,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cFX_Shockwave::ShockwaveRender(void)"
           },
@@ -11200,10 +11232,14 @@
     {
       "name": "cMagFx",
       "measures": {
-        "fuzzy_match_percent": 0.3205073,
+        "fuzzy_match_percent": 18.66281,
         "total_code": "4328",
+        "matched_code": "46",
+        "matched_code_percent": 1.0628465,
         "matched_data_percent": 100.0,
         "total_functions": 11,
+        "matched_functions": 2,
+        "matched_functions_percent": 18.181818,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11211,7 +11247,7 @@
         {
           "name": ".text",
           "size": "4328",
-          "fuzzy_match_percent": 0.3205073,
+          "fuzzy_match_percent": 18.66281,
           "metadata": {}
         }
       ],
@@ -11219,6 +11255,7 @@
         {
           "name": "??0cMagFx@@QAE@ABV0@@Z",
           "size": "861",
+          "fuzzy_match_percent": 33.92529,
           "metadata": {
             "demangled_name": "public: __thiscall cMagFx::cMagFx(class cMagFx const &)"
           },
@@ -11227,6 +11264,7 @@
         {
           "name": "??4cMagFx@@QAEAAV0@ABV0@@Z",
           "size": "849",
+          "fuzzy_match_percent": 27.331429,
           "metadata": {
             "demangled_name": "public: class cMagFx & __thiscall cMagFx::operator=(class cMagFx const &)"
           },
@@ -11241,7 +11279,7 @@
         {
           "name": "??0cMagFx@@QAE@XZ",
           "size": "791",
-          "fuzzy_match_percent": 0.93333334,
+          "fuzzy_match_percent": 19.04,
           "metadata": {
             "demangled_name": "public: __thiscall cMagFx::cMagFx(void)"
           },
@@ -11250,6 +11288,7 @@
         {
           "name": "??1cMagFx@@UAE@XZ",
           "size": "11",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagFx::~cMagFx(void)"
           },
@@ -11258,6 +11297,7 @@
         {
           "name": "?SetPosition@cMagFx@@QAEXUD3DXVECTOR3@@@Z",
           "size": "133",
+          "fuzzy_match_percent": 2.2727273,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::SetPosition(struct D3DXVECTOR3)"
           },
@@ -11266,6 +11306,7 @@
         {
           "name": "?SetScale@cMagFx@@QAEXUD3DXVECTOR3@@@Z",
           "size": "133",
+          "fuzzy_match_percent": 2.2727273,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::SetScale(struct D3DXVECTOR3)"
           },
@@ -11274,7 +11315,7 @@
         {
           "name": "?AddTexture@cMagFx@@QAEXPAD@Z",
           "size": "91",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 84.542854,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::AddTexture(char *)"
           },
@@ -11283,7 +11324,7 @@
         {
           "name": "?Restore@cMagFx@@QAEXXZ",
           "size": "35",
-          "fuzzy_match_percent": 11.111111,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::Restore(void)"
           },
@@ -11292,6 +11333,7 @@
         {
           "name": "?OnRender@cMagFx@@UAEXXZ",
           "size": "572",
+          "fuzzy_match_percent": 0.6993007,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagFx::OnRender(void)"
           },

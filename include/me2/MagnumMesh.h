@@ -4,16 +4,26 @@
 #include <globals.h>
 
 #include "cMagUtility.h"
+#include "CCPUTicker.h"
 
-class MagnumMesh : public cMagUtility {
+class __declspec(dllexport) MagnumMesh : public cMagUtility {
 public:
-	/* 1000DA50 */ int GetNumVerts();
-	/* 1000DA60 */ int GetNumFaces();
-	/* 1000DA70 */ void EnableScaleTile(bool param_1);
-	/* 1000DA80 */ MagnumMesh(MagnumMesh* param_1);
-	/* 1000E390 */ MagnumMesh* operator=(MagnumMesh* param_1);
-	/* 1000EC80 */ MagnumMesh* scalar_destructor(uchar param_1);
-	/* 10030740 */ void CalculateDynamicVertexColor();
+	/* 1000DA50-1000DA57 00007	*/
+	int GetNumVerts() {
+		return this->numVertices;
+	}
+
+	/* 1000DA60-1000DA67 00007	*/
+	int GetNumFaces() {
+		return this->numFaces;
+	}
+
+	/* 1000DA70-1000DA7D 0000D	*/
+	void EnableScaleTile(bool param_1) {
+		this->scaleTile = param_1;
+	}
+
+	/* 10030740 */ void CalculateDynamicVertexColor(D3DXVECTOR3 param_1);
 	/* 10031850 */ MagnumMesh();
 	/* 10031D90 */ ~MagnumMesh();
 	/* 10032060 */ void Clear();
@@ -74,12 +84,25 @@ public:
 	/* 10039F30 */ void SetAnimTextureFrameCount(int param_1);
 	/* 10039F40 */ void EnableAnimTextureMove(bool param_1);
 	/* 10039F50 */ void Pause(bool param_1);
-	/* 10039FA0 */ void SetAnimTextureLightMap(uchar param_1);
-	/* 10039FB0 */ void SetBumpMap(uchar param_1);
+	/* 10039FA0 */ void SetAnimTextureLightMap(IDirect3DTexture8* param_1);
+	/* 10039FB0 */ void SetBumpMap(IDirect3DTexture8* param_1);
 	/* 10039FC0 */ void SetDetailTile(float param_1);
 
 private:
-	/* 0xd4c */ uchar field_0xd4c[0x1950-0xd4c];
+	/* 0xd4c */ uchar field_0xd4c[0xe74-0xd4c];
+	/* 0xe74 */ int numVertices;
+	/* 0xe78 */ uchar field_0xe78[0xe88-0xe78];
+	/* 0xe88 */ int numFaces;
+	/* 0xe8c */ uchar field_0xe8c[0x14e3-0xe8c];
+	/* 0x14e3 */ bool scaleTile;
+	/* 0x14e4 */ uchar field_0x14e4[0x15b8-0x14e4];
+	/* 0x15b8 */ CCPUTicker cpuTicker;
+	/* 0x18f0 */ uchar field_0x18f0[0x18fc-0x18f0];
+	/* 0x18fc */ bool paused;
+	/* 0x1900 */ IDirect3DTexture8* animTextureLightMap;
+	/* 0x1904 */ IDirect3DTexture8* bumpMap;
+	/* 0x1908 */ float detailTile;
+	/* 0x190c */ uchar field_0x190c[0x1950-0x190c];
 };
 
 STATIC_ASSERT(sizeof(MagnumMesh) == 0x1950);

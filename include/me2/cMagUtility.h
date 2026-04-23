@@ -5,10 +5,8 @@
 
 #include "MagState.h"
 
-class cMagUtility : public MagState  {
+class __declspec(dllexport) cMagUtility : public MagState  {
 public:
-	/* 10006450 */ cMagUtility(cMagUtility* param_1);
-	/* 10006530 */ cMagUtility* operator=(cMagUtility* param_1);
 	/* 1002D170 */ cMagUtility();
 	/* 1002D1F0 */ ~cMagUtility();
 	/* 1002D200 */ void InitDeviceDx(cMagGameObject* param_1);

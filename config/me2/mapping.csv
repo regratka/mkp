@@ -732,11 +732,11 @@
 ?Pause@cFX_Shockwave@@UAEXXZ;cFX_Shockwave::Pause;0x10022ff0;0x8;__thiscall;;void;cFX_Shockwave*
 ?Stop@cFX_Shockwave@@UAEXXZ;cFX_Shockwave::Stop;0x10023000;0x21;__thiscall;;void;cFX_Shockwave*
 ?ShockwaveUpdate@cFX_Shockwave@@QAEXM@Z;cFX_Shockwave::ShockwaveUpdate;0x10023030;0x75;__thiscall;;void;cFX_Shockwave*;float
-?Pos@cFX_Shockwave@@QAEAAUD3DXVECTOR3@@XZ;cFX_Shockwave::Pos;0x100230b0;0x7;__thiscall;;uchar;cFX_Shockwave*
-?GetVB@cFX_Shockwave@@QAEPAUIDirect3DVertexBuffer8@@XZ;cFX_Shockwave::GetVB;0x100230c0;0x7;__thiscall;;uchar;cFX_Shockwave*
+?Pos@cFX_Shockwave@@QAEAAUD3DXVECTOR3@@XZ;cFX_Shockwave::Pos;0x100230b0;0x7;__thiscall;;D3DXVECTOR3&;cFX_Shockwave*
+?GetVB@cFX_Shockwave@@QAEPAUIDirect3DVertexBuffer8@@XZ;cFX_Shockwave::GetVB;0x100230c0;0x7;__thiscall;;IDirect3DVertexBuffer8*;cFX_Shockwave*
 ??0cFX_Shockwave@@QAE@ABV0@@Z;cFX_Shockwave::cFX_Shockwave;0x100230d0;0x187;__thiscall;;uchar;cFX_Shockwave*;cFX_Shockwave*
 ??4cFX_Shockwave@@QAEAAV0@ABV0@@Z;cFX_Shockwave::operator=;0x10023260;0x175;__thiscall;;cFX_Shockwave*;cFX_Shockwave*;cFX_Shockwave*
-;cFX_Shockwave::scalar_destructor;0x100233e0;0x57;__thiscall;;cFX_Shockwave*;cFX_Shockwave*;uchar
+??_EcFX_Shockwave@@UAEPAXI@Z;cFX_Shockwave::scalar_destructor;0x100233e0;0x57;__thiscall;;cFX_Shockwave*;cFX_Shockwave*;uchar
 ??0cMagFx@@QAE@ABV0@@Z;cMagFx::cMagFx;0x10023440;0x35d;__thiscall;;uchar;cMagFx*;cMagFx*
 ??4cMagFx@@QAEAAV0@ABV0@@Z;cMagFx::operator=;0x100237a0;0x351;__thiscall;;cMagFx*;cMagFx*;cMagFx*
 ;cMagFx::scalar_destructor;0x10023b00;0x57;__thiscall;;cMagFx*;cMagFx*;uchar
@@ -1033,7 +1033,7 @@
 ?DummyLog@cMagLog@@QAAXPBDZZ;cMagLog::DummyLog;0x10030660;0x77;__cdecl;varargs;void;cMagLog*;char*
 ?DebugLog@cMagLog@@QAAXPBDZZ;cMagLog::DebugLog;0x100306e0;0x44;__cdecl;varargs;void;cMagLog*;char*
 ?DebugLog@cMagLog@@QAEXUD3DXMATRIX@@@Z;cMagLog::DebugLog;0x10030730;0x3;__thiscall;;void;cMagLog*;D3DXMATRIX
-?DebugLog@cMagLog@@QAEXUD3DXVECTOR3@@@Z;MagnumMesh::CalculateDynamicVertexColor;0x10030740;0x3;__thiscall;;void
+?DebugLog@cMagLog@@QAEXUD3DXVECTOR3@@@Z;MagnumMesh::CalculateDynamicVertexColor;0x10030740;0x3;__thiscall;;void;MagnumMesh*;D3DXVECTOR3
 ?ClientServerLog@cMagLog@@QAAXPBDZZ;cMagLog::ClientServerLog;0x10030750;0x77;__cdecl;varargs;void;cMagLog*;char*
 ?ReadSettings@cMagLog@@QAEXPAD@Z;cMagLog::ReadSettings;0x100307d0;0x9c;__thiscall;;void;cMagLog*;char*
 ;FUN_10030880;0x10030880;0xa;__stdcall;;uchar
@@ -1137,8 +1137,8 @@
 ?SetAnimTextureFrameCount@MagnumMesh@@QAEXH@Z;MagnumMesh::SetAnimTextureFrameCount;0x10039f30;0xd;__thiscall;;void;MagnumMesh*;int
 ?EnableAnimTextureMove@MagnumMesh@@QAEX_N@Z;MagnumMesh::EnableAnimTextureMove;0x10039f40;0xd;__thiscall;;void;MagnumMesh*;bool
 ?Pause@MagnumMesh@@QAEX_N@Z;MagnumMesh::Pause;0x10039f50;0x45;__thiscall;;void;MagnumMesh*;bool
-?SetAnimTextureLightMap@MagnumMesh@@QAEXPAUIDirect3DTexture8@@@Z;MagnumMesh::SetAnimTextureLightMap;0x10039fa0;0xd;__thiscall;;void;MagnumMesh*;uchar
-?SetBumpMap@MagnumMesh@@QAEXPAUIDirect3DTexture8@@@Z;MagnumMesh::SetBumpMap;0x10039fb0;0xd;__thiscall;;void;MagnumMesh*;uchar
+?SetAnimTextureLightMap@MagnumMesh@@QAEXPAUIDirect3DTexture8@@@Z;MagnumMesh::SetAnimTextureLightMap;0x10039fa0;0xd;__thiscall;;void;MagnumMesh*;IDirect3DTexture8*
+?SetBumpMap@MagnumMesh@@QAEXPAUIDirect3DTexture8@@@Z;MagnumMesh::SetBumpMap;0x10039fb0;0xd;__thiscall;;void;MagnumMesh*;IDirect3DTexture8*
 ?SetDetailTile@MagnumMesh@@QAEXM@Z;MagnumMesh::SetDetailTile;0x10039fc0;0xd;__thiscall;;void;MagnumMesh*;float
 ;FUN_10039fd0;0x10039fd0;0xf;__fastcall;;uchar;int
 ;FUN_10039fe0;0x10039fe0;0x8d;__thiscall;;int*;void*;uint;int
@@ -2450,7 +2450,7 @@
 ;FUN_100764b0;0x100764b0;0xa;__stdcall;;uchar
 ;FUN_100764c0;0x100764c0;0xc;__stdcall;;uchar
 ??1cFX_Shockwave@@UAE@XZ;cFX_Shockwave::~cFX_Shockwave;0x100764e0;0x64;__thiscall;;void;cFX_Shockwave*
-?RestoreDeviceObjects@cFX_Shockwave@@QAEJPBDMMHMM@Z;cFX_Shockwave::RestoreDeviceObjects;0x10076550;0x302;__thiscall;;long;cFX_Shockwave*;char*;float;float;int;float;float
+?RestoreDeviceObjects@cFX_Shockwave@@QAEJPBDMMHMM@Z;cFX_Shockwave::RestoreDeviceObjects;0x10076550;0x302;__thiscall;;HRESULT;cFX_Shockwave*;char*;float;float;int;float;float
 ?SetAlpha@cFX_Shockwave@@QAEXH@Z;cFX_Shockwave::SetAlpha;0x10076860;0x60;__thiscall;;void;cFX_Shockwave*;int
 ?InvalidateDeviceObjects@cFX_Shockwave@@QAEXXZ;cFX_Shockwave::InvalidateDeviceObjects;0x100768c0;0x39;__thiscall;;void;cFX_Shockwave*
 ?ShockwaveRender@cFX_Shockwave@@QAEXXZ;cFX_Shockwave::ShockwaveRender;0x10076900;0x279;__thiscall;;void;cFX_Shockwave*
@@ -2477,8 +2477,8 @@
 ;FUN_10077470;0x10077470;0xc;__stdcall;;uchar
 ??0cMagFx@@QAE@XZ;cMagFx::cMagFx;0x10077490;0x317;__thiscall;;uchar;cMagFx*
 ??1cMagFx@@UAE@XZ;cMagFx::~cMagFx;0x100777b0;0xb;__thiscall;;void;cMagFx*
-?SetPosition@cMagFx@@QAEXUD3DXVECTOR3@@@Z;cMagFx::SetPosition;0x100777c0;0x85;__thiscall;;void;cMagFx*;uint;uint;uint
-?SetScale@cMagFx@@QAEXUD3DXVECTOR3@@@Z;cMagFx::SetScale;0x10077850;0x85;__thiscall;;void;cMagFx*;uint;uint;uint
+?SetPosition@cMagFx@@QAEXUD3DXVECTOR3@@@Z;cMagFx::SetPosition;0x100777c0;0x85;__thiscall;;void;cMagFx*;D3DXVECTOR3
+?SetScale@cMagFx@@QAEXUD3DXVECTOR3@@@Z;cMagFx::SetScale;0x10077850;0x85;__thiscall;;void;cMagFx*;D3DXVECTOR3
 ?AddTexture@cMagFx@@QAEXPAD@Z;cMagFx::AddTexture;0x100778e0;0x5b;__thiscall;;void;cMagFx*;char*
 ?Restore@cMagFx@@QAEXXZ;cMagFx::Restore;0x10077940;0x23;__thiscall;;void;cMagFx*
 ?OnRender@cMagFx@@UAEXXZ;cMagFx::OnRender;0x10077970;0x23c;__thiscall;;void;cMagFx*

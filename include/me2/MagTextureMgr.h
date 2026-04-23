@@ -19,7 +19,7 @@ public:
 	/* 10086730 */ ~MagTextureMgr();
 	/* 10086760 */ void RestoreTextures();
 	/* 10086810 */ uchar GetTexture(char* param_1, _D3DXIMAGE_INFO* param_2);
-	/* 100869A0 */ IDirect3DTexture8* GetTexture(char* param_1);
+	/* 100869A0 */ IDirect3DTexture8* GetTexture(char const* param_1);
 	/* 10086B20 */ uchar GetTextureMesh(char* param_1);
 	/* 10086C00 */ int GetID();
 	/* 10086C10 */ IDirect3DTexture8* ReplaceTexture(char* param_1, char* param_2);
