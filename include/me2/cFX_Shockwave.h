@@ -55,7 +55,7 @@ public:
 
 	/* 100230B0-100230B7 00007	*/
 	D3DXVECTOR3& Pos() {
-		return this->position;
+		return this->shockwavePosition;
 	}
 
 	/* 100230C0-100230C7 00007	*/
@@ -74,7 +74,7 @@ private:
 	/* 0xd50 */ IDirect3DTexture8* texture;
 	/* 0xd54 */ IDirect3DVertexBuffer8* vertexBuffer;
 	/* 0xd58 */ IDirect3DDevice8* engine;
-	/* 0xd5c */ D3DXVECTOR3 position;
+	/* 0xd5c */ D3DXVECTOR3 shockwavePosition;
 	/* 0xd68 */ int sections;
 	/* 0xd6c */ float radius;
 	/* 0xd70 */ float duration;

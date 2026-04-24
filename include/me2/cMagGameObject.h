@@ -75,7 +75,7 @@ public:
 
 	/* 10002300-1000230D 0000D	*/
 	float cMagGameObject::GpgDegToRad(float param_1) {
-		return  D3DXToRadian(param_1);
+		return D3DXToRadian(param_1);
 	}
 
 	/* 10024C60 */ cMagGameObject();

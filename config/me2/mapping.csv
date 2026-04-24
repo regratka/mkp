@@ -739,7 +739,7 @@
 ??_EcFX_Shockwave@@UAEPAXI@Z;cFX_Shockwave::scalar_destructor;0x100233e0;0x57;__thiscall;;cFX_Shockwave*;cFX_Shockwave*;uchar
 ??0cMagFx@@QAE@ABV0@@Z;cMagFx::cMagFx;0x10023440;0x35d;__thiscall;;uchar;cMagFx*;cMagFx*
 ??4cMagFx@@QAEAAV0@ABV0@@Z;cMagFx::operator=;0x100237a0;0x351;__thiscall;;cMagFx*;cMagFx*;cMagFx*
-;cMagFx::scalar_destructor;0x10023b00;0x57;__thiscall;;cMagFx*;cMagFx*;uchar
+??_EcMagFx@@UAEPAXI@Z;cMagFx::scalar_destructor;0x10023b00;0x57;__thiscall;;cMagFx*;cMagFx*;uchar
 ??0CLevel@@QAE@ABV0@@Z;CLevel::CLevel;0x10023b60;0x134;__thiscall;;uchar;CLevel*;CLevel*
 ??4CLevel@@QAEAAV0@ABV0@@Z;CLevel::operator=;0x10023ca0;0x12d;__thiscall;;CLevel*;CLevel*;CLevel*
 ;CLevel::scalar_destructor;0x10023dd0;0x57;__thiscall;;CLevel*;CLevel*;uchar

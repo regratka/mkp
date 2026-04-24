@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 14.719859,
+    "fuzzy_match_percent": 15.356908,
     "total_code": "503267",
-    "matched_code": "38502",
-    "matched_code_percent": 7.650412,
+    "matched_code": "41074",
+    "matched_code_percent": 8.161473,
     "matched_data_percent": 100.0,
     "total_functions": 2181,
-    "matched_functions": 364,
-    "matched_functions_percent": 16.689592,
+    "matched_functions": 371,
+    "matched_functions_percent": 17.010546,
     "complete_data_percent": 100.0,
     "total_units": 108
   },
@@ -9915,7 +9915,7 @@
     {
       "name": "cFX_Shockwave",
       "measures": {
-        "fuzzy_match_percent": 72.27764,
+        "fuzzy_match_percent": 75.76293,
         "total_code": "2755",
         "matched_code": "1221",
         "matched_code_percent": 44.31942,
@@ -9930,7 +9930,7 @@
         {
           "name": ".text",
           "size": "2755",
-          "fuzzy_match_percent": 72.27764,
+          "fuzzy_match_percent": 75.76293,
           "metadata": {}
         }
       ],
@@ -10037,7 +10037,7 @@
         {
           "name": "?RestoreDeviceObjects@cFX_Shockwave@@QAEJPBDMMHMM@Z",
           "size": "770",
-          "fuzzy_match_percent": 47.739315,
+          "fuzzy_match_percent": 60.2094,
           "metadata": {
             "demangled_name": "public: long __thiscall cFX_Shockwave::RestoreDeviceObjects(char const *, float, float, int, float, float)"
           },
@@ -11232,14 +11232,14 @@
     {
       "name": "cMagFx",
       "measures": {
-        "fuzzy_match_percent": 18.66281,
+        "fuzzy_match_percent": 90.521385,
         "total_code": "4328",
-        "matched_code": "46",
-        "matched_code_percent": 1.0628465,
+        "matched_code": "2618",
+        "matched_code_percent": 60.489834,
         "matched_data_percent": 100.0,
         "total_functions": 11,
-        "matched_functions": 2,
-        "matched_functions_percent": 18.181818,
+        "matched_functions": 9,
+        "matched_functions_percent": 81.818184,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11247,7 +11247,7 @@
         {
           "name": ".text",
           "size": "4328",
-          "fuzzy_match_percent": 18.66281,
+          "fuzzy_match_percent": 90.521385,
           "metadata": {}
         }
       ],
@@ -11255,7 +11255,7 @@
         {
           "name": "??0cMagFx@@QAE@ABV0@@Z",
           "size": "861",
-          "fuzzy_match_percent": 33.92529,
+          "fuzzy_match_percent": 76.40804,
           "metadata": {
             "demangled_name": "public: __thiscall cMagFx::cMagFx(class cMagFx const &)"
           },
@@ -11264,22 +11264,25 @@
         {
           "name": "??4cMagFx@@QAEAAV0@ABV0@@Z",
           "size": "849",
-          "fuzzy_match_percent": 27.331429,
+          "fuzzy_match_percent": 75.60571,
           "metadata": {
             "demangled_name": "public: class cMagFx & __thiscall cMagFx::operator=(class cMagFx const &)"
           },
           "address": "861"
         },
         {
-          "name": "cMagFx::scalar_destructor",
+          "name": "??_EcMagFx@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagFx::`vector deleting destructor'(unsigned int)"
+          },
           "address": "1710"
         },
         {
           "name": "??0cMagFx@@QAE@XZ",
           "size": "791",
-          "fuzzy_match_percent": 19.04,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagFx::cMagFx(void)"
           },
@@ -11297,7 +11300,7 @@
         {
           "name": "?SetPosition@cMagFx@@QAEXUD3DXVECTOR3@@@Z",
           "size": "133",
-          "fuzzy_match_percent": 2.2727273,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::SetPosition(struct D3DXVECTOR3)"
           },
@@ -11306,7 +11309,7 @@
         {
           "name": "?SetScale@cMagFx@@QAEXUD3DXVECTOR3@@@Z",
           "size": "133",
-          "fuzzy_match_percent": 2.2727273,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::SetScale(struct D3DXVECTOR3)"
           },
@@ -11315,7 +11318,7 @@
         {
           "name": "?AddTexture@cMagFx@@QAEXPAD@Z",
           "size": "91",
-          "fuzzy_match_percent": 84.542854,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFx::AddTexture(char *)"
           },
@@ -11333,7 +11336,7 @@
         {
           "name": "?OnRender@cMagFx@@UAEXXZ",
           "size": "572",
-          "fuzzy_match_percent": 0.6993007,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagFx::OnRender(void)"
           },
@@ -11342,6 +11345,7 @@
         {
           "name": "?DXUtil_Timer@cMagFx@@QAEMW4TIMER_COMMAND@1@@Z",
           "size": "765",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagFx::DXUtil_Timer(enum cMagFx::TIMER_COMMAND)"
           },

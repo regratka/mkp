@@ -3,6 +3,15 @@
 #include "cMagEngineMgr.h"
 #include "MagTextureMgr.h"
 
+struct SHOCKWAVEVERTEX{
+	D3DXVECTOR3 pos;
+	D3DCOLOR color;
+	float u;
+	float v;
+	D3DXVECTOR3 unused;
+};
+
+
 /* 100764E0-10076544 00064	*/
 cFX_Shockwave::~cFX_Shockwave() {
 	if (vertexBuffer != NULL) {
@@ -10,6 +19,7 @@ cFX_Shockwave::~cFX_Shockwave() {
 		vertexBuffer = NULL;
 	}
 }
+
 
 /* 10076550-10076852 00302	*/
 HRESULT cFX_Shockwave::RestoreDeviceObjects(char const* param_1, float param_2, float param_3, int param_4, float param_5, float param_6) {
@@ -24,91 +34,93 @@ HRESULT cFX_Shockwave::RestoreDeviceObjects(char const* param_1, float param_2, 
 		return E_FAIL;
 	}
 
-	this->verticesAmount = param_4 * 6; // liczba sekcji * liczba wierzchołków w sekcji
 	this->texture = MagTextureMgr::getInstance()->GetTexture(param_1);
-	HRESULT result = this->engine->CreateVertexBuffer(this->verticesAmount * 36, D3DUSAGE_WRITEONLY, D3DFVF_TEX1 | D3DFVF_DIFFUSE | D3DFVF_XYZ, 
+	this->verticesAmount = param_4 * 6; // liczba sekcji * liczba wierzchołków w sekcji
+	HRESULT result = this->engine->CreateVertexBuffer(verticesAmount * 36, D3DUSAGE_WRITEONLY, D3DFVF_TEX1 | D3DFVF_DIFFUSE | D3DFVF_XYZ, 
 		D3DPOOL_MANAGED, &this->vertexBuffer);
 	if (result < S_OK) {
 		return result;
 	}
 
-	float* data;
+	SHOCKWAVEVERTEX* data;
 	result = this->vertexBuffer->Lock(0, 0, (BYTE**)&data, 0);
 	if (result < S_OK) {
 		return result;
 	}
 
-	float angle = 0.0f;
+	float angleGrowth = 360.0f / param_4;
+	double angle = 0.0;
 	while (angle < 360.0f) {
-		float var_2 = cos(GpgDegToRad(angle));
-		float var_3 = this->range * var_2;
-		float var_4 = sin(GpgDegToRad(angle));
+		double radians = GpgDegToRad(angle);
+		float var_2 = cos(radians);
+		float var_3 = this->range * cos(radians);
+		float var_4 = sin(radians);
 		float var_5 = this->range * var_4;
 		float var_6 = this->range - this->radius;
 
-		angle += 360.0f / param_4;
+		angle += angleGrowth;
 
 		float var_7 = cos(GpgDegToRad(angle));
 		float var_8 = sin(GpgDegToRad(angle));
 
-		data[0] = var_2 * var_6;
-		data[1] = 0.0f;
-		data[2] = var_4 * var_6;
-		((int*)data)[3] = 0xffffffff;
-		data[4] = 0.0f;
-		data[5] = 1.0f;
+		data[0].pos.x = var_2 * var_6;
+		data[0].pos.y = 0.0f;
+		data[0].pos.z = var_4 * var_6;
+		data[0].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+		data[0].u = 0.0f;
+		data[0].v = 1.0f;
 
-		data[9] = var_3;
-		data[10] = 0.0f;
-		data[11] = var_5;
- 		((int*)data)[12] = 0xffffffff;
-		data[13] = 0.0f;
-		data[14] = 0.0f;
+		data[1].pos.x = var_3;
+		data[1].pos.y = 0.0f;
+		data[1].pos.z = var_5;
+ 		data[1].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+		data[1].u = 0.0f;
+		data[1].v = 0.0f;
 
-		data[18] = var_6 * var_7;
-		data[19] = 0.0f;
-		data[20] = var_6 * var_8;
-		((int*)data)[21] = 0xffffffff;
-		data[22] = 1.0f;
-		data[23] = 1.0f;
+		data[2].pos.x = var_6 * var_7;
+		data[2].pos.y = 0.0f;
+		data[2].pos.z = var_6 * var_8;
+		data[2].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+		data[2].u = 1.0f;
+		data[2].v = 1.0f;
 		
-		data[27] = var_3;
-		data[28] = 0.0f;
-		data[29] = var_5;
- 		((int*)data)[30] = 0xffffffff;
-		data[31] = 0.0f;
-		data[32] = 0.0f;
+		data[3].pos.x = var_3;
+		data[3].pos.y = 0.0f;
+		data[3].pos.z = var_5;
+ 		data[3].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+		data[3].u = 0.0f;
+		data[3].v = 0.0f;
 
-		data[36] = this->range * var_7;
-		data[37] = 0.0f;
-		data[38] = this->range * var_8;
- 		((int*)data)[39] = 0xffffffff;
-		data[40] = 1.0f;
-		data[41] = 0.0f;
+		data[4].pos.x = this->range * var_7;
+		data[4].pos.y = 0.0f;
+		data[4].pos.z = this->range * var_8;
+ 		data[4].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+		data[4].u = 1.0f;
+		data[4].v = 0.0f;
 
-		data[45] = var_6 * var_7;
-		data[46] = 0.0f;
-		data[47] = var_6 * var_8;
-		((int*)data)[48] = 0xffffffff;
-		data[49] = 1.0f;
-		data[50] = 1.0f;
+		data[5].pos.x = var_6 * var_7;
+		data[5].pos.y = 0.0f;
+		data[5].pos.z = var_6 * var_8;
+		data[5].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+		data[5].u = 1.0f;
+		data[5].v = 1.0f;
 
-		data += 54;
+		data += 6;
 	}
 	this->vertexBuffer->Unlock();
 }
 
 /* 10076860-100768C0 00060	*/
 void cFX_Shockwave::SetAlpha(int param_1) {
-	int* data;
+	SHOCKWAVEVERTEX* data;
 	HRESULT result = this->vertexBuffer->Lock(0, 0, (BYTE**)&data, 0);
 	if (result < S_OK) {
 		return;
 	}
 
 	for (int index = 0; index < verticesAmount; index++) {
-		data[3] = D3DCOLOR_ARGB(param_1, 0xFF, 0xFF, 0xFF);
-		data += 9;
+		data->color = D3DCOLOR_ARGB(param_1, 0xFF, 0xFF, 0xFF);
+		data += 1;
 	}
 	this->vertexBuffer->Unlock();
 }
@@ -131,7 +143,7 @@ void cFX_Shockwave::ShockwaveRender() {
 	D3DXMATRIX translationMatrix, scaleMatrix;
 	D3DXMatrixIdentity(&translationMatrix);
 	D3DXMatrixIdentity(&scaleMatrix);
-	D3DXMatrixTranslation(&translationMatrix, position.x, position.y, position.z);
+	D3DXMatrixTranslation(&translationMatrix, shockwavePosition.x, shockwavePosition.y, shockwavePosition.z);
 	D3DXMatrixScaling(&scaleMatrix, scale, 1.0f, scale);
 	D3DXMATRIX matrixOut;
 	*D3DXMatrixMultiply(&matrixOut, &scaleMatrix, &translationMatrix);
