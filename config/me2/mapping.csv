@@ -963,9 +963,9 @@
 ??0cMagUtility@@QAE@XZ;cMagUtility::cMagUtility;0x1002d170;0x7e;__thiscall;;uchar;cMagUtility*
 ??1cMagUtility@@UAE@XZ;cMagUtility::~cMagUtility;0x1002d1f0;0xb;__thiscall;;void;cMagUtility*
 ?InitDeviceDx@cMagUtility@@QAEXPAVcMagGameObject@@@Z;cMagUtility::InitDeviceDx;0x1002d200;0xd;__thiscall;;void;cMagUtility*;cMagGameObject*
-?D3DUtil_InitMaterial@cMagUtility@@QAEXAAU_D3DMATERIAL8@@MMMM@Z;cMagUtility::D3DUtil_InitMaterial;0x1002d210;0x43;__thiscall;;void;cMagUtility*;_D3DMATERIAL8*;float;float;float;float
-?D3DUtil_InitLight@cMagUtility@@QAEXAAU_D3DLIGHT8@@W4_D3DLIGHTTYPE@@MMM@Z;cMagUtility::D3DUtil_InitLight;0x1002d260;0x72;__thiscall;;void;cMagUtility*;uchar;_D3DLIGHTTYPE;float;float;float
-?CreateQuad@cMagUtility@@QAEJPAPAUIDirect3DVertexBuffer8@@W4_D3DPOOL@@MKPAUIDirect3DDevice8@@MM_N@Z;cMagUtility::CreateQuad;0x1002d2e0;0x381;__thiscall;;long;cMagUtility*;IDirect3DVertexBuffer8**;D3DPOOL;float;ulong;IDirect3DDevice8*;float;float;bool
+?D3DUtil_InitMaterial@cMagUtility@@QAEXAAU_D3DMATERIAL8@@MMMM@Z;cMagUtility::D3DUtil_InitMaterial;0x1002d210;0x43;__thiscall;;void;cMagUtility*;D3DMATERIAL8&;float;float;float;float
+?D3DUtil_InitLight@cMagUtility@@QAEXAAU_D3DLIGHT8@@W4_D3DLIGHTTYPE@@MMM@Z;cMagUtility::D3DUtil_InitLight;0x1002d260;0x72;__thiscall;;void;cMagUtility*;D3DLIGHT8&;D3DLIGHTTYPE;float;float;float
+?CreateQuad@cMagUtility@@QAEJPAPAUIDirect3DVertexBuffer8@@W4_D3DPOOL@@MKPAUIDirect3DDevice8@@MM_N@Z;cMagUtility::CreateQuad;0x1002d2e0;0x381;__thiscall;;HRESULT;cMagUtility*;IDirect3DVertexBuffer8**;D3DPOOL;float;ulong;IDirect3DDevice8*;float;float;bool
 ??0cMagVertex@@QAE@XZ;cMagVertex::cMagVertex;0x1002d670;0x52;__thiscall;;uchar;cMagVertex*
 ??0cMagVertex@@QAE@MMMMMMKKMM@Z;cMagVertex::cMagVertex;0x1002d6d0;0x78;__thiscall;;uchar;cMagVertex*;float;float;float;float;float;float;ulong;ulong;float;float
 ??1cMagVertex@@UAE@XZ;cMagVertex::~cMagVertex;0x1002d750;0xb;__thiscall;;void;cMagVertex*
@@ -979,9 +979,9 @@
 ?SetProps@cMagLine@@QAEXMMMKMMMK@Z;cMagLine::SetProps;0x1002dca0;0x53;__thiscall;;void;cMagLine*;float;float;float;ulong;float;float;float;ulong
 ?GetProps@cMagLine@@QAEXAAM00AAK0001@Z;cMagLine::GetProps;0x1002dd00;0x63;__thiscall;;void;cMagLine*;float*;float*;float*;ulong*;float*;float*;float*;ulong*
 ?Render@cMagLine@@QAEJXZ;cMagLine::Render;0x1002dd70;0x11f;__thiscall;;uint;cMagLine*
-?LoadBitmapToSurface@cMagUtility@@QAEHPADPAPAUIDirect3DSurface8@@PAUIDirect3DDevice8@@@Z;cMagUtility::LoadBitmapToSurface;0x1002de90;0xff;__thiscall;;int;cMagUtility*;char*;IDirect3DSurface8**;uchar
+?LoadBitmapToSurface@cMagUtility@@QAEHPADPAPAUIDirect3DSurface8@@PAUIDirect3DDevice8@@@Z;cMagUtility::LoadBitmapToSurface;0x1002de90;0xff;__thiscall;;int;cMagUtility*;char*;IDirect3DSurface8**;IDirect3DDevice8*
 ?LoadAlphabet@cMagUtility@@QAEJPADHH@Z;cMagUtility::LoadAlphabet;0x1002df90;0xe0;__thiscall;;long;cMagUtility*;char*;int;int
-?UnloadAlphabet@cMagUtility@@QAEJXZ;cMagUtility::UnloadAlphabet;0x1002e070;0x2b;__thiscall;;long;cMagUtility*
+?UnloadAlphabet@cMagUtility@@QAEJXZ;cMagUtility::UnloadAlphabet;0x1002e070;0x2b;__thiscall;;HRESULT;cMagUtility*
 ?PrintChar@cMagUtility@@QAEXHHDHKPAKH@Z;cMagUtility::PrintChar;0x1002e0a0;0x1d0;__thiscall;;void;cMagUtility*;int;int;char;int;ulong;ulong*;int
 ?PrintString@cMagUtility@@QAEXHHPADHKPAKH@Z;cMagUtility::PrintString;0x1002e270;0x7f;__thiscall;;void;cMagUtility*;int;int;char*;int;ulong;ulong*;int
 ?CopySurfaceToSurface@cMagUtility@@QAEJPAUtagRECT@@PAUIDirect3DSurface8@@PAUtagPOINT@@1HK@Z;cMagUtility::CopySurfaceToSurface;0x1002e2f0;0x20a;__thiscall;;long;cMagUtility*;tagRECT*;IDirect3DSurface8*;tagPOINT*;IDirect3DSurface8*;int;ulong
@@ -4078,7 +4078,7 @@
 ;FUN_100d14b1;0x100d14b1;0x1c9;__stdcall;;uint*;int*;int*;uint*;int*;int*;uint*;uint;int
 ;FUN_100d167a;0x100d167a;0x9a;__stdcall;;uint*;int*;uint;uint*;int*;uint;uint*;uint;uint
 ;FUN_100d1714;0x100d1714;0x2fe;__stdcall;;uint*;int*;int*;uint;uint*
-;FUN_100d1a12;0x100d1a12;0x51;__stdcall;;uint*;int*;uint;uint*;wchar_t*;int*;uint;uint;int*
+;D3DXLoadSurfaceFromFileA;0x100d1a12;0x51;__stdcall;;HRESULT;IDirect3DSurface8*;PALETTEENTRY*;RECT*;LPCSTR;RECT*;DWORD;D3DCOLOR;D3DXIMAGE_INFO*
 ;FUN_100d1a63;0x100d1a63;0x6aa;__stdcall;;uint*
 ;FUN_100d210d;0x100d210d;0x40;__stdcall;;uchar;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint
 ;D3DXCreateTextureFromFileExA;0x100d214d;0x63;__stdcall;;int;IDirect3DDevice8*;wchar_t*;uint;uint;uint;dword;D3DFORMAT;D3DPOOL;dword;dword;dword;D3DXIMAGE_INFO*;tagPALETTEENTRY*;IDirect3DTexture8**

@@ -3,13 +3,6 @@
 #include "cMagEngineMgr.h"
 #include "MagTextureMgr.h"
 
-struct SHOCKWAVEVERTEX{
-	D3DXVECTOR3 pos;
-	D3DCOLOR color;
-	float u;
-	float v;
-	D3DXVECTOR3 unused;
-};
 
 
 /* 100764E0-10076544 00064	*/
@@ -35,14 +28,14 @@ HRESULT cFX_Shockwave::RestoreDeviceObjects(char const* param_1, float param_2, 
 	}
 
 	this->texture = MagTextureMgr::getInstance()->GetTexture(param_1);
-	this->verticesAmount = param_4 * 6; // liczba sekcji * liczba wierzchołków w sekcji
+	this->verticesAmount = param_4 * sizeof(MAGVERTEX); // liczba sekcji * liczba wierzchołków w sekcji
 	HRESULT result = this->engine->CreateVertexBuffer(verticesAmount * 36, D3DUSAGE_WRITEONLY, D3DFVF_TEX1 | D3DFVF_DIFFUSE | D3DFVF_XYZ, 
 		D3DPOOL_MANAGED, &this->vertexBuffer);
 	if (result < S_OK) {
 		return result;
 	}
 
-	SHOCKWAVEVERTEX* data;
+	MAGVERTEX* data;
 	result = this->vertexBuffer->Lock(0, 0, (BYTE**)&data, 0);
 	if (result < S_OK) {
 		return result;
@@ -112,7 +105,7 @@ HRESULT cFX_Shockwave::RestoreDeviceObjects(char const* param_1, float param_2, 
 
 /* 10076860-100768C0 00060	*/
 void cFX_Shockwave::SetAlpha(int param_1) {
-	SHOCKWAVEVERTEX* data;
+	MAGVERTEX* data;
 	HRESULT result = this->vertexBuffer->Lock(0, 0, (BYTE**)&data, 0);
 	if (result < S_OK) {
 		return;
