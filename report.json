@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 15.652736,
+    "fuzzy_match_percent": 16.025543,
     "total_code": "503267",
-    "matched_code": "41790",
-    "matched_code_percent": 8.303743,
+    "matched_code": "43212",
+    "matched_code_percent": 8.586297,
     "matched_data_percent": 100.0,
     "total_functions": 2181,
-    "matched_functions": 377,
-    "matched_functions_percent": 17.28565,
+    "matched_functions": 392,
+    "matched_functions_percent": 17.973406,
     "complete_data_percent": 100.0,
     "total_units": 108
   },
@@ -8243,10 +8243,14 @@
     {
       "name": "MagState",
       "measures": {
-        "fuzzy_match_percent": 4.582987,
+        "fuzzy_match_percent": 87.60689,
         "total_code": "1559",
+        "matched_code": "1169",
+        "matched_code_percent": 74.98396,
         "matched_data_percent": 100.0,
         "total_functions": 18,
+        "matched_functions": 13,
+        "matched_functions_percent": 72.22222,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -8254,7 +8258,7 @@
         {
           "name": ".text",
           "size": "1559",
-          "fuzzy_match_percent": 4.582987,
+          "fuzzy_match_percent": 87.60689,
           "metadata": {}
         }
       ],
@@ -8262,6 +8266,7 @@
         {
           "name": "??0MagState@@QAE@ABV0@@Z",
           "size": "111",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall MagState::MagState(class MagState const &)"
           },
@@ -8270,6 +8275,7 @@
         {
           "name": "??4MagState@@QAEAAV0@ABV0@@Z",
           "size": "105",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class MagState & __thiscall MagState::operator=(class MagState const &)"
           },
@@ -8284,7 +8290,7 @@
         {
           "name": "??0MagState@@QAE@XZ",
           "size": "66",
-          "fuzzy_match_percent": 42.666668,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall MagState::MagState(void)"
           },
@@ -8293,7 +8299,7 @@
         {
           "name": "??1MagState@@UAE@XZ",
           "size": "147",
-          "fuzzy_match_percent": 2.7777777,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagState::~MagState(void)"
           },
@@ -8302,7 +8308,7 @@
         {
           "name": "?RouteMessage@MagState@@QAEXPAUMsgObject@@@Z",
           "size": "236",
-          "fuzzy_match_percent": 1.2820513,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::RouteMessage(struct MsgObject *)"
           },
@@ -8311,7 +8317,7 @@
         {
           "name": "?RouteMessageHelper@MagState@@QAE_NPAUStateObject_Str@@HPAUMsgObject@@@Z",
           "size": "36",
-          "fuzzy_match_percent": 12.5,
+          "fuzzy_match_percent": 88.75,
           "metadata": {
             "demangled_name": "public: bool __thiscall MagState::RouteMessageHelper(struct StateObject_Str *, int, struct MsgObject *)"
           },
@@ -8320,7 +8326,7 @@
         {
           "name": "?StoreDelayedMessage@MagState@@QAEXPAUMsgObject@@@Z",
           "size": "59",
-          "fuzzy_match_percent": 4.5454545,
+          "fuzzy_match_percent": 99.86364,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::StoreDelayedMessage(struct MsgObject *)"
           },
@@ -8329,7 +8335,7 @@
         {
           "name": "?PushBackDelayedMessage@MagState@@QAEXPAUDelayedMessage_Str@1@@Z",
           "size": "82",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 99.88571,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::PushBackDelayedMessage(struct MagState::DelayedMessage_Str *)"
           },
@@ -8338,7 +8344,7 @@
         {
           "name": "?InitDelayedMessages@MagState@@QAEXXZ",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::InitDelayedMessages(void)"
           },
@@ -8347,7 +8353,7 @@
         {
           "name": "?GODBGetGOFromName@MagState@@QAEPAUStateObject_Str@@PAD@Z",
           "size": "102",
-          "fuzzy_match_percent": 3.9583333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct StateObject_Str * __thiscall MagState::GODBGetGOFromName(char *)"
           },
@@ -8356,7 +8362,7 @@
         {
           "name": "?GODBGetGO@MagState@@QAEPAUStateObject_Str@@H@Z",
           "size": "39",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct StateObject_Str * __thiscall MagState::GODBGetGO(int)"
           },
@@ -8365,6 +8371,7 @@
         {
           "name": "?OnUpdateStateMachine@MagState@@UAEXXZ",
           "size": "23",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MagState::OnUpdateStateMachine(void)"
           },
@@ -8373,6 +8380,7 @@
         {
           "name": "?OnPreUpdateStateMachine@MagState@@UAEXXZ",
           "size": "206",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MagState::OnPreUpdateStateMachine(void)"
           },
@@ -8381,7 +8389,7 @@
         {
           "name": "?GOUpdate@MagState@@QAEXPAUStateObject_Str@@@Z",
           "size": "59",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::GOUpdate(struct StateObject_Str *)"
           },
@@ -8390,7 +8398,7 @@
         {
           "name": "?SendMsg@MagState@@QAEXH@Z",
           "size": "19",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::SendMsg(int)"
           },
@@ -8399,7 +8407,7 @@
         {
           "name": "?GOUpdateRelay@MagState@@QAEXPAUStateObject_Str@@@Z",
           "size": "126",
-          "fuzzy_match_percent": 2.0,
+          "fuzzy_match_percent": 19.06,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::GOUpdateRelay(struct StateObject_Str *)"
           },
@@ -8408,7 +8416,7 @@
         {
           "name": "?SendOnAnimEnd@MagState@@QAEXXZ",
           "size": "43",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagState::SendOnAnimEnd(void)"
           },
@@ -18082,14 +18090,14 @@
     {
       "name": "cMagUtility",
       "measures": {
-        "fuzzy_match_percent": 46.242744,
+        "fuzzy_match_percent": 63.539852,
         "total_code": "3364",
-        "matched_code": "727",
-        "matched_code_percent": 21.611176,
+        "matched_code": "980",
+        "matched_code_percent": 29.131985,
         "matched_data_percent": 100.0,
         "total_functions": 15,
-        "matched_functions": 7,
-        "matched_functions_percent": 46.666668,
+        "matched_functions": 9,
+        "matched_functions_percent": 60.000004,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18097,7 +18105,7 @@
         {
           "name": ".text",
           "size": "3364",
-          "fuzzy_match_percent": 46.242744,
+          "fuzzy_match_percent": 63.539852,
           "metadata": {}
         }
       ],
@@ -18129,7 +18137,7 @@
         {
           "name": "??0cMagUtility@@QAE@XZ",
           "size": "126",
-          "fuzzy_match_percent": 70.393936,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagUtility::cMagUtility(void)"
           },
@@ -18219,7 +18227,7 @@
         {
           "name": "?PrintString@cMagUtility@@QAEXHHPADHKPAKH@Z",
           "size": "127",
-          "fuzzy_match_percent": 1.8518518,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagUtility::PrintString(int, int, char *, int, unsigned long, unsigned long *, int)"
           },
@@ -18228,7 +18236,7 @@
         {
           "name": "?CopySurfaceToSurface@cMagUtility@@QAEJPAUtagRECT@@PAUIDirect3DSurface8@@PAUtagPOINT@@1HK@Z",
           "size": "522",
-          "fuzzy_match_percent": 0.9947644,
+          "fuzzy_match_percent": 81.43979,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagUtility::CopySurfaceToSurface(struct tagRECT *, struct IDirect3DSurface8*, struct tagPOINT *, struct IDirect3DSurface8*, int, unsigned long)"
           },

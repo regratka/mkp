@@ -5,6 +5,9 @@
 
 class MagRelayMachine {
 public:
+    static MagRelayMachine* getInstance() {
+		return instance;
+	}
 	/* 10006180 */ MagRelayMachine(MagRelayMachine* param_1);
 	/* 10006240 */ MagRelayMachine* operator=(MagRelayMachine* param_1);
 	/* 100063F0 */ MagRelayMachine* scalar_destructor(uchar param_1);
@@ -13,6 +16,11 @@ public:
 	/* 10089160 */ ~MagRelayMachine();
 	/* 100891C0 */ void SendMsg(int param_1);
 	/* 100C5C30 */ int GetMessageName();
+
+private:
+	static MagRelayMachine* instance;
 };
+
+MagRelayMachine* MagRelayMachine::instance = NULL;
 
 #endif

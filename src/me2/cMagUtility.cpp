@@ -6,6 +6,12 @@
 cMagUtility::cMagUtility() {
 	SetObjectName("No name");
 	SetClassName("cMagUtility");
+	width = 0;
+	height = 0;
+	unkn_d34 = 0;
+	unkn_d38 = 0;
+	unkn_d3c = 0;
+	surface = NULL;
 }
 
 /* 1002D1F0-1002D1FB 0000B	*/
@@ -240,18 +246,87 @@ void cMagUtility::PrintChar(int param_1, int param_2, char param_3, int param_4,
 		return;
 	}
 	this->magLog.DebugLog("-----------4------------");
-
-	
-
-
 }
 
 /* 1002E270-1002E2EF 0007F	*/
 void cMagUtility::PrintString(int param_1, int param_2, char* param_3, int param_4, ulong param_5, ulong* param_6, int param_7) {
+	for (int index = 0; index < strlen(param_3); index++) {
+		int var_1 = unkn_d34 * index + param_1;
+		int windowWidth = GetWindowWidth();
+		if (unkn_d34 + var_1 <= windowWidth) {
+			PrintChar(var_1, param_2, param_3[index], param_4, param_5, param_6, param_7);
+		}
+	}
 }
 
 /* 1002E2F0-1002E4FA 0020A	*/
 long cMagUtility::CopySurfaceToSurface(tagRECT* param_1, IDirect3DSurface8* param_2, tagPOINT* param_3, IDirect3DSurface8* param_4, int param_5, ulong param_6) {
-	return 0;
+	if (param_2 == NULL) {
+		DebugLog("!pSourceSurf error");
+		return E_FAIL;
+	}
+
+	if (param_4 == NULL) {
+		DebugLog("!pDestSurf error");
+		return E_FAIL;
+	}
+
+	D3DSURFACE_DESC sourceDesc;
+	D3DSURFACE_DESC destDesc;
+	param_2->GetDesc(&sourceDesc);
+	param_4->GetDesc(&destDesc);
+
+	RECT rect;
+	if (param_1 != NULL) {
+		rect = *param_1;
+	} else {
+		SetRect(&rect, 0, 0, sourceDesc.Width, sourceDesc.Height);
+	}
+
+	int x,y;
+	if (param_3 != NULL) {
+		x = param_3->x;
+		y = param_3->y;
+	} else {
+		y = 0;  
+		x = 0;
+	}
+
+	D3DLOCKED_RECT sourceRect;
+	HRESULT result = param_2->LockRect(&sourceRect, NULL, D3DLOCK_READONLY);
+	if (result < S_OK) {
+		DebugLog("Fatal Error");
+		return E_FAIL;
+	}
+	D3DLOCKED_RECT destRect;
+	result = param_4->LockRect(&destRect, NULL, 0);
+	if (result < S_OK) {
+		param_2->UnlockRect();
+		DebugLog("Fatal error, so unlock the source");
+		return E_FAIL;
+	}
+
+	int sourceRowVals = sourceRect.Pitch / 4;
+	int destRowVals = destRect.Pitch / 4;
+	int var1 = rect.top * sourceRowVals + rect.left;
+	int var2 = destRowVals * y + x;
+
+	for (int index1 = 0; index1 < rect.bottom; index1++) {
+		for (int index2 = 0; index2 < rect.right; index2++) {
+			if (param_5 == 0 || ((int*)sourceRect.pBits)[var1] != param_6) {
+				((int*)destRect.pBits)[var2] = ((int*)sourceRect.pBits)[var1]; 
+			}
+			var2++;
+			var1++;
+		}
+		var1 += sourceRowVals - rect.right;
+		var2 += destRowVals - rect.right;
+	}
+
+
+	param_2->UnlockRect();
+	param_4->UnlockRect();
+
+	return S_OK;
 }
 
