@@ -90,7 +90,7 @@
 ;MagProfile::scalar_destructor;0x10006120;0x57;__thiscall;;MagProfile*;MagProfile*;uchar
 ??0MagRelayMachine@@QAE@ABV0@@Z;MagRelayMachine::MagRelayMachine;0x10006180;0xb1;__thiscall;;uchar;MagRelayMachine*;MagRelayMachine*
 ??4MagRelayMachine@@QAEAAV0@ABV0@@Z;MagRelayMachine::operator=;0x10006240;0x1a8;__thiscall;;MagRelayMachine*;MagRelayMachine*;MagRelayMachine*
-;MagRelayMachine::scalar_destructor;0x100063f0;0x54;__thiscall;;MagRelayMachine*;MagRelayMachine*;uchar
+??_EMagRelayMachine@@UAEPAXI@Z;MagRelayMachine::scalar_destructor;0x100063f0;0x54;__thiscall;;MagRelayMachine*;MagRelayMachine*;uchar
 ??0cMagUtility@@QAE@ABV0@@Z;cMagUtility::cMagUtility;0x10006450;0xd5;__thiscall;;uchar;cMagUtility*;cMagUtility*
 ??4cMagUtility@@QAEAAV0@ABV0@@Z;cMagUtility::operator=;0x10006530;0xc9;__thiscall;;cMagUtility*;cMagUtility*;cMagUtility*
 ;cMagUtility::scalar_destructor;0x10006600;0x57;__thiscall;;cMagUtility*;cMagUtility*;uchar

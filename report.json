@@ -1,15 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 16.025543,
+    "fuzzy_match_percent": 16.358747,
     "total_code": "503267",
-    "matched_code": "43212",
-    "matched_code_percent": 8.586297,
+    "matched_code": "45311",
+    "matched_code_percent": 9.003372,
     "matched_data_percent": 100.0,
     "total_functions": 2181,
-    "matched_functions": 392,
-    "matched_functions_percent": 17.973406,
+    "matched_functions": 402,
+    "matched_functions_percent": 18.431911,
+    "complete_code": "5663",
+    "complete_code_percent": 1.1252476,
     "complete_data_percent": 100.0,
-    "total_units": 108
+    "total_units": 108,
+    "complete_units": 2
   },
   "units": [
     {
@@ -8155,18 +8158,25 @@
     {
       "name": "MagRelayMachine",
       "measures": {
-        "fuzzy_match_percent": 1.0567324,
+        "fuzzy_match_percent": 100.0,
         "total_code": "1335",
+        "matched_code": "1335",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 8,
+        "matched_functions": 8,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1335",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "1335",
-          "fuzzy_match_percent": 1.0567324,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -8174,6 +8184,7 @@
         {
           "name": "??0MagRelayMachine@@QAE@ABV0@@Z",
           "size": "177",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall MagRelayMachine::MagRelayMachine(class MagRelayMachine const &)"
           },
@@ -8182,21 +8193,25 @@
         {
           "name": "??4MagRelayMachine@@QAEAAV0@ABV0@@Z",
           "size": "424",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class MagRelayMachine & __thiscall MagRelayMachine::operator=(class MagRelayMachine const &)"
           },
           "address": "177"
         },
         {
-          "name": "MagRelayMachine::scalar_destructor",
+          "name": "??_EMagRelayMachine@@UAEPAXI@Z",
           "size": "84",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall MagRelayMachine::`vector deleting destructor'(unsigned int)"
+          },
           "address": "601"
         },
         {
           "name": "?IsMessage@MagRelayMachine@@QAE_NXZ",
           "size": "3",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall MagRelayMachine::IsMessage(void)"
           },
@@ -8205,7 +8220,7 @@
         {
           "name": "??0MagRelayMachine@@QAE@XZ",
           "size": "84",
-          "fuzzy_match_percent": 6.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall MagRelayMachine::MagRelayMachine(void)"
           },
@@ -8214,6 +8229,7 @@
         {
           "name": "??1MagRelayMachine@@UAE@XZ",
           "size": "89",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagRelayMachine::~MagRelayMachine(void)"
           },
@@ -8222,7 +8238,7 @@
         {
           "name": "?SendMsg@MagRelayMachine@@QAEXH@Z",
           "size": "468",
-          "fuzzy_match_percent": 0.5464481,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagRelayMachine::SendMsg(int)"
           },
@@ -8231,14 +8247,16 @@
         {
           "name": "?GetMessageName@MagRelayMachine@@QAEHXZ",
           "size": "6",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall MagRelayMachine::GetMessageName(void)"
           },
           "address": "1329"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "complete": true
+      }
     },
     {
       "name": "MagState",
@@ -8740,7 +8758,7 @@
     {
       "name": "MagTextureMgr",
       "measures": {
-        "fuzzy_match_percent": 0.5759701,
+        "fuzzy_match_percent": 0.50931513,
         "total_code": "7895",
         "matched_data_percent": 100.0,
         "total_functions": 29,
@@ -8751,7 +8769,7 @@
         {
           "name": ".text",
           "size": "7895",
-          "fuzzy_match_percent": 0.5759701,
+          "fuzzy_match_percent": 0.50931513,
           "metadata": {}
         }
       ],
@@ -8823,7 +8841,6 @@
         {
           "name": "?GetTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z",
           "size": "371",
-          "fuzzy_match_percent": 1.4184397,
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTexture(char *)"
           },
@@ -9923,14 +9940,14 @@
     {
       "name": "cFX_Shockwave",
       "measures": {
-        "fuzzy_match_percent": 75.76293,
+        "fuzzy_match_percent": 88.876465,
         "total_code": "2755",
-        "matched_code": "1221",
-        "matched_code_percent": 44.31942,
+        "matched_code": "1985",
+        "matched_code_percent": 72.05082,
         "matched_data_percent": 100.0,
         "total_functions": 15,
-        "matched_functions": 12,
-        "matched_functions_percent": 80.0,
+        "matched_functions": 14,
+        "matched_functions_percent": 93.333336,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -9938,7 +9955,7 @@
         {
           "name": ".text",
           "size": "2755",
-          "fuzzy_match_percent": 75.76293,
+          "fuzzy_match_percent": 88.876465,
           "metadata": {}
         }
       ],
@@ -10009,7 +10026,7 @@
         {
           "name": "??0cFX_Shockwave@@QAE@ABV0@@Z",
           "size": "391",
-          "fuzzy_match_percent": 49.426666,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cFX_Shockwave::cFX_Shockwave(class cFX_Shockwave const &)"
           },
@@ -10018,7 +10035,7 @@
         {
           "name": "??4cFX_Shockwave@@QAEAAV0@ABV0@@Z",
           "size": "373",
-          "fuzzy_match_percent": 56.13889,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cFX_Shockwave & __thiscall cFX_Shockwave::operator=(class cFX_Shockwave const &)"
           },
@@ -10045,7 +10062,7 @@
         {
           "name": "?RestoreDeviceObjects@cFX_Shockwave@@QAEJPBDMMHMM@Z",
           "size": "770",
-          "fuzzy_match_percent": 60.2094,
+          "fuzzy_match_percent": 60.200855,
           "metadata": {
             "demangled_name": "public: long __thiscall cFX_Shockwave::RestoreDeviceObjects(char const *, float, float, int, float, float)"
           },
@@ -11248,8 +11265,11 @@
         "total_functions": 11,
         "matched_functions": 9,
         "matched_functions_percent": 81.818184,
+        "complete_code": "4328",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -11360,7 +11380,9 @@
           "address": "3563"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "complete": true
+      }
     },
     {
       "name": "cMagGameObject",

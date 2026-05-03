@@ -6,6 +6,7 @@
 #include "cMagGameObject.h"
 #include "cMagFrustumCull.h"
 
+
 class cMagEngineMgr {
 public:
     static cMagEngineMgr* getInstance() {

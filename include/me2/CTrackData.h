@@ -4,6 +4,8 @@
 #include <globals.h>
 #include <vector>
 
+#include <d3dx8math.h>
+
 class CTrackData {
 public:
 	/* 0x00 */ D3DXVECTOR3 position;

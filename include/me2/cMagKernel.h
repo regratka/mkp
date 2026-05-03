@@ -47,8 +47,8 @@ public:
 	/* 100119f0 */ virtual void OnOutsideFrustumCull(); /* vtbl 0x44 */
 	/* 10011a60 */ virtual void OnParticleSequenceEnd(); /* vtbl 0x48 */
 	
-	virtual void vtbl_0x4c(); /* vtbl 0x4c*/
-	virtual void vtbl_0x50(); /* vtbl 0x50*/
+	virtual void OnUpdateStateMachine(); /* vtbl 0x4c*/
+	virtual void OnPreUpdateStateMachine(); /* vtbl 0x50*/
 
 	/* 10011b10 */ virtual bool OnProcessStateMachine(StateObject_Str* param_1, int param_2, MsgObject* param_3); /* vtbl 0x54 */
 	/* 10011b20 */ virtual void OnAnimEnd(char* param_1); /* vtbl 0x58 */
