@@ -56,6 +56,7 @@ ColObject,ColObject
 Collision,Collision
 IStudioMesh,IStudioMesh
 KTeksturyVideoDirectX,KTeksturyVideoDirectX
+MagAnimMeshMgr,MagAnimMeshMgr
 MagGrid,MagGrid
 MagProfile,MagProfile
 MagRelayMachine,MagRelayMachine

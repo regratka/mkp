@@ -6,7 +6,7 @@
 template <typename T>
 class MagSingleton {
 public:
-    static T& getInstance() {
+    static T* getInstance() {
         return instance;
     }
 protected:

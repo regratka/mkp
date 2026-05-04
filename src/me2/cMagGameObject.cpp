@@ -975,20 +975,20 @@ void cMagGameObject::CreateObject(cMagKernel* param_1) {
 	FileLog("CreateObject: %s", object->GetObjectName());
 	if (stricmp(object->GetClassNameA(), "cMagParticleSystem") == 0) {
 		cMagEngineMgr::getInstance()->gameObject->AddParticleObject(object);
-		object->vtbl_0x50();
+		object->OnPreUpdateStateMachine();
 		return;
 	} 
 	 if (stricmp(object->GetClassNameA(), "cMagFx") != 0) {
 		if (stricmp(object->GetClassNameA(), "cGlow") != 0) {
 			if (stricmp(object->GetClassNameA(), "CSplineCamera") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->splineCameras.push_back(param_1);
-				object->vtbl_0x50();
+				object->OnPreUpdateStateMachine();
 			} else if (stricmp(object->GetClassNameA(), "cMagBillboard") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddBillboardObject(object);
-				object->vtbl_0x50();
+				object->OnPreUpdateStateMachine();
 			} else if (stricmp(object->GetClassNameA(), "cMagCamera") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddCameraObject(object);
-				object->vtbl_0x50();
+				object->OnPreUpdateStateMachine();
 			} else if(stricmp(object->GetClassNameA(), "cMagSkyBox") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddSkyBoxObject(object);
 			} else if (stricmp(object->GetClassNameA(), "cMagSun") == 0) {
@@ -999,24 +999,24 @@ void cMagGameObject::CreateObject(cMagKernel* param_1) {
 				cMagEngineMgr::getInstance()->gameObject->AddTerrainObject(object);
 			} else if(stricmp(object->GetClassNameA(), "cMagSprite") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddSpriteObject(object);
-				object->vtbl_0x50();
+				object->OnPreUpdateStateMachine();
 			} else if(stricmp(object->GetClassNameA(), "cMagFog") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddFogObject(object);
 			} else if(stricmp(object->GetClassNameA(), "cWater") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddWaterObject(object);
-				object->vtbl_0x50();
+				object->OnPreUpdateStateMachine();
 			} else if (stricmp(object->GetClassNameA(), "cBlob") == 0) {
 				cMagEngineMgr::getInstance()->gameObject->AddBlobObject(object);
-				object->vtbl_0x50();
+				object->OnPreUpdateStateMachine();
 			}
 		} else {
 			cMagEngineMgr::getInstance()->gameObject->AddObject(object);
 			object->OnPreRender();
-			object->vtbl_0x50();
+			object->OnPreUpdateStateMachine();
 		}
 	} else {
 		cMagEngineMgr::getInstance()->gameObject->AddFxObject(object);
-		object->vtbl_0x50();
+		object->OnPreUpdateStateMachine();
 	}
 }
 
@@ -2079,7 +2079,6 @@ void cMagGameObject::AddLight(_LIGHT* param_1) {
 /* 1002A6F0-1002A6FB 0000B	*/
 void cMagGameObject::ClearMeshList() {
 	cMagMeshMgr::getInstance()->Clear();
-	
 }
 
 /* 1002A700-1002A72F 0002F	*/
@@ -2121,7 +2120,7 @@ void cMagGameObject::UpdateActiveCamera() {
 void cMagGameObject::RenderActiveCamera() {
 	if (activeCamera != NULL) {
 		activeCamera->OnRender();
-		activeCamera->vtbl_0x4c();
+		activeCamera->OnUpdateStateMachine();
 	}
 }
 

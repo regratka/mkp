@@ -121,7 +121,7 @@ bool cMagObjectList::RenderWaterList() {
 	for (std::vector<cMagKernel*>::iterator it = waterObjects.begin(); 
 			it != waterObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -131,7 +131,7 @@ bool cMagObjectList::RenderBlobList() {
 	for (std::vector<cMagKernel*>::iterator it = blobObjects.begin(); 
 			it != blobObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -141,7 +141,7 @@ bool cMagObjectList::RenderObjectList() {
 	for (std::vector<cMagKernel*>::iterator it = objects.begin(); 
 			it != objects.end(); it++) {
 		if ((*it)->GetShadowType() != 2) {
-			(*it)->vtbl_0x4c();
+			(*it)->OnUpdateStateMachine();
 			(*it)->OnRender();
 		}
 	}
@@ -171,7 +171,7 @@ bool cMagObjectList::RenderParticleList() {
 	for (std::vector<cMagKernel*>::iterator it = particleObjects.begin(); 
 			it != particleObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -181,7 +181,7 @@ bool cMagObjectList::RenderFxList() {
 	for (std::vector<cMagKernel*>::iterator it = fxObjects.begin(); 
 			it != fxObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -191,7 +191,7 @@ bool cMagObjectList::RenderSpriteList() {
 	for (std::vector<cMagKernel*>::iterator it = spriteObjects.begin(); 
 			it != spriteObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -201,7 +201,7 @@ bool cMagObjectList::RenderBillboardList() {
 	for (std::vector<cMagKernel*>::iterator it = billboardObjects.begin(); 
 			it != billboardObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -211,7 +211,7 @@ bool cMagObjectList::RenderNoShadowObjects() {
 	for (std::vector<cMagKernel*>::iterator it = shadowObjects.begin(); 
 			it != shadowObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }
@@ -260,7 +260,7 @@ bool cMagObjectList::RenderCameraList() {
 	for (std::vector<cMagKernel*>::iterator it = cameraObjects.begin(); 
 			it != cameraObjects.end(); it++) {
 		(*it)->OnRender();
-		(*it)->vtbl_0x4c();
+		(*it)->OnUpdateStateMachine();
 	}
 	return true;
 }

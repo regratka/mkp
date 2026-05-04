@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 16.288008,
-    "total_code": "503267",
-    "matched_code": "44547",
-    "matched_code_percent": 8.851564,
+    "fuzzy_match_percent": 17.084278,
+    "total_code": "503665",
+    "matched_code": "47698",
+    "matched_code_percent": 9.470183,
     "matched_data_percent": 100.0,
-    "total_functions": 2181,
-    "matched_functions": 400,
-    "matched_functions_percent": 18.34021,
-    "complete_code": "5663",
-    "complete_code_percent": 1.1252476,
+    "total_functions": 2184,
+    "matched_functions": 414,
+    "matched_functions_percent": 18.956045,
+    "complete_code": "7437",
+    "complete_code_percent": 1.4765767,
     "complete_data_percent": 100.0,
-    "total_units": 108,
-    "complete_units": 2
+    "total_units": 109,
+    "complete_units": 3
   },
   "units": [
     {
@@ -7874,6 +7874,44 @@
       "metadata": {}
     },
     {
+      "name": "MagAnimMeshMgr",
+      "measures": {
+        "total_code": "398",
+        "matched_data_percent": 100.0,
+        "total_functions": 3,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "398",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "MagAnimMeshMgr::MagAnimMeshMgr",
+          "size": "97",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "MagAnimMeshMgr::scalar_destructor",
+          "size": "36",
+          "metadata": {},
+          "address": "97"
+        },
+        {
+          "name": "MagAnimMeshMgr::~MagAnimMeshMgr",
+          "size": "265",
+          "metadata": {},
+          "address": "133"
+        }
+      ],
+      "metadata": {}
+    },
+    {
       "name": "MagGrid",
       "measures": {
         "fuzzy_match_percent": 1.8061093,
@@ -8758,7 +8796,7 @@
     {
       "name": "MagTextureMgr",
       "measures": {
-        "fuzzy_match_percent": 0.5759701,
+        "fuzzy_match_percent": 0.50931513,
         "total_code": "7895",
         "matched_data_percent": 100.0,
         "total_functions": 29,
@@ -8769,7 +8807,7 @@
         {
           "name": ".text",
           "size": "7895",
-          "fuzzy_match_percent": 0.5759701,
+          "fuzzy_match_percent": 0.50931513,
           "metadata": {}
         }
       ],
@@ -8841,7 +8879,6 @@
         {
           "name": "?GetTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z",
           "size": "371",
-          "fuzzy_match_percent": 1.4184397,
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTexture(char *)"
           },
@@ -9023,7 +9060,7 @@
     {
       "name": "MagnumMesh",
       "measures": {
-        "fuzzy_match_percent": 2.7011914,
+        "fuzzy_match_percent": 3.0825176,
         "total_code": "38280",
         "matched_code": "71",
         "matched_code_percent": 0.18547544,
@@ -9038,7 +9075,7 @@
         {
           "name": ".text",
           "size": "38280",
-          "fuzzy_match_percent": 2.7011914,
+          "fuzzy_match_percent": 3.0825176,
           "metadata": {}
         }
       ],
@@ -9073,7 +9110,7 @@
         {
           "name": "??0MagnumMesh@@QAE@ABV0@@Z",
           "size": "2306",
-          "fuzzy_match_percent": 13.822878,
+          "fuzzy_match_percent": 16.822878,
           "metadata": {
             "demangled_name": "public: __thiscall MagnumMesh::MagnumMesh(class MagnumMesh const &)"
           },
@@ -9082,7 +9119,7 @@
         {
           "name": "??4MagnumMesh@@QAEAAV0@ABV0@@Z",
           "size": "2280",
-          "fuzzy_match_percent": 11.65625,
+          "fuzzy_match_percent": 15.024305,
           "metadata": {
             "demangled_name": "public: class MagnumMesh & __thiscall MagnumMesh::operator=(class MagnumMesh const &)"
           },
@@ -9941,14 +9978,14 @@
     {
       "name": "cFX_Shockwave",
       "measures": {
-        "fuzzy_match_percent": 75.76293,
+        "fuzzy_match_percent": 88.876465,
         "total_code": "2755",
-        "matched_code": "1221",
-        "matched_code_percent": 44.31942,
+        "matched_code": "1985",
+        "matched_code_percent": 72.05082,
         "matched_data_percent": 100.0,
         "total_functions": 15,
-        "matched_functions": 12,
-        "matched_functions_percent": 80.0,
+        "matched_functions": 14,
+        "matched_functions_percent": 93.333336,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -9956,7 +9993,7 @@
         {
           "name": ".text",
           "size": "2755",
-          "fuzzy_match_percent": 75.76293,
+          "fuzzy_match_percent": 88.876465,
           "metadata": {}
         }
       ],
@@ -10027,7 +10064,7 @@
         {
           "name": "??0cFX_Shockwave@@QAE@ABV0@@Z",
           "size": "391",
-          "fuzzy_match_percent": 49.426666,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cFX_Shockwave::cFX_Shockwave(class cFX_Shockwave const &)"
           },
@@ -10036,7 +10073,7 @@
         {
           "name": "??4cFX_Shockwave@@QAEAAV0@ABV0@@Z",
           "size": "373",
-          "fuzzy_match_percent": 56.13889,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cFX_Shockwave & __thiscall cFX_Shockwave::operator=(class cFX_Shockwave const &)"
           },
@@ -10063,7 +10100,7 @@
         {
           "name": "?RestoreDeviceObjects@cFX_Shockwave@@QAEJPBDMMHMM@Z",
           "size": "770",
-          "fuzzy_match_percent": 60.2094,
+          "fuzzy_match_percent": 60.200855,
           "metadata": {
             "demangled_name": "public: long __thiscall cFX_Shockwave::RestoreDeviceObjects(char const *, float, float, int, float, float)"
           },
@@ -11258,7 +11295,7 @@
     {
       "name": "cMagFx",
       "measures": {
-        "fuzzy_match_percent": 90.521385,
+        "fuzzy_match_percent": 98.77404,
         "total_code": "4328",
         "matched_code": "2618",
         "matched_code_percent": 60.489834,
@@ -11276,7 +11313,7 @@
         {
           "name": ".text",
           "size": "4328",
-          "fuzzy_match_percent": 90.521385,
+          "fuzzy_match_percent": 98.77404,
           "metadata": {}
         }
       ],
@@ -11284,7 +11321,7 @@
         {
           "name": "??0cMagFx@@QAE@ABV0@@Z",
           "size": "861",
-          "fuzzy_match_percent": 76.40804,
+          "fuzzy_match_percent": 95.195404,
           "metadata": {
             "demangled_name": "public: __thiscall cMagFx::cMagFx(class cMagFx const &)"
           },
@@ -11293,7 +11330,7 @@
         {
           "name": "??4cMagFx@@QAEAAV0@ABV0@@Z",
           "size": "849",
-          "fuzzy_match_percent": 75.60571,
+          "fuzzy_match_percent": 98.622856,
           "metadata": {
             "demangled_name": "public: class cMagFx & __thiscall cMagFx::operator=(class cMagFx const &)"
           },
@@ -13540,18 +13577,25 @@
     {
       "name": "cMagLight",
       "measures": {
-        "fuzzy_match_percent": 0.67037934,
+        "fuzzy_match_percent": 100.0,
         "total_code": "1774",
+        "matched_code": "1774",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 8,
+        "matched_functions": 8,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1774",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "1774",
-          "fuzzy_match_percent": 0.67037934,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -13559,6 +13603,7 @@
         {
           "name": "??0cMagLight@@QAE@ABV0@@Z",
           "size": "197",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagLight::cMagLight(class cMagLight const &)"
           },
@@ -13567,21 +13612,25 @@
         {
           "name": "??4cMagLight@@QAEAAV0@ABV0@@Z",
           "size": "546",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagLight & __thiscall cMagLight::operator=(class cMagLight const &)"
           },
           "address": "197"
         },
         {
-          "name": "cMagLight::scalar_destructor",
+          "name": "??_EcMagLight@@UAEPAXI@Z",
           "size": "84",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagLight::`vector deleting destructor'(unsigned int)"
+          },
           "address": "743"
         },
         {
           "name": "??0cMagLight@@QAE@XZ",
           "size": "89",
-          "fuzzy_match_percent": 5.5555553,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagLight::cMagLight(void)"
           },
@@ -13590,6 +13639,7 @@
         {
           "name": "??1cMagLight@@UAE@XZ",
           "size": "94",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagLight::~cMagLight(void)"
           },
@@ -13598,6 +13648,7 @@
         {
           "name": "?GetDynamicLight@cMagLight@@QAE_NHAAU_D3DLIGHT8@@@Z",
           "size": "82",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagLight::GetDynamicLight(int, struct _D3DLIGHT8&)"
           },
@@ -13606,7 +13657,7 @@
         {
           "name": "?AddDynamicLight@cMagLight@@QAEHU_D3DLIGHT8@@@Z",
           "size": "612",
-          "fuzzy_match_percent": 0.80851066,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagLight::AddDynamicLight(struct _D3DLIGHT8)"
           },
@@ -13615,14 +13666,16 @@
         {
           "name": "?ClearDynamicLights@cMagLight@@QAEXXZ",
           "size": "70",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagLight::ClearDynamicLights(void)"
           },
           "address": "1704"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "complete": true
+      }
     },
     {
       "name": "cMagLine",
@@ -13883,10 +13936,14 @@
     {
       "name": "cMagMeshMgr",
       "measures": {
-        "fuzzy_match_percent": 0.54861444,
+        "fuzzy_match_percent": 39.383717,
         "total_code": "2864",
+        "matched_code": "199",
+        "matched_code_percent": 6.948324,
         "matched_data_percent": 100.0,
         "total_functions": 9,
+        "matched_functions": 2,
+        "matched_functions_percent": 22.222223,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -13894,7 +13951,7 @@
         {
           "name": ".text",
           "size": "2864",
-          "fuzzy_match_percent": 0.54861444,
+          "fuzzy_match_percent": 39.383717,
           "metadata": {}
         }
       ],
@@ -13902,6 +13959,7 @@
         {
           "name": "??0cMagMeshMgr@@QAE@ABV0@@Z",
           "size": "407",
+          "fuzzy_match_percent": 51.503498,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshMgr::cMagMeshMgr(class cMagMeshMgr const &)"
           },
@@ -13910,6 +13968,7 @@
         {
           "name": "??4cMagMeshMgr@@QAEAAV0@ABV0@@Z",
           "size": "553",
+          "fuzzy_match_percent": 43.782177,
           "metadata": {
             "demangled_name": "public: class cMagMeshMgr & __thiscall cMagMeshMgr::operator=(class cMagMeshMgr const &)"
           },
@@ -13924,7 +13983,7 @@
         {
           "name": "??0cMagMeshMgr@@QAE@XZ",
           "size": "355",
-          "fuzzy_match_percent": 1.1965812,
+          "fuzzy_match_percent": 96.871796,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshMgr::cMagMeshMgr(void)"
           },
@@ -13933,6 +13992,7 @@
         {
           "name": "??1cMagMeshMgr@@UAE@XZ",
           "size": "101",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagMeshMgr::~cMagMeshMgr(void)"
           },
@@ -13941,7 +14001,7 @@
         {
           "name": "?GetMesh@cMagMeshMgr@@QAEPAVcStaticMesh@@PAD@Z",
           "size": "98",
-          "fuzzy_match_percent": 3.2558138,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cStaticMesh * __thiscall cMagMeshMgr::GetMesh(char *)"
           },
@@ -13959,6 +14019,7 @@
         {
           "name": "?IsMesh@cMagMeshMgr@@QAE_NPADAAH@Z",
           "size": "107",
+          "fuzzy_match_percent": 55.918365,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshMgr::IsMesh(char *, int &)"
           },
@@ -13967,7 +14028,7 @@
         {
           "name": "?Clear@cMagMeshMgr@@QAEXXZ",
           "size": "159",
-          "fuzzy_match_percent": 1.4925373,
+          "fuzzy_match_percent": 42.50746,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshMgr::Clear(void)"
           },
@@ -13979,7 +14040,7 @@
     {
       "name": "cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 2.521776,
+        "fuzzy_match_percent": 2.7614198,
         "total_code": "51828",
         "matched_code": "23",
         "matched_code_percent": 0.044377554,
@@ -13994,7 +14055,7 @@
         {
           "name": ".text",
           "size": "51828",
-          "fuzzy_match_percent": 2.521776,
+          "fuzzy_match_percent": 2.7614198,
           "metadata": {}
         }
       ],
@@ -14073,7 +14134,7 @@
         {
           "name": "??0cMagMeshObject@@QAE@ABV0@@Z",
           "size": "4759",
-          "fuzzy_match_percent": 3.5249295,
+          "fuzzy_match_percent": 5.4666038,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(class cMagMeshObject const &)"
           },
@@ -14082,7 +14143,7 @@
         {
           "name": "??4cMagMeshObject@@QAEAAV0@ABV0@@Z",
           "size": "6831",
-          "fuzzy_match_percent": 2.8422782,
+          "fuzzy_match_percent": 3.3077765,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject & __thiscall cMagMeshObject::operator=(class cMagMeshObject const &)"
           },
@@ -18113,14 +18174,14 @@
     {
       "name": "cMagUtility",
       "measures": {
-        "fuzzy_match_percent": 63.539852,
+        "fuzzy_match_percent": 70.010315,
         "total_code": "3364",
-        "matched_code": "980",
-        "matched_code_percent": 29.131985,
+        "matched_code": "1394",
+        "matched_code_percent": 41.438763,
         "matched_data_percent": 100.0,
         "total_functions": 15,
-        "matched_functions": 9,
-        "matched_functions_percent": 60.000004,
+        "matched_functions": 11,
+        "matched_functions_percent": 73.333336,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18128,7 +18189,7 @@
         {
           "name": ".text",
           "size": "3364",
-          "fuzzy_match_percent": 63.539852,
+          "fuzzy_match_percent": 70.010315,
           "metadata": {}
         }
       ],
@@ -18136,7 +18197,7 @@
         {
           "name": "??0cMagUtility@@QAE@ABV0@@Z",
           "size": "213",
-          "fuzzy_match_percent": 51.904762,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagUtility::cMagUtility(class cMagUtility const &)"
           },
@@ -18145,7 +18206,7 @@
         {
           "name": "??4cMagUtility@@QAEAAV0@ABV0@@Z",
           "size": "201",
-          "fuzzy_match_percent": 42.675,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagUtility & __thiscall cMagUtility::operator=(class cMagUtility const &)"
           },
