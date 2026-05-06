@@ -11,8 +11,9 @@
 #include "CMemoryManager.h"
 
 struct MeshData {
-	/* 0x00 */ uchar f_00[0x04-0x00];
-	/* 0x04 */ char filename[600];
+	/* 0x00 */ int unkn_00;
+	/* 0x04 */ char filename[300];
+	/* 0x130 */ char filepath[300];
 	/* 0x25c */ cStaticMesh* mesh;
 };
 

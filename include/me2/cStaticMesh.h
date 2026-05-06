@@ -9,7 +9,7 @@ public:
 	/* 10004820 */ cStaticMesh* operator=(cStaticMesh* param_1);
 	/* 10004BA0 */ cStaticMesh* scalar_destructor(uchar param_1);
 	/* 1003D720 */ cStaticMesh();
-	/* 1003DA70 */ ~cStaticMesh();
+	/* 1003DA70 */ virtual ~cStaticMesh();
 	/* 1003DCF0 */ bool Load(char* param_1);
 	/* 1003DF70 */ bool LoadOld(char* param_1);
 	/* 1003EB30 */ bool LoadNew(char* param_1);
@@ -28,6 +28,11 @@ public:
 	/* 10041D00 */ bool SetAlpha(int param_1);
 	/* 10041D60 */ bool SetMultiple(float param_1);
 	/* 10041DC0 */ void SetAnimTextureLightMap(uchar param_1);
+
+private:
+	/* 0x04 */ uchar f_04[0x480-0x04];
 };
+
+STATIC_ASSERT(sizeof(cStaticMesh)==0x480);
 
 #endif

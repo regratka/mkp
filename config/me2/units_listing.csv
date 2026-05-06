@@ -96,6 +96,7 @@ cMagVertex,cMagVertex
 cMp3Player,cMp3Player
 cPortalEngine,cPortalEngine
 cStaticMesh,cStaticMesh
+cStaticSurface,cStaticSurface
 cTGA,cTGA
 cVideoPlayer,cVideoPlayer
 CollisionManager,collision
