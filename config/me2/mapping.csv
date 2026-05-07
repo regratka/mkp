@@ -1683,7 +1683,7 @@
 ?GetEngine@cMagMeshObject@@QAEPAVcMagGameObject@@XZ;cMagMeshObject::GetEngine;0x100556f0;0x8;__thiscall;;cMagGameObject*;cMagMeshObject*
 ?SetDirection@cMagMeshObject@@QAEXMMM@Z;cMagMeshObject::SetDirection;0x10055700;0x56c;__thiscall;;void;cMagMeshObject*;float;float;float
 ?SetDirection@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetDirection;0x10055c70;0x5f7;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
-?GetDirection@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetDirection;0x10056270;0x21;__thiscall;;D3DXVECTOR3*;cMagMeshObject*;D3DXVECTOR3*
+?GetDirection@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetDirection;0x10056270;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
 ?GetDirection@cMagMeshObject@@QAEXAAM00@Z;cMagMeshObject::GetDirection;0x100562a0;0x27;__thiscall;;void;cMagMeshObject*;float*;float*;float*
 ?SetSpeed@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetSpeed;0x100562d0;0x6b;__thiscall;;void;cMagMeshObject*;float;float;float
 ?GetSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetSpeed;0x10056340;0x6a;__thiscall;;uchar;cMagMeshObject*;float*
@@ -1692,10 +1692,10 @@
 ?SetSpeedValue@cMagMeshObject@@QAEXM@Z;cMagMeshObject::SetSpeedValue;0x100563e0;0x57;__thiscall;;void;cMagMeshObject*;float
 ?GetSpeedValue@cMagMeshObject@@QAEMXZ;cMagMeshObject::GetSpeedValue;0x10056440;0x7;__thiscall;;float;cMagMeshObject*
 ?SetSpeedDirection@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetSpeedDirection;0x10056450;0x59;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
-?GetSpeedDirection@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetSpeedDirection;0x100564b0;0x21;__thiscall;;uchar;cMagMeshObject*;uint*
-?Jump@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::Jump;0x100564e0;0x1d;__thiscall;;void;cMagMeshObject*;uint;uint;uint
-?GetFallSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetFallSpeed;0x10056500;0x21;__thiscall;;uchar;cMagMeshObject*;uint*
-?SetDestinationPos@cMagMeshObject@@QAEXUD3DXVECTOR3@@M@Z;cMagMeshObject::SetDestinationPos;0x10056530;0x56;__thiscall;;void;cMagMeshObject*;uint;uint;uint;uint
+?GetSpeedDirection@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetSpeedDirection;0x100564b0;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
+?Jump@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::Jump;0x100564e0;0x1d;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
+?GetFallSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetFallSpeed;0x10056500;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
+?SetDestinationPos@cMagMeshObject@@QAEXUD3DXVECTOR3@@M@Z;cMagMeshObject::SetDestinationPos;0x10056530;0x56;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3;float
 ?ClearDestinationPos@cMagMeshObject@@QAEXXZ;cMagMeshObject::ClearDestinationPos;0x10056590;0x22;__thiscall;;void;cMagMeshObject*
 ?SetDestinationDir@cMagMeshObject@@QAEXUD3DXVECTOR3@@H@Z;cMagMeshObject::SetDestinationDir;0x100565c0;0x62;__thiscall;;void;cMagMeshObject*;uint;uint;uint
 ?ClearDestinationDir@cMagMeshObject@@QAEXXZ;cMagMeshObject::ClearDestinationDir;0x10056630;0x22;__thiscall;;void;cMagMeshObject*

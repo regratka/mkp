@@ -1,5 +1,8 @@
 #include "cMagMeshObject.h"
 
+#include "CGame.h"
+#include "cMagEngineMgr.h"
+
 /* 10051E50-10052DEC 00F9C	*/
 cMagMeshObject::cMagMeshObject() {
 }
@@ -272,6 +275,7 @@ bool cMagMeshObject::TestDistance(float param_1) {
 
 /* 10054C60-10054C6D 0000D	*/
 void cMagMeshObject::EnableTestSector(bool param_1) {
+	enableTestSector = param_1;
 }
 
 /* 10054C70-10054FDB 0036B	*/
@@ -288,16 +292,23 @@ void cMagMeshObject::OnRenderShadow() {
 
 /* 100556A0-100556D7 00037	*/
 void cMagMeshObject::SetShadowType(int param_1) {
+	shadowType = param_1;
+	if (studioMesh != NULL) {
+		studioMesh->SetShadowType(param_1);
+	}
+	if (param_1 == 2) {
+		GetGame()->AddShadowsObject(this);
+	}
 }
 
 /* 100556E0-100556E7 00007	*/
 ulong cMagMeshObject::GetShadowType() {
-	return 0;
+	return shadowType;
 }
 
 /* 100556F0-100556F8 00008	*/
 cMagGameObject* cMagMeshObject::GetEngine() {
-	return 0;
+	return cMagEngineMgr::getInstance()->gameObject;
 }
 
 /* 10055700-10055C6C 0056C	*/
@@ -309,8 +320,8 @@ void cMagMeshObject::SetDirection(D3DXVECTOR3 param_1) {
 }
 
 /* 10056270-10056291 00021	*/
-D3DXVECTOR3* cMagMeshObject::GetDirection(D3DXVECTOR3* param_1) {
-	return 0;
+D3DXVECTOR3 cMagMeshObject::GetDirection() {
+	return directionVector;
 }
 
 /* 100562A0-100562C7 00027	*/
@@ -328,11 +339,16 @@ uchar cMagMeshObject::GetSpeed(float* param_1) {
 
 /* 100563B0-100563BD 0000D	*/
 void cMagMeshObject::SetGravityAcceleration(float param_1) {
+	gravityAcceleration = param_1;
 }
 
 /* 100563C0-100563DD 0001D	*/
 float cMagMeshObject::GetGravityAcceleration() {
-	return 0;
+	cMagMeshObject* source = this;
+	while(source->unkn_1b54 != NULL) {
+		source = source->unkn_1b54;
+	}
+	return source->gravityAcceleration;
 }
 
 /* 100563E0-10056437 00057	*/
@@ -341,7 +357,7 @@ void cMagMeshObject::SetSpeedValue(float param_1) {
 
 /* 10056440-10056447 00007	*/
 float cMagMeshObject::GetSpeedValue() {
-	return 0;
+	return speedValue;
 }
 
 /* 10056450-100564A9 00059	*/
@@ -349,25 +365,39 @@ void cMagMeshObject::SetSpeedDirection(D3DXVECTOR3 param_1) {
 }
 
 /* 100564B0-100564D1 00021	*/
-uchar cMagMeshObject::GetSpeedDirection(uint* param_1) {
+D3DXVECTOR3 cMagMeshObject::GetSpeedDirection() {
 	return 0;
 }
 
 /* 100564E0-100564FD 0001D	*/
-void cMagMeshObject::Jump(uint param_1, uint param_2, uint param_3) {
+void cMagMeshObject::Jump(D3DXVECTOR3 param_1) {
+	fallSpeed = param_1;
 }
 
 /* 10056500-10056521 00021	*/
-uchar cMagMeshObject::GetFallSpeed(uint* param_1) {
-	return 0;
+D3DXVECTOR3 cMagMeshObject::GetFallSpeed() {
+	return fallSpeed;
 }
 
 /* 10056530-10056586 00056	*/
-void cMagMeshObject::SetDestinationPos(uint param_1, uint param_2, uint param_3, uint param_4) {
+void cMagMeshObject::SetDestinationPos(D3DXVECTOR3 param_1, float param_2) {
+	ClearDestinationPos();
+	D3DXVECTOR3* destPos = new D3DXVECTOR3;
+	if (destPos != NULL) {
+		*destPos = param_1;
+		destinationPos = destPos;
+	} else {
+		destinationPos = NULL;
+	}
+	unkn_19c8 = param_2;
 }
 
 /* 10056590-100565B2 00022	*/
 void cMagMeshObject::ClearDestinationPos() {
+	if (destinationPos != NULL) {
+		delete destinationPos;
+		destinationPos = NULL;
+	}
 }
 
 /* 100565C0-10056622 00062	*/
