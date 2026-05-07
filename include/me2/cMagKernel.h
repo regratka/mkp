@@ -53,7 +53,7 @@ public:
 	/* 10011b10 */ virtual bool OnProcessStateMachine(StateObject_Str* param_1, int param_2, MsgObject* param_3); /* vtbl 0x54 */
 	/* 10011b20 */ virtual void OnAnimEnd(char* param_1); /* vtbl 0x58 */
 
-	virtual void OnAnimFrameMeter(); /* vtbl 0x5c*/
+	virtual void OnAnimFrameMeter(char* param_1, int param_2); /* vtbl 0x5c*/
 	virtual void vtbl_0x60(); /* vtbl 0x60*/
 	virtual void vtbl_0x64(); /* vtbl 0x64*/
 	virtual void vtbl_0x68(); /* vtbl 0x68*/

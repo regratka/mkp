@@ -1,45 +1,5 @@
 #include "cMagMeshObject.h"
 
-/* 10007A10-10007A17 00007	*/
-char* cMagMeshObject::GetFileMeshName() {
-	return 0;
-}
-
-/* 10007A20-10007A27 00007	*/
-bool cMagMeshObject::GetStatusRemoveObject() {
-	return 0;
-}
-
-/* 10007A30-10007A3D 0000D	*/
-void cMagMeshObject::RemoveObject(bool param_1) {
-}
-
-/* 10007A40-10007A5A 0001A	*/
-uchar cMagMeshObject::GetWorldMat(uint* param_1) {
-	return 0;
-}
-
-/* 10007A60-10007A6D 0000D	*/
-void cMagMeshObject::ShowWireframe(bool param_1) {
-}
-
-/* 10007A70-10007A7D 0000D	*/
-void cMagMeshObject::EnableFrustum(bool param_1) {
-}
-
-/* 10007A90-10007A9D 0000D	*/
-void cMagMeshObject::EnablePortalRendering(bool param_1) {
-}
-
-/* 10007AA0-10008D37 01297	*/
-cMagMeshObject::cMagMeshObject(cMagMeshObject* param_1) {
-}
-
-/* 10008D40-1000A7EF 01AAF	*/
-cMagMeshObject* cMagMeshObject::operator=(cMagMeshObject* param_1) {
-	return 0;
-}
-
 /* 10051E50-10052DEC 00F9C	*/
 cMagMeshObject::cMagMeshObject() {
 }
@@ -59,92 +19,153 @@ void cMagMeshObject::LoadMesh(char* param_1) {
 
 /* 10053AA0-10053B25 00085	*/
 void cMagMeshObject::SetPosition(D3DXVECTOR3 param_1) {
+	unkn_17a8 = param_1;
+	D3DXMatrixIdentity(&computationMatrix);
+	D3DXMatrixTranslation(&computationMatrix, unkn_17a8.x, unkn_17a8.y, unkn_17a8.z);
+	translationMatrix = computationMatrix;
 }
 
 /* 10053B30-10053BB5 00085	*/
 void cMagMeshObject::SetScale(D3DXVECTOR3 param_1) {
+	unkn_17b4 = param_1;
+	D3DXMatrixIdentity(&computationMatrix);
+	D3DXMatrixScaling(&computationMatrix, unkn_17b4.x, unkn_17b4.y, unkn_17b4.z);
+	scaleMatrix = computationMatrix;
 }
 
 /* 10053BC0-10053C01 00041	*/
 D3DXVECTOR3 cMagMeshObject::GetPosition() {
-	return 0;
+	D3DXVECTOR3 pos;
+	pos.x = translationMatrix(3,0);
+	pos.y = translationMatrix(3,1);
+	pos.z = translationMatrix(3,2);
+	return pos;
 }
 
 /* 10053C10-10053C31 00021	*/
-uchar cMagMeshObject::GetScale(uint* param_1) {
-	return 0;
+D3DXVECTOR3 cMagMeshObject::GetScale() {
+	return unkn_17b4;
 }
 
 /* 10053C40-10053C5A 0001A	*/
-uchar cMagMeshObject::GetRotateMatrix(uint* param_1) {
-	return 0;
+D3DXMATRIX cMagMeshObject::GetRotateMatrix() {
+	return rotateMatrix;
 }
 
 /* 10053C60-10053C78 00018	*/
-void cMagMeshObject::SetRotateMatrix(uchar param_1) {
+void cMagMeshObject::SetRotateMatrix(D3DXMATRIX param_1) {
+	rotateMatrix = param_1;
+
 }
 
 /* 10053C80-10053C92 00012	*/
 int cMagMeshObject::GetFrameCount() {
-	return 0;
+	if (studioMesh == NULL) {
+		return 0;
+	}
+	return studioMesh->GetFrameCount();
 }
 
 /* 10053CA0-10053CC8 00028	*/
 bool cMagMeshObject::InitAnimSeq(char* param_1, int param_2, int param_3) {
-	return 0;
+	if (studioMesh == NULL) {
+		return false;
+	}
+ 	studioMesh->InitAnimSeq(param_1, param_2, param_3);
+	return true;
 }
 
 /* 10053CD0-10053CD5 00005	*/
 bool cMagMeshObject::InitAnimSeq(char* param_1, char* param_2, int param_3, int param_4, int param_5, char* param_6) {
-	return 0;
+	return false;
 }
 
 /* 10053CE0-10053CF7 00017	*/
 void cMagMeshObject::DeleteAnimSeq(char* param_1) {
+	if (studioMesh != NULL) {
+		studioMesh->DeleteAnimSeq(param_1);
+	}
 }
 
 /* 10053D00-10053D10 00010	*/
 void cMagMeshObject::DeleteAllAnimSeq() {
+	if (studioMesh != NULL) {
+		studioMesh->DeleteAllAnimSeq();
+	}
 }
 
 /* 10053D10-10053D39 00029	*/
 void cMagMeshObject::PlayAnimSeq(int param_1, int param_2) {
+	InitAnimSeq("seq0", param_1, param_2);
+	PlayAnim("seq0");
 }
 
 /* 10053D40-10053D5F 0001F	*/
 void cMagMeshObject::SetAnimFreq(char* param_1, int param_2) {
+	if (studioMesh != NULL) {
+		studioMesh->SetAnimFreq(param_1, param_2);
+	}
 }
 
 /* 10053D60-10053D7C 0001C	*/
 bool cMagMeshObject::IsPlaying(char* param_1) {
-	return 0;
+	if (studioMesh == NULL) {
+		return false;
+	}
+ 	return studioMesh->IsPlaying(param_1);
 }
 
 /* 10053D80-10053D9B 0001B	*/
 void cMagMeshObject::StopAnim(char* param_1) {
+	if (param_1 != NULL && studioMesh != NULL) {
+		studioMesh->StopAnim(param_1);
+	}
 }
 
 /* 10053DA0-10053DC3 00023	*/
 bool cMagMeshObject::PlayAnim(char* param_1, int param_2) {
-	return 0;
+	if (studioMesh == NULL) {
+		return false;
+	}
+ 	studioMesh->PlayAnim(param_1, param_2);
+	return true;
 }
 
 /* 10053DD0-10053DE7 00017	*/
 void cMagMeshObject::EnableAnimKeys(bool param_1) {
+	if (studioMesh != NULL) {
+		studioMesh->EnableAnimKeys(param_1);
+	}
 }
 
 /* 10053DF0-10053E07 00017	*/
 void cMagMeshObject::SetMeshType(int param_1) {
+	if (studioMesh != NULL) {
+		studioMesh->SetMeshType(param_1);
+	}
 }
 
 /* 10053E10-10053E29 00019	*/
 bool cMagMeshObject::PlayAnim(char* param_1) {
-	return 0;
+	if (studioMesh != NULL) {
+		studioMesh->PlayAnim(param_1);
+	}
+	return false;
 }
 
 /* 10053E30-10053E35 00005	*/
 bool cMagMeshObject::InitAnimSeq(char* param_1) {
-	return 0;
+	return false;
+}
+
+/* 10053E30-10053E35 00005	*/
+bool cMagMeshObject::PlayAnim1(char* param_1) {
+	return false;
+}
+
+/* 10053E30-10053E35 00005	*/
+bool cMagMeshObject::PlayAnimBack(char* param_1) {
+	return false;
 }
 
 /* 10053E40-10053EDE 0009E	*/
@@ -154,27 +175,43 @@ int cMagMeshObject::FrameRate() {
 
 /* 10053EF0-10053EFD 0000D	*/
 void cMagMeshObject::OnAnimEnd1(char* param_1) {
+	CallOnAnimEnd(param_1);
 }
 
 /* 10053F00-10053F2F 0002F	*/
 bool cMagMeshObject::OnPlayAnim() {
-	return 0;
+	if (studioMesh == NULL) {
+		return false;
+	}
+
+	studioMesh->UpdateAnimation(unkn_1448);
+	return true;
 }
 
 /* 10053F30-10053F47 00017	*/
 void cMagMeshObject::SetAnimMorphTime(float param_1) {
+	if (studioMesh != NULL) {
+		studioMesh->animMorphTime = param_1;
+	}
 }
 
 /* 10053F50-10053F67 00017	*/
 void cMagMeshObject::SetStepMorph(float param_1) {
+	if (studioMesh != NULL) {
+		studioMesh->SetStepMorph(param_1);
+	}
 }
 
 /* 10053F70-10053F87 00017	*/
 void cMagMeshObject::EnableMorph(bool param_1) {
+		if (studioMesh != NULL) {
+		studioMesh->EnableMorph1(param_1);
+	}
 }
 
 /* 10053F90-10053FA2 00012	*/
 void cMagMeshObject::AnimFrameMeter(char* param_1, int param_2) {
+	OnAnimFrameMeter(param_1, param_2);
 }
 
 /* 10053FB0-10054400 00450	*/
@@ -187,18 +224,40 @@ void cMagMeshObject::DrawLine(float param_1, float param_2, float param_3, float
 
 /* 10054510-10054560 00050	*/
 void cMagMeshObject::InitBoundingBox() {
+	if (unk_ed1) {
+		if(staticMesh != NULL) {
+			staticMesh->ComputeBoundingBox(unkn_1324, unkn_1330);
+		}
+	} else if (unk_ed2) {
+		if(studioMesh != NULL) {
+			studioMesh->ComputeBoundingBox(unkn_1324, unkn_1330);
+		}
+	}
+
 }
 
 /* 10054560-1005456D 0000D	*/
 void cMagMeshObject::ShowBoundingBox(bool param_1) {
+	showBoundingBox = param_1;
 }
 
 /* 10054570-1005458D 0001D	*/
-void cMagMeshObject::CorrectTranslationBoundingBox(uint param_1, uint param_2, uint param_3) {
+void cMagMeshObject::CorrectTranslationBoundingBox(D3DXVECTOR3 param_1) {
+	translationBoundingBox = param_1;
 }
 
 /* 10054590-100545F8 00068	*/
-void cMagMeshObject::CorrectScaleBoundingBox(float param_1, float param_2, float param_3) {
+void cMagMeshObject::CorrectScaleBoundingBox(D3DXVECTOR3 param_1) {
+	if (param_1.x == 0.0f) {
+		param_1.x = 1.0f;
+	}
+	if (param_1.y == 0.0f) {
+		param_1.y = 1.0f;
+	}
+	if (param_1.z == 0.0f) {
+		param_1.z = 1.0f;
+	}
+	scaleBoundingBox = param_1;
 }
 
 /* 10054600-10054C46 00646	*/
@@ -208,7 +267,7 @@ bool cMagMeshObject::_TestDistance(float param_1) {
 
 /* 10054C50-10054C5D 0000D	*/
 bool cMagMeshObject::TestDistance(float param_1) {
-	return 0;
+	return _TestDistance(param_1);
 }
 
 /* 10054C60-10054C6D 0000D	*/

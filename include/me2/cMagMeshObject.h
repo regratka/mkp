@@ -4,34 +4,61 @@
 #include <globals.h>
 
 #include "cMagUtility.h"
+#include "IStudioMesh.h"
+#include "cStaticMesh.h"
 
 class __declspec(dllexport) cMagMeshObject : public cMagUtility {
 public:
-	/* 10007A10 */ char* GetFileMeshName();
-	/* 10007A20 */ bool GetStatusRemoveObject();
-	/* 10007A30 */ void RemoveObject(bool param_1);
-	/* 10007A40 */ uchar GetWorldMat(uint* param_1);
-	/* 10007A60 */ void ShowWireframe(bool param_1);
-	/* 10007A70 */ void EnableFrustum(bool param_1);
+	/* 10007A10-10007A17 00007	*/ 
+	char* GetFileMeshName() {
+		return fileMeshName;
+	}
+
+	/* 10007A20-10007A27 00007	*/
+	bool GetStatusRemoveObject() {
+		return statusRemoveObject;
+	}
+
+	/* 10007A30-10007A3D 0000D	*/
+	void cMagMeshObject::RemoveObject(bool param_1) {
+		statusRemoveObject = param_1;
+	}
+	
+	/* 10007A40-10007A5A 0001A	*/
+	D3DXMATRIX cMagMeshObject::GetWorldMat() {
+		return worldMat;
+	}
+
+	/* 10007A60-10007A6D 0000D	*/
+	void cMagMeshObject::ShowWireframe(bool param_1) {
+		showWireframe = param_1;
+	}
+
+	/* 10007A70-10007A7D 0000D	*/
+	void cMagMeshObject::EnableFrustum(bool param_1) {
+		enableFrustum = param_1;
+	}
 
 	/* 10007A80-10007A8D 0000D	*/
 	void EnableRendering(bool param_1) {
-		rendering = param_1;
+		enableRendering = param_1;
 	}
 	
-	/* 10007A90 */ void EnablePortalRendering(bool param_1);
-	/* 10007AA0 */ cMagMeshObject(cMagMeshObject* param_1);
-	/* 10008D40 */ cMagMeshObject* operator=(cMagMeshObject* param_1);
+	/* 10007A90-10007A9D 0000D	*/
+	void cMagMeshObject::EnablePortalRendering(bool param_1) {
+		enablePortalRendering = param_1;
+	}
+
 	/* 10051E50 */ cMagMeshObject();
-	/* 10052DF0 */ ~cMagMeshObject();
+	/* 10052DF0 */ virtual ~cMagMeshObject();
 	/* 100531E0 */ int Is3dmFile(char* param_1);
 	/* 100534C0 */ void LoadMesh(char* param_1);
 	/* 10053AA0 */ void SetPosition(D3DXVECTOR3 param_1);
 	/* 10053B30 */ void SetScale(D3DXVECTOR3 param_1);
 	/* 10053BC0 */ D3DXVECTOR3 GetPosition();
-	/* 10053C10 */ uchar GetScale(uint* param_1);
-	/* 10053C40 */ uchar GetRotateMatrix(uint* param_1);
-	/* 10053C60 */ void SetRotateMatrix(uchar param_1);
+	/* 10053C10 */ D3DXVECTOR3 GetScale();
+	/* 10053C40 */ D3DXMATRIX GetRotateMatrix();
+	/* 10053C60 */ void SetRotateMatrix(D3DXMATRIX param_1);
 	/* 10053C80 */ int GetFrameCount();
 	/* 10053CA0 */ bool InitAnimSeq(char* param_1, int param_2, int param_3);
 	/* 10053CD0 */ bool InitAnimSeq(char* param_1, char* param_2, int param_3, int param_4, int param_5, char* param_6);
@@ -46,6 +73,8 @@ public:
 	/* 10053DF0 */ void SetMeshType(int param_1);
 	/* 10053E10 */ bool PlayAnim(char* param_1);
 	/* 10053E30 */ bool InitAnimSeq(char* param_1);
+	/* 10053E30 */ bool PlayAnim1(char* param_1);
+	/* 10053E30 */ bool PlayAnimBack(char* param_1);
 	/* 10053E40 */ int FrameRate();
 	/* 10053EF0 */ void OnAnimEnd1(char* param_1);
 	/* 10053F00 */ bool OnPlayAnim();
@@ -57,8 +86,8 @@ public:
 	/* 10054400 */ void DrawLine(float param_1, float param_2, float param_3, float param_4);
 	/* 10054510 */ void InitBoundingBox();
 	/* 10054560 */ void ShowBoundingBox(bool param_1);
-	/* 10054570 */ void CorrectTranslationBoundingBox(uint param_1, uint param_2, uint param_3);
-	/* 10054590 */ void CorrectScaleBoundingBox(float param_1, float param_2, float param_3);
+	/* 10054570 */ void CorrectTranslationBoundingBox(D3DXVECTOR3 param_1);
+	/* 10054590 */ void CorrectScaleBoundingBox(D3DXVECTOR3 param_1);
 	/* 10054600 */ bool _TestDistance(float param_1);
 	/* 10054C50 */ bool TestDistance(float param_1);
 	/* 10054C60 */ void EnableTestSector(bool param_1);
@@ -285,11 +314,43 @@ public:
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
 
 public:
-	/* 0xd4c */ uchar f_d4c[0x133e - 0xd4c];
+	/* 0xd4c */ uchar f_d4c[0xd60 - 0xd4c];
+	/* 0xd60 */ char fileMeshName[255];
+	/* 0xe5f */ uchar f_e5f[0xed1 - 0xe5f];
+	/* 0xed1 */ bool unk_ed1;
+	/* 0xed2 */ bool unk_ed2;
+	/* 0xed3 */ bool statusRemoveObject;
+	/* 0xed4 */ uchar f_ed4[0x1305 - 0xed4];
+	/* 0x1305 */ bool showWireframe;
+	/* 0x1306 */ uchar f_1306[0x1318 - 0x1306];
+	/* 0x1318 */ bool showBoundingBox;
+	/* 0x1319 */ uchar f_1319[0x1324 - 0x1319];
+	/* 0x1324 */ D3DXVECTOR3 unkn_1324;
+	/* 0x1330 */ D3DXVECTOR3 unkn_1330;
+	/* 0x133c */ bool enableFrustum;
+	/* 0x133d */ bool unk_113d;
 	/* 0x133e */ bool unk_113e;
-	/* 0x133f */ uchar f_133f[0x16a0 - 0x133f];
-	/* 0x16a0 */ bool rendering;
-	/* 0x16a1 */ uchar f_16a1[0x2658 - 0x16a1];
+	/* 0x133f */ uchar f_133f[0x1388 - 0x133f];
+	/* 0x1388 */ D3DXMATRIX translationMatrix;
+	/* 0x13c8 */ D3DXMATRIX scaleMatrix;
+	/* 0x1408 */ D3DXMATRIX computationMatrix;
+	/* 0x1448 */ D3DXMATRIX unkn_1448;
+	/* 0x1488 */ uchar f_1488[0x1688 - 0x1488];
+	/* 0x1688 */ D3DXVECTOR3 translationBoundingBox;
+	/* 0x1694 */ D3DXVECTOR3 scaleBoundingBox;
+	/* 0x16a0 */ bool enableRendering;
+	/* 0x16a1 */ bool enablePortalRendering;
+	/* 0x16a2 */ uchar f_16a2[0x17a8 - 0x16a2];
+	/* 0x17a8 */ D3DXVECTOR3 unkn_17a8;
+	/* 0x17b4 */ D3DXVECTOR3 unkn_17b4;
+	/* 0x17c0 */ uchar f_17c0[0x1930 - 0x17c0];
+	/* 0x1930 */ D3DXMATRIX worldMat;
+	/* 0x1970 */ uchar f_1970[0x1a04 - 0x1970];
+	/* 0x1a04 */ D3DXMATRIX rotateMatrix;
+	/* 0x1a44 */ uchar f_1a44[0x1e9c - 0x1a44];
+	/* 0x1e9c */ IStudioMesh* studioMesh;
+	/* 0x1ea0 */ cStaticMesh* staticMesh;
+	/* 0x1ea4 */ uchar f_1ea4[0x2658 - 0x1ea4];
 };
 
 STATIC_ASSERT(sizeof(cMagMeshObject) == 0x2658);

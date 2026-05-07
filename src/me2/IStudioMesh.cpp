@@ -103,7 +103,7 @@ void IStudioMesh::EnableMorph(bool param_1) {
 }
 
 /* 1005DAA0-1005E05D 005BD	*/
-void IStudioMesh::UpdateAnimation() {
+void IStudioMesh::UpdateAnimation(D3DXMATRIX param_1) {
 }
 
 /* 1005E060-1005E410 003B0	*/
@@ -175,7 +175,7 @@ void IStudioMesh::SetLightPosition(D3DXVECTOR3 param_1) {
 }
 
 /* 1005EB30-1005EE5E 0032E	*/
-void IStudioMesh::ComputeBoundingBox(uchar param_1, uchar param_2) {
+void IStudioMesh::ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2) {
 }
 
 /* 1005EE60-1005EEC3 00063	*/

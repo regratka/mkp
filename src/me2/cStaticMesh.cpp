@@ -66,7 +66,7 @@ bool cStaticMesh::Create() {
 }
 
 /* 10040C40-10040C79 00039	*/
-void cStaticMesh::ComputeBoundingBox(uchar param_1, uchar param_2) {
+void cStaticMesh::ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2) {
 }
 
 /* 10040C80-10040FF6 00376	*/

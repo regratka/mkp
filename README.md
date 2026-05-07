@@ -29,3 +29,4 @@ Setup:
 * msvc 6.6
 * directX 8.1
 * directShow samples
+* cg toolkit < 1.5
