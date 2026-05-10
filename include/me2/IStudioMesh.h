@@ -49,7 +49,7 @@ public:
 	/* 1005EAF0 */ int GetFaceCount();
 	/* 1005EB10 */ void SetLightPosition(D3DXVECTOR3 param_1);
 	/* 1005EB30 */ void ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2);
-	/* 1005EE60 */ bool GetBoneMatrix(char* param_1, uchar param_2, uchar param_3);
+	/* 1005EE60 */ bool GetBoneMatrix(char* param_1, D3DXMATRIX& param_2, D3DXMATRIX& param_3);
 	/* 1005EED0 */ void EnableAnimKeys(bool param_1);
 	/* 1005EEF0 */ void SetMeshType(int param_1);
 	/* 1005EF10 */ void GetPerfCounter(_LARGE_INTEGER* param_1);

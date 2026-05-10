@@ -179,7 +179,7 @@ void IStudioMesh::ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2)
 }
 
 /* 1005EE60-1005EEC3 00063	*/
-bool IStudioMesh::GetBoneMatrix(char* param_1, uchar param_2, uchar param_3) {
+bool IStudioMesh::GetBoneMatrix(char* param_1, D3DXMATRIX& param_2, D3DXMATRIX& param_3) {
 	return 0;
 }
 

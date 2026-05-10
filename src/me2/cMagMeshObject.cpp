@@ -325,7 +325,7 @@ D3DXVECTOR3 cMagMeshObject::GetDirection() {
 }
 
 /* 100562A0-100562C7 00027	*/
-void cMagMeshObject::GetDirection(float* param_1, float* param_2, float* param_3) {
+void cMagMeshObject::GetDirection(float& param_1, float& param_2, float& param_3) {
 }
 
 /* 100562D0-1005633B 0006B	*/
@@ -345,8 +345,8 @@ void cMagMeshObject::SetGravityAcceleration(float param_1) {
 /* 100563C0-100563DD 0001D	*/
 float cMagMeshObject::GetGravityAcceleration() {
 	cMagMeshObject* source = this;
-	while(source->unkn_1b54 != NULL) {
-		source = source->unkn_1b54;
+	while(source->slideObject != NULL) {
+		source = source->slideObject;
 	}
 	return source->gravityAcceleration;
 }
@@ -366,7 +366,7 @@ void cMagMeshObject::SetSpeedDirection(D3DXVECTOR3 param_1) {
 
 /* 100564B0-100564D1 00021	*/
 D3DXVECTOR3 cMagMeshObject::GetSpeedDirection() {
-	return 0;
+	return speedDirection;
 }
 
 /* 100564E0-100564FD 0001D	*/
@@ -382,13 +382,8 @@ D3DXVECTOR3 cMagMeshObject::GetFallSpeed() {
 /* 10056530-10056586 00056	*/
 void cMagMeshObject::SetDestinationPos(D3DXVECTOR3 param_1, float param_2) {
 	ClearDestinationPos();
-	D3DXVECTOR3* destPos = new D3DXVECTOR3;
-	if (destPos != NULL) {
-		*destPos = param_1;
-		destinationPos = destPos;
-	} else {
-		destinationPos = NULL;
-	}
+	D3DXVECTOR3* destPos = new D3DXVECTOR3(param_1);
+	destinationPos = destPos;
 	unkn_19c8 = param_2;
 }
 
@@ -401,33 +396,52 @@ void cMagMeshObject::ClearDestinationPos() {
 }
 
 /* 100565C0-10056622 00062	*/
-void cMagMeshObject::SetDestinationDir(uint param_1, uint param_2, uint param_3) {
+void cMagMeshObject::SetDestinationDir(D3DXVECTOR3 param_1, int param_2) {
+	ClearDestinationDir();
+	D3DXVECTOR3* destDir = new D3DXVECTOR3(param_1);
+	destinationDir = destDir;
+	if (!unk_1fe1) {
+		destDir->y = 0.0f;
+	}
+	D3DXVec3Normalize(destinationDir, destinationDir);
+	unk_d5c = param_2;
+
 }
 
 /* 10056630-10056652 00022	*/
 void cMagMeshObject::ClearDestinationDir() {
+	if (destinationDir != NULL) {
+		delete destinationDir;
+		destinationDir = NULL;
+	}
 }
 
 /* 10056660-1005666D 0000D	*/
 void cMagMeshObject::SetMaxAngSpeed(float param_1) {
+	maxAngSpeed = param_1;
 }
 
 /* 10056670-10056677 00007	*/
 float cMagMeshObject::GetMaxAngSpeed() {
-	return 0;
+	return maxAngSpeed;
 }
 
 /* 10056680-100566CE 0004E	*/
 void cMagMeshObject::Rotate(float param_1, float param_2, float param_3) {
+	float x,y,z;
+	GetDirection(x, y, z);
+	SetDirection(x + param_1, y + param_2, z + param_3);
 }
 
 /* 100566D0-100566ED 0001D	*/
-void cMagMeshObject::SetAngSpeed(uint param_1, uint param_2, uint param_3) {
+void cMagMeshObject::SetAngSpeed(D3DXVECTOR3 param_1) {
+	angSpeed = param_1;
+
 }
 
 /* 100566F0-10056711 00021	*/
-uchar cMagMeshObject::GetAngSpeed(uint* param_1) {
-	return 0;
+D3DXVECTOR3 cMagMeshObject::GetAngSpeed() {
+	return angSpeed;
 }
 
 /* 10056720-10056772 00052	*/
@@ -436,25 +450,36 @@ bool cMagMeshObject::RestrictFrameRate(float param_1) {
 }
 
 /* 10056780-1005679A 0001A	*/
-uchar cMagMeshObject::GetSpace(uint* param_1) {
-	return 0;
+D3DXMATRIX cMagMeshObject::GetSpace() {
+	return space;
 }
 
 /* 100567A0-1005699F 001FF	*/
-void cMagMeshObject::Rotate(uchar param_1, uchar param_2, uchar param_3, uint param_4) {
+void cMagMeshObject::Rotate(D3DXVECTOR3 param_1, float param_2) {
 }
 
 /* 100569A0-100569AD 0000D	*/
 void cMagMeshObject::EnableTestDistance(bool param_1) {
+	enableTestDistance = param_1;
 }
 
 /* 100569B0-10056B6B 001BB	*/
-uchar cMagMeshObject::GetBoneWorldPosition(uint* param_1, char* param_2) {
-	return 0;
+D3DXVECTOR3 cMagMeshObject::GetBoneWorldPosition(char* param_1) {
+	if (studioMesh == NULL) {
+		return 0;
+	}
+	D3DXMATRIX matrix1;
+	D3DXMatrixIdentity(&matrix1);
+	D3DXMATRIX matrix2;
+	D3DXMatrixIdentity(&matrix2);
+	studioMesh->GetBoneMatrix(param_1, matrix1, matrix2);
+	D3DXMATRIX out;
+	D3DXMatrixMultiply(&out, &matrix1, &unkn_1448);
+	return D3DXVECTOR3(out(3,0), out(3,1), out(3,2));
 }
 
 /* 10056B70-10056CF1 00181	*/
-bool cMagMeshObject::GetBoneMatrix(char* param_1, uchar param_2) {
+bool cMagMeshObject::GetBoneMatrix(char* param_1, D3DXMATRIX& param_2) {
 	return 0;
 }
 
@@ -477,27 +502,27 @@ void cMagMeshObject::UnLinkFromBone(cMagMeshObject* param_1) {
 
 /* 100572A0-100572A7 00007	*/
 bool cMagMeshObject::GetPhysics() {
-	return 0;
+	return physics;
 }
 
 /* 100572B0-100572B7 00007	*/
 bool cMagMeshObject::GetCollision() {
-	return 0;
+	return collision;
 }
 
 /* 100572C0-100572C7 00007	*/
 bool cMagMeshObject::GetCollisionScene() {
-	return 0;
+	return collisionScene;
 }
 
 /* 100572D0-100572D7 00007	*/
 bool cMagMeshObject::GetCollisionObjects() {
-	return 0;
+	return collisionObjects;
 }
 
 /* 100572E0-100572E7 00007	*/
 uchar cMagMeshObject::GetCollisionType() {
-	return 0;
+	return collisionType;
 }
 
 /* 100572F0-10057376 00086	*/
@@ -510,23 +535,31 @@ void cMagMeshObject::EnableCollision(bool param_1) {
 
 /* 10057410-1005741D 0000D	*/
 void cMagMeshObject::EnableCollisionScene(bool param_1) {
+	collisionScene = param_1;
 }
 
 /* 10057420-1005742D 0000D	*/
 void cMagMeshObject::EnableCollisionObjects(bool param_1) {
+	collisionObjects = param_1;
 }
 
 /* 10057430-1005743D 0000D	*/
 void cMagMeshObject::SetCollisionType(uchar param_1) {
+	collisionType = param_1;
 }
 
 /* 10057440-1005744D 0000D	*/
 void cMagMeshObject::SetSlideAngle(float param_1) {
+	slideAngle = param_1;
 }
 
 /* 10057450-1005746D 0001D	*/
 float cMagMeshObject::GetSlideAngle() {
-	return 0;
+	cMagMeshObject* source = this;
+	while(source->slideObject != NULL) {
+		source = source->slideObject;
+	}
+	return source->slideAngle;
 }
 
 /* 10057470-100574DE 0006E	*/
@@ -536,11 +569,12 @@ D3DXMATRIX* cMagMeshObject::GetTransformMatrix(D3DXMATRIX* param_1) {
 
 /* 100574E0-100574ED 0000D	*/
 void cMagMeshObject::SetSlideObject(cMagMeshObject* param_1) {
+	slideObject = param_1;
 }
 
 /* 100574F0-100574F7 00007	*/
 cMagMeshObject* cMagMeshObject::GetSlideObject() {
-	return 0;
+	return slideObject;
 }
 
 /* 10057500-1005755C 0005C	*/
@@ -553,7 +587,7 @@ void cMagMeshObject::Detach() {
 
 /* 100575D0-100575D7 00007	*/
 cMagMeshObject* cMagMeshObject::GetParent() {
-	return 0;
+	return parent;
 }
 
 /* 100575E0-10057601 00021	*/
