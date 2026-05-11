@@ -6,8 +6,16 @@
 #include "cMagUtility.h"
 #include "IStudioMesh.h"
 #include "cStaticMesh.h"
+#include "CPath.h"
+#include "cVideoPlayer.h"
+#include "cMp3Player.h"
 
 class __declspec(dllexport) cMagMeshObject : public cMagUtility {
+public:
+	struct PatrolPoint {
+		/* 0x00 */ uchar f_00[0x18];
+	};
+
 public:
 	/* 10007A10-10007A17 00007	*/ 
 	char* GetFileMeshName() {
@@ -148,7 +156,7 @@ public:
 	/* 10057500 */ void AttachTo(cMagMeshObject* param_1);
 	/* 10057560 */ void Detach();
 	/* 100575D0 */ cMagMeshObject* GetParent();
-	/* 100575E0 */ uchar GetRotate(uint* param_1);
+	/* 100575E0 */ D3DXVECTOR3 GetRotate();
 	/* 10057610 */ void LinkTo(cMagMeshObject* param_1);
 	/* 10057650 */ void UnLink();
 	/* 10057690 */ cMagMeshObject* GetLinkParent();
@@ -164,7 +172,7 @@ public:
 	/* 10057850 */ bool InitPathBMP(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10057900 */ bool OnPath(D3DXVECTOR3 param_1);
 	/* 10057930 */ void SetPathBMPMinMax(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
-	/* 10057970 */ void GetPathBMPMinMax(D3DXVECTOR3* param_1, D3DXVECTOR3* param_2);
+	/* 10057970 */ void GetPathBMPMinMax(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2);
 	/* 10057990 */ D3DXVECTOR3* GetPosPathBMP(D3DXVECTOR3* param_1);
 	/* 10057A40 */ void CreatePathBillboard();
 	/* 10057BC0 */ void DisableCollideClass(char* param_1);
@@ -172,7 +180,7 @@ public:
 	/* 10057C00 */ void SetOnlyCollidingClass(char* param_1);
 	/* 10057C30 */ char* GetOnlyCollidingClass();
 	/* 10057C40 */ uchar LinearSpeedFromAngSpeed(uint* param_1);
-	/* 10057EB0 */ uchar GetPatrolPointAt(int param_1);
+	/* 10057EB0 */ cMagMeshObject::PatrolPoint const * GetPatrolPointAt(int param_1);
 	/* 10057F00 */ void DeletePatrols();
 	/* 10057F90 */ int GetPatrolPointsCount();
 	/* 10057FC0 */ bool LoadVideo(char* param_1);
@@ -199,15 +207,15 @@ public:
 	/* 10058D90 */ void MatrixToEuler(float param_1);
 	/* 10058E90 */ void RepairEuler(bool param_1);
 	/* 10058EA0 */ bool EnableRendering();
-	/* 10058EB0 */ void OnAttachChild(cMagMeshObject* param_1);
-	/* 10058F30 */ void OnDetachChild(cMagMeshObject* param_1);
-	/* 10058FC0 */ void SetDestRotation(uint param_1, uint param_2, uint param_3);
+	/* 10058EB0 */ virtual void OnAttachChild(cMagMeshObject* param_1);
+	/* 10058F30 */ virtual void OnDetachChild(cMagMeshObject* param_1);
+	/* 10058FC0 */ void SetDestRotation(D3DXVECTOR3 param_1);
 	/* 10059010 */ void ClearDestRotation();
-	/* 10059040 */ void SetRotationAngSpeed(uint param_1, uint param_2, uint param_3);
+	/* 10059040 */ void SetRotationAngSpeed(D3DXVECTOR3 param_1);
 	/* 10059060 */ void SetMotionDirection(float param_1);
-	/* 10059280 */ uchar GetRotationAngSpeed(uint* param_1);
-	/* 100592B0 */ void SetMotionRotationAngSpeed(uint param_1, uint param_2, uint param_3);
-	/* 100592D0 */ uchar GetMotionRotationAngSpeed(uint* param_1);
+	/* 10059280 */ D3DXVECTOR3 GetRotationAngSpeed();
+	/* 100592B0 */ void SetMotionRotationAngSpeed(D3DXVECTOR3 param_1);
+	/* 100592D0 */ D3DXVECTOR3 GetMotionRotationAngSpeed();
 	/* 10059300 */ void PauseMovableTreeCollision(bool param_1);
 	/* 10059330 */ long SetStaticMeshAlpha(int param_1);
 	/* 10059350 */ bool SetMultiple(float param_1);
@@ -314,19 +322,27 @@ public:
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
 
 public:
-	/* 0xd4c */ uchar f_d4c[0xd5c - 0xd4c];
+	/* 0xd4c */ uchar f_d4c[0xd52 - 0xd4c];
+	/* 0xd54 */ bool enableFrustumPhysicsPause;
+	/* 0xd54 */ float outsideViewPhysicsActivityRangePow;
+	/* 0xd58 */ float outsideViewPhysicsActivityRange;
 	/* 0xd5c */ int unk_d5c;
 	/* 0xd60 */ char fileMeshName[255];
-	/* 0xe5f */ uchar f_e5f[0xebc - 0xe5f];
+	/* 0xe60 */ std::vector<PatrolPoint> patrolPoints;
+	/* 0xe70 */ CPath path;
 	/* 0xebc */ D3DXVECTOR3 speedDirection;
-	/* 0xec8 */ uchar f_ec8[0xed0 - 0xec8];
+	/* 0xec8 */ bool pauseUpdatePhysics;
+	/* 0xec9 */ uchar collAction;
+	/* 0xeca */ uchar f_eca[0xed0 - 0xeca];
 	/* 0xed0 */ bool enableTestSector;
 	/* 0xed1 */ bool unk_ed1;
 	/* 0xed2 */ bool unk_ed2;
 	/* 0xed3 */ bool statusRemoveObject;
 	/* 0xed4 */ uchar f_ed4[0x12d0 - 0xed4];
 	/* 0x12d0 */ bool enableTestDistance;
-	/* 0x12d1 */ uchar f_12d1[0x1305 - 0x12d1];
+	/* 0x12d1 */ uchar f_12d1[0x12e8 - 0x12d1];
+	/* 0x12e8 */ cMagMeshObject* linkParent;
+	/* 0x12ec */ uchar f_12ec[0x1305 - 0x12ec];
 	/* 0x1305 */ bool showWireframe;
 	/* 0x1306 */ uchar f_1306[0x1318 - 0x1306];
 	/* 0x1318 */ bool showBoundingBox;
@@ -346,7 +362,18 @@ public:
 	/* 0x1694 */ D3DXVECTOR3 scaleBoundingBox;
 	/* 0x16a0 */ bool enableRendering;
 	/* 0x16a1 */ bool enablePortalRendering;
-	/* 0x16a2 */ uchar f_16a2[0x17a8 - 0x16a2];
+	/* 0x16a4 */ float safeWayMaxYDifference;
+	/* 0x16a8 */ uchar wayType;
+	/* 0x16a9 */ char onlyCollidingClass[100];
+	/* 0x170d */ char disabledCollideClass[100];
+	/* 0x1771 */ uchar f_1771[0x1778 - 0x1771];
+	/* 0x1778 */ cVideoPlayer* videoPlayer;
+	/* 0x177c */ uchar f_177c[0x1780 - 0x177c];
+	/* 0x1780 */ cMp3Player* mp3Player;
+	/* 0x1784 */ uchar f_1784[0x179c - 0x1784];
+	/* 0x179c */ int unk_179c;
+	/* 0x17a0 */ bool enableCallHandlerOnPlaySoundEnd;
+	/* 0x17a4 */ cMagKernel* handlerOnPlaySoundEnd;
 	/* 0x17a8 */ D3DXVECTOR3 unkn_17a8;
 	/* 0x17b4 */ D3DXVECTOR3 unkn_17b4;
 	/* 0x17c0 */ uchar f_17c0[0x1930 - 0x17c0];
@@ -376,11 +403,34 @@ public:
 	/* 0x1b58 */ uchar f_1b58[0x1e9c - 0x1b58];
 	/* 0x1e9c */ IStudioMesh* studioMesh;
 	/* 0x1ea0 */ cStaticMesh* staticMesh;
-	/* 0x1ea4 */ uchar f_1ea4[0x1fe1 - 0x1ea4];
-	/* 0x1fe1 */ bool unk_1fe1;
+	/* 0x1ea4 */ uchar f_1ea4[0x1ec0 - 0x1ea4];
+	/* 0x1ec0 */ int cullMode;
+	/* 0x1ec4 */ ulong unk_1ec4;
+	/* 0x1ec8 */ ulong unk_1ec8;
+	/* 0x1ecc */ uchar f_1ecc[0x1edc - 0x1ecc];
+	/* 0x1edc */ bool playWaterAnim;
+	/* 0x1edd */ bool enableWaterEffect;
+	/* 0x1ede */ bool unk_1ede;
+	/* 0x1ee0 */ float scaleTile;
+	/* 0x1ee4 */ uchar f_1ee4[0x1ef0 - 0x1ee4];
+	/* 0x1ef0 */ float fps;
+	/* 0x1ef4 */ uchar f_1ef4[0x1ef5 - 0x1ef4];
+	/* 0x1ef5 */ bool enableRiverEffect;
+	/* 0x1ef6 */ bool moveWater;
+	/* 0x1ef8 */ float fpsMove;
+	/* 0x1efc */ float velocityAnimMove;
+	/* 0x1f00 */ D3DXVECTOR3* destRotation;
+	/* 0x1f04 */ D3DXVECTOR3 rotationAngSpeed;
+	/* 0x1f10 */ D3DXVECTOR3 motionRotationAngSpeed;
+	/* 0x1f1c */ uchar f_1f1c[0x1fe0 - 0x1f1c];
+	/* 0x1fe0 */ bool freeRotationMatrix;
+	/* 0x1fe1 */ bool freeDestinationDir;
 	/* 0x1fe2 */ uchar f_1fe2[0x22d4 - 0x1fe2];
 	/* 0x22d4 */ int shadowType;
 	/* 0x22d8 */ uchar f_22d8[0x2658 - 0x22d8];
+
+public:
+	/* 1018C598 */ static bool m_bRepairEuler;
 };
 
 STATIC_ASSERT(sizeof(cMagMeshObject) == 0x2658);

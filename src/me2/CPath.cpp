@@ -29,7 +29,7 @@ bool CPath::InnerOnPath(float param_1, uint param_2, uchar param_3, uint param_4
 }
 
 /* 100BC000-100BC0CB 000CB	*/
-uchar CPath::Init(cMagMeshObject* param_1, char* param_2, D3DXVECTOR3 param_3, D3DXVECTOR3 param_4) {
+bool CPath::Init(cMagMeshObject* param_1, char* param_2, D3DXVECTOR3 param_3, D3DXVECTOR3 param_4) {
 	return 0;
 }
 
@@ -43,6 +43,6 @@ void CPath::SetBMPMinMax(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
 }
 
 /* 100BC200-100BC233 00033	*/
-void CPath::GetBMPMinMax(D3DXVECTOR3* param_1, D3DXVECTOR3* param_2) {
+void CPath::GetBMPMinMax(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2) {
 }
 

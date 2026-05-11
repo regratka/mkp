@@ -17,6 +17,11 @@ public:
 	/* 10088ce0 */ void SetVolume(long param_1);
 	/* 10088d50 */ void Rewind();
 	/* 10088da0 */ bool boCompleted();
+
+private:
+	/* 0x04 */ uchar f_04[0xd64 - 0x04];
 };
+
+STATIC_ASSERT(sizeof(cVideoPlayer) == 0xd64);
 
 #endif
