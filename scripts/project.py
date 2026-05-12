@@ -1,5 +1,7 @@
 from enum import Enum
 
+from pathlib import Path
+
 class FunctionType(Enum):
     STATIC = 1,
     THIS = 2,
@@ -62,5 +64,21 @@ class Function:
 
         return func
     
+class DecompUnit:
+    def __init__(self, progress_category: str, directory_name: str, import_filename: str):
+        self.progress_category = progress_category
+        self.directory_name = directory_name
+        self.target_file_name = import_filename
+
+        self.configPath = Path("config") / self.directory_name
+        self.buildOrig = Path("build") / "orig" / self.directory_name
+        self.buildSrc = Path("build") / "Src" / self.directory_name
+        self.includePath = Path("include") / self.directory_name
+        self.srcPath = Path("src") / self.directory_name
+        self.filePath = Path("orig") / self.target_file_name
+        from helpers import load_mappings, load_units, load_completed
+        self.units = load_units(str(self.configPath/"units_listing.csv"))
+        self.mappings = load_mappings(str(self.configPath/"mapping.csv"))
+        self.completed = load_completed(str(self.configPath/"completed.csv"))
     
         

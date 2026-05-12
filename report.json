@@ -1,17 +1,17 @@
 {
   "measures": {
-    "fuzzy_match_percent": 18.98522,
-    "total_code": "512160",
-    "matched_code": "53464",
-    "matched_code_percent": 10.438925,
+    "fuzzy_match_percent": 19.024796,
+    "total_code": "513257",
+    "matched_code": "53703",
+    "matched_code_percent": 10.463179,
     "matched_data_percent": 100.0,
-    "total_functions": 2198,
-    "matched_functions": 548,
-    "matched_functions_percent": 24.931755,
+    "total_functions": 2201,
+    "matched_functions": 559,
+    "matched_functions_percent": 25.397545,
     "complete_code": "7437",
-    "complete_code_percent": 1.4520853,
+    "complete_code_percent": 1.4489818,
     "complete_data_percent": 100.0,
-    "total_units": 110,
+    "total_units": 111,
     "complete_units": 3
   },
   "units": [
@@ -48,11 +48,11 @@
           "address": "0"
         },
         {
-          "name": "??0CAlphaObject@@QAE@HPAVcMagMeshObject@@@Z",
+          "name": "??0CAlphaObject@@QAE@PAVcStaticSurface@@PAVcMagMeshObject@@@Z",
           "size": "40",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: __thiscall CAlphaObject::CAlphaObject(int, class cMagMeshObject *)"
+            "demangled_name": "public: __thiscall CAlphaObject::CAlphaObject(class cStaticSurface *, class cMagMeshObject *)"
           },
           "address": "30"
         },
@@ -75,7 +75,11 @@
           "address": "81"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CBaseColObject",
@@ -107,7 +111,11 @@
           "address": "9"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CCPUTicker",
@@ -291,7 +299,11 @@
           "address": "1969"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CCamera",
@@ -578,7 +590,11 @@
           "address": "3507"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CClassParameter",
@@ -622,7 +638,11 @@
           "address": "83"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CClassPrototype",
@@ -678,7 +698,11 @@
           "address": "303"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CClientServer",
@@ -863,7 +887,11 @@
           "address": "2280"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CClientServerPlayer",
@@ -907,7 +935,11 @@
           "address": "211"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CColFaceTree",
@@ -939,7 +971,11 @@
           "address": "277"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CColTreeNode",
@@ -983,7 +1019,11 @@
           "address": "320"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CCollisionCamera",
@@ -1243,7 +1283,11 @@
           "address": "4900"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CDirectXFont",
@@ -1395,7 +1439,11 @@
           "address": "2950"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CDynObjCol",
@@ -1427,7 +1475,11 @@
           "address": "400"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CDynObjTree",
@@ -1465,7 +1517,11 @@
           "address": "728"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CExtendedParameterLoader",
@@ -1515,7 +1571,11 @@
           "address": "1339"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CFreeCamera",
@@ -1644,7 +1704,11 @@
           "address": "1882"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CGame",
@@ -2416,7 +2480,11 @@
           "address": "30468"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CJVMData",
@@ -2699,7 +2767,11 @@
           "address": "11501"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CLensFlare",
@@ -2950,7 +3022,11 @@
           "address": "9034"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CLensFlareSpot",
@@ -3092,7 +3168,11 @@
           "address": "977"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CLevel",
@@ -3219,7 +3299,11 @@
           "address": "1110"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CLevelsManager",
@@ -3245,7 +3329,11 @@
           "address": "0"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CMagnumEngine",
@@ -3288,7 +3376,11 @@
           "address": "5"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CMemoryManager",
@@ -3422,7 +3514,11 @@
           "address": "2568"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "COctree",
@@ -3595,7 +3691,11 @@
           "address": "5534"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticle",
@@ -3681,7 +3781,11 @@
           "address": "1816"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEmitter",
@@ -4063,7 +4167,11 @@
           "address": "14730"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEmitterToken",
@@ -4277,7 +4385,11 @@
           "address": "6135"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEmitterTokenizer",
@@ -4411,7 +4523,11 @@
           "address": "8006"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent",
@@ -4562,7 +4678,11 @@
           "address": "1109"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEventSequence",
@@ -5039,7 +5159,11 @@
           "address": "7823"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_Alpha",
@@ -5140,7 +5264,11 @@
           "address": "1115"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_BlueColor",
@@ -5209,7 +5337,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_Color",
@@ -5302,7 +5434,11 @@
           "address": "1168"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_EventTimer",
@@ -5387,7 +5523,11 @@
           "address": "797"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_GreenColor",
@@ -5456,7 +5596,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_RedColor",
@@ -5525,7 +5669,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_Size",
@@ -5594,7 +5742,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_Velocity",
@@ -5687,7 +5839,11 @@
           "address": "1154"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_VelocityX",
@@ -5756,7 +5912,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_VelocityY",
@@ -5825,7 +5985,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CParticleEvent_VelocityZ",
@@ -5894,7 +6058,11 @@
           "address": "770"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CPath",
@@ -5974,7 +6142,11 @@
           "address": "1160"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CPhysics",
@@ -6000,7 +6172,11 @@
           "address": "0"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CPhysicsMotorboat",
@@ -6211,7 +6387,11 @@
           "address": "4473"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CRay",
@@ -6384,7 +6564,11 @@
           "address": "1744"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CRect",
@@ -6415,7 +6599,11 @@
           "address": "0"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CSimpleLine",
@@ -6673,7 +6861,11 @@
           "address": "7076"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CSplineCamera",
@@ -7017,7 +7209,11 @@
           "address": "8747"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CSplineControlPoint",
@@ -7064,7 +7260,11 @@
           "address": "23"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CState",
@@ -7143,7 +7343,11 @@
           "address": "725"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CTrack",
@@ -7220,7 +7424,11 @@
           "address": "2418"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CTrackData",
@@ -7246,7 +7454,11 @@
           "address": "0"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CUSTOMVERTEXM",
@@ -7289,7 +7501,11 @@
           "address": "3"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "ColObject",
@@ -7327,7 +7543,11 @@
           "address": "377"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "Collision",
@@ -7401,12 +7621,16 @@
           "address": "244"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "IStudioMesh",
       "measures": {
-        "fuzzy_match_percent": 1.4487295,
+        "fuzzy_match_percent": 1.6848279,
         "total_code": "9445",
         "matched_data_percent": 100.0,
         "total_functions": 46,
@@ -7417,7 +7641,7 @@
         {
           "name": ".text",
           "size": "9445",
-          "fuzzy_match_percent": 1.4487295,
+          "fuzzy_match_percent": 1.6848279,
           "metadata": {}
         }
       ],
@@ -7447,7 +7671,7 @@
         {
           "name": "??0IStudioMesh@@QAE@XZ",
           "size": "323",
-          "fuzzy_match_percent": 1.7948718,
+          "fuzzy_match_percent": 2.9358974,
           "metadata": {
             "demangled_name": "public: __thiscall IStudioMesh::IStudioMesh(void)"
           },
@@ -7456,6 +7680,7 @@
         {
           "name": "??1IStudioMesh@@UAE@XZ",
           "size": "295",
+          "fuzzy_match_percent": 2.1764705,
           "metadata": {
             "demangled_name": "public: virtual __thiscall IStudioMesh::~IStudioMesh(void)"
           },
@@ -7632,6 +7857,7 @@
         {
           "name": "?UpdateAnimation@IStudioMesh@@QAEXUD3DXMATRIX@@@Z",
           "size": "1469",
+          "fuzzy_match_percent": 0.2631579,
           "metadata": {
             "demangled_name": "public: void __thiscall IStudioMesh::UpdateAnimation(struct D3DXMATRIX)"
           },
@@ -7784,6 +8010,7 @@
         {
           "name": "?ComputeBoundingBox@IStudioMesh@@QAEXAAUD3DXVECTOR3@@0@Z",
           "size": "814",
+          "fuzzy_match_percent": 0.41493776,
           "metadata": {
             "demangled_name": "public: void __thiscall IStudioMesh::ComputeBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
           },
@@ -7792,6 +8019,7 @@
         {
           "name": "?GetBoneMatrix@IStudioMesh@@QAE_NPADAAUD3DXMATRIX@@1@Z",
           "size": "99",
+          "fuzzy_match_percent": 5.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall IStudioMesh::GetBoneMatrix(char *, struct D3DXMATRIX &, struct D3DXMATRIX &)"
           },
@@ -7824,7 +8052,11 @@
           "address": "9401"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "KTeksturyVideoDirectX",
@@ -7911,7 +8143,11 @@
           "address": "1827"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagAnimMeshMgr",
@@ -7960,7 +8196,11 @@
           "address": "133"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagGrid",
@@ -8073,7 +8313,11 @@
           "address": "1278"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagProfile",
@@ -8242,7 +8486,11 @@
           "address": "5449"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagRelayMachine",
@@ -8344,7 +8592,10 @@
         }
       ],
       "metadata": {
-        "complete": true
+        "complete": true,
+        "progress_categories": [
+          "Engine"
+        ]
       }
     },
     {
@@ -8530,7 +8781,11 @@
           "address": "1516"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagTerrain",
@@ -8842,7 +9097,11 @@
           "address": "4757"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagTextureMgr",
@@ -9106,7 +9365,11 @@
           "address": "7867"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "MagnumMesh",
@@ -9751,7 +10014,11 @@
           "address": "38267"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "Mesh",
@@ -9807,7 +10074,11 @@
           "address": "2292"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "VERTEX",
@@ -9854,7 +10125,11 @@
           "address": "40"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cBlob",
@@ -10024,7 +10299,11 @@
           "address": "4849"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cFX_Shockwave",
@@ -10185,7 +10464,11 @@
           "address": "2122"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cGlow",
@@ -10315,7 +10598,11 @@
           "address": "1887"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagAudio",
@@ -10394,7 +10681,11 @@
           "address": "300"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagBillboard",
@@ -10737,7 +11028,11 @@
           "address": "5832"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagCamera",
@@ -10888,7 +11183,11 @@
           "address": "1613"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagEngineMgr",
@@ -11019,7 +11318,11 @@
           "address": "251"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagFog",
@@ -11162,7 +11465,11 @@
           "address": "1162"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagFrustumCull",
@@ -11341,7 +11648,11 @@
           "address": "10887"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagFx",
@@ -11470,7 +11781,10 @@
         }
       ],
       "metadata": {
-        "complete": true
+        "complete": true,
+        "progress_categories": [
+          "Engine"
+        ]
       }
     },
     {
@@ -12789,7 +13103,11 @@
           "address": "32309"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagInput",
@@ -12868,7 +13186,11 @@
           "address": "645"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagKernel",
@@ -13623,7 +13945,11 @@
           "address": "5746"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagLight",
@@ -13725,7 +14051,10 @@
         }
       ],
       "metadata": {
-        "complete": true
+        "complete": true,
+        "progress_categories": [
+          "Engine"
+        ]
       }
     },
     {
@@ -13839,7 +14168,11 @@
           "address": "2149"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagLog",
@@ -13982,7 +14315,11 @@
           "address": "1132"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagMeshMgr",
@@ -14089,27 +14426,31 @@
           "address": "2705"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 15.927831,
-        "total_code": "51828",
-        "matched_code": "3364",
-        "matched_code_percent": 6.4907,
+        "fuzzy_match_percent": 16.644825,
+        "total_code": "51915",
+        "matched_code": "3603",
+        "matched_code_percent": 6.9401903,
         "matched_data_percent": 100.0,
-        "total_functions": 271,
-        "matched_functions": 122,
-        "matched_functions_percent": 45.018448,
+        "total_functions": 272,
+        "matched_functions": 133,
+        "matched_functions_percent": 48.897057,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "51828",
-          "fuzzy_match_percent": 15.927831,
+          "size": "51915",
+          "fuzzy_match_percent": 16.644825,
           "metadata": {}
         }
       ],
@@ -14189,7 +14530,7 @@
         {
           "name": "??0cMagMeshObject@@QAE@ABV0@@Z",
           "size": "4759",
-          "fuzzy_match_percent": 37.162746,
+          "fuzzy_match_percent": 39.906868,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(class cMagMeshObject const &)"
           },
@@ -14198,11 +14539,17 @@
         {
           "name": "??4cMagMeshObject@@QAEAAV0@ABV0@@Z",
           "size": "6831",
-          "fuzzy_match_percent": 29.259037,
+          "fuzzy_match_percent": 29.674698,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject & __thiscall cMagMeshObject::operator=(class cMagMeshObject const &)"
           },
           "address": "4864"
+        },
+        {
+          "name": "cMagMeshObject::scalar_destructor",
+          "size": "87",
+          "metadata": {},
+          "address": "11695"
         },
         {
           "name": "??0cMagMeshObject@@QAE@XZ",
@@ -14211,7 +14558,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(void)"
           },
-          "address": "11695"
+          "address": "11782"
         },
         {
           "name": "??1cMagMeshObject@@UAE@XZ",
@@ -14220,7 +14567,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagMeshObject::~cMagMeshObject(void)"
           },
-          "address": "15691"
+          "address": "15778"
         },
         {
           "name": "?Is3dmFile@cMagMeshObject@@QAEHPAD@Z",
@@ -14229,7 +14576,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::Is3dmFile(char *)"
           },
-          "address": "16445"
+          "address": "16532"
         },
         {
           "name": "?LoadMesh@cMagMeshObject@@QAEXPAD@Z",
@@ -14238,7 +14585,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::LoadMesh(char *)"
           },
-          "address": "17176"
+          "address": "17263"
         },
         {
           "name": "?SetPosition@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14247,7 +14594,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetPosition(struct D3DXVECTOR3)"
           },
-          "address": "18559"
+          "address": "18646"
         },
         {
           "name": "?SetScale@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14256,7 +14603,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetScale(struct D3DXVECTOR3)"
           },
-          "address": "18692"
+          "address": "18779"
         },
         {
           "name": "?GetPosition@cMagMeshObject@@UAE?AUD3DXVECTOR3@@XZ",
@@ -14265,7 +14612,7 @@
           "metadata": {
             "demangled_name": "public: virtual struct D3DXVECTOR3 __thiscall cMagMeshObject::GetPosition(void)"
           },
-          "address": "18825"
+          "address": "18912"
         },
         {
           "name": "?GetScale@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -14274,7 +14621,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetScale(void)"
           },
-          "address": "18890"
+          "address": "18977"
         },
         {
           "name": "?GetRotateMatrix@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
@@ -14283,7 +14630,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetRotateMatrix(void)"
           },
-          "address": "18923"
+          "address": "19010"
         },
         {
           "name": "?SetRotateMatrix@cMagMeshObject@@QAEXUD3DXMATRIX@@@Z",
@@ -14292,7 +14639,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetRotateMatrix(struct D3DXMATRIX)"
           },
-          "address": "18949"
+          "address": "19036"
         },
         {
           "name": "?GetFrameCount@cMagMeshObject@@QAEHXZ",
@@ -14301,7 +14648,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::GetFrameCount(void)"
           },
-          "address": "18973"
+          "address": "19060"
         },
         {
           "name": "?InitAnimSeq@cMagMeshObject@@QAE_NPADHH@Z",
@@ -14310,7 +14657,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::InitAnimSeq(char *, int, int)"
           },
-          "address": "18991"
+          "address": "19078"
         },
         {
           "name": "?InitAnimSeq@cMagMeshObject@@QAE_NPAD0HHH0@Z",
@@ -14319,7 +14666,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::InitAnimSeq(char *, char *, int, int, int, char *)"
           },
-          "address": "19031"
+          "address": "19118"
         },
         {
           "name": "?DeleteAnimSeq@cMagMeshObject@@QAEXPAD@Z",
@@ -14328,7 +14675,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DeleteAnimSeq(char *)"
           },
-          "address": "19036"
+          "address": "19123"
         },
         {
           "name": "?DeleteAllAnimSeq@cMagMeshObject@@QAEXXZ",
@@ -14337,7 +14684,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DeleteAllAnimSeq(void)"
           },
-          "address": "19059"
+          "address": "19146"
         },
         {
           "name": "?PlayAnimSeq@cMagMeshObject@@QAEXHH@Z",
@@ -14346,7 +14693,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PlayAnimSeq(int, int)"
           },
-          "address": "19075"
+          "address": "19162"
         },
         {
           "name": "?SetAnimFreq@cMagMeshObject@@QAEXPADH@Z",
@@ -14355,7 +14702,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimFreq(char *, int)"
           },
-          "address": "19116"
+          "address": "19203"
         },
         {
           "name": "?IsPlaying@cMagMeshObject@@QAE_NPAD@Z",
@@ -14364,7 +14711,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::IsPlaying(char *)"
           },
-          "address": "19147"
+          "address": "19234"
         },
         {
           "name": "?StopAnim@cMagMeshObject@@QAEXPAD@Z",
@@ -14373,7 +14720,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::StopAnim(char *)"
           },
-          "address": "19175"
+          "address": "19262"
         },
         {
           "name": "?PlayAnim@cMagMeshObject@@QAE_NPADH@Z",
@@ -14382,7 +14729,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::PlayAnim(char *, int)"
           },
-          "address": "19202"
+          "address": "19289"
         },
         {
           "name": "?EnableAnimKeys@cMagMeshObject@@QAEX_N@Z",
@@ -14391,7 +14738,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimKeys(bool)"
           },
-          "address": "19237"
+          "address": "19324"
         },
         {
           "name": "?SetMeshType@cMagMeshObject@@QAEXH@Z",
@@ -14400,7 +14747,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMeshType(int)"
           },
-          "address": "19260"
+          "address": "19347"
         },
         {
           "name": "?PlayAnim@cMagMeshObject@@QAE_NPAD@Z",
@@ -14409,7 +14756,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::PlayAnim(char *)"
           },
-          "address": "19283"
+          "address": "19370"
         },
         {
           "name": "?InitAnimSeq@cMagMeshObject@@QAE_NPAD@Z",
@@ -14418,7 +14765,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::InitAnimSeq(char *)"
           },
-          "address": "19308"
+          "address": "19395"
         },
         {
           "name": "?FrameRate@cMagMeshObject@@QAEHXZ",
@@ -14427,7 +14774,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::FrameRate(void)"
           },
-          "address": "19313"
+          "address": "19400"
         },
         {
           "name": "?OnAnimEnd1@cMagMeshObject@@QAEXPAD@Z",
@@ -14436,7 +14783,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::OnAnimEnd1(char *)"
           },
-          "address": "19471"
+          "address": "19558"
         },
         {
           "name": "?OnPlayAnim@cMagMeshObject@@QAE_NXZ",
@@ -14445,7 +14792,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::OnPlayAnim(void)"
           },
-          "address": "19484"
+          "address": "19571"
         },
         {
           "name": "?SetAnimMorphTime@cMagMeshObject@@QAEXM@Z",
@@ -14454,7 +14801,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimMorphTime(float)"
           },
-          "address": "19531"
+          "address": "19618"
         },
         {
           "name": "?SetStepMorph@cMagMeshObject@@QAEXM@Z",
@@ -14463,7 +14810,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetStepMorph(float)"
           },
-          "address": "19554"
+          "address": "19641"
         },
         {
           "name": "?EnableMorph@cMagMeshObject@@QAEX_N@Z",
@@ -14472,7 +14819,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableMorph(bool)"
           },
-          "address": "19577"
+          "address": "19664"
         },
         {
           "name": "?AnimFrameMeter@cMagMeshObject@@QAEXPADH@Z",
@@ -14481,7 +14828,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AnimFrameMeter(char *, int)"
           },
-          "address": "19600"
+          "address": "19687"
         },
         {
           "name": "?RenderMesh@cMagMeshObject@@QAEXXZ",
@@ -14490,7 +14837,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderMesh(void)"
           },
-          "address": "19618"
+          "address": "19705"
         },
         {
           "name": "?DrawLine@cMagMeshObject@@QAEXMMMM@Z",
@@ -14499,7 +14846,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DrawLine(float, float, float, float)"
           },
-          "address": "20722"
+          "address": "20809"
         },
         {
           "name": "?InitBoundingBox@cMagMeshObject@@QAEXXZ",
@@ -14508,7 +14855,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::InitBoundingBox(void)"
           },
-          "address": "20979"
+          "address": "21066"
         },
         {
           "name": "?ShowBoundingBox@cMagMeshObject@@QAEX_N@Z",
@@ -14517,7 +14864,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ShowBoundingBox(bool)"
           },
-          "address": "21059"
+          "address": "21146"
         },
         {
           "name": "?CorrectTranslationBoundingBox@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14526,7 +14873,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CorrectTranslationBoundingBox(struct D3DXVECTOR3)"
           },
-          "address": "21072"
+          "address": "21159"
         },
         {
           "name": "?CorrectScaleBoundingBox@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14535,7 +14882,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CorrectScaleBoundingBox(struct D3DXVECTOR3)"
           },
-          "address": "21101"
+          "address": "21188"
         },
         {
           "name": "?_TestDistance@cMagMeshObject@@QAE_NM@Z",
@@ -14544,7 +14891,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::_TestDistance(float)"
           },
-          "address": "21205"
+          "address": "21292"
         },
         {
           "name": "?TestDistance@cMagMeshObject@@QAE_NM@Z",
@@ -14553,7 +14900,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::TestDistance(float)"
           },
-          "address": "22811"
+          "address": "22898"
         },
         {
           "name": "?EnableTestSector@cMagMeshObject@@QAEX_N@Z",
@@ -14562,7 +14909,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableTestSector(bool)"
           },
-          "address": "22824"
+          "address": "22911"
         },
         {
           "name": "?OnUpdate_@cMagMeshObject@@UAEXXZ",
@@ -14571,7 +14918,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::OnUpdate_(void)"
           },
-          "address": "22837"
+          "address": "22924"
         },
         {
           "name": "?OnRender@cMagMeshObject@@UAEXXZ",
@@ -14580,7 +14927,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::OnRender(void)"
           },
-          "address": "23712"
+          "address": "23799"
         },
         {
           "name": "?OnRenderShadow@cMagMeshObject@@UAEXXZ",
@@ -14589,7 +14936,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::OnRenderShadow(void)"
           },
-          "address": "25307"
+          "address": "25394"
         },
         {
           "name": "?SetShadowType@cMagMeshObject@@QAEXH@Z",
@@ -14598,7 +14945,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetShadowType(int)"
           },
-          "address": "25432"
+          "address": "25519"
         },
         {
           "name": "?GetShadowType@cMagMeshObject@@UAEHXZ",
@@ -14606,7 +14953,7 @@
           "metadata": {
             "demangled_name": "public: virtual int __thiscall cMagMeshObject::GetShadowType(void)"
           },
-          "address": "25487"
+          "address": "25574"
         },
         {
           "name": "?GetEngine@cMagMeshObject@@QAEPAVcMagGameObject@@XZ",
@@ -14615,7 +14962,7 @@
           "metadata": {
             "demangled_name": "public: class cMagGameObject * __thiscall cMagMeshObject::GetEngine(void)"
           },
-          "address": "25494"
+          "address": "25581"
         },
         {
           "name": "?SetDirection@cMagMeshObject@@QAEXMMM@Z",
@@ -14624,7 +14971,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDirection(float, float, float)"
           },
-          "address": "25502"
+          "address": "25589"
         },
         {
           "name": "?SetDirection@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14633,7 +14980,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDirection(struct D3DXVECTOR3)"
           },
-          "address": "26890"
+          "address": "26977"
         },
         {
           "name": "?GetDirection@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -14642,7 +14989,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetDirection(void)"
           },
-          "address": "28417"
+          "address": "28504"
         },
         {
           "name": "?GetDirection@cMagMeshObject@@QAEXAAM00@Z",
@@ -14651,7 +14998,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::GetDirection(float &, float &, float &)"
           },
-          "address": "28450"
+          "address": "28537"
         },
         {
           "name": "?SetSpeed@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14659,7 +15006,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetSpeed(struct D3DXVECTOR3)"
           },
-          "address": "28489"
+          "address": "28576"
         },
         {
           "name": "?GetSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -14667,7 +15014,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetSpeed(void)"
           },
-          "address": "28596"
+          "address": "28683"
         },
         {
           "name": "?SetGravityAcceleration@cMagMeshObject@@QAEXM@Z",
@@ -14676,7 +15023,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetGravityAcceleration(float)"
           },
-          "address": "28702"
+          "address": "28789"
         },
         {
           "name": "?GetGravityAcceleration@cMagMeshObject@@QAEMXZ",
@@ -14685,7 +15032,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetGravityAcceleration(void)"
           },
-          "address": "28715"
+          "address": "28802"
         },
         {
           "name": "?SetSpeedValue@cMagMeshObject@@QAEXM@Z",
@@ -14694,7 +15041,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetSpeedValue(float)"
           },
-          "address": "28744"
+          "address": "28831"
         },
         {
           "name": "?GetSpeedValue@cMagMeshObject@@QAEMXZ",
@@ -14703,7 +15050,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetSpeedValue(void)"
           },
-          "address": "28831"
+          "address": "28918"
         },
         {
           "name": "?SetSpeedDirection@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14712,7 +15059,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetSpeedDirection(struct D3DXVECTOR3)"
           },
-          "address": "28838"
+          "address": "28925"
         },
         {
           "name": "?GetSpeedDirection@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -14721,7 +15068,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetSpeedDirection(void)"
           },
-          "address": "28927"
+          "address": "29014"
         },
         {
           "name": "?Jump@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14730,7 +15077,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::Jump(struct D3DXVECTOR3)"
           },
-          "address": "28960"
+          "address": "29047"
         },
         {
           "name": "?GetFallSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -14739,7 +15086,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetFallSpeed(void)"
           },
-          "address": "28989"
+          "address": "29076"
         },
         {
           "name": "?SetDestinationPos@cMagMeshObject@@QAEXUD3DXVECTOR3@@M@Z",
@@ -14748,7 +15095,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDestinationPos(struct D3DXVECTOR3, float)"
           },
-          "address": "29022"
+          "address": "29109"
         },
         {
           "name": "?ClearDestinationPos@cMagMeshObject@@QAEXXZ",
@@ -14757,7 +15104,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ClearDestinationPos(void)"
           },
-          "address": "29108"
+          "address": "29195"
         },
         {
           "name": "?SetDestinationDir@cMagMeshObject@@QAEXUD3DXVECTOR3@@H@Z",
@@ -14766,7 +15113,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDestinationDir(struct D3DXVECTOR3, int)"
           },
-          "address": "29142"
+          "address": "29229"
         },
         {
           "name": "?ClearDestinationDir@cMagMeshObject@@QAEXXZ",
@@ -14775,7 +15122,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ClearDestinationDir(void)"
           },
-          "address": "29240"
+          "address": "29327"
         },
         {
           "name": "?SetMaxAngSpeed@cMagMeshObject@@QAEXM@Z",
@@ -14784,7 +15131,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMaxAngSpeed(float)"
           },
-          "address": "29274"
+          "address": "29361"
         },
         {
           "name": "?GetMaxAngSpeed@cMagMeshObject@@QAEMXZ",
@@ -14793,7 +15140,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetMaxAngSpeed(void)"
           },
-          "address": "29287"
+          "address": "29374"
         },
         {
           "name": "?Rotate@cMagMeshObject@@QAEXMMM@Z",
@@ -14802,7 +15149,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::Rotate(float, float, float)"
           },
-          "address": "29294"
+          "address": "29381"
         },
         {
           "name": "?SetAngSpeed@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -14811,7 +15158,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAngSpeed(struct D3DXVECTOR3)"
           },
-          "address": "29372"
+          "address": "29459"
         },
         {
           "name": "?GetAngSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -14820,7 +15167,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetAngSpeed(void)"
           },
-          "address": "29401"
+          "address": "29488"
         },
         {
           "name": "?RestrictFrameRate@cMagMeshObject@@QAE_NM@Z",
@@ -14829,7 +15176,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::RestrictFrameRate(float)"
           },
-          "address": "29434"
+          "address": "29521"
         },
         {
           "name": "?GetSpace@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
@@ -14838,7 +15185,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetSpace(void)"
           },
-          "address": "29516"
+          "address": "29603"
         },
         {
           "name": "?Rotate@cMagMeshObject@@QAEXUD3DXVECTOR3@@M@Z",
@@ -14847,7 +15194,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::Rotate(struct D3DXVECTOR3, float)"
           },
-          "address": "29542"
+          "address": "29629"
         },
         {
           "name": "?EnableTestDistance@cMagMeshObject@@QAEX_N@Z",
@@ -14856,7 +15203,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableTestDistance(bool)"
           },
-          "address": "30053"
+          "address": "30140"
         },
         {
           "name": "?GetBoneWorldPosition@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAD@Z",
@@ -14865,7 +15212,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetBoneWorldPosition(char *)"
           },
-          "address": "30066"
+          "address": "30153"
         },
         {
           "name": "?GetBoneMatrix@cMagMeshObject@@QAE_NPADAAUD3DXMATRIX@@@Z",
@@ -14874,7 +15221,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetBoneMatrix(char *, struct D3DXMATRIX &)"
           },
-          "address": "30509"
+          "address": "30596"
         },
         {
           "name": "?GetBoneWorldRotateMatrix@cMagMeshObject@@QAE?AUD3DXMATRIX@@PAD@Z",
@@ -14882,7 +15229,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetBoneWorldRotateMatrix(char *)"
           },
-          "address": "30894"
+          "address": "30981"
         },
         {
           "name": "?OnUpdateLink@cMagMeshObject@@QAEXXZ",
@@ -14891,7 +15238,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::OnUpdateLink(void)"
           },
-          "address": "31052"
+          "address": "31139"
         },
         {
           "name": "?LinkToBone@cMagMeshObject@@QAEXPAV1@PAD@Z",
@@ -14900,7 +15247,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::LinkToBone(class cMagMeshObject *, char *)"
           },
-          "address": "31335"
+          "address": "31422"
         },
         {
           "name": "?UnLinkFromBone@cMagMeshObject@@QAEXPAV1@@Z",
@@ -14909,7 +15256,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::UnLinkFromBone(class cMagMeshObject *)"
           },
-          "address": "31978"
+          "address": "32065"
         },
         {
           "name": "?GetPhysics@cMagMeshObject@@QAE_NXZ",
@@ -14918,7 +15265,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetPhysics(void)"
           },
-          "address": "32308"
+          "address": "32395"
         },
         {
           "name": "?GetCollision@cMagMeshObject@@QAE_NXZ",
@@ -14927,7 +15274,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetCollision(void)"
           },
-          "address": "32315"
+          "address": "32402"
         },
         {
           "name": "?GetCollisionScene@cMagMeshObject@@QAE_NXZ",
@@ -14936,7 +15283,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetCollisionScene(void)"
           },
-          "address": "32322"
+          "address": "32409"
         },
         {
           "name": "?GetCollisionObjects@cMagMeshObject@@QAE_NXZ",
@@ -14945,7 +15292,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetCollisionObjects(void)"
           },
-          "address": "32329"
+          "address": "32416"
         },
         {
           "name": "?GetCollisionType@cMagMeshObject@@QAEEXZ",
@@ -14954,7 +15301,7 @@
           "metadata": {
             "demangled_name": "public: unsigned char __thiscall cMagMeshObject::GetCollisionType(void)"
           },
-          "address": "32336"
+          "address": "32423"
         },
         {
           "name": "?EnablePhysics@cMagMeshObject@@QAEX_N@Z",
@@ -14963,7 +15310,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnablePhysics(bool)"
           },
-          "address": "32343"
+          "address": "32430"
         },
         {
           "name": "?EnableCollision@cMagMeshObject@@QAEX_N@Z",
@@ -14972,7 +15319,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableCollision(bool)"
           },
-          "address": "32477"
+          "address": "32564"
         },
         {
           "name": "?EnableCollisionScene@cMagMeshObject@@QAEX_N@Z",
@@ -14981,7 +15328,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableCollisionScene(bool)"
           },
-          "address": "32611"
+          "address": "32698"
         },
         {
           "name": "?EnableCollisionObjects@cMagMeshObject@@QAEX_N@Z",
@@ -14990,7 +15337,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableCollisionObjects(bool)"
           },
-          "address": "32624"
+          "address": "32711"
         },
         {
           "name": "?SetCollisionType@cMagMeshObject@@QAEXE@Z",
@@ -14999,7 +15346,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetCollisionType(unsigned char)"
           },
-          "address": "32637"
+          "address": "32724"
         },
         {
           "name": "?SetSlideAngle@cMagMeshObject@@QAEXM@Z",
@@ -15008,7 +15355,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetSlideAngle(float)"
           },
-          "address": "32650"
+          "address": "32737"
         },
         {
           "name": "?GetSlideAngle@cMagMeshObject@@QAEMXZ",
@@ -15017,7 +15364,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetSlideAngle(void)"
           },
-          "address": "32663"
+          "address": "32750"
         },
         {
           "name": "?GetVolatileWorldMat@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
@@ -15025,7 +15372,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetVolatileWorldMat(void)"
           },
-          "address": "32692"
+          "address": "32779"
         },
         {
           "name": "?SetSlideObject@cMagMeshObject@@QAEXPAV1@@Z",
@@ -15034,7 +15381,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetSlideObject(class cMagMeshObject *)"
           },
-          "address": "32802"
+          "address": "32889"
         },
         {
           "name": "?GetSlideObject@cMagMeshObject@@QAEPAV1@XZ",
@@ -15043,7 +15390,7 @@
           "metadata": {
             "demangled_name": "public: class cMagMeshObject * __thiscall cMagMeshObject::GetSlideObject(void)"
           },
-          "address": "32815"
+          "address": "32902"
         },
         {
           "name": "?AttachTo@cMagMeshObject@@QAEXPAV1@@Z",
@@ -15052,7 +15399,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AttachTo(class cMagMeshObject *)"
           },
-          "address": "32822"
+          "address": "32909"
         },
         {
           "name": "?Detach@cMagMeshObject@@QAEXXZ",
@@ -15061,7 +15408,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::Detach(void)"
           },
-          "address": "32914"
+          "address": "33001"
         },
         {
           "name": "?GetParent@cMagMeshObject@@QAEPAV1@XZ",
@@ -15070,7 +15417,7 @@
           "metadata": {
             "demangled_name": "public: class cMagMeshObject * __thiscall cMagMeshObject::GetParent(void)"
           },
-          "address": "33014"
+          "address": "33101"
         },
         {
           "name": "?GetRotate@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -15079,7 +15426,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetRotate(void)"
           },
-          "address": "33021"
+          "address": "33108"
         },
         {
           "name": "?LinkTo@cMagMeshObject@@QAEXPAV1@@Z",
@@ -15088,7 +15435,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::LinkTo(class cMagMeshObject *)"
           },
-          "address": "33054"
+          "address": "33141"
         },
         {
           "name": "?UnLink@cMagMeshObject@@QAEXXZ",
@@ -15097,7 +15444,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::UnLink(void)"
           },
-          "address": "33105"
+          "address": "33192"
         },
         {
           "name": "?GetLinkParent@cMagMeshObject@@QAEPAV1@XZ",
@@ -15106,7 +15453,7 @@
           "metadata": {
             "demangled_name": "public: class cMagMeshObject * __thiscall cMagMeshObject::GetLinkParent(void)"
           },
-          "address": "33164"
+          "address": "33251"
         },
         {
           "name": "?SetCollAction@cMagMeshObject@@QAEXE@Z",
@@ -15115,7 +15462,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetCollAction(unsigned char)"
           },
-          "address": "33171"
+          "address": "33258"
         },
         {
           "name": "?GetCollAction@cMagMeshObject@@QAEEXZ",
@@ -15124,7 +15471,7 @@
           "metadata": {
             "demangled_name": "public: unsigned char __thiscall cMagMeshObject::GetCollAction(void)"
           },
-          "address": "33184"
+          "address": "33271"
         },
         {
           "name": "?SetPauseUpdatePhysics@cMagMeshObject@@QAEX_N@Z",
@@ -15133,7 +15480,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetPauseUpdatePhysics(bool)"
           },
-          "address": "33191"
+          "address": "33278"
         },
         {
           "name": "?GetPauseUpdatePhysics@cMagMeshObject@@QAE_NXZ",
@@ -15142,7 +15489,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetPauseUpdatePhysics(void)"
           },
-          "address": "33259"
+          "address": "33346"
         },
         {
           "name": "?CalculateSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAV1@@Z",
@@ -15150,7 +15497,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::CalculateSpeed(class cMagMeshObject *)"
           },
-          "address": "33266"
+          "address": "33353"
         },
         {
           "name": "?SetWayType@cMagMeshObject@@QAEXE@Z",
@@ -15159,7 +15506,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetWayType(unsigned char)"
           },
-          "address": "33498"
+          "address": "33585"
         },
         {
           "name": "?GetWayType@cMagMeshObject@@QAEEXZ",
@@ -15168,7 +15515,7 @@
           "metadata": {
             "demangled_name": "public: unsigned char __thiscall cMagMeshObject::GetWayType(void)"
           },
-          "address": "33511"
+          "address": "33598"
         },
         {
           "name": "?SetSafeWayMaxYDifference@cMagMeshObject@@QAEXM@Z",
@@ -15177,7 +15524,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetSafeWayMaxYDifference(float)"
           },
-          "address": "33518"
+          "address": "33605"
         },
         {
           "name": "?GetSafeWayMaxYDifference@cMagMeshObject@@QAEMXZ",
@@ -15186,7 +15533,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetSafeWayMaxYDifference(void)"
           },
-          "address": "33531"
+          "address": "33618"
         },
         {
           "name": "?InitPathBMP@cMagMeshObject@@QAE_NUD3DXVECTOR3@@0@Z",
@@ -15195,7 +15542,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::InitPathBMP(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "33538"
+          "address": "33625"
         },
         {
           "name": "?OnPath@cMagMeshObject@@QAE_NUD3DXVECTOR3@@@Z",
@@ -15204,7 +15551,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::OnPath(struct D3DXVECTOR3)"
           },
-          "address": "33712"
+          "address": "33799"
         },
         {
           "name": "?SetPathBMPMinMax@cMagMeshObject@@QAEXUD3DXVECTOR3@@0@Z",
@@ -15213,7 +15560,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetPathBMPMinMax(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "33751"
+          "address": "33838"
         },
         {
           "name": "?GetPathBMPMinMax@cMagMeshObject@@QAEXAAUD3DXVECTOR3@@0@Z",
@@ -15222,7 +15569,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::GetPathBMPMinMax(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
           },
-          "address": "33815"
+          "address": "33902"
         },
         {
           "name": "?GetPosPathBMP@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -15230,7 +15577,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetPosPathBMP(void)"
           },
-          "address": "33839"
+          "address": "33926"
         },
         {
           "name": "?CreatePathBillboard@cMagMeshObject@@QAEXXZ",
@@ -15239,7 +15586,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CreatePathBillboard(void)"
           },
-          "address": "34009"
+          "address": "34096"
         },
         {
           "name": "?DisableCollideClass@cMagMeshObject@@QAEXPAD@Z",
@@ -15248,7 +15595,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DisableCollideClass(char *)"
           },
-          "address": "34389"
+          "address": "34476"
         },
         {
           "name": "?GetDisabledCollideClass@cMagMeshObject@@QAEPADXZ",
@@ -15257,7 +15604,7 @@
           "metadata": {
             "demangled_name": "public: char * __thiscall cMagMeshObject::GetDisabledCollideClass(void)"
           },
-          "address": "34435"
+          "address": "34522"
         },
         {
           "name": "?SetOnlyCollidingClass@cMagMeshObject@@QAEXPAD@Z",
@@ -15266,7 +15613,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetOnlyCollidingClass(char *)"
           },
-          "address": "34442"
+          "address": "34529"
         },
         {
           "name": "?GetOnlyCollidingClass@cMagMeshObject@@QAEPADXZ",
@@ -15275,7 +15622,7 @@
           "metadata": {
             "demangled_name": "public: char * __thiscall cMagMeshObject::GetOnlyCollidingClass(void)"
           },
-          "address": "34488"
+          "address": "34575"
         },
         {
           "name": "?LinearSpeedFromAngSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAV1@@Z",
@@ -15283,7 +15630,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::LinearSpeedFromAngSpeed(class cMagMeshObject *)"
           },
-          "address": "34495"
+          "address": "34582"
         },
         {
           "name": "?GetPatrolPointAt@cMagMeshObject@@QAEPBUPatrolPoint@1@H@Z",
@@ -15292,7 +15639,7 @@
           "metadata": {
             "demangled_name": "public: struct cMagMeshObject::PatrolPoint const * __thiscall cMagMeshObject::GetPatrolPointAt(int)"
           },
-          "address": "35108"
+          "address": "35195"
         },
         {
           "name": "?DeletePatrols@cMagMeshObject@@QAEXXZ",
@@ -15301,7 +15648,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DeletePatrols(void)"
           },
-          "address": "35180"
+          "address": "35267"
         },
         {
           "name": "?GetPatrolPointsCount@cMagMeshObject@@QAEHXZ",
@@ -15310,7 +15657,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::GetPatrolPointsCount(void)"
           },
-          "address": "35315"
+          "address": "35402"
         },
         {
           "name": "?LoadVideo@cMagMeshObject@@QAE_NPAD@Z",
@@ -15319,7 +15666,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::LoadVideo(char *)"
           },
-          "address": "35354"
+          "address": "35441"
         },
         {
           "name": "?PlayVideo@cMagMeshObject@@QAEXXZ",
@@ -15328,7 +15675,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PlayVideo(void)"
           },
-          "address": "35473"
+          "address": "35560"
         },
         {
           "name": "?LoadMp3Sound@cMagMeshObject@@QAE_NPAD@Z",
@@ -15337,7 +15684,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::LoadMp3Sound(char *)"
           },
-          "address": "35499"
+          "address": "35586"
         },
         {
           "name": "?SetMp3Volume@cMagMeshObject@@QAEXM@Z",
@@ -15346,7 +15693,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMp3Volume(float)"
           },
-          "address": "35784"
+          "address": "35871"
         },
         {
           "name": "?PlayMp3Sound@cMagMeshObject@@QAEXXZ",
@@ -15355,7 +15702,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PlayMp3Sound(void)"
           },
-          "address": "35817"
+          "address": "35904"
         },
         {
           "name": "?StopMp3Sound@cMagMeshObject@@QAEXXZ",
@@ -15364,7 +15711,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::StopMp3Sound(void)"
           },
-          "address": "35843"
+          "address": "35930"
         },
         {
           "name": "?IsPlayingMp3Sound@cMagMeshObject@@QAE_NXZ",
@@ -15373,7 +15720,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::IsPlayingMp3Sound(void)"
           },
-          "address": "35869"
+          "address": "35956"
         },
         {
           "name": "?IsEndMp3Sound@cMagMeshObject@@QAE_NXZ",
@@ -15382,7 +15729,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::IsEndMp3Sound(void)"
           },
-          "address": "35907"
+          "address": "35994"
         },
         {
           "name": "?RewindMp3Sound@cMagMeshObject@@QAEXXZ",
@@ -15391,7 +15738,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RewindMp3Sound(void)"
           },
-          "address": "35935"
+          "address": "36022"
         },
         {
           "name": "?LoadSound@cMagMeshObject@@QAEHPAD@Z",
@@ -15400,7 +15747,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::LoadSound(char *)"
           },
-          "address": "35961"
+          "address": "36048"
         },
         {
           "name": "?PlaySoundA@cMagMeshObject@@QAEXH_N@Z",
@@ -15409,7 +15756,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PlaySoundA(int, bool)"
           },
-          "address": "36997"
+          "address": "37084"
         },
         {
           "name": "?EnableCallHandlerOnPlaySoundEnd@cMagMeshObject@@QAEXH@Z",
@@ -15418,7 +15765,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableCallHandlerOnPlaySoundEnd(int)"
           },
-          "address": "37159"
+          "address": "37246"
         },
         {
           "name": "?EnableCallHandlerOnPlaySoundEnd@cMagMeshObject@@QAEXHPAVcMagKernel@@@Z",
@@ -15427,7 +15774,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableCallHandlerOnPlaySoundEnd(int, class cMagKernel *)"
           },
-          "address": "37179"
+          "address": "37266"
         },
         {
           "name": "?StopSound@cMagMeshObject@@QAEXH@Z",
@@ -15436,7 +15783,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::StopSound(int)"
           },
-          "address": "37209"
+          "address": "37296"
         },
         {
           "name": "?IsPlaying@cMagMeshObject@@QAE_NH@Z",
@@ -15445,7 +15792,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::IsPlaying(int)"
           },
-          "address": "37353"
+          "address": "37440"
         },
         {
           "name": "?SetVolume@cMagMeshObject@@QAEXHM@Z",
@@ -15454,7 +15801,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetVolume(int, float)"
           },
-          "address": "37466"
+          "address": "37553"
         },
         {
           "name": "?SetFrequency@cMagMeshObject@@QAEXHH@Z",
@@ -15463,7 +15810,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetFrequency(int, int)"
           },
-          "address": "37672"
+          "address": "37759"
         },
         {
           "name": "?ResetFrequency@cMagMeshObject@@QAEXH@Z",
@@ -15472,7 +15819,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ResetFrequency(int)"
           },
-          "address": "37784"
+          "address": "37871"
         },
         {
           "name": "?ClearSound@cMagMeshObject@@QAEXXZ",
@@ -15481,7 +15828,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ClearSound(void)"
           },
-          "address": "37893"
+          "address": "37980"
         },
         {
           "name": "?SetDefaultSoundRanges@cMagMeshObject@@QAEXHMM@Z",
@@ -15490,7 +15837,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDefaultSoundRanges(int, float, float)"
           },
-          "address": "38092"
+          "address": "38179"
         },
         {
           "name": "?TestSoundRanges@cMagMeshObject@@QAEXXZ",
@@ -15499,7 +15846,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::TestSoundRanges(void)"
           },
-          "address": "38246"
+          "address": "38333"
         },
         {
           "name": "?MatrixToEuler@cMagMeshObject@@QAEXUD3DXMATRIX@@AAM11@Z",
@@ -15507,7 +15854,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::MatrixToEuler(struct D3DXMATRIX, float &, float &, float &)"
           },
-          "address": "38661"
+          "address": "38748"
         },
         {
           "name": "?RepairEuler@cMagMeshObject@@QAEX_N@Z",
@@ -15516,7 +15863,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RepairEuler(bool)"
           },
-          "address": "38907"
+          "address": "38994"
         },
         {
           "name": "?EnableRendering@cMagMeshObject@@QAE_NXZ",
@@ -15525,7 +15872,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableRendering(void)"
           },
-          "address": "38919"
+          "address": "39006"
         },
         {
           "name": "?OnAttachChild@cMagMeshObject@@UAEXPAV1@@Z",
@@ -15534,7 +15881,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::OnAttachChild(class cMagMeshObject *)"
           },
-          "address": "38926"
+          "address": "39013"
         },
         {
           "name": "?OnDetachChild@cMagMeshObject@@UAEXPAV1@@Z",
@@ -15543,7 +15890,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::OnDetachChild(class cMagMeshObject *)"
           },
-          "address": "39051"
+          "address": "39138"
         },
         {
           "name": "?SetDestRotation@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -15552,7 +15899,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDestRotation(struct D3DXVECTOR3)"
           },
-          "address": "39184"
+          "address": "39271"
         },
         {
           "name": "?ClearDestRotation@cMagMeshObject@@QAEXXZ",
@@ -15561,7 +15908,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ClearDestRotation(void)"
           },
-          "address": "39250"
+          "address": "39337"
         },
         {
           "name": "?SetRotationAngSpeed@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -15570,7 +15917,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetRotationAngSpeed(struct D3DXVECTOR3)"
           },
-          "address": "39284"
+          "address": "39371"
         },
         {
           "name": "?SetMotionDirection@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -15578,7 +15925,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMotionDirection(struct D3DXVECTOR3)"
           },
-          "address": "39313"
+          "address": "39400"
         },
         {
           "name": "?GetRotationAngSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -15587,7 +15934,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetRotationAngSpeed(void)"
           },
-          "address": "39857"
+          "address": "39944"
         },
         {
           "name": "?SetMotionRotationAngSpeed@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -15596,7 +15943,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMotionRotationAngSpeed(struct D3DXVECTOR3)"
           },
-          "address": "39890"
+          "address": "39977"
         },
         {
           "name": "?GetMotionRotationAngSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -15605,7 +15952,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetMotionRotationAngSpeed(void)"
           },
-          "address": "39919"
+          "address": "40006"
         },
         {
           "name": "?PauseMovableTreeCollision@cMagMeshObject@@QAEX_N@Z",
@@ -15614,7 +15961,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PauseMovableTreeCollision(bool)"
           },
-          "address": "39952"
+          "address": "40039"
         },
         {
           "name": "?SetStaticMeshAlpha@cMagMeshObject@@QAEJH@Z",
@@ -15623,7 +15970,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall cMagMeshObject::SetStaticMeshAlpha(int)"
           },
-          "address": "39992"
+          "address": "40079"
         },
         {
           "name": "?SetMultiple@cMagMeshObject@@QAE_NM@Z",
@@ -15632,7 +15979,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::SetMultiple(float)"
           },
-          "address": "40014"
+          "address": "40101"
         },
         {
           "name": "?SetAlpha@cMagMeshObject@@QAEJH@Z",
@@ -15641,7 +15988,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall cMagMeshObject::SetAlpha(int)"
           },
-          "address": "40044"
+          "address": "40131"
         },
         {
           "name": "?SetAlpha@cMagMeshObject@@QAEXKK@Z",
@@ -15650,7 +15997,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAlpha(unsigned long, unsigned long)"
           },
-          "address": "40136"
+          "address": "40223"
         },
         {
           "name": "?SetColor@cMagMeshObject@@QAEJMMMM@Z",
@@ -15659,7 +16006,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall cMagMeshObject::SetColor(float, float, float, float)"
           },
-          "address": "40195"
+          "address": "40282"
         },
         {
           "name": "?SetCullMode@cMagMeshObject@@QAEXH@Z",
@@ -15668,7 +16015,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetCullMode(int)"
           },
-          "address": "40265"
+          "address": "40352"
         },
         {
           "name": "?SetAlphaGreatereQual@cMagMeshObject@@QAEXK@Z",
@@ -15677,7 +16024,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAlphaGreatereQual(unsigned long)"
           },
-          "address": "40294"
+          "address": "40381"
         },
         {
           "name": "?AddWaterTexture@cMagMeshObject@@QAEXPAD@Z",
@@ -15686,7 +16033,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AddWaterTexture(char *)"
           },
-          "address": "40313"
+          "address": "40400"
         },
         {
           "name": "?SetFps@cMagMeshObject@@QAEXM@Z",
@@ -15695,7 +16042,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetFps(float)"
           },
-          "address": "40951"
+          "address": "41038"
         },
         {
           "name": "?SetFpsMove@cMagMeshObject@@QAEXM@Z",
@@ -15704,7 +16051,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetFpsMove(float)"
           },
-          "address": "40964"
+          "address": "41051"
         },
         {
           "name": "?SetVelocityAnimMove@cMagMeshObject@@QAEXM@Z",
@@ -15713,7 +16060,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetVelocityAnimMove(float)"
           },
-          "address": "40977"
+          "address": "41064"
         },
         {
           "name": "?EnableWaterEffect@cMagMeshObject@@QAEX_N@Z",
@@ -15722,7 +16069,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableWaterEffect(bool)"
           },
-          "address": "40990"
+          "address": "41077"
         },
         {
           "name": "?PlayWaterAnim@cMagMeshObject@@QAEXXZ",
@@ -15731,7 +16078,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PlayWaterAnim(void)"
           },
-          "address": "41013"
+          "address": "41100"
         },
         {
           "name": "?StopWaterAnim@cMagMeshObject@@QAEXXZ",
@@ -15740,7 +16087,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::StopWaterAnim(void)"
           },
-          "address": "41021"
+          "address": "41108"
         },
         {
           "name": "?SetScaleTile@cMagMeshObject@@QAEXM@Z",
@@ -15749,7 +16096,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetScaleTile(float)"
           },
-          "address": "41029"
+          "address": "41116"
         },
         {
           "name": "?EnableRiverEffect@cMagMeshObject@@QAEX_N@Z",
@@ -15758,7 +16105,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableRiverEffect(bool)"
           },
-          "address": "41059"
+          "address": "41146"
         },
         {
           "name": "?SetMoveWater@cMagMeshObject@@QAEX_N@Z",
@@ -15767,7 +16114,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMoveWater(bool)"
           },
-          "address": "41072"
+          "address": "41159"
         },
         {
           "name": "?GetFreeDestinationDir@cMagMeshObject@@QAE_NXZ",
@@ -15776,7 +16123,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetFreeDestinationDir(void)"
           },
-          "address": "41085"
+          "address": "41172"
         },
         {
           "name": "?SetFreeDestinationDir@cMagMeshObject@@QAEX_N@Z",
@@ -15785,7 +16132,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetFreeDestinationDir(bool)"
           },
-          "address": "41092"
+          "address": "41179"
         },
         {
           "name": "?EnableDynamicLight@cMagMeshObject@@QAEX_N@Z",
@@ -15794,7 +16141,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableDynamicLight(bool)"
           },
-          "address": "41105"
+          "address": "41192"
         },
         {
           "name": "?SetUp@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -15802,7 +16149,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetUp(struct D3DXVECTOR3)"
           },
-          "address": "41152"
+          "address": "41239"
         },
         {
           "name": "?GetUp@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -15810,7 +16157,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetUp(void)"
           },
-          "address": "42032"
+          "address": "42119"
         },
         {
           "name": "?SetRight@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -15818,7 +16165,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetRight(struct D3DXVECTOR3)"
           },
-          "address": "42065"
+          "address": "42152"
         },
         {
           "name": "?GetRight@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -15826,7 +16173,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetRight(void)"
           },
-          "address": "42974"
+          "address": "43061"
         },
         {
           "name": "?SetFreeRotationMatrix@cMagMeshObject@@QAEX_N@Z",
@@ -15835,7 +16182,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetFreeRotationMatrix(bool)"
           },
-          "address": "43007"
+          "address": "43094"
         },
         {
           "name": "?GetFreeRotationMatrix@cMagMeshObject@@QAE_NXZ",
@@ -15844,7 +16191,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetFreeRotationMatrix(void)"
           },
-          "address": "43020"
+          "address": "43107"
         },
         {
           "name": "?SetOutsideViewPhysicsActivityRange@cMagMeshObject@@QAEXM@Z",
@@ -15853,7 +16200,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetOutsideViewPhysicsActivityRange(float)"
           },
-          "address": "43027"
+          "address": "43114"
         },
         {
           "name": "?GetOutsideViewPhysicsActivityRange@cMagMeshObject@@QAEMXZ",
@@ -15862,7 +16209,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetOutsideViewPhysicsActivityRange(void)"
           },
-          "address": "43054"
+          "address": "43141"
         },
         {
           "name": "?PhysicsActivityRange@cMagMeshObject@@QAE_NXZ",
@@ -15871,7 +16218,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::PhysicsActivityRange(void)"
           },
-          "address": "43061"
+          "address": "43148"
         },
         {
           "name": "?EnableFrustumPhysicsPause@cMagMeshObject@@QAEX_N@Z",
@@ -15880,7 +16227,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableFrustumPhysicsPause(bool)"
           },
-          "address": "43192"
+          "address": "43279"
         },
         {
           "name": "?EnableFrustumPhysicsPause@cMagMeshObject@@QAE_NXZ",
@@ -15889,16 +16236,16 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableFrustumPhysicsPause(void)"
           },
-          "address": "43205"
+          "address": "43292"
         },
         {
           "name": "?SetFrustumPhysicsPause@cMagMeshObject@@QAEX_N@Z",
           "size": "37",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetFrustumPhysicsPause(bool)"
           },
-          "address": "43212"
+          "address": "43299"
         },
         {
           "name": "?GetFrustumPhysicsPause@cMagMeshObject@@QAE_NXZ",
@@ -15906,43 +16253,43 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetFrustumPhysicsPause(void)"
           },
-          "address": "43249"
+          "address": "43336"
         },
         {
           "name": "?EnableDynamicPointLight@cMagMeshObject@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableDynamicPointLight(bool)"
           },
-          "address": "43254"
+          "address": "43341"
         },
         {
           "name": "?AddDynamicLight@cMagMeshObject@@QAEXU_D3DLIGHT8@@@Z",
           "size": "44",
-          "fuzzy_match_percent": 6.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AddDynamicLight(struct _D3DLIGHT8)"
           },
-          "address": "43267"
+          "address": "43354"
         },
         {
           "name": "?DisableDynamicLight@cMagMeshObject@@QAEXXZ",
           "size": "31",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DisableDynamicLight(void)"
           },
-          "address": "43311"
+          "address": "43398"
         },
         {
           "name": "?SetLightingObject@cMagMeshObject@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightingObject(bool)"
           },
-          "address": "43342"
+          "address": "43429"
         },
         {
           "name": "?SetAmbient@cMagMeshObject@@QAEXMMM@Z",
@@ -15951,40 +16298,43 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAmbient(float, float, float)"
           },
-          "address": "43355"
+          "address": "43442"
         },
         {
           "name": "?JumpEnabled@cMagMeshObject@@QAE_NXZ",
           "size": "20",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 48.57143,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::JumpEnabled(void)"
           },
-          "address": "43378"
+          "address": "43465"
         },
         {
           "name": "?ClassifyPoint@cMagMeshObject@@QAEHUD3DXVECTOR3@@00@Z",
           "size": "99",
+          "fuzzy_match_percent": 6.25,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::ClassifyPoint(struct D3DXVECTOR3, struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "43398"
+          "address": "43485"
         },
         {
           "name": "?GetMagnitude@cMagMeshObject@@QAEMUD3DXVECTOR3@@@Z",
           "size": "54",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetMagnitude(struct D3DXVECTOR3)"
           },
-          "address": "43497"
+          "address": "43584"
         },
         {
           "name": "?GetHelperPosition@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAD@Z",
           "size": "105",
+          "fuzzy_match_percent": 16.076923,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetHelperPosition(char *)"
           },
-          "address": "43551"
+          "address": "43638"
         },
         {
           "name": "?SetPhysicsType@cMagMeshObject@@QAEXE@Z",
@@ -15993,16 +16343,16 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetPhysicsType(unsigned char)"
           },
-          "address": "43656"
+          "address": "43743"
         },
         {
           "name": "?GetPhysicsType@cMagMeshObject@@QAEEXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: unsigned char __thiscall cMagMeshObject::GetPhysicsType(void)"
           },
-          "address": "44013"
+          "address": "44100"
         },
         {
           "name": "?TraceScene@cMagMeshObject@@QAE_NUD3DXVECTOR3@@0QAU2@PAMPAU2@@Z",
@@ -16010,25 +16360,25 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::TraceScene(struct D3DXVECTOR3, struct D3DXVECTOR3, struct D3DXVECTOR3*const, float *, struct D3DXVECTOR3*)"
           },
-          "address": "44020"
+          "address": "44107"
         },
         {
           "name": "?EnablePushing@cMagMeshObject@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnablePushing(bool)"
           },
-          "address": "44125"
+          "address": "44212"
         },
         {
           "name": "?EnablePushing@cMagMeshObject@@QAE_NXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnablePushing(void)"
           },
-          "address": "44138"
+          "address": "44225"
         },
         {
           "name": "?SetRotationMatrix@cMagMeshObject@@QAEXUD3DXMATRIX@@@Z",
@@ -16037,25 +16387,25 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetRotationMatrix(struct D3DXMATRIX)"
           },
-          "address": "44145"
+          "address": "44232"
         },
         {
           "name": "?EnableNBFacesCollision@cMagMeshObject@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableNBFacesCollision(bool)"
           },
-          "address": "44411"
+          "address": "44498"
         },
         {
           "name": "?EnableNBFacesCollision@cMagMeshObject@@QAE_NXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableNBFacesCollision(void)"
           },
-          "address": "44424"
+          "address": "44511"
         },
         {
           "name": "?ActivateLightMap@cMagMeshObject@@QAEXH@Z",
@@ -16064,7 +16414,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::ActivateLightMap(int)"
           },
-          "address": "44431"
+          "address": "44518"
         },
         {
           "name": "?SetEllipsoid@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -16072,7 +16422,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetEllipsoid(struct D3DXVECTOR3)"
           },
-          "address": "44444"
+          "address": "44531"
         },
         {
           "name": "?GetEllipsoid@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -16080,7 +16430,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetEllipsoid(void)"
           },
-          "address": "44493"
+          "address": "44580"
         },
         {
           "name": "?TraceObjects@cMagMeshObject@@QAE_NPAVCollision@@@Z",
@@ -16088,7 +16438,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::TraceObjects(class Collision *)"
           },
-          "address": "44535"
+          "address": "44622"
         },
         {
           "name": "?TraceScene@cMagMeshObject@@QAE_NPAVCollision@@@Z",
@@ -16096,7 +16446,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::TraceScene(class Collision *)"
           },
-          "address": "44580"
+          "address": "44667"
         },
         {
           "name": "?CreateMagQuad@cMagMeshObject@@QAEXXZ",
@@ -16105,7 +16455,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CreateMagQuad(void)"
           },
-          "address": "44625"
+          "address": "44712"
         },
         {
           "name": "?SetTextureMagQuad@cMagMeshObject@@QAEXPAD@Z",
@@ -16114,7 +16464,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetTextureMagQuad(char *)"
           },
-          "address": "44730"
+          "address": "44817"
         },
         {
           "name": "?RenderMagQuad@cMagMeshObject@@QAEXXZ",
@@ -16123,7 +16473,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderMagQuad(void)"
           },
-          "address": "44759"
+          "address": "44846"
         },
         {
           "name": "?SetAlphaMagQuad@cMagMeshObject@@QAEXM@Z",
@@ -16132,7 +16482,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAlphaMagQuad(float)"
           },
-          "address": "45037"
+          "address": "45124"
         },
         {
           "name": "?GetPhysicsFrameTime@cMagMeshObject@@QAEMXZ",
@@ -16141,7 +16491,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetPhysicsFrameTime(void)"
           },
-          "address": "45371"
+          "address": "45458"
         },
         {
           "name": "?GetBoundingBox@cMagMeshObject@@UAEXAAUD3DXVECTOR3@@0H@Z",
@@ -16149,7 +16499,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::GetBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&, int)"
           },
-          "address": "45389"
+          "address": "45476"
         },
         {
           "name": "?EnableAnimTexture@cMagMeshObject@@QAEX_N@Z",
@@ -16158,7 +16508,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimTexture(bool)"
           },
-          "address": "45454"
+          "address": "45541"
         },
         {
           "name": "?AddTexture@cMagMeshObject@@QAEHPAD@Z",
@@ -16167,7 +16517,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::AddTexture(char *)"
           },
-          "address": "45467"
+          "address": "45554"
         },
         {
           "name": "?SetTexture@cMagMeshObject@@QAE_NH@Z",
@@ -16176,7 +16526,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::SetTexture(int)"
           },
-          "address": "45480"
+          "address": "45567"
         },
         {
           "name": "?AddAnimTexture@cMagMeshObject@@QAEHPAD@Z",
@@ -16185,7 +16535,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::AddAnimTexture(char *)"
           },
-          "address": "45580"
+          "address": "45667"
         },
         {
           "name": "?SetAnimTextureFPS@cMagMeshObject@@QAEXH@Z",
@@ -16194,7 +16544,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimTextureFPS(int)"
           },
-          "address": "45682"
+          "address": "45769"
         },
         {
           "name": "?SetAnimTextureFrameCount@cMagMeshObject@@QAEXH@Z",
@@ -16203,7 +16553,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimTextureFrameCount(int)"
           },
-          "address": "45695"
+          "address": "45782"
         },
         {
           "name": "?RenderAnimTexture@cMagMeshObject@@QAEXXZ",
@@ -16212,7 +16562,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderAnimTexture(void)"
           },
-          "address": "45708"
+          "address": "45795"
         },
         {
           "name": "?EnableAnimTextureMove@cMagMeshObject@@QAEX_N@Z",
@@ -16221,7 +16571,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimTextureMove(bool)"
           },
-          "address": "45932"
+          "address": "46019"
         },
         {
           "name": "?EnableAttachDynObj@cMagMeshObject@@QAEX_N@Z",
@@ -16230,7 +16580,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAttachDynObj(bool)"
           },
-          "address": "45945"
+          "address": "46032"
         },
         {
           "name": "?EnableAttachDynObj@cMagMeshObject@@QAE_NXZ",
@@ -16239,7 +16589,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableAttachDynObj(void)"
           },
-          "address": "45968"
+          "address": "46055"
         },
         {
           "name": "?EnableLastParentSpeed@cMagMeshObject@@QAEX_N@Z",
@@ -16248,7 +16598,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableLastParentSpeed(bool)"
           },
-          "address": "45988"
+          "address": "46075"
         },
         {
           "name": "?EnableLastParentSpeed@cMagMeshObject@@QAE_NXZ",
@@ -16257,7 +16607,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableLastParentSpeed(void)"
           },
-          "address": "46011"
+          "address": "46098"
         },
         {
           "name": "?SetAcceleration@cMagMeshObject@@QAEXM@Z",
@@ -16266,7 +16616,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAcceleration(float)"
           },
-          "address": "46031"
+          "address": "46118"
         },
         {
           "name": "?GetAcceleration@cMagMeshObject@@QAEMXZ",
@@ -16275,7 +16625,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetAcceleration(void)"
           },
-          "address": "46044"
+          "address": "46131"
         },
         {
           "name": "?SectorRendering@cMagMeshObject@@QAE_NXZ",
@@ -16284,7 +16634,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::SectorRendering(void)"
           },
-          "address": "46051"
+          "address": "46138"
         },
         {
           "name": "?DisableTestMeshInSector@cMagMeshObject@@QAEX_N@Z",
@@ -16293,7 +16643,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DisableTestMeshInSector(bool)"
           },
-          "address": "46288"
+          "address": "46375"
         },
         {
           "name": "?PauseObject@cMagMeshObject@@QAEX_N@Z",
@@ -16302,7 +16652,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PauseObject(bool)"
           },
-          "address": "46301"
+          "address": "46388"
         },
         {
           "name": "?EnableAnimTextureLightMap@cMagMeshObject@@QAEX_N@Z",
@@ -16311,7 +16661,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimTextureLightMap(bool)"
           },
-          "address": "46370"
+          "address": "46457"
         },
         {
           "name": "?AddAnimTextureLightMap@cMagMeshObject@@QAEXPAD@Z",
@@ -16320,7 +16670,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AddAnimTextureLightMap(char *)"
           },
-          "address": "46383"
+          "address": "46470"
         },
         {
           "name": "?SetAnimTextureLightMapFPS@cMagMeshObject@@QAEXH@Z",
@@ -16329,7 +16679,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimTextureLightMapFPS(int)"
           },
-          "address": "46838"
+          "address": "46925"
         },
         {
           "name": "?AnimateLightMap@cMagMeshObject@@QAEXXZ",
@@ -16338,7 +16688,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AnimateLightMap(void)"
           },
-          "address": "46851"
+          "address": "46938"
         },
         {
           "name": "?EnableZBuffeWrite@cMagMeshObject@@QAEX_N@Z",
@@ -16347,7 +16697,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableZBuffeWrite(bool)"
           },
-          "address": "47054"
+          "address": "47141"
         },
         {
           "name": "?EnableZBuffeWrite@cMagMeshObject@@QAE_NXZ",
@@ -16356,7 +16706,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableZBuffeWrite(void)"
           },
-          "address": "47067"
+          "address": "47154"
         },
         {
           "name": "?GetFaceCount@cMagMeshObject@@QAEHXZ",
@@ -16365,7 +16715,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::GetFaceCount(void)"
           },
-          "address": "47074"
+          "address": "47161"
         },
         {
           "name": "?EnableForceTransform@cMagMeshObject@@QAEX_N@Z",
@@ -16374,7 +16724,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableForceTransform(bool)"
           },
-          "address": "47111"
+          "address": "47198"
         },
         {
           "name": "?SetForceTransformMatrix@cMagMeshObject@@QAEXUD3DXMATRIX@@@Z",
@@ -16382,7 +16732,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetForceTransformMatrix(struct D3DXMATRIX)"
           },
-          "address": "47124"
+          "address": "47211"
         },
         {
           "name": "?SetLightPosition@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -16391,7 +16741,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightPosition(struct D3DXVECTOR3)"
           },
-          "address": "47148"
+          "address": "47235"
         },
         {
           "name": "?EnableLight@cMagMeshObject@@QAEX_N@Z",
@@ -16400,7 +16750,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableLight(bool)"
           },
-          "address": "47191"
+          "address": "47278"
         },
         {
           "name": "?SetMaterialDiffuse@cMagMeshObject@@QAEXMMMM@Z",
@@ -16409,7 +16759,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMaterialDiffuse(float, float, float, float)"
           },
-          "address": "47214"
+          "address": "47301"
         },
         {
           "name": "?SetMaterialAmbient@cMagMeshObject@@QAEXMMMM@Z",
@@ -16418,7 +16768,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMaterialAmbient(float, float, float, float)"
           },
-          "address": "47252"
+          "address": "47339"
         },
         {
           "name": "?SetLightDiffuse@cMagMeshObject@@QAEXMMMM@Z",
@@ -16427,7 +16777,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightDiffuse(float, float, float, float)"
           },
-          "address": "47290"
+          "address": "47377"
         },
         {
           "name": "?SetLightAmbient@cMagMeshObject@@QAEXMMMM@Z",
@@ -16436,7 +16786,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightAmbient(float, float, float, float)"
           },
-          "address": "47328"
+          "address": "47415"
         },
         {
           "name": "?EnableRenderShadow@cMagMeshObject@@QAEX_N@Z",
@@ -16445,7 +16795,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableRenderShadow(bool)"
           },
-          "address": "47366"
+          "address": "47453"
         },
         {
           "name": "?EnableRenderShadow@cMagMeshObject@@QAE_NXZ",
@@ -16454,7 +16804,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableRenderShadow(void)"
           },
-          "address": "47389"
+          "address": "47476"
         },
         {
           "name": "?CreateBumpAndEnviromentTexture@cMagMeshObject@@QAEXXZ",
@@ -16463,7 +16813,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CreateBumpAndEnviromentTexture(void)"
           },
-          "address": "47407"
+          "address": "47494"
         },
         {
           "name": "?LoadLod@cMagMeshObject@@QAEXPAD@Z",
@@ -16472,7 +16822,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::LoadLod(char *)"
           },
-          "address": "48105"
+          "address": "48192"
         },
         {
           "name": "?_TestDistanceLOD@cMagMeshObject@@QAE_NM@Z",
@@ -16481,7 +16831,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::_TestDistanceLOD(float)"
           },
-          "address": "49137"
+          "address": "49224"
         },
         {
           "name": "?CreateNavigationPath@cMagMeshObject@@QAE_NPAD@Z",
@@ -16490,7 +16840,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::CreateNavigationPath(char *)"
           },
-          "address": "49524"
+          "address": "49611"
         },
         {
           "name": "?BuildNaviPoints@cMagMeshObject@@QAE_NUD3DXVECTOR3@@0@Z",
@@ -16498,7 +16848,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::BuildNaviPoints(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "50610"
+          "address": "50697"
         },
         {
           "name": "?GetNaviPointsCount@cMagMeshObject@@QAEHXZ",
@@ -16507,7 +16857,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::GetNaviPointsCount(void)"
           },
-          "address": "51428"
+          "address": "51515"
         },
         {
           "name": "?GetNaviPointAt@cMagMeshObject@@QAE?AUD3DXVECTOR3@@H@Z",
@@ -16515,7 +16865,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetNaviPointAt(int)"
           },
-          "address": "51466"
+          "address": "51553"
         },
         {
           "name": "?GotoRandomLocation@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -16523,10 +16873,14 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GotoRandomLocation(void)"
           },
-          "address": "51663"
+          "address": "51750"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagObjectList",
@@ -16975,7 +17329,11 @@
           "address": "10213"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagSector",
@@ -17106,7 +17464,11 @@
           "address": "2129"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagSkyBox",
@@ -17247,7 +17609,11 @@
           "address": "2920"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagSound",
@@ -17388,7 +17754,11 @@
           "address": "1160"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagSprite",
@@ -17898,7 +18268,11 @@
           "address": "14146"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagSun",
@@ -18133,7 +18507,11 @@
           "address": "4591"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagTime",
@@ -18253,7 +18631,11 @@
           "address": "517"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagUtility",
@@ -18411,7 +18793,11 @@
           "address": "2842"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMagVertex",
@@ -18490,7 +18876,11 @@
           "address": "928"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cMp3Player",
@@ -18633,7 +19023,11 @@
           "address": "692"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cPortalEngine",
@@ -18797,12 +19191,16 @@
           "address": "10050"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cStaticMesh",
       "measures": {
-        "fuzzy_match_percent": 0.40198836,
+        "fuzzy_match_percent": 0.41718978,
         "total_code": "19735",
         "matched_data_percent": 100.0,
         "total_functions": 23,
@@ -18813,7 +19211,7 @@
         {
           "name": ".text",
           "size": "19735",
-          "fuzzy_match_percent": 0.40198836,
+          "fuzzy_match_percent": 0.41718978,
           "metadata": {}
         }
       ],
@@ -18942,6 +19340,7 @@
         {
           "name": "?ComputeBoundingBox@cStaticMesh@@QAEXAAUD3DXVECTOR3@@0@Z",
           "size": "57",
+          "fuzzy_match_percent": 5.263158,
           "metadata": {
             "demangled_name": "public: void __thiscall cStaticMesh::ComputeBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
           },
@@ -19016,7 +19415,11 @@
           "address": "19722"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cStaticSurface",
@@ -19108,7 +19511,11 @@
           "address": "6863"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cTGA",
@@ -19136,7 +19543,11 @@
           "address": "0"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "cVideoPlayer",
@@ -19270,7 +19681,11 @@
           "address": "1427"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "CollisionManager",
@@ -19320,7 +19735,11 @@
           "address": "2786"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgImage",
@@ -19448,7 +19867,11 @@
           "address": "921"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgString",
@@ -19777,7 +20200,11 @@
           "address": "3167"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgTerrain",
@@ -20090,7 +20517,11 @@
           "address": "10709"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgTerrainPVS",
@@ -20195,7 +20626,11 @@
           "address": "1752"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgTerrainPatchBase",
@@ -20796,7 +21231,11 @@
           "address": "12864"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgTerrainPatchMorphHW",
@@ -20907,7 +21346,11 @@
           "address": "2339"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgTerrainPatchMorphSW",
@@ -21058,7 +21501,11 @@
           "address": "9010"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
     },
     {
       "name": "pgVec2",
@@ -21309,8 +21756,78 @@
           "address": "827"
         }
       ],
-      "metadata": {}
+      "metadata": {
+        "progress_categories": [
+          "Engine"
+        ]
+      }
+    },
+    {
+      "name": "GameSDK",
+      "measures": {
+        "total_code": "1010",
+        "matched_data_percent": 100.0,
+        "total_functions": 2,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1010",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "GameSDK::GameSDK",
+          "size": "881",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "GameSDK::~GameSDK",
+          "size": "129",
+          "metadata": {},
+          "address": "881"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
     }
   ],
-  "version": 2
+  "version": 2,
+  "categories": [
+    {
+      "id": "Engine",
+      "measures": {
+        "fuzzy_match_percent": 19.062305,
+        "total_code": "512247",
+        "matched_code": "53703",
+        "matched_code_percent": 10.483809,
+        "matched_data_percent": 100.0,
+        "total_functions": 2199,
+        "matched_functions": 559,
+        "matched_functions_percent": 25.420645,
+        "complete_code": "7437",
+        "complete_code_percent": 1.4518386,
+        "complete_data_percent": 100.0,
+        "total_units": 110,
+        "complete_units": 3
+      }
+    },
+    {
+      "id": "Game code",
+      "measures": {
+        "total_code": "1010",
+        "matched_data_percent": 100.0,
+        "total_functions": 2,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      }
+    }
+  ]
 }

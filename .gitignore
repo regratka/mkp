@@ -45,9 +45,13 @@ build
 tools/**/
 scripts/__pycache__
 
-changes.json
 objdiff.json
 build.ninja
-report.json
 
-progress/
+baseline.json
+changes.json
+
+progress.png
+
+.ninja_deps
+.ninja_log

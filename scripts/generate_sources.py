@@ -2,15 +2,15 @@
 import json
 from pathlib import Path
 import os.path
-from project import Function, FunctionType
+from project import Function, FunctionType, DecompUnit
 
 ME_CONFIG_PATH = "config\\me2\\"
 ME_SRC_PATH = "src\\me2"
 
 
-def generateSources(mappings, units, source_dir: Path, include_dir: Path):
-    for unit, namespaces in units.items():
-        generateUnitSources(mappings, unit, namespaces, source_dir, include_dir)
+def generateSources(decompUnit: DecompUnit):
+    for unit, namespaces in decompUnit.units.items():
+        generateUnitSources(decompUnit.mappings, unit, namespaces, decompUnit.srcPath, decompUnit.includePath)
 
 def generateUnitSources(funByNamespaces, unitName, unitNamespaces, source_dir, include_dir):
     header_file = include_dir / (unitName + ".h") 

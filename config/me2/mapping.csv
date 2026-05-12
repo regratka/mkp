@@ -1208,7 +1208,7 @@
 ;FUN_1003d130;0x1003d130;0xa;__stdcall;;uchar
 ;FUN_1003d140;0x1003d140;0xc;__stdcall;;uchar
 ??_GCAlphaObject@@UAEPAXI@Z;CAlphaObject::scalar_destructor;0x1003d160;0x1e;__thiscall;;cMagGameObject*;void*;uchar
-??0CAlphaObject@@QAE@HPAVcMagMeshObject@@@Z;CAlphaObject::CAlphaObject;0x1003d180;0x28;__thiscall;;CAlphaObject*;CAlphaObject*;int;cMagMeshObject*
+??0CAlphaObject@@QAE@PAVcStaticSurface@@PAVcMagMeshObject@@@Z;CAlphaObject::CAlphaObject;0x1003d180;0x28;__thiscall;;CAlphaObject*;CAlphaObject*;cStaticSurface*;cMagMeshObject*
 ??1CAlphaObject@@UAE@XZ;CAlphaObject::~CAlphaObject;0x1003d1b0;0xb;__thiscall;;void;CAlphaObject*
 ?OnRender@CAlphaObject@@UAEXXZ;CAlphaObject::OnRender;0x1003d1c0;0x4a5;__thiscall;;void;CAlphaObject*
 ;FUN_1003d6b0;0x1003d6b0;0xa;__stdcall;;uchar
@@ -1834,9 +1834,9 @@
 ?SetLightingObject@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::SetLightingObject;0x1005a120;0xd;__thiscall;;void;cMagMeshObject*;bool
 ?SetAmbient@cMagMeshObject@@QAEXMMM@Z;cMagMeshObject::SetAmbient;0x1005a130;0x17;__thiscall;;void;cMagMeshObject*;float;float;float
 ?JumpEnabled@cMagMeshObject@@QAE_NXZ;cMagMeshObject::JumpEnabled;0x1005a150;0x14;__thiscall;;bool;cMagMeshObject*
-?ClassifyPoint@cMagMeshObject@@QAEHUD3DXVECTOR3@@00@Z;cMagMeshObject::ClassifyPoint;0x1005a170;0x63;__thiscall;;uint;cMagMeshObject*;float;float;float;float;float;float;float;float;float
-?GetMagnitude@cMagMeshObject@@QAEMUD3DXVECTOR3@@@Z;cMagMeshObject::GetMagnitude;0x1005a1e0;0x36;__thiscall;;float;uint;float;float;float
-?GetHelperPosition@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAD@Z;cMagMeshObject::GetHelperPosition;0x1005a220;0x69;__thiscall;;uint*;cMagMeshObject*;uint*;uchar*
+?ClassifyPoint@cMagMeshObject@@QAEHUD3DXVECTOR3@@00@Z;cMagMeshObject::ClassifyPoint;0x1005a170;0x63;__thiscall;;int;cMagMeshObject*;D3DXVECTOR3;D3DXVECTOR3;D3DXVECTOR3
+?GetMagnitude@cMagMeshObject@@QAEMUD3DXVECTOR3@@@Z;cMagMeshObject::GetMagnitude;0x1005a1e0;0x36;__thiscall;;float;cMagMeshObject*;D3DXVECTOR3
+?GetHelperPosition@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAD@Z;cMagMeshObject::GetHelperPosition;0x1005a220;0x69;__thiscall;;D3DXVECTOR3;cMagMeshObject*;char*
 ?SetPhysicsType@cMagMeshObject@@QAEXE@Z;cMagMeshObject::SetPhysicsType;0x1005a290;0x165;__thiscall;;void;cMagMeshObject*;uchar
 ?GetPhysicsType@cMagMeshObject@@QAEEXZ;cMagMeshObject::GetPhysicsType;0x1005a410;0x7;__thiscall;;uchar;cMagMeshObject*
 ?TraceScene@cMagMeshObject@@QAE_NUD3DXVECTOR3@@0QAU2@PAMPAU2@@Z;cMagMeshObject::TraceScene;0x1005a420;0x69;__thiscall;;uint;cMagMeshObject*;uint;uint;uint;uint;uint;uint;uint;uint;uint

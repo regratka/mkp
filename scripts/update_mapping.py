@@ -14,7 +14,6 @@ def updateMapping(ghidra_directory: str, ghidra_project: str, ghidra_program: st
         pre_scripts=[["GenerateMapping.java", output_mapping_file]],
     )
 
-
 def main():
     parser = argparse.ArgumentParser(
         description="Export a ghidra database to csv file",

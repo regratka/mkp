@@ -1,33 +1,37 @@
 from pathlib import Path
 import json
 from helpers import has_functions
+from project import DecompUnit
 
 WORKSPACE_PATH = Path(__file__).parent.parent
 
-def generateObjdiffConfig(target_dir: Path, base_dir: Path, units: dict[str, list[str]], mappings: dict[str, object], completed: set[str], output_dir: Path):
+def generateObjdiffConfig(decompUnits: list[DecompUnit], master_target_dir: Path, master_base_dir: Path, output_dir: Path):
     config = {}
     config["custom_make"] = "ninja"
-    config["target_dir"] = str(target_dir)
-    config["base_dir"] = str(base_dir)
+    config["target_dir"] = str(master_target_dir)
+    config["base_dir"] = str(master_base_dir)
     config["build_base"] = True
     config["build_target"] = False
     config["watch_patterns"] = ["*.c","*.cpp","*.h","*.hpp"]
     conf_units = []
 
-    for unit, namespaces in units.items():
-        if not has_functions(namespaces, mappings):
-            continue
-        conf_unit = {}
-        conf_unit["name"] = unit
-        conf_unit["target_path"] = str(target_dir / (unit + ".obj"))
-        conf_unit["base_path"] = str(base_dir / (unit + ".obj"))
-        conf_unit["reverse_fn_order"] = False
+    for decompUnit in decompUnits:
+        for unit, namespaces in decompUnit.units.items():
+            if not has_functions(namespaces, decompUnit.mappings):
+                continue
+            conf_unit = {}
+            conf_unit["name"] = unit
+            conf_unit["target_path"] = str(decompUnit.buildOrig / (unit + ".obj"))
+            conf_unit["base_path"] = str(decompUnit.buildSrc / (unit + ".obj"))
+            conf_unit["reverse_fn_order"] = False
 
-        if unit in completed:
             metadata = {}
-            metadata["complete"] = True
+            if unit in decompUnit.completed:
+                metadata["complete"] = True
+            metadata["progress_categories"] = [decompUnit.progress_category]
             conf_unit["metadata"] = metadata
-        conf_units.append(conf_unit)
+
+            conf_units.append(conf_unit)
 
     config["units"] = conf_units
     

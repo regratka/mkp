@@ -3,25 +3,26 @@
 import os
 from pathlib import Path
 import tempfile
+from project import DecompUnit
 
 import ghidra_helpers
 
 SCRIPT_PATH = Path(os.path.realpath(__file__)).parent
 
-def exportObjs(mappings_file: str, units_listing_file: str, export_directory: str, source_binary_file: str):
-    os.makedirs(export_directory, exist_ok=True)
+def exportObjs(unit: DecompUnit):
+    os.makedirs(str(unit.buildOrig), exist_ok=True)
     with tempfile.TemporaryDirectory() as tempdir:
         ghidra_helpers.runAnalyze(
             str(tempdir),
             "ProjectTempName",
-            import_file=source_binary_file,
+            import_file=str(unit.filePath),
             analysis=True,
             post_scripts=[
-                ["ImportFromCsv.java", mappings_file],
+                ["ImportFromCsv.java", str(unit.configPath/"mapping.csv")],
                 [
                     "ExportDelinker.java", 
-                    units_listing_file,
-                    export_directory,
+                    str(unit.configPath/"units_listing.csv"),
+                    str(unit.buildOrig),
                 ],
             ],
         )
