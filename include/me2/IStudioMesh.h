@@ -2,8 +2,9 @@
 #define _I_STUDIO_MESH
 
 #include <globals.h>
+#include <d3dx8math.h>
 
-#include "cMagMeshObject.h"
+class cMagMeshObject;
 
 class IStudioMesh {
 public:

@@ -2,6 +2,7 @@
 
 #include "CGame.h"
 #include "cMagEngineMgr.h"
+#include "cMagLight.h"
 
 /* 10051E50-10052DEC 00F9C	*/
 cMagMeshObject::cMagMeshObject() {
@@ -1064,27 +1065,39 @@ bool cMagMeshObject::EnableFrustumPhysicsPause() {
 
 /* 1005A080-1005A0A5 00025	*/
 void cMagMeshObject::SetFrustumPhysicsPause(bool param_1) {
+	if (enableFrustumPhysicsPause && param_1) {
+		SetPauseUpdatePhysics(param_1);
+	} else {
+		SetPauseUpdatePhysics(false);
+	}
 }
 
 /* 1005A0B0-1005A0B5 00005	*/
 bool cMagMeshObject::GetFrustumPhysicsPause() {
-	return 0;
+	return pauseUpdatePhysics;
 }
 
 /* 1005A0C0-1005A0CD 0000D	*/
 void cMagMeshObject::EnableDynamicPointLight(bool param_1) {
+	enableDynamicPointLight = param_1;
+
 }
 
 /* 1005A0D0-1005A0FC 0002C	*/
 void cMagMeshObject::AddDynamicLight(D3DLIGHT8 param_1) {
+	dynamicLightID = cMagLight::getInstance()->AddDynamicLight(param_1);
 }
 
 /* 1005A100-1005A11F 0001F	*/
 void cMagMeshObject::DisableDynamicLight() {
+	if (dynamicLightID > 0) {
+		cMagEngineMgr::getInstance()->engine->LightEnable(dynamicLightID, FALSE);
+	}
 }
 
 /* 1005A120-1005A12D 0000D	*/
 void cMagMeshObject::SetLightingObject(bool param_1) {
+	lightingObject = param_1;
 }
 
 /* 1005A130-1005A147 00017	*/
@@ -1093,21 +1106,28 @@ void cMagMeshObject::SetAmbient(float param_1, float param_2, float param_3) {
 
 /* 1005A150-1005A164 00014	*/
 bool cMagMeshObject::JumpEnabled() {
-	return 0;
+	if (colObject == NULL) {
+		return true;
+	}
+	return false;
 }
 
 /* 1005A170-1005A1D3 00063	*/
-uint cMagMeshObject::ClassifyPoint(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, float param_9) {
+int cMagMeshObject::ClassifyPoint(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXVECTOR3 param_3) {
 	return 0;
 }
 
 /* 1005A1E0-1005A216 00036	*/
-float cMagMeshObject::GetMagnitude(float param_1, float param_2, float param_3) {
-	return 0;
+float cMagMeshObject::GetMagnitude(D3DXVECTOR3 param_1) {
+	float length = D3DXVec3Length(&param_1);
+	if (length == 0.0f) {
+		return 1.0f;
+	}
+	return length;
 }
 
 /* 1005A220-1005A289 00069	*/
-uint* cMagMeshObject::GetHelperPosition(uint* param_1, uchar* param_2) {
+D3DXVECTOR3 cMagMeshObject::GetHelperPosition(char* param_1) {
 	return 0;
 }
 
@@ -1117,7 +1137,7 @@ void cMagMeshObject::SetPhysicsType(uchar param_1) {
 
 /* 1005A410-1005A417 00007	*/
 uchar cMagMeshObject::GetPhysicsType() {
-	return 0;
+	return physicsType;
 }
 
 /* 1005A420-1005A489 00069	*/
@@ -1127,11 +1147,12 @@ uint cMagMeshObject::TraceScene(uint param_1, uint param_2, uint param_3, uint p
 
 /* 1005A490-1005A49D 0000D	*/
 void cMagMeshObject::EnablePushing(bool param_1) {
+	enablePushing = param_1;
 }
 
 /* 1005A4A0-1005A4A7 00007	*/
 bool cMagMeshObject::EnablePushing() {
-	return 0;
+	return enablePushing;
 }
 
 /* 1005A4B0-1005A5BA 0010A	*/
@@ -1140,11 +1161,12 @@ void cMagMeshObject::SetRotationMatrix(D3DXMATRIX param_1) {
 
 /* 1005A5C0-1005A5CD 0000D	*/
 void cMagMeshObject::EnableNBFacesCollision(bool param_1) {
+	enableNBFacesCollision = param_1;
 }
 
 /* 1005A5D0-1005A5D7 00007	*/
 bool cMagMeshObject::EnableNBFacesCollision() {
-	return 0;
+	return enableNBFacesCollision;
 }
 
 /* 1005A600-1005A60D 0000D	*/

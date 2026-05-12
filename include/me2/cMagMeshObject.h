@@ -9,6 +9,7 @@
 #include "CPath.h"
 #include "cVideoPlayer.h"
 #include "cMp3Player.h"
+#include "ColObject.h"
 
 class __declspec(dllexport) cMagMeshObject : public cMagUtility {
 public:
@@ -256,9 +257,9 @@ public:
 	/* 1005A120 */ void SetLightingObject(bool param_1);
 	/* 1005A130 */ void SetAmbient(float param_1, float param_2, float param_3);
 	/* 1005A150 */ bool JumpEnabled();
-	/* 1005A170 */ uint ClassifyPoint(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8, float param_9);
-	/* 1005A1E0 */ float GetMagnitude(float param_1, float param_2, float param_3);
-	/* 1005A220 */ uint* GetHelperPosition(uint* param_1, uchar* param_2);
+	/* 1005A170 */ int ClassifyPoint(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXVECTOR3 param_3);
+	/* 1005A1E0 */ float GetMagnitude(D3DXVECTOR3 param_1);
+	/* 1005A220 */ D3DXVECTOR3 GetHelperPosition(char* param_1);
 	/* 1005A290 */ void SetPhysicsType(uchar param_1);
 	/* 1005A410 */ uchar GetPhysicsType();
 	/* 1005A420 */ uint TraceScene(uint param_1, uint param_2, uint param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8, uint param_9);
@@ -322,8 +323,10 @@ public:
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
 
 public:
-	/* 0xd4c */ uchar f_d4c[0xd52 - 0xd4c];
-	/* 0xd54 */ bool enableFrustumPhysicsPause;
+	/* 0xd4c */ uchar f_d4c[0xd50 - 0xd4c];
+	/* 0xd50 */ bool enableNBFacesCollision;
+	/* 0xd51 */ bool enablePushing;
+	/* 0xd52 */ bool enableFrustumPhysicsPause;
 	/* 0xd54 */ float outsideViewPhysicsActivityRangePow;
 	/* 0xd58 */ float outsideViewPhysicsActivityRange;
 	/* 0xd5c */ int unk_d5c;
@@ -422,10 +425,18 @@ public:
 	/* 0x1f00 */ D3DXVECTOR3* destRotation;
 	/* 0x1f04 */ D3DXVECTOR3 rotationAngSpeed;
 	/* 0x1f10 */ D3DXVECTOR3 motionRotationAngSpeed;
-	/* 0x1f1c */ uchar f_1f1c[0x1fe0 - 0x1f1c];
+	/* 0x1f1c */ uchar f_1f1c[0x1f5d - 0x1f1c];
+	/* 0x1f5d */ bool enableDynamicPointLight;
+	/* 0x1f60 */ int dynamicLightID;
+	/* 0x1f64 */ uchar f_1f64[0x1fcc - 0x1f64];
+	/* 0x1fcc */ bool lightingObject;
+	/* 0x1fcd */ uchar f_1fcd[0x1fdc - 0x1fcd];
+	/* 0x1fdc */ ColObject* colObject;
 	/* 0x1fe0 */ bool freeRotationMatrix;
 	/* 0x1fe1 */ bool freeDestinationDir;
-	/* 0x1fe2 */ uchar f_1fe2[0x22d4 - 0x1fe2];
+	/* 0x1fe2 */ uchar f_1fe2[0x1fe8 - 0x1fe2];
+	/* 0x1fe8 */ uchar physicsType;
+	/* 0x1fe9 */ uchar f_1fe9[0x22d4 - 0x1fe9];
 	/* 0x22d4 */ int shadowType;
 	/* 0x22d8 */ uchar f_22d8[0x2658 - 0x22d8];
 
