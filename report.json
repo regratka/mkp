@@ -21803,6 +21803,7 @@
   "categories": [
     {
       "id": "Engine",
+      "name": "Engine",
       "measures": {
         "fuzzy_match_percent": 19.062305,
         "total_code": "512247",
@@ -21821,6 +21822,7 @@
     },
     {
       "id": "Game code",
+      "name": "Game code",
       "measures": {
         "total_code": "1010",
         "matched_data_percent": 100.0,
