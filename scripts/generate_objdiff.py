@@ -13,8 +13,17 @@ def generateObjdiffConfig(decompUnits: list[DecompUnit], master_target_dir: Path
     config["build_base"] = True
     config["build_target"] = False
     config["watch_patterns"] = ["*.c","*.cpp","*.h","*.hpp"]
-    conf_units = []
 
+
+    progress_categories = []
+    for decompUnit in decompUnits:
+        category_progress = {}
+        category_progress["id"] = decompUnit.progress_category
+        category_progress["name"] = decompUnit.progress_category
+        progress_categories.append(category_progress)
+    config["progress_categories"] = progress_categories
+
+    conf_units = []
     for decompUnit in decompUnits:
         for unit, namespaces in decompUnit.units.items():
             if not has_functions(namespaces, decompUnit.mappings):

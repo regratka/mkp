@@ -16,7 +16,7 @@ def configureProject(base_dir: Path):
 
 def configure(decompUnits: list[DecompUnit]):
     for unit in decompUnits:
-        # exportObjs(unit)
+        exportObjs(unit)
         generateSources(unit)
         
     generateNinja(decompUnits, Path("."))
