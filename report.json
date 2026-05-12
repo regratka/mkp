@@ -1,17 +1,17 @@
 {
   "measures": {
-    "fuzzy_match_percent": 19.024796,
-    "total_code": "513257",
+    "fuzzy_match_percent": 18.901333,
+    "total_code": "517046",
     "matched_code": "53703",
-    "matched_code_percent": 10.463179,
+    "matched_code_percent": 10.386503,
     "matched_data_percent": 100.0,
-    "total_functions": 2201,
+    "total_functions": 2253,
     "matched_functions": 559,
-    "matched_functions_percent": 25.397545,
+    "matched_functions_percent": 24.811363,
     "complete_code": "7437",
-    "complete_code_percent": 1.4489818,
+    "complete_code_percent": 1.4383633,
     "complete_data_percent": 100.0,
-    "total_units": 111,
+    "total_units": 122,
     "complete_units": 3
   },
   "units": [
@@ -21763,18 +21763,613 @@
       }
     },
     {
-      "name": "GameSDK",
+      "name": "_Action",
       "measures": {
-        "total_code": "1010",
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
         "matched_data_percent": 100.0,
-        "total_functions": 2,
+        "total_functions": 4,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1010",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Action::_Action",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Action::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Action::~_Action",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Action@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Action::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_AI",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_AI::_AI",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_AI::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_AI::~_AI",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_AI@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _AI::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_CutScenes",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_CutScenes::_CutScenes",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_CutScenes::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_CutScenes::~_CutScenes",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_CutScenes@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _CutScenes::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_Particles",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Particles::_Particles",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Particles::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Particles::~_Particles",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Particles@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Particles::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_Platform",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Platform::_Platform",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Platform::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Platform::~_Platform",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Platform@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Platform::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_Player",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Player::_Player",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Player::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Player::~_Player",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Player@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Player::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_PowerUp",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_PowerUp::_PowerUp",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_PowerUp::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_PowerUp::~_PowerUp",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_PowerUp@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _PowerUp::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_Sound",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Sound::_Sound",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Sound::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Sound::~_Sound",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Sound@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Sound::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_Water",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Water::_Water",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Water::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Water::~_Water",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Water@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Water::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "_Wrogowie",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "_Wrogowie::_Wrogowie",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "_Wrogowie::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "_Wrogowie::~_Wrogowie",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@_Wrogowie@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall _Wrogowie::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "AIControlPoint",
+      "measures": {
+        "fuzzy_match_percent": 4.2613635,
+        "total_code": "176",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "176",
+          "fuzzy_match_percent": 4.2613635,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "AIControlPoint::AIControlPoint",
+          "size": "25",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "AIControlPoint::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "25"
+        },
+        {
+          "name": "AIControlPoint::~AIControlPoint",
+          "size": "11",
+          "metadata": {},
+          "address": "55"
+        },
+        {
+          "name": "?EXP@AIControlPoint@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall AIControlPoint::EXP(void)"
+          },
+          "address": "66"
+        },
+        {
+          "name": "AIControlPoint::FUN0043cee0",
+          "size": "7",
+          "metadata": {},
+          "address": "156"
+        },
+        {
+          "name": "AIControlPoint::FUN0043cef0",
+          "size": "13",
+          "metadata": {},
+          "address": "163"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "GameSDK",
+      "measures": {
+        "total_code": "3113",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3113",
           "metadata": {}
         }
       ],
@@ -21786,10 +22381,46 @@
           "address": "0"
         },
         {
+          "name": "GameSDK::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "881"
+        },
+        {
           "name": "GameSDK::~GameSDK",
           "size": "129",
           "metadata": {},
-          "address": "881"
+          "address": "911"
+        },
+        {
+          "name": "GameSDK::Run",
+          "size": "151",
+          "metadata": {},
+          "address": "1040"
+        },
+        {
+          "name": "GameSDK::FUN004018f0",
+          "size": "186",
+          "metadata": {},
+          "address": "1191"
+        },
+        {
+          "name": "GameSDK::FUN00401ac0",
+          "size": "39",
+          "metadata": {},
+          "address": "1377"
+        },
+        {
+          "name": "GameSDK::FUN00401e40",
+          "size": "1114",
+          "metadata": {},
+          "address": "1416"
+        },
+        {
+          "name": "GameSDK::FUN00402300",
+          "size": "583",
+          "metadata": {},
+          "address": "2530"
         }
       ],
       "metadata": {
@@ -21824,11 +22455,12 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "total_code": "1010",
+        "fuzzy_match_percent": 1.7191081,
+        "total_code": "4799",
         "matched_data_percent": 100.0,
-        "total_functions": 2,
+        "total_functions": 54,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 12
       }
     }
   ]
