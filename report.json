@@ -1,17 +1,17 @@
 {
   "measures": {
-    "fuzzy_match_percent": 18.901333,
-    "total_code": "517046",
+    "fuzzy_match_percent": 18.426298,
+    "total_code": "530457",
     "matched_code": "53703",
-    "matched_code_percent": 10.386503,
+    "matched_code_percent": 10.123912,
     "matched_data_percent": 100.0,
-    "total_functions": 2253,
+    "total_functions": 2327,
     "matched_functions": 559,
-    "matched_functions_percent": 24.811363,
+    "matched_functions_percent": 24.022346,
     "complete_code": "7437",
-    "complete_code_percent": 1.4383633,
+    "complete_code_percent": 1.4019986,
     "complete_data_percent": 100.0,
-    "total_units": 122,
+    "total_units": 126,
     "complete_units": 3
   },
   "units": [
@@ -22358,18 +22358,520 @@
       }
     },
     {
-      "name": "GameSDK",
+      "name": "CAction",
       "measures": {
-        "total_code": "3113",
+        "fuzzy_match_percent": 0.15906681,
+        "total_code": "4715",
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 27,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "3113",
+          "size": "4715",
+          "fuzzy_match_percent": 0.15906681,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CAction::CAction",
+          "size": "83",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CAction::scalar_destruction",
+          "size": "30",
+          "metadata": {},
+          "address": "83"
+        },
+        {
+          "name": "CAction::~CAction",
+          "size": "11",
+          "metadata": {},
+          "address": "113"
+        },
+        {
+          "name": "?EXP@CAction@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CAction::EXP(void)"
+          },
+          "address": "124"
+        },
+        {
+          "name": "CAction::OnActivateLevel",
+          "size": "337",
+          "metadata": {},
+          "address": "214"
+        },
+        {
+          "name": "CAction::FUN00416bd0",
+          "size": "253",
+          "metadata": {},
+          "address": "551"
+        },
+        {
+          "name": "CAction::OnFrame",
+          "size": "92",
+          "metadata": {},
+          "address": "804"
+        },
+        {
+          "name": "CAction::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "896"
+        },
+        {
+          "name": "CAction::OnAction",
+          "size": "95",
+          "metadata": {},
+          "address": "938"
+        },
+        {
+          "name": "CAction::OnAnimFrameMeter",
+          "size": "146",
+          "metadata": {},
+          "address": "1033"
+        },
+        {
+          "name": "CAction::FUN00416ef0",
+          "size": "38",
+          "metadata": {},
+          "address": "1179"
+        },
+        {
+          "name": "CAction::FUN00416f20",
+          "size": "100",
+          "metadata": {},
+          "address": "1217"
+        },
+        {
+          "name": "CAction::OnAnimEnd",
+          "size": "90",
+          "metadata": {},
+          "address": "1317"
+        },
+        {
+          "name": "CAction::FUN00416ff0",
+          "size": "265",
+          "metadata": {},
+          "address": "1407"
+        },
+        {
+          "name": "CAction::FUN00417100",
+          "size": "52",
+          "metadata": {},
+          "address": "1672"
+        },
+        {
+          "name": "CAction::FUN00417140",
+          "size": "156",
+          "metadata": {},
+          "address": "1724"
+        },
+        {
+          "name": "CAction::FUN004171e0",
+          "size": "43",
+          "metadata": {},
+          "address": "1880"
+        },
+        {
+          "name": "CAction::FUN00417210",
+          "size": "247",
+          "metadata": {},
+          "address": "1923"
+        },
+        {
+          "name": "CAction::FUN00417310",
+          "size": "304",
+          "metadata": {},
+          "address": "2170"
+        },
+        {
+          "name": "CAction::Save",
+          "size": "355",
+          "metadata": {},
+          "address": "2474"
+        },
+        {
+          "name": "CAction::Load",
+          "size": "498",
+          "metadata": {},
+          "address": "2829"
+        },
+        {
+          "name": "CAction::STATE_Empty::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "3327"
+        },
+        {
+          "name": "CAction::STATE_RuchX::OnEnterState",
+          "size": "90",
+          "metadata": {},
+          "address": "3357"
+        },
+        {
+          "name": "CAction::STATE_RuchX::OnFrame",
+          "size": "407",
+          "metadata": {},
+          "address": "3447"
+        },
+        {
+          "name": "CAction::STATE_RuchY::OnFrame",
+          "size": "407",
+          "metadata": {},
+          "address": "3854"
+        },
+        {
+          "name": "CAction::STATE_RuchZ::OnFrame",
+          "size": "407",
+          "metadata": {},
+          "address": "4261"
+        },
+        {
+          "name": "CAction::STATE_Empty::OnEnterState",
+          "size": "47",
+          "metadata": {},
+          "address": "4668"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CApplication_Network",
+      "measures": {
+        "total_code": "4190",
+        "matched_data_percent": 100.0,
+        "total_functions": 20,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "4190",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CApplication_Network::CApplication_Network",
+          "size": "244",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CApplication_Network::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "244"
+        },
+        {
+          "name": "CApplication_Network::~CApplication_Network",
+          "size": "171",
+          "metadata": {},
+          "address": "274"
+        },
+        {
+          "name": "CApplication_Network::FUN_0042f750",
+          "size": "8",
+          "metadata": {},
+          "address": "445"
+        },
+        {
+          "name": "CApplication_Network::FUN0042f760",
+          "size": "150",
+          "metadata": {},
+          "address": "453"
+        },
+        {
+          "name": "CApplication_Network::FUN0042f800",
+          "size": "582",
+          "metadata": {},
+          "address": "603"
+        },
+        {
+          "name": "CApplication_Network::FUN0042fa50",
+          "size": "207",
+          "metadata": {},
+          "address": "1185"
+        },
+        {
+          "name": "CApplication_Network::FUN0042fb20",
+          "size": "233",
+          "metadata": {},
+          "address": "1392"
+        },
+        {
+          "name": "CApplication_Network::FUN0042fc10",
+          "size": "234",
+          "metadata": {},
+          "address": "1625"
+        },
+        {
+          "name": "CApplication_Network::FUN0042fd00",
+          "size": "675",
+          "metadata": {},
+          "address": "1859"
+        },
+        {
+          "name": "CApplication_Network::FUN0042ffb0",
+          "size": "63",
+          "metadata": {},
+          "address": "2534"
+        },
+        {
+          "name": "CApplication_Network::FUN0042fff0",
+          "size": "44",
+          "metadata": {},
+          "address": "2597"
+        },
+        {
+          "name": "CApplication_Network::FUN00430020",
+          "size": "56",
+          "metadata": {},
+          "address": "2641"
+        },
+        {
+          "name": "CApplication_Network::FUN00430060",
+          "size": "116",
+          "metadata": {},
+          "address": "2697"
+        },
+        {
+          "name": "CApplication_Network::FUN00430100",
+          "size": "35",
+          "metadata": {},
+          "address": "2813"
+        },
+        {
+          "name": "CApplication_Network::FUN00430130",
+          "size": "66",
+          "metadata": {},
+          "address": "2848"
+        },
+        {
+          "name": "CApplication_Network::FUN00430180",
+          "size": "122",
+          "metadata": {},
+          "address": "2914"
+        },
+        {
+          "name": "CApplication_Network::FUN00430200",
+          "size": "524",
+          "metadata": {},
+          "address": "3036"
+        },
+        {
+          "name": "CApplication_Network::FUN00430410",
+          "size": "188",
+          "metadata": {},
+          "address": "3560"
+        },
+        {
+          "name": "CApplication_Network::FUN004304d0",
+          "size": "442",
+          "metadata": {},
+          "address": "3748"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CArmata",
+      "measures": {
+        "fuzzy_match_percent": 0.20231993,
+        "total_code": "3707",
+        "matched_data_percent": 100.0,
+        "total_functions": 13,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3707",
+          "fuzzy_match_percent": 0.20231993,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CArmata::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CArmata::CArmata",
+          "size": "195",
+          "metadata": {},
+          "address": "42"
+        },
+        {
+          "name": "CArmata::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "237"
+        },
+        {
+          "name": "CArmata::~CArmata",
+          "size": "125",
+          "metadata": {},
+          "address": "267"
+        },
+        {
+          "name": "?EXP@CArmata@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CArmata::EXP(void)"
+          },
+          "address": "392"
+        },
+        {
+          "name": "CArmata::OnActivate",
+          "size": "63",
+          "metadata": {},
+          "address": "482"
+        },
+        {
+          "name": "CArmata::OnActivateLevel",
+          "size": "96",
+          "metadata": {},
+          "address": "545"
+        },
+        {
+          "name": "CArmata::FUN0043a1b0",
+          "size": "193",
+          "metadata": {},
+          "address": "641"
+        },
+        {
+          "name": "CArmata::OnInputKey",
+          "size": "1369",
+          "metadata": {},
+          "address": "834"
+        },
+        {
+          "name": "CArmata::FUN0043a7e0",
+          "size": "175",
+          "metadata": {},
+          "address": "2203"
+        },
+        {
+          "name": "CArmata::FUN0043a890",
+          "size": "109",
+          "metadata": {},
+          "address": "2378"
+        },
+        {
+          "name": "CArmata::FUN0043a90",
+          "size": "656",
+          "metadata": {},
+          "address": "2487"
+        },
+        {
+          "name": "CArmata::FUN0043ab90",
+          "size": "564",
+          "metadata": {},
+          "address": "3143"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CArmataPocisk",
+      "measures": {
+        "total_code": "343",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "343",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CArmataPocisk::CArmataPocisk",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CArmataPocisk::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "CArmataPocisk::~CArmataPocisk",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "CArmataPocisk::OnActivate",
+          "size": "192",
+          "metadata": {},
+          "address": "61"
+        },
+        {
+          "name": "CArmataPocisk::FUN0043b1a0",
+          "size": "80",
+          "metadata": {},
+          "address": "253"
+        },
+        {
+          "name": "CArmataPocisk::OnCollisionObject",
+          "size": "10",
+          "metadata": {},
+          "address": "333"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "GameSDK",
+      "measures": {
+        "total_code": "3569",
+        "matched_data_percent": 100.0,
+        "total_functions": 16,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3569",
           "metadata": {}
         }
       ],
@@ -22405,22 +22907,70 @@
           "address": "1191"
         },
         {
+          "name": "GameSDK::FUN00401a90",
+          "size": "26",
+          "metadata": {},
+          "address": "1377"
+        },
+        {
           "name": "GameSDK::FUN00401ac0",
           "size": "39",
           "metadata": {},
-          "address": "1377"
+          "address": "1403"
+        },
+        {
+          "name": "GameSDK::FUN00401af0",
+          "size": "63",
+          "metadata": {},
+          "address": "1442"
+        },
+        {
+          "name": "GameSDK::FUN00401b30",
+          "size": "26",
+          "metadata": {},
+          "address": "1505"
+        },
+        {
+          "name": "GameSDK::FUN00401b80",
+          "size": "26",
+          "metadata": {},
+          "address": "1531"
+        },
+        {
+          "name": "GameSDK::FUN00401c80",
+          "size": "202",
+          "metadata": {},
+          "address": "1557"
+        },
+        {
+          "name": "GameSDK::FUN00401d50",
+          "size": "45",
+          "metadata": {},
+          "address": "1759"
+        },
+        {
+          "name": "GameSDK::FUN00401de0",
+          "size": "45",
+          "metadata": {},
+          "address": "1804"
+        },
+        {
+          "name": "GameSDK::FUN00401e20",
+          "size": "23",
+          "metadata": {},
+          "address": "1849"
         },
         {
           "name": "GameSDK::FUN00401e40",
           "size": "1114",
           "metadata": {},
-          "address": "1416"
+          "address": "1872"
         },
         {
           "name": "GameSDK::FUN00402300",
           "size": "583",
           "metadata": {},
-          "address": "2530"
+          "address": "2986"
         }
       ],
       "metadata": {
@@ -22455,12 +23005,12 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 1.7191081,
-        "total_code": "4799",
+        "fuzzy_match_percent": 0.5354201,
+        "total_code": "18210",
         "matched_data_percent": 100.0,
-        "total_functions": 54,
+        "total_functions": 128,
         "complete_data_percent": 100.0,
-        "total_units": 12
+        "total_units": 16
       }
     }
   ]

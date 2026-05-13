@@ -40,7 +40,7 @@ public:
 	/* 100116a0 */ virtual void OnActivate(); /* vtbl 0x30 */
 	/* 100116e0 */ virtual void OnActivateLevel(); /* vtbl 0x34 */
 	
-	virtual void vtbl_0x38(); /* vtbl 0x38 */
+	virtual void OnInitialize(); /* vtbl 0x38 */
 	virtual void OnPreRender(); /* vtbl 0x3c */
 
 	/* 10011980 */ virtual void OnInsideFrustumCull(); /* vtbl 0x40 */
@@ -54,13 +54,13 @@ public:
 	/* 10011b20 */ virtual void OnAnimEnd(char* param_1); /* vtbl 0x58 */
 
 	virtual void OnAnimFrameMeter(char* param_1, int param_2); /* vtbl 0x5c*/
-	virtual void vtbl_0x60(); /* vtbl 0x60*/
-	virtual void vtbl_0x64(); /* vtbl 0x64*/
-	virtual void vtbl_0x68(); /* vtbl 0x68*/
-	virtual void vtbl_0x6c(); /* vtbl 0x6c*/
-	virtual void vtbl_0x70(); /* vtbl 0x70*/
-	virtual void vtbl_0x74(); /* vtbl 0x74*/
-	virtual void vtbl_0x78(); /* vtbl 0x78*/
+	virtual void OnMessage(); /* vtbl 0x60*/
+	virtual void OnPerfectTimer(); /* vtbl 0x64*/
+	virtual void OnBillboardAnimEnd(); /* vtbl 0x68*/
+	virtual void OnPlaySoundEnd(); /* vtbl 0x6c*/
+	virtual void OnNumPadCodeCorrect(int param_1); /* vtbl 0x70*/
+	virtual void OnNumPadCodeCorrect(); /* vtbl 0x74*/
+	virtual void OnNumPadExit(); /* vtbl 0x78*/
 	virtual ulong GetShadowType(); /* vtbl 0x7c*/
 
 	/* 10011250 */ virtual ~cMagKernel(); /* vtbl 0x80 */
@@ -95,22 +95,22 @@ public:
 		this->statusRemoveObject = p_removeObject;
 	}
 
-	virtual void vtb_0xcc(); /* vtbl 0xcc */
-
 	/* 10011bf0 */ virtual void OnMouseArrive(int param_1); /* vtbl 0xd0 */
-
-	virtual void vtb_0xd4(); /* vtbl 0xd4 */
+	
+	virtual void OnMouseArrive(); /* vtbl 0xcc */
 
 	/* 10011c80 */ virtual void OnMouseLeave(int param_1); /* vtbl 0xd8 */
+	virtual void OnMouseLeave(); /* vtbl 0xd4 */
+	
 	/* 10011d10 */ virtual void OnMouseEnter(int param_1); /* vtbl 0xdc */
 
-	virtual void vtb_0xe0(); /* vtbl 0xe0 */
-	virtual void vtb_0xe4(); /* vtbl 0xe4 */
-	virtual void vtb_0xe8(); /* vtbl 0xe8 */
+	virtual void OnButtonDown(); /* vtbl 0xe0 */
+	virtual void OnButtonUp(); /* vtbl 0xe4 */
+	virtual void OnExitYesNo(); /* vtbl 0xe8 */
 
 	virtual void OnRender(); /* vtbl 0xec */
 	
-	virtual void vtb_0xf0(); /* vtbl 0xf0 */
+	virtual void OnRenderShadow(); /* vtbl 0xf0 */
 
 	virtual void OnUpdate_(); /* vtbl 0xf4 */
 	/* 10011fa0 */ virtual void OnBonePositionUpdate(char* param_1, D3DXVECTOR3 param_2, D3DXMATRIX param_3, D3DXMATRIX param_4); /* vtbl 0xf8 */
@@ -121,21 +121,21 @@ public:
 	/* 10012470 */ virtual void OnAction(); /* vtbl 0108 */
 	/* 10012480 */ virtual void OnAction(char* param_1); /* vtbl 0x10c */
 
-	virtual void vtb_0x110(); /* vtbl 0x110 */
+	virtual void OnLostAdhesion(); /* vtbl 0x110 */
 
 	/* 10012460 */ virtual void Load(std::ifstream&, _ED_CHUNK);  /* vtbl 0x114 */
 
-	virtual void vtb_0x118(); /* vtbl 0x118 */
-	virtual void vtb_0x11c(); /* vtbl 0x11c */
+	virtual void Save(); /* vtbl 0x118 */
+	virtual void OnPhysicsUpdate(); /* vtbl 0x11c */
 
 	/* 10012270 */ virtual void OnDestTime(float param_1); /* vtbl 0x120 */
 
-	virtual void vtb_0x124(); /* vtbl 0x124 */
-	virtual void vtb_0x128(); /* vtbl 0x128 */
+	virtual void OnFadeOutEnd(); /* vtbl 0x124 */
+	virtual void OnFadeInEnd(); /* vtbl 0x128 */
 
 	/* 100123b0 */ virtual void OnCrash(); /* vtbl 0x12c */
 
-	virtual void vtb_0x130(); /* vtbl 0x130 */
+	virtual void OnMovieEnd(); /* vtbl 0x130 */
 
 	virtual void OnNavigationPathEnd(); /* vtbl 0x134 */
 	virtual void OnUpdateMenuSettings(); /* vtbl 0x138 */
