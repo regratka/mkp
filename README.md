@@ -1,4 +1,5 @@
 # Komputerowa Gratka 3D - Magiczna kula Papatki
+![](https://decomp.dev/regratka/mkp.svg?mode=shield)
 
 The WIP decompilation of _Komputerowa Gratka 3D - Magiczna kula Papatki_.
 
