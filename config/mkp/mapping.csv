@@ -1183,10 +1183,12 @@
 ;FUN_0043b000;0x43b000;0xc;__stdcall;;uchar
 ;FUN_0043b030;0x43b030;0xa;__stdcall;;uchar
 ;FUN_0043b040;0x43b040;0xc;__stdcall;;uchar
-;FUN_0043b090;0x43b090;0x13;__fastcall;;uchar;uchar
-;FUN_0043b0b0;0x43b0b0;0x1e;__thiscall;;uchar;void*;uchar
-;FUN_0043b0d0;0x43b0d0;0xc;__fastcall;;uchar;uchar
-;FUN_0043b1a0;0x43b1a0;0x50;__thiscall;;uchar;void*;uint;uint;uint;uint;uint;uint
+;CArmataPocisk::CArmataPocisk;0x43b090;0x13;__thiscall;;CArmataPocisk*;CArmataPocisk*
+;CArmataPocisk::scalar_destructor;0x43b0b0;0x1e;__thiscall;;uchar;CArmataPocisk*;uchar
+;CArmataPocisk::~CArmataPocisk;0x43b0d0;0xc;__thiscall;;void;CArmataPocisk*
+;CArmataPocisk::OnActivate;0x43b0e0;0xc0;__thiscall;;void;CArmataPocisk*
+;CArmataPocisk::FUN0043b1a0;0x43b1a0;0x50;__thiscall;;uchar;CArmataPocisk*;uint;uint;uint;uint;uint;uint
+;CArmataPocisk::OnCollisionObject;0x43b1f0;0xa;__thiscall;;void;CArmataPocisk*
 ;FUN_0043b240;0x43b240;0xa;__stdcall;;uchar
 ;FUN_0043b250;0x43b250;0xc;__stdcall;;uchar
 ;FUN_0043b280;0x43b280;0xa;__stdcall;;uchar

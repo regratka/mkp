@@ -12,4 +12,5 @@ AIControlPoint,AIControlPoint
 CAction,CAction,CAction::STATE_Empty,CAction::STATE_RuchX,CAction::STATE_RuchY,CAction::STATE_RuchZ
 CApplication_Network,CApplication_Network
 CArmata,CArmata
+CArmataPocisk,CArmataPocisk
 GameSDK,GameSDK
