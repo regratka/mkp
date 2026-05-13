@@ -13,4 +13,8 @@ CAction,CAction,CAction::STATE_Empty,CAction::STATE_RuchX,CAction::STATE_RuchY,C
 CApplication_Network,CApplication_Network
 CArmata,CArmata
 CArmataPocisk,CArmataPocisk
+CBalon,CBalon
+CBlokadaLevel1,CBlokadaLevel1
+CBlokadaLevel3,CBlokadaLevel3
+CBlokadaLevel3_1,CBlokadaLevel3_1
 GameSDK,GameSDK
