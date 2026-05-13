@@ -225,7 +225,7 @@ void cMagObjectList::AddShadowsObject(cMagKernel* param_1) {
 void cMagObjectList::RenderShadowsList() {
 	for (std::vector<cMagKernel*>::iterator it = shadowObjects.begin(); 
 			it != shadowObjects.end(); it++) {
-		(*it)->vtb_0xf0();
+		(*it)->OnRenderShadow();
 	}
 }
 
