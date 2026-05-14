@@ -29,4 +29,10 @@ CCar,CCar
 CCheckPoint,CCheckPoint
 CCutScene,CCutScene
 CCutSceneFx,CCutSceneFx
+CDisableZBuffer,CDisableZBuffer
+CDomekJeza,CDomekJeza
+CElevator,CElevator
+CEndPart1,CEndPart1
+CHudGratka,CHudGratka
+CInTextFile,CInTextFile
 GameSDK,GameSDK
