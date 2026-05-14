@@ -23,4 +23,10 @@ CBlokadaLevel5,CBlokadaLevel5
 CBlokadaLevel6,CBlokadaLevel6
 CBrama,CBrama
 CButton,CButton,CButton::STATE_Kolizja,CButton::STATE_Odleglosc,CButton::STATE_RuchX,CButton::STATE_RuchY,CButton::STATE_RuchZ
+CCameraFPP,CCameraFPP
+CCameraPoint,CCameraPoint
+CCar,CCar
+CCheckPoint,CCheckPoint
+CCutScene,CCutScene
+CCutSceneFx,CCutSceneFx
 GameSDK,GameSDK
