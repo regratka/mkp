@@ -35,4 +35,5 @@ CElevator,CElevator
 CEndPart1,CEndPart1
 CHudGratka,CHudGratka
 CInTextFile,CInTextFile
+CJezyk,CJezyk,CJezyk::Idle,CJezyk::WalkNaviPath
 GameSDK,GameSDK
