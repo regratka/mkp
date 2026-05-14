@@ -22,4 +22,5 @@ CBlokadaLevel4_1,CBlokadaLevel4_1
 CBlokadaLevel5,CBlokadaLevel5
 CBlokadaLevel6,CBlokadaLevel6
 CBrama,CBrama
+CButton,CButton,CButton::STATE_Kolizja,CButton::STATE_Odleglosc,CButton::STATE_RuchX,CButton::STATE_RuchY,CButton::STATE_RuchZ
 GameSDK,GameSDK
