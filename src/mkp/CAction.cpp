@@ -98,7 +98,7 @@ uchar CAction::Load(void* param_1, uint param_2, int param_3) {
 }
 
 /* 4177B0-4177CE 0001E	*/
-uchar CAction::STATE_Empty::scalar_destructor(uchar param_1) {
+CAction::STATE_Empty* CAction::STATE_Empty::scalar_destructor(uchar param_1) {
 	return 0;
 }
 

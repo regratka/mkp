@@ -1,17 +1,17 @@
 {
   "measures": {
-    "fuzzy_match_percent": 18.426298,
-    "total_code": "530457",
+    "fuzzy_match_percent": 14.657024,
+    "total_code": "669584",
     "matched_code": "53703",
-    "matched_code_percent": 10.123912,
+    "matched_code_percent": 8.020352,
     "matched_data_percent": 100.0,
-    "total_functions": 2327,
+    "total_functions": 3069,
     "matched_functions": 559,
-    "matched_functions_percent": 24.022346,
+    "matched_functions_percent": 18.214401,
     "complete_code": "7437",
-    "complete_code_percent": 1.4019986,
+    "complete_code_percent": 1.1106896,
     "complete_data_percent": 100.0,
-    "total_units": 126,
+    "total_units": 207,
     "complete_units": 3
   },
   "units": [
@@ -22860,9 +22860,1768 @@
       }
     },
     {
-      "name": "GameSDK",
+      "name": "CBalon",
       "measures": {
-        "total_code": "3569",
+        "fuzzy_match_percent": 0.56518465,
+        "total_code": "1327",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1327",
+          "fuzzy_match_percent": 0.56518465,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBalon::CBalon",
+          "size": "137",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBalon::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "137"
+        },
+        {
+          "name": "CBalon::~CBalon",
+          "size": "60",
+          "metadata": {},
+          "address": "167"
+        },
+        {
+          "name": "?EXP@CBalon@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBalon::EXP(void)"
+          },
+          "address": "227"
+        },
+        {
+          "name": "CBalon::OnAction",
+          "size": "31",
+          "metadata": {},
+          "address": "317"
+        },
+        {
+          "name": "CBalon::OnFrame",
+          "size": "214",
+          "metadata": {},
+          "address": "348"
+        },
+        {
+          "name": "CBalon::OnDestinationPos",
+          "size": "67",
+          "metadata": {},
+          "address": "562"
+        },
+        {
+          "name": "CBalon::OnLoadChunk",
+          "size": "698",
+          "metadata": {},
+          "address": "629"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel1",
+      "measures": {
+        "fuzzy_match_percent": 0.89179546,
+        "total_code": "841",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "841",
+          "fuzzy_match_percent": 0.89179546,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel1::CBlokadaLevel1",
+          "size": "29",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel1::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "29"
+        },
+        {
+          "name": "CBlokadaLevel1::~CBlokadaLevel1",
+          "size": "12",
+          "metadata": {},
+          "address": "59"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel1@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel1::EXP(void)"
+          },
+          "address": "71"
+        },
+        {
+          "name": "CBlokadaLevel1::OnActivateLevel",
+          "size": "95",
+          "metadata": {},
+          "address": "161"
+        },
+        {
+          "name": "CBlokadaLevel1::OnCollisionObject",
+          "size": "211",
+          "metadata": {},
+          "address": "256"
+        },
+        {
+          "name": "CBlokadaLevel1::Save",
+          "size": "200",
+          "metadata": {},
+          "address": "467"
+        },
+        {
+          "name": "CBlokadaLevel1::OnPlaySoundEnd",
+          "size": "58",
+          "metadata": {},
+          "address": "667"
+        },
+        {
+          "name": "CBlokadaLevel1::Load",
+          "size": "116",
+          "metadata": {},
+          "address": "725"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel3",
+      "measures": {
+        "fuzzy_match_percent": 0.984252,
+        "total_code": "762",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "762",
+          "fuzzy_match_percent": 0.984252,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel3::CBlokadaLevel3",
+          "size": "39",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel3::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CBlokadaLevel3::~CBlokadaLevel3",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel3@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel3::EXP(void)"
+          },
+          "address": "81"
+        },
+        {
+          "name": "CBlokadaLevel3::OnActivateLevel",
+          "size": "114",
+          "metadata": {},
+          "address": "171"
+        },
+        {
+          "name": "CBlokadaLevel3::OnCollisionObject",
+          "size": "301",
+          "metadata": {},
+          "address": "285"
+        },
+        {
+          "name": "CBlokadaLevel3::OnPlaySoundEnd",
+          "size": "56",
+          "metadata": {},
+          "address": "586"
+        },
+        {
+          "name": "CBlokadaLevel3::Load",
+          "size": "120",
+          "metadata": {},
+          "address": "642"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel3_1",
+      "measures": {
+        "fuzzy_match_percent": 2.388535,
+        "total_code": "314",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "314",
+          "fuzzy_match_percent": 2.388535,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel3_1::OnActivateLevel",
+          "size": "16",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel3_1::CBlokadaLevel3_1",
+          "size": "29",
+          "metadata": {},
+          "address": "16"
+        },
+        {
+          "name": "CBlokadaLevel3_1::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "45"
+        },
+        {
+          "name": "CBlokadaLevel3_1::~CBlokadaLevel3_1",
+          "size": "12",
+          "metadata": {},
+          "address": "75"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel3_1@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel3_1::EXP(void)"
+          },
+          "address": "87"
+        },
+        {
+          "name": "CBlokadaLevel3_1::OnCollisionObject",
+          "size": "137",
+          "metadata": {},
+          "address": "177"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel4",
+      "measures": {
+        "fuzzy_match_percent": 1.0744985,
+        "total_code": "698",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "698",
+          "fuzzy_match_percent": 1.0744985,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel4::CBlokadaLevel4",
+          "size": "39",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel4::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CBlokadaLevel4::~CBlokadaLevel4",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel4@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel4::EXP(void)"
+          },
+          "address": "81"
+        },
+        {
+          "name": "CBlokadaLevel4::OnActivateLevel",
+          "size": "170",
+          "metadata": {},
+          "address": "171"
+        },
+        {
+          "name": "CBlokadaLevel4::OnPlaySoundEnd",
+          "size": "56",
+          "metadata": {},
+          "address": "341"
+        },
+        {
+          "name": "CBlokadaLevel4::OnCollisionObject",
+          "size": "301",
+          "metadata": {},
+          "address": "397"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel4_1",
+      "measures": {
+        "fuzzy_match_percent": 2.5167785,
+        "total_code": "298",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "298",
+          "fuzzy_match_percent": 2.5167785,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel4_1::CBlokadaLevel4_1",
+          "size": "29",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel4_1::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "29"
+        },
+        {
+          "name": "CBlokadaLevel4_1::~CBlokadaLevel4_1",
+          "size": "12",
+          "metadata": {},
+          "address": "59"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel4_1@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel4_1::EXP(void)"
+          },
+          "address": "71"
+        },
+        {
+          "name": "CBlokadaLevel4_1::OnCollisionObject",
+          "size": "137",
+          "metadata": {},
+          "address": "161"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel5",
+      "measures": {
+        "fuzzy_match_percent": 2.1306818,
+        "total_code": "352",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "352",
+          "fuzzy_match_percent": 2.1306818,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel5::CBlokadaLevel5",
+          "size": "39",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel5::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CBlokadaLevel5::~CBlokadaLevel5",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel5@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel5::EXP(void)"
+          },
+          "address": "81"
+        },
+        {
+          "name": "CBlokadaLevel5::OnCollisionObject",
+          "size": "110",
+          "metadata": {},
+          "address": "171"
+        },
+        {
+          "name": "CBlokadaLevel5::OnActivateLevel",
+          "size": "39",
+          "metadata": {},
+          "address": "281"
+        },
+        {
+          "name": "CBlokadaLevel5::OnPlaySoundEnd",
+          "size": "32",
+          "metadata": {},
+          "address": "320"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBlokadaLevel6",
+      "measures": {
+        "fuzzy_match_percent": 2.6690392,
+        "total_code": "281",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "281",
+          "fuzzy_match_percent": 2.6690392,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBlokadaLevel6::CBlokadaLevel6",
+          "size": "39",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBlokadaLevel6::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CBlokadaLevel6::~CBlokadaLevel6",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CBlokadaLevel6@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBlokadaLevel6::EXP(void)"
+          },
+          "address": "81"
+        },
+        {
+          "name": "CBlokadaLevel6::OnCollisionObject",
+          "size": "110",
+          "metadata": {},
+          "address": "171"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CBrama",
+      "measures": {
+        "fuzzy_match_percent": 0.44964027,
+        "total_code": "1668",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1668",
+          "fuzzy_match_percent": 0.44964027,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CBrama::CBrama",
+          "size": "67",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CBrama::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "67"
+        },
+        {
+          "name": "CBrama::~CBrama",
+          "size": "11",
+          "metadata": {},
+          "address": "97"
+        },
+        {
+          "name": "?EXP@CBrama@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CBrama::EXP(void)"
+          },
+          "address": "108"
+        },
+        {
+          "name": "CBrama::OnActivate",
+          "size": "45",
+          "metadata": {},
+          "address": "198"
+        },
+        {
+          "name": "CBrama::OnActivateLevel",
+          "size": "343",
+          "metadata": {},
+          "address": "243"
+        },
+        {
+          "name": "CBrama::OnCrash",
+          "size": "33",
+          "metadata": {},
+          "address": "586"
+        },
+        {
+          "name": "CBrama::OnProcessStateMachine",
+          "size": "1007",
+          "metadata": {},
+          "address": "619"
+        },
+        {
+          "name": "CBrama::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "1626"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CButton",
+      "measures": {
+        "fuzzy_match_percent": 0.14863259,
+        "total_code": "5046",
+        "matched_data_percent": 100.0,
+        "total_functions": 26,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "5046",
+          "fuzzy_match_percent": 0.14863259,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CButton::STATE_Kolizja::OnEnterState",
+          "size": "10",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CButton::CButton",
+          "size": "259",
+          "metadata": {},
+          "address": "10"
+        },
+        {
+          "name": "CButton::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "269"
+        },
+        {
+          "name": "CButton::~CButton",
+          "size": "85",
+          "metadata": {},
+          "address": "299"
+        },
+        {
+          "name": "?EXP@CButton@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CButton::EXP(void)"
+          },
+          "address": "384"
+        },
+        {
+          "name": "CButton::OnActivateLevel",
+          "size": "694",
+          "metadata": {},
+          "address": "474"
+        },
+        {
+          "name": "CButton::FUN004182a0",
+          "size": "211",
+          "metadata": {},
+          "address": "1168"
+        },
+        {
+          "name": "CButton::OnAction",
+          "size": "69",
+          "metadata": {},
+          "address": "1379"
+        },
+        {
+          "name": "CButton::Save",
+          "size": "171",
+          "metadata": {},
+          "address": "1448"
+        },
+        {
+          "name": "CButton::Load",
+          "size": "245",
+          "metadata": {},
+          "address": "1619"
+        },
+        {
+          "name": "CButton::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "1864"
+        },
+        {
+          "name": "CButton::FUN004185b0",
+          "size": "86",
+          "metadata": {},
+          "address": "1906"
+        },
+        {
+          "name": "CButton::FUN00418610",
+          "size": "323",
+          "metadata": {},
+          "address": "1992"
+        },
+        {
+          "name": "CButton::OnFadeOutEnd",
+          "size": "73",
+          "metadata": {},
+          "address": "2315"
+        },
+        {
+          "name": "CButton::FUN004187b0",
+          "size": "708",
+          "metadata": {},
+          "address": "2388"
+        },
+        {
+          "name": "CButton::FUN00418a90",
+          "size": "502",
+          "metadata": {},
+          "address": "3096"
+        },
+        {
+          "name": "CButton::FUN00418c90",
+          "size": "161",
+          "metadata": {},
+          "address": "3598"
+        },
+        {
+          "name": "CButton::OnDestTime",
+          "size": "64",
+          "metadata": {},
+          "address": "3759"
+        },
+        {
+          "name": "CButton::STATE_Kolizja::OnCollisionObject",
+          "size": "151",
+          "metadata": {},
+          "address": "3823"
+        },
+        {
+          "name": "CButton::STATE_Odleglosc::OnEnterState",
+          "size": "25",
+          "metadata": {},
+          "address": "3974"
+        },
+        {
+          "name": "CButton::STATE_Odleglosc::OnInputKey",
+          "size": "178",
+          "metadata": {},
+          "address": "3999"
+        },
+        {
+          "name": "CButton::STATE_Odleglosc::OnDestinationDir",
+          "size": "11",
+          "metadata": {},
+          "address": "4177"
+        },
+        {
+          "name": "CButton::STATE_RuchX::OnEnterState",
+          "size": "90",
+          "metadata": {},
+          "address": "4188"
+        },
+        {
+          "name": "CButton::STATE_RuchX::OnFrame",
+          "size": "256",
+          "metadata": {},
+          "address": "4278"
+        },
+        {
+          "name": "CButton::STATE_RuchY::OnFrame",
+          "size": "256",
+          "metadata": {},
+          "address": "4534"
+        },
+        {
+          "name": "CButton::STATE_RuchZ::OnFrame",
+          "size": "256",
+          "metadata": {},
+          "address": "4790"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CCameraFPP",
+      "measures": {
+        "total_code": "429",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "429",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CCameraFPP::CCameraFPP",
+          "size": "36",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CCameraFPP::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "36"
+        },
+        {
+          "name": "CCameraFPP::~CCameraFPP",
+          "size": "12",
+          "metadata": {},
+          "address": "66"
+        },
+        {
+          "name": "CCameraFPP::OnInputMouse",
+          "size": "42",
+          "metadata": {},
+          "address": "78"
+        },
+        {
+          "name": "CCameraFPP::OnActivateView",
+          "size": "21",
+          "metadata": {},
+          "address": "120"
+        },
+        {
+          "name": "CCameraFPP::FUN00404920",
+          "size": "288",
+          "metadata": {},
+          "address": "141"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CCameraPoint",
+      "measures": {
+        "total_code": "1165",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1165",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CCameraPoint::CCameraPoint",
+          "size": "63",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CCameraPoint::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "63"
+        },
+        {
+          "name": "CCameraPoint::~CCameraPoint",
+          "size": "12",
+          "metadata": {},
+          "address": "93"
+        },
+        {
+          "name": "CCameraPoint::OnActivate",
+          "size": "529",
+          "metadata": {},
+          "address": "105"
+        },
+        {
+          "name": "CCameraPoint::OnActivateLevel",
+          "size": "62",
+          "metadata": {},
+          "address": "634"
+        },
+        {
+          "name": "CCameraPoint::OnInputMouse",
+          "size": "403",
+          "metadata": {},
+          "address": "696"
+        },
+        {
+          "name": "CCameraPoint::FUN0040ec33",
+          "size": "66",
+          "metadata": {},
+          "address": "1099"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CCar",
+      "measures": {
+        "fuzzy_match_percent": 4.464286,
+        "total_code": "168",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "168",
+          "fuzzy_match_percent": 4.464286,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CCar::CCar",
+          "size": "18",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CCar::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "18"
+        },
+        {
+          "name": "CCar::~CCar",
+          "size": "11",
+          "metadata": {},
+          "address": "48"
+        },
+        {
+          "name": "?EXP@CCar@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CCar::EXP(void)"
+          },
+          "address": "59"
+        },
+        {
+          "name": "CCar::OnActivate",
+          "size": "19",
+          "metadata": {},
+          "address": "149"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CCheckPiont",
+      "measures": {
+        "fuzzy_match_percent": 2.5510204,
+        "total_code": "294",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "294",
+          "fuzzy_match_percent": 2.5510204,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CCheckPiont::CCheckPiont",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CCheckPiont::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "CCheckPiont::~CCheckPiont",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@CCheckPiont@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CCheckPiont::EXP(void)"
+          },
+          "address": "61"
+        },
+        {
+          "name": "CCheckPiont::OnCollisionObject",
+          "size": "143",
+          "metadata": {},
+          "address": "151"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CCutScene",
+      "measures": {
+        "fuzzy_match_percent": 0.20868114,
+        "total_code": "3594",
+        "matched_data_percent": 100.0,
+        "total_functions": 15,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3594",
+          "fuzzy_match_percent": 0.20868114,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CCutScene::CCutScene",
+          "size": "496",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CCutScene::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "496"
+        },
+        {
+          "name": "CCutScene::~CCutScene",
+          "size": "59",
+          "metadata": {},
+          "address": "526"
+        },
+        {
+          "name": "?EXP@CCutScene@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CCutScene::EXP(void)"
+          },
+          "address": "585"
+        },
+        {
+          "name": "CCutScene::OnActivateLevel",
+          "size": "787",
+          "metadata": {},
+          "address": "675"
+        },
+        {
+          "name": "CCutScene::OnCollisionObject",
+          "size": "113",
+          "metadata": {},
+          "address": "1462"
+        },
+        {
+          "name": "CCutScene::FUN0041d0b0",
+          "size": "453",
+          "metadata": {},
+          "address": "1575"
+        },
+        {
+          "name": "CCutScene::OnDestTime",
+          "size": "606",
+          "metadata": {},
+          "address": "2028"
+        },
+        {
+          "name": "CCutScene::OnFadeOutEnd",
+          "size": "523",
+          "metadata": {},
+          "address": "2634"
+        },
+        {
+          "name": "CCutScene::OnFadeInEnd",
+          "size": "28",
+          "metadata": {},
+          "address": "3157"
+        },
+        {
+          "name": "CCutScene::OnAction",
+          "size": "11",
+          "metadata": {},
+          "address": "3185"
+        },
+        {
+          "name": "CCutScene::OnAction_",
+          "size": "36",
+          "metadata": {},
+          "address": "3196"
+        },
+        {
+          "name": "CCutScene::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "3232"
+        },
+        {
+          "name": "CCutScene::Save",
+          "size": "192",
+          "metadata": {},
+          "address": "3274"
+        },
+        {
+          "name": "CCutScene::Load",
+          "size": "128",
+          "metadata": {},
+          "address": "3466"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CCutSceneFx",
+      "measures": {
+        "fuzzy_match_percent": 0.6596306,
+        "total_code": "1137",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1137",
+          "fuzzy_match_percent": 0.6596306,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CCutSceneFx::CCutSceneFx",
+          "size": "153",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CCutSceneFx::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "153"
+        },
+        {
+          "name": "CCutSceneFx::~CCutSceneFx",
+          "size": "59",
+          "metadata": {},
+          "address": "183"
+        },
+        {
+          "name": "?EXP@CCutSceneFx@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CCutSceneFx::EXP(void)"
+          },
+          "address": "242"
+        },
+        {
+          "name": "CCutSceneFx::OnLoadChunk",
+          "size": "805",
+          "metadata": {},
+          "address": "332"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CDisableZBuffer",
+      "measures": {
+        "fuzzy_match_percent": 4.3103447,
+        "total_code": "174",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "174",
+          "fuzzy_match_percent": 4.3103447,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CDisableZBuffer::CDisableZBuffer",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CDisableZBuffer::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "CDisableZBuffer::~CDisableZBuffer",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@CDisableZBuffer@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CDisableZBuffer::EXP(void)"
+          },
+          "address": "61"
+        },
+        {
+          "name": "CDisableZBuffer::OnActivateLevel",
+          "size": "23",
+          "metadata": {},
+          "address": "151"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CDomekJeza",
+      "measures": {
+        "fuzzy_match_percent": 4.385965,
+        "total_code": "171",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "171",
+          "fuzzy_match_percent": 4.385965,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CDomekJeza::OnActivateLevel",
+          "size": "20",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CDomekJeza::CDomekJeza",
+          "size": "19",
+          "metadata": {},
+          "address": "20"
+        },
+        {
+          "name": "CDomekJeza::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CDomekJeza::~CDomekJeza",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CDomekJeza@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CDomekJeza::EXP(void)"
+          },
+          "address": "81"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CElevator",
+      "measures": {
+        "fuzzy_match_percent": 0.2689136,
+        "total_code": "2789",
+        "matched_data_percent": 100.0,
+        "total_functions": 17,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "2789",
+          "fuzzy_match_percent": 0.2689136,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CElevator::CElevator",
+          "size": "125",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CElevator::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "125"
+        },
+        {
+          "name": "CElevator::~CElevator",
+          "size": "129",
+          "metadata": {},
+          "address": "155"
+        },
+        {
+          "name": "?EXP@CElevator@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CElevator::EXP(void)"
+          },
+          "address": "284"
+        },
+        {
+          "name": "CElevator::OnFrame",
+          "size": "436",
+          "metadata": {},
+          "address": "374"
+        },
+        {
+          "name": "CElevator::OnUpdateMenuSettings",
+          "size": "44",
+          "metadata": {},
+          "address": "810"
+        },
+        {
+          "name": "CElevator::OnActivate",
+          "size": "9",
+          "metadata": {},
+          "address": "854"
+        },
+        {
+          "name": "CElevator::OnDestinationPos",
+          "size": "69",
+          "metadata": {},
+          "address": "863"
+        },
+        {
+          "name": "CElevator::OnAction",
+          "size": "302",
+          "metadata": {},
+          "address": "932"
+        },
+        {
+          "name": "CElevator::OnCollisionObject",
+          "size": "29",
+          "metadata": {},
+          "address": "1234"
+        },
+        {
+          "name": "CElevator::OnAttachChild",
+          "size": "44",
+          "metadata": {},
+          "address": "1263"
+        },
+        {
+          "name": "CElevator::OnDetachChild",
+          "size": "43",
+          "metadata": {},
+          "address": "1307"
+        },
+        {
+          "name": "CElevator::OnActivateLevel",
+          "size": "160",
+          "metadata": {},
+          "address": "1350"
+        },
+        {
+          "name": "CElevator::OnCrash",
+          "size": "34",
+          "metadata": {},
+          "address": "1510"
+        },
+        {
+          "name": "CElevator::OnLoadChunk",
+          "size": "777",
+          "metadata": {},
+          "address": "1544"
+        },
+        {
+          "name": "CElevator::Save",
+          "size": "282",
+          "metadata": {},
+          "address": "2321"
+        },
+        {
+          "name": "CElevator::Load",
+          "size": "186",
+          "metadata": {},
+          "address": "2603"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CEndPart1",
+      "measures": {
+        "fuzzy_match_percent": 1.114413,
+        "total_code": "673",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "673",
+          "fuzzy_match_percent": 1.114413,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CEndPart1::CEndPart1",
+          "size": "99",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CEndPart1::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "99"
+        },
+        {
+          "name": "CEndPart1::~CEndPart1",
+          "size": "87",
+          "metadata": {},
+          "address": "129"
+        },
+        {
+          "name": "?EXP@CEndPart1@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CEndPart1::EXP(void)"
+          },
+          "address": "216"
+        },
+        {
+          "name": "CEndPart1::OnActivate",
+          "size": "78",
+          "metadata": {},
+          "address": "306"
+        },
+        {
+          "name": "CEndPart1::OnActivateLevel",
+          "size": "22",
+          "metadata": {},
+          "address": "384"
+        },
+        {
+          "name": "CEndPart1::OnAction",
+          "size": "36",
+          "metadata": {},
+          "address": "406"
+        },
+        {
+          "name": "CEndPart1::OnAction_",
+          "size": "195",
+          "metadata": {},
+          "address": "442"
+        },
+        {
+          "name": "CEndPart1::OnPlaySoundEnd",
+          "size": "36",
+          "metadata": {},
+          "address": "637"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CHudGratka",
+      "measures": {
+        "total_code": "3637",
+        "matched_data_percent": 100.0,
+        "total_functions": 14,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3637",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CHudGratka::CHudGratka",
+          "size": "239",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CHudGratka::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "239"
+        },
+        {
+          "name": "CHudGratka::~CHudGratka",
+          "size": "12",
+          "metadata": {},
+          "address": "269"
+        },
+        {
+          "name": "CHudGratka::OnActivate",
+          "size": "1673",
+          "metadata": {},
+          "address": "281"
+        },
+        {
+          "name": "CHudGratka::OnActivateLevel",
+          "size": "266",
+          "metadata": {},
+          "address": "1954"
+        },
+        {
+          "name": "CHudGratka::OnFrame",
+          "size": "113",
+          "metadata": {},
+          "address": "2220"
+        },
+        {
+          "name": "CHudGratka::FUN0042ce80",
+          "size": "181",
+          "metadata": {},
+          "address": "2333"
+        },
+        {
+          "name": "CHudGratka::FUN0042cf40",
+          "size": "181",
+          "metadata": {},
+          "address": "2514"
+        },
+        {
+          "name": "CHudGratka::FUN0042d000",
+          "size": "41",
+          "metadata": {},
+          "address": "2695"
+        },
+        {
+          "name": "CHudGratka::FUN0042d030",
+          "size": "249",
+          "metadata": {},
+          "address": "2736"
+        },
+        {
+          "name": "CHudGratka::FUN0042d360",
+          "size": "233",
+          "metadata": {},
+          "address": "2985"
+        },
+        {
+          "name": "CHudGratka::FUN0042d460",
+          "size": "220",
+          "metadata": {},
+          "address": "3218"
+        },
+        {
+          "name": "CHudGratka::FUN0042d6e0",
+          "size": "66",
+          "metadata": {},
+          "address": "3438"
+        },
+        {
+          "name": "CHudGratka::FUN0042d780",
+          "size": "133",
+          "metadata": {},
+          "address": "3504"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CInTextFile",
+      "measures": {
+        "total_code": "283",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "283",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CInTextFile::CInTextFile",
+          "size": "9",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CInTextFile::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "9"
+        },
+        {
+          "name": "CInTextFile::~CInTextFile",
+          "size": "11",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CInTextFile::FUN00442770",
+          "size": "124",
+          "metadata": {},
+          "address": "50"
+        },
+        {
+          "name": "CInTextFile::FUN004427f0",
+          "size": "61",
+          "metadata": {},
+          "address": "174"
+        },
+        {
+          "name": "CInTextFile::FUN00442830",
+          "size": "20",
+          "metadata": {},
+          "address": "235"
+        },
+        {
+          "name": "CInTextFile::FUN00442850",
+          "size": "28",
+          "metadata": {},
+          "address": "255"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CJezyk",
+      "measures": {
+        "fuzzy_match_percent": 0.26852846,
+        "total_code": "2793",
         "matched_data_percent": 100.0,
         "total_functions": 16,
         "complete_data_percent": 100.0,
@@ -22871,7 +24630,4451 @@
       "sections": [
         {
           "name": ".text",
-          "size": "3569",
+          "size": "2793",
+          "fuzzy_match_percent": 0.26852846,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CJezyk::CJezyk",
+          "size": "325",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CJezyk::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "325"
+        },
+        {
+          "name": "CJezyk::~CJezyk",
+          "size": "60",
+          "metadata": {},
+          "address": "355"
+        },
+        {
+          "name": "?EXP@CJezyk@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CJezyk::EXP(void)"
+          },
+          "address": "415"
+        },
+        {
+          "name": "CJezyk::OnActivateLevel",
+          "size": "254",
+          "metadata": {},
+          "address": "505"
+        },
+        {
+          "name": "CJezyk::FUN0043d420",
+          "size": "176",
+          "metadata": {},
+          "address": "759"
+        },
+        {
+          "name": "CJezyk::OnPlaySoundEnd",
+          "size": "36",
+          "metadata": {},
+          "address": "935"
+        },
+        {
+          "name": "CJezyk::FUN0043d500",
+          "size": "230",
+          "metadata": {},
+          "address": "971"
+        },
+        {
+          "name": "CJezyk::FUN0043d5f0",
+          "size": "35",
+          "metadata": {},
+          "address": "1201"
+        },
+        {
+          "name": "CJezyk::FUN0043d620",
+          "size": "402",
+          "metadata": {},
+          "address": "1236"
+        },
+        {
+          "name": "CJezyk::WalkNaviPath::OnEnterState",
+          "size": "212",
+          "metadata": {},
+          "address": "1638"
+        },
+        {
+          "name": "CJezyk::WalkNaviPath::OnFrame",
+          "size": "532",
+          "metadata": {},
+          "address": "1850"
+        },
+        {
+          "name": "CJezyk::WalkNaviPath::OnDestinationPos",
+          "size": "160",
+          "metadata": {},
+          "address": "2382"
+        },
+        {
+          "name": "CJezyk::WalkNaviPath::OnCollisionObject",
+          "size": "198",
+          "metadata": {},
+          "address": "2542"
+        },
+        {
+          "name": "CJezyk::WalkNaviPath::OnAnimEnd",
+          "size": "21",
+          "metadata": {},
+          "address": "2740"
+        },
+        {
+          "name": "CJezyk::Idle::OnEnterState",
+          "size": "32",
+          "metadata": {},
+          "address": "2761"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CKlucz",
+      "measures": {
+        "fuzzy_match_percent": 0.9566327,
+        "total_code": "784",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "784",
+          "fuzzy_match_percent": 0.9566327,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CKlucz::CKlucz",
+          "size": "32",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CKlucz::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "32"
+        },
+        {
+          "name": "CKlucz::~CKlucz",
+          "size": "11",
+          "metadata": {},
+          "address": "62"
+        },
+        {
+          "name": "?EXP@CKlucz@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CKlucz::EXP(void)"
+          },
+          "address": "73"
+        },
+        {
+          "name": "CKlucz::OnCollisionObject",
+          "size": "83",
+          "metadata": {},
+          "address": "163"
+        },
+        {
+          "name": "CKlucz::Load",
+          "size": "187",
+          "metadata": {},
+          "address": "246"
+        },
+        {
+          "name": "CKlucz::OnActivate",
+          "size": "162",
+          "metadata": {},
+          "address": "433"
+        },
+        {
+          "name": "CKlucz::Save",
+          "size": "189",
+          "metadata": {},
+          "address": "595"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CKrysztal",
+      "measures": {
+        "fuzzy_match_percent": 2.0833333,
+        "total_code": "360",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "360",
+          "fuzzy_match_percent": 2.0833333,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CKrysztal::CKrysztal",
+          "size": "32",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CKrysztal::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "32"
+        },
+        {
+          "name": "CKrysztal::~CKrysztal",
+          "size": "11",
+          "metadata": {},
+          "address": "62"
+        },
+        {
+          "name": "?EXP@CKrysztal@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CKrysztal::EXP(void)"
+          },
+          "address": "73"
+        },
+        {
+          "name": "CKrysztal::OnCollisionObject",
+          "size": "83",
+          "metadata": {},
+          "address": "163"
+        },
+        {
+          "name": "CKrysztal::Load",
+          "size": "114",
+          "metadata": {},
+          "address": "246"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CKrzak",
+      "measures": {
+        "fuzzy_match_percent": 1.3786764,
+        "total_code": "544",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "544",
+          "fuzzy_match_percent": 1.3786764,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CKrzak::CKrzak",
+          "size": "52",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CKrzak::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "52"
+        },
+        {
+          "name": "CKrzak::~CKrzak",
+          "size": "12",
+          "metadata": {},
+          "address": "82"
+        },
+        {
+          "name": "?EXP@CKrzak@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CKrzak::EXP(void)"
+          },
+          "address": "94"
+        },
+        {
+          "name": "CKrzak::OnActivate",
+          "size": "49",
+          "metadata": {},
+          "address": "184"
+        },
+        {
+          "name": "CKrzak::OnActivateLevel",
+          "size": "76",
+          "metadata": {},
+          "address": "233"
+        },
+        {
+          "name": "CKrzak::OnFrame",
+          "size": "199",
+          "metadata": {},
+          "address": "309"
+        },
+        {
+          "name": "CKrzak::OnLoadChunk",
+          "size": "36",
+          "metadata": {},
+          "address": "508"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CLasica",
+      "measures": {
+        "fuzzy_match_percent": 0.1263477,
+        "total_code": "5936",
+        "matched_data_percent": 100.0,
+        "total_functions": 11,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "5936",
+          "fuzzy_match_percent": 0.1263477,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CLasica::CLasica",
+          "size": "352",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CLasica::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "352"
+        },
+        {
+          "name": "CLasica::~CLasica",
+          "size": "129",
+          "metadata": {},
+          "address": "382"
+        },
+        {
+          "name": "?EXP@CLasica@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CLasica::EXP(void)"
+          },
+          "address": "511"
+        },
+        {
+          "name": "CLasica::OnActivateLevel",
+          "size": "217",
+          "metadata": {},
+          "address": "601"
+        },
+        {
+          "name": "CLasica::FUN0043e520",
+          "size": "668",
+          "metadata": {},
+          "address": "818"
+        },
+        {
+          "name": "CLasica::OnLoadChunk",
+          "size": "749",
+          "metadata": {},
+          "address": "1486"
+        },
+        {
+          "name": "CLasica::Idle::OnEnterState",
+          "size": "75",
+          "metadata": {},
+          "address": "2235"
+        },
+        {
+          "name": "CLasica::Idle::OnFrame",
+          "size": "258",
+          "metadata": {},
+          "address": "2310"
+        },
+        {
+          "name": "CLasica::Idle::OnAnimEnd",
+          "size": "94",
+          "metadata": {},
+          "address": "2568"
+        },
+        {
+          "name": "CLasica::FUN0043ed80",
+          "size": "3274",
+          "metadata": {},
+          "address": "2662"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CLevelIntro",
+      "measures": {
+        "fuzzy_match_percent": 1.0302198,
+        "total_code": "728",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "728",
+          "fuzzy_match_percent": 1.0302198,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CLevelIntro::CLevelIntro",
+          "size": "97",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CLevelIntro::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "97"
+        },
+        {
+          "name": "CLevelIntro::~CLevelIntro",
+          "size": "87",
+          "metadata": {},
+          "address": "127"
+        },
+        {
+          "name": "?EXP@CLevelIntro@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CLevelIntro::EXP(void)"
+          },
+          "address": "214"
+        },
+        {
+          "name": "CLevelIntro::OnActivate",
+          "size": "294",
+          "metadata": {},
+          "address": "304"
+        },
+        {
+          "name": "CLevelIntro::OnActivateLevel",
+          "size": "68",
+          "metadata": {},
+          "address": "598"
+        },
+        {
+          "name": "CLevelIntro::OnInputKey",
+          "size": "62",
+          "metadata": {},
+          "address": "666"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CLevelMenuNet",
+      "measures": {
+        "fuzzy_match_percent": 1.4177694,
+        "total_code": "529",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "529",
+          "fuzzy_match_percent": 1.4177694,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CLevelMenuNet::CLevelMenuNet",
+          "size": "89",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CLevelMenuNet::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "89"
+        },
+        {
+          "name": "CLevelMenuNet::~CLevelMenuNet",
+          "size": "87",
+          "metadata": {},
+          "address": "119"
+        },
+        {
+          "name": "?EXP@CLevelMenuNet@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CLevelMenuNet::EXP(void)"
+          },
+          "address": "206"
+        },
+        {
+          "name": "CLevelMenuNet::OnActivate",
+          "size": "199",
+          "metadata": {},
+          "address": "296"
+        },
+        {
+          "name": "CLevelMenuNet::OnActivateLevel",
+          "size": "14",
+          "metadata": {},
+          "address": "495"
+        },
+        {
+          "name": "CLevelMenuNet::OnInputKey",
+          "size": "20",
+          "metadata": {},
+          "address": "509"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CLevelNET",
+      "measures": {
+        "fuzzy_match_percent": 0.984252,
+        "total_code": "762",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "762",
+          "fuzzy_match_percent": 0.984252,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CLevelNET::CLevelNET",
+          "size": "96",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CLevelNET::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "96"
+        },
+        {
+          "name": "CLevelNET::~CLevelNET",
+          "size": "113",
+          "metadata": {},
+          "address": "126"
+        },
+        {
+          "name": "?EXP@CLevelNET@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CLevelNET::EXP(void)"
+          },
+          "address": "239"
+        },
+        {
+          "name": "CLevelNET::OnActivate",
+          "size": "280",
+          "metadata": {},
+          "address": "329"
+        },
+        {
+          "name": "CLevelNET::OnActivateLevel",
+          "size": "153",
+          "metadata": {},
+          "address": "609"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CLevelSDK",
+      "measures": {
+        "fuzzy_match_percent": 1.2116317,
+        "total_code": "619",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "619",
+          "fuzzy_match_percent": 1.2116317,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CLevelSDK::CLevelSDK",
+          "size": "97",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CLevelSDK::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "97"
+        },
+        {
+          "name": "CLevelSDK::~CLevelSDK",
+          "size": "87",
+          "metadata": {},
+          "address": "127"
+        },
+        {
+          "name": "?EXP@CLevelSDK@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CLevelSDK::EXP(void)"
+          },
+          "address": "214"
+        },
+        {
+          "name": "CLevelSDK::OnActivate",
+          "size": "196",
+          "metadata": {},
+          "address": "304"
+        },
+        {
+          "name": "CLevelSDK::OnActivateLevel",
+          "size": "119",
+          "metadata": {},
+          "address": "500"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CLevelSkaly",
+      "measures": {
+        "fuzzy_match_percent": 0.9025271,
+        "total_code": "831",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "831",
+          "fuzzy_match_percent": 0.9025271,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CLevelSkaly::CLevelSkaly",
+          "size": "97",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CLevelSkaly::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "97"
+        },
+        {
+          "name": "CLevelSkaly::~CLevelSkaly",
+          "size": "113",
+          "metadata": {},
+          "address": "127"
+        },
+        {
+          "name": "?EXP@CLevelSkaly@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CLevelSkaly::EXP(void)"
+          },
+          "address": "240"
+        },
+        {
+          "name": "CLevelSkaly::OnActivate",
+          "size": "315",
+          "metadata": {},
+          "address": "330"
+        },
+        {
+          "name": "CLevelSkaly::OnActivateLevel",
+          "size": "97",
+          "metadata": {},
+          "address": "645"
+        },
+        {
+          "name": "CLevelSkaly::OnFrame",
+          "size": "56",
+          "metadata": {},
+          "address": "742"
+        },
+        {
+          "name": "CLevelSkaly::OnInputKey",
+          "size": "33",
+          "metadata": {},
+          "address": "798"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMenuHud",
+      "measures": {
+        "total_code": "4948",
+        "matched_data_percent": 100.0,
+        "total_functions": 11,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "4948",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMenuHud::CMenuHud",
+          "size": "294",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMenuHud::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "294"
+        },
+        {
+          "name": "CMenuHud::~CMenuHud",
+          "size": "12",
+          "metadata": {},
+          "address": "324"
+        },
+        {
+          "name": "CMenuHud::OnActivate",
+          "size": "1426",
+          "metadata": {},
+          "address": "336"
+        },
+        {
+          "name": "CMenuHud::OnMouseArrive",
+          "size": "427",
+          "metadata": {},
+          "address": "1762"
+        },
+        {
+          "name": "CMenuHud::OnMouseLeave",
+          "size": "139",
+          "metadata": {},
+          "address": "2189"
+        },
+        {
+          "name": "CMenuHud::OnButtonDown",
+          "size": "423",
+          "metadata": {},
+          "address": "2328"
+        },
+        {
+          "name": "CMenuHud::OnFadeOutEnd",
+          "size": "1394",
+          "metadata": {},
+          "address": "2751"
+        },
+        {
+          "name": "CMenuHud::OnActivateLevel",
+          "size": "389",
+          "metadata": {},
+          "address": "4145"
+        },
+        {
+          "name": "CMenuHud::OnFrame",
+          "size": "195",
+          "metadata": {},
+          "address": "4534"
+        },
+        {
+          "name": "CMenuHud::FUN00415150",
+          "size": "219",
+          "metadata": {},
+          "address": "4729"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMenuNetwork",
+      "measures": {
+        "total_code": "2855",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "2855",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMenuNetwork::CMenuNetwork",
+          "size": "169",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMenuNetwork::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "169"
+        },
+        {
+          "name": "CMenuNetwork::~CMenuNetwork",
+          "size": "12",
+          "metadata": {},
+          "address": "199"
+        },
+        {
+          "name": "CMenuNetwork::OnActivate",
+          "size": "1024",
+          "metadata": {},
+          "address": "211"
+        },
+        {
+          "name": "CMenuNetwork::OnActivateLevel",
+          "size": "632",
+          "metadata": {},
+          "address": "1235"
+        },
+        {
+          "name": "CMenuNetwork::OnFrame",
+          "size": "339",
+          "metadata": {},
+          "address": "1867"
+        },
+        {
+          "name": "CMenuNetwork::OnButtonDown",
+          "size": "649",
+          "metadata": {},
+          "address": "2206"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMenuOpcje",
+      "measures": {
+        "total_code": "6906",
+        "matched_data_percent": 100.0,
+        "total_functions": 12,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "6906",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMenuOpcje::CMenuOpcje",
+          "size": "346",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMenuOpcje::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "346"
+        },
+        {
+          "name": "CMenuOpcje::~CMenuOpcje",
+          "size": "86",
+          "metadata": {},
+          "address": "376"
+        },
+        {
+          "name": "CMenuOpcje::OnActivate",
+          "size": "3360",
+          "metadata": {},
+          "address": "462"
+        },
+        {
+          "name": "CMenuOpcje::OnFrame",
+          "size": "238",
+          "metadata": {},
+          "address": "3822"
+        },
+        {
+          "name": "CMenuOpcje::OnActivateLevel",
+          "size": "66",
+          "metadata": {},
+          "address": "4060"
+        },
+        {
+          "name": "CMenuOpcje::OnButtonDown",
+          "size": "836",
+          "metadata": {},
+          "address": "4126"
+        },
+        {
+          "name": "CMenuOpcje::OnInputKey",
+          "size": "1591",
+          "metadata": {},
+          "address": "4962"
+        },
+        {
+          "name": "CMenuOpcje::OnButtonUp",
+          "size": "132",
+          "metadata": {},
+          "address": "6553"
+        },
+        {
+          "name": "CMenuOpcje::OnInputMouse",
+          "size": "100",
+          "metadata": {},
+          "address": "6685"
+        },
+        {
+          "name": "CMenuOpcje::OnMouseArrive",
+          "size": "68",
+          "metadata": {},
+          "address": "6785"
+        },
+        {
+          "name": "CMenuOpcje::OnMouseLeave",
+          "size": "53",
+          "metadata": {},
+          "address": "6853"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMenuSDK",
+      "measures": {
+        "fuzzy_match_percent": 1.7899761,
+        "total_code": "419",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "419",
+          "fuzzy_match_percent": 1.7899761,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMenuSDK::CMenuSDK",
+          "size": "33",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMenuSDK::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "33"
+        },
+        {
+          "name": "CMenuSDK::~CMenuSDK",
+          "size": "12",
+          "metadata": {},
+          "address": "63"
+        },
+        {
+          "name": "?EXP@CMenuSDK@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CMenuSDK::EXP(void)"
+          },
+          "address": "75"
+        },
+        {
+          "name": "CMenuSDK::OnActivate",
+          "size": "201",
+          "metadata": {},
+          "address": "165"
+        },
+        {
+          "name": "CMenuSDK::OnActivateLevel",
+          "size": "53",
+          "metadata": {},
+          "address": "366"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMoneta",
+      "measures": {
+        "fuzzy_match_percent": 1.2711865,
+        "total_code": "590",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "590",
+          "fuzzy_match_percent": 1.2711865,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMoneta::FUN00432f20",
+          "size": "69",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMoneta::CMoneta",
+          "size": "32",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "CMoneta::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "101"
+        },
+        {
+          "name": "CMoneta::~CMoneta",
+          "size": "11",
+          "metadata": {},
+          "address": "131"
+        },
+        {
+          "name": "?EXP@CMoneta@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CMoneta::EXP(void)"
+          },
+          "address": "142"
+        },
+        {
+          "name": "CMoneta::OnCollisionObject",
+          "size": "97",
+          "metadata": {},
+          "address": "232"
+        },
+        {
+          "name": "CMoneta::Save",
+          "size": "171",
+          "metadata": {},
+          "address": "329"
+        },
+        {
+          "name": "CMoneta::Load",
+          "size": "90",
+          "metadata": {},
+          "address": "500"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMotorboat",
+      "measures": {
+        "fuzzy_match_percent": 0.18037517,
+        "total_code": "4158",
+        "matched_data_percent": 100.0,
+        "total_functions": 18,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "4158",
+          "fuzzy_match_percent": 0.18037517,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMotorboat::CMotorboat",
+          "size": "171",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMotorboat::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "171"
+        },
+        {
+          "name": "CMotorboat::~CMotorboat",
+          "size": "12",
+          "metadata": {},
+          "address": "201"
+        },
+        {
+          "name": "?EXP@CMotorboat@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CMotorboat::EXP(void)"
+          },
+          "address": "213"
+        },
+        {
+          "name": "CMotorboat::Load",
+          "size": "454",
+          "metadata": {},
+          "address": "303"
+        },
+        {
+          "name": "CMotorboat::Save",
+          "size": "902",
+          "metadata": {},
+          "address": "757"
+        },
+        {
+          "name": "CMotorboat::OnPlaySoundEnd",
+          "size": "82",
+          "metadata": {},
+          "address": "1659"
+        },
+        {
+          "name": "CMotorboat::OnExitYesNo",
+          "size": "93",
+          "metadata": {},
+          "address": "1741"
+        },
+        {
+          "name": "CMotorboat::FUN0040daf0",
+          "size": "78",
+          "metadata": {},
+          "address": "1834"
+        },
+        {
+          "name": "CMotorboat::OnInputKey",
+          "size": "558",
+          "metadata": {},
+          "address": "1912"
+        },
+        {
+          "name": "CMotorboat::FUN0040de40",
+          "size": "169",
+          "metadata": {},
+          "address": "2470"
+        },
+        {
+          "name": "CMotorboat::FUN0040df10",
+          "size": "135",
+          "metadata": {},
+          "address": "2639"
+        },
+        {
+          "name": "CMotorboat::OnFrame",
+          "size": "74",
+          "metadata": {},
+          "address": "2774"
+        },
+        {
+          "name": "CMotorboat::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "2848"
+        },
+        {
+          "name": "CMotorboat::OnFadeOutEnd",
+          "size": "70",
+          "metadata": {},
+          "address": "2890"
+        },
+        {
+          "name": "CMotorboat::OnCrash",
+          "size": "209",
+          "metadata": {},
+          "address": "2960"
+        },
+        {
+          "name": "CMotorboat::FUN0040e160",
+          "size": "180",
+          "metadata": {},
+          "address": "3169"
+        },
+        {
+          "name": "CMotorboat::FUN0040e220",
+          "size": "809",
+          "metadata": {},
+          "address": "3349"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CMusicGenerator",
+      "measures": {
+        "fuzzy_match_percent": 0.89073634,
+        "total_code": "842",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "842",
+          "fuzzy_match_percent": 0.89073634,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CMusicGenerator::CMusicGenerator",
+          "size": "81",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CMusicGenerator::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "81"
+        },
+        {
+          "name": "CMusicGenerator::~CMusicGenerator",
+          "size": "11",
+          "metadata": {},
+          "address": "111"
+        },
+        {
+          "name": "?EXP@CMusicGenerator@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CMusicGenerator::EXP(void)"
+          },
+          "address": "122"
+        },
+        {
+          "name": "CMusicGenerator::OnAction",
+          "size": "117",
+          "metadata": {},
+          "address": "212"
+        },
+        {
+          "name": "CMusicGenerator::OnFrame",
+          "size": "110",
+          "metadata": {},
+          "address": "329"
+        },
+        {
+          "name": "CMusicGenerator::OnActivate",
+          "size": "317",
+          "metadata": {},
+          "address": "439"
+        },
+        {
+          "name": "CMusicGenerator::OnUpdateMenuSettings",
+          "size": "44",
+          "metadata": {},
+          "address": "756"
+        },
+        {
+          "name": "CMusicGenerator::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "800"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CNetworkMeshObject",
+      "measures": {
+        "total_code": "1371",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1371",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CNetworkMeshObject::CNetworkMeshObject",
+          "size": "72",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CNetworkMeshObject::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "72"
+        },
+        {
+          "name": "CNetworkMeshObject::~CNetworkMeshObject",
+          "size": "12",
+          "metadata": {},
+          "address": "102"
+        },
+        {
+          "name": "CNetworkMeshObject::OnActivate",
+          "size": "411",
+          "metadata": {},
+          "address": "114"
+        },
+        {
+          "name": "CNetworkMeshObject::OnActivateLevel",
+          "size": "380",
+          "metadata": {},
+          "address": "525"
+        },
+        {
+          "name": "CNetworkMeshObject::OnFrame",
+          "size": "439",
+          "metadata": {},
+          "address": "905"
+        },
+        {
+          "name": "CNetworkMeshObject::OnOutsideFrustumCull",
+          "size": "8",
+          "metadata": {},
+          "address": "1344"
+        },
+        {
+          "name": "CNetworkMeshObject::OnInsideFrustumCull",
+          "size": "8",
+          "metadata": {},
+          "address": "1352"
+        },
+        {
+          "name": "CNetworkMeshObject::OnDestinationPos",
+          "size": "11",
+          "metadata": {},
+          "address": "1360"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CNiewidzialnaSciana",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CNiewidzialnaSciana::CNiewidzialnaSciana",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CNiewidzialnaSciana::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "CNiewidzialnaSciana::~CNiewidzialnaSciana",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@CNiewidzialnaSciana@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CNiewidzialnaSciana::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "COknoTajnyKod",
+      "measures": {
+        "total_code": "1396",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1396",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "COknoTajnyKod::COknoTajnyKod",
+          "size": "93",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "COknoTajnyKod::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "93"
+        },
+        {
+          "name": "COknoTajnyKod::~COknoTajnyKod",
+          "size": "12",
+          "metadata": {},
+          "address": "123"
+        },
+        {
+          "name": "COknoTajnyKod::OnActivate",
+          "size": "721",
+          "metadata": {},
+          "address": "135"
+        },
+        {
+          "name": "COknoTajnyKod::OnFrame",
+          "size": "238",
+          "metadata": {},
+          "address": "856"
+        },
+        {
+          "name": "COknoTajnyKod::OnMouseArrive",
+          "size": "87",
+          "metadata": {},
+          "address": "1094"
+        },
+        {
+          "name": "COknoTajnyKod::OnMouseLeave",
+          "size": "60",
+          "metadata": {},
+          "address": "1181"
+        },
+        {
+          "name": "COknoTajnyKod::OnInputMouse",
+          "size": "60",
+          "metadata": {},
+          "address": "1241"
+        },
+        {
+          "name": "COknoTajnyKod::OnInputKey",
+          "size": "95",
+          "metadata": {},
+          "address": "1301"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CParticlesEmitter",
+      "measures": {
+        "fuzzy_match_percent": 0.50369376,
+        "total_code": "1489",
+        "matched_data_percent": 100.0,
+        "total_functions": 13,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1489",
+          "fuzzy_match_percent": 0.50369376,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CParticlesEmitter::CParticlesEmitter",
+          "size": "59",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CParticlesEmitter::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "59"
+        },
+        {
+          "name": "CParticlesEmitter::~CParticlesEmitter",
+          "size": "11",
+          "metadata": {},
+          "address": "89"
+        },
+        {
+          "name": "?EXP@CParticlesEmitter@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CParticlesEmitter::EXP(void)"
+          },
+          "address": "100"
+        },
+        {
+          "name": "CParticlesEmitter::OnActivate",
+          "size": "115",
+          "metadata": {},
+          "address": "190"
+        },
+        {
+          "name": "CParticlesEmitter::OnActivateLevel",
+          "size": "352",
+          "metadata": {},
+          "address": "305"
+        },
+        {
+          "name": "CParticlesEmitter::OnAction",
+          "size": "187",
+          "metadata": {},
+          "address": "657"
+        },
+        {
+          "name": "CParticlesEmitter::OnFrame",
+          "size": "256",
+          "metadata": {},
+          "address": "844"
+        },
+        {
+          "name": "CParticlesEmitter::OnOutsideFrustumCull",
+          "size": "14",
+          "metadata": {},
+          "address": "1100"
+        },
+        {
+          "name": "CParticlesEmitter::OnInsideFrustumCull",
+          "size": "14",
+          "metadata": {},
+          "address": "1114"
+        },
+        {
+          "name": "CParticlesEmitter::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "1128"
+        },
+        {
+          "name": "CParticlesEmitter::Save",
+          "size": "196",
+          "metadata": {},
+          "address": "1170"
+        },
+        {
+          "name": "CParticlesEmitter::Load",
+          "size": "123",
+          "metadata": {},
+          "address": "1366"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlaneDeath",
+      "measures": {
+        "fuzzy_match_percent": 4.9668875,
+        "total_code": "151",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "151",
+          "fuzzy_match_percent": 4.9668875,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlaneDeath::CPlaneDeath",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlaneDeath::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "CPlaneDeath::~CPlaneDeath",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "?EXP@CPlaneDeath@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlaneDeath::EXP(void)"
+          },
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlaneTerrain",
+      "measures": {
+        "total_code": "190",
+        "matched_data_percent": 100.0,
+        "total_functions": 4,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "190",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlaneTerrain::CPlaneTerrain",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlaneTerrain::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "CPlaneTerrain::~CPlaneTerrain",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "CPlaneTerrain::OnActivate",
+          "size": "129",
+          "metadata": {},
+          "address": "61"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlanszaEdu",
+      "measures": {
+        "fuzzy_match_percent": 0.09920635,
+        "total_code": "7560",
+        "matched_data_percent": 100.0,
+        "total_functions": 15,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "7560",
+          "fuzzy_match_percent": 0.09920635,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlanszaEdu::CPlanszaEdu",
+          "size": "236",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlanszaEdu::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "236"
+        },
+        {
+          "name": "CPlanszaEdu::~CPlanszaEdu",
+          "size": "12",
+          "metadata": {},
+          "address": "266"
+        },
+        {
+          "name": "?EXP@CPlanszaEdu@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlanszaEdu::EXP(void)"
+          },
+          "address": "278"
+        },
+        {
+          "name": "CPlanszaEdu::OnActivate",
+          "size": "165",
+          "metadata": {},
+          "address": "368"
+        },
+        {
+          "name": "CPlanszaEdu::OnActivateLevel",
+          "size": "4264",
+          "metadata": {},
+          "address": "533"
+        },
+        {
+          "name": "CPlanszaEdu::OnPlaySoundEnd",
+          "size": "39",
+          "metadata": {},
+          "address": "4797"
+        },
+        {
+          "name": "CPlanszaEdu::OnInputMouse",
+          "size": "42",
+          "metadata": {},
+          "address": "4836"
+        },
+        {
+          "name": "CPlanszaEdu::OnInputKey",
+          "size": "481",
+          "metadata": {},
+          "address": "4878"
+        },
+        {
+          "name": "CPlanszaEdu::FUN0041fcc0",
+          "size": "848",
+          "metadata": {},
+          "address": "5359"
+        },
+        {
+          "name": "CPlanszaEdu::OnMouseArrive",
+          "size": "818",
+          "metadata": {},
+          "address": "6207"
+        },
+        {
+          "name": "CPlanszaEdu::OnMouseLeave",
+          "size": "60",
+          "metadata": {},
+          "address": "7025"
+        },
+        {
+          "name": "CPlanszaEdu::OnFrame",
+          "size": "335",
+          "metadata": {},
+          "address": "7085"
+        },
+        {
+          "name": "CPlanszaEdu::OnCollisionObject",
+          "size": "104",
+          "metadata": {},
+          "address": "7420"
+        },
+        {
+          "name": "CPlanszaEdu::OnLoadChunk",
+          "size": "36",
+          "metadata": {},
+          "address": "7524"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlanszaZadanie01",
+      "measures": {
+        "fuzzy_match_percent": 0.19930907,
+        "total_code": "3763",
+        "matched_data_percent": 100.0,
+        "total_functions": 14,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3763",
+          "fuzzy_match_percent": 0.19930907,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlanszaZadanie01::CPlanszaZadanie01",
+          "size": "223",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlanszaZadanie01::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "223"
+        },
+        {
+          "name": "CPlanszaZadanie01::~CPlanszaZadanie01",
+          "size": "12",
+          "metadata": {},
+          "address": "253"
+        },
+        {
+          "name": "?EXP@CPlanszaZadanie01@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlanszaZadanie01::EXP(void)"
+          },
+          "address": "265"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnActivate",
+          "size": "236",
+          "metadata": {},
+          "address": "355"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnActivateLevel",
+          "size": "1527",
+          "metadata": {},
+          "address": "591"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnFrame",
+          "size": "335",
+          "metadata": {},
+          "address": "2118"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnMouseArrive",
+          "size": "236",
+          "metadata": {},
+          "address": "2453"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnMouseLeave",
+          "size": "60",
+          "metadata": {},
+          "address": "2689"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnInputMouse",
+          "size": "569",
+          "metadata": {},
+          "address": "2749"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnPlaySoundEnd",
+          "size": "153",
+          "metadata": {},
+          "address": "3318"
+        },
+        {
+          "name": "CPlanszaZadanie01::OnCollisionObject",
+          "size": "76",
+          "metadata": {},
+          "address": "3471"
+        },
+        {
+          "name": "CPlanszaZadanie01::Load",
+          "size": "52",
+          "metadata": {},
+          "address": "3547"
+        },
+        {
+          "name": "CPlanszaZadanie01::Save",
+          "size": "164",
+          "metadata": {},
+          "address": "3599"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlanszaZadanie02",
+      "measures": {
+        "fuzzy_match_percent": 0.17539757,
+        "total_code": "4276",
+        "matched_data_percent": 100.0,
+        "total_functions": 13,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "4276",
+          "fuzzy_match_percent": 0.17539757,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlanszaZadanie02::CPlanszaZadanie02",
+          "size": "259",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlanszaZadanie02::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "259"
+        },
+        {
+          "name": "CPlanszaZadanie02::~CPlanszaZadanie02",
+          "size": "12",
+          "metadata": {},
+          "address": "289"
+        },
+        {
+          "name": "?EXP@CPlanszaZadanie02@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlanszaZadanie02::EXP(void)"
+          },
+          "address": "301"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnActivate",
+          "size": "236",
+          "metadata": {},
+          "address": "391"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnActivateLevel",
+          "size": "1665",
+          "metadata": {},
+          "address": "627"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnInputMouse",
+          "size": "871",
+          "metadata": {},
+          "address": "2292"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnPlaySoundEnd",
+          "size": "117",
+          "metadata": {},
+          "address": "3163"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnFrame",
+          "size": "544",
+          "metadata": {},
+          "address": "3280"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnMouseArrive",
+          "size": "264",
+          "metadata": {},
+          "address": "3824"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnMouseLeave",
+          "size": "60",
+          "metadata": {},
+          "address": "4088"
+        },
+        {
+          "name": "CPlanszaZadanie02::OnCollisionObject",
+          "size": "76",
+          "metadata": {},
+          "address": "4148"
+        },
+        {
+          "name": "CPlanszaZadanie02::Load",
+          "size": "52",
+          "metadata": {},
+          "address": "4224"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlanszaZadanie04",
+      "measures": {
+        "fuzzy_match_percent": 0.20085698,
+        "total_code": "3734",
+        "matched_data_percent": 100.0,
+        "total_functions": 12,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3734",
+          "fuzzy_match_percent": 0.20085698,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlanszaZadanie04::CPlanszaZadanie04",
+          "size": "175",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlanszaZadanie04::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "175"
+        },
+        {
+          "name": "CPlanszaZadanie04::~CPlanszaZadanie04",
+          "size": "12",
+          "metadata": {},
+          "address": "205"
+        },
+        {
+          "name": "?EXP@CPlanszaZadanie04@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlanszaZadanie04::EXP(void)"
+          },
+          "address": "217"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnActivate",
+          "size": "236",
+          "metadata": {},
+          "address": "307"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnActivateLevel",
+          "size": "1333",
+          "metadata": {},
+          "address": "543"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnPlaySoundEnd",
+          "size": "117",
+          "metadata": {},
+          "address": "1876"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnMouseArrive",
+          "size": "233",
+          "metadata": {},
+          "address": "1993"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnInputMouse",
+          "size": "877",
+          "metadata": {},
+          "address": "2226"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnFrame",
+          "size": "503",
+          "metadata": {},
+          "address": "3103"
+        },
+        {
+          "name": "CPlanszaZadanie04::OnCollisionObject",
+          "size": "76",
+          "metadata": {},
+          "address": "3606"
+        },
+        {
+          "name": "CPlanszaZadanie04::Load",
+          "size": "52",
+          "metadata": {},
+          "address": "3682"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlanszaZadanie05",
+      "measures": {
+        "fuzzy_match_percent": 0.2140411,
+        "total_code": "3504",
+        "matched_data_percent": 100.0,
+        "total_functions": 13,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3504",
+          "fuzzy_match_percent": 0.2140411,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlanszaZadanie05::OnMouseLeave",
+          "size": "60",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlanszaZadanie05::CPlanszaZadanie05",
+          "size": "199",
+          "metadata": {},
+          "address": "60"
+        },
+        {
+          "name": "CPlanszaZadanie05::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "259"
+        },
+        {
+          "name": "CPlanszaZadanie05::~CPlanszaZadanie05",
+          "size": "12",
+          "metadata": {},
+          "address": "289"
+        },
+        {
+          "name": "?EXP@CPlanszaZadanie05@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlanszaZadanie05::EXP(void)"
+          },
+          "address": "301"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnActivate",
+          "size": "236",
+          "metadata": {},
+          "address": "391"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnActivateLevel",
+          "size": "1510",
+          "metadata": {},
+          "address": "627"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnPlaySoundEnd",
+          "size": "117",
+          "metadata": {},
+          "address": "2137"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnFrame",
+          "size": "335",
+          "metadata": {},
+          "address": "2254"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnMouseArrive",
+          "size": "236",
+          "metadata": {},
+          "address": "2589"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnInputMouse",
+          "size": "551",
+          "metadata": {},
+          "address": "2825"
+        },
+        {
+          "name": "CPlanszaZadanie05::OnCollisionObject",
+          "size": "76",
+          "metadata": {},
+          "address": "3376"
+        },
+        {
+          "name": "CPlanszaZadanie05::Load",
+          "size": "52",
+          "metadata": {},
+          "address": "3452"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlatform",
+      "measures": {
+        "fuzzy_match_percent": 0.4222973,
+        "total_code": "1776",
+        "matched_data_percent": 100.0,
+        "total_functions": 11,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1776",
+          "fuzzy_match_percent": 0.4222973,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlatform::CPlatform",
+          "size": "101",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlatform::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "101"
+        },
+        {
+          "name": "CPlatform::~CPlatform",
+          "size": "129",
+          "metadata": {},
+          "address": "131"
+        },
+        {
+          "name": "?EXP@CPlatform@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlatform::EXP(void)"
+          },
+          "address": "260"
+        },
+        {
+          "name": "CPlatform::OnLoadChunk",
+          "size": "777",
+          "metadata": {},
+          "address": "350"
+        },
+        {
+          "name": "CPlatform::OnFrame",
+          "size": "231",
+          "metadata": {},
+          "address": "1127"
+        },
+        {
+          "name": "CPlatform::OnActivate",
+          "size": "30",
+          "metadata": {},
+          "address": "1358"
+        },
+        {
+          "name": "CPlatform::OnDestinationPos",
+          "size": "36",
+          "metadata": {},
+          "address": "1388"
+        },
+        {
+          "name": "CPlatform::OnActivateLevel",
+          "size": "264",
+          "metadata": {},
+          "address": "1424"
+        },
+        {
+          "name": "CPlatform::OnAction",
+          "size": "54",
+          "metadata": {},
+          "address": "1688"
+        },
+        {
+          "name": "CPlatform::OnCrash",
+          "size": "34",
+          "metadata": {},
+          "address": "1742"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlayerFPP",
+      "measures": {
+        "fuzzy_match_percent": 0.09518974,
+        "total_code": "7879",
+        "matched_data_percent": 100.0,
+        "total_functions": 26,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "7879",
+          "fuzzy_match_percent": 0.09518974,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlayerFPP::CPlayerFPP",
+          "size": "418",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlayerFPP::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "418"
+        },
+        {
+          "name": "CPlayerFPP::~CPlayerFPP",
+          "size": "501",
+          "metadata": {},
+          "address": "448"
+        },
+        {
+          "name": "?EXP@CPlayerFPP@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlayerFPP::EXP(void)"
+          },
+          "address": "949"
+        },
+        {
+          "name": "CPlayerFPP::OnActivateLevel",
+          "size": "703",
+          "metadata": {},
+          "address": "1039"
+        },
+        {
+          "name": "CPlayerFPP::OnAnimEnd",
+          "size": "21",
+          "metadata": {},
+          "address": "1742"
+        },
+        {
+          "name": "CPlayerFPP::OnProcessStateMachine",
+          "size": "752",
+          "metadata": {},
+          "address": "1763"
+        },
+        {
+          "name": "CPlayerFPP::OnInputKey",
+          "size": "406",
+          "metadata": {},
+          "address": "2515"
+        },
+        {
+          "name": "CPlayerFPP::OnFrame",
+          "size": "505",
+          "metadata": {},
+          "address": "2921"
+        },
+        {
+          "name": "CPlayerFPP::FUN00405ba0",
+          "size": "380",
+          "metadata": {},
+          "address": "3426"
+        },
+        {
+          "name": "CPlayerFPP::FUN00405d20",
+          "size": "84",
+          "metadata": {},
+          "address": "3806"
+        },
+        {
+          "name": "CPlayerFPP::FUN00405d80",
+          "size": "456",
+          "metadata": {},
+          "address": "3890"
+        },
+        {
+          "name": "CPlayerFPP::FUN00405f50",
+          "size": "80",
+          "metadata": {},
+          "address": "4346"
+        },
+        {
+          "name": "CPlayerFPP::OnChangeMovement",
+          "size": "13",
+          "metadata": {},
+          "address": "4426"
+        },
+        {
+          "name": "CPlayerFPP::FUN00405fb0",
+          "size": "201",
+          "metadata": {},
+          "address": "4439"
+        },
+        {
+          "name": "CPlayerFPP::OnActivate",
+          "size": "586",
+          "metadata": {},
+          "address": "4640"
+        },
+        {
+          "name": "CPlayerFPP::FUN004062f0",
+          "size": "173",
+          "metadata": {},
+          "address": "5226"
+        },
+        {
+          "name": "CPlayerFPP::FUN004063a0",
+          "size": "458",
+          "metadata": {},
+          "address": "5399"
+        },
+        {
+          "name": "CPlayerFPP::OnInputMouse",
+          "size": "78",
+          "metadata": {},
+          "address": "5857"
+        },
+        {
+          "name": "CPlayerFPP::FUN004065c0",
+          "size": "481",
+          "metadata": {},
+          "address": "5935"
+        },
+        {
+          "name": "CPlayerFPP::OnDestTime",
+          "size": "14",
+          "metadata": {},
+          "address": "6416"
+        },
+        {
+          "name": "CPlayerFPP::OnFadeOutEnd",
+          "size": "67",
+          "metadata": {},
+          "address": "6430"
+        },
+        {
+          "name": "CPlayerFPP::OnFadeInEnd",
+          "size": "65",
+          "metadata": {},
+          "address": "6497"
+        },
+        {
+          "name": "CPlayerFPP::FUN00406860",
+          "size": "432",
+          "metadata": {},
+          "address": "6562"
+        },
+        {
+          "name": "CPlayerFPP::FUN00406bb0",
+          "size": "849",
+          "metadata": {},
+          "address": "6994"
+        },
+        {
+          "name": "CPlayerFPP::OnLoadChunk",
+          "size": "36",
+          "metadata": {},
+          "address": "7843"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlayerRPG",
+      "measures": {
+        "fuzzy_match_percent": 0.6048387,
+        "total_code": "1240",
+        "matched_data_percent": 100.0,
+        "total_functions": 15,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1240",
+          "fuzzy_match_percent": 0.6048387,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlayerRPG::CPlayerRPG",
+          "size": "38",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlayerRPG::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "38"
+        },
+        {
+          "name": "CPlayerRPG::~CPlayerRPG",
+          "size": "11",
+          "metadata": {},
+          "address": "68"
+        },
+        {
+          "name": "?EXP@CPlayerRPG@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlayerRPG::EXP(void)"
+          },
+          "address": "79"
+        },
+        {
+          "name": "CPlayerRPG::OnActivate",
+          "size": "66",
+          "metadata": {},
+          "address": "169"
+        },
+        {
+          "name": "CPlayerRPG::OnActivateLevel",
+          "size": "206",
+          "metadata": {},
+          "address": "235"
+        },
+        {
+          "name": "CPlayerRPG::OnInputMouse",
+          "size": "183",
+          "metadata": {},
+          "address": "441"
+        },
+        {
+          "name": "CPlayerRPG::OnFrame",
+          "size": "24",
+          "metadata": {},
+          "address": "624"
+        },
+        {
+          "name": "CPlayerRPG::Walk::OnEnterState",
+          "size": "82",
+          "metadata": {},
+          "address": "648"
+        },
+        {
+          "name": "CPlayerRPG::Walk::OnFrame",
+          "size": "245",
+          "metadata": {},
+          "address": "730"
+        },
+        {
+          "name": "CPlayerRPG::Walk::OnDestinationPos",
+          "size": "111",
+          "metadata": {},
+          "address": "975"
+        },
+        {
+          "name": "CPlayerRPG::Walk::OnCollisionObject",
+          "size": "29",
+          "metadata": {},
+          "address": "1086"
+        },
+        {
+          "name": "CPlayerRPG::Walk::OnAnimEnd",
+          "size": "21",
+          "metadata": {},
+          "address": "1115"
+        },
+        {
+          "name": "CPlayerRPG::Idle::OnEnterState",
+          "size": "77",
+          "metadata": {},
+          "address": "1136"
+        },
+        {
+          "name": "CPlayerRPG::Idle::OnFrame",
+          "size": "27",
+          "metadata": {},
+          "address": "1213"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CPlayerTPP",
+      "measures": {
+        "fuzzy_match_percent": 0.093260385,
+        "total_code": "8042",
+        "matched_data_percent": 100.0,
+        "total_functions": 40,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "8042",
+          "fuzzy_match_percent": 0.093260385,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CPlayerTPP::CPlayerTPP",
+          "size": "136",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CPlayerTPP::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "136"
+        },
+        {
+          "name": "CPlayerTPP::~CPlayerTPP",
+          "size": "204",
+          "metadata": {},
+          "address": "166"
+        },
+        {
+          "name": "?EXP@CPlayerTPP@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CPlayerTPP::EXP(void)"
+          },
+          "address": "370"
+        },
+        {
+          "name": "CPlayerTPP::OnActivate",
+          "size": "271",
+          "metadata": {},
+          "address": "460"
+        },
+        {
+          "name": "CPlayerTPP::OnActivateLevel",
+          "size": "835",
+          "metadata": {},
+          "address": "731"
+        },
+        {
+          "name": "CPlayerTPP::OnPlaySoundEnd",
+          "size": "32",
+          "metadata": {},
+          "address": "1566"
+        },
+        {
+          "name": "CPlayerTPP::OnFrame",
+          "size": "17",
+          "metadata": {},
+          "address": "1598"
+        },
+        {
+          "name": "CPlayerTPP::OnChangeMovement",
+          "size": "13",
+          "metadata": {},
+          "address": "1615"
+        },
+        {
+          "name": "CPlayerTPP::OnCollisionObject",
+          "size": "350",
+          "metadata": {},
+          "address": "1628"
+        },
+        {
+          "name": "CPlayerTPP::OnExitYesNo",
+          "size": "93",
+          "metadata": {},
+          "address": "1978"
+        },
+        {
+          "name": "CPlayerTPP::OnInputKey",
+          "size": "882",
+          "metadata": {},
+          "address": "2071"
+        },
+        {
+          "name": "CPlayerTPP::OnInputMouse",
+          "size": "162",
+          "metadata": {},
+          "address": "2953"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Idle::OnEnterState",
+          "size": "136",
+          "metadata": {},
+          "address": "3115"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Idle::OnFrame",
+          "size": "114",
+          "metadata": {},
+          "address": "3251"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Idle::OnExitState",
+          "size": "20",
+          "metadata": {},
+          "address": "3365"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Idle::OnInputKey",
+          "size": "22",
+          "metadata": {},
+          "address": "3385"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Forward::OnEnterState",
+          "size": "174",
+          "metadata": {},
+          "address": "3407"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Forward::OnFrame",
+          "size": "109",
+          "metadata": {},
+          "address": "3581"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Forward::OnInputKey",
+          "size": "1207",
+          "metadata": {},
+          "address": "3690"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Forward::OnInputMouse",
+          "size": "350",
+          "metadata": {},
+          "address": "4897"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Forward::OnAnimEnd",
+          "size": "96",
+          "metadata": {},
+          "address": "5247"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Back::OnEnterState",
+          "size": "130",
+          "metadata": {},
+          "address": "5343"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Back::OnFrame",
+          "size": "109",
+          "metadata": {},
+          "address": "5473"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Back::OnInputKey",
+          "size": "319",
+          "metadata": {},
+          "address": "5582"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Back::OnInputMouse",
+          "size": "355",
+          "metadata": {},
+          "address": "5901"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Back::OnAnimEnd",
+          "size": "101",
+          "metadata": {},
+          "address": "6256"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Run_Back::OnExitState",
+          "size": "20",
+          "metadata": {},
+          "address": "6357"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Jump::OnEnterState",
+          "size": "170",
+          "metadata": {},
+          "address": "6377"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Jump::OnFrame",
+          "size": "11",
+          "metadata": {},
+          "address": "6547"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Death::OnChangeMovement",
+          "size": "19",
+          "metadata": {},
+          "address": "6558"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Jump::OnInputKey",
+          "size": "365",
+          "metadata": {},
+          "address": "6577"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Idle::OnCollisionObject",
+          "size": "19",
+          "metadata": {},
+          "address": "6942"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Jump::OnAnimEnd",
+          "size": "132",
+          "metadata": {},
+          "address": "6961"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Jump::OnExitState",
+          "size": "20",
+          "metadata": {},
+          "address": "7093"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Death::OnEnterState",
+          "size": "177",
+          "metadata": {},
+          "address": "7113"
+        },
+        {
+          "name": "CPlayerTPP::STATE_Death::OnFadeOutEnd",
+          "size": "258",
+          "metadata": {},
+          "address": "7290"
+        },
+        {
+          "name": "CPlayerTPP::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "7548"
+        },
+        {
+          "name": "CPlayerTPP::Save",
+          "size": "272",
+          "metadata": {},
+          "address": "7590"
+        },
+        {
+          "name": "CPlayerTPP::Load",
+          "size": "180",
+          "metadata": {},
+          "address": "7862"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CRotateObject",
+      "measures": {
+        "fuzzy_match_percent": 1.5856236,
+        "total_code": "473",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "473",
+          "fuzzy_match_percent": 1.5856236,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CRotateObject::CRotateObject",
+          "size": "42",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CRotateObject::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "42"
+        },
+        {
+          "name": "CRotateObject::~CRotateObject",
+          "size": "12",
+          "metadata": {},
+          "address": "72"
+        },
+        {
+          "name": "?EXP@CRotateObject@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CRotateObject::EXP(void)"
+          },
+          "address": "84"
+        },
+        {
+          "name": "CRotateObject::OnActivateLevel",
+          "size": "257",
+          "metadata": {},
+          "address": "174"
+        },
+        {
+          "name": "CRotateObject::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "431"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CSamouczek",
+      "measures": {
+        "fuzzy_match_percent": 2.3006134,
+        "total_code": "326",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "326",
+          "fuzzy_match_percent": 2.3006134,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CSamouczek::CSamouczek",
+          "size": "38",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CSamouczek::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "38"
+        },
+        {
+          "name": "CSamouczek::~CSamouczek",
+          "size": "12",
+          "metadata": {},
+          "address": "68"
+        },
+        {
+          "name": "?EXP@CSamouczek@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CSamouczek::EXP(void)"
+          },
+          "address": "80"
+        },
+        {
+          "name": "CSamouczek::OnActivateLevel",
+          "size": "39",
+          "metadata": {},
+          "address": "170"
+        },
+        {
+          "name": "CSamouczek::OnCollisionObject",
+          "size": "117",
+          "metadata": {},
+          "address": "209"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CSkalyUstawPostac",
+      "measures": {
+        "fuzzy_match_percent": 0.9481669,
+        "total_code": "791",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "791",
+          "fuzzy_match_percent": 0.9481669,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CSkalyUstawPostac::CSkalyUstawPostac",
+          "size": "39",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CSkalyUstawPostac::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CSkalyUstawPostac::~CSkalyUstawPostac",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CSkalyUstawPostac@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CSkalyUstawPostac::EXP(void)"
+          },
+          "address": "81"
+        },
+        {
+          "name": "CSkalyUstawPostac::OnActivate",
+          "size": "57",
+          "metadata": {},
+          "address": "171"
+        },
+        {
+          "name": "CSkalyUstawPostac::OnActivateLevel",
+          "size": "75",
+          "metadata": {},
+          "address": "228"
+        },
+        {
+          "name": "CSkalyUstawPostac::OnCollisionObject",
+          "size": "368",
+          "metadata": {},
+          "address": "303"
+        },
+        {
+          "name": "CSkalyUstawPostac::OnFrame",
+          "size": "100",
+          "metadata": {},
+          "address": "671"
+        },
+        {
+          "name": "CSkalyUstawPostac::OnFadeOutEnd",
+          "size": "20",
+          "metadata": {},
+          "address": "771"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CSoundGenerator",
+      "measures": {
+        "total_code": "558",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "558",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cSoundGenerator::cSoundGenerator",
+          "size": "81",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cSoundGenerator::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "81"
+        },
+        {
+          "name": "cSoundGenerator::~cSoundGenerator",
+          "size": "11",
+          "metadata": {},
+          "address": "111"
+        },
+        {
+          "name": "?EXP@cSoundGenerator@@QAEPAXXZ",
+          "size": "90",
+          "metadata": {
+            "demangled_name": "public: void * __thiscall cSoundGenerator::EXP(void)"
+          },
+          "address": "122"
+        },
+        {
+          "name": "cSoundGenerator::OnActivateLevel",
+          "size": "327",
+          "metadata": {},
+          "address": "212"
+        },
+        {
+          "name": "cSoundGenerator::OnUpdateMenuSettings",
+          "size": "19",
+          "metadata": {},
+          "address": "539"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CSoundLektor",
+      "measures": {
+        "fuzzy_match_percent": 0.93516207,
+        "total_code": "802",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "802",
+          "fuzzy_match_percent": 0.93516207,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CSoundLektor::CSoundLektor",
+          "size": "64",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CSoundLektor::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "64"
+        },
+        {
+          "name": "CSoundLektor::~CSoundLektor",
+          "size": "11",
+          "metadata": {},
+          "address": "94"
+        },
+        {
+          "name": "?EXP@CSoundLektor@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CSoundLektor::EXP(void)"
+          },
+          "address": "105"
+        },
+        {
+          "name": "CSoundLektor::OnActivateLevel",
+          "size": "146",
+          "metadata": {},
+          "address": "195"
+        },
+        {
+          "name": "CSoundLektor::OnFrame",
+          "size": "79",
+          "metadata": {},
+          "address": "341"
+        },
+        {
+          "name": "CSoundLektor::OnCollisionObject",
+          "size": "350",
+          "metadata": {},
+          "address": "420"
+        },
+        {
+          "name": "CSoundLektor::OnPlaySoundEnd",
+          "size": "32",
+          "metadata": {},
+          "address": "770"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CStrzalka",
+      "measures": {
+        "fuzzy_match_percent": 1.4204545,
+        "total_code": "528",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "528",
+          "fuzzy_match_percent": 1.4204545,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CStrzalka::CStrzalka",
+          "size": "39",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CStrzalka::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "39"
+        },
+        {
+          "name": "CStrzalka::~CStrzalka",
+          "size": "12",
+          "metadata": {},
+          "address": "69"
+        },
+        {
+          "name": "?EXP@CStrzalka@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CStrzalka::EXP(void)"
+          },
+          "address": "81"
+        },
+        {
+          "name": "CStrzalka::OnActivateLevel",
+          "size": "135",
+          "metadata": {},
+          "address": "171"
+        },
+        {
+          "name": "CStrzalka::OnFrame",
+          "size": "222",
+          "metadata": {},
+          "address": "306"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CTestAnim",
+      "measures": {
+        "fuzzy_match_percent": 0.397878,
+        "total_code": "1885",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1885",
+          "fuzzy_match_percent": 0.397878,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CTestAnim::CTestAnim",
+          "size": "162",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CTestAnim::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "162"
+        },
+        {
+          "name": "CTestAnim::~CTestAnim",
+          "size": "60",
+          "metadata": {},
+          "address": "192"
+        },
+        {
+          "name": "?EXP@CTestAnim@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CTestAnim::EXP(void)"
+          },
+          "address": "252"
+        },
+        {
+          "name": "CTestAnim::OnActivateLevel",
+          "size": "532",
+          "metadata": {},
+          "address": "342"
+        },
+        {
+          "name": "CTestAnim::OnAction",
+          "size": "12",
+          "metadata": {},
+          "address": "874"
+        },
+        {
+          "name": "CTestAnim::OnFrame",
+          "size": "214",
+          "metadata": {},
+          "address": "886"
+        },
+        {
+          "name": "CTestAnim::OnDestinationPos",
+          "size": "36",
+          "metadata": {},
+          "address": "1100"
+        },
+        {
+          "name": "CTestAnim::OnLoadChunk",
+          "size": "749",
+          "metadata": {},
+          "address": "1136"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CTextureAnim",
+      "measures": {
+        "fuzzy_match_percent": 0.7009346,
+        "total_code": "1070",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1070",
+          "fuzzy_match_percent": 0.7009346,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CTextureAnim::CTextureAnim",
+          "size": "29",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CTextureAnim::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "29"
+        },
+        {
+          "name": "CTextureAnim::~CTextureAnim",
+          "size": "12",
+          "metadata": {},
+          "address": "59"
+        },
+        {
+          "name": "?EXP@CTextureAnim@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CTextureAnim::EXP(void)"
+          },
+          "address": "71"
+        },
+        {
+          "name": "CTextureAnim::OnActivateLevel",
+          "size": "867",
+          "metadata": {},
+          "address": "161"
+        },
+        {
+          "name": "CTextureAnim::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "1028"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CWater",
+      "measures": {
+        "fuzzy_match_percent": 0.6465517,
+        "total_code": "1160",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1160",
+          "fuzzy_match_percent": 0.6465517,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CWater::CWater",
+          "size": "28",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CWater::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "28"
+        },
+        {
+          "name": "CWater::~CWater",
+          "size": "11",
+          "metadata": {},
+          "address": "58"
+        },
+        {
+          "name": "?EXP@CWater@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall CWater::EXP(void)"
+          },
+          "address": "69"
+        },
+        {
+          "name": "CWater::OnActivateLevel",
+          "size": "959",
+          "metadata": {},
+          "address": "159"
+        },
+        {
+          "name": "CWater::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "1118"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "CWindowExitYesNo",
+      "measures": {
+        "total_code": "2078",
+        "matched_data_percent": 100.0,
+        "total_functions": 8,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "2078",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "CWindowExitYesNo::CWindowExitYesNo",
+          "size": "144",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "CWindowExitYesNo::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "144"
+        },
+        {
+          "name": "CWindowExitYesNo::~CWindowExitYesNo",
+          "size": "12",
+          "metadata": {},
+          "address": "174"
+        },
+        {
+          "name": "CWindowExitYesNo::OnActivate",
+          "size": "1148",
+          "metadata": {},
+          "address": "186"
+        },
+        {
+          "name": "CWindowExitYesNo::OnFrame",
+          "size": "238",
+          "metadata": {},
+          "address": "1334"
+        },
+        {
+          "name": "CWindowExitYesNo::OnMouseArrive",
+          "size": "242",
+          "metadata": {},
+          "address": "1572"
+        },
+        {
+          "name": "CWindowExitYesNo::OnMouseLeave",
+          "size": "90",
+          "metadata": {},
+          "address": "1814"
+        },
+        {
+          "name": "CWindowExitYesNo::OnInputMouse",
+          "size": "174",
+          "metadata": {},
+          "address": "1904"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "ClassUnk274",
+      "measures": {
+        "total_code": "5177",
+        "matched_data_percent": 100.0,
+        "total_functions": 11,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "5177",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "ClassUnk274::ClassUnk274",
+          "size": "155",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "ClassUnk274::~ClassUnk274",
+          "size": "41",
+          "metadata": {},
+          "address": "155"
+        },
+        {
+          "name": "ClassUnk274::FUN0043b4e0",
+          "size": "830",
+          "metadata": {},
+          "address": "196"
+        },
+        {
+          "name": "ClassUnk274::FUN0043b820",
+          "size": "989",
+          "metadata": {},
+          "address": "1026"
+        },
+        {
+          "name": "ClassUnk274::FUN0043bc40",
+          "size": "835",
+          "metadata": {},
+          "address": "2015"
+        },
+        {
+          "name": "ClassUnk274::FUN0043bf90",
+          "size": "65",
+          "metadata": {},
+          "address": "2850"
+        },
+        {
+          "name": "ClassUnk274::FUN0043bfe0",
+          "size": "476",
+          "metadata": {},
+          "address": "2915"
+        },
+        {
+          "name": "ClassUnk274::FUN0043c1c0",
+          "size": "803",
+          "metadata": {},
+          "address": "3391"
+        },
+        {
+          "name": "ClassUnk274::FUN0043c4f0",
+          "size": "90",
+          "metadata": {},
+          "address": "4194"
+        },
+        {
+          "name": "ClassUnk274::FUN0043c550",
+          "size": "64",
+          "metadata": {},
+          "address": "4284"
+        },
+        {
+          "name": "ClassUnk274::FUN0043c8b0",
+          "size": "829",
+          "metadata": {},
+          "address": "4348"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cClient",
+      "measures": {
+        "total_code": "55",
+        "matched_data_percent": 100.0,
+        "total_functions": 2,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "55",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cClient::FUN00430690",
+          "size": "27",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cClient::FUN004306b0",
+          "size": "28",
+          "metadata": {},
+          "address": "27"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cFadeInOut",
+      "measures": {
+        "total_code": "562",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "562",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cFadeInOut::cFadeInOut",
+          "size": "138",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cFadeInOut::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "138"
+        },
+        {
+          "name": "cFadeInOut::~cFadeInOut",
+          "size": "12",
+          "metadata": {},
+          "address": "168"
+        },
+        {
+          "name": "cFadeInOut::OnActivate",
+          "size": "59",
+          "metadata": {},
+          "address": "180"
+        },
+        {
+          "name": "cFadeInOut::OnFrame",
+          "size": "323",
+          "metadata": {},
+          "address": "239"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cHands",
+      "measures": {
+        "total_code": "545",
+        "matched_data_percent": 100.0,
+        "total_functions": 11,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "545",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cHands::cHands",
+          "size": "26",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cHands::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "26"
+        },
+        {
+          "name": "cHands::~cHands",
+          "size": "12",
+          "metadata": {},
+          "address": "56"
+        },
+        {
+          "name": "cHands::OnActivate",
+          "size": "71",
+          "metadata": {},
+          "address": "68"
+        },
+        {
+          "name": "cHands::OnActivateLevel",
+          "size": "196",
+          "metadata": {},
+          "address": "139"
+        },
+        {
+          "name": "cHands::OnFrame",
+          "size": "99",
+          "metadata": {},
+          "address": "335"
+        },
+        {
+          "name": "cHands::FUN00404cd0",
+          "size": "12",
+          "metadata": {},
+          "address": "434"
+        },
+        {
+          "name": "cHands::FUN00404ce0",
+          "size": "12",
+          "metadata": {},
+          "address": "446"
+        },
+        {
+          "name": "cHands::FUN00404cf0",
+          "size": "12",
+          "metadata": {},
+          "address": "458"
+        },
+        {
+          "name": "cHands::FUN00404d00",
+          "size": "12",
+          "metadata": {},
+          "address": "470"
+        },
+        {
+          "name": "cHands::OnAnimEnd",
+          "size": "63",
+          "metadata": {},
+          "address": "482"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cHudInfo",
+      "measures": {
+        "total_code": "1211",
+        "matched_data_percent": 100.0,
+        "total_functions": 5,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1211",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cHudInfo::cHudInfo",
+          "size": "493",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cHudInfo::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "493"
+        },
+        {
+          "name": "cHudInfo::~cHudInfo",
+          "size": "393",
+          "metadata": {},
+          "address": "523"
+        },
+        {
+          "name": "cHudInfo::OnActivateLevel",
+          "size": "200",
+          "metadata": {},
+          "address": "916"
+        },
+        {
+          "name": "cHudInfo::OnFrame",
+          "size": "95",
+          "metadata": {},
+          "address": "1116"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cKbSettings",
+      "measures": {
+        "total_code": "657",
+        "matched_data_percent": 100.0,
+        "total_functions": 3,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "657",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cKbSettings::cKbSettings",
+          "size": "620",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cKbSettings::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "620"
+        },
+        {
+          "name": "cKbSettings::~cKbSettings",
+          "size": "7",
+          "metadata": {},
+          "address": "650"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cMenuLogo",
+      "measures": {
+        "total_code": "538",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "538",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cMenuLogo::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cMenuLogo::cMenuLogo",
+          "size": "31",
+          "metadata": {},
+          "address": "30"
+        },
+        {
+          "name": "cMenuLogo::~cMenuLogo",
+          "size": "12",
+          "metadata": {},
+          "address": "61"
+        },
+        {
+          "name": "cMenuLogo::OnActivate",
+          "size": "103",
+          "metadata": {},
+          "address": "73"
+        },
+        {
+          "name": "cMenuLogo::OnFadeOutEnd",
+          "size": "172",
+          "metadata": {},
+          "address": "176"
+        },
+        {
+          "name": "cMenuLogo::OnFrame",
+          "size": "69",
+          "metadata": {},
+          "address": "348"
+        },
+        {
+          "name": "cMenuLogo::OnInputKey",
+          "size": "121",
+          "metadata": {},
+          "address": "417"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cNetworkClient",
+      "measures": {
+        "total_code": "136",
+        "matched_data_percent": 100.0,
+        "total_functions": 3,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "136",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cNetworkClient::cNetworkClient",
+          "size": "57",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cNetworkClient::~cNetworkClient",
+          "size": "11",
+          "metadata": {},
+          "address": "57"
+        },
+        {
+          "name": "cNetworkClient::FUN00430a60",
+          "size": "68",
+          "metadata": {},
+          "address": "68"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cPocisk",
+      "measures": {
+        "total_code": "454",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "454",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cPocisk::cPocisk",
+          "size": "19",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cPocisk::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "19"
+        },
+        {
+          "name": "cPocisk::~cPocisk",
+          "size": "12",
+          "metadata": {},
+          "address": "49"
+        },
+        {
+          "name": "cPocisk::OnCollisionObject",
+          "size": "151",
+          "metadata": {},
+          "address": "61"
+        },
+        {
+          "name": "cPocisk::OnActivate",
+          "size": "83",
+          "metadata": {},
+          "address": "212"
+        },
+        {
+          "name": "cPocisk::OnFrame",
+          "size": "159",
+          "metadata": {},
+          "address": "295"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cSoundGenerator",
+      "measures": {
+        "total_code": "558",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "558",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cSoundGenerator::cSoundGenerator",
+          "size": "81",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cSoundGenerator::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "81"
+        },
+        {
+          "name": "cSoundGenerator::~cSoundGenerator",
+          "size": "11",
+          "metadata": {},
+          "address": "111"
+        },
+        {
+          "name": "?EXP@cSoundGenerator@@QAEPAXXZ",
+          "size": "90",
+          "metadata": {
+            "demangled_name": "public: void * __thiscall cSoundGenerator::EXP(void)"
+          },
+          "address": "122"
+        },
+        {
+          "name": "cSoundGenerator::OnActivateLevel",
+          "size": "327",
+          "metadata": {},
+          "address": "212"
+        },
+        {
+          "name": "cSoundGenerator::OnUpdateMenuSettings",
+          "size": "19",
+          "metadata": {},
+          "address": "539"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "cTextInfo",
+      "measures": {
+        "fuzzy_match_percent": 0.37783375,
+        "total_code": "1985",
+        "matched_data_percent": 100.0,
+        "total_functions": 14,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1985",
+          "fuzzy_match_percent": 0.37783375,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "cTextInfo::cTextInfo",
+          "size": "79",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "cTextInfo::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "79"
+        },
+        {
+          "name": "cTextInfo::~cTextInfo",
+          "size": "12",
+          "metadata": {},
+          "address": "109"
+        },
+        {
+          "name": "?EXP@cTextInfo@@QAEPAXXZ",
+          "size": "90",
+          "fuzzy_match_percent": 8.333333,
+          "metadata": {
+            "demangled_name": "public: void * __thiscall cTextInfo::EXP(void)"
+          },
+          "address": "121"
+        },
+        {
+          "name": "cTextInfo::OnActivateLevel",
+          "size": "298",
+          "metadata": {},
+          "address": "211"
+        },
+        {
+          "name": "cTextInfo::OnAction",
+          "size": "144",
+          "metadata": {},
+          "address": "509"
+        },
+        {
+          "name": "cTextInfo::OnFrame",
+          "size": "118",
+          "metadata": {},
+          "address": "653"
+        },
+        {
+          "name": "cTextInfo::OnPlaySoundEnd",
+          "size": "42",
+          "metadata": {},
+          "address": "771"
+        },
+        {
+          "name": "cTextInfo::OnCollisionObject",
+          "size": "485",
+          "metadata": {},
+          "address": "813"
+        },
+        {
+          "name": "cTextInfo::OnNumPadExit",
+          "size": "33",
+          "metadata": {},
+          "address": "1298"
+        },
+        {
+          "name": "cTextInfo::OnNumPadCodeCorrect",
+          "size": "311",
+          "metadata": {},
+          "address": "1331"
+        },
+        {
+          "name": "cTextInfo::OnLoadChunk",
+          "size": "42",
+          "metadata": {},
+          "address": "1642"
+        },
+        {
+          "name": "cTextInfo::Save",
+          "size": "181",
+          "metadata": {},
+          "address": "1684"
+        },
+        {
+          "name": "cTextInfo::Load",
+          "size": "120",
+          "metadata": {},
+          "address": "1865"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "GameSDK",
+      "measures": {
+        "total_code": "4199",
+        "matched_data_percent": 100.0,
+        "total_functions": 25,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "4199",
           "metadata": {}
         }
       ],
@@ -22901,76 +29104,538 @@
           "address": "1040"
         },
         {
-          "name": "GameSDK::FUN004018f0",
+          "name": "GameSDK::OnActivateLevel",
           "size": "186",
           "metadata": {},
           "address": "1191"
         },
         {
-          "name": "GameSDK::FUN00401a90",
-          "size": "26",
+          "name": "GameSDK::OnInputKey",
+          "size": "210",
           "metadata": {},
           "address": "1377"
+        },
+        {
+          "name": "GameSDK::OnFrame",
+          "size": "26",
+          "metadata": {},
+          "address": "1587"
+        },
+        {
+          "name": "GameSDK::FUN00401ab0",
+          "size": "13",
+          "metadata": {},
+          "address": "1613"
         },
         {
           "name": "GameSDK::FUN00401ac0",
           "size": "39",
           "metadata": {},
-          "address": "1403"
+          "address": "1626"
         },
         {
           "name": "GameSDK::FUN00401af0",
           "size": "63",
           "metadata": {},
-          "address": "1442"
+          "address": "1665"
         },
         {
           "name": "GameSDK::FUN00401b30",
           "size": "26",
           "metadata": {},
-          "address": "1505"
+          "address": "1728"
+        },
+        {
+          "name": "GameSDK::FUN00401b50",
+          "size": "38",
+          "metadata": {},
+          "address": "1754"
         },
         {
           "name": "GameSDK::FUN00401b80",
           "size": "26",
           "metadata": {},
-          "address": "1531"
+          "address": "1792"
         },
         {
-          "name": "GameSDK::FUN00401c80",
+          "name": "GameSDK::FUN00401ba0",
+          "size": "224",
+          "metadata": {},
+          "address": "1818"
+        },
+        {
+          "name": "GameSDK::OnButtonDown",
           "size": "202",
           "metadata": {},
-          "address": "1557"
+          "address": "2042"
         },
         {
           "name": "GameSDK::FUN00401d50",
           "size": "45",
           "metadata": {},
-          "address": "1759"
+          "address": "2244"
+        },
+        {
+          "name": "GameSDK::FUN00401d80",
+          "size": "45",
+          "metadata": {},
+          "address": "2289"
+        },
+        {
+          "name": "GameSDK::FUN00401db0",
+          "size": "45",
+          "metadata": {},
+          "address": "2334"
         },
         {
           "name": "GameSDK::FUN00401de0",
           "size": "45",
           "metadata": {},
-          "address": "1804"
+          "address": "2379"
+        },
+        {
+          "name": "GameSDK::FUN00401e10",
+          "size": "7",
+          "metadata": {},
+          "address": "2424"
         },
         {
           "name": "GameSDK::FUN00401e20",
           "size": "23",
           "metadata": {},
-          "address": "1849"
+          "address": "2431"
         },
         {
           "name": "GameSDK::FUN00401e40",
           "size": "1114",
           "metadata": {},
-          "address": "1872"
+          "address": "2454"
+        },
+        {
+          "name": "GameSDK::FUN004022c0",
+          "size": "25",
+          "metadata": {},
+          "address": "3568"
+        },
+        {
+          "name": "GameSDK::FUN004022e0",
+          "size": "23",
+          "metadata": {},
+          "address": "3593"
         },
         {
           "name": "GameSDK::FUN00402300",
           "size": "583",
           "metadata": {},
-          "address": "2986"
+          "address": "3616"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "MenuModule",
+      "measures": {
+        "total_code": "2895",
+        "matched_data_percent": 100.0,
+        "total_functions": 12,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "2895",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "MenuModule::MenuModule",
+          "size": "210",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "MenuModule::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "210"
+        },
+        {
+          "name": "MenuModule::~MenuModule",
+          "size": "12",
+          "metadata": {},
+          "address": "240"
+        },
+        {
+          "name": "MenuModule::OnActivate",
+          "size": "1083",
+          "metadata": {},
+          "address": "252"
+        },
+        {
+          "name": "MenuModule::OnUpdateMenuSettings",
+          "size": "96",
+          "metadata": {},
+          "address": "1335"
+        },
+        {
+          "name": "MenuModule::OnFrame",
+          "size": "278",
+          "metadata": {},
+          "address": "1431"
+        },
+        {
+          "name": "MenuModule::OnMouseArrive",
+          "size": "274",
+          "metadata": {},
+          "address": "1709"
+        },
+        {
+          "name": "MenuModule::OnMouseLeave",
+          "size": "92",
+          "metadata": {},
+          "address": "1983"
+        },
+        {
+          "name": "MenuModule::OnInputMouse",
+          "size": "222",
+          "metadata": {},
+          "address": "2075"
+        },
+        {
+          "name": "MenuModule::OnInputKey",
+          "size": "495",
+          "metadata": {},
+          "address": "2297"
+        },
+        {
+          "name": "MenuModule::OnExitYesNo",
+          "size": "79",
+          "metadata": {},
+          "address": "2792"
+        },
+        {
+          "name": "MenuModule::OnPlaySoundEnd",
+          "size": "24",
+          "metadata": {},
+          "address": "2871"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "MenuOknoWyboru_CZ1",
+      "measures": {
+        "total_code": "3431",
+        "matched_data_percent": 100.0,
+        "total_functions": 9,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "3431",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "MenuOknoWyboru_CZ1::MenuOknoWyboru_CZ1",
+          "size": "209",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "209"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::~MenuOknoWyboru_CZ1",
+          "size": "12",
+          "metadata": {},
+          "address": "239"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::OnActivate",
+          "size": "1729",
+          "metadata": {},
+          "address": "251"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::OnFrame",
+          "size": "257",
+          "metadata": {},
+          "address": "1980"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::OnMouseArrive",
+          "size": "318",
+          "metadata": {},
+          "address": "2237"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::OnMouseLeave",
+          "size": "67",
+          "metadata": {},
+          "address": "2555"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::OnInputMouse",
+          "size": "360",
+          "metadata": {},
+          "address": "2622"
+        },
+        {
+          "name": "MenuOknoWyboru_CZ1::OnActivateLevel",
+          "size": "449",
+          "metadata": {},
+          "address": "2982"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "MyParticle",
+      "measures": {
+        "total_code": "232",
+        "matched_data_percent": 100.0,
+        "total_functions": 3,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "232",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "MyParticle::MyParticle",
+          "size": "190",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "MyParticle::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "190"
+        },
+        {
+          "name": "MyParticle::~MyParticle",
+          "size": "12",
+          "metadata": {},
+          "address": "220"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "UIButton",
+      "measures": {
+        "total_code": "1011",
+        "matched_data_percent": 100.0,
+        "total_functions": 6,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1011",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "UIButton::UIButton",
+          "size": "259",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "UIButton::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "259"
+        },
+        {
+          "name": "UIButton::~UIButton",
+          "size": "12",
+          "metadata": {},
+          "address": "289"
+        },
+        {
+          "name": "UIButton::OnMouseArrive",
+          "size": "151",
+          "metadata": {},
+          "address": "301"
+        },
+        {
+          "name": "UIButton::OnMouseLeave",
+          "size": "194",
+          "metadata": {},
+          "address": "452"
+        },
+        {
+          "name": "UIButton::OnInputMouse",
+          "size": "365",
+          "metadata": {},
+          "address": "646"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "UIEdit",
+      "measures": {
+        "total_code": "1839",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "1839",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "UIEdit::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "UIEdit::UIEdit",
+          "size": "617",
+          "metadata": {},
+          "address": "30"
+        },
+        {
+          "name": "UIEdit::~UIEdit",
+          "size": "215",
+          "metadata": {},
+          "address": "647"
+        },
+        {
+          "name": "UIEdit::OnActivate",
+          "size": "116",
+          "metadata": {},
+          "address": "862"
+        },
+        {
+          "name": "UIEdit::OnInputChar",
+          "size": "734",
+          "metadata": {},
+          "address": "978"
+        },
+        {
+          "name": "UIEdit::OnInputKey",
+          "size": "80",
+          "metadata": {},
+          "address": "1712"
+        },
+        {
+          "name": "UIEdit::OnInputMouse",
+          "size": "47",
+          "metadata": {},
+          "address": "1792"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
+    },
+    {
+      "name": "UIWindow",
+      "measures": {
+        "total_code": "313",
+        "matched_data_percent": 100.0,
+        "total_functions": 7,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "313",
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "UIWindow::UIWindow",
+          "size": "106",
+          "metadata": {},
+          "address": "0"
+        },
+        {
+          "name": "UIWindow::scalar_destructor",
+          "size": "30",
+          "metadata": {},
+          "address": "106"
+        },
+        {
+          "name": "UIWindow::UIWindow_",
+          "size": "93",
+          "metadata": {},
+          "address": "136"
+        },
+        {
+          "name": "UIWindow::~UIWindow",
+          "size": "12",
+          "metadata": {},
+          "address": "229"
+        },
+        {
+          "name": "UIWindow::OnFrame",
+          "size": "20",
+          "metadata": {},
+          "address": "241"
+        },
+        {
+          "name": "UIWindow::OnMouseArrive",
+          "size": "26",
+          "metadata": {},
+          "address": "261"
+        },
+        {
+          "name": "UIWindow::OnMouseLeave",
+          "size": "26",
+          "metadata": {},
+          "address": "287"
         }
       ],
       "metadata": {
@@ -23005,12 +29670,12 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 0.5354201,
-        "total_code": "18210",
+        "fuzzy_match_percent": 0.31461132,
+        "total_code": "157337",
         "matched_data_percent": 100.0,
-        "total_functions": 128,
+        "total_functions": 870,
         "complete_data_percent": 100.0,
-        "total_units": 16
+        "total_units": 97
       }
     }
   ]

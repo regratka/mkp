@@ -2,6 +2,7 @@
 #define _C_APPLICATION__NETWORK
 
 #include <globals.h>
+
 #include "GameSDK.h"
 
 class CApplication_Network {
