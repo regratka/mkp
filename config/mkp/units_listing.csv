@@ -26,7 +26,7 @@ CButton,CButton,CButton::STATE_Kolizja,CButton::STATE_Odleglosc,CButton::STATE_R
 CCameraFPP,CCameraFPP
 CCameraPoint,CCameraPoint
 CCar,CCar
-CCheckPoint,CCheckPoint
+CCheckPiont,CCheckPiont
 CCutScene,CCutScene
 CCutSceneFx,CCutSceneFx
 CDisableZBuffer,CDisableZBuffer

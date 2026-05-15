@@ -4,30 +4,30 @@
 #include <globals.h>
 
 class CAction {
-public:
+
 	class STATE_Empty {
-	public:
-		/* 4177B0 */ uchar scalar_destructor(uchar param_1);
-		/* 417D10 */ void OnEnterState();
-	};
+		public:
+			/* 4177B0 */ STATE_Empty* scalar_destructor(uchar param_1);
+			/* 417D10 */ void OnEnterState();
+		};
 
 	class STATE_RuchX {
-	public:
-		/* 4177D0 */ uchar OnEnterState(int param_1);
-		/* 417830 */ void OnFrame();
-	};
+		public:
+			/* 4177D0 */ uchar OnEnterState(int param_1);
+			/* 417830 */ void OnFrame();
+		};
 
 	class STATE_RuchY {
-	public:
-		/* 4179D0 */ void OnFrame();
-	};
+		public:
+			/* 4179D0 */ void OnFrame();
+		};
 
 	class STATE_RuchZ {
-	public:
-		/* 417B70 */ void OnFrame();
-	};
+		public:
+			/* 417B70 */ void OnFrame();
+		};
 
-
+public:
 	/* 416980 */ CAction();
 	/* 4169E0 */ uchar scalar_destruction(uchar param_1);
 	/* 416A00 */ ~CAction();
@@ -50,5 +50,7 @@ public:
 	/* 417440 */ uchar Save(int* param_1);
 	/* 4175B0 */ uchar Load(void* param_1, uint param_2, int param_3);
 };
+
+
 
 #endif

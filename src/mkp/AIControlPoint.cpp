@@ -18,3 +18,12 @@ void* AIControlPoint::EXP() {
 	return 0;
 }
 
+/* 43CEE0-43CEE7 00007	*/
+bool AIControlPoint::FUN0043cee0() {
+	return 0;
+}
+
+/* 43CEF0-43CEFD 0000D	*/
+void AIControlPoint::FUN0043cef0(bool param_1) {
+}
+

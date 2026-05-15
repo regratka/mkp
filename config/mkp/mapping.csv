@@ -367,7 +367,7 @@
 ;FUN_00411840;0x411840;0xc;__stdcall;;uchar
 ;UIButton::UIButton;0x411860;0x103;__thiscall;;UIButton*;UIButton*
 ;UIButton::scalar_destructor;0x411970;0x1e;__thiscall;;cMagSprite*;UIButton*;uchar
-;UIButton::UIButton;0x411990;0xc;__thiscall;;void;UIButton*
+;UIButton::~UIButton;0x411990;0xc;__thiscall;;void;UIButton*
 ;FUN_004119a0;0x4119a0;0x173;__thiscall;;uchar;void*;char*;char*;uint
 ;FUN_00411b20;0x411b20;0x75;__thiscall;;uchar;void*;char*
 ;FUN_00411ba0;0x411ba0;0x75;__thiscall;;uchar;void*;char*
@@ -416,7 +416,7 @@
 ;FUN_004133c0;0x4133c0;0xc;__stdcall;;uchar
 ;UIWindow::UIWindow;0x4133e0;0x6a;__thiscall;;UIWindow*;UIWindow*
 ;UIWindow::scalar_destructor;0x413450;0x1e;__thiscall;;cMagSprite*;UIWindow*;uchar
-;UIWindow::UIWindow;0x413470;0x5d;__thiscall;;cMagSprite*;UIWindow*;uint
+;UIWindow::UIWindow_;0x413470;0x5d;__thiscall;;cMagSprite*;UIWindow*;uint
 ;UIWindow::~UIWindow;0x4134d0;0xc;__thiscall;;void;UIWindow*
 ;FUN_004134e0;0x4134e0;0x30;__thiscall;;uchar;void*;char*
 ;FUN_00413510;0x413510;0x21;__thiscall;;uchar;void*;uchar
@@ -765,7 +765,7 @@
 ;CCutScene::OnFadeOutEnd;0x41d4e0;0x20b;__thiscall;;uchar;CCutScene*
 ;CCutScene::OnFadeInEnd;0x41d700;0x1c;__thiscall;;void;CCutScene*
 ;CCutScene::OnAction;0x41d720;0xb;__thiscall;;void;CCutScene*
-;CCutScene::OnAction;0x41d730;0x24;__thiscall;;void;CCutScene*;char*
+;CCutScene::OnAction_;0x41d730;0x24;__thiscall;;void;CCutScene*;char*
 ;CCutScene::OnLoadChunk;0x41d760;0x2a;__thiscall;;uchar;CCutScene*;uint;int;uint;void*
 ;CCutScene::Save;0x41d790;0xc0;__thiscall;;uchar;CCutScene*;int*
 ;CCutScene::Load;0x41d850;0x80;__thiscall;;uchar;CCutScene*;void*;uint;int
@@ -1504,7 +1504,7 @@
 ;CEndPart1::OnActivate;0x43fe50;0x4e;__thiscall;;void;CEndPart1*
 ;CEndPart1::OnActivateLevel;0x43fea0;0x16;__thiscall;;void;CEndPart1*
 ;CEndPart1::OnAction;0x43fed0;0x24;__thiscall;;void;CEndPart1*;char*
-;CEndPart1::OnAction;0x43ff00;0xc3;__thiscall;;uchar;CEndPart1*
+;CEndPart1::OnAction_;0x43ff00;0xc3;__thiscall;;uchar;CEndPart1*
 ;CEndPart1::OnPlaySoundEnd;0x43ffd0;0x24;__thiscall;;uchar;CEndPart1*;int
 ;FUN_00440080;0x440080;0xa;__stdcall;;uchar
 ;FUN_00440090;0x440090;0xc;__stdcall;;uchar
