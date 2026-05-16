@@ -29,7 +29,7 @@ def generateObjdiffConfig(decompUnits: list[DecompUnit], master_target_dir: Path
             if not has_functions(namespaces, decompUnit.mappings):
                 continue
             conf_unit = {}
-            conf_unit["name"] = unit
+            conf_unit["name"] = decompUnit.directory_name+"/"+unit
             conf_unit["target_path"] = str(decompUnit.buildOrig / (unit + ".obj"))
             conf_unit["base_path"] = str(decompUnit.buildSrc / (unit + ".obj"))
             conf_unit["reverse_fn_order"] = False
