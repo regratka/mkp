@@ -2,13 +2,15 @@
 #define __PARTICLES
 
 #include <globals.h>
+#include "cMagMeshObject.h"
 
-class _Particles {
+class _Particles : public cMagMeshObject {
 public:
 	/* 431C00 */ _Particles();
-	/* 431C20 */ uchar scalar_destructor(uchar param_1);
-	/* 431C40 */ ~_Particles();
+	/* 431C40 */ virtual ~_Particles();
 	/* 431C50 */ void* EXP();
 };
+
+STATIC_ASSERT(sizeof(_Particles) == 0x2658);
 
 #endif
