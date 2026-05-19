@@ -57,7 +57,7 @@ bool IStudioMesh::EnableRenderShadow() {
 }
 
 /* 1005D720-1005D7C5 000A5	*/
-void IStudioMesh::OnRenderShadow() {
+void IStudioMesh::OnRenderShadow(D3DXMATRIX param_1) {
 }
 
 /* 1005D7D0-1005D848 00078	*/

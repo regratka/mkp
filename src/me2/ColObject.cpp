@@ -9,6 +9,9 @@ ColObject::~ColObject() {
 }
 
 /* 100AAD30-100AAEEF 001BF	*/
-void ColObject::FUN_100aad30(ColObject* param_1) {
+void ColObject::FUN100aad30(ColObject* param_1) {
 }
 
+/* 100AAEF0-100AAF5B 0006B	*/
+void ColObject::FUN100aaef0(ColObject* param_1) {
+}

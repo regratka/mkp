@@ -61,7 +61,7 @@ public:
 	virtual void OnNumPadCodeCorrect(int param_1); /* vtbl 0x70*/
 	virtual void OnNumPadCodeCorrect(); /* vtbl 0x74*/
 	virtual void OnNumPadExit(); /* vtbl 0x78*/
-	virtual ulong GetShadowType(); /* vtbl 0x7c*/
+	virtual int GetShadowType(); /* vtbl 0x7c*/
 
 	/* 10011250 */ virtual ~cMagKernel(); /* vtbl 0x80 */
 	/* 10011260 */ virtual void OnFrame(); /* vtbl 0x84 */
