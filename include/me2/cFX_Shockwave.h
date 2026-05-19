@@ -5,7 +5,7 @@
 
 #include "cMagUtility.h"
 
-class __declspec(dllexport) cFX_Shockwave : public cMagUtility {
+class DLLEXPORT cFX_Shockwave : public cMagUtility {
 public:
 	/* 10022F90-10022FD4 00044	*/
 	cFX_Shockwave() {

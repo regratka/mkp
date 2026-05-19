@@ -6,7 +6,7 @@
 
 #include "cMagGameObject.h"
 
-class __declspec(dllexport) String {
+class DLLEXPORT String {
 public:
 	/* 100BEB80 */ String();
 	/* 100BEBA0 */ virtual ~String();

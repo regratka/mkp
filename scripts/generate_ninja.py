@@ -15,15 +15,16 @@ def generateNinja(decompUnits: list[DecompUnit], output_path: Path):
 
         writer.variable("cl", "tools\\msvc66\\Bin\\CL.exe")
         unitsImports = " ".join([f"/I {str(decUnit.includePath)}" for decUnit in decompUnits])
-        writer.variable("cl_flags", f"/Zi /O2 /GR /G6 /GX /I include/ {unitsImports} /I tools/msvc66/include /I tools/dx81/include /I tools/jni /I tools/Multimedia/Common/Include /I tools/")
-        writer.rule("cc", "$cl /nologo $cl_flags /c $in /Fd$out.pdb /Fo$out", deps="msvc")
+        for decUnit in decompUnits:
+            writer.variable(f"cl_flags_{decUnit.directory_name}", f"/Zi /O2 /GR /G6 /GX /I include/ {unitsImports} /I tools/msvc66/include /I tools/dx81/include /I tools/jni /I tools/Multimedia/Common/Include /I tools /D{decUnit.directory_name.upper()}")
+            writer.rule(f"cc_{decUnit.directory_name}", f"$cl /nologo $cl_flags_{decUnit.directory_name} /c $in /Fd$out.pdb /Fo$out", deps="msvc")
         
         for decompUnit in decompUnits:
             for unit, namespaces in decompUnit.units.items():
                 if not has_functions(namespaces, decompUnit.mappings):
                     continue
                 writer.build(f"$builddir_{decompUnit.directory_name}/" + unit + ".obj",
-                            "cc",
+                            f"cc_{decompUnit.directory_name}",
                             [str(decompUnit.srcPath / (unit + ".cpp"))],
                             implicit=[str(decompUnit.includePath / (unit + ".h"))])
 

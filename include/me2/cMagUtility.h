@@ -13,7 +13,7 @@ struct MAGVERTEX{
 	D3DXVECTOR3 unused;
 };
 
-class __declspec(dllexport) cMagUtility : public MagState  {
+class DLLEXPORT cMagUtility : public MagState  {
 public:
 	/* 1002D170 */ cMagUtility();
 	/* 1002D1F0 */ ~cMagUtility();

@@ -6,7 +6,7 @@
 #include "cFX_Shockwave.h"
 
 
-class __declspec(dllexport) cMagFx : public cFX_Shockwave {
+class DLLEXPORT cMagFx : public cFX_Shockwave {
 public:
     // populated based on dxutil.cpp TIMER_COMMAND
 	enum TIMER_COMMAND { 

@@ -13,7 +13,7 @@ struct Light {
 	D3DLIGHT8 light;
 };
 
-class __declspec(dllexport) cMagLight : public MagSingleton<cMagLight> {
+class DLLEXPORT cMagLight : public MagSingleton<cMagLight> {
 public:
 	/* 1008D800 */ cMagLight();
 	/* 1008D860 */ virtual ~cMagLight();

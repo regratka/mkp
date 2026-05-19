@@ -32,7 +32,7 @@ class CJVMData;
 
 struct _LIGHT;
 
-class __declspec(dllexport) cMagGameObject : public cMagObjectList {
+class DLLEXPORT cMagGameObject : public cMagObjectList {
 public:
 	/* 10002260-100022A0 00040	*/
 	void SetLevelDirectory(char* param_1) {
