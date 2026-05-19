@@ -18,7 +18,7 @@ struct _ED_CHUNK {
 };
 
 
-class __declspec(dllexport) cMagKernel : public cMagLog {
+class DLLEXPORT cMagKernel : public cMagLog {
 public:
 
 	/* 100111a0 */ cMagKernel();

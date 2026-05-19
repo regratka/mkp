@@ -6,7 +6,7 @@
 
 #include "cMagKernel.h"
 
-class __declspec(dllexport) cMagObjectList : public cMagKernel {
+class DLLEXPORT cMagObjectList : public cMagKernel {
 public:
 	/* 100014C0-100014C7 00007	*/
 	std::vector<cMagKernel*>::iterator cMagObjectList::begin() {

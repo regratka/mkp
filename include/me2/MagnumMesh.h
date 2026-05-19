@@ -6,7 +6,7 @@
 #include "cMagUtility.h"
 #include "CCPUTicker.h"
 
-class __declspec(dllexport) MagnumMesh : public cMagUtility {
+class DLLEXPORT MagnumMesh : public cMagUtility {
 public:
 	/* 1000DA50-1000DA57 00007	*/
 	int GetNumVerts() {

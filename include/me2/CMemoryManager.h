@@ -30,7 +30,7 @@ public:
 
 STATIC_ASSERT(sizeof(MemoryData) == 0x104);
 
-class __declspec(dllexport) CMemoryManager {
+class DLLEXPORT CMemoryManager {
 public:
 	/* 1009A340 */ CMemoryManager();
 	/* 1009A370 */ virtual ~CMemoryManager();

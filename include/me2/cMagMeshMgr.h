@@ -19,7 +19,7 @@ struct MeshData {
 
 STATIC_ASSERT(sizeof(MeshData)==0x260);
 
-class __declspec(dllexport) cMagMeshMgr : public MagSingleton<cMagMeshMgr> {
+class DLLEXPORT cMagMeshMgr : public MagSingleton<cMagMeshMgr> {
 public:
 	/* 10044050 */ cMagMeshMgr();
 	/* 100441C0 */ virtual ~cMagMeshMgr();

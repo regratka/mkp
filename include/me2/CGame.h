@@ -26,7 +26,7 @@ struct CGameTextureData {
 	/* 0x104 */ int directTexture;
 };
 
-class __declspec(dllexport) CGame : public cMagGameObject {
+class DLLEXPORT CGame : public cMagGameObject {
 public:
 	/* 10091750 */ CGame();
 	/* 10091CD0 */ CGame(HINSTANCE__* param_1);

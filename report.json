@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 14.863525,
+    "fuzzy_match_percent": 14.874937,
     "total_code": "669584",
-    "matched_code": "54903",
-    "matched_code_percent": 8.199569,
+    "matched_code": "55213",
+    "matched_code_percent": 8.245866,
     "matched_data_percent": 100.0,
     "total_functions": 3069,
-    "matched_functions": 579,
-    "matched_functions_percent": 18.86608,
+    "matched_functions": 599,
+    "matched_functions_percent": 19.51776,
     "complete_code": "7437",
     "complete_code_percent": 1.1106896,
     "complete_data_percent": 100.0,
@@ -14435,7 +14435,7 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 16.644825,
+        "fuzzy_match_percent": 16.691269,
         "total_code": "51915",
         "matched_code": "3603",
         "matched_code_percent": 6.9401903,
@@ -14450,7 +14450,7 @@
         {
           "name": ".text",
           "size": "51915",
-          "fuzzy_match_percent": 16.644825,
+          "fuzzy_match_percent": 16.691269,
           "metadata": {}
         }
       ],
@@ -14546,9 +14546,12 @@
           "address": "4864"
         },
         {
-          "name": "cMagMeshObject::scalar_destructor",
+          "name": "??_GcMagMeshObject@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 27.714285,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagMeshObject::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "11695"
         },
         {
@@ -21765,14 +21768,14 @@
     {
       "name": "mkp/_Action",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -21780,7 +21783,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -21788,7 +21791,7 @@
         {
           "name": "??0_Action@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Action::_Action(void)"
           },
@@ -21806,7 +21809,7 @@
         {
           "name": "??1_Action@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Action::~_Action(void)"
           },
@@ -21831,14 +21834,14 @@
     {
       "name": "mkp/_AI",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -21846,7 +21849,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -21854,7 +21857,7 @@
         {
           "name": "??0_AI@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _AI::_AI(void)"
           },
@@ -21872,7 +21875,7 @@
         {
           "name": "??1_AI@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _AI::~_AI(void)"
           },
@@ -21897,14 +21900,14 @@
     {
       "name": "mkp/_CutScenes",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -21912,7 +21915,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -21920,7 +21923,7 @@
         {
           "name": "??0_CutScenes@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _CutScenes::_CutScenes(void)"
           },
@@ -21938,7 +21941,7 @@
         {
           "name": "??1_CutScenes@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _CutScenes::~_CutScenes(void)"
           },
@@ -21963,14 +21966,14 @@
     {
       "name": "mkp/_Particles",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -21978,7 +21981,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -21986,7 +21989,7 @@
         {
           "name": "??0_Particles@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Particles::_Particles(void)"
           },
@@ -22004,7 +22007,7 @@
         {
           "name": "??1_Particles@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Particles::~_Particles(void)"
           },
@@ -22029,14 +22032,14 @@
     {
       "name": "mkp/_Platform",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -22044,7 +22047,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -22052,7 +22055,7 @@
         {
           "name": "??0_Platform@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Platform::_Platform(void)"
           },
@@ -22070,7 +22073,7 @@
         {
           "name": "??1_Platform@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Platform::~_Platform(void)"
           },
@@ -22095,14 +22098,14 @@
     {
       "name": "mkp/_Player",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -22110,7 +22113,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -22118,7 +22121,7 @@
         {
           "name": "??0_Player@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Player::_Player(void)"
           },
@@ -22136,7 +22139,7 @@
         {
           "name": "??1_Player@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Player::~_Player(void)"
           },
@@ -22161,14 +22164,14 @@
     {
       "name": "mkp/_PowerUp",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -22176,7 +22179,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -22184,7 +22187,7 @@
         {
           "name": "??0_PowerUp@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _PowerUp::_PowerUp(void)"
           },
@@ -22202,7 +22205,7 @@
         {
           "name": "??1_PowerUp@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _PowerUp::~_PowerUp(void)"
           },
@@ -22227,14 +22230,14 @@
     {
       "name": "mkp/_Sound",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -22242,7 +22245,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -22250,7 +22253,7 @@
         {
           "name": "??0_Sound@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Sound::_Sound(void)"
           },
@@ -22268,7 +22271,7 @@
         {
           "name": "??1_Sound@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Sound::~_Sound(void)"
           },
@@ -22293,14 +22296,14 @@
     {
       "name": "mkp/_Water",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -22308,7 +22311,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -22316,7 +22319,7 @@
         {
           "name": "??0_Water@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Water::_Water(void)"
           },
@@ -22334,7 +22337,7 @@
         {
           "name": "??1_Water@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Water::~_Water(void)"
           },
@@ -22359,14 +22362,14 @@
     {
       "name": "mkp/_Wrogowie",
       "measures": {
-        "fuzzy_match_percent": 96.53737,
+        "fuzzy_match_percent": 100.0,
         "total_code": "151",
-        "matched_code": "120",
-        "matched_code_percent": 79.4702,
+        "matched_code": "151",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 4,
-        "matched_functions": 2,
-        "matched_functions_percent": 50.0,
+        "matched_functions": 4,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -22374,7 +22377,7 @@
         {
           "name": ".text",
           "size": "151",
-          "fuzzy_match_percent": 96.53737,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -22382,7 +22385,7 @@
         {
           "name": "??0_Wrogowie@@QAE@XZ",
           "size": "19",
-          "fuzzy_match_percent": 91.42857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall _Wrogowie::_Wrogowie(void)"
           },
@@ -22400,7 +22403,7 @@
         {
           "name": "??1_Wrogowie@@UAE@XZ",
           "size": "12",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall _Wrogowie::~_Wrogowie(void)"
           },
@@ -29781,7 +29784,7 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 19.062305,
+        "fuzzy_match_percent": 19.067013,
         "total_code": "512247",
         "matched_code": "53703",
         "matched_code_percent": 10.483809,
@@ -29800,14 +29803,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 1.1934346,
+        "fuzzy_match_percent": 1.2266663,
         "total_code": "157337",
-        "matched_code": "1200",
-        "matched_code_percent": 0.7626941,
+        "matched_code": "1510",
+        "matched_code_percent": 0.9597235,
         "matched_data_percent": 100.0,
         "total_functions": 870,
-        "matched_functions": 20,
-        "matched_functions_percent": 2.2988505,
+        "matched_functions": 40,
+        "matched_functions_percent": 4.597701,
         "complete_data_percent": 100.0,
         "total_units": 97
       }

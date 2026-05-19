@@ -29,7 +29,7 @@ struct StateObject_Str {
 	/* 0x114 */ StateObject_Str* next;
 };
 
-class __declspec(dllexport) MagState : public cMagGameObject {
+class DLLEXPORT MagState : public cMagGameObject {
 private:
 	struct DelayedMessage_Str {
 		/* 0x00 */ MsgObject object;

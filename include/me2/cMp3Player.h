@@ -4,7 +4,7 @@
 #include <globals.h>
 #include <Dshow.h>
 
-class __declspec(dllexport) cMp3Player {
+class DLLEXPORT cMp3Player {
 public:
 
 	/* 10088E30 */ cMp3Player();

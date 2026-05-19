@@ -8,7 +8,7 @@
 #include "cMagKernel.h"
 #include "CTrackData.h"
 
-class __declspec(dllexport) CTrack : public cMagKernel {
+class DLLEXPORT CTrack : public cMagKernel {
 public:
 	/* 100B8220 */ CTrack();
 	/* 100B83E0 */ ~CTrack();

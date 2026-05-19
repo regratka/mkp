@@ -11,7 +11,7 @@
 #include "cMp3Player.h"
 #include "ColObject.h"
 
-class __declspec(dllexport) cMagMeshObject : public cMagUtility {
+class DLLEXPORT cMagMeshObject : public cMagUtility {
 public:
 	struct PatrolPoint {
 		/* 0x00 */ uchar f_00[0x18];

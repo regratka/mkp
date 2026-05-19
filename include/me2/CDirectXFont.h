@@ -14,7 +14,7 @@ struct FONTVERTEX {
 	float v;
 };
 
-class __declspec(dllexport) CDirectXFont {
+class DLLEXPORT CDirectXFont {
 	
 public:
 	/* 10066270 */ CDirectXFont();

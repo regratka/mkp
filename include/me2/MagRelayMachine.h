@@ -11,7 +11,7 @@ struct Message {
 	/* 0x04 */ int msgID;
 };
 
-class __declspec(dllexport) MagRelayMachine : public MagSingleton<MagRelayMachine> {
+class DLLEXPORT MagRelayMachine : public MagSingleton<MagRelayMachine> {
 public:
     static MagRelayMachine* getInstance() {
 		return instance;
