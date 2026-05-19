@@ -1356,11 +1356,17 @@ void cMagMeshObject::SetLightAmbient(float param_1, float param_2, float param_3
 
 /* 1005B2A0-1005B2B7 00017	*/
 void cMagMeshObject::EnableRenderShadow(bool param_1) {
+	if (studioMesh != NULL) {
+		studioMesh->EnableRenderShadow(param_1);
+	}
 }
 
 /* 1005B2C0-1005B2D2 00012	*/
 bool cMagMeshObject::EnableRenderShadow() {
-	return 0;
+	if (studioMesh != NULL) {
+		return studioMesh->EnableRenderShadow();
+	}
+	return false;
 }
 
 /* 1005B2E0-1005B59A 002BA	*/

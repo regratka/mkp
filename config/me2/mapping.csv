@@ -122,7 +122,7 @@
 ?EnablePortalRendering@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::EnablePortalRendering;0x10007a90;0xd;__thiscall;;void;cMagMeshObject*;bool
 ??0cMagMeshObject@@QAE@ABV0@@Z;cMagMeshObject::cMagMeshObject;0x10007aa0;0x1297;__thiscall;;uchar;cMagMeshObject*;cMagMeshObject*
 ??4cMagMeshObject@@QAEAAV0@ABV0@@Z;cMagMeshObject::operator=;0x10008d40;0x1aaf;__thiscall;;cMagMeshObject*;cMagMeshObject*;cMagMeshObject*
-;cMagMeshObject::scalar_destructor;0x1000a7f0;0x57;__thiscall;;cMagMeshObject*;void*;uchar
+??_GcMagMeshObject@@UAEPAXI@Z;cMagMeshObject::scalar_destructor;0x1000a7f0;0x57;__thiscall;;cMagMeshObject*;void*;uchar
 ;CPath::scalar_destructor;0x1000a850;0x1e;__thiscall;;uint*;CPath*;uchar
 ??0CDirectXFont@@QAE@ABV0@@Z;CDirectXFont::CDirectXFont;0x1000a870;0x62;__thiscall;;uchar;CDirectXFont*;CDirectXFont*
 ??4CDirectXFont@@QAEAAV0@ABV0@@Z;CDirectXFont::operator=;0x1000a8e0;0x68;__thiscall;;CDirectXFont*;CDirectXFont*;CDirectXFont*
