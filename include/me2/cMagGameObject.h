@@ -219,7 +219,7 @@ public: //HACK
 	/* 0x2e8 */ jobject unkn_GlobalRef; // maybe child/parent reference?
 	/* 0x2ec */ MagKernelMetaData* javaMetaData;
 	/* 0x2f0 */ MagKernelMetaData* unkn_MetaData; // maybe child/parent metadata?
-private:
+public:
 	/* 0x2f4 */ char levelDirectory[300];
 	/* 0x420 */ char windowTitle[254];
 

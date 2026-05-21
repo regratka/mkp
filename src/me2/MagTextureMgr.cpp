@@ -16,7 +16,13 @@ MagTextureMgr* MagTextureMgr::scalar_destructor(uchar param_1) {
 
 /* 100393E0-10039435 00055	*/
 char* MagTextureMgr::CreateNiceString(char* param_1) {
-	return 0;
+	if (strstr(param_1,"\\") != 0) {
+		return strtok(strrchr(param_1, '\\'), "\\");
+	} 
+	if (strstr(param_1,"/") != 0) {
+		return strtok(strrchr(param_1, '/'), "/");
+	} 
+	return param_1;
 }
 
 /* 10086680-10086729 000A9	*/

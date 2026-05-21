@@ -44,7 +44,7 @@ void IStudioMesh::SetShadowType(int param_1) {
 }
 
 /* 1005D6A0-1005D6F1 00051	*/
-void IStudioMesh::RenderMesh(uchar param_1) {
+void IStudioMesh::RenderMesh(D3DXMATRIX param_1) {
 }
 
 /* 1005D700-1005D70D 0000D	*/

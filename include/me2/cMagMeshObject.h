@@ -11,6 +11,11 @@
 #include "cMp3Player.h"
 #include "ColObject.h"
 
+struct LINEVERTEX {
+	D3DXVECTOR3 pos;
+	D3DCOLOR color;
+};
+
 class DLLEXPORT cMagMeshObject : public cMagUtility {
 public:
 	struct PatrolPoint {
@@ -305,7 +310,7 @@ public:
 	/* 1005B120 */ bool EnableZBuffeWrite();
 	/* 1005B130 */ int GetFaceCount();
 	/* 1005B160 */ void EnableForceTransform(bool param_1);
-	/* 1005B170 */ void SetForceTransformMatrix(uchar param_1);
+	/* 1005B170 */ void SetForceTransformMatrix(D3DXMATRIX param_1);
 	/* 1005B190 */ void SetLightPosition(D3DXVECTOR3 param_1);
 	/* 1005B1C0 */ void EnableLight(bool param_1);
 	/* 1005B1E0 */ void SetMaterialDiffuse(float param_1, float param_2, float param_3, float param_4);
@@ -318,10 +323,11 @@ public:
 	/* 1005B5A0 */ void LoadLod(char* param_1);
 	/* 1005B9B0 */ bool _TestDistanceLOD(float param_1);
 	/* 1005BB40 */ bool CreateNavigationPath(char* param_1);
-	/* 1005C280 */ uint BuildNaviPoints(uint param_1, uint param_2, uint param_3, uint param_4, uint param_5, uint param_6);
+	/* 1005C280 */ bool BuildNaviPoints(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 1005C610 */ int GetNaviPointsCount();
 	/* 1005C640 */ uchar GetNaviPointAt(uint* param_1, uint param_2);
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
+	/* 100393E0 */ char* CreateNiceString(char* param_1);
 
 public:
 	/* 0xd4c */ uchar f_d4c[0xd50 - 0xd4c];
@@ -337,7 +343,8 @@ public:
 	/* 0xebc */ D3DXVECTOR3 speedDirection;
 	/* 0xec8 */ bool pauseUpdatePhysics;
 	/* 0xec9 */ uchar collAction;
-	/* 0xeca */ uchar f_eca[0xed0 - 0xeca];
+	/* 0xeca */ bool unk_eca;
+	/* 0xecb */ uchar f_ecb[0xed0 - 0xecb];
 	/* 0xed0 */ bool enableTestSector;
 	/* 0xed1 */ bool unk_ed1;
 	/* 0xed2 */ bool unk_ed2;
@@ -348,13 +355,15 @@ public:
 	/* 0x12e8 */ cMagMeshObject* linkParent;
 	/* 0x12ec */ uchar f_12ec[0x1305 - 0x12ec];
 	/* 0x1305 */ bool showWireframe;
-	/* 0x1306 */ uchar f_1306[0x1318 - 0x1306];
+	/* 0x1308 */ LINEVERTEX* lineVertex;
+	/* 0x130c */ IDirect3DTexture8** lineTexture;
+	/* 0x1310 */ uchar f_1310[0x1318 - 0x1310];
 	/* 0x1318 */ bool showBoundingBox;
 	/* 0x1319 */ uchar f_1319[0x131c - 0x1319];
 	/* 0x131c */ float framesSinceLastMeasure;
 	/* 0x1320 */ bool unkn_1320;
-	/* 0x1324 */ D3DXVECTOR3 unkn_1324;
-	/* 0x1330 */ D3DXVECTOR3 unkn_1330;
+	/* 0x1324 */ D3DXVECTOR3 boundary1;
+	/* 0x1330 */ D3DXVECTOR3 boundary2;
 	/* 0x133c */ bool enableFrustum;
 	/* 0x133d */ bool unk_113d;
 	/* 0x133e */ bool unk_113e;
@@ -380,11 +389,13 @@ public:
 	/* 0x179c */ int unk_179c;
 	/* 0x17a0 */ bool enableCallHandlerOnPlaySoundEnd;
 	/* 0x17a4 */ cMagKernel* handlerOnPlaySoundEnd;
-	/* 0x17a8 */ D3DXVECTOR3 unkn_17a8;
-	/* 0x17b4 */ D3DXVECTOR3 unkn_17b4;
+	/* 0x17a8 */ D3DXVECTOR3 positionVector;
+	/* 0x17b4 */ D3DXVECTOR3 scaleVector;
 	/* 0x17c0 */ uchar f_17c0[0x17d8 - 0x17c0];
 	/* 0x17d8 */ D3DXVECTOR3 rotateVector;
-	/* 0x17e4 */ uchar f_17e4[0x1928 - 0x17e4];
+	/* 0x17e4 */ uchar f_17e4[0x17e8 - 0x17e4];
+	/* 0x17e8 */ char filePath[300];
+	/* 0x1914 */ uchar f_1914[0x1928 - 0x1914];
 	/* 0x1928 */ float lastMeasureTime;
 	/* 0x192c */ float frameRate;
 	/* 0x1930 */ D3DXMATRIX worldMat;
@@ -443,8 +454,9 @@ public:
 	/* 0x1f10 */ D3DXVECTOR3 motionRotationAngSpeed;
 	/* 0x1f1c */ uchar f_1f1c[0x1f5d - 0x1f1c];
 	/* 0x1f5d */ bool enableDynamicPointLight;
+	/* 0x1f5e */ bool unk_1f5e;
 	/* 0x1f60 */ int dynamicLightID;
-	/* 0x1f64 */ uchar f_1f64[0x1fcc - 0x1f64];
+	/* 0x1f64 */ char unk_1f64[104];
 	/* 0x1fcc */ bool lightingObject;
 	/* 0x1fcd */ uchar f_1fcd[0x1fdc - 0x1fcd];
 	/* 0x1fdc */ ColObject* colObject;
@@ -457,20 +469,23 @@ public:
 	/* 0x2014 */ bool enableAnimTextureLightMap;
 	/* 0x2015 */ uchar f_2015[0x2148 - 0x2015];
 	/* 0x2148 */ int lightMap;
-	/* 0x214c */ uchar f_214c[0x2155 - 0x214c];
+	/* 0x214c */ IDirect3DTexture8* magQuadTexture;
+	/* 0x2150 */ IDirect3DVertexBuffer8* magQuadBuffer;
+	/* 0x2154 */ bool unk_2154;
 	/* 0x2155 */ bool enableAnimTexture;
 	/* 0x2156 */ bool enableAnimTextureMove;
-	/* 0x2157 */ uchar f_2157[0x215c - 0x2157];
+	/* 0x2158 */ IDirect3DTexture8* animTexture;
 	/* 0x215c */ int animTextureFPS;
 	/* 0x2160 */ int animTextureFrameCount;
 	/* 0x2164 */ uchar f_2164[0x2174 - 0x2164];
 	/* 0x2174 */ float acceleration;
 	/* 0x2178 */ uchar f_2178[0x228a - 0x2178];
 	/* 0x228a */ bool disableTestMeshInSector;
-	/* 0x228b */ uchar f_228b;
+	/* 0x228b */ bool unk_228b;
 	/* 0x228c */ bool enableZBufferWrite;
 	/* 0x228d */ bool enableForceTransform;
-	/* 0x228e */ uchar f_228e[0x22d4 - 0x228e];
+	/* 0x2290 */ D3DXMATRIX forceTransformMatrix;
+	/* 0x22d0 */ uchar f_22d0[0x22d4 - 0x22d0];
 	/* 0x22d4 */ int shadowType;
 	/* 0x22d8 */ uchar f_22d8[0x2658 - 0x22d8];
 

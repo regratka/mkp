@@ -6,7 +6,8 @@
 #include <Cg/cg.h>
 
 #include "cMagLog.h"
-#include "cStaticMesh.h"
+
+class cStaticMesh;
 
 
 class cStaticSurface : public cMagLog {
@@ -24,8 +25,10 @@ public:
 	/* 10043C80 */ void FUN10043c80();
 	/* 10043DE0 */ void FUN10043de0();
 
-private:
-	/* 0x0c */ uchar f_0c[0x244-0xc];
+public:
+	/* 0x0c */ uchar f_0c[0x174-0xc];
+	/* 0x174 */ bool unk_174;
+	/* 0x175 */ uchar f_175[0x244-0x175];
 	/* 0x244 */ CGcontext context;
 	/* 0x248 */ CGprogram program;
 	/* 0x24c */ uchar f_24c[0x25c-0x24c];

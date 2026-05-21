@@ -18,7 +18,7 @@ public:
 	/* 1005D380 */ void CreateColTypeTexIni(char* param_1);
 	/* 1005D670 */ void EnableAnimTexture(bool param_1);
 	/* 1005D680 */ void SetShadowType(int param_1);
-	/* 1005D6A0 */ void RenderMesh(uchar param_1);
+	/* 1005D6A0 */ void RenderMesh(D3DXMATRIX param_1);
 	/* 1005D700 */ void EnableRenderShadow(bool param_1);
 	/* 1005D710 */ bool EnableRenderShadow();
 	/* 1005D720 */ void OnRenderShadow(D3DXMATRIX param_1);

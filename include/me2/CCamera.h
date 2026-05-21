@@ -16,7 +16,7 @@ public:
 	/* 1005F6C0 */ void SetFOV(float param_1);
 	/* 1005F6D0 */ float GetFOV();
 	/* 1005F6E0 */ void SetPosition(D3DXVECTOR3 param_1);
-	/* 1005F710 */ D3DXVECTOR3* GetPosition(D3DXVECTOR3* param_1);
+	/* 1005F710 */ virtual D3DXVECTOR3 GetPosition();
 	/* 1005F740 */ void SetNearPlane(float param_1);
 	/* 1005F750 */ void SetFarPlane(float param_1);
 	/* 1005F760 */ float GetNearPlane();

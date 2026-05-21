@@ -2,8 +2,9 @@
 #define C_STATIC_MESH
 
 #include <globals.h>
-
+#include <vector>
 #include <d3dx8math.h>
+#include "cStaticSurface.h"
 
 class cStaticMesh {
 public:
@@ -23,7 +24,7 @@ public:
 	/* 10040550 */ bool Create();
 	/* 10040C40 */ void ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2);
 	/* 10040C80 */ void Update(uchar param_1);
-	/* 10041000 */ void Render(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5, uchar param_6, uchar param_7, uchar param_8, uchar param_9, uint param_10);
+	/* 10041000 */ void Render(D3DXMATRIX param_1, IDirect3DTexture8* param_2);
 	/* 10041070 */ int TestDistance(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6);
 	/* 10041710 */ void CreateColTypeTexIni(char* param_1);
 	/* 10041980 */ void LoadColTypeTexIni(char* param_1);
@@ -31,8 +32,10 @@ public:
 	/* 10041D60 */ bool SetMultiple(float param_1);
 	/* 10041DC0 */ void SetAnimTextureLightMap(uchar param_1);
 
-private:
-	/* 0x04 */ uchar f_04[0x480-0x04];
+public:
+	/* 0x04 */ uchar f_04[0x47c-0x04];
+	/* 0x47c */ cStaticSurface* surfaces;
+
 };
 
 STATIC_ASSERT(sizeof(cStaticMesh)==0x480);
