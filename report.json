@@ -1,6 +1,6 @@
 {
   "measures": {
-    "fuzzy_match_percent": 15.81809,
+    "fuzzy_match_percent": 15.821685,
     "total_code": "669691",
     "matched_code": "57364",
     "matched_code_percent": 8.565742,
@@ -14436,7 +14436,7 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 28.81168,
+        "fuzzy_match_percent": 28.857977,
         "total_code": "52000",
         "matched_code": "5754",
         "matched_code_percent": 11.065385,
@@ -14451,7 +14451,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 28.81168,
+          "fuzzy_match_percent": 28.857977,
           "metadata": {}
         }
       ],
@@ -14899,7 +14899,7 @@
         {
           "name": "?_TestDistance@cMagMeshObject@@QAE_NM@Z",
           "size": "1606",
-          "fuzzy_match_percent": 73.68421,
+          "fuzzy_match_percent": 75.18316,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::_TestDistance(float)"
           },
@@ -29800,7 +29800,7 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 20.29892,
+        "fuzzy_match_percent": 20.303617,
         "total_code": "512354",
         "matched_code": "55854",
         "matched_code_percent": 10.901447,

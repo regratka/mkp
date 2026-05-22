@@ -525,61 +525,70 @@ bool cMagMeshObject::_TestDistance(float param_1) {
 	if (cMagEngineMgr::getInstance()->gameObject->GetActiveCamera() != NULL) {
 		cameraPos = cMagEngineMgr::getInstance()->gameObject->GetActiveCamera()->GetPosition();
 	}
-	D3DXVECTOR3 vec0(boundary1.x, boundary2.y, boundary1.z);
-	D3DXVECTOR3 vec00(boundary2.x, boundary1.y, boundary2.z);
-	D3DXVECTOR3 vec1(boundary1.x, boundary1.y, boundary2.z);
-	D3DXVECTOR3 vec2(boundary2.x, boundary1.y, boundary1.z);
-	D3DXVECTOR3 vec3(boundary1.x, boundary1.y, boundary1.z);
-	D3DXVECTOR3 vec4(boundary2.x, boundary2.y, boundary2.z);
-	D3DXVECTOR3 vec6(boundary1.x, boundary2.y, boundary2.z);
-	D3DXVECTOR3 vec7(boundary2.x, boundary2.y, boundary1.z);
-	D3DXVECTOR3 center;
-	center.x = (boundary1.x + boundary2.x) / 2;
-	center.y = (boundary1.y + boundary2.y) / 2;
-	center.z = (boundary1.z + boundary2.z) / 2;
-	D3DXVECTOR3 vec5(center.x, center.y, center.z);
 	
-	D3DXVec3TransformCoord(&vec4, &vec4, &unkn_1448);
-	D3DXVec3TransformCoord(&vec7, &vec7, &unkn_1448);
-	D3DXVec3TransformCoord(&vec00, &vec00, &unkn_1448);
-	D3DXVec3TransformCoord(&vec2, &vec2, &unkn_1448);
-	D3DXVec3TransformCoord(&vec6, &vec6, &unkn_1448);
-	D3DXVec3TransformCoord(&vec0, &vec0, &unkn_1448);
-	D3DXVec3TransformCoord(&vec1, &vec1, &unkn_1448);
-	D3DXVec3TransformCoord(&vec3, &vec3, &unkn_1448);
-	D3DXVec3TransformCoord(&vec5, &vec5, &unkn_1448);
+	D3DXVECTOR3 bond111(boundary1);
+	D3DXVECTOR3 bond222(boundary2);
+	
+	D3DXVECTOR3 vec222;
+	vec222 = D3DXVECTOR3(bond222.x, bond222.y, bond222.z);
+	D3DXVECTOR3 vec221;
+	vec221 = D3DXVECTOR3(bond222.x, bond222.y, bond111.z);
+	D3DXVECTOR3 vec212;
+	vec212 = D3DXVECTOR3(bond222.x, bond111.y, bond222.z);
+	D3DXVECTOR3 vec211;
+	vec211 = D3DXVECTOR3(bond222.x, bond111.y, bond111.z);
+	D3DXVECTOR3 vec122;
+	vec122 = D3DXVECTOR3(bond111.x, bond222.y, bond222.z);
+	D3DXVECTOR3 vec121;
+	vec121 = D3DXVECTOR3(bond111.x, bond222.y, bond111.z);
+	D3DXVECTOR3 vec112;
+	vec112 = D3DXVECTOR3(bond111.x, bond111.y, bond222.z);
+	D3DXVECTOR3 vec111;
+	vec111 = D3DXVECTOR3(bond111.x, bond111.y, bond111.z);
+	
+	D3DXVECTOR3 center = D3DXVECTOR3((bond111.x + bond222.x) / 2.0f, (bond111.y + bond222.y) / 2.0f, (bond111.z + bond222.z) / 2.0f);
+	
+	D3DXVec3TransformCoord(&vec111, &vec111, &unkn_1448);
+	D3DXVec3TransformCoord(&vec112, &vec112, &unkn_1448);
+	D3DXVec3TransformCoord(&vec121, &vec121, &unkn_1448);
+	D3DXVec3TransformCoord(&vec211, &vec211, &unkn_1448);
+	D3DXVec3TransformCoord(&vec122, &vec122, &unkn_1448);
+	D3DXVec3TransformCoord(&vec212, &vec212, &unkn_1448);
+	D3DXVec3TransformCoord(&vec221, &vec221, &unkn_1448);
+	D3DXVec3TransformCoord(&vec222, &vec222, &unkn_1448);
+	D3DXVec3TransformCoord(&center, &center, &unkn_1448);
 
-	float distVec4 = D3DXVec3Length(&(cameraPos-vec4));
-	float distVec7 = D3DXVec3Length(&(cameraPos-vec7));
+	float distVec4 = D3DXVec3Length(&(cameraPos-vec111));
+	float distVec7 = D3DXVec3Length(&(cameraPos-vec112));
 	float minDist = distVec4;
 	if (distVec7 < distVec4) {
 		minDist = distVec7;
 	}
-	float distVec00 = D3DXVec3Length(&(cameraPos-vec00));
+	float distVec00 = D3DXVec3Length(&(cameraPos-vec121));
 	if (distVec00 < minDist) {
 		minDist = distVec00;
 	}
-	float distVec2 = D3DXVec3Length(&(cameraPos-vec2));
+	float distVec2 = D3DXVec3Length(&(cameraPos-vec211));
 	if (distVec2 < minDist) {
 		minDist = distVec2;
 	}
-	float distVec6 = D3DXVec3Length(&(cameraPos-vec6));
+	float distVec6 = D3DXVec3Length(&(cameraPos-vec122));
 	if (distVec6 < minDist) {
 		minDist = distVec6;
 	}
-	float distVec0 = D3DXVec3Length(&(cameraPos-vec0));
+	float distVec0 = D3DXVec3Length(&(cameraPos-vec212));
 	if (distVec0 < minDist) {
 		minDist = distVec0;
 	}
-	float distVec1 = D3DXVec3Length(&(cameraPos-vec1));
+	float distVec1 = D3DXVec3Length(&(cameraPos-vec221));
 	if (distVec1 < minDist) {
 		minDist = distVec1;
 	}
-	float distVec3 = D3DXVec3Length(&(cameraPos-vec3));
+	float distVec3 = D3DXVec3Length(&(cameraPos-vec222));
 	if (distVec3 < minDist) {
 		minDist = distVec3;
 	}
-	float distVec5 = D3DXVec3Length(&(cameraPos-vec5));
+	float distVec5 = D3DXVec3Length(&(cameraPos-center));
 	if (distVec5 < minDist) {
 		minDist = distVec5;
 	}
