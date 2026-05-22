@@ -23,12 +23,12 @@ cMagFrustumCull::~cMagFrustumCull() {
 }
 
 /* 10089C50-10089F84 00334	*/
-uint cMagFrustumCull::ComputeBoundingBox(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6) {
+HRESULT cMagFrustumCull::ComputeBoundingBox(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
 	return 0;
 }
 
 /* 10089F90-1008A198 00208	*/
-void cMagFrustumCull::UpdateBB(float param_1, float param_2, float param_3, uint* param_4, float param_5, float param_6) {
+void cMagFrustumCull::UpdateBB(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXMATRIX& param_3) {
 }
 
 /* 1008A1A0-1008A202 00062	*/
@@ -58,7 +58,7 @@ void cMagFrustumCull::UpdateCullInfo(CULLINFO* param_1, uchar param_2, uchar par
 }
 
 /* 1008BA40-1008BA56 00016	*/
-void cMagFrustumCull::UpdateCull(uchar param_1, uchar param_2) {
+void cMagFrustumCull::UpdateCull(D3DXMATRIX* param_1, D3DXMATRIX* param_2) {
 }
 
 /* 1008BA60-1008BDE6 00386	*/

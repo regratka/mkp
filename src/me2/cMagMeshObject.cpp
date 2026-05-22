@@ -620,6 +620,61 @@ void cMagMeshObject::EnableTestSector(bool param_1) {
 
 /* 10054C70-10054FDB 0036B	*/
 void cMagMeshObject::OnUpdate_() {
+	TestSoundRanges();
+	if (enableCallHandlerOnPlaySoundEnd) {
+		bool playing = IsPlaying(unk_179c);
+		if (!playing) {
+			enableCallHandlerOnPlaySoundEnd = playing;
+			if (handlerOnPlaySoundEnd != NULL) {
+				handlerOnPlaySoundEnd->OnPlaySoundEnd(unk_179c);
+				handlerOnPlaySoundEnd = NULL;
+			} else {
+				OnPlaySoundEnd(unk_179c);
+			}
+		}
+	}
+
+	if (!unk_eca || !enableRendering) {
+		return;
+	}
+
+	D3DXMatrixIdentity(&worldMat);
+	if (enableForceTransform) {
+		D3DXMATRIX res;
+		unkn_1448 = *D3DXMatrixMultiply(&res, &scaleMatrix, &forceTransformMatrix);
+	} else {
+		D3DXMATRIX res;
+		D3DXMATRIX res2;
+		D3DXMATRIX res3 = *D3DXMatrixMultiply(&res2, &scaleMatrix, &rotateMatrix);;
+		unkn_1448 = *D3DXMatrixMultiply(&res, &res3, &translationMatrix);
+	}
+	D3DXMatrixMultiply(&worldMat, &unkn_1448, &worldMat);
+	D3DXMATRIX projection;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &projection);
+	D3DXMATRIX view;
+	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &view);
+	cMagEngineMgr::getInstance()->frustumCull->ComputeBoundingBox(boundary1, boundary2);
+
+
+	D3DXMATRIX temp = unkn_1448;
+	StructUnk184* structUnk184 = cMagEngineMgr::getInstance()->frustumCull->structUnk184;
+	structUnk184->unk_14 = temp;
+	for (int index = 0; index < 8; index++) {
+		D3DXVec3TransformCoord(&structUnk184->unk_b4[index], &structUnk184->unk_54[index], &structUnk184->unk_14);
+	}
+	D3DXPlaneFromPoints(&structUnk184->unk_120[0], &structUnk184->unk_b4[0], &structUnk184->unk_b4[1], &structUnk184->unk_b4[2]);
+	D3DXPlaneFromPoints(&structUnk184->unk_120[1], &structUnk184->unk_b4[6], &structUnk184->unk_b4[7], &structUnk184->unk_b4[5]);
+	D3DXPlaneFromPoints(&structUnk184->unk_120[2], &structUnk184->unk_b4[2], &structUnk184->unk_b4[6], &structUnk184->unk_b4[4]);
+	D3DXPlaneFromPoints(&structUnk184->unk_120[3], &structUnk184->unk_b4[7], &structUnk184->unk_b4[3], &structUnk184->unk_b4[5]);
+	D3DXPlaneFromPoints(&structUnk184->unk_120[4], &structUnk184->unk_b4[2], &structUnk184->unk_b4[3], &structUnk184->unk_b4[6]);
+	D3DXPlaneFromPoints(&structUnk184->unk_120[5], &structUnk184->unk_b4[1], &structUnk184->unk_b4[0], &structUnk184->unk_b4[4]);
+	cMagEngineMgr::getInstance()->frustumCull->UpdateCull(&view, &projection);
+	cMagEngineMgr::getInstance()->frustumCull->CullObjects();
+	cullState = cMagEngineMgr::getInstance()->frustumCull->structUnk184->cullState;
+
+	if (showBoundingBox) {
+		cMagEngineMgr::getInstance()->frustumCull->UpdateBB(boundary1, boundary2, unk_1b10);
+	}
 }
 
 /* 10054FE0-1005561B 0063B	*/

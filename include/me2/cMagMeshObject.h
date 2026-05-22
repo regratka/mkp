@@ -10,6 +10,7 @@
 #include "cVideoPlayer.h"
 #include "cMp3Player.h"
 #include "ColObject.h"
+#include "cMagFrustumCull.h"
 
 struct LINEVERTEX {
 	D3DXVECTOR3 pos;
@@ -357,7 +358,8 @@ public:
 	/* 0x1305 */ bool showWireframe;
 	/* 0x1308 */ LINEVERTEX* lineVertex;
 	/* 0x130c */ IDirect3DTexture8** lineTexture;
-	/* 0x1310 */ uchar f_1310[0x1318 - 0x1310];
+	/* 0x1310 */ CULLSTATE cullState;
+	/* 0x1314 */ uchar f_1314[0x1318 - 0x1314];
 	/* 0x1318 */ bool showBoundingBox;
 	/* 0x1319 */ uchar f_1319[0x131c - 0x1319];
 	/* 0x131c */ float framesSinceLastMeasure;
@@ -419,7 +421,7 @@ public:
 	/* 0x1b07 */ bool collisionObjects;
 	/* 0x1b08 */ uchar collisionType;
 	/* 0x1b0c */ float slideAngle;
-	/* 0x1b10 */ uchar f_1b10[0x1b50 - 0x1b10];
+	/* 0x1b10 */ D3DXMATRIX unk_1b10;
 	/* 0x1b50 */ cMagMeshObject* parent;
 	/* 0x1b54 */ cMagMeshObject* slideObject;
 	/* 0x1b58 */ uchar f_1b58[0x1e9c - 0x1b58];

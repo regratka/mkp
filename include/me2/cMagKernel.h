@@ -57,7 +57,7 @@ public:
 	virtual void OnMessage(); /* vtbl 0x60*/
 	virtual void OnPerfectTimer(); /* vtbl 0x64*/
 	virtual void OnBillboardAnimEnd(); /* vtbl 0x68*/
-	virtual void OnPlaySoundEnd(); /* vtbl 0x6c*/
+	virtual void OnPlaySoundEnd(int param_1); /* vtbl 0x6c*/
 	virtual void OnNumPadCodeCorrect(int param_1); /* vtbl 0x70*/
 	virtual void OnNumPadCodeCorrect(); /* vtbl 0x74*/
 	virtual void OnNumPadExit(); /* vtbl 0x78*/

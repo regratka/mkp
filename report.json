@@ -1,6 +1,6 @@
 {
   "measures": {
-    "fuzzy_match_percent": 15.821685,
+    "fuzzy_match_percent": 15.928445,
     "total_code": "669691",
     "matched_code": "57364",
     "matched_code_percent": 8.565742,
@@ -11475,7 +11475,7 @@
     {
       "name": "me2/cMagFrustumCull",
       "measures": {
-        "fuzzy_match_percent": 0.271502,
+        "fuzzy_match_percent": 0.42147276,
         "total_code": "11310",
         "matched_data_percent": 100.0,
         "total_functions": 19,
@@ -11486,7 +11486,7 @@
         {
           "name": ".text",
           "size": "11310",
-          "fuzzy_match_percent": 0.271502,
+          "fuzzy_match_percent": 0.42147276,
           "metadata": {}
         }
       ],
@@ -11534,6 +11534,7 @@
         {
           "name": "?ComputeBoundingBox@cMagFrustumCull@@QAEJUD3DXVECTOR3@@0@Z",
           "size": "820",
+          "fuzzy_match_percent": 1.0362694,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagFrustumCull::ComputeBoundingBox(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -11542,6 +11543,7 @@
         {
           "name": "?UpdateBB@cMagFrustumCull@@QAEXUD3DXVECTOR3@@0AAUD3DXMATRIX@@@Z",
           "size": "520",
+          "fuzzy_match_percent": 1.0989012,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFrustumCull::UpdateBB(struct D3DXVECTOR3, struct D3DXVECTOR3, struct D3DXMATRIX &)"
           },
@@ -11600,6 +11602,7 @@
         {
           "name": "?UpdateCull@cMagFrustumCull@@QAEXPAUD3DXMATRIX@@0@Z",
           "size": "22",
+          "fuzzy_match_percent": 12.5,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagFrustumCull::UpdateCull(struct D3DXMATRIX *, struct D3DXMATRIX *)"
           },
@@ -14436,7 +14439,7 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 28.857977,
+        "fuzzy_match_percent": 30.200274,
         "total_code": "52000",
         "matched_code": "5754",
         "matched_code_percent": 11.065385,
@@ -14451,7 +14454,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 28.857977,
+          "fuzzy_match_percent": 30.200274,
           "metadata": {}
         }
       ],
@@ -14540,7 +14543,7 @@
         {
           "name": "??4cMagMeshObject@@QAEAAV0@ABV0@@Z",
           "size": "6831",
-          "fuzzy_match_percent": 30.536692,
+          "fuzzy_match_percent": 28.93483,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject & __thiscall cMagMeshObject::operator=(class cMagMeshObject const &)"
           },
@@ -14926,7 +14929,7 @@
         {
           "name": "?OnUpdate_@cMagMeshObject@@UAEXXZ",
           "size": "875",
-          "fuzzy_match_percent": 0.38910505,
+          "fuzzy_match_percent": 92.66537,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::OnUpdate_(void)"
           },
@@ -29800,7 +29803,7 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 20.303617,
+        "fuzzy_match_percent": 20.443163,
         "total_code": "512354",
         "matched_code": "55854",
         "matched_code_percent": 10.901447,
