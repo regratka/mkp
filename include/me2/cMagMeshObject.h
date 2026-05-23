@@ -18,6 +18,12 @@ struct LINEVERTEX {
 	D3DCOLOR color;
 };
 
+struct WATERTEXTURE {
+	/* 0x00 */ void* unk_00;
+	/* 0x04 */ IDirect3DTexture8* texture;
+	/* 0x08 */ char textureName[256];
+};
+
 class DLLEXPORT cMagMeshObject : public cMagUtility {
 public:
 	struct PatrolPoint {
@@ -442,7 +448,7 @@ public:
 	/* 0x1ec0 */ int cullMode;
 	/* 0x1ec4 */ ulong unk_1ec4;
 	/* 0x1ec8 */ ulong unk_1ec8;
-	/* 0x1ecc */ uchar f_1ecc[0x1edc - 0x1ecc];
+	/* 0x1ecc */ std::vector<WATERTEXTURE> waterTextures;
 	/* 0x1edc */ bool playWaterAnim;
 	/* 0x1edd */ bool enableWaterEffect;
 	/* 0x1ede */ bool unk_1ede;
@@ -472,7 +478,8 @@ public:
 	/* 0x1fe1 */ bool freeDestinationDir;
 	/* 0x1fe2 */ uchar f_1fe2[0x1fe8 - 0x1fe2];
 	/* 0x1fe8 */ uchar physicsType;
-	/* 0x1fe9 */ uchar f_1fe9[0x2010 - 0x1fe9];
+	/* 0x1fe9 */ uchar f_1fe9[0x2000 - 0x1fe9];
+	/* 0x2000 */ std::vector<IDirect3DTexture8*> animTextureLightMaps;
 	/* 0x2010 */ int animTextureLightMapFPS;
 	/* 0x2014 */ bool enableAnimTextureLightMap;
 	/* 0x2015 */ uchar f_2015[0x2148 - 0x2015];
@@ -485,7 +492,7 @@ public:
 	/* 0x2158 */ IDirect3DTexture8* animTexture;
 	/* 0x215c */ int animTextureFPS;
 	/* 0x2160 */ int animTextureFrameCount;
-	/* 0x2164 */ uchar f_2164[0x2174 - 0x2164];
+	/* 0x2164 */ std::vector<IDirect3DTexture8*> animTextures;
 	/* 0x2174 */ float acceleration;
 	/* 0x2178 */ uchar f_2178[0x227c - 0x2178];
 	/* 0x227c */ bool unk_227c;

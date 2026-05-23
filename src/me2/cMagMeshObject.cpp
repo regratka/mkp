@@ -1660,6 +1660,11 @@ void cMagMeshObject::SetAlphaGreatereQual(ulong param_1) {
 
 /* 100594A0-1005971E 0027E	*/
 void cMagMeshObject::AddWaterTexture(char* param_1) {
+	WATERTEXTURE waterTexture;
+	waterTexture.texture = MagTextureMgr::getInstance()->GetTexture(param_1);
+	waterTexture.unk_00 = NULL;
+	strcpy(waterTexture.textureName, param_1);
+	waterTextures.push_back(waterTexture); 
 }
 
 /* 10059720-1005972D 0000D	*/
@@ -1923,6 +1928,7 @@ void cMagMeshObject::CreateMagQuad() {
 
 /* 1005A750-1005A76D 0001D	*/
 void cMagMeshObject::SetTextureMagQuad(char* param_1) {
+	magQuadTexture = MagTextureMgr::getInstance()->GetTexture(param_1);
 }
 
 /* 1005A770-1005A886 00116	*/
@@ -1958,12 +1964,31 @@ int cMagMeshObject::AddTexture(char* param_1) {
 
 /* 1005AA70-1005AAD4 00064	*/
 bool cMagMeshObject::SetTexture(int param_1) {
-	return 0;
+	EnableAnimTexture(false);
+	if (param_1 == 0) {
+		animTexture = NULL;
+		return false;
+	}
+	if (param_1 < 0) {
+		return false;
+	}
+
+	if (param_1 <= animTextures.size() && animTextures.size() > 0) {
+		animTexture = animTextures[param_1-1];
+		return true;
+	}
+
+	return false;
 }
 
 /* 1005AAE0-1005AB46 00066	*/
 int cMagMeshObject::AddAnimTexture(char* param_1) {
-	return 0;
+	if (staticMesh == NULL && studioMesh == NULL) {
+		return -1;
+	}
+	IDirect3DTexture8* texture = MagTextureMgr::getInstance()->GetTexture(param_1);
+	animTextures.push_back(texture);
+	return animTextures.size();
 }
 
 /* 1005AB50-1005AB5D 0000D	*/
@@ -2034,6 +2059,8 @@ void cMagMeshObject::EnableAnimTextureLightMap(bool param_1) {
 
 /* 1005AE60-1005B027 001C7	*/
 void cMagMeshObject::AddAnimTextureLightMap(char* param_1) {
+	IDirect3DTexture8* texture = MagTextureMgr::getInstance()->GetTexture(param_1);
+	animTextureLightMaps.push_back(texture);
 }
 
 /* 1005B030-1005B03D 0000D	*/
