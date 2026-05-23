@@ -847,6 +847,78 @@ cMagGameObject* cMagMeshObject::GetEngine() {
 
 /* 10055700-10055C6C 0056C	*/
 void cMagMeshObject::SetDirection(float param_1, float param_2, float param_3) {
+	if (!m_bRepairEuler) {
+		param_1 *= -1.0f;
+		param_2 *= -1.0f;
+		param_3 *= -1.0f;
+	}
+	if (param_1 > 180.0f) {
+		param_1 -= 360.0f;
+	}
+	if (param_1 < -180.0f) {
+		param_1 += 360.0f;
+	}
+	if (param_2 > 180.0f) {
+		param_2 -= 360.0f;
+	}
+	if (param_2 < -180.0f) {
+		param_2 += 360.0f;
+	}
+	if (param_3 > 180.0f) {
+		param_3 -= 360.0f;
+	}
+	if (param_3 < -180.0f) {
+		param_3 += 360.0f;
+	}
+	if (m_bRepairEuler) {
+		D3DXMatrixIdentity(&rotateXMatrix);
+		D3DXMatrixIdentity(&rotateYMatrix);
+		D3DXMatrixIdentity(&rotateZMatrix);
+		directionVector.x = 0.0f;
+		directionVector.y = 0.0f;
+		directionVector.z = 1.0f;
+		D3DXMatrixRotationX(&rotateXMatrix, D3DXToRadian(param_1));
+		D3DXMatrixRotationY(&rotateYMatrix, D3DXToRadian(param_1));
+		D3DXMatrixRotationZ(&rotateZMatrix, D3DXToRadian(param_1));
+		D3DXMATRIX matrixXY;
+		D3DXMatrixMultiply(&matrixXY, &rotateXMatrix, &rotateYMatrix);
+		D3DXMATRIX matrixXYZ;
+		D3DXMatrixMultiply(&matrixXYZ, &matrixXY, &rotateZMatrix);
+		rotateMatrix = matrixXYZ;
+
+		if (!m_bRepairEuler) {
+			directionVector.x = 0.0f;
+			directionVector.y = 0.0f;
+			directionVector.z = 1.0f;
+			D3DXMatrixIdentity(&rotateMatrix);
+			Rotate(D3DXVECTOR3(0.0f, 0.0f, 1.0f), param_3);
+			Rotate(D3DXVECTOR3(0.0f, 1.0f, 0.0f), param_2);
+			Rotate(D3DXVECTOR3(1.0f, 0.0f, 0.0f), param_2);
+		}
+	} else {
+		directionVector.x = 0.0f;
+		directionVector.y = 0.0f;
+		directionVector.z = 1.0f;
+		D3DXMatrixIdentity(&rotateMatrix);
+		Rotate(D3DXVECTOR3(0.0f, 0.0f, 1.0f), param_3);
+		Rotate(D3DXVECTOR3(0.0f, 1.0f, 0.0f), param_2);
+		Rotate(D3DXVECTOR3(1.0f, 0.0f, 0.0f), param_2);
+	}
+	MatrixToEuler(rotateMatrix, rotateVector.z, rotateVector.y, rotateVector.x);
+	directionVector.x = 0.0f;
+	directionVector.y = 0.0f;
+	directionVector.z = 1.0f;
+	D3DXVec3TransformCoord(&directionVector, &directionVector, &rotateMatrix);
+	SetSpeedDirection(directionVector);
+	D3DXMATRIX temp;
+	D3DXMatrixMultiply(&temp, &rotateMatrix, &scaleMatrix);
+	D3DXMATRIX temp2;
+	temp2 = temp;
+	D3DXMATRIX temp3;
+	D3DXMatrixMultiply(&temp3, &temp2, &translationMatrix);
+	worldMat = temp3;
+	SetRotMat(rotateMatrix);
+	space = worldMat;
 }
 
 /* 10055C70-10056267 005F7	*/
@@ -1447,7 +1519,8 @@ void cMagMeshObject::TestSoundRanges() {
 }
 
 /* 10058D90-10058E86 000F6	*/
-void cMagMeshObject::MatrixToEuler(float param_1) {
+void cMagMeshObject::MatrixToEuler(D3DXMATRIX param_1, float& param_2, float& param_3, float& param_4) {
+
 }
 
 /* 10058E90-10058E9C 0000C	*/

@@ -213,7 +213,7 @@ public:
 	/* 10058A80 */ void ClearSound();
 	/* 10058B50 */ void SetDefaultSoundRanges(int param_1, float param_2, float param_3);
 	/* 10058BF0 */ void TestSoundRanges();
-	/* 10058D90 */ void MatrixToEuler(float param_1);
+	/* 10058D90 */ void MatrixToEuler(D3DXMATRIX param_1, float& param_2, float& param_3, float& param_4);
 	/* 10058E90 */ void RepairEuler(bool param_1);
 	/* 10058EA0 */ bool EnableRendering();
 	/* 10058F30 */ virtual void OnDetachChild(cMagMeshObject* param_1);
@@ -417,7 +417,9 @@ public:
 	/* 0x19ec */ uchar f_19ec[0x19f8 - 0x19ec];
 	/* 0x19f8 */ D3DXVECTOR3 directionVector;
 	/* 0x1a04 */ D3DXMATRIX rotateMatrix;
-	/* 0x1a44 */ uchar f_1a44[0x1b04 - 0x1a44];
+	/* 0x1a44 */ D3DXMATRIX rotateXMatrix;
+	/* 0x1a84 */ D3DXMATRIX rotateYMatrix;
+	/* 0x1ac4 */ D3DXMATRIX rotateZMatrix;
 	/* 0x1b04 */ bool physics;
 	/* 0x1b05 */ bool collision;
 	/* 0x1b06 */ bool collisionScene;

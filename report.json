@@ -1,6 +1,6 @@
 {
   "measures": {
-    "fuzzy_match_percent": 16.122007,
+    "fuzzy_match_percent": 16.19921,
     "total_code": "669691",
     "matched_code": "57364",
     "matched_code_percent": 8.565742,
@@ -14440,7 +14440,7 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 32.68007,
+        "fuzzy_match_percent": 33.674328,
         "total_code": "52000",
         "matched_code": "5754",
         "matched_code_percent": 11.065385,
@@ -14455,7 +14455,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 32.68007,
+          "fuzzy_match_percent": 33.674328,
           "metadata": {}
         }
       ],
@@ -14535,7 +14535,7 @@
         {
           "name": "??0cMagMeshObject@@QAE@ABV0@@Z",
           "size": "4759",
-          "fuzzy_match_percent": 39.57667,
+          "fuzzy_match_percent": 40.617123,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(class cMagMeshObject const &)"
           },
@@ -14544,7 +14544,7 @@
         {
           "name": "??4cMagMeshObject@@QAEAAV0@ABV0@@Z",
           "size": "6831",
-          "fuzzy_match_percent": 28.993977,
+          "fuzzy_match_percent": 30.14896,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject & __thiscall cMagMeshObject::operator=(class cMagMeshObject const &)"
           },
@@ -14984,7 +14984,7 @@
         {
           "name": "?SetDirection@cMagMeshObject@@QAEXMMM@Z",
           "size": "1388",
-          "fuzzy_match_percent": 0.30674848,
+          "fuzzy_match_percent": 28.06135,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetDirection(float, float, float)"
           },
@@ -15872,6 +15872,7 @@
         {
           "name": "?MatrixToEuler@cMagMeshObject@@QAEXUD3DXMATRIX@@AAM11@Z",
           "size": "246",
+          "fuzzy_match_percent": 1.369863,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::MatrixToEuler(struct D3DXMATRIX, float &, float &, float &)"
           },
@@ -29806,7 +29807,7 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 20.696165,
+        "fuzzy_match_percent": 20.797073,
         "total_code": "512354",
         "matched_code": "55854",
         "matched_code_percent": 10.901447,
