@@ -70,7 +70,7 @@ void cStaticMesh::ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2)
 }
 
 /* 10040C80-10040FF6 00376	*/
-void cStaticMesh::Update(uchar param_1) {
+void cStaticMesh::Update(D3DXMATRIX param_1) {
 }
 
 /* 10041000-1004106F 0006F	*/

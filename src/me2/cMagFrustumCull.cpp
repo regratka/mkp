@@ -32,7 +32,7 @@ void cMagFrustumCull::UpdateBB(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXMAT
 }
 
 /* 1008A1A0-1008A202 00062	*/
-void cMagFrustumCull::DrawBoundingBox(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5, uchar param_6, uchar param_7, uchar param_8, uchar param_9, uchar param_10) {
+void cMagFrustumCull::DrawBoundingBox(D3DXMATRIX param_1, D3DXMATRIX param_2) {
 }
 
 /* 1008A210-1008A756 00546	*/

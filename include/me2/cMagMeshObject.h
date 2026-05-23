@@ -11,6 +11,7 @@
 #include "cMp3Player.h"
 #include "ColObject.h"
 #include "cMagFrustumCull.h"
+#include "cMagBillboard.h"
 
 struct LINEVERTEX {
 	D3DXVECTOR3 pos;
@@ -181,7 +182,7 @@ public:
 	/* 10057900 */ bool OnPath(D3DXVECTOR3 param_1);
 	/* 10057930 */ void SetPathBMPMinMax(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10057970 */ void GetPathBMPMinMax(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2);
-	/* 10057990 */ D3DXVECTOR3* GetPosPathBMP(D3DXVECTOR3* param_1);
+	/* 10057990 */ D3DXVECTOR3 GetPosPathBMP();
 	/* 10057A40 */ void CreatePathBillboard();
 	/* 10057BC0 */ void DisableCollideClass(char* param_1);
 	/* 10057BF0 */ char* GetDisabledCollideClass();
@@ -350,7 +351,8 @@ public:
 	/* 0xed1 */ bool unk_ed1;
 	/* 0xed2 */ bool unk_ed2;
 	/* 0xed3 */ bool statusRemoveObject;
-	/* 0xed4 */ uchar f_ed4[0x12d0 - 0xed4];
+	/* 0xed4 */ float unk_ed4;
+	/* 0xed8 */ uchar f_ed8[0x12d0 - 0xed8];
 	/* 0x12d0 */ bool enableTestDistance;
 	/* 0x12d1 */ uchar f_12d1[0x12e8 - 0x12d1];
 	/* 0x12e8 */ cMagMeshObject* linkParent;
@@ -367,8 +369,8 @@ public:
 	/* 0x1324 */ D3DXVECTOR3 boundary1;
 	/* 0x1330 */ D3DXVECTOR3 boundary2;
 	/* 0x133c */ bool enableFrustum;
-	/* 0x133d */ bool unk_113d;
-	/* 0x133e */ bool unk_113e;
+	/* 0x133d */ bool unk_133d;
+	/* 0x133e */ bool unk_133e;
 	/* 0x133f */ uchar f_133f[0x1388 - 0x133f];
 	/* 0x1388 */ D3DXMATRIX translationMatrix;
 	/* 0x13c8 */ D3DXMATRIX scaleMatrix;
@@ -383,7 +385,8 @@ public:
 	/* 0x16a8 */ uchar wayType;
 	/* 0x16a9 */ char onlyCollidingClass[100];
 	/* 0x170d */ char disabledCollideClass[100];
-	/* 0x1771 */ uchar f_1771[0x1778 - 0x1771];
+	/* 0x1771 */ uchar f_1771[0x1774 - 0x1771];
+	/* 0x1774 */ cMagBillboard* billboard;
 	/* 0x1778 */ cVideoPlayer* videoPlayer;
 	/* 0x177c */ uchar f_177c[0x1780 - 0x177c];
 	/* 0x1780 */ cMp3Player* mp3Player;
@@ -454,7 +457,8 @@ public:
 	/* 0x1f00 */ D3DXVECTOR3* destRotation;
 	/* 0x1f04 */ D3DXVECTOR3 rotationAngSpeed;
 	/* 0x1f10 */ D3DXVECTOR3 motionRotationAngSpeed;
-	/* 0x1f1c */ uchar f_1f1c[0x1f5d - 0x1f1c];
+	/* 0x1f1c */ uchar f_1f1c[0x1f5c - 0x1f1c];
+	/* 0x1f5c */ bool unk_1f5c;
 	/* 0x1f5d */ bool enableDynamicPointLight;
 	/* 0x1f5e */ bool unk_1f5e;
 	/* 0x1f60 */ int dynamicLightID;
@@ -481,7 +485,12 @@ public:
 	/* 0x2160 */ int animTextureFrameCount;
 	/* 0x2164 */ uchar f_2164[0x2174 - 0x2164];
 	/* 0x2174 */ float acceleration;
-	/* 0x2178 */ uchar f_2178[0x228a - 0x2178];
+	/* 0x2178 */ uchar f_2178[0x227c - 0x2178];
+	/* 0x227c */ bool unk_227c;
+	/* 0x227d */ uchar f_227d[0x2284 - 0x227d];
+	/* 0x2284 */ void* unk_2284;
+	/* 0x2288 */ bool unk_2288;
+	/* 0x2289 */ uchar f_2289[0x228a - 0x2289];
 	/* 0x228a */ bool disableTestMeshInSector;
 	/* 0x228b */ bool unk_228b;
 	/* 0x228c */ bool enableZBufferWrite;
@@ -489,7 +498,9 @@ public:
 	/* 0x2290 */ D3DXMATRIX forceTransformMatrix;
 	/* 0x22d0 */ uchar f_22d0[0x22d4 - 0x22d0];
 	/* 0x22d4 */ int shadowType;
-	/* 0x22d8 */ uchar f_22d8[0x2658 - 0x22d8];
+	/* 0x22d8 */ uchar f_22d8[0x2630 - 0x22d8];
+	/* 0x2630 */ bool unk_2630;
+	/* 0x2631 */ uchar f_2631[0x2658 - 0x2631];
 
 public:
 	/* 1018C598 */ static bool m_bRepairEuler;

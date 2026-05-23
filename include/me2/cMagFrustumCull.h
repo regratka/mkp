@@ -34,7 +34,7 @@ public:
 	/* 10089B60 */ virtual ~cMagFrustumCull();
 	/* 10089C50 */ HRESULT ComputeBoundingBox(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 10089F90 */ void UpdateBB(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXMATRIX& param_3);
-	/* 1008A1A0 */ void DrawBoundingBox(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5, uchar param_6, uchar param_7, uchar param_8, uchar param_9, uchar param_10);
+	/* 1008A1A0 */ void DrawBoundingBox(D3DXMATRIX param_1, D3DXMATRIX param_2);
 	/* 1008A210 */ void CreateBox();
 	/* 1008A760 */ void CullObjects();
 	/* 1008A790 */ CULLSTATE CullObject(CULLINFO* param_1, uchar param_2, D3DXPLANE* param_3);

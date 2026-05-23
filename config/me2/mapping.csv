@@ -1230,7 +1230,7 @@
 ?Create@cStaticMesh@@QAE_NXZ;cStaticMesh::Create;0x10040550;0x686;__thiscall;;bool;cStaticMesh*
 ;cStaticSurface::scalar_destructor;0x10040be0;0x57;__thiscall;;cStaticSurface*;cStaticSurface*;byte
 ?ComputeBoundingBox@cStaticMesh@@QAEXAAUD3DXVECTgOR3@@0@Z;cStaticMesh::ComputeBoundingBox;0x10040c40;0x39;__thiscall;;void;cStaticMesh*;D3DXVECTOR3&;D3DXVECTOR3&
-?Update@cStaticMesh@@QAEXUD3DXMATRIX@@@Z;cStaticMesh::Update;0x10040c80;0x376;__thiscall;;void;cStaticMesh*;uchar
+?Update@cStaticMesh@@QAEXUD3DXMATRIX@@@Z;cStaticMesh::Update;0x10040c80;0x376;__thiscall;;void;cStaticMesh*;D3DXMATRIX
 ?Render@cStaticMesh@@QAEXUD3DXMATRIX@@PAUIDirect3DTexture8@@@Z;cStaticMesh::Render;0x10041000;0x6f;__thiscall;;void;cStaticMesh*;D3DXMATRIX;IDirect3DTexture8*
 ?TestDistance@cStaticMesh@@QAE_NUD3DXVECTOR3@@0M@Z;cStaticMesh::TestDistance;0x10041070;0x664;__thiscall;;int;cStaticMesh*;float;float;float;float;float;float
 ;FUN_100416e0;0x100416e0;0x25;__cdecl;;float10;float*
@@ -1749,7 +1749,7 @@
 ?OnPath@cMagMeshObject@@QAE_NUD3DXVECTOR3@@@Z;cMagMeshObject::OnPath;0x10057900;0x27;__thiscall;;bool;cMagMeshObject*;D3DXVECTOR3
 ?SetPathBMPMinMax@cMagMeshObject@@QAEXUD3DXVECTOR3@@0@Z;cMagMeshObject::SetPathBMPMinMax;0x10057930;0x40;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3;D3DXVECTOR3
 ?GetPathBMPMinMax@cMagMeshObject@@QAEXAAUD3DXVECTOR3@@0@Z;cMagMeshObject::GetPathBMPMinMax;0x10057970;0x18;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3&;D3DXVECTOR3&
-?GetPosPathBMP@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetPosPathBMP;0x10057990;0xaa;__thiscall;;D3DXVECTOR3*;cMagMeshObject*;D3DXVECTOR3*
+?GetPosPathBMP@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetPosPathBMP;0x10057990;0xaa;__thiscall;;D3DXVECTOR3;cMagMeshObject*
 ?CreatePathBillboard@cMagMeshObject@@QAEXXZ;cMagMeshObject::CreatePathBillboard;0x10057a40;0x17c;__thiscall;;void;cMagMeshObject*
 ?DisableCollideClass@cMagMeshObject@@QAEXPAD@Z;cMagMeshObject::DisableCollideClass;0x10057bc0;0x2e;__thiscall;;void;cMagMeshObject*;char*
 ?GetDisabledCollideClass@cMagMeshObject@@QAEPADXZ;cMagMeshObject::GetDisabledCollideClass;0x10057bf0;0x7;__thiscall;;char*;cMagMeshObject*
@@ -2848,7 +2848,7 @@
 ??1cMagFrustumCull@@UAE@XZ;cMagFrustumCull::~cMagFrustumCull;0x10089b60;0xe8;__thiscall;;void;cMagFrustumCull*
 ?ComputeBoundingBox@cMagFrustumCull@@QAEJUD3DXVECTOR3@@0@Z;cMagFrustumCull::ComputeBoundingBox;0x10089c50;0x334;__thiscall;;HRESULT;cMagFrustumCull*;D3DXVECTOR3;D3DXVECTOR3
 ?UpdateBB@cMagFrustumCull@@QAEXUD3DXVECTOR3@@0AAUD3DXMATRIX@@@Z;cMagFrustumCull::UpdateBB;0x10089f90;0x208;__thiscall;;void;cMagFrustumCull*;D3DXVECTOR3;D3DXVECTOR3;D3DXMATRIX
-?DrawBoundingBox@cMagFrustumCull@@QAEXUD3DXMATRIX@@0@Z;cMagFrustumCull::DrawBoundingBox;0x1008a1a0;0x62;__thiscall;;void;cMagFrustumCull*;uchar;uchar;uchar;uchar;uchar;uchar;uchar;uchar;uchar;uchar
+?DrawBoundingBox@cMagFrustumCull@@QAEXUD3DXMATRIX@@0@Z;cMagFrustumCull::DrawBoundingBox;0x1008a1a0;0x62;__thiscall;;void;cMagFrustumCull*;D3DXMATRIX;D3DXMATRIX
 ?CreateBox@cMagFrustumCull@@QAEXXZ;cMagFrustumCull::CreateBox;0x1008a210;0x546;__thiscall;;void;cMagFrustumCull*
 ?CullObjects@cMagFrustumCull@@QAEXXZ;cMagFrustumCull::CullObjects;0x1008a760;0x29;__thiscall;;void;cMagFrustumCull*
 ?CullObject@cMagFrustumCull@@QAE?AW4CULLSTATE@@PAUCULLINFO@@PAUD3DXVECTOR3@@PAUD3DXPLANE@@@Z;cMagFrustumCull::CullObject;0x1008a790;0xdcf;__thiscall;;CULLSTATE;cMagFrustumCull*;CULLINFO*;uchar;D3DXPLANE*

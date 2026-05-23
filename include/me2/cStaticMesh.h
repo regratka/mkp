@@ -23,7 +23,7 @@ public:
 	/* 10040540 */ int GetFacesCount();
 	/* 10040550 */ bool Create();
 	/* 10040C40 */ void ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2);
-	/* 10040C80 */ void Update(uchar param_1);
+	/* 10040C80 */ void Update(D3DXMATRIX param_1);
 	/* 10041000 */ void Render(D3DXMATRIX param_1, IDirect3DTexture8* param_2);
 	/* 10041070 */ int TestDistance(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6);
 	/* 10041710 */ void CreateColTypeTexIni(char* param_1);

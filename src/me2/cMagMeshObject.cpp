@@ -679,6 +679,135 @@ void cMagMeshObject::OnUpdate_() {
 
 /* 10054FE0-1005561B 0063B	*/
 void cMagMeshObject::OnRender() {
+	if (unk_2154) {
+		if (!enableRendering) {
+			return;
+		}
+		D3DXMatrixIdentity(&unkn_1448);
+		D3DXMatrixIdentity(&worldMat);
+		cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &worldMat);
+		D3DXMATRIX temp;
+		D3DXMATRIX temp2;
+		temp2 = *D3DXMatrixMultiply(&temp, &scaleMatrix, &rotateMatrix);
+		D3DXMATRIX temp3;
+		unkn_1448 = *D3DXMatrixMultiply(&temp3, &temp2, &translationMatrix);
+		D3DXMatrixMultiply(&worldMat, &unkn_1448, &worldMat);
+		cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &worldMat);
+		RenderMagQuad();
+		return;
+	} 
+
+	if (lightingObject) {
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, TRUE);
+		D3DMATERIAL8 material;
+		ZeroMemory(&material, sizeof(material));
+		material.Diffuse.r = 1.0f;
+		material.Diffuse.g = 1.0f;
+		material.Diffuse.b = 1.0f;
+		material.Diffuse.a = 1.0f;
+		material.Ambient.r = 1.0f;
+		material.Ambient.g = 1.0f;
+		material.Ambient.b = 1.0f;
+		material.Ambient.a = 1.0f;
+		cMagEngineMgr::getInstance()->engine->SetMaterial(&material);
+	}
+
+	if (!unk_eca) {
+		return;
+	}
+
+	if (staticMesh != NULL) {
+		staticMesh->Update(unkn_1448);
+	}
+
+	if (!enablePortalRendering) {
+		return;
+	}
+	if (!enableRendering) {
+		SetFrustumPhysicsPause(true);
+		return;
+	}
+	
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_CULLMODE, D3DCULL_CCW);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
+	
+	if (billboard != NULL) {
+		billboard->unk_da0 = GetPosPathBMP();
+	}
+
+	if (showBoundingBox && cMagEngineMgr::getInstance()->gameObject->unkn_ce0) {
+		cMagEngineMgr::getInstance()->frustumCull->DrawBoundingBox(unkn_1448, unk_1b10);
+	}
+
+	if (!enableFrustum) {
+		if (unk_ed4 >= 0.0f && TestDistance(unk_ed4)) {
+			RenderMesh();
+			SetFrustumPhysicsPause(false);
+		}
+		return;
+	}
+
+	if (unk_227c) {
+		cMagMeshObject* player = cMagEngineMgr::getInstance()->gameObject->GetPlayerObject();
+		if (player != NULL) {
+			D3DXVECTOR3 playerPosition = player->GetPosition();
+			playerPosition.y = (player->boundary2.y / 2 + player->GetPosition().y) * player->GetScale().y;
+			D3DXMATRIX temp = unkn_1448;
+			D3DXMatrixInverse(&temp, NULL, &temp);
+			D3DXVec3TransformCoord(&playerPosition, &playerPosition, &temp);
+			if (playerPosition.x <= boundary1.x || boundary2.x <= playerPosition.x ||
+					playerPosition.y <= boundary1.y || boundary2.y <= playerPosition.y ||
+					playerPosition.z <= boundary1.z || boundary2.z <= playerPosition.z ) {
+				unk_2288 = false;
+				return;
+			}
+			unk_2288 = true;
+			if (unk_2284 != NULL) {
+				// TODO operation on field 0x2284
+			}
+		}
+	} else if (unk_2284 != NULL) { // TODO finish condition
+		return;
+	}
+	if (cullState == 1 || cullState == 3) {
+		_TestDistanceLOD(1000.0f);
+		if (!unk_2630) {
+			if (unk_ed4 <= 0.0f) {
+				if (!TestDistance(GetVisibilityRange())) {
+					SetFrustumPhysicsPause(true);
+					return;
+				}
+			} else {
+				if(!TestDistance(unk_ed4)) {
+					SetFrustumPhysicsPause(true);
+					return;
+				}
+			}
+			SetFrustumPhysicsPause(false);
+			cMagEngineMgr::getInstance()->gameObject->renderedMeshObjects++;
+			cMagEngineMgr::getInstance()->gameObject->renderedObjects += GetFaceCount();
+			RenderMesh();
+			if (unk_133e) {
+				OnInsideFrustumCull();
+				unk_133e = false;
+				unk_133d = true;
+			}
+		}
+	} else if (cullState == 2 || cullState == 4) {
+		unk_2288 = false;
+		if (!PhysicsActivityRange()) {
+			SetFrustumPhysicsPause(true);
+		}
+		if (unk_1f5c) {
+			cMagEngineMgr::getInstance()->engine->LightEnable(dynamicLightID, FALSE);
+		}
+		if (unk_133d) {
+			OnOutsideFrustumCull();
+			unk_133d = false;
+			unk_133e = true;
+		}
+	}
 }
 
 /* 10055620-1005569D 0007D	*/
@@ -1170,7 +1299,7 @@ void cMagMeshObject::GetPathBMPMinMax(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2
 }
 
 /* 10057990-10057A3A 000AA	*/
-D3DXVECTOR3* cMagMeshObject::GetPosPathBMP(D3DXVECTOR3* param_1) {
+D3DXVECTOR3 cMagMeshObject::GetPosPathBMP() {
 	return 0;
 }
 
