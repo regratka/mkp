@@ -1782,7 +1782,7 @@
 ?ClearSound@cMagMeshObject@@QAEXXZ;cMagMeshObject::ClearSound;0x10058a80;0xc7;__thiscall;;void;cMagMeshObject*
 ?SetDefaultSoundRanges@cMagMeshObject@@QAEXHMM@Z;cMagMeshObject::SetDefaultSoundRanges;0x10058b50;0x9a;__thiscall;;void;cMagMeshObject*;int;float;float
 ?TestSoundRanges@cMagMeshObject@@QAEXXZ;cMagMeshObject::TestSoundRanges;0x10058bf0;0x19f;__thiscall;;void;cMagMeshObject*
-?MatrixToEuler@cMagMeshObject@@QAEXUD3DXMATRIX@@AAM11@Z;cMagMeshObject::MatrixToEuler;0x10058d90;0xf6;__thiscall;;void;cMagMeshObject*;float
+?MatrixToEuler@cMagMeshObject@@QAEXUD3DXMATRIX@@AAM11@Z;cMagMeshObject::MatrixToEuler;0x10058d90;0xf6;__thiscall;;void;cMagMeshObject*;D3DXMATRIX;float&;float&;float&
 ?RepairEuler@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::RepairEuler;0x10058e90;0xc;__thiscall;;void;cMagMeshObject*;bool
 ?IsEnabled@cMagSkyBox@@QAE_NXZ;cMagMeshObject::EnableRendering;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
 ?OnAttachChild@cMagMeshObject@@UAEXPAV1@@Z;cMagMeshObject::OnAttachChild;0x10058eb0;0x7d;__thiscall;;void;cMagMeshObject*;cMagMeshObject*
