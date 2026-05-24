@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 16.668745,
+    "fuzzy_match_percent": 17.704687,
     "total_code": "669691",
-    "matched_code": "58688",
-    "matched_code_percent": 8.763445,
+    "matched_code": "59652",
+    "matched_code_percent": 8.907392,
     "matched_data_percent": 100.0,
     "total_functions": 3070,
-    "matched_functions": 647,
-    "matched_functions_percent": 21.074919,
+    "matched_functions": 652,
+    "matched_functions_percent": 21.237785,
     "complete_code": "7437",
     "complete_code_percent": 1.1105123,
     "complete_data_percent": 100.0,
@@ -14440,14 +14440,14 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 39.721348,
+        "fuzzy_match_percent": 53.05456,
         "total_code": "52000",
-        "matched_code": "7078",
-        "matched_code_percent": 13.611539,
+        "matched_code": "8042",
+        "matched_code_percent": 15.4653845,
         "matched_data_percent": 100.0,
         "total_functions": 273,
-        "matched_functions": 181,
-        "matched_functions_percent": 66.30037,
+        "matched_functions": 186,
+        "matched_functions_percent": 68.13187,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14455,7 +14455,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 39.721348,
+          "fuzzy_match_percent": 53.05456,
           "metadata": {}
         }
       ],
@@ -14535,7 +14535,7 @@
         {
           "name": "??0cMagMeshObject@@QAE@ABV0@@Z",
           "size": "4759",
-          "fuzzy_match_percent": 57.79586,
+          "fuzzy_match_percent": 81.998116,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(class cMagMeshObject const &)"
           },
@@ -14544,7 +14544,7 @@
         {
           "name": "??4cMagMeshObject@@QAEAAV0@ABV0@@Z",
           "size": "6831",
-          "fuzzy_match_percent": 43.01314,
+          "fuzzy_match_percent": 69.32256,
           "metadata": {
             "demangled_name": "public: class cMagMeshObject & __thiscall cMagMeshObject::operator=(class cMagMeshObject const &)"
           },
@@ -14570,7 +14570,7 @@
         {
           "name": "??0cMagMeshObject@@QAE@XZ",
           "size": "3996",
-          "fuzzy_match_percent": 5.282695,
+          "fuzzy_match_percent": 77.27873,
           "metadata": {
             "demangled_name": "public: __thiscall cMagMeshObject::cMagMeshObject(void)"
           },
@@ -14579,7 +14579,7 @@
         {
           "name": "??1cMagMeshObject@@UAE@XZ",
           "size": "754",
-          "fuzzy_match_percent": 32.134617,
+          "fuzzy_match_percent": 54.173077,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagMeshObject::~cMagMeshObject(void)"
           },
@@ -15988,7 +15988,7 @@
         {
           "name": "?SetStaticMeshAlpha@cMagMeshObject@@QAEJH@Z",
           "size": "22",
-          "fuzzy_match_percent": 28.571428,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagMeshObject::SetStaticMeshAlpha(int)"
           },
@@ -16491,7 +16491,7 @@
         {
           "name": "?RenderMagQuad@cMagMeshObject@@QAEXXZ",
           "size": "278",
-          "fuzzy_match_percent": 1.2195122,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderMagQuad(void)"
           },
@@ -16581,7 +16581,7 @@
         {
           "name": "?RenderAnimTexture@cMagMeshObject@@QAEXXZ",
           "size": "224",
-          "fuzzy_match_percent": 1.8518518,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderAnimTexture(void)"
           },
@@ -16653,7 +16653,7 @@
         {
           "name": "?SectorRendering@cMagMeshObject@@QAE_NXZ",
           "size": "237",
-          "fuzzy_match_percent": 2.1276596,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::SectorRendering(void)"
           },
@@ -16707,7 +16707,7 @@
         {
           "name": "?AnimateLightMap@cMagMeshObject@@QAEXXZ",
           "size": "203",
-          "fuzzy_match_percent": 1.9607843,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AnimateLightMap(void)"
           },
@@ -19225,7 +19225,7 @@
     {
       "name": "me2/cStaticMesh",
       "measures": {
-        "fuzzy_match_percent": 0.43331861,
+        "fuzzy_match_percent": 0.45527622,
         "total_code": "19735",
         "matched_data_percent": 100.0,
         "total_functions": 23,
@@ -19236,7 +19236,7 @@
         {
           "name": ".text",
           "size": "19735",
-          "fuzzy_match_percent": 0.43331861,
+          "fuzzy_match_percent": 0.45527622,
           "metadata": {}
         }
       ],
@@ -19435,6 +19435,7 @@
         {
           "name": "?SetAnimTextureLightMap@cStaticMesh@@QAEXPAUIDirect3DTexture8@@@Z",
           "size": "13",
+          "fuzzy_match_percent": 33.333332,
           "metadata": {
             "demangled_name": "public: void __thiscall cStaticMesh::SetAnimTextureLightMap(struct IDirect3DTexture8*)"
           },
@@ -29807,14 +29808,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 21.410799,
+        "fuzzy_match_percent": 22.764864,
         "total_code": "512354",
-        "matched_code": "57178",
-        "matched_code_percent": 11.159862,
+        "matched_code": "58142",
+        "matched_code_percent": 11.348014,
         "matched_data_percent": 100.0,
         "total_functions": 2200,
-        "matched_functions": 607,
-        "matched_functions_percent": 27.59091,
+        "matched_functions": 612,
+        "matched_functions_percent": 27.818182,
         "complete_code": "7437",
         "complete_code_percent": 1.4515355,
         "complete_data_percent": 100.0,

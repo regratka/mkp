@@ -10,6 +10,215 @@
 
 /* 10051E50-10052DEC 00F9C	*/
 cMagMeshObject::cMagMeshObject() {
+	unk_22d0 = false;
+	acceleration = 0.0f;
+	blob = NULL;
+	SetObjectName("No name");
+	SetClassName("cMagMeshObject");
+	statusRemoveObject = false;
+	positionVector.x = 0.0f;
+	positionVector.y = 0.0f;
+	positionVector.z = 0.0f;
+	unk_17cc.x = 0.0f;
+	unk_17cc.y = 0.0f;
+	unk_17cc.z = 0.0f;
+	scaleVector.x = 1.0f;
+	scaleVector.y = 1.0f;
+	scaleVector.z = 1.0f;
+	unk_17c0.x = 1.0f;
+	unk_17c0.y = 0.0f;
+	unk_17c0.z = 0.0f;
+	rotateVector.x = 1.0f;
+	rotateVector.y = 1.0f;
+	rotateVector.z = 1.0f;
+	unk_17e4 = 30;
+	unk_191c = -1;
+	showWireframe = false;
+	enableFrustum = true;
+	unk_1340 = 0;
+	unk_1344 = 0;
+	D3DXMatrixIdentity(&computationMatrix);
+	D3DXMatrixIdentity(&unk_1348);
+	D3DXMatrixIdentity(&translationMatrix);
+	D3DXMatrixIdentity(&scaleMatrix);
+	D3DXMatrixIdentity(&unk_1448);
+	D3DXMatrixIdentity(&rotateMatrix);
+	D3DXMatrixIdentity(&unk_1f1c);
+	D3DXMatrixIdentity(&unk_1488);
+	D3DXMatrixIdentity(&unk_14c8);
+	D3DXMatrixIdentity(&unk_1508);
+	D3DXMatrixIdentity(&unk_1548);
+	D3DXMatrixIdentity(&unk_1588);
+	D3DXMatrixIdentity(&unk_15c8);
+	D3DXMatrixIdentity(&unk_1b10);
+	D3DXMatrixIdentity(&forceTransformMatrix);
+	enableForceTransform = false;
+	D3DXMatrixIdentity(&unk_1608);
+	D3DXMatrixIdentity(&unk_1648);
+	translationBoundingBox.x = 0.0f;
+	translationBoundingBox.y = 0.0f;
+	translationBoundingBox.z = 0.0f;
+	scaleBoundingBox.x = 1.0f;
+	scaleBoundingBox.y = 1.0f;
+	scaleBoundingBox.z = 1.0f;
+	unk_1314 = 2;
+	showBoundingBox = false;
+	unk_ed1 = false;
+	unk_ed2 = false;
+	lineVertex = NULL;
+	lineTexture = NULL;
+	enableRendering = true;
+	enablePortalRendering = true;
+	directionVector.x = 0.0f;
+	directionVector.y = 0.0f;
+	directionVector.z = 1.0f;
+	SetDirection(0.0f, 0.0f, 0.0f);
+	gravityAcceleration = 280.0f;
+	slideAngle = 90.0f;
+	physics = false;
+	collision = false;
+	collisionObjects = false;
+	collisionScene = false;
+	collisionType = 0;
+	parent = NULL;
+	speedValue = 0.0f;
+	speedDirection = directionVector;
+	speedVector = directionVector;
+	destinationPos = NULL;
+	destinationDir = NULL;
+	destRotation = NULL;
+	maxAngSpeed = 90.0f;
+	fallSpeed.x = 0.0f;
+	fallSpeed.y = 0.0f;
+	fallSpeed.z = 0.0f;
+	rotationAngSpeed.x = 0.0f;
+	rotationAngSpeed.y = 0.0f;
+	rotationAngSpeed.z = 0.0f;
+	angSpeed.x = 0.0f;
+	angSpeed.y = 0.0f;
+	angSpeed.z = 0.0f;
+	motionRotationAngSpeed.x = 0.0f;
+	motionRotationAngSpeed.y = 0.0f;
+	motionRotationAngSpeed.z = 0.0f;
+	D3DXMatrixIdentity(&worldMat);
+	unk_133d = true;
+	unk_133e = true;
+	D3DXMatrixIdentity(&space);
+	ZeroMemory(unk_ed8, sizeof(unk_ed8));
+	enableTestDistance = true;
+	unk_12d2 = false;
+	unk_1920 = 0;
+	unk_1924 = 0;
+	unk_12ec.x = 20.0f;
+	unk_12ec.y = 0.0f;
+	unk_12ec.z = 0.0f;
+	unk_12f8 = true;
+	unk_12f9 = false;
+	unk_12fc = 0;
+	unk_1300 = 0;
+	unk_133f = false;
+	linkParent = NULL;
+	collAction = 1;
+	pauseUpdatePhysics = false;
+	slideObject = NULL;
+	unk_1320 = true;
+	unk_1b58 = false;
+	wayType = 0;
+	safeWayMaxYDifference = 30.0f;
+	unk_1e98 = 0;
+	billboard = NULL;
+	ZeroMemory(disabledCollideClass, sizeof(disabledCollideClass));
+	ZeroMemory(onlyCollidingClass, sizeof(onlyCollidingClass));
+	mp3Player = NULL;
+	unk_1798 = false;
+	unk_1784 = true;
+	videoPlayer = NULL;
+	unk_177c = true;
+	enableTestSector = true;
+	strcpy(fileMeshName, "No Name");
+	unk_2280 = -1;
+	unk_2284 = NULL;
+	unk_2288 = false;
+	unk_1eac = false;
+	unk_1eb0 = 1.0f;
+	unk_1eb4 = 1.0f;
+	unk_1eb8 = 1.0f;
+	unk_1ebc = 1.0f;
+	unk_1ea4 = false; 
+	unk_1ea8 = D3DCOLOR_ARGB(0, 0, 0, 0xff);
+	unk_1ee4 = false;
+	unk_1ee8 = 0;
+	unk_1eec = 0;
+	cullMode = D3DCULL_CCW;
+	unk_1ec4 = 2;
+	unk_1ec8 = 2;
+	enableWaterEffect = false;
+	playWaterAnim = false;
+	scaleTile = 5.0f;
+	unk_1ede = false;
+	fps = 0.06f;
+	moveWater = false;
+	fpsMove = 0.1;
+	velocityAnimMove = 0.02;
+	enableRiverEffect = false;
+	freeDestinationDir = false;
+	freeRotationMatrix = false;
+	colObject = NULL;
+	outsideViewPhysicsActivityRange = 300.0f;
+	outsideViewPhysicsActivityRangePow = 300.0f * 300.0f;
+	enableFrustumPhysicsPause = true;
+	physicsType = 0;
+	unk_1fe4 = 0;
+	unk_1fd0.x = 2000.0f;
+	unk_1fd0.y = 0.0f;
+	unk_1fd0.z = 0.0f;
+	unk_1f5c = false;
+	enableDynamicPointLight = false;
+	unk_1f5e = false;
+	dynamicLightID = 0;
+	lightingObject = false;
+	ZeroMemory(unk_1f64, sizeof(unk_1f64));
+	unk_1ff0 = 0;
+	unk_1ff4 = 0;
+	unk_1ff8 = false;
+	unk_eca = false;
+	enablePushing = false;
+	enableNBFacesCollision = false;
+	lightMap = 0;
+	unk_2154 = false;
+	magQuadBuffer = NULL;
+	enableAnimTexture = false;
+	enableAnimTextureMove = false;
+	animTextureFPS = 10;
+	animTextureFrameCount = 0;
+	unk_1914 = 0;
+	ZeroMemory(unk_201c, sizeof(unk_201c));
+	unk_2178 = true;
+	sector = NULL;
+	disableTestMeshInSector = false;
+	unk_227c = false;
+	ZeroMemory(unk_2179, sizeof(unk_2179));
+	unk_2289 = false;
+	unk_228b = false;
+	enableAnimTextureLightMap = false;
+	animTextureLightMapFPS = 30;
+	unk_2018 = 0.0f;
+	enableZBufferWrite = true;
+	cullState = (CULLSTATE)2;
+	shadowType = 0;
+	unk_12d4 = 0;
+	unk_2624.x = 0.0f;
+	unk_2624.y = 0.0f;
+	unk_2624.z = 0.0f;
+	unk_2630 = false;
+	unk_ed4 = 0.0f;
+	unk_16a2 = false;
+	animTexture = NULL;
+	studioMesh = NULL;
+	staticMesh = NULL;
+	unk_2644 = 0;
+	handlerOnPlaySoundEnd = NULL;
+	enableCallHandlerOnPlaySoundEnd = false;
 }
 
 /* 10052DF0-100530E2 002F2	*/
@@ -339,9 +548,9 @@ bool cMagMeshObject::PlayAnimBack(char* param_1) {
 
 /* 10053E40-10053EDE 0009E	*/
 int cMagMeshObject::FrameRate() {
-	if (unkn_1320) {
+	if (unk_1320) {
 		frameRate = 0.0f;
-		unkn_1320 = false;
+		unk_1320 = false;
 	}
 
 	float time = timeGetTime() * 0.001f;
@@ -366,7 +575,7 @@ bool cMagMeshObject::OnPlayAnim() {
 		return false;
 	}
 
-	studioMesh->UpdateAnimation(unkn_1448);
+	studioMesh->UpdateAnimation(unk_1448);
 	return true;
 }
 
@@ -425,10 +634,10 @@ void cMagMeshObject::RenderMesh() {
 		if (enableAnimTexture) {
 			// TODO
 			RenderAnimTexture();
-			staticMesh->Render(unkn_1448, animTexture);
+			staticMesh->Render(unk_1448, animTexture);
 		} else {
 			// TODO
-			staticMesh->Render(unkn_1448, animTexture);
+			staticMesh->Render(unk_1448, animTexture);
 		}
 	} else if (unk_ed2) {
 		if (!unk_228b){
@@ -456,7 +665,7 @@ void cMagMeshObject::RenderMesh() {
 				studioMesh->EnableAnimTexture(true);
 				cMagEngineMgr::getInstance()->engine->SetTexture(0, animTexture);
 			}
-			studioMesh->RenderMesh(unkn_1448);
+			studioMesh->RenderMesh(unk_1448);
 		}
 		MagTextureMgr::getInstance()->EndAlphaTexture();
 	}
@@ -548,15 +757,15 @@ bool cMagMeshObject::_TestDistance(float param_1) {
 	
 	D3DXVECTOR3 center = D3DXVECTOR3((bond111.x + bond222.x) / 2.0f, (bond111.y + bond222.y) / 2.0f, (bond111.z + bond222.z) / 2.0f);
 	
-	D3DXVec3TransformCoord(&vec111, &vec111, &unkn_1448);
-	D3DXVec3TransformCoord(&vec112, &vec112, &unkn_1448);
-	D3DXVec3TransformCoord(&vec121, &vec121, &unkn_1448);
-	D3DXVec3TransformCoord(&vec211, &vec211, &unkn_1448);
-	D3DXVec3TransformCoord(&vec122, &vec122, &unkn_1448);
-	D3DXVec3TransformCoord(&vec212, &vec212, &unkn_1448);
-	D3DXVec3TransformCoord(&vec221, &vec221, &unkn_1448);
-	D3DXVec3TransformCoord(&vec222, &vec222, &unkn_1448);
-	D3DXVec3TransformCoord(&center, &center, &unkn_1448);
+	D3DXVec3TransformCoord(&vec111, &vec111, &unk_1448);
+	D3DXVec3TransformCoord(&vec112, &vec112, &unk_1448);
+	D3DXVec3TransformCoord(&vec121, &vec121, &unk_1448);
+	D3DXVec3TransformCoord(&vec211, &vec211, &unk_1448);
+	D3DXVec3TransformCoord(&vec122, &vec122, &unk_1448);
+	D3DXVec3TransformCoord(&vec212, &vec212, &unk_1448);
+	D3DXVec3TransformCoord(&vec221, &vec221, &unk_1448);
+	D3DXVec3TransformCoord(&vec222, &vec222, &unk_1448);
+	D3DXVec3TransformCoord(&center, &center, &unk_1448);
 
 	float distVec4 = D3DXVec3Length(&(cameraPos-vec111));
 	float distVec7 = D3DXVec3Length(&(cameraPos-vec112));
@@ -641,14 +850,14 @@ void cMagMeshObject::OnUpdate_() {
 	D3DXMatrixIdentity(&worldMat);
 	if (enableForceTransform) {
 		D3DXMATRIX res;
-		unkn_1448 = *D3DXMatrixMultiply(&res, &scaleMatrix, &forceTransformMatrix);
+		unk_1448 = *D3DXMatrixMultiply(&res, &scaleMatrix, &forceTransformMatrix);
 	} else {
 		D3DXMATRIX res;
 		D3DXMATRIX res2;
 		D3DXMATRIX res3 = *D3DXMatrixMultiply(&res2, &scaleMatrix, &rotateMatrix);;
-		unkn_1448 = *D3DXMatrixMultiply(&res, &res3, &translationMatrix);
+		unk_1448 = *D3DXMatrixMultiply(&res, &res3, &translationMatrix);
 	}
-	D3DXMatrixMultiply(&worldMat, &unkn_1448, &worldMat);
+	D3DXMatrixMultiply(&worldMat, &unk_1448, &worldMat);
 	D3DXMATRIX projection;
 	cMagEngineMgr::getInstance()->engine->GetTransform(D3DTS_PROJECTION, &projection);
 	D3DXMATRIX view;
@@ -656,7 +865,7 @@ void cMagMeshObject::OnUpdate_() {
 	cMagEngineMgr::getInstance()->frustumCull->ComputeBoundingBox(boundary1, boundary2);
 
 
-	D3DXMATRIX temp = unkn_1448;
+	D3DXMATRIX temp = unk_1448;
 	StructUnk184* structUnk184 = cMagEngineMgr::getInstance()->frustumCull->structUnk184;
 	structUnk184->unk_14 = temp;
 	for (int index = 0; index < 8; index++) {
@@ -683,15 +892,15 @@ void cMagMeshObject::OnRender() {
 		if (!enableRendering) {
 			return;
 		}
-		D3DXMatrixIdentity(&unkn_1448);
+		D3DXMatrixIdentity(&unk_1448);
 		D3DXMatrixIdentity(&worldMat);
 		cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &worldMat);
 		D3DXMATRIX temp;
 		D3DXMATRIX temp2;
 		temp2 = *D3DXMatrixMultiply(&temp, &scaleMatrix, &rotateMatrix);
 		D3DXMATRIX temp3;
-		unkn_1448 = *D3DXMatrixMultiply(&temp3, &temp2, &translationMatrix);
-		D3DXMatrixMultiply(&worldMat, &unkn_1448, &worldMat);
+		unk_1448 = *D3DXMatrixMultiply(&temp3, &temp2, &translationMatrix);
+		D3DXMatrixMultiply(&worldMat, &unk_1448, &worldMat);
 		cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &worldMat);
 		RenderMagQuad();
 		return;
@@ -717,7 +926,7 @@ void cMagMeshObject::OnRender() {
 	}
 
 	if (staticMesh != NULL) {
-		staticMesh->Update(unkn_1448);
+		staticMesh->Update(unk_1448);
 	}
 
 	if (!enablePortalRendering) {
@@ -737,7 +946,7 @@ void cMagMeshObject::OnRender() {
 	}
 
 	if (showBoundingBox && cMagEngineMgr::getInstance()->gameObject->unkn_ce0) {
-		cMagEngineMgr::getInstance()->frustumCull->DrawBoundingBox(unkn_1448, unk_1b10);
+		cMagEngineMgr::getInstance()->frustumCull->DrawBoundingBox(unk_1448, unk_1b10);
 	}
 
 	if (!enableFrustum) {
@@ -753,7 +962,7 @@ void cMagMeshObject::OnRender() {
 		if (player != NULL) {
 			D3DXVECTOR3 playerPosition = player->GetPosition();
 			playerPosition.y = (player->boundary2.y / 2 + player->GetPosition().y) * player->GetScale().y;
-			D3DXMATRIX temp = unkn_1448;
+			D3DXMATRIX temp = unk_1448;
 			D3DXMatrixInverse(&temp, NULL, &temp);
 			D3DXVec3TransformCoord(&playerPosition, &playerPosition, &temp);
 			if (playerPosition.x <= boundary1.x || boundary2.x <= playerPosition.x ||
@@ -820,7 +1029,7 @@ void cMagMeshObject::OnRenderShadow() {
 	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
 	cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &worldMat);
 	if (studioMesh != NULL) {
-		studioMesh->OnRenderShadow(unkn_1448);
+		studioMesh->OnRenderShadow(unk_1448);
 	}
 }
 
@@ -1102,7 +1311,7 @@ D3DXVECTOR3 cMagMeshObject::GetBoneWorldPosition(char* param_1) {
 	D3DXMatrixIdentity(&matrix2);
 	studioMesh->GetBoneMatrix(param_1, matrix1, matrix2);
 	D3DXMATRIX out;
-	D3DXMatrixMultiply(&out, &matrix1, &unkn_1448);
+	D3DXMatrixMultiply(&out, &matrix1, &unk_1448);
 	return D3DXVECTOR3(out(3,0), out(3,1), out(3,2));
 }
 
@@ -1585,8 +1794,8 @@ void cMagMeshObject::PauseMovableTreeCollision(bool param_1) {
 }
 
 /* 10059330-10059346 00016	*/
-long cMagMeshObject::SetStaticMeshAlpha(int param_1) {
-	return 0;
+HRESULT cMagMeshObject::SetStaticMeshAlpha(int param_1) {
+	return !unk_ed1 ? E_FAIL : S_OK;
 }
 
 /* 10059350-1005936E 0001E	*/
@@ -1933,6 +2142,23 @@ void cMagMeshObject::SetTextureMagQuad(char* param_1) {
 
 /* 1005A770-1005A886 00116	*/
 void cMagMeshObject::RenderMagQuad() {
+	if (magQuadBuffer == NULL) {
+		return;
+	}
+
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_CULLMODE, D3DCULL_CCW);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZWRITEENABLE, FALSE);
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+	MagTextureMgr::getInstance()->BeginFilterTexture();
+	MagTextureMgr::getInstance()->BeginAlphaTexture();
+	MagTextureMgr::getInstance()->BeginFilterVertexColorTexture();
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_TEXTURETRANSFORMFLAGS, 0);
+	cMagEngineMgr::getInstance()->engine->SetTexture(0, magQuadTexture);
+	cMagEngineMgr::getInstance()->engine->SetVertexShader(D3DFVF_TEX1|D3DFVF_DIFFUSE|D3DFVF_XYZ);
+	cMagEngineMgr::getInstance()->engine->SetStreamSource(0, magQuadBuffer, 36);
+	cMagEngineMgr::getInstance()->engine->DrawPrimitive(D3DPT_TRIANGLELIST, 0, 2);
+	MagTextureMgr::getInstance()->EndAlphaTexture();
+	cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ZWRITEENABLE, TRUE);
 }
 
 /* 1005A890-1005A9DE 0014E	*/
@@ -2003,6 +2229,26 @@ void cMagMeshObject::SetAnimTextureFrameCount(int param_1) {
 
 /* 1005AB70-1005AC50 000E0	*/
 void cMagMeshObject::RenderAnimTexture() {
+	if (animTextures.size() <= 0) {
+		return;
+	}
+
+	if (!unk_228b) {
+		float time = timeGetTime() * 0.001f;
+		if (time - unk_1918 > 1.0f / animTextureFPS) {
+			unk_1918 = time;
+			unk_1914++;
+		}
+		
+		if (unk_1914 >= animTextureFrameCount) {
+			unk_1914 = 0;
+		}
+
+		if (unk_1914 >= animTextures.size()) {
+			unk_1914 = 0;
+		}
+	}
+	animTexture = animTextures[unk_1914];
 }
 
 /* 1005AC50-1005AC5D 0000D	*/
@@ -2040,7 +2286,40 @@ float cMagMeshObject::GetAcceleration() {
 
 /* 1005AD00-1005ADED 000ED	*/
 bool cMagMeshObject::SectorRendering() {
-	return 0;
+	if (GetGame() == NULL) {
+		return true;
+	}
+
+	if (!cMagEngineMgr::getInstance()->gameObject->EnableLinkMeshToSector()) {
+		return true;
+	}
+	
+	if (disableTestMeshInSector) {
+		return true;
+	}
+	if (stricmp(GetClassNameA(), "cSektor") == 0) {
+		return true;
+	} 
+	if (stricmp(GetClassNameA(), "cWater") == 0) {
+		return true;
+	} 
+	if (stricmp(GetClassNameA(), "cPlayer") == 0) {
+		return true;
+	} 
+	if (stricmp(GetClassNameA(), "cPlayer_Adas") == 0) {
+		return true;
+	} 
+	if (stricmp(GetClassNameA(), "cPlayer_Anetka") == 0) {
+		return true;
+	} 
+
+	if (sector != NULL) {
+		if (sector->EnableSectorRendering()) {
+			return true;
+		}
+	}
+
+	return false;
 }
 
 /* 1005ADF0-1005ADFD 0000D	*/
@@ -2070,6 +2349,20 @@ void cMagMeshObject::SetAnimTextureLightMapFPS(int param_1) {
 
 /* 1005B040-1005B10B 000CB	*/
 void cMagMeshObject::AnimateLightMap() {
+	if (staticMesh == NULL || !enableAnimTextureLightMap || unk_228b) {
+		return;
+	}
+
+	float time = timeGetTime() * 0.001f;
+	if (time - unk_2018 > 1.0f / animTextureLightMapFPS) {
+		unk_2018 = time;
+		unk_1914++;
+	}
+	if (unk_1914 >= animTextureLightMaps.size()) {
+		unk_1914 = 0;
+	}
+
+	staticMesh->SetAnimTextureLightMap(animTextureLightMaps[unk_1914]);
 }
 
 /* 1005B110-1005B11D 0000D	*/

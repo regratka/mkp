@@ -1238,7 +1238,7 @@
 ?LoadColTypeTexIni@cStaticMesh@@QAEXPAD@Z;cStaticMesh::LoadColTypeTexIni;0x10041980;0x37a;__thiscall;;void;cStaticMesh*;char*
 ?SetAlpha@cStaticMesh@@QAE_NH@Z;cStaticMesh::SetAlpha;0x10041d00;0x5e;__thiscall;;bool;cStaticMesh*;int
 ?SetMultiple@cStaticMesh@@QAE_NM@Z;cStaticMesh::SetMultiple;0x10041d60;0x5e;__thiscall;;bool;cStaticMesh*;float
-?SetAnimTextureLightMap@cStaticMesh@@QAEXPAUIDirect3DTexture8@@@Z;cStaticMesh::SetAnimTextureLightMap;0x10041dc0;0xd;__thiscall;;void;cStaticMesh*;uchar
+?SetAnimTextureLightMap@cStaticMesh@@QAEXPAUIDirect3DTexture8@@@Z;cStaticMesh::SetAnimTextureLightMap;0x10041dc0;0xd;__thiscall;;void;cStaticMesh*;IDirect3DTexture8*
 ;FUN_10041dd0;0x10041dd0;0x4b;__fastcall;;void;vector*
 ;FUN_10041e20;0x10041e20;0x51;__thiscall;;uchar*;void*;uchar
 ;FUN_10041e80;0x10041e80;0x46;__thiscall;;uint*;void*;uint*;uint*
@@ -1795,7 +1795,7 @@
 ?SetMotionRotationAngSpeed@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetMotionRotationAngSpeed;0x100592b0;0x1d;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
 ?GetMotionRotationAngSpeed@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetMotionRotationAngSpeed;0x100592d0;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
 ?PauseMovableTreeCollision@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::PauseMovableTreeCollision;0x10059300;0x28;__thiscall;;void;cMagMeshObject*;bool
-?SetStaticMeshAlpha@cMagMeshObject@@QAEJH@Z;cMagMeshObject::SetStaticMeshAlpha;0x10059330;0x16;__thiscall;;long;cMagMeshObject*;int
+?SetStaticMeshAlpha@cMagMeshObject@@QAEJH@Z;cMagMeshObject::SetStaticMeshAlpha;0x10059330;0x16;__thiscall;;HRESULT;cMagMeshObject*;int
 ?SetMultiple@cMagMeshObject@@QAE_NM@Z;cMagMeshObject::SetMultiple;0x10059350;0x1e;__thiscall;;bool;cMagMeshObject*;float
 ?SetAlpha@cMagMeshObject@@QAEJH@Z;cMagMeshObject::SetAlpha;0x10059370;0x5c;__thiscall;;long;cMagMeshObject*;int
 ?SetAlpha@cMagMeshObject@@QAEXKK@Z;cMagMeshObject::SetAlpha;0x100593d0;0x3b;__thiscall;;void;cMagMeshObject*;ulong;ulong

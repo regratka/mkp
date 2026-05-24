@@ -12,6 +12,9 @@
 #include "ColObject.h"
 #include "cMagFrustumCull.h"
 #include "cMagBillboard.h"
+#include "cMagSector.h"
+#include "cBlob.h"
+#include "CCPUTicker.h"
 
 struct LINEVERTEX {
 	D3DXVECTOR3 pos;
@@ -232,7 +235,7 @@ public:
 	/* 100592B0 */ void SetMotionRotationAngSpeed(D3DXVECTOR3 param_1);
 	/* 100592D0 */ D3DXVECTOR3 GetMotionRotationAngSpeed();
 	/* 10059300 */ void PauseMovableTreeCollision(bool param_1);
-	/* 10059330 */ long SetStaticMeshAlpha(int param_1);
+	/* 10059330 */ HRESULT SetStaticMeshAlpha(int param_1);
 	/* 10059350 */ bool SetMultiple(float param_1);
 	/* 10059370 */ long SetAlpha(int param_1);
 	/* 100593D0 */ void SetAlpha(ulong param_1, ulong param_2);
@@ -338,7 +341,7 @@ public:
 	/* 100393E0 */ char* CreateNiceString(char* param_1);
 
 public:
-	/* 0xd4c */ uchar f_d4c[0xd50 - 0xd4c];
+	/* 0xd4c */ cBlob* blob;
 	/* 0xd50 */ bool enableNBFacesCollision;
 	/* 0xd51 */ bool enablePushing;
 	/* 0xd52 */ bool enableFrustumPhysicsPause;
@@ -358,35 +361,53 @@ public:
 	/* 0xed2 */ bool unk_ed2;
 	/* 0xed3 */ bool statusRemoveObject;
 	/* 0xed4 */ float unk_ed4;
-	/* 0xed8 */ uchar f_ed8[0x12d0 - 0xed8];
+	/* 0xed8 */ uchar unk_ed8[1016];
 	/* 0x12d0 */ bool enableTestDistance;
-	/* 0x12d1 */ uchar f_12d1[0x12e8 - 0x12d1];
+	/* 0x12d1 */ bool unk_12d1;
+	/* 0x12d2 */ bool unk_12d2;
+	/* 0x12d4 */ int unk_12d4;
+	/* 0x12d8 */ std::vector<void*> unk_12d8;
 	/* 0x12e8 */ cMagMeshObject* linkParent;
-	/* 0x12ec */ uchar f_12ec[0x1305 - 0x12ec];
+	/* 0x12ec */ D3DXVECTOR3 unk_12ec;
+	/* 0x12f8 */ bool unk_12f8;
+	/* 0x12f9 */ bool unk_12f9;
+	/* 0x12fc */ int unk_12fc;
+	/* 0x1300 */ int unk_1300;
+	/* 0x1304 */ uchar f_1304[0x1305 - 0x1304];
 	/* 0x1305 */ bool showWireframe;
 	/* 0x1308 */ LINEVERTEX* lineVertex;
 	/* 0x130c */ IDirect3DTexture8** lineTexture;
 	/* 0x1310 */ CULLSTATE cullState;
-	/* 0x1314 */ uchar f_1314[0x1318 - 0x1314];
+	/* 0x1314 */ int unk_1314;
 	/* 0x1318 */ bool showBoundingBox;
-	/* 0x1319 */ uchar f_1319[0x131c - 0x1319];
 	/* 0x131c */ float framesSinceLastMeasure;
-	/* 0x1320 */ bool unkn_1320;
+	/* 0x1320 */ bool unk_1320;
 	/* 0x1324 */ D3DXVECTOR3 boundary1;
 	/* 0x1330 */ D3DXVECTOR3 boundary2;
 	/* 0x133c */ bool enableFrustum;
 	/* 0x133d */ bool unk_133d;
 	/* 0x133e */ bool unk_133e;
-	/* 0x133f */ uchar f_133f[0x1388 - 0x133f];
+	/* 0x133f */ bool unk_133f;
+	/* 0x1340 */ int unk_1340;
+	/* 0x1344 */ int unk_1344;
+	/* 0x1348 */ D3DXMATRIX unk_1348;
 	/* 0x1388 */ D3DXMATRIX translationMatrix;
 	/* 0x13c8 */ D3DXMATRIX scaleMatrix;
 	/* 0x1408 */ D3DXMATRIX computationMatrix;
-	/* 0x1448 */ D3DXMATRIX unkn_1448;
-	/* 0x1488 */ uchar f_1488[0x1688 - 0x1488];
+	/* 0x1448 */ D3DXMATRIX unk_1448;
+	/* 0x1488 */ D3DXMATRIX unk_1488;
+	/* 0x14c8 */ D3DXMATRIX unk_14c8;
+	/* 0x1508 */ D3DXMATRIX unk_1508;
+	/* 0x1548 */ D3DXMATRIX unk_1548;
+	/* 0x1588 */ D3DXMATRIX unk_1588;
+	/* 0x15c8 */ D3DXMATRIX unk_15c8;
+	/* 0x1608 */ D3DXMATRIX unk_1608;
+	/* 0x1648 */ D3DXMATRIX unk_1648;
 	/* 0x1688 */ D3DXVECTOR3 translationBoundingBox;
 	/* 0x1694 */ D3DXVECTOR3 scaleBoundingBox;
 	/* 0x16a0 */ bool enableRendering;
 	/* 0x16a1 */ bool enablePortalRendering;
+	/* 0x16a2 */ bool unk_16a2;
 	/* 0x16a4 */ float safeWayMaxYDifference;
 	/* 0x16a8 */ uchar wayType;
 	/* 0x16a9 */ char onlyCollidingClass[100];
@@ -394,19 +415,26 @@ public:
 	/* 0x1771 */ uchar f_1771[0x1774 - 0x1771];
 	/* 0x1774 */ cMagBillboard* billboard;
 	/* 0x1778 */ cVideoPlayer* videoPlayer;
-	/* 0x177c */ uchar f_177c[0x1780 - 0x177c];
+	/* 0x177c */ bool unk_177c;
 	/* 0x1780 */ cMp3Player* mp3Player;
-	/* 0x1784 */ uchar f_1784[0x179c - 0x1784];
+	/* 0x1784 */ bool unk_1784;
+	/* 0x1788 */ std::vector<void*> unk_1788;
+	/* 0x1798 */ bool unk_1798;
 	/* 0x179c */ int unk_179c;
 	/* 0x17a0 */ bool enableCallHandlerOnPlaySoundEnd;
 	/* 0x17a4 */ cMagKernel* handlerOnPlaySoundEnd;
 	/* 0x17a8 */ D3DXVECTOR3 positionVector;
 	/* 0x17b4 */ D3DXVECTOR3 scaleVector;
-	/* 0x17c0 */ uchar f_17c0[0x17d8 - 0x17c0];
+	/* 0x17c0 */ D3DXVECTOR3 unk_17c0;
+	/* 0x17cc */ D3DXVECTOR3 unk_17cc;
 	/* 0x17d8 */ D3DXVECTOR3 rotateVector;
-	/* 0x17e4 */ uchar f_17e4[0x17e8 - 0x17e4];
+	/* 0x17e4 */ int unk_17e4;
 	/* 0x17e8 */ char filePath[300];
-	/* 0x1914 */ uchar f_1914[0x1928 - 0x1914];
+	/* 0x1914 */ int unk_1914;
+	/* 0x1918 */ float unk_1918;
+	/* 0x191c */ int unk_191c;
+	/* 0x1920 */ int unk_1920;
+	/* 0x1924 */ int unk_1924;
 	/* 0x1928 */ float lastMeasureTime;
 	/* 0x192c */ float frameRate;
 	/* 0x1930 */ D3DXMATRIX worldMat;
@@ -435,7 +463,10 @@ public:
 	/* 0x1b10 */ D3DXMATRIX unk_1b10;
 	/* 0x1b50 */ cMagMeshObject* parent;
 	/* 0x1b54 */ cMagMeshObject* slideObject;
-	/* 0x1b58 */ uchar f_1b58[0x1e9c - 0x1b58];
+	/* 0x1b58 */ bool unk_1b58;
+	/* 0x1b59 */ uchar f_1b59[0x1b60 - 0x1b59];
+	/* 0x1b60 */ CCPUTicker cpuTicker;
+	/* 0x1e98 */ int unk_1e98;
 	/* 0x1e9c */ IStudioMesh* studioMesh;
 	/* 0x1ea0 */ cStaticMesh* staticMesh;
 	/* 0x1ea4 */ bool unk_1ea4;
@@ -465,24 +496,29 @@ public:
 	/* 0x1f00 */ D3DXVECTOR3* destRotation;
 	/* 0x1f04 */ D3DXVECTOR3 rotationAngSpeed;
 	/* 0x1f10 */ D3DXVECTOR3 motionRotationAngSpeed;
-	/* 0x1f1c */ uchar f_1f1c[0x1f5c - 0x1f1c];
+	/* 0x1f1c */ D3DXMATRIX unk_1f1c;
 	/* 0x1f5c */ bool unk_1f5c;
 	/* 0x1f5d */ bool enableDynamicPointLight;
 	/* 0x1f5e */ bool unk_1f5e;
 	/* 0x1f60 */ int dynamicLightID;
 	/* 0x1f64 */ char unk_1f64[104];
 	/* 0x1fcc */ bool lightingObject;
-	/* 0x1fcd */ uchar f_1fcd[0x1fdc - 0x1fcd];
+	/* 0x1fd0 */ D3DXVECTOR3 unk_1fd0;
 	/* 0x1fdc */ ColObject* colObject;
 	/* 0x1fe0 */ bool freeRotationMatrix;
 	/* 0x1fe1 */ bool freeDestinationDir;
-	/* 0x1fe2 */ uchar f_1fe2[0x1fe8 - 0x1fe2];
+	/* 0x1fe4 */ int unk_1fe4;
 	/* 0x1fe8 */ uchar physicsType;
-	/* 0x1fe9 */ uchar f_1fe9[0x2000 - 0x1fe9];
+	/* 0x1fe9 */ uchar f_1fe9[0x1ff0 - 0x1fe9];
+	/* 0x1ff0 */ int unk_1ff0;
+	/* 0x1ff4 */ int unk_1ff4;
+	/* 0x1ff8 */ bool unk_1ff8;
+	/* 0x1ff9 */ uchar f_1ff9[0x2000 - 0x1ff9];
 	/* 0x2000 */ std::vector<IDirect3DTexture8*> animTextureLightMaps;
 	/* 0x2010 */ int animTextureLightMapFPS;
 	/* 0x2014 */ bool enableAnimTextureLightMap;
-	/* 0x2015 */ uchar f_2015[0x2148 - 0x2015];
+	/* 0x2018 */ float unk_2018;
+	/* 0x201c */ char unk_201c[300];
 	/* 0x2148 */ int lightMap;
 	/* 0x214c */ IDirect3DTexture8* magQuadTexture;
 	/* 0x2150 */ IDirect3DVertexBuffer8* magQuadBuffer;
@@ -494,22 +530,28 @@ public:
 	/* 0x2160 */ int animTextureFrameCount;
 	/* 0x2164 */ std::vector<IDirect3DTexture8*> animTextures;
 	/* 0x2174 */ float acceleration;
-	/* 0x2178 */ uchar f_2178[0x227c - 0x2178];
+	/* 0x2178 */ bool unk_2178;
+	/* 0x2179 */ char unk_2179[255];
+	/* 0x2278 */ cMagSector* sector;
 	/* 0x227c */ bool unk_227c;
-	/* 0x227d */ uchar f_227d[0x2284 - 0x227d];
+	/* 0x2280 */ float unk_2280;
 	/* 0x2284 */ void* unk_2284;
 	/* 0x2288 */ bool unk_2288;
-	/* 0x2289 */ uchar f_2289[0x228a - 0x2289];
+	/* 0x2289 */ bool unk_2289;
 	/* 0x228a */ bool disableTestMeshInSector;
 	/* 0x228b */ bool unk_228b;
 	/* 0x228c */ bool enableZBufferWrite;
 	/* 0x228d */ bool enableForceTransform;
 	/* 0x2290 */ D3DXMATRIX forceTransformMatrix;
-	/* 0x22d0 */ uchar f_22d0[0x22d4 - 0x22d0];
+	/* 0x22d0 */ bool unk_22d0;
 	/* 0x22d4 */ int shadowType;
-	/* 0x22d8 */ uchar f_22d8[0x2630 - 0x22d8];
+	/* 0x22d8 */ uchar f_22d8[0x2614 - 0x22d8];
+	/* 0x2614 */ std::vector<void*> unk_2614;
+	/* 0x2624 */ D3DXVECTOR3 unk_2624;
 	/* 0x2630 */ bool unk_2630;
-	/* 0x2631 */ uchar f_2631[0x2658 - 0x2631];
+	/* 0x2634 */ std::vector<void*> unk_2634;
+	/* 0x2644 */ int unk_2644;
+	/* 0x2648 */ std::vector<void*> unk_2648;
 
 public:
 	/* 1018C598 */ static bool m_bRepairEuler;

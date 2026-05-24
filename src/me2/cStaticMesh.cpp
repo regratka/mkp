@@ -101,6 +101,6 @@ bool cStaticMesh::SetMultiple(float param_1) {
 }
 
 /* 10041DC0-10041DCD 0000D	*/
-void cStaticMesh::SetAnimTextureLightMap(uchar param_1) {
+void cStaticMesh::SetAnimTextureLightMap(IDirect3DTexture8* param_1) {
 }
 

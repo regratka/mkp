@@ -30,7 +30,7 @@ public:
 	/* 10041980 */ void LoadColTypeTexIni(char* param_1);
 	/* 10041D00 */ bool SetAlpha(int param_1);
 	/* 10041D60 */ bool SetMultiple(float param_1);
-	/* 10041DC0 */ void SetAnimTextureLightMap(uchar param_1);
+	/* 10041DC0 */ void SetAnimTextureLightMap(IDirect3DTexture8* param_1);
 
 public:
 	/* 0x04 */ uchar f_04[0x47c-0x04];
