@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 17.704687,
+    "fuzzy_match_percent": 17.853436,
     "total_code": "669691",
-    "matched_code": "59652",
-    "matched_code_percent": 8.907392,
+    "matched_code": "60513",
+    "matched_code_percent": 9.035958,
     "matched_data_percent": 100.0,
     "total_functions": 3070,
-    "matched_functions": 652,
-    "matched_functions_percent": 21.237785,
+    "matched_functions": 655,
+    "matched_functions_percent": 21.335505,
     "complete_code": "7437",
     "complete_code_percent": 1.1105123,
     "complete_data_percent": 100.0,
@@ -14440,14 +14440,14 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 53.05456,
+        "fuzzy_match_percent": 54.97026,
         "total_code": "52000",
-        "matched_code": "8042",
-        "matched_code_percent": 15.4653845,
+        "matched_code": "8903",
+        "matched_code_percent": 17.121155,
         "matched_data_percent": 100.0,
         "total_functions": 273,
-        "matched_functions": 186,
-        "matched_functions_percent": 68.13187,
+        "matched_functions": 189,
+        "matched_functions_percent": 69.230774,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14455,7 +14455,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 53.05456,
+          "fuzzy_match_percent": 54.97026,
           "metadata": {}
         }
       ],
@@ -15209,7 +15209,7 @@
         {
           "name": "?Rotate@cMagMeshObject@@QAEXUD3DXVECTOR3@@M@Z",
           "size": "511",
-          "fuzzy_match_percent": 0.8,
+          "fuzzy_match_percent": 97.92,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::Rotate(struct D3DXVECTOR3, float)"
           },
@@ -15227,7 +15227,7 @@
         {
           "name": "?GetBoneWorldPosition@cMagMeshObject@@QAE?AUD3DXVECTOR3@@PAD@Z",
           "size": "443",
-          "fuzzy_match_percent": 78.88312,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetBoneWorldPosition(char *)"
           },
@@ -15236,7 +15236,7 @@
         {
           "name": "?GetBoneMatrix@cMagMeshObject@@QAE_NPADAAUD3DXMATRIX@@@Z",
           "size": "385",
-          "fuzzy_match_percent": 3.030303,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::GetBoneMatrix(char *, struct D3DXMATRIX &)"
           },
@@ -15443,6 +15443,7 @@
         {
           "name": "?GetRotate@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetRotate(void)"
           },
@@ -29808,14 +29809,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 22.764864,
+        "fuzzy_match_percent": 22.959291,
         "total_code": "512354",
-        "matched_code": "58142",
-        "matched_code_percent": 11.348014,
+        "matched_code": "59003",
+        "matched_code_percent": 11.516062,
         "matched_data_percent": 100.0,
         "total_functions": 2200,
-        "matched_functions": 612,
-        "matched_functions_percent": 27.818182,
+        "matched_functions": 615,
+        "matched_functions_percent": 27.954546,
         "complete_code": "7437",
         "complete_code_percent": 1.4515355,
         "complete_data_percent": 100.0,

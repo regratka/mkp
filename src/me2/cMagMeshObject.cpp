@@ -1161,7 +1161,7 @@ void cMagMeshObject::SetSpeed(D3DXVECTOR3 param_1) {
 D3DXVECTOR3 cMagMeshObject::GetSpeed() {
 	if (slideObject != NULL) {
 		D3DXVECTOR3 slideSpeed = slideObject->GetSpeed();
-		return speedVector + slideSpeed;
+		return slideSpeed + speedVector;
 	}
 	return speedVector;
 }
@@ -1293,6 +1293,31 @@ D3DXMATRIX cMagMeshObject::GetSpace() {
 
 /* 100567A0-1005699F 001FF	*/
 void cMagMeshObject::Rotate(D3DXVECTOR3 param_1, float param_2) {
+	if (param_2 > 180.0f) {
+		param_2 -= 360.0f;
+	}
+
+	if (param_2 < 180.0f) {
+		param_2 += 360.0f;
+	}
+
+	D3DXMATRIX local_80 = rotateMatrix;
+	D3DXMATRIX local_140;
+	D3DXMatrixIdentity(&local_140);
+	D3DXMatrixRotationAxis(&local_140, &param_1, D3DXToRadian(param_2));
+	D3DXMATRIX local_100;
+	D3DXMatrixMultiply(&local_100, &local_80, &local_140);
+	rotateMatrix = local_100;
+	MatrixToEuler(local_100, rotateVector.z, rotateVector.y, rotateVector.x);
+	D3DXMatrixMultiply(&local_100, &rotateMatrix, &scaleMatrix);
+	D3DXMATRIX DStack_c0 = local_100;
+	D3DXMATRIX DStack_40;
+	D3DXMatrixMultiply(&DStack_40, &DStack_c0, &translationMatrix);
+	worldMat = DStack_40;
+	SetRotMat(rotateMatrix);
+	D3DXVECTOR3 Dvar(rotateMatrix(2, 0), rotateMatrix(2, 1), rotateMatrix(2, 2));
+	directionVector = Dvar;
+	SetSpeedDirection(Dvar);
 }
 
 /* 100569A0-100569AD 0000D	*/
@@ -1303,21 +1328,34 @@ void cMagMeshObject::EnableTestDistance(bool param_1) {
 /* 100569B0-10056B6B 001BB	*/
 D3DXVECTOR3 cMagMeshObject::GetBoneWorldPosition(char* param_1) {
 	if (studioMesh == NULL) {
-		return 0;
+		return D3DXVECTOR3(0, 0, 0);
 	}
-	D3DXMATRIX matrix1;
-	D3DXMatrixIdentity(&matrix1);
-	D3DXMATRIX matrix2;
-	D3DXMatrixIdentity(&matrix2);
-	studioMesh->GetBoneMatrix(param_1, matrix1, matrix2);
-	D3DXMATRIX out;
-	D3DXMatrixMultiply(&out, &matrix1, &unk_1448);
-	return D3DXVECTOR3(out(3,0), out(3,1), out(3,2));
+
+	D3DXMATRIX local_c0;
+	D3DXMatrixIdentity(&local_c0);
+	D3DXMATRIX local_80;
+	D3DXMatrixIdentity(&local_80);
+	studioMesh->GetBoneMatrix(param_1, local_c0, local_80);
+	D3DXMATRIX local_40;
+	D3DXMatrixMultiply(&local_40, &local_c0, &unk_1448);
+	D3DXVECTOR3 res = D3DXVECTOR3(local_40(3,0), local_40(3,1), local_40(3,2));
+	return res;
 }
 
 /* 10056B70-10056CF1 00181	*/
 bool cMagMeshObject::GetBoneMatrix(char* param_1, D3DXMATRIX& param_2) {
-	return 0;
+	if (studioMesh == NULL) {
+		return false;
+	}
+	D3DXMATRIX local_c0;
+	D3DXMatrixIdentity(&local_c0);
+	D3DXMATRIX local_80;
+	D3DXMatrixIdentity(&local_80);
+	studioMesh->GetBoneMatrix(param_1, local_c0, local_80);
+	D3DXMATRIX local_40;
+	param_2 = *D3DXMatrixMultiply(&local_40, &local_c0, &unk_1448);
+	param_2 = local_40;
+	return true;
 }
 
 /* 10056D00-10056D9E 0009E	*/
@@ -1476,11 +1514,7 @@ cMagMeshObject* cMagMeshObject::GetParent() {
 
 /* 100575E0-10057601 00021	*/
 D3DXVECTOR3 cMagMeshObject::GetRotate() {
-	D3DXVECTOR3 res;
-	res.x = rotateVector.x;
-	res.y = rotateVector.y;
-	res.z = rotateVector.z;
-	return res;
+	return D3DXVECTOR3(rotateVector.x, rotateVector.y, rotateVector.z);
 }
 
 /* 10057610-10057643 00033	*/
