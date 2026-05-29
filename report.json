@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 18.447763,
-    "total_code": "669691",
-    "matched_code": "63022",
-    "matched_code_percent": 9.410608,
+    "fuzzy_match_percent": 18.425457,
+    "total_code": "671172",
+    "matched_code": "63153",
+    "matched_code_percent": 9.409361,
     "matched_data_percent": 100.0,
-    "total_functions": 3070,
-    "matched_functions": 663,
-    "matched_functions_percent": 21.59609,
-    "complete_code": "7437",
-    "complete_code_percent": 1.1105123,
+    "total_functions": 3072,
+    "matched_functions": 668,
+    "matched_functions_percent": 21.744793,
+    "complete_code": "9123",
+    "complete_code_percent": 1.3592641,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 3
+    "complete_units": 14
   },
   "units": [
     {
@@ -14440,22 +14440,22 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 62.624413,
-        "total_code": "52000",
-        "matched_code": "11412",
-        "matched_code_percent": 21.946154,
+        "fuzzy_match_percent": 62.59204,
+        "total_code": "51955",
+        "matched_code": "11367",
+        "matched_code_percent": 21.87855,
         "matched_data_percent": 100.0,
-        "total_functions": 273,
-        "matched_functions": 197,
-        "matched_functions_percent": 72.16117,
+        "total_functions": 272,
+        "matched_functions": 196,
+        "matched_functions_percent": 72.05882,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "52000",
-          "fuzzy_match_percent": 62.624413,
+          "size": "51955",
+          "fuzzy_match_percent": 62.59204,
           "metadata": {}
         }
       ],
@@ -16466,22 +16466,13 @@
           "address": "44707"
         },
         {
-          "name": "?TraceScene@cMagMeshObject@@QAE_NPAVCollision@@@Z",
-          "size": "45",
-          "fuzzy_match_percent": 100.0,
-          "metadata": {
-            "demangled_name": "public: bool __thiscall cMagMeshObject::TraceScene(class Collision *)"
-          },
-          "address": "44752"
-        },
-        {
           "name": "?CreateMagQuad@cMagMeshObject@@QAEXXZ",
           "size": "105",
           "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CreateMagQuad(void)"
           },
-          "address": "44797"
+          "address": "44752"
         },
         {
           "name": "?SetTextureMagQuad@cMagMeshObject@@QAEXPAD@Z",
@@ -16490,7 +16481,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetTextureMagQuad(char *)"
           },
-          "address": "44902"
+          "address": "44857"
         },
         {
           "name": "?RenderMagQuad@cMagMeshObject@@QAEXXZ",
@@ -16499,7 +16490,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderMagQuad(void)"
           },
-          "address": "44931"
+          "address": "44886"
         },
         {
           "name": "?SetAlphaMagQuad@cMagMeshObject@@QAEXM@Z",
@@ -16508,7 +16499,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAlphaMagQuad(float)"
           },
-          "address": "45209"
+          "address": "45164"
         },
         {
           "name": "?GetPhysicsFrameTime@cMagMeshObject@@QAEMXZ",
@@ -16517,7 +16508,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetPhysicsFrameTime(void)"
           },
-          "address": "45543"
+          "address": "45498"
         },
         {
           "name": "?GetBoundingBox@cMagMeshObject@@UAEXAAUD3DXVECTOR3@@0H@Z",
@@ -16526,7 +16517,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagMeshObject::GetBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&, int)"
           },
-          "address": "45561"
+          "address": "45516"
         },
         {
           "name": "?EnableAnimTexture@cMagMeshObject@@QAEX_N@Z",
@@ -16535,7 +16526,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimTexture(bool)"
           },
-          "address": "45626"
+          "address": "45581"
         },
         {
           "name": "?AddTexture@cMagMeshObject@@QAEHPAD@Z",
@@ -16544,7 +16535,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::AddTexture(char *)"
           },
-          "address": "45639"
+          "address": "45594"
         },
         {
           "name": "?SetTexture@cMagMeshObject@@QAE_NH@Z",
@@ -16553,7 +16544,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::SetTexture(int)"
           },
-          "address": "45652"
+          "address": "45607"
         },
         {
           "name": "?AddAnimTexture@cMagMeshObject@@QAEHPAD@Z",
@@ -16562,7 +16553,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::AddAnimTexture(char *)"
           },
-          "address": "45752"
+          "address": "45707"
         },
         {
           "name": "?SetAnimTextureFPS@cMagMeshObject@@QAEXH@Z",
@@ -16571,7 +16562,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimTextureFPS(int)"
           },
-          "address": "45854"
+          "address": "45809"
         },
         {
           "name": "?SetAnimTextureFrameCount@cMagMeshObject@@QAEXH@Z",
@@ -16580,7 +16571,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimTextureFrameCount(int)"
           },
-          "address": "45867"
+          "address": "45822"
         },
         {
           "name": "?RenderAnimTexture@cMagMeshObject@@QAEXXZ",
@@ -16589,7 +16580,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::RenderAnimTexture(void)"
           },
-          "address": "45880"
+          "address": "45835"
         },
         {
           "name": "?EnableAnimTextureMove@cMagMeshObject@@QAEX_N@Z",
@@ -16598,7 +16589,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimTextureMove(bool)"
           },
-          "address": "46104"
+          "address": "46059"
         },
         {
           "name": "?EnableAttachDynObj@cMagMeshObject@@QAEX_N@Z",
@@ -16607,7 +16598,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAttachDynObj(bool)"
           },
-          "address": "46117"
+          "address": "46072"
         },
         {
           "name": "?EnableAttachDynObj@cMagMeshObject@@QAE_NXZ",
@@ -16616,7 +16607,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableAttachDynObj(void)"
           },
-          "address": "46140"
+          "address": "46095"
         },
         {
           "name": "?EnableLastParentSpeed@cMagMeshObject@@QAEX_N@Z",
@@ -16625,7 +16616,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableLastParentSpeed(bool)"
           },
-          "address": "46160"
+          "address": "46115"
         },
         {
           "name": "?EnableLastParentSpeed@cMagMeshObject@@QAE_NXZ",
@@ -16634,7 +16625,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableLastParentSpeed(void)"
           },
-          "address": "46183"
+          "address": "46138"
         },
         {
           "name": "?SetAcceleration@cMagMeshObject@@QAEXM@Z",
@@ -16643,7 +16634,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAcceleration(float)"
           },
-          "address": "46203"
+          "address": "46158"
         },
         {
           "name": "?GetAcceleration@cMagMeshObject@@QAEMXZ",
@@ -16652,7 +16643,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagMeshObject::GetAcceleration(void)"
           },
-          "address": "46216"
+          "address": "46171"
         },
         {
           "name": "?SectorRendering@cMagMeshObject@@QAE_NXZ",
@@ -16661,7 +16652,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::SectorRendering(void)"
           },
-          "address": "46223"
+          "address": "46178"
         },
         {
           "name": "?DisableTestMeshInSector@cMagMeshObject@@QAEX_N@Z",
@@ -16670,7 +16661,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::DisableTestMeshInSector(bool)"
           },
-          "address": "46460"
+          "address": "46415"
         },
         {
           "name": "?PauseObject@cMagMeshObject@@QAEX_N@Z",
@@ -16679,7 +16670,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::PauseObject(bool)"
           },
-          "address": "46473"
+          "address": "46428"
         },
         {
           "name": "?EnableAnimTextureLightMap@cMagMeshObject@@QAEX_N@Z",
@@ -16688,7 +16679,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableAnimTextureLightMap(bool)"
           },
-          "address": "46542"
+          "address": "46497"
         },
         {
           "name": "?AddAnimTextureLightMap@cMagMeshObject@@QAEXPAD@Z",
@@ -16697,7 +16688,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AddAnimTextureLightMap(char *)"
           },
-          "address": "46555"
+          "address": "46510"
         },
         {
           "name": "?SetAnimTextureLightMapFPS@cMagMeshObject@@QAEXH@Z",
@@ -16706,7 +16697,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetAnimTextureLightMapFPS(int)"
           },
-          "address": "47010"
+          "address": "46965"
         },
         {
           "name": "?AnimateLightMap@cMagMeshObject@@QAEXXZ",
@@ -16715,7 +16706,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::AnimateLightMap(void)"
           },
-          "address": "47023"
+          "address": "46978"
         },
         {
           "name": "?EnableZBuffeWrite@cMagMeshObject@@QAEX_N@Z",
@@ -16724,7 +16715,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableZBuffeWrite(bool)"
           },
-          "address": "47226"
+          "address": "47181"
         },
         {
           "name": "?EnableZBuffeWrite@cMagMeshObject@@QAE_NXZ",
@@ -16733,7 +16724,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableZBuffeWrite(void)"
           },
-          "address": "47239"
+          "address": "47194"
         },
         {
           "name": "?GetFaceCount@cMagMeshObject@@QAEHXZ",
@@ -16742,7 +16733,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::GetFaceCount(void)"
           },
-          "address": "47246"
+          "address": "47201"
         },
         {
           "name": "?EnableForceTransform@cMagMeshObject@@QAEX_N@Z",
@@ -16751,7 +16742,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableForceTransform(bool)"
           },
-          "address": "47283"
+          "address": "47238"
         },
         {
           "name": "?SetForceTransformMatrix@cMagMeshObject@@QAEXUD3DXMATRIX@@@Z",
@@ -16760,7 +16751,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetForceTransformMatrix(struct D3DXMATRIX)"
           },
-          "address": "47296"
+          "address": "47251"
         },
         {
           "name": "?SetLightPosition@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z",
@@ -16769,7 +16760,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightPosition(struct D3DXVECTOR3)"
           },
-          "address": "47320"
+          "address": "47275"
         },
         {
           "name": "?EnableLight@cMagMeshObject@@QAEX_N@Z",
@@ -16778,7 +16769,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableLight(bool)"
           },
-          "address": "47363"
+          "address": "47318"
         },
         {
           "name": "?SetMaterialDiffuse@cMagMeshObject@@QAEXMMMM@Z",
@@ -16787,7 +16778,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMaterialDiffuse(float, float, float, float)"
           },
-          "address": "47386"
+          "address": "47341"
         },
         {
           "name": "?SetMaterialAmbient@cMagMeshObject@@QAEXMMMM@Z",
@@ -16796,7 +16787,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetMaterialAmbient(float, float, float, float)"
           },
-          "address": "47424"
+          "address": "47379"
         },
         {
           "name": "?SetLightDiffuse@cMagMeshObject@@QAEXMMMM@Z",
@@ -16805,7 +16796,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightDiffuse(float, float, float, float)"
           },
-          "address": "47462"
+          "address": "47417"
         },
         {
           "name": "?SetLightAmbient@cMagMeshObject@@QAEXMMMM@Z",
@@ -16814,7 +16805,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::SetLightAmbient(float, float, float, float)"
           },
-          "address": "47500"
+          "address": "47455"
         },
         {
           "name": "?EnableRenderShadow@cMagMeshObject@@QAEX_N@Z",
@@ -16823,7 +16814,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::EnableRenderShadow(bool)"
           },
-          "address": "47538"
+          "address": "47493"
         },
         {
           "name": "?EnableRenderShadow@cMagMeshObject@@QAE_NXZ",
@@ -16832,7 +16823,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::EnableRenderShadow(void)"
           },
-          "address": "47561"
+          "address": "47516"
         },
         {
           "name": "?CreateBumpAndEnviromentTexture@cMagMeshObject@@QAEXXZ",
@@ -16841,7 +16832,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::CreateBumpAndEnviromentTexture(void)"
           },
-          "address": "47579"
+          "address": "47534"
         },
         {
           "name": "?LoadLod@cMagMeshObject@@QAEXPAD@Z",
@@ -16850,7 +16841,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagMeshObject::LoadLod(char *)"
           },
-          "address": "48277"
+          "address": "48232"
         },
         {
           "name": "?_TestDistanceLOD@cMagMeshObject@@QAE_NM@Z",
@@ -16859,7 +16850,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::_TestDistanceLOD(float)"
           },
-          "address": "49309"
+          "address": "49264"
         },
         {
           "name": "?CreateNavigationPath@cMagMeshObject@@QAE_NPAD@Z",
@@ -16868,7 +16859,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::CreateNavigationPath(char *)"
           },
-          "address": "49696"
+          "address": "49651"
         },
         {
           "name": "?BuildNaviPoints@cMagMeshObject@@QAE_NUD3DXVECTOR3@@0@Z",
@@ -16877,7 +16868,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagMeshObject::BuildNaviPoints(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "50782"
+          "address": "50737"
         },
         {
           "name": "?GetNaviPointsCount@cMagMeshObject@@QAEHXZ",
@@ -16886,7 +16877,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagMeshObject::GetNaviPointsCount(void)"
           },
-          "address": "51600"
+          "address": "51555"
         },
         {
           "name": "?GetNaviPointAt@cMagMeshObject@@QAE?AUD3DXVECTOR3@@H@Z",
@@ -16894,7 +16885,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetNaviPointAt(int)"
           },
-          "address": "51638"
+          "address": "51593"
         },
         {
           "name": "?GotoRandomLocation@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
@@ -16902,7 +16893,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GotoRandomLocation(void)"
           },
-          "address": "51835"
+          "address": "51790"
         }
       ],
       "metadata": {
@@ -19721,16 +19712,16 @@
     {
       "name": "me2/CollisionManager",
       "measures": {
-        "total_code": "2946",
+        "total_code": "4472",
         "matched_data_percent": 100.0,
-        "total_functions": 5,
+        "total_functions": 8,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "2946",
+          "size": "4472",
           "metadata": {}
         }
       ],
@@ -19748,22 +19739,40 @@
           "address": "621"
         },
         {
+          "name": "collision::FUN100a6300",
+          "size": "770",
+          "metadata": {},
+          "address": "1340"
+        },
+        {
+          "name": "collision::FUN100a80a0",
+          "size": "47",
+          "metadata": {},
+          "address": "2110"
+        },
+        {
+          "name": "collision::FUN100a80d0",
+          "size": "709",
+          "metadata": {},
+          "address": "2157"
+        },
+        {
           "name": "collision::FUN_100a83a0",
           "size": "250",
           "metadata": {},
-          "address": "1340"
+          "address": "2866"
         },
         {
           "name": "collision::collision",
           "size": "1196",
           "metadata": {},
-          "address": "1590"
+          "address": "3116"
         },
         {
           "name": "collision::LoadSettings",
           "size": "160",
           "metadata": {},
-          "address": "2786"
+          "address": "4312"
         }
       ],
       "metadata": {
@@ -21804,8 +21813,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -21854,6 +21866,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -21870,8 +21883,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -21920,6 +21936,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -21936,8 +21953,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -21986,6 +22006,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22002,8 +22023,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22052,6 +22076,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22068,8 +22093,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22118,6 +22146,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22134,8 +22163,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22184,6 +22216,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22200,8 +22233,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22250,6 +22286,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22266,8 +22303,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22316,6 +22356,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22332,8 +22373,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22382,6 +22426,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22398,8 +22443,11 @@
         "total_functions": 4,
         "matched_functions": 4,
         "matched_functions_percent": 100.0,
+        "complete_code": "151",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -22448,6 +22496,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -22456,63 +22505,86 @@
     {
       "name": "mkp/AIControlPoint",
       "measures": {
-        "fuzzy_match_percent": 4.2613635,
+        "fuzzy_match_percent": 100.0,
         "total_code": "176",
+        "matched_code": "176",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 6,
+        "matched_functions": 6,
+        "matched_functions_percent": 100.0,
+        "complete_code": "176",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "176",
-          "fuzzy_match_percent": 4.2613635,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "AIControlPoint::AIControlPoint",
+          "name": "??0AIControlPoint@@QAE@XZ",
           "size": "25",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall AIControlPoint::AIControlPoint(void)"
+          },
           "address": "0"
         },
         {
-          "name": "AIControlPoint::scalar_destructor",
+          "name": "??_GAIControlPoint@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall AIControlPoint::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "25"
         },
         {
-          "name": "AIControlPoint::~AIControlPoint",
+          "name": "??1AIControlPoint@@UAE@XZ",
           "size": "11",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall AIControlPoint::~AIControlPoint(void)"
+          },
           "address": "55"
         },
         {
           "name": "?EXP@AIControlPoint@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall AIControlPoint::EXP(void)"
           },
           "address": "66"
         },
         {
-          "name": "AIControlPoint::FUN0043cee0",
+          "name": "?FUN0043cee0@AIControlPoint@@QAE_NXZ",
           "size": "7",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall AIControlPoint::FUN0043cee0(void)"
+          },
           "address": "156"
         },
         {
-          "name": "AIControlPoint::FUN0043cef0",
+          "name": "?FUN0043cef0@AIControlPoint@@QAEX_N@Z",
           "size": "13",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall AIControlPoint::FUN0043cef0(bool)"
+          },
           "address": "163"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -29812,16 +29884,16 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 23.73613,
-        "total_code": "512354",
-        "matched_code": "61512",
-        "matched_code_percent": 12.005762,
+        "fuzzy_match_percent": 23.658958,
+        "total_code": "513835",
+        "matched_code": "61467",
+        "matched_code_percent": 11.9624,
         "matched_data_percent": 100.0,
-        "total_functions": 2200,
-        "matched_functions": 623,
-        "matched_functions_percent": 28.318182,
+        "total_functions": 2202,
+        "matched_functions": 622,
+        "matched_functions_percent": 28.24705,
         "complete_code": "7437",
-        "complete_code_percent": 1.4515355,
+        "complete_code_percent": 1.4473517,
         "complete_data_percent": 100.0,
         "total_units": 110,
         "complete_units": 3
@@ -29831,16 +29903,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 1.2266663,
+        "fuzzy_match_percent": 1.3337613,
         "total_code": "157337",
-        "matched_code": "1510",
-        "matched_code_percent": 0.9597235,
+        "matched_code": "1686",
+        "matched_code_percent": 1.0715852,
         "matched_data_percent": 100.0,
         "total_functions": 870,
-        "matched_functions": 40,
-        "matched_functions_percent": 4.597701,
+        "matched_functions": 46,
+        "matched_functions_percent": 5.2873564,
+        "complete_code": "1686",
+        "complete_code_percent": 1.0715852,
         "complete_data_percent": 100.0,
-        "total_units": 97
+        "total_units": 97,
+        "complete_units": 11
       }
     }
   ]
