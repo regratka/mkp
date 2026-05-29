@@ -1419,12 +1419,12 @@
 ;FUN_0043cdc0;0x43cdc0;0xc;__stdcall;;uchar
 ;FUN_0043cdf0;0x43cdf0;0xa;__stdcall;;uchar
 ;FUN_0043ce00;0x43ce00;0xc;__stdcall;;uchar
-;AIControlPoint::AIControlPoint;0x43ce20;0x19;__thiscall;;AIControlPoint*;AIControlPoint*
-;AIControlPoint::scalar_destructor;0x43ce40;0x1e;__thiscall;;uchar;AIControlPoint*;uchar
-;AIControlPoint::~AIControlPoint;0x43ce60;0xb;__thiscall;;void;AIControlPoint*
+??0AIControlPoint@@QAE@XZ;AIControlPoint::AIControlPoint;0x43ce20;0x19;__thiscall;;AIControlPoint*;AIControlPoint*
+??_GAIControlPoint@@UAEPAXI@Z;AIControlPoint::scalar_destructor;0x43ce40;0x1e;__thiscall;;uchar;AIControlPoint*;uchar
+??1AIControlPoint@@UAE@XZ;AIControlPoint::~AIControlPoint;0x43ce60;0xb;__thiscall;;void;AIControlPoint*
 ?EXP@AIControlPoint@@QAEPAXXZ;AIControlPoint::EXP;0x43ce70;0x5a;__thiscall;;void*;AIControlPoint*
-;AIControlPoint::FUN0043cee0;0x43cee0;0x7;__thiscall;;bool;AIControlPoint*
-;AIControlPoint::FUN0043cef0;0x43cef0;0xd;__thiscall;;void;AIControlPoint*;bool
+?FUN0043cee0@AIControlPoint@@QAE_NXZ;AIControlPoint::FUN0043cee0;0x43cee0;0x7;__thiscall;;bool;AIControlPoint*
+?FUN0043cef0@AIControlPoint@@QAEX_N@Z;AIControlPoint::FUN0043cef0;0x43cef0;0xd;__thiscall;;void;AIControlPoint*;bool
 ;FUN_0043cf40;0x43cf40;0xa;__stdcall;;uchar
 ;FUN_0043cf50;0x43cf50;0xc;__stdcall;;uchar
 ;FUN_0043cf80;0x43cf80;0xa;__stdcall;;uchar
