@@ -15,6 +15,7 @@
 #include "cMagSector.h"
 #include "cBlob.h"
 #include "CCPUTicker.h"
+#include "Collision.h"
 
 struct LINEVERTEX {
 	D3DXVECTOR3 pos;
@@ -26,6 +27,36 @@ struct WATERTEXTURE {
 	/* 0x04 */ IDirect3DTexture8* texture;
 	/* 0x08 */ char textureName[256];
 };
+
+struct BoneStruct {
+	/* 0x00 */ cMagMeshObject* bone;
+	/* 0x04 */ char boneName[200];
+};
+
+STATIC_ASSERT(sizeof(BoneStruct) == 0xcc);
+
+class NaviPoint {
+private:
+	/* 0x00 */ D3DXVECTOR3 position;
+};
+
+STATIC_ASSERT(sizeof(NaviPoint) == 0xc);
+
+
+class NavigationPath {
+public:
+	NavigationPath() { 
+		
+	}
+
+private:
+	/* 0x00 */ uchar f_00[0x38];
+
+};
+
+STATIC_ASSERT(sizeof(NavigationPath) == 0x38);
+
+
 
 class DLLEXPORT cMagMeshObject : public cMagUtility {
 public:
@@ -279,7 +310,7 @@ public:
 	/* 1005A220 */ D3DXVECTOR3 GetHelperPosition(char* param_1);
 	/* 1005A290 */ void SetPhysicsType(uchar param_1);
 	/* 1005A410 */ uchar GetPhysicsType();
-	/* 1005A420 */ uint TraceScene(uint param_1, uint param_2, uint param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8, uint param_9);
+	/* 1005A420 */ bool TraceScene(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXVECTOR3* const param_3, float* param_4, D3DXVECTOR3* param_5);
 	/* 1005A490 */ void EnablePushing(bool param_1);
 	/* 1005A4A0 */ bool EnablePushing();
 	/* 1005A4B0 */ void SetRotationMatrix(D3DXMATRIX param_1);
@@ -288,8 +319,8 @@ public:
 	/* 1005A600 */ void ActivateLightMap(int param_1);
 	/* 1005A610 */ void SetEllipsoid(uint param_1, uint param_2, uint param_3);
 	/* 1005A650 */ uchar GetEllipsoid(uint* param_1);
-	/* 1005A680 */ bool TraceObjects(uchar param_1);
-	/* 1005A6B0 */ bool TraceScene(uchar param_1);
+	/* 1005A680 */ bool TraceObjects(Collision* param_1);
+	/* 1005A6B0 */ bool TraceScene(Collision* param_1);
 	/* 1005A6E0 */ void CreateMagQuad();
 	/* 1005A750 */ void SetTextureMagQuad(char* param_1);
 	/* 1005A770 */ void RenderMagQuad();
@@ -366,7 +397,7 @@ public:
 	/* 0x12d1 */ bool unk_12d1;
 	/* 0x12d2 */ bool unk_12d2;
 	/* 0x12d4 */ int unk_12d4;
-	/* 0x12d8 */ std::vector<void*> unk_12d8;
+	/* 0x12d8 */ std::vector<BoneStruct> unk_12d8;
 	/* 0x12e8 */ cMagMeshObject* linkParent;
 	/* 0x12ec */ D3DXVECTOR3 unk_12ec;
 	/* 0x12f8 */ bool unk_12f8;
@@ -503,7 +534,9 @@ public:
 	/* 0x1f60 */ int dynamicLightID;
 	/* 0x1f64 */ char unk_1f64[104];
 	/* 0x1fcc */ bool lightingObject;
-	/* 0x1fd0 */ D3DXVECTOR3 unk_1fd0;
+	/* 0x1fd0 */ float unk_1fd0;
+	/* 0x1fd4 */ float unk_1fd4;
+	/* 0x1fd8 */ float unk_1fd8;
 	/* 0x1fdc */ ColObject* colObject;
 	/* 0x1fe0 */ bool freeRotationMatrix;
 	/* 0x1fe1 */ bool freeDestinationDir;
@@ -547,7 +580,9 @@ public:
 	/* 0x22d4 */ int shadowType;
 	/* 0x22d8 */ uchar f_22d8[0x2614 - 0x22d8];
 	/* 0x2614 */ std::vector<void*> unk_2614;
-	/* 0x2624 */ D3DXVECTOR3 unk_2624;
+	/* 0x2624 */ cMagMeshObject* lod;
+	/* 0x2628 */ void* unk_2628;
+	/* 0x262c */ void* unk_262c;
 	/* 0x2630 */ bool unk_2630;
 	/* 0x2634 */ std::vector<void*> unk_2634;
 	/* 0x2644 */ int unk_2644;

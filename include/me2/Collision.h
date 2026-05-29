@@ -3,7 +3,9 @@
 
 #include <globals.h>
 
-#include "cMagMeshObject.h"
+#include <d3dx8math.h>
+
+class cMagMeshObject;
 
 class Collision {
 public:

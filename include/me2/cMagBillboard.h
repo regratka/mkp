@@ -46,7 +46,10 @@ public:
 	/* 100689D0 */ void SetHandlerObject(cMagGameObject* param_1);
 
 public:
-	/* 0xd4c */ uchar field_0xd4c[0xda0 - 0xd4c];
+	/* 0xd4c */ uchar field_0xd4c[0xd94 - 0xd4c];
+	/* 0xd94 */ bool unk_d94;
+	/* 0xd98 */ float unk_d98;
+	/* 0xd9c */ float unk_d9c;
 	/* 0xda0 */ D3DXVECTOR3 unk_da0;
 	/* 0xdac */ uchar field_0xdac[0x1008 - 0xdac];
 };

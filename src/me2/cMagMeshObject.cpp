@@ -7,6 +7,7 @@
 #include "cMagMeshMgr.h"
 #include "CAlphaObject.h"
 #include "CCamera.h"
+#include "CJVMData.h"
 
 /* 10051E50-10052DEC 00F9C	*/
 cMagMeshObject::cMagMeshObject() {
@@ -169,9 +170,9 @@ cMagMeshObject::cMagMeshObject() {
 	enableFrustumPhysicsPause = true;
 	physicsType = 0;
 	unk_1fe4 = 0;
-	unk_1fd0.x = 2000.0f;
-	unk_1fd0.y = 0.0f;
-	unk_1fd0.z = 0.0f;
+	unk_1fd0 = 2000.0f;
+	unk_1fd4 = 0.0f;
+	unk_1fd8 = 0.0f;
 	unk_1f5c = false;
 	enableDynamicPointLight = false;
 	unk_1f5e = false;
@@ -207,9 +208,9 @@ cMagMeshObject::cMagMeshObject() {
 	cullState = (CULLSTATE)2;
 	shadowType = 0;
 	unk_12d4 = 0;
-	unk_2624.x = 0.0f;
-	unk_2624.y = 0.0f;
-	unk_2624.z = 0.0f;
+	lod = NULL;
+	unk_2628 = NULL;
+	unk_262c = NULL;
 	unk_2630 = false;
 	unk_ed4 = 0.0f;
 	unk_16a2 = false;
@@ -238,9 +239,9 @@ cMagMeshObject::~cMagMeshObject() {
 /* 100531E0-100534BB 002DB	*/
 int cMagMeshObject::Is3dmFile(char* param_1) {
 	std::ifstream fileStream;
-	fileStream.open(param_1);
+	fileStream.open(param_1, std::ios::binary | std::ios::in);
 
-	if (!fileStream.good()){
+	if (fileStream.fail()){
 		CrashLog("Can`t open file: %s", param_1);
 		return -1;
 	}
@@ -260,6 +261,7 @@ int cMagMeshObject::Is3dmFile(char* param_1) {
 		unk_ed1 = true;
 		return 1;
 	}
+	
 	fileStream.close();
 	return -1;
 }
@@ -1367,14 +1369,41 @@ D3DXMATRIX cMagMeshObject::GetBoneWorldRotateMatrix(char* param_1) {
 
 /* 10056DA0-10056EBB 0011B	*/
 void cMagMeshObject::OnUpdateLink() {
+	if (unk_12d8.empty()) {
+		return;
+	}
+	D3DXMATRIX local_40;
+	D3DXMatrixIdentity(&local_40);
+	for (int index = 0; index < unk_12d8.size(); index++) {
+		if (!GetBoneMatrix(unk_12d8[index].boneName, local_40)) {
+			continue;
+		}
+		unk_12d8[index].bone->EnableForceTransform(true);
+		unk_12d8[index].bone->SetForceTransformMatrix(local_40);
+	}
 }
 
 /* 10056EC0-10057143 00283	*/
 void cMagMeshObject::LinkToBone(cMagMeshObject* param_1, char* param_2) {
+	BoneStruct bone;
+	bone.bone = param_1;
+	strcpy(bone.boneName, param_2);
+	unk_12d8.push_back(bone);
 }
 
 /* 10057150-1005729A 0014A	*/
 void cMagMeshObject::UnLinkFromBone(cMagMeshObject* param_1) {
+	if (unk_12d8.empty()) {
+		return;
+	}
+	for (int index = 0; index < unk_12d8.size(); index++) {
+		if (stricmp(unk_12d8[index].bone->GetObjectName(), param_1->GetObjectName()) == 0) {
+			unk_12d8[index].bone->EnableForceTransform(false);
+			unk_12d8[index].bone->SetPosition(GetBoneWorldPosition(unk_12d8[index].boneName));
+			unk_12d8.erase(unk_12d8.begin()+index);
+			return;
+		}
+	}
 }
 
 /* 100572A0-100572A7 00007	*/
@@ -1404,24 +1433,42 @@ uchar cMagMeshObject::GetCollisionType() {
 
 /* 100572F0-10057376 00086	*/
 void cMagMeshObject::EnablePhysics(bool param_1) {
-	if (GetGame() == NULL) {
-		physics = param_1;
-		return;
+	if (GetGame() != NULL) {
+		if (param_1) {
+			if (!physics) {
+				physics = param_1;
+				if (collision) {
+					return;
+				}
+				cMagGameObject::GetGame()->AddCollisionObject(this);
+			}
+		} else if (collision || physics) {
+			cMagGameObject::GetGame()->RemoveCollisionObject(this);
+			physics = param_1;
+			return;
+		}
 	}
 	physics = param_1;
-
-	if (!param_1 && (collision || physics)) {
-		GetGame()->RemoveCollisionObject(this);
-		return;
-	}
-
-	if (param_1 && !physics && !collision) {
-		GetGame()->AddCollisionObject(this);
-	}
 }
 
 /* 10057380-10057406 00086	*/
 void cMagMeshObject::EnableCollision(bool param_1) {
+	if (GetGame() != NULL) {
+		if (param_1) {
+			if (!physics) {
+				collision = param_1;
+				if (collision) {
+					return;
+				}
+				cMagGameObject::GetGame()->AddCollisionObject(this);
+			}
+		} else if (collision || physics) {
+			cMagGameObject::GetGame()->RemoveCollisionObject(this);
+			collision = param_1;
+			return;
+		}
+	}
+	collision = param_1;
 }
 
 /* 10057410-1005741D 0000D	*/
@@ -1620,6 +1667,25 @@ D3DXVECTOR3 cMagMeshObject::GetPosPathBMP() {
 
 /* 10057A40-10057BBC 0017C	*/
 void cMagMeshObject::CreatePathBillboard() {
+	billboard = new cMagBillboard();
+	char local_d4[200];
+	ZeroMemory(local_d4, sizeof(local_d4));
+	if (GetGame() != NULL) {
+		sprintf(local_d4, "%s\\paths\\%d.bmp", GetGame()->GetLevelDirectory(), GetObjectID());
+		D3DXVECTOR3 DStack_e0, DStack_ec;
+		GetPathBMPMinMax(DStack_e0, DStack_ec);
+		billboard->unk_d98 = fabs(DStack_ec.x-DStack_e0.x);
+		billboard->unk_d9c = fabs(DStack_ec.z-DStack_e0.z);
+		D3DXVECTOR3 posPath = GetPosPathBMP();
+		billboard->unk_da0 = posPath;
+		billboard->AddFrame(local_d4, 0.01f);
+		billboard->SetUpMode(true);
+		CreateObject(billboard);
+		billboard->EnableRendering(true);
+		billboard->unk_d94 = false;
+		billboard->SetAlpha(9, 7);
+	}
+
 }
 
 /* 10057BC0-10057BEE 0002E	*/
@@ -1657,6 +1723,7 @@ cMagMeshObject::PatrolPoint const * cMagMeshObject::GetPatrolPointAt(int param_1
 
 /* 10057F00-10057F87 00087	*/
 void cMagMeshObject::DeletePatrols() {
+	patrolPoints.clear();
 }
 
 /* 10057F90-10057FB7 00027	*/
@@ -1673,6 +1740,9 @@ bool cMagMeshObject::LoadVideo(char* param_1) {
 
 /* 10058080-1005809A 0001A	*/
 void cMagMeshObject::PlayVideo() {
+	if (unk_177c && videoPlayer != NULL) {
+		videoPlayer->Play();
+	}
 }
 
 /* 100580A0-100581BD 0011D	*/
@@ -2106,8 +2176,11 @@ uchar cMagMeshObject::GetPhysicsType() {
 }
 
 /* 1005A420-1005A489 00069	*/
-uint cMagMeshObject::TraceScene(uint param_1, uint param_2, uint param_3, uint param_4, uint param_5, uint param_6, uint param_7, uint param_8, uint param_9) {
-	return 0;
+bool cMagMeshObject::TraceScene(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2, D3DXVECTOR3* const param_3, float* param_4, D3DXVECTOR3* param_5) {
+	if (GetGame() == NULL) {
+		return false;
+	}
+	return GetGame()->collision->FUN100A6300(param_1, param_2, param_3, param_4, param_5);
 }
 
 /* 1005A490-1005A49D 0000D	*/
@@ -2149,13 +2222,19 @@ uchar cMagMeshObject::GetEllipsoid(uint* param_1) {
 }
 
 /* 1005A680-1005A6AD 0002D	*/
-bool cMagMeshObject::TraceObjects(uchar param_1) {
-	return 0;
+bool cMagMeshObject::TraceObjects(Collision* param_1) {
+	if (GetGame() == NULL) {
+		return false;
+	}
+	return GetGame()->collision->FUN100A80A0(param_1);
 }
 
 /* 1005A6B0-1005A6DD 0002D	*/
-bool cMagMeshObject::TraceScene(uchar param_1) {
-	return 0;
+bool cMagMeshObject::TraceScene(Collision* param_1) {
+	if (GetGame() == NULL) {
+		return false;
+	}
+	return GetGame()->collision->FUN100A80D0(param_1);
 }
 
 /* 1005A6E0-1005A749 00069	*/
@@ -2494,15 +2573,82 @@ void cMagMeshObject::CreateBumpAndEnviromentTexture() {
 
 /* 1005B5A0-1005B9A8 00408	*/
 void cMagMeshObject::LoadLod(char* param_1) {
+	char local_1a8[410];
+	ZeroMemory(local_1a8, sizeof(local_1a8));
+	strncpy(local_1a8, param_1, strlen(param_1)-3);
+	strcat(local_1a8, "ini");
+	std::ifstream local_338;
+	local_338.open(local_1a8);
+
+	if (local_338.fail()) {
+		return;
+	}
+
+	char local_2a8[256];
+	while (!local_338.eof()) {
+		ZeroMemory(local_2a8, sizeof(local_2a8));
+		local_338.getline(local_2a8, 255);
+		char* temp = strtok(local_2a8, ":");
+		if (temp == NULL) {
+			continue;
+		}
+		if (stricmp(temp, "Lod1") == 0) {
+			temp = strtok(NULL, ":");
+			if (temp != NULL) {
+				if (GetGame() == NULL || GetGame()->jvmData == NULL) {
+					lod = new cMagMeshObject();
+				} else {
+					lod = (cMagMeshObject*) GetGame()->jvmData->CreateObject("MeshObject");
+				}
+				lod->LoadMesh(temp);
+				lod->unk_2630 = true;
+				lod->SetAlphaGreatereQual(100);
+				lod->SetGame(GetGame());
+				CreateObject(lod);
+			}
+		} 
+		if (stricmp(temp, "Lod2") == 0) {
+			temp = strtok(NULL, ":");
+		}
+		
+		if (stricmp(temp, "Lod3") == 0) {
+			strtok(NULL, ":");
+		}
+	}	
+	local_338.close();
 }
 
 /* 1005B9B0-1005BB33 00183	*/
 bool cMagMeshObject::_TestDistanceLOD(float param_1) {
-	return 0;
+	if (lod == NULL) {
+		return false;
+	}
+	D3DXVECTOR3 local_58(0.0f, 0.0f, 0.0f);
+	if (cMagEngineMgr::getInstance()->gameObject->GetActiveCamera() != NULL) {
+		local_58 = cMagEngineMgr::getInstance()->gameObject->GetActiveCamera()->GetPosition();
+	}
+
+	float length = D3DXVec3Length(&(local_58 - GetPosition()));
+	unk_2630 = false;
+	if (unk_1fd0 >= length) {
+		unk_2630 = true;
+		lod->SetPosition(GetPosition());
+		lod->SetRotateMatrix(GetRotateMatrix());
+		lod->SetScale(GetScale());
+		lod->unk_2630 = false;
+	} else {
+		lod->unk_2630 = true;
+	}
+	return true;
 }
 
 /* 1005BB40-1005BF7E 0043E	*/
 bool cMagMeshObject::CreateNavigationPath(char* param_1) {
+	std::ifstream local_9c(param_1, std::ios::binary);
+
+	if (local_9c.fail()) {
+		return false;
+	}
 	return 0;
 }
 
