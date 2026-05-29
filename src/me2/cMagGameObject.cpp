@@ -1137,7 +1137,7 @@ void cMagGameObject::DrawTexts(char const* param_1, float param_2, float param_3
 void cMagGameObject::DrawObjectName() {
 	for(std::vector<cMagKernel*>::iterator mit = meshObjects.begin(); mit != meshObjects.end(); mit++) {
 		cMagMeshObject* mesh = (cMagMeshObject*) *mit;
-		if (mesh != NULL && !mesh->unk_113e){
+		if (mesh != NULL && !mesh->unk_133e){
 			D3DXVECTOR3 position = mesh->GetPosition();
 			char* objectName = mesh->GetObjectName();
 			if (objectName == NULL) {

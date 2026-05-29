@@ -5,6 +5,10 @@
 
 class MagProfile {
 public:
+    static MagProfile* getInstance() {
+		return instance;
+	}
+
 	/* 10005AE0 */ MagProfile(MagProfile* param_1);
 	/* 10005D20 */ MagProfile* operator=(MagProfile* param_1);
 	/* 10006120 */ MagProfile* scalar_destructor(uchar param_1);
@@ -22,6 +26,11 @@ public:
 	/* 1008D1B0 */ void ProfileLoadBegin(char* param_1);
 	/* 1008D210 */ void ProfileLoadEnd();
 	/* 1008D2E0 */ void ProfileDumpLoadResultToFile();
+
+private:
+	static MagProfile* instance;
 };
+
+MagProfile* MagProfile::instance = NULL;
 
 #endif

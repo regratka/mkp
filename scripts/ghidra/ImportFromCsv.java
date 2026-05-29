@@ -72,7 +72,7 @@ public class ImportFromCsv extends GhidraScript
                 printf("No function exist for %s at %x - creating\n", name, addr.getOffset());
                 fun = getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range, SourceType.USER_DEFINED);
             }
-            //  else if( !fun.getBody().equals(range)) {
+            //  else if(!fun.getBody().contains(range)) { // Fixes function boundaries with try-catch
             //     printf("Updating the body scope for %s from %s to %s\n", name, fun.getBody().toString(), range.toString());
             //     Iterator<Function> overFuns = getCurrentProgram().getFunctionManager().getFunctionsOverlapping(range);
             //     while(overFuns.hasNext()) {
@@ -80,6 +80,7 @@ public class ImportFromCsv extends GhidraScript
             //         getCurrentProgram().getFunctionManager().removeFunction(overlap.getEntryPoint());
             //     }
             //     fun = getCurrentProgram().getFunctionManager().createFunction(funName, curNamespace, addr, range, SourceType.USER_DEFINED);
+            //     printf("Created function %s at adresses %s\n", name, fun.getBody().toString());
             // }
             fun.setParentNamespace(curNamespace);
             try

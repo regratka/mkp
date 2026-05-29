@@ -18,10 +18,10 @@ public:
 	/* 1005D380 */ void CreateColTypeTexIni(char* param_1);
 	/* 1005D670 */ void EnableAnimTexture(bool param_1);
 	/* 1005D680 */ void SetShadowType(int param_1);
-	/* 1005D6A0 */ void RenderMesh(uchar param_1);
+	/* 1005D6A0 */ void RenderMesh(D3DXMATRIX param_1);
 	/* 1005D700 */ void EnableRenderShadow(bool param_1);
 	/* 1005D710 */ bool EnableRenderShadow();
-	/* 1005D720 */ void OnRenderShadow();
+	/* 1005D720 */ void OnRenderShadow(D3DXMATRIX param_1);
 	/* 1005D7D0 */ void SetCullMode(int param_1);
 	/* 1005D850 */ void SetAlpha(int param_1);
 	/* 1005D8E0 */ uint* GetHelperPosition(uint* param_1, uchar* param_2);

@@ -36,7 +36,7 @@ void CCamera::SetPosition(D3DXVECTOR3 param_1) {
 }
 
 /* 1005F710-1005F731 00021	*/
-D3DXVECTOR3* CCamera::GetPosition(D3DXVECTOR3* param_1) {
+D3DXVECTOR3 CCamera::GetPosition() {
 	return 0;
 }
 

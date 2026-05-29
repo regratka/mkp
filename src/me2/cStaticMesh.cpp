@@ -70,11 +70,11 @@ void cStaticMesh::ComputeBoundingBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2)
 }
 
 /* 10040C80-10040FF6 00376	*/
-void cStaticMesh::Update(uchar param_1) {
+void cStaticMesh::Update(D3DXMATRIX param_1) {
 }
 
 /* 10041000-1004106F 0006F	*/
-void cStaticMesh::Render(uchar param_1, uchar param_2, uchar param_3, uchar param_4, uchar param_5, uchar param_6, uchar param_7, uchar param_8, uchar param_9, uint param_10) {
+void cStaticMesh::Render(D3DXMATRIX param_1, IDirect3DTexture8* param_2) {
 }
 
 /* 10041070-100416D4 00664	*/
@@ -101,6 +101,6 @@ bool cStaticMesh::SetMultiple(float param_1) {
 }
 
 /* 10041DC0-10041DCD 0000D	*/
-void cStaticMesh::SetAnimTextureLightMap(uchar param_1) {
+void cStaticMesh::SetAnimTextureLightMap(IDirect3DTexture8* param_1) {
 }
 

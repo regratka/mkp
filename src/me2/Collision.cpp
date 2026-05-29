@@ -1,5 +1,7 @@
 #include "Collision.h"
 
+#include "cMagMeshObject.h"
+
 /* 10011000-10011016 00016	*/
 uchar Collision::operator=(uchar param_1) {
 	return 0;
