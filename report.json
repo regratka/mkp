@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 18.430925,
+    "fuzzy_match_percent": 18.66655,
     "total_code": "671217",
-    "matched_code": "63198",
-    "matched_code_percent": 9.415435,
+    "matched_code": "64480",
+    "matched_code_percent": 9.606431,
     "matched_data_percent": 100.0,
     "total_functions": 3073,
-    "matched_functions": 669,
-    "matched_functions_percent": 21.770256,
+    "matched_functions": 692,
+    "matched_functions_percent": 22.518711,
     "complete_code": "9123",
     "complete_code_percent": 1.359173,
     "complete_data_percent": 100.0,
@@ -308,14 +308,14 @@
     {
       "name": "me2/CCamera",
       "measures": {
-        "fuzzy_match_percent": 3.4356256,
+        "fuzzy_match_percent": 40.95713,
         "total_code": "4215",
-        "matched_code": "11",
-        "matched_code_percent": 0.2609727,
+        "matched_code": "1293",
+        "matched_code_percent": 30.676157,
         "matched_data_percent": 100.0,
         "total_functions": 30,
-        "matched_functions": 1,
-        "matched_functions_percent": 3.3333335,
+        "matched_functions": 24,
+        "matched_functions_percent": 80.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -323,7 +323,7 @@
         {
           "name": ".text",
           "size": "4215",
-          "fuzzy_match_percent": 3.4356256,
+          "fuzzy_match_percent": 40.95713,
           "metadata": {}
         }
       ],
@@ -331,6 +331,7 @@
         {
           "name": "??0CCamera@@QAE@ABV0@@Z",
           "size": "172",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CCamera::CCamera(class CCamera const &)"
           },
@@ -339,21 +340,25 @@
         {
           "name": "??4CCamera@@QAEAAV0@ABV0@@Z",
           "size": "166",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CCamera & __thiscall CCamera::operator=(class CCamera const &)"
           },
           "address": "172"
         },
         {
-          "name": "CCamera::scalar_destructor",
+          "name": "??_ECCamera@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CCamera::`vector deleting destructor'(unsigned int)"
+          },
           "address": "338"
         },
         {
           "name": "??0CCamera@@QAE@XZ",
           "size": "374",
-          "fuzzy_match_percent": 9.846154,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CCamera::CCamera(void)"
           },
@@ -371,7 +376,7 @@
         {
           "name": "?SetFOV@CCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetFOV(float)"
           },
@@ -380,7 +385,7 @@
         {
           "name": "?GetFOV@CCamera@@QAEMXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CCamera::GetFOV(void)"
           },
@@ -389,7 +394,7 @@
         {
           "name": "?SetPosition@CCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "33",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetPosition(struct D3DXVECTOR3)"
           },
@@ -398,7 +403,7 @@
         {
           "name": "?GetPosition@CCamera@@UAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
-          "fuzzy_match_percent": 30.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual struct D3DXVECTOR3 __thiscall CCamera::GetPosition(void)"
           },
@@ -407,7 +412,7 @@
         {
           "name": "?SetNearPlane@CCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetNearPlane(float)"
           },
@@ -416,7 +421,7 @@
         {
           "name": "?SetFarPlane@CCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetFarPlane(float)"
           },
@@ -425,7 +430,7 @@
         {
           "name": "?GetNearPlane@CCamera@@QAEMXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CCamera::GetNearPlane(void)"
           },
@@ -434,7 +439,7 @@
         {
           "name": "?SetAspect@CCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetAspect(float)"
           },
@@ -443,7 +448,7 @@
         {
           "name": "?GetAspect@CCamera@@QAEMXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CCamera::GetAspect(void)"
           },
@@ -452,7 +457,7 @@
         {
           "name": "?GetFarPlane@CCamera@@QAEMXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CCamera::GetFarPlane(void)"
           },
@@ -461,7 +466,7 @@
         {
           "name": "?SetDirection@CCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "1204",
-          "fuzzy_match_percent": 0.32258064,
+          "fuzzy_match_percent": 34.667744,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetDirection(struct D3DXVECTOR3)"
           },
@@ -470,6 +475,7 @@
         {
           "name": "?GetDirection@CCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCamera::GetDirection(void)"
           },
@@ -478,6 +484,7 @@
         {
           "name": "?GetRight@CCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCamera::GetRight(void)"
           },
@@ -486,6 +493,7 @@
         {
           "name": "?GetUp@CCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCamera::GetUp(void)"
           },
@@ -494,7 +502,7 @@
         {
           "name": "?UpdateAspectByWindowSize@CCamera@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::UpdateAspectByWindowSize(bool)"
           },
@@ -512,7 +520,7 @@
         {
           "name": "?UpdateWindowSize@CCamera@@QAEXHH@Z",
           "size": "27",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::UpdateWindowSize(int, int)"
           },
@@ -521,7 +529,7 @@
         {
           "name": "?GetID@CCamera@@QAEHXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall CCamera::GetID(void)"
           },
@@ -539,7 +547,7 @@
         {
           "name": "?Rotate@CCamera@@QAEXUD3DXVECTOR3@@M_N@Z",
           "size": "171",
-          "fuzzy_match_percent": 1.9230769,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::Rotate(struct D3DXVECTOR3, float, bool)"
           },
@@ -557,7 +565,7 @@
         {
           "name": "?SetFreeRotationMatrix@CCamera@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetFreeRotationMatrix(bool)"
           },
@@ -566,7 +574,7 @@
         {
           "name": "?GetFreeRotationMatrix@CCamera@@QAE_NXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CCamera::GetFreeRotationMatrix(void)"
           },
@@ -29893,14 +29901,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 23.665644,
+        "fuzzy_match_percent": 23.973408,
         "total_code": "513880",
-        "matched_code": "61512",
-        "matched_code_percent": 11.97011,
+        "matched_code": "62794",
+        "matched_code_percent": 12.2195835,
         "matched_data_percent": 100.0,
         "total_functions": 2203,
-        "matched_functions": 623,
-        "matched_functions_percent": 28.279617,
+        "matched_functions": 646,
+        "matched_functions_percent": 29.32365,
         "complete_code": "7437",
         "complete_code_percent": 1.447225,
         "complete_data_percent": 100.0,

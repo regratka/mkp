@@ -203,7 +203,7 @@
 ??4pgTerrainPatchMorphSW@@QAEAAV0@ABV0@@Z;pgTerrainPatchMorphSW::operator=;0x1000b9e0;0x442;__thiscall;;pgTerrainPatchMorphSW*;pgTerrainPatchMorphSW*;pgTerrainPatchMorphSW*
 ??0CCamera@@QAE@ABV0@@Z;CCamera::CCamera;0x1000be30;0xac;__thiscall;;uchar;CCamera*;CCamera*
 ??4CCamera@@QAEAAV0@ABV0@@Z;CCamera::operator=;0x1000bee0;0xa6;__thiscall;;CCamera*;CCamera*;CCamera*
-;CCamera::scalar_destructor;0x1000bf90;0x57;__thiscall;;CCamera*;CCamera*;uchar
+??_ECCamera@@UAEPAXI@Z;CCamera::scalar_destructor;0x1000bf90;0x57;__thiscall;;CCamera*;CCamera*;uchar
 ??0CFreeCamera@@QAE@ABV0@@Z;CFreeCamera::CFreeCamera;0x1000bff0;0x12a;__thiscall;;uchar;CFreeCamera*;CFreeCamera*
 ??4CFreeCamera@@QAEAAV0@ABV0@@Z;CFreeCamera::operator=;0x1000c120;0x11e;__thiscall;;CFreeCamera*;CFreeCamera*;CFreeCamera*
 ;CFreeCamera::scalar_destructor;0x1000c240;0x57;__thiscall;;CFreeCamera*;CFreeCamera*;uchar
@@ -2010,7 +2010,7 @@
 ?GetFarPlane@CCamera@@QAEMXZ;CCamera::GetFarPlane;0x1005f790;0x7;__thiscall;;float;CCamera*
 ?SetDirection@CCamera@@QAEXUD3DXVECTOR3@@@Z;CCamera::SetDirection;0x1005f7a0;0x4b4;__thiscall;;void;CCamera*;D3DXVECTOR3
 ?GetDirection@CCamera@@QAE?AUD3DXVECTOR3@@XZ;CCamera::GetDirection;0x1005fc60;0x21;__thiscall;;D3DXVECTOR3*;CCamera*;D3DXVECTOR3*
-?GetRight@CCamera@@QAE?AUD3DXVECTOR3@@XZ;CCamera::GetRight;0x1005fc90;0x21;__thiscall;;D3DXVECTOR3*;CCamera*;D3DXVECTOR3*
+?GetRight@CCamera@@QAE?AUD3DXVECTOR3@@XZ;CCamera::GetRight;0x1005fc90;0x21;__thiscall;;D3DXVECTOR3;CCamera*
 ?GetUp@CCamera@@QAE?AUD3DXVECTOR3@@XZ;CCamera::GetUp;0x1005fcc0;0x21;__thiscall;;D3DXVECTOR3*;CCamera*;D3DXVECTOR3*
 ?UpdateAspectByWindowSize@CCamera@@QAEX_N@Z;CCamera::UpdateAspectByWindowSize;0x1005fcf0;0xd;__thiscall;;void;CCamera*;bool
 ?OnRender@CCamera@@UAEXXZ;CCamera::OnRender;0x1005fd00;0x9a;__thiscall;;void;CCamera*

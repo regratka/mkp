@@ -6,13 +6,10 @@
 
 #include "cMagGameObject.h"
 
-class CCamera : public cMagGameObject {
+class DLLEXPORT CCamera : public cMagGameObject {
 public:
-	/* 1000BE30 */ CCamera(CCamera* param_1);
-	/* 1000BEE0 */ CCamera* operator=(CCamera* param_1);
-	/* 1000BF90 */ CCamera* scalar_destructor(uchar param_1);
 	/* 1005F530 */ CCamera();
-	/* 1005F6B0 */ ~CCamera();
+	/* 1005F6B0 */ virtual ~CCamera();
 	/* 1005F6C0 */ void SetFOV(float param_1);
 	/* 1005F6D0 */ float GetFOV();
 	/* 1005F6E0 */ void SetPosition(D3DXVECTOR3 param_1);
@@ -24,9 +21,9 @@ public:
 	/* 1005F780 */ float GetAspect();
 	/* 1005F790 */ float GetFarPlane();
 	/* 1005F7A0 */ void SetDirection(D3DXVECTOR3 param_1);
-	/* 1005FC60 */ D3DXVECTOR3* GetDirection(D3DXVECTOR3* param_1);
-	/* 1005FC90 */ D3DXVECTOR3* GetRight(D3DXVECTOR3* param_1);
-	/* 1005FCC0 */ D3DXVECTOR3* GetUp(D3DXVECTOR3* param_1);
+	/* 1005FC60 */ D3DXVECTOR3 GetDirection();
+	/* 1005FC90 */ D3DXVECTOR3 GetRight();
+	/* 1005FCC0 */ D3DXVECTOR3 GetUp();
 	/* 1005FCF0 */ void UpdateAspectByWindowSize(bool param_1);
 	/* 1005FD00 */ void OnRender();
 	/* 1005FDA0 */ void UpdateWindowSize(int param_1, int param_2);
@@ -45,11 +42,14 @@ private:
 	/* 0xd18 */ float nearPlane;
 	/* 0xd1c */ float farPlane;
 	/* 0xd20 */ float aspectRatio;
-	/* 0xd24 */ D3DMATRIX cameraVectors;
-	/* 0xd64 */ D3DMATRIX viewMatrix;
-	/* 0xda4 */ D3DMATRIX projectionMatrix;
+	/* 0xd24 */ D3DXMATRIX cameraVectors;
+	/* 0xd64 */ D3DXMATRIX viewMatrix;
+	/* 0xda4 */ D3DXMATRIX projectionMatrix;
 	/* 0xde4 */ bool updateAspectByWindowSize;
 	/* 0xde8 */ int cameraID;
+
+private:
+	/* 1018C5C4 */ static int m_iIDCounter;
 };
 
 STATIC_ASSERT(sizeof(CCamera) == 0xdec);
