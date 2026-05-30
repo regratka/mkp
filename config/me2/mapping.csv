@@ -1851,7 +1851,7 @@
 ?SetEllipsoid@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetEllipsoid;0x1005a610;0x31;__thiscall;;void;cMagMeshObject*;uint;uint;uint
 ?GetEllipsoid@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetEllipsoid;0x1005a650;0x2a;__thiscall;;uchar;cMagMeshObject*;uint*
 ?TraceObjects@cMagMeshObject@@QAE_NPAVCollision@@@Z;cMagMeshObject::TraceObjects;0x1005a680;0x2d;__thiscall;;bool;cMagMeshObject*;Collision*
-?TraceScene@cMagMeshObject@@QAE_NPAVCollision@@@Z;cMagMeshOgbject::TraceScene;0x1005a6b0;0x2d;__thiscall;;bool;cMagMeshObject*;Collision*
+?TraceScene@cMagMeshObject@@QAE_NPAVCollision@@@Z;cMagMeshObject::TraceScene;0x1005a6b0;0x2d;__thiscall;;bool;cMagMeshObject*;Collision*
 ?CreateMagQuad@cMagMeshObject@@QAEXXZ;cMagMeshObject::CreateMagQuad;0x1005a6e0;0x69;__thiscall;;void;cMagMeshObject*
 ?SetTextureMagQuad@cMagMeshObject@@QAEXPAD@Z;cMagMeshObject::SetTextureMagQuad;0x1005a750;0x1d;__thiscall;;void;cMagMeshObject*;char*
 ?RenderMagQuad@cMagMeshObject@@QAEXXZ;cMagMeshObject::RenderMagQuad;0x1005a770;0x116;__thiscall;;void;cMagMeshObject*
