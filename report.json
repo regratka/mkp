@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 18.66655,
+    "fuzzy_match_percent": 19.016994,
     "total_code": "671217",
-    "matched_code": "64480",
-    "matched_code_percent": 9.606431,
+    "matched_code": "64612",
+    "matched_code_percent": 9.626098,
     "matched_data_percent": 100.0,
     "total_functions": 3073,
-    "matched_functions": 692,
-    "matched_functions_percent": 22.518711,
+    "matched_functions": 694,
+    "matched_functions_percent": 22.583794,
     "complete_code": "9123",
     "complete_code_percent": 1.359173,
     "complete_data_percent": 100.0,
@@ -308,14 +308,14 @@
     {
       "name": "me2/CCamera",
       "measures": {
-        "fuzzy_match_percent": 40.95713,
+        "fuzzy_match_percent": 96.763885,
         "total_code": "4215",
-        "matched_code": "1293",
-        "matched_code_percent": 30.676157,
+        "matched_code": "1425",
+        "matched_code_percent": 33.80783,
         "matched_data_percent": 100.0,
         "total_functions": 30,
-        "matched_functions": 24,
-        "matched_functions_percent": 80.0,
+        "matched_functions": 26,
+        "matched_functions_percent": 86.666664,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -323,7 +323,7 @@
         {
           "name": ".text",
           "size": "4215",
-          "fuzzy_match_percent": 40.95713,
+          "fuzzy_match_percent": 96.763885,
           "metadata": {}
         }
       ],
@@ -466,7 +466,7 @@
         {
           "name": "?SetDirection@CCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "1204",
-          "fuzzy_match_percent": 34.667744,
+          "fuzzy_match_percent": 93.3871,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetDirection(struct D3DXVECTOR3)"
           },
@@ -511,7 +511,7 @@
         {
           "name": "?OnRender@CCamera@@UAEXXZ",
           "size": "154",
-          "fuzzy_match_percent": 2.0833333,
+          "fuzzy_match_percent": 89.583336,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCamera::OnRender(void)"
           },
@@ -538,7 +538,7 @@
         {
           "name": "?OnActivateView@CCamera@@UAEXXZ",
           "size": "68",
-          "fuzzy_match_percent": 4.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCamera::OnActivateView(void)"
           },
@@ -556,7 +556,7 @@
         {
           "name": "?OnDeactivateView@CCamera@@UAEXXZ",
           "size": "64",
-          "fuzzy_match_percent": 4.347826,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCamera::OnDeactivateView(void)"
           },
@@ -583,7 +583,7 @@
         {
           "name": "?SetUp@CCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "724",
-          "fuzzy_match_percent": 0.5050505,
+          "fuzzy_match_percent": 97.459595,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetUp(struct D3DXVECTOR3)"
           },
@@ -592,7 +592,7 @@
         {
           "name": "?SetRight@CCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "708",
-          "fuzzy_match_percent": 0.5050505,
+          "fuzzy_match_percent": 96.84344,
           "metadata": {
             "demangled_name": "public: void __thiscall CCamera::SetRight(struct D3DXVECTOR3)"
           },
@@ -29901,14 +29901,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 23.973408,
+        "fuzzy_match_percent": 24.43115,
         "total_code": "513880",
-        "matched_code": "62794",
-        "matched_code_percent": 12.2195835,
+        "matched_code": "62926",
+        "matched_code_percent": 12.245272,
         "matched_data_percent": 100.0,
         "total_functions": 2203,
-        "matched_functions": 646,
-        "matched_functions_percent": 29.32365,
+        "matched_functions": 648,
+        "matched_functions_percent": 29.414436,
         "complete_code": "7437",
         "complete_code_percent": 1.447225,
         "complete_data_percent": 100.0,
