@@ -83,16 +83,16 @@ void CCamera::SetDirection(D3DXVECTOR3 param_1) {
 		cameraVectors(2,1) = param_1.y;
 		cameraVectors(2,0) = param_1.x;
 		cameraVectors(2,2) = param_1.z;
-		D3DXVECTOR3 Dstack_64(0.0f, 1.0f, 0.0f);
 		D3DXVECTOR3 Dstack_70;
-		if (param_1 == D3DXVECTOR3(0.0f, 1.0f, 0.0f) || param_1 == D3DXVECTOR3(0.0f, -1.0f, 0.0f)) {
+
+		D3DXVECTOR3 Dstack_64(0.0f, 1.0f, 0.0f);
+		if (param_1 == Dstack_64 || param_1 == D3DXVECTOR3(0.0f, -1.0f, 0.0f)) {
 			Dstack_70 = GetRight();
 		} else {
-			Dstack_70 =  param_1 - D3DXVECTOR3(0.0f,0.0f,.0f);
+			Dstack_70 =  param_1 - D3DXVECTOR3(0.0f, 0.0f, 0.0f);
 			D3DXVec3Normalize(&Dstack_70, &Dstack_70);
 		}
-		D3DXVec3Cross(&Dstack_64, &Dstack_70, &param_1);
-		D3DXVECTOR3 Dstack_58 = Dstack_64;
+		D3DXVECTOR3 Dstack_58 = *D3DXVec3Cross(&Dstack_64, &param_1, &Dstack_70);
 		D3DXVec3Normalize(&Dstack_64, &Dstack_64);
 		cameraVectors(0,0) = Dstack_70.x;
 		cameraVectors(0,1) = Dstack_70.y;
@@ -109,12 +109,12 @@ void CCamera::SetDirection(D3DXVECTOR3 param_1) {
 
 	if (param_1 == -1 * GetDirection()) {
 		D3DXVECTOR3 Dstack_64 = -1 * GetRight();
-		cameraVectors(0, 0) = Dstack_64.x; 
-		cameraVectors(0, 1) = Dstack_64.y; 
-		cameraVectors(0, 2) = Dstack_64.z;
 		cameraVectors(2, 0) = param_1.x;
 		cameraVectors(2, 1) = param_1.y;
 		cameraVectors(2, 2) = param_1.z;
+		cameraVectors(0, 0) = Dstack_64.x; 
+		cameraVectors(0, 1) = Dstack_64.y; 
+		cameraVectors(0, 2) = Dstack_64.z;
 		return;
 	}
 
@@ -159,6 +159,7 @@ void CCamera::OnRender() {
 	if (updateAspectByWindowSize) {
 		aspectRatio = (float)cMagEngineMgr::getInstance()->gameObject->windowWidth / cMagEngineMgr::getInstance()->gameObject->windowHeight;
 	}
+
 	float farPlaneL = farPlane;
 	float nearPlaneL = nearPlane;
 	float aspectRatioL = aspectRatio;
@@ -250,12 +251,13 @@ void CCamera::SetUp(D3DXVECTOR3 param_1) {
 
 	if (param_1 == -1 * GetUp()) {
 		D3DXVECTOR3 Dstack_58 = -1 * GetRight();
-		cameraVectors(0, 0) = Dstack_58.x; 
-		cameraVectors(0, 1) = Dstack_58.y; 
-		cameraVectors(0, 2) = Dstack_58.z;
 		cameraVectors(1, 0) = param_1.x;
 		cameraVectors(1, 1) = param_1.y;
 		cameraVectors(1, 2) = param_1.z;
+		cameraVectors(0, 0) = Dstack_58.x; 
+		cameraVectors(0, 1) = Dstack_58.y; 
+		cameraVectors(0, 2) = Dstack_58.z;
+
 		return;
 	}
 	
@@ -273,7 +275,7 @@ void CCamera::SetUp(D3DXVECTOR3 param_1) {
 	D3DXMATRIX Dstack_40;
 	Dstack_40 = *D3DXMatrixRotationAxis(&Dstack_40, &Dstack_70, val);
 	D3DXMatrixMultiply(&cameraVectors, &cameraVectors, &Dstack_40);
-	SetPosition(Dstack_70);
+	SetPosition(Dstack_58);
 
 }
 
@@ -286,12 +288,12 @@ void CCamera::SetRight(D3DXVECTOR3 param_1) {
 
 	if (param_1 == -1 * GetRight()) {
 		D3DXVECTOR3 Dstack_58 = -GetDirection();
-		cameraVectors(2, 0) = Dstack_58.x; 
-		cameraVectors(2, 1) = Dstack_58.y; 
-		cameraVectors(2, 2) = Dstack_58.z;
 		cameraVectors(0, 0) = param_1.x;
 		cameraVectors(0, 1) = param_1.y;
 		cameraVectors(0, 2) = param_1.z;
+		cameraVectors(2, 0) = Dstack_58.x; 
+		cameraVectors(2, 1) = Dstack_58.y; 
+		cameraVectors(2, 2) = Dstack_58.z;
 		return;
 	}
 	
@@ -309,6 +311,6 @@ void CCamera::SetRight(D3DXVECTOR3 param_1) {
 	D3DXMATRIX Dstack_40;
 	Dstack_40 = *D3DXMatrixRotationAxis(&Dstack_40, &Dstack_70, val);
 	D3DXMatrixMultiply(&cameraVectors, &cameraVectors, &Dstack_40);
-	SetPosition(Dstack_70);
+	SetPosition(Dstack_58);
 }
 
