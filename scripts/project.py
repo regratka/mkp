@@ -65,10 +65,11 @@ class Function:
         return func
     
 class DecompUnit:
-    def __init__(self, progress_category: str, directory_name: str, import_filename: str):
+    def __init__(self, progress_category: str, directory_name: str, import_filename: str, compiler_flags:str):
         self.progress_category = progress_category
         self.directory_name = directory_name
         self.target_file_name = import_filename
+        self.compiler_flags = compiler_flags
 
         self.configPath = Path("config") / self.directory_name
         self.buildOrig = Path("build") / "orig" / self.directory_name

@@ -5,7 +5,8 @@
 
 #include "CGame.h"
 
-class GameSDK {
+
+class GameSDK : public CGame {
 public:
 	/* 401400 */ GameSDK();
 	/* 401780 */ CGame* scalar_destructor(uchar param_1);
@@ -32,6 +33,11 @@ public:
 	/* 4022C0 */ uchar FUN004022c0(char* param_1);
 	/* 4022E0 */ uchar FUN004022e0(char* param_1);
 	/* 402300 */ uint FUN00402300();
+public:
+	/* 0x19f0 */ uchar field_0x19f0[0x1d76 - 0x19f0];
+	/* 0x1d76 */ char e_input[100];
+	/* 0x1dda */ uchar field_0x1dda[0x278c - 0x1dda];
+
 };
 
 #endif

@@ -8,6 +8,7 @@
 #include "CAlphaObject.h"
 #include "CCamera.h"
 #include "CJVMData.h"
+#include "cMagSector.h"
 
 /* 10051E50-10052DEC 00F9C	*/
 cMagMeshObject::cMagMeshObject() {

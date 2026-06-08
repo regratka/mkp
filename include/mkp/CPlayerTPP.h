@@ -59,6 +59,7 @@ public:
 	/* 408180 */ void* EXP();
 	/* 4081E0 */ void OnActivate();
 	/* 4082F0 */ void OnActivateLevel();
+	/* 408840 */ void* FUN00408840();
 	/* 4094C0 */ uchar OnPlaySoundEnd(int param_1);
 	/* 4094E0 */ uchar OnFrame(uchar param_1);
 	/* 409500 */ uchar OnChangeMovement(uint param_1);
@@ -66,6 +67,7 @@ public:
 	/* 4098B0 */ uchar OnExitYesNo(char* param_1);
 	/* 409AB0 */ uchar OnInputKey(int param_1);
 	/* 409E30 */ uchar OnInputMouse(uchar param_1, uchar param_2, uchar param_3, uint param_4);
+	/* 409FF0 */ void FUN00409ff0(bool param_1);
 	/* 40C760 */ uchar OnLoadChunk(uint param_1, int param_2, uint param_3, void* param_4);
 	/* 40C790 */ uchar Save(int* param_1);
 	/* 40C8A0 */ uchar Load(void* param_1, uint param_2, int param_3);

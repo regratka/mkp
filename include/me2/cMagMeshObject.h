@@ -12,10 +12,11 @@
 #include "ColObject.h"
 #include "cMagFrustumCull.h"
 #include "cMagBillboard.h"
-#include "cMagSector.h"
 #include "cBlob.h"
 #include "CCPUTicker.h"
 #include "Collision.h"
+
+class cMagSector;
 
 struct LINEVERTEX {
 	D3DXVECTOR3 pos;

@@ -13,3 +13,8 @@ uint* cKbSettings::scalar_destructor(uchar param_1) {
 cKbSettings::~cKbSettings() {
 }
 
+/* 410260-410BC9 00969	*/
+int cKbSettings::FUN00410260(char* param_1) {
+	return 0;
+}
+
