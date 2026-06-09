@@ -44,13 +44,14 @@ void CFreeCamera::OnInputMouse(float param_1, float param_2, bool param_3, bool 
 	int centerY = (local_10.bottom - local_10.top) / 2 + local_10.top;
 	POINT cursorPoint;
 	GetCursorPos(&cursorPoint);
-	Rotate(D3DXVECTOR3(0.0f, 1.0f, 0.0f), (cursorPoint.x - centerX) * freeCameraSpeed, false);
-	Rotate(GetRight(), (cursorPoint.y - centerY) * freeCameraSpeed, false);
+	float fVar5 = (cursorPoint.x - centerX) * freeCameraSpeed;
+	float fVar6 = (cursorPoint.y - centerY) * freeCameraSpeed;
+	Rotate(D3DXVECTOR3(0.0f, 1.0f, 0.0f), fVar5, false);
+	Rotate(GetRight(), fVar6, false);
 	SetCursorPos(centerX, centerY);
-	SHORT sVar2 = GetAsyncKeyState(VK_CONTROL);
-	SHORT sVar3 = GetAsyncKeyState(VK_SHIFT);
-	double speed = sVar3 < 0 ? 1.6 : 1.0;
-	speed *= sVar2 < 0 ? 10 : 1;
+	float speed = freeCameraSpeed;
+	speed *= GetAsyncKeyState(VK_CONTROL) < 0 ? 10 : 1;
+	speed *= GetAsyncKeyState(VK_SHIFT) < 0 ? 1.6 : 1.0;
 	speed *= local_34;
 	D3DXVECTOR3 dirSpeed = speed * GetDirection();
 	if (param_3) {
@@ -68,20 +69,17 @@ void CFreeCamera::OnInputMouse(float param_1, float param_2, bool param_3, bool 
 double CFreeCamera::GetUpdate(int param_1)
 {
 	double time = timeGetTime();
-	if (param_1 == TRUE)
-	{
-		double dVar2 = 0.0;
+	double dVar2 = 0.0;
+	if (param_1 == TRUE){
 		if (unk_df0 != 0.0)
 		{
 			dVar2 = time - unk_df0;
 		}
 		unk_df0 = time;
 		return dVar2 * 0.001;
-	}
-
-	if (param_1 == FALSE)
-	{
-		double dVar2 = 0.0;
+	} 
+	
+	if (param_1 == FALSE){
 		if (unk_df8 != 0.0)
 		{
 			dVar2 = time - unk_df8;
@@ -89,7 +87,7 @@ double CFreeCamera::GetUpdate(int param_1)
 		unk_df8 = time;
 		return dVar2 * 0.001;
 	}
-	return 0;
+	return dVar2;
 }
 
 /* 10062050-100620B6 00066	*/
@@ -99,8 +97,10 @@ void CFreeCamera::OnActivateView()
 	GetUpdate(TRUE);
 	RECT local_10;
 	GetWindowRect(activeWindow, &local_10);
-	int centerY = (local_10.bottom - local_10.top) / 2 + local_10.top;
-	int centerX = (local_10.right - local_10.left) / 2 + local_10.left;
+	uint diffX = (local_10.right - local_10.left) / 2;
+	uint diffY = (local_10.bottom - local_10.top) / 2;
+	int centerX = diffX + local_10.left;
+	int centerY = diffY + local_10.top;
 	SetCursorPos(centerX, centerY);
 	CCamera::OnActivateLevel();
 }
@@ -147,20 +147,22 @@ void CFreeCamera::ReadSettings(char *param_1)
 		char *name = strtok(buffer, " :,");
 		if (stricmp(name, "FreeCameraSpeed") == 0)
 		{
-			char *val = strtok(NULL, " :");
-			if (val != NULL)
+			name = strtok(NULL, " :");
+			if (name != NULL)
 			{
-				freeCameraSpeed = atof(val);
+				freeCameraSpeed = atof(name);
 			}
 		}
+
 		if (stricmp(name, "FreeCameraAngSpeed") == 0)
 		{
-			char *val = strtok(NULL, " :");
-			if (val != NULL)
+			name = strtok(NULL, " :");
+			if (name != NULL)
 			{
-				freeCameraAngSpeed = atof(val);
+				freeCameraAngSpeed = atof(name);
 			}
 		}
+
 		if (stricmp(name, "FreeCameraFOV") == 0)
 		{
 			char *val = strtok(NULL, " :");
