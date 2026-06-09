@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 19.244362,
-    "total_code": "675312",
-    "matched_code": "66376",
-    "matched_code_percent": 9.8289385,
+    "fuzzy_match_percent": 19.308502,
+    "total_code": "671217",
+    "matched_code": "65982",
+    "matched_code_percent": 9.830204,
     "matched_data_percent": 100.0,
-    "total_functions": 3083,
-    "matched_functions": 708,
-    "matched_functions_percent": 22.964645,
-    "complete_code": "9466",
-    "complete_code_percent": 1.4017224,
+    "total_functions": 3073,
+    "matched_functions": 702,
+    "matched_functions_percent": 22.844128,
+    "complete_code": "9123",
+    "complete_code_percent": 1.359173,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 15
+    "complete_units": 14
   },
   "units": [
     {
@@ -1589,14 +1589,14 @@
     {
       "name": "me2/CFreeCamera",
       "measures": {
-        "fuzzy_match_percent": 92.9489,
+        "fuzzy_match_percent": 96.98041,
         "total_code": "2158",
-        "matched_code": "1352",
-        "matched_code_percent": 62.650604,
+        "matched_code": "1439",
+        "matched_code_percent": 66.68211,
         "matched_data_percent": 100.0,
         "total_functions": 12,
-        "matched_functions": 9,
-        "matched_functions_percent": 75.0,
+        "matched_functions": 10,
+        "matched_functions_percent": 83.33333,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1604,7 +1604,7 @@
         {
           "name": ".text",
           "size": "2158",
-          "fuzzy_match_percent": 92.9489,
+          "fuzzy_match_percent": 96.98041,
           "metadata": {}
         }
       ],
@@ -1628,9 +1628,12 @@
           "address": "298"
         },
         {
-          "name": "CFreeCamera::scalar_destructor",
+          "name": "??_ECFreeCamera@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CFreeCamera::`vector deleting destructor'(unsigned int)"
+          },
           "address": "584"
         },
         {
@@ -11805,14 +11808,14 @@
     {
       "name": "me2/cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 73.960495,
+        "fuzzy_match_percent": 73.960304,
         "total_code": "32312",
-        "matched_code": "10777",
-        "matched_code_percent": 33.352936,
+        "matched_code": "10730",
+        "matched_code_percent": 33.207478,
         "matched_data_percent": 100.0,
         "total_functions": 144,
-        "matched_functions": 107,
-        "matched_functions_percent": 74.30556,
+        "matched_functions": 106,
+        "matched_functions_percent": 73.61111,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11820,7 +11823,7 @@
         {
           "name": ".text",
           "size": "32312",
-          "fuzzy_match_percent": 73.960495,
+          "fuzzy_match_percent": 73.960304,
           "metadata": {}
         }
       ],
@@ -12833,7 +12836,7 @@
         {
           "name": "?SetActiveCamera@cMagGameObject@@QAEXPAVCCamera@@@Z",
           "size": "47",
-          "fuzzy_match_percent": 100.0,
+          "fuzzy_match_percent": 99.86667,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetActiveCamera(class CCamera *)"
           },
@@ -14450,14 +14453,14 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 62.624413,
+        "fuzzy_match_percent": 62.412876,
         "total_code": "52000",
-        "matched_code": "11412",
-        "matched_code_percent": 21.946154,
+        "matched_code": "11302",
+        "matched_code_percent": 21.734615,
         "matched_data_percent": 100.0,
         "total_functions": 273,
-        "matched_functions": 197,
-        "matched_functions_percent": 72.16117,
+        "matched_functions": 196,
+        "matched_functions_percent": 71.794876,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14465,7 +14468,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 62.624413,
+          "fuzzy_match_percent": 62.412876,
           "metadata": {}
         }
       ],
@@ -15397,11 +15400,10 @@
           "address": "32835"
         },
         {
-          "name": "?GetVolatileWorldMat@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
+          "name": "?GetTransformMatrix@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
           "size": "110",
-          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetVolatileWorldMat(void)"
+            "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetTransformMatrix(void)"
           },
           "address": "32864"
         },
@@ -22947,7 +22949,7 @@
     {
       "name": "mkp/CArmata",
       "measures": {
-        "fuzzy_match_percent": 0.38194057,
+        "fuzzy_match_percent": 0.20231993,
         "total_code": "3707",
         "matched_data_percent": 100.0,
         "total_functions": 13,
@@ -22958,42 +22960,33 @@
         {
           "name": ".text",
           "size": "3707",
-          "fuzzy_match_percent": 0.38194057,
+          "fuzzy_match_percent": 0.20231993,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "?OnLoadChunk@CArmata@@UAEXU_ED_CHUNK@@PAU_iobuf@@@Z",
+          "name": "CArmata::OnLoadChunk",
           "size": "42",
-          "metadata": {
-            "demangled_name": "public: virtual void __thiscall CArmata::OnLoadChunk(struct _ED_CHUNK, struct _iobuf *)"
-          },
+          "metadata": {},
           "address": "0"
         },
         {
-          "name": "??0CArmata@@QAE@XZ",
+          "name": "CArmata::CArmata",
           "size": "195",
-          "fuzzy_match_percent": 3.4146342,
-          "metadata": {
-            "demangled_name": "public: __thiscall CArmata::CArmata(void)"
-          },
+          "metadata": {},
           "address": "42"
         },
         {
-          "name": "??_GCArmata@@UAEPAXI@Z",
+          "name": "CArmata::scalar_destructor",
           "size": "30",
-          "metadata": {
-            "demangled_name": "public: virtual void * __thiscall CArmata::`scalar deleting destructor'(unsigned int)"
-          },
+          "metadata": {},
           "address": "237"
         },
         {
-          "name": "??1CArmata@@UAE@XZ",
+          "name": "CArmata::~CArmata",
           "size": "125",
-          "metadata": {
-            "demangled_name": "public: virtual __thiscall CArmata::~CArmata(void)"
-          },
+          "metadata": {},
           "address": "267"
         },
         {
@@ -23006,67 +22999,51 @@
           "address": "392"
         },
         {
-          "name": "?OnActivate@CArmata@@UAEXXZ",
+          "name": "CArmata::OnActivate",
           "size": "63",
-          "metadata": {
-            "demangled_name": "public: virtual void __thiscall CArmata::OnActivate(void)"
-          },
+          "metadata": {},
           "address": "482"
         },
         {
-          "name": "?OnActivateLevel@CArmata@@UAEXXZ",
+          "name": "CArmata::OnActivateLevel",
           "size": "96",
-          "metadata": {
-            "demangled_name": "public: virtual void __thiscall CArmata::OnActivateLevel(void)"
-          },
+          "metadata": {},
           "address": "545"
         },
         {
-          "name": "?FUN0043a1b0@CArmata@@QAEXM@Z",
+          "name": "CArmata::FUN0043a1b0",
           "size": "193",
-          "metadata": {
-            "demangled_name": "public: void __thiscall CArmata::FUN0043a1b0(float)"
-          },
+          "metadata": {},
           "address": "641"
         },
         {
-          "name": "?OnInputKey@CArmata@@UAEXPAE@Z",
+          "name": "CArmata::OnInputKey",
           "size": "1369",
-          "metadata": {
-            "demangled_name": "public: virtual void __thiscall CArmata::OnInputKey(unsigned char *)"
-          },
+          "metadata": {},
           "address": "834"
         },
         {
-          "name": "?FUN0043a7e0@CArmata@@QAEXXZ",
+          "name": "CArmata::FUN0043a7e0",
           "size": "175",
-          "metadata": {
-            "demangled_name": "public: void __thiscall CArmata::FUN0043a7e0(void)"
-          },
+          "metadata": {},
           "address": "2203"
         },
         {
-          "name": "?FUN0043a890@CArmata@@QAEXXZ",
+          "name": "CArmata::FUN0043a890",
           "size": "109",
-          "metadata": {
-            "demangled_name": "public: void __thiscall CArmata::FUN0043a890(void)"
-          },
+          "metadata": {},
           "address": "2378"
         },
         {
-          "name": "?FUN0043a900@CArmata@@QAEXXZ",
+          "name": "CArmata::FUN0043a90",
           "size": "656",
-          "metadata": {
-            "demangled_name": "public: void __thiscall CArmata::FUN0043a900(void)"
-          },
+          "metadata": {},
           "address": "2487"
         },
         {
-          "name": "?FUN0043ab90@CArmata@@QAEXM@Z",
+          "name": "CArmata::FUN0043ab90",
           "size": "564",
-          "metadata": {
-            "demangled_name": "public: void __thiscall CArmata::FUN0043ab90(float)"
-          },
+          "metadata": {},
           "address": "3143"
         }
       ],
@@ -23079,86 +23056,58 @@
     {
       "name": "mkp/CArmataPocisk",
       "measures": {
-        "fuzzy_match_percent": 95.56851,
         "total_code": "343",
-        "matched_code": "324",
-        "matched_code_percent": 94.46064,
         "matched_data_percent": 100.0,
         "total_functions": 6,
-        "matched_functions": 5,
-        "matched_functions_percent": 83.33333,
-        "complete_code": "343",
-        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1,
-        "complete_units": 1
+        "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "343",
-          "fuzzy_match_percent": 1.1078718,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "??0CArmataPocisk@@QAE@XZ",
+          "name": "CArmataPocisk::CArmataPocisk",
           "size": "19",
-          "fuzzy_match_percent": 20.0,
-          "metadata": {
-            "demangled_name": "public: __thiscall CArmataPocisk::CArmataPocisk(void)"
-          },
+          "metadata": {},
           "address": "0"
         },
         {
-          "name": "??_GCArmataPocisk@@UAEPAXI@Z",
+          "name": "CArmataPocisk::scalar_destructor",
           "size": "30",
-          "fuzzy_match_percent": 100.0,
-          "metadata": {
-            "demangled_name": "public: virtual void * __thiscall CArmataPocisk::`scalar deleting destructor'(unsigned int)"
-          },
+          "metadata": {},
           "address": "19"
         },
         {
-          "name": "??1CArmataPocisk@@UAE@XZ",
+          "name": "CArmataPocisk::~CArmataPocisk",
           "size": "12",
-          "fuzzy_match_percent": 100.0,
-          "metadata": {
-            "demangled_name": "public: virtual __thiscall CArmataPocisk::~CArmataPocisk(void)"
-          },
+          "metadata": {},
           "address": "49"
         },
         {
-          "name": "?OnActivate@CArmataPocisk@@UAEXXZ",
+          "name": "CArmataPocisk::OnActivate",
           "size": "192",
-          "fuzzy_match_percent": 100.0,
-          "metadata": {
-            "demangled_name": "public: virtual void __thiscall CArmataPocisk::OnActivate(void)"
-          },
+          "metadata": {},
           "address": "61"
         },
         {
-          "name": "?FUN0043b1a0@CArmataPocisk@@QAEXUD3DXVECTOR3@@0@Z",
+          "name": "CArmataPocisk::FUN0043b1a0",
           "size": "80",
-          "fuzzy_match_percent": 100.0,
-          "metadata": {
-            "demangled_name": "public: void __thiscall CArmataPocisk::FUN0043b1a0(struct D3DXVECTOR3, struct D3DXVECTOR3)"
-          },
+          "metadata": {},
           "address": "253"
         },
         {
-          "name": "?OnCollisionObject@CArmataPocisk@@UAEXPAVcMagMeshObject@@@Z",
+          "name": "CArmataPocisk::OnCollisionObject",
           "size": "10",
-          "fuzzy_match_percent": 100.0,
-          "metadata": {
-            "demangled_name": "public: virtual void __thiscall CArmataPocisk::OnCollisionObject(class cMagMeshObject *)"
-          },
+          "metadata": {},
           "address": "333"
         }
       ],
       "metadata": {
-        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -24751,16 +24700,16 @@
     {
       "name": "mkp/CHudGratka",
       "measures": {
-        "total_code": "4970",
+        "total_code": "3637",
         "matched_data_percent": 100.0,
-        "total_functions": 21,
+        "total_functions": 14,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4970",
+          "size": "3637",
           "metadata": {}
         }
       ],
@@ -24848,48 +24797,6 @@
           "size": "133",
           "metadata": {},
           "address": "3504"
-        },
-        {
-          "name": "CHudGratka::FUN0042db90",
-          "size": "378",
-          "metadata": {},
-          "address": "3637"
-        },
-        {
-          "name": "CHudGratka::FUN0042dd10",
-          "size": "77",
-          "metadata": {},
-          "address": "4015"
-        },
-        {
-          "name": "CHudGratka::FUN0042dd60",
-          "size": "578",
-          "metadata": {},
-          "address": "4092"
-        },
-        {
-          "name": "CHudGratka::FUN0042dfb0",
-          "size": "128",
-          "metadata": {},
-          "address": "4670"
-        },
-        {
-          "name": "CHudGratka::FUN0042e030",
-          "size": "100",
-          "metadata": {},
-          "address": "4798"
-        },
-        {
-          "name": "CHudGratka::FUN0042e0a0",
-          "size": "7",
-          "metadata": {},
-          "address": "4898"
-        },
-        {
-          "name": "CHudGratka::FUN0042e0b0",
-          "size": "65",
-          "metadata": {},
-          "address": "4905"
         }
       ],
       "metadata": {
@@ -27732,18 +27639,18 @@
     {
       "name": "mkp/CPlayerTPP",
       "measures": {
-        "fuzzy_match_percent": 0.08933889,
-        "total_code": "8395",
+        "fuzzy_match_percent": 0.093260385,
+        "total_code": "8042",
         "matched_data_percent": 100.0,
-        "total_functions": 42,
+        "total_functions": 40,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "8395",
-          "fuzzy_match_percent": 0.08933889,
+          "size": "8042",
+          "fuzzy_match_percent": 0.093260385,
           "metadata": {}
         }
       ],
@@ -27788,220 +27695,208 @@
           "address": "731"
         },
         {
-          "name": "CPlayerTPP::FUN00408840",
-          "size": "7",
-          "metadata": {},
-          "address": "1566"
-        },
-        {
           "name": "CPlayerTPP::OnPlaySoundEnd",
           "size": "32",
           "metadata": {},
-          "address": "1573"
+          "address": "1566"
         },
         {
           "name": "CPlayerTPP::OnFrame",
           "size": "17",
           "metadata": {},
-          "address": "1605"
+          "address": "1598"
         },
         {
           "name": "CPlayerTPP::OnChangeMovement",
           "size": "13",
           "metadata": {},
-          "address": "1622"
+          "address": "1615"
         },
         {
           "name": "CPlayerTPP::OnCollisionObject",
           "size": "350",
           "metadata": {},
-          "address": "1635"
+          "address": "1628"
         },
         {
           "name": "CPlayerTPP::OnExitYesNo",
           "size": "93",
           "metadata": {},
-          "address": "1985"
+          "address": "1978"
         },
         {
           "name": "CPlayerTPP::OnInputKey",
           "size": "882",
           "metadata": {},
-          "address": "2078"
+          "address": "2071"
         },
         {
           "name": "CPlayerTPP::OnInputMouse",
           "size": "162",
           "metadata": {},
-          "address": "2960"
-        },
-        {
-          "name": "CPlayerTPP::FUN00409ff0",
-          "size": "346",
-          "metadata": {},
-          "address": "3122"
+          "address": "2953"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnEnterState",
           "size": "136",
           "metadata": {},
-          "address": "3468"
+          "address": "3115"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnFrame",
           "size": "114",
           "metadata": {},
-          "address": "3604"
+          "address": "3251"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "3718"
+          "address": "3365"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnInputKey",
           "size": "22",
           "metadata": {},
-          "address": "3738"
+          "address": "3385"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnEnterState",
           "size": "174",
           "metadata": {},
-          "address": "3760"
+          "address": "3407"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnFrame",
           "size": "109",
           "metadata": {},
-          "address": "3934"
+          "address": "3581"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnInputKey",
           "size": "1207",
           "metadata": {},
-          "address": "4043"
+          "address": "3690"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnInputMouse",
           "size": "350",
           "metadata": {},
-          "address": "5250"
+          "address": "4897"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnAnimEnd",
           "size": "96",
           "metadata": {},
-          "address": "5600"
+          "address": "5247"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnEnterState",
           "size": "130",
           "metadata": {},
-          "address": "5696"
+          "address": "5343"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnFrame",
           "size": "109",
           "metadata": {},
-          "address": "5826"
+          "address": "5473"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnInputKey",
           "size": "319",
           "metadata": {},
-          "address": "5935"
+          "address": "5582"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnInputMouse",
           "size": "355",
           "metadata": {},
-          "address": "6254"
+          "address": "5901"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnAnimEnd",
           "size": "101",
           "metadata": {},
-          "address": "6609"
+          "address": "6256"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "6710"
+          "address": "6357"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnEnterState",
           "size": "170",
           "metadata": {},
-          "address": "6730"
+          "address": "6377"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnFrame",
           "size": "11",
           "metadata": {},
-          "address": "6900"
+          "address": "6547"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnChangeMovement",
           "size": "19",
           "metadata": {},
-          "address": "6911"
+          "address": "6558"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnInputKey",
           "size": "365",
           "metadata": {},
-          "address": "6930"
+          "address": "6577"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnCollisionObject",
           "size": "19",
           "metadata": {},
-          "address": "7295"
+          "address": "6942"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnAnimEnd",
           "size": "132",
           "metadata": {},
-          "address": "7314"
+          "address": "6961"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "7446"
+          "address": "7093"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnEnterState",
           "size": "177",
           "metadata": {},
-          "address": "7466"
+          "address": "7113"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnFadeOutEnd",
           "size": "258",
           "metadata": {},
-          "address": "7643"
+          "address": "7290"
         },
         {
           "name": "CPlayerTPP::OnLoadChunk",
           "size": "42",
           "metadata": {},
-          "address": "7901"
+          "address": "7548"
         },
         {
           "name": "CPlayerTPP::Save",
           "size": "272",
           "metadata": {},
-          "address": "7943"
+          "address": "7590"
         },
         {
           "name": "CPlayerTPP::Load",
           "size": "180",
           "metadata": {},
-          "address": "8215"
+          "address": "7862"
         }
       ],
       "metadata": {
@@ -29039,16 +28934,16 @@
     {
       "name": "mkp/cKbSettings",
       "measures": {
-        "total_code": "3066",
+        "total_code": "657",
         "matched_data_percent": 100.0,
-        "total_functions": 4,
+        "total_functions": 3,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "3066",
+          "size": "657",
           "metadata": {}
         }
       ],
@@ -29070,12 +28965,6 @@
           "size": "7",
           "metadata": {},
           "address": "650"
-        },
-        {
-          "name": "cKbSettings::FUN00410260",
-          "size": "2409",
-          "metadata": {},
-          "address": "657"
         }
       ],
       "metadata": {
@@ -30016,14 +29905,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 24.8164,
+        "fuzzy_match_percent": 24.81191,
         "total_code": "513880",
-        "matched_code": "64366",
-        "matched_code_percent": 12.525493,
+        "matched_code": "64296",
+        "matched_code_percent": 12.51187,
         "matched_data_percent": 100.0,
         "total_functions": 2203,
-        "matched_functions": 657,
-        "matched_functions_percent": 29.82297,
+        "matched_functions": 656,
+        "matched_functions_percent": 29.777578,
         "complete_code": "7437",
         "complete_code_percent": 1.447225,
         "complete_data_percent": 100.0,
@@ -30035,19 +29924,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 1.5071105,
-        "total_code": "161432",
-        "matched_code": "2010",
-        "matched_code_percent": 1.2451063,
+        "fuzzy_match_percent": 1.3337613,
+        "total_code": "157337",
+        "matched_code": "1686",
+        "matched_code_percent": 1.0715852,
         "matched_data_percent": 100.0,
-        "total_functions": 880,
-        "matched_functions": 51,
-        "matched_functions_percent": 5.7954545,
-        "complete_code": "2029",
-        "complete_code_percent": 1.256876,
+        "total_functions": 870,
+        "matched_functions": 46,
+        "matched_functions_percent": 5.2873564,
+        "complete_code": "1686",
+        "complete_code_percent": 1.0715852,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 12
+        "complete_units": 11
       }
     }
   ]
