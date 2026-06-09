@@ -8,7 +8,7 @@
 #include "cKbSettings.h"
 #include "CArmataPocisk.h"
 #include "CHudGratka.h"
-#include "CCamera.h"
+#include "CCollisionCamera.h"
 
 class CArmata : public cMagMeshObject {
 public:
@@ -38,7 +38,7 @@ private:
 	/* 0x2a2c */ int unk_2a2c;
 	/* 0x2a30 */ int unk_2a30;
 	/* 0x2a34 */ int unk_2a34;
-	/* 0x2a38 */ CCamera* camera; /* TODO unknown CCamera subclass */
+	/* 0x2a38 */ CCollisionCamera* camera;
 	/* 0x2a3c */ cMagKernel* unk_2a3c;
 	/* 0x2a40 */ std::vector<CArmataPocisk*> bullets;
 	/* 0x2a50 */ int unk_2a50;

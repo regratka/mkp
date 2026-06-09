@@ -137,7 +137,7 @@ void CArmata::FUN0043a890() {
 		hud->FUN0042dd60(true);
 		hud->FUN0042dfb0(false);
 	}
-	camera->activeCamera = (CCamera*) GetPlayerObject(); // TODO change dest field
+	camera->activeCamera = (CCamera*) GetPlayerObject();
 	GetGame()->SetActiveCamera(camera);
 	CPlayerTPP* player = (CPlayerTPP*) GetPlayerObject();
 	player->FUN00409ff0(false);
