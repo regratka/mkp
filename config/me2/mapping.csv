@@ -206,7 +206,7 @@
 ??_ECCamera@@UAEPAXI@Z;CCamera::scalar_destructor;0x1000bf90;0x57;__thiscall;;CCamera*;CCamera*;uchar
 ??0CFreeCamera@@QAE@ABV0@@Z;CFreeCamera::CFreeCamera;0x1000bff0;0x12a;__thiscall;;uchar;CFreeCamera*;CFreeCamera*
 ??4CFreeCamera@@QAEAAV0@ABV0@@Z;CFreeCamera::operator=;0x1000c120;0x11e;__thiscall;;CFreeCamera*;CFreeCamera*;CFreeCamera*
-;CFreeCamera::scalar_destructor;0x1000c240;0x57;__thiscall;;CFreeCamera*;CFreeCamera*;uchar
+??_ECFreeCamera@@UAEPAXI@Z;CFreeCamera::scalar_destructor;0x1000c240;0x57;__thiscall;;CFreeCamera*;CFreeCamera*;uchar
 ?getActiveList@pgTerrain@@QAEAAPAVpgTerrainPatchBase@@XZ;pgTerrain::getActiveList;0x1000c2a0;0x4;__thiscall;;pgTerrainPatchBase**;pgTerrain*
 ?setMaxError@pgTerrain@@QAEXM@Z;pgTerrain::setMaxError;0x1000c2b0;0xa;__thiscall;;void;pgTerrain*;float
 ?getMaxError@pgTerrain@@QBEMXZ;pgTerrain::getMaxError;0x1000c2c0;0x4;__thiscall;;float;pgTerrain*

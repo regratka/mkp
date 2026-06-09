@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 19.022144,
+    "fuzzy_match_percent": 19.308502,
     "total_code": "671217",
-    "matched_code": "64612",
-    "matched_code_percent": 9.626098,
+    "matched_code": "65982",
+    "matched_code_percent": 9.830204,
     "matched_data_percent": 100.0,
     "total_functions": 3073,
-    "matched_functions": 694,
-    "matched_functions_percent": 22.583794,
+    "matched_functions": 702,
+    "matched_functions_percent": 22.844128,
     "complete_code": "9123",
     "complete_code_percent": 1.359173,
     "complete_data_percent": 100.0,
@@ -1589,14 +1589,14 @@
     {
       "name": "me2/CFreeCamera",
       "measures": {
-        "fuzzy_match_percent": 2.8139312,
+        "fuzzy_match_percent": 96.98041,
         "total_code": "2158",
-        "matched_code": "11",
-        "matched_code_percent": 0.50973123,
+        "matched_code": "1439",
+        "matched_code_percent": 66.68211,
         "matched_data_percent": 100.0,
         "total_functions": 12,
-        "matched_functions": 1,
-        "matched_functions_percent": 8.333334,
+        "matched_functions": 10,
+        "matched_functions_percent": 83.33333,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1604,7 +1604,7 @@
         {
           "name": ".text",
           "size": "2158",
-          "fuzzy_match_percent": 2.8139312,
+          "fuzzy_match_percent": 96.98041,
           "metadata": {}
         }
       ],
@@ -1612,6 +1612,7 @@
         {
           "name": "??0CFreeCamera@@QAE@ABV0@@Z",
           "size": "298",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CFreeCamera::CFreeCamera(class CFreeCamera const &)"
           },
@@ -1620,21 +1621,25 @@
         {
           "name": "??4CFreeCamera@@QAEAAV0@ABV0@@Z",
           "size": "286",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CFreeCamera & __thiscall CFreeCamera::operator=(class CFreeCamera const &)"
           },
           "address": "298"
         },
         {
-          "name": "CFreeCamera::scalar_destructor",
+          "name": "??_ECFreeCamera@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CFreeCamera::`vector deleting destructor'(unsigned int)"
+          },
           "address": "584"
         },
         {
           "name": "??0CFreeCamera@@QAE@XZ",
           "size": "184",
-          "fuzzy_match_percent": 11.681818,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CFreeCamera::CFreeCamera(void)"
           },
@@ -1652,7 +1657,7 @@
         {
           "name": "?OnInputKey@CFreeCamera@@UAEXPAE@Z",
           "size": "23",
-          "fuzzy_match_percent": 11.111111,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CFreeCamera::OnInputKey(unsigned char *)"
           },
@@ -1661,7 +1666,7 @@
         {
           "name": "?OnInputMouse@CFreeCamera@@UAEXMM_N0@Z",
           "size": "617",
-          "fuzzy_match_percent": 0.5208333,
+          "fuzzy_match_percent": 92.52604,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CFreeCamera::OnInputMouse(float, float, bool, bool)"
           },
@@ -1670,7 +1675,7 @@
         {
           "name": "?GetUpdate@CFreeCamera@@QAENH@Z",
           "size": "194",
-          "fuzzy_match_percent": 3.9215686,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: double __thiscall CFreeCamera::GetUpdate(int)"
           },
@@ -1679,7 +1684,7 @@
         {
           "name": "?OnActivateView@CFreeCamera@@UAEXXZ",
           "size": "102",
-          "fuzzy_match_percent": 2.5,
+          "fuzzy_match_percent": 81.325,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CFreeCamera::OnActivateView(void)"
           },
@@ -1688,7 +1693,7 @@
         {
           "name": "?SetSpeedValue@CFreeCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CFreeCamera::SetSpeedValue(float)"
           },
@@ -1697,7 +1702,7 @@
         {
           "name": "?CheckWindowActivation@CFreeCamera@@QAE_NXZ",
           "size": "67",
-          "fuzzy_match_percent": 7.368421,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CFreeCamera::CheckWindowActivation(void)"
           },
@@ -1706,7 +1711,7 @@
         {
           "name": "?ReadSettings@CFreeCamera@@QAEXPAD@Z",
           "size": "276",
-          "fuzzy_match_percent": 1.0989012,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CFreeCamera::ReadSettings(char *)"
           },
@@ -11201,14 +11206,14 @@
     {
       "name": "me2/cMagEngineMgr",
       "measures": {
-        "fuzzy_match_percent": 78.07133,
+        "fuzzy_match_percent": 78.08143,
         "total_code": "350",
-        "matched_code": "120",
-        "matched_code_percent": 34.285717,
+        "matched_code": "219",
+        "matched_code_percent": 62.57143,
         "matched_data_percent": 100.0,
         "total_functions": 12,
-        "matched_functions": 7,
-        "matched_functions_percent": 58.333332,
+        "matched_functions": 8,
+        "matched_functions_percent": 66.66667,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11216,7 +11221,7 @@
         {
           "name": ".text",
           "size": "350",
-          "fuzzy_match_percent": 78.07133,
+          "fuzzy_match_percent": 78.08143,
           "metadata": {}
         }
       ],
@@ -11320,7 +11325,7 @@
         {
           "name": "?CreateFrustumCull@cMagEngineMgr@@QAEXXZ",
           "size": "99",
-          "fuzzy_match_percent": 99.96429,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagEngineMgr::CreateFrustumCull(void)"
           },
@@ -11803,14 +11808,14 @@
     {
       "name": "me2/cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 73.960495,
+        "fuzzy_match_percent": 73.960304,
         "total_code": "32312",
-        "matched_code": "10777",
-        "matched_code_percent": 33.352936,
+        "matched_code": "10730",
+        "matched_code_percent": 33.207478,
         "matched_data_percent": 100.0,
         "total_functions": 144,
-        "matched_functions": 107,
-        "matched_functions_percent": 74.30556,
+        "matched_functions": 106,
+        "matched_functions_percent": 73.61111,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11818,7 +11823,7 @@
         {
           "name": ".text",
           "size": "32312",
-          "fuzzy_match_percent": 73.960495,
+          "fuzzy_match_percent": 73.960304,
           "metadata": {}
         }
       ],
@@ -12831,7 +12836,7 @@
         {
           "name": "?SetActiveCamera@cMagGameObject@@QAEXPAVCCamera@@@Z",
           "size": "47",
-          "fuzzy_match_percent": 100.0,
+          "fuzzy_match_percent": 99.86667,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetActiveCamera(class CCamera *)"
           },
@@ -14448,14 +14453,14 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 62.624413,
+        "fuzzy_match_percent": 62.412876,
         "total_code": "52000",
-        "matched_code": "11412",
-        "matched_code_percent": 21.946154,
+        "matched_code": "11302",
+        "matched_code_percent": 21.734615,
         "matched_data_percent": 100.0,
         "total_functions": 273,
-        "matched_functions": 197,
-        "matched_functions_percent": 72.16117,
+        "matched_functions": 196,
+        "matched_functions_percent": 71.794876,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14463,7 +14468,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 62.624413,
+          "fuzzy_match_percent": 62.412876,
           "metadata": {}
         }
       ],
@@ -15395,11 +15400,10 @@
           "address": "32835"
         },
         {
-          "name": "?GetVolatileWorldMat@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
+          "name": "?GetTransformMatrix@cMagMeshObject@@QAE?AUD3DXMATRIX@@XZ",
           "size": "110",
-          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetVolatileWorldMat(void)"
+            "demangled_name": "public: struct D3DXMATRIX __thiscall cMagMeshObject::GetTransformMatrix(void)"
           },
           "address": "32864"
         },
@@ -29901,14 +29905,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 24.437878,
+        "fuzzy_match_percent": 24.81191,
         "total_code": "513880",
-        "matched_code": "62926",
-        "matched_code_percent": 12.245272,
+        "matched_code": "64296",
+        "matched_code_percent": 12.51187,
         "matched_data_percent": 100.0,
         "total_functions": 2203,
-        "matched_functions": 648,
-        "matched_functions_percent": 29.414436,
+        "matched_functions": 656,
+        "matched_functions_percent": 29.777578,
         "complete_code": "7437",
         "complete_code_percent": 1.447225,
         "complete_data_percent": 100.0,
