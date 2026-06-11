@@ -43,7 +43,7 @@ private:
 	/* 0xe30 */ D3DXVECTOR3 direction;
 	/* 0xe3c */ D3DXVECTOR3 observedPosition;
 	/* 0xe48 */ D3DXVECTOR3 observedDirection;
-	/* 0xe54 */ int unk_e54;
+	/* 0xe54 */ int lastMeasureTime;
 	/* 0xe58 */ float lookAtAngle;
 	/* 0xe5c */ float angle;
 	/* 0xe60 */ float distance;
@@ -53,10 +53,10 @@ private:
 	/* 0xe70 */ float yPosDelay;
 	/* 0xe74 */ float maxMultipleDist;
 	/* 0xe78 */ float addObservedY;
-	/* 0xe7c */ float unk_e7c;
-	/* 0xe80 */ bool unk_e80;
+	/* 0xe7c */ float distanceToObserved;
+	/* 0xe80 */ bool paused;
 	/* 0xe81 */ bool isAfterPauseDelay;
-	/* 0xe82 */ bool unk_e82;
+	/* 0xe82 */ bool firstUpdateAfterPause;
 	/* 0xe83 */ bool isOppositeDirection;
 };
 

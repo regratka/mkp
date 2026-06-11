@@ -26,7 +26,7 @@ void CCollisionCamera::Create(cMagMeshObject* param_1, bool param_2) {
 	distance = 400.0f;
 	angle = 31.0f;
 	lookAtAngle = -15.0f;
-	unk_e54 = 0;
+	lastMeasureTime = 0;
 	direction = param_1->GetDirection();
 	dirDelay1 = 0.5f;
 	dirDelay2 = 0.5f;
@@ -37,10 +37,10 @@ void CCollisionCamera::Create(cMagMeshObject* param_1, bool param_2) {
 	ReadSettings("data\\Ustawienia.cfg");
 	isAfterPauseDelay = true;
 	unk_df0 = D3DXVECTOR3(0,0,0);
-	unk_e80 = false;
+	paused = false;
 	isOppositeDirection = false;
 	rotSpeedY = 0.0f;
-	unk_e7c = 0;
+	distanceToObserved = 0;
 }
 
 /* 10060DB0-10060DBD 0000D	*/
@@ -72,9 +72,9 @@ void CCollisionCamera::SetLookAtAngle(float param_1) {
 void CCollisionCamera::OnInputKey(uchar* param_1) {
 	cMagGameObject* gameObject = cMagEngineMgr::getInstance()->gameObject;
 	ulong nanoTime = timeGetTime();
-	ulong timeDiff = (nanoTime - unk_e54);
+	ulong timeDiff = (nanoTime - lastMeasureTime);
 	float fStack_d8 = timeDiff * 0.001;
-	if (unk_e54 == 0) {
+	if (lastMeasureTime == 0) {
 		fStack_d8 = 0.0f;
 	}
 
@@ -120,7 +120,7 @@ void CCollisionCamera::OnInputKey(uchar* param_1) {
 			CrashLog("f : %f", newFov);
 		}
 	}
-	unk_e54 = nanoTime;
+	lastMeasureTime = nanoTime;
 	char buffer[200];
 	sprintf(buffer, "Distance: %f, Angle: %f, View Angle %f, FOV: %f ",
 		distance, angle, lookAtAngle, gameObject->GetFOV());
@@ -129,7 +129,7 @@ void CCollisionCamera::OnInputKey(uchar* param_1) {
 
 /* 10060FD0-1006103E 0006E	*/
 D3DXVECTOR3 CCollisionCamera::GetObservedPosition() {
-	if (!unk_e80) {
+	if (!paused) {
 		observedPosition = observedObject->GetPosition();
 		observedPosition.y = observedPosition.y + addObservedY;
 	}
@@ -161,13 +161,13 @@ float CCollisionCamera::GetDistenceToObserved() {
 	
 	D3DXVECTOR3 local_18 = observedObject->GetPosition();
 	D3DXVECTOR3 stack_c = GetPosition();
-	unk_e7c = D3DXVec3Length(&(local_18 - stack_c));
-	return unk_e7c;
+	distanceToObserved = D3DXVec3Length(&(local_18 - stack_c));
+	return distanceToObserved;
 }
 
 /* 10061190-100615AA 0041a	*/
 void CCollisionCamera::Update2(float param_1) {
-	if (unk_e82) {
+	if (firstUpdateAfterPause) {
 		param_1 = 0.0f;
 	}
 
@@ -181,7 +181,7 @@ void CCollisionCamera::Update2(float param_1) {
 	SetPosition(D3DXVECTOR3(0,0,0));
 	D3DXMatrixMultiply(&cameraVectors, &cameraVectors, &Dstack_80);
 	D3DXVECTOR3 Dstack_b4(cameraVectors(2,0), cameraVectors(2,1), cameraVectors(2,2));
-	if (param_1 != 0.0f && !unk_e82) {
+	if (param_1 != 0.0f && !firstUpdateAfterPause) {
 		float fVar7 = dirDelay1 / param_1;
 		if (fVar7 < 1.0f) {
 			fVar7 = 1.0f;
@@ -197,7 +197,7 @@ void CCollisionCamera::Update2(float param_1) {
 	D3DXMatrixRotationAxis(&DStack_40, &GetRight(), GpgDegToRad(lookAtAngle));
 	D3DXMatrixMultiply(&cameraVectors, &cameraVectors, &DStack_40);
 	D3DXVECTOR3 DStack_cc(local_98 + -distance * Dstack_b4);
-	if (param_1 != 0.0f && !unk_e82) {
+	if (param_1 != 0.0f && !firstUpdateAfterPause) {
 		float fStack_a8 = xzPosDelay / param_1;
 		float fVar7 = yPosDelay / param_1;
 		if (fStack_a8 < 1.0f) {
@@ -213,11 +213,11 @@ void CCollisionCamera::Update2(float param_1) {
 	D3DXVECTOR3 diff = DStack_cc - GetObservedPosition();
 	float fVar2 = D3DXVec3Length(&diff);
 	if (fVar2 > maxMultipleDist * distance) {
-		float local_c0z = maxMultipleDist * distance / fVar2;
-		DStack_cc = diff * local_c0z + GetObservedPosition();
+		local_c0.z = maxMultipleDist * distance / fVar2;
+		DStack_cc = GetObservedPosition() + diff * local_c0.z;
 	}
 	SetPosition(DStack_cc);
-	unk_e82 = false;
+	firstUpdateAfterPause = false;
 	dirDelay1 = dirDelay2;
 }
 
@@ -228,7 +228,7 @@ void CCollisionCamera::SetRotSpeedY(float param_1) {
 
 /* 100615C0-10061709 00149	*/
 void CCollisionCamera::Update3(float param_1) {
-	if (unk_e82) {
+	if (firstUpdateAfterPause) {
 		param_1 = 0.0f;
 	}
 
@@ -236,7 +236,7 @@ void CCollisionCamera::Update3(float param_1) {
 	SetUp(observedObject->GetUp());
 	SetDirection(GetObservedDirection());
 	D3DXVECTOR3 local_18(cameraVectors(2,0), cameraVectors(2,1), cameraVectors(2,2));
-	if (param_1 != 0.0f && !unk_e82) {
+	if (param_1 != 0.0f && !firstUpdateAfterPause) {
 		float fVar1 = dirDelay1 / param_1;
 		if (fVar1 < 1.0f) {
 			fVar1 = 1.0f;
@@ -247,7 +247,7 @@ void CCollisionCamera::Update3(float param_1) {
 		SetDirection(local_18);
 	}
 	direction = GetDirection();
-	unk_e82 = false;
+	firstUpdateAfterPause = false;
 	dirDelay1 = dirDelay2;
 }
 
@@ -346,7 +346,7 @@ bool CCollisionCamera::GetOppositeDirection() {
 
 /* 100619E0-10061A89 000A9	*/
 D3DXVECTOR3 CCollisionCamera::GetObservedDirection() {
-	if (!unk_e80) {
+	if (!paused) {
 		if (isOppositeDirection) {
 			observedDirection = -observedObject->GetDirection();
 		} else {
@@ -358,9 +358,9 @@ D3DXVECTOR3 CCollisionCamera::GetObservedDirection() {
 
 /* 10061A90-10061AB2 00022	*/
 void CCollisionCamera::Pause(bool param_1) {
-	unk_e80 = param_1;
-	if (!param_1 && ! isAfterPauseDelay) {
-		unk_e82 = true;
+	paused = param_1;
+	if (!param_1 && !isAfterPauseDelay) {
+		firstUpdateAfterPause = true;
 	}
 }
 
