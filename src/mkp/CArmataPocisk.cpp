@@ -4,25 +4,35 @@
 CArmataPocisk::CArmataPocisk() {
 }
 
-/* 43B0B0-43B0CE 0001E	*/
-uchar CArmataPocisk::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 43B0D0-43B0DC 0000C	*/
 CArmataPocisk::~CArmataPocisk() {
 }
 
 /* 43B0E0-43B1A0 000C0	*/
 void CArmataPocisk::OnActivate() {
+	LoadMesh("data\\Meshes\\Wyspa\\Morela.3dm");
+	SetScale(D3DXVECTOR3(0.8f, 0.8f, 0.8f));
+	SetClassName("CArmataPocisk");
+	SetObjectName("ArmataPocisk");
+	EnableCollisionScene(false);
+	SetGravityAcceleration(15.0f);
+	SetCollisionType(2);
+	SetCollAction(0);
+	EnableCollision(true);
+	EnablePhysics(true);
+	EnableCollisionObjects(true);
+	EnableFrustumPhysicsPause(false);
 }
 
 /* 43B1A0-43B1F0 00050	*/
-uchar CArmataPocisk::FUN0043b1a0(uint param_1, uint param_2, uint param_3, uint param_4, uint param_5, uint param_6) {
-	return 0;
+void CArmataPocisk::FUN0043b1a0(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
+	enableRendering = true;
+	SetPosition(param_2);
+	SetDirection(param_1);
 }
 
 /* 43B1F0-43B1FA 0000A	*/
-void CArmataPocisk::OnCollisionObject() {
+void CArmataPocisk::OnCollisionObject(cMagMeshObject* param_1) {
+	enableRendering = false;
 }
 

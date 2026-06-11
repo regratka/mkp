@@ -17,8 +17,10 @@ def configureProject(base_dir: Path):
     args = parser.parse_args()
 
     os.chdir(base_dir)
-    engineUnit = DecompUnit("Engine", "me2", "ME2.dll")
-    gameUnit = DecompUnit("Game code", "mkp", "gratka3d.exe")
+    engineUnit = DecompUnit("Engine", "me2", "ME2.dll", 
+                            "/Zi /O2 /GR /G6 /GX /I include/ /I include/me2 /I tools/msvc66/include /I tools/dx81/include /I tools/jni /I tools/Multimedia/Common/Include /I tools")
+    gameUnit = DecompUnit("Game code", "mkp", "gratka3d.exe", 
+                          "/Zi /O2 /GR /GX /I include/ /I include/me2 /I include/mkp /I tools/msvc66/include /I tools/dx81/include /I tools/jni /I tools/Multimedia/Common/Include /I tools")
     configure([engineUnit, gameUnit], args.skipexport)
 
 def configure(decompUnits: list[DecompUnit], skipExport: bool):

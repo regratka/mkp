@@ -44,7 +44,7 @@ public:
 	/* 100927D0 */ void UpdateProgress(float param_1);
 	/* 10092800 */ void ShowProgressBar(bool param_1);
 	/* 10092860 */ CLevel* LoadLevel_(char* param_1);
-	/* 10092CC0 */ void OnLoadChunk(_ED_CHUNK param_1, _iobuf* param_2);
+	/* 10092CC0 */ void OnLoadChunk(_ED_CHUNK param_1, FILE* param_2);
 	/* 100932F0 */ void LoadMeshObject(_iobuf* param_1);
 	/* 10093660 */ void LoadBaseMeshObject(_iobuf* param_1);
 	/* 10093960 */ void LoadSun(_iobuf* param_1);

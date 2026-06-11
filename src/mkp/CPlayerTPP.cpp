@@ -26,6 +26,11 @@ void CPlayerTPP::OnActivate() {
 void CPlayerTPP::OnActivateLevel() {
 }
 
+/* 408840-408847 00007	*/
+void* CPlayerTPP::FUN00408840() {
+	return 0;
+}
+
 /* 4094C0-4094E0 00020	*/
 uchar CPlayerTPP::OnPlaySoundEnd(int param_1) {
 	return 0;
@@ -59,6 +64,10 @@ uchar CPlayerTPP::OnInputKey(int param_1) {
 /* 409E30-409ED2 000A2	*/
 uchar CPlayerTPP::OnInputMouse(uchar param_1, uchar param_2, uchar param_3, uint param_4) {
 	return 0;
+}
+
+/* 409FF0-40A14A 0015A	*/
+void CPlayerTPP::FUN00409ff0(bool param_1) {
 }
 
 /* 40C760-40C78A 0002A	*/

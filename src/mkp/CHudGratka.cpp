@@ -65,3 +65,32 @@ int CHudGratka::FUN0042d780(char* param_1) {
 	return 0;
 }
 
+/* 42DB90-42DD0A 0017A	*/
+void CHudGratka::FUN0042db90(bool param_1, D3DXVECTOR3 param_2) {
+}
+
+/* 42DD10-42DD5D 0004D	*/
+void CHudGratka::FUN0042dd10() {
+}
+
+/* 42DD60-42DFA2 00242	*/
+void CHudGratka::FUN0042dd60(bool param_1) {
+}
+
+/* 42DFB0-42E030 00080	*/
+void CHudGratka::FUN0042dfb0(bool param_1) {
+}
+
+/* 42E030-42E094 00064	*/
+void CHudGratka::FUN0042e030() {
+}
+
+/* 42E0A0-42E0A7 00007	*/
+float CHudGratka::FUN0042e0a0() {
+	return 0;
+}
+
+/* 42E0B0-42E0F1 00041	*/
+void CHudGratka::FUN0042e0b0() {
+}
+

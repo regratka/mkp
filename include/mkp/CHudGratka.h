@@ -3,6 +3,8 @@
 
 #include <globals.h>
 
+#include <d3dx8math.h>
+
 class CHudGratka {
 public:
 	/* 42C480 */ CHudGratka();
@@ -19,6 +21,13 @@ public:
 	/* 42D460 */ uchar FUN0042d460(int param_1);
 	/* 42D6E0 */ uchar FUN0042d6e0();
 	/* 42D780 */ int FUN0042d780(char* param_1);
+	/* 42DB90 */ void FUN0042db90(bool param_1, D3DXVECTOR3 param_2);
+	/* 42DD10 */ void FUN0042dd10();
+	/* 42DD60 */ void FUN0042dd60(bool param_1);
+	/* 42DFB0 */ void FUN0042dfb0(bool param_1);
+	/* 42E030 */ void FUN0042e030();
+	/* 42E0A0 */ float FUN0042e0a0();
+	/* 42E0B0 */ void FUN0042e0b0();
 };
 
 #endif
