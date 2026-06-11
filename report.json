@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 19.308502,
-    "total_code": "671217",
-    "matched_code": "65982",
-    "matched_code_percent": 9.830204,
+    "fuzzy_match_percent": 20.023094,
+    "total_code": "671230",
+    "matched_code": "69816",
+    "matched_code_percent": 10.401203,
     "matched_data_percent": 100.0,
-    "total_functions": 3073,
-    "matched_functions": 702,
-    "matched_functions_percent": 22.844128,
+    "total_functions": 3074,
+    "matched_functions": 726,
+    "matched_functions_percent": 23.617435,
     "complete_code": "9123",
-    "complete_code_percent": 1.359173,
+    "complete_code_percent": 1.3591466,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 14
@@ -1037,14 +1037,14 @@
     {
       "name": "me2/CCollisionCamera",
       "measures": {
-        "fuzzy_match_percent": 2.413197,
+        "fuzzy_match_percent": 99.83172,
         "total_code": "4913",
-        "matched_code": "29",
-        "matched_code_percent": 0.5902707,
+        "matched_code": "3863",
+        "matched_code_percent": 78.62813,
         "matched_data_percent": 100.0,
         "total_functions": 27,
-        "matched_functions": 2,
-        "matched_functions_percent": 7.4074073,
+        "matched_functions": 26,
+        "matched_functions_percent": 96.296295,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -1052,7 +1052,7 @@
         {
           "name": ".text",
           "size": "4913",
-          "fuzzy_match_percent": 2.413197,
+          "fuzzy_match_percent": 99.83172,
           "metadata": {}
         }
       ],
@@ -1060,6 +1060,7 @@
         {
           "name": "??0CCollisionCamera@@QAE@ABV0@@Z",
           "size": "606",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CCollisionCamera::CCollisionCamera(class CCollisionCamera const &)"
           },
@@ -1068,15 +1069,19 @@
         {
           "name": "??4CCollisionCamera@@QAEAAV0@ABV0@@Z",
           "size": "594",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CCollisionCamera & __thiscall CCollisionCamera::operator=(class CCollisionCamera const &)"
           },
           "address": "606"
         },
         {
-          "name": "CCollisionCamera::scalar_destructor",
+          "name": "??_ECCollisionCamera@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CCollisionCamera::`vector deleting destructor'(unsigned int)"
+          },
           "address": "1200"
         },
         {
@@ -1091,7 +1096,7 @@
         {
           "name": "??0CCollisionCamera@@QAE@PAVcMagMeshObject@@_N@Z",
           "size": "85",
-          "fuzzy_match_percent": 26.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CCollisionCamera::CCollisionCamera(class cMagMeshObject *, bool)"
           },
@@ -1109,7 +1114,7 @@
         {
           "name": "?Create@CCollisionCamera@@QAEXPAVcMagMeshObject@@_N@Z",
           "size": "298",
-          "fuzzy_match_percent": 1.5151515,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::Create(class cMagMeshObject *, bool)"
           },
@@ -1118,7 +1123,7 @@
         {
           "name": "?Update@CCollisionCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 25.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::Update(float)"
           },
@@ -1127,7 +1132,7 @@
         {
           "name": "?SetRadius@CCollisionCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "29",
-          "fuzzy_match_percent": 12.5,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::SetRadius(struct D3DXVECTOR3)"
           },
@@ -1136,7 +1141,7 @@
         {
           "name": "?SetAngle@CCollisionCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::SetAngle(float)"
           },
@@ -1145,7 +1150,7 @@
         {
           "name": "?SetDistance@CCollisionCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::SetDistance(float)"
           },
@@ -1154,7 +1159,7 @@
         {
           "name": "?SetLookAtAngle@CCollisionCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::SetLookAtAngle(float)"
           },
@@ -1163,7 +1168,7 @@
         {
           "name": "?OnInputKey@CCollisionCamera@@UAEXPAE@Z",
           "size": "441",
-          "fuzzy_match_percent": 0.7633588,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CCollisionCamera::OnInputKey(unsigned char *)"
           },
@@ -1172,6 +1177,7 @@
         {
           "name": "?GetObservedPosition@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "110",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCollisionCamera::GetObservedPosition(void)"
           },
@@ -1180,6 +1186,7 @@
         {
           "name": "?GetOffset@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "70",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCollisionCamera::GetOffset(void)"
           },
@@ -1188,6 +1195,7 @@
         {
           "name": "?GetRadius@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCollisionCamera::GetRadius(void)"
           },
@@ -1196,7 +1204,7 @@
         {
           "name": "?UpdateView@CCollisionCamera@@QAEXXZ",
           "size": "68",
-          "fuzzy_match_percent": 4.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::UpdateView(void)"
           },
@@ -1205,7 +1213,7 @@
         {
           "name": "?GetDistenceToObserved@CCollisionCamera@@QAEMXZ",
           "size": "114",
-          "fuzzy_match_percent": 3.4146342,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CCollisionCamera::GetDistenceToObserved(void)"
           },
@@ -1214,7 +1222,7 @@
         {
           "name": "?Update2@CCollisionCamera@@QAEXM@Z",
           "size": "1050",
-          "fuzzy_match_percent": 0.33222592,
+          "fuzzy_match_percent": 99.21262,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::Update2(float)"
           },
@@ -1223,7 +1231,7 @@
         {
           "name": "?SetRotSpeedY@CCollisionCamera@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::SetRotSpeedY(float)"
           },
@@ -1232,7 +1240,7 @@
         {
           "name": "?Update3@CCollisionCamera@@QAEXM@Z",
           "size": "372",
-          "fuzzy_match_percent": 0.9174312,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::Update3(float)"
           },
@@ -1241,7 +1249,7 @@
         {
           "name": "?ReadSettings@CCollisionCamera@@QAEXPAD@Z",
           "size": "616",
-          "fuzzy_match_percent": 0.5025126,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::ReadSettings(char *)"
           },
@@ -1250,7 +1258,7 @@
         {
           "name": "?SetOppositeDirection@CCollisionCamera@@QAEX_N@Z",
           "size": "23",
-          "fuzzy_match_percent": 25.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::SetOppositeDirection(bool)"
           },
@@ -1259,7 +1267,7 @@
         {
           "name": "?GetOppositeDirection@CCollisionCamera@@QAE_NXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CCollisionCamera::GetOppositeDirection(void)"
           },
@@ -1268,6 +1276,7 @@
         {
           "name": "?GetObservedDirection@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "169",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CCollisionCamera::GetObservedDirection(void)"
           },
@@ -1276,7 +1285,7 @@
         {
           "name": "?Pause@CCollisionCamera@@QAEX_N@Z",
           "size": "34",
-          "fuzzy_match_percent": 11.111111,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::Pause(bool)"
           },
@@ -1285,7 +1294,7 @@
         {
           "name": "?AfterPauseDelay@CCollisionCamera@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CCollisionCamera::AfterPauseDelay(bool)"
           },
@@ -14453,7 +14462,7 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 62.412876,
+        "fuzzy_match_percent": 62.431915,
         "total_code": "52000",
         "matched_code": "11302",
         "matched_code_percent": 21.734615,
@@ -14468,7 +14477,7 @@
         {
           "name": ".text",
           "size": "52000",
-          "fuzzy_match_percent": 62.412876,
+          "fuzzy_match_percent": 62.431915,
           "metadata": {}
         }
       ],
@@ -16189,6 +16198,7 @@
         {
           "name": "?GetUp@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 30.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagMeshObject::GetUp(void)"
           },
@@ -19241,7 +19251,7 @@
     {
       "name": "me2/cStaticMesh",
       "measures": {
-        "fuzzy_match_percent": 0.45527622,
+        "fuzzy_match_percent": 0.47047764,
         "total_code": "19735",
         "matched_data_percent": 100.0,
         "total_functions": 23,
@@ -19252,7 +19262,7 @@
         {
           "name": ".text",
           "size": "19735",
-          "fuzzy_match_percent": 0.45527622,
+          "fuzzy_match_percent": 0.47047764,
           "metadata": {}
         }
       ],
@@ -19379,10 +19389,11 @@
           "address": "13667"
         },
         {
-          "name": "?ComputeBoundingBox@cStaticMesh@@QAEXAAUD3DXVECTgOR3@@0@Z",
+          "name": "?ComputeBoundingBox@cStaticMesh@@QAEXAAUD3DXVECTOR3@@0@Z",
           "size": "57",
+          "fuzzy_match_percent": 5.263158,
           "metadata": {
-            "demangled_name": "public: void __thiscall cStaticMesh::ComputeBoundingBox(struct D3DXVECTgOR3&, struct D3DXVECTgOR3&)"
+            "demangled_name": "public: void __thiscall cStaticMesh::ComputeBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
           },
           "address": "15337"
         },
@@ -19733,16 +19744,16 @@
     {
       "name": "me2/CollisionManager",
       "measures": {
-        "total_code": "4472",
+        "total_code": "4485",
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 9,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4472",
+          "size": "4485",
           "metadata": {}
         }
       ],
@@ -19766,34 +19777,40 @@
           "address": "1340"
         },
         {
+          "name": "collision::FUN100a6bd0",
+          "size": "13",
+          "metadata": {},
+          "address": "2110"
+        },
+        {
           "name": "collision::FUN100a80a0",
           "size": "47",
           "metadata": {},
-          "address": "2110"
+          "address": "2123"
         },
         {
           "name": "collision::FUN100a80d0",
           "size": "709",
           "metadata": {},
-          "address": "2157"
+          "address": "2170"
         },
         {
           "name": "collision::FUN_100a83a0",
           "size": "250",
           "metadata": {},
-          "address": "2866"
+          "address": "2879"
         },
         {
           "name": "collision::collision",
           "size": "1196",
           "metadata": {},
-          "address": "3116"
+          "address": "3129"
         },
         {
           "name": "collision::LoadSettings",
           "size": "160",
           "metadata": {},
-          "address": "4312"
+          "address": "4325"
         }
       ],
       "metadata": {
@@ -29905,16 +29922,16 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 24.81191,
-        "total_code": "513880",
-        "matched_code": "64296",
-        "matched_code_percent": 12.51187,
+        "fuzzy_match_percent": 25.745148,
+        "total_code": "513893",
+        "matched_code": "68130",
+        "matched_code_percent": 13.257625,
         "matched_data_percent": 100.0,
-        "total_functions": 2203,
-        "matched_functions": 656,
-        "matched_functions_percent": 29.777578,
+        "total_functions": 2204,
+        "matched_functions": 680,
+        "matched_functions_percent": 30.852995,
         "complete_code": "7437",
-        "complete_code_percent": 1.447225,
+        "complete_code_percent": 1.4471884,
         "complete_data_percent": 100.0,
         "total_units": 110,
         "complete_units": 3

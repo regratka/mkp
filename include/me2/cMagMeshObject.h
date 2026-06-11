@@ -288,7 +288,7 @@ public:
 	/* 100597E0 */ void SetFreeDestinationDir(bool param_1);
 	/* 100597F0 */ void EnableDynamicLight(bool param_1);
 	/* 10059820 */ void SetUp(float param_1);
-	/* 10059B90 */ uchar GetUp(uint* param_1);
+	/* 10059B90 */ D3DXVECTOR3 GetUp();
 	/* 10059BC0 */ void SetRight(float param_1);
 	/* 10059F50 */ uchar GetRight(uint* param_1);
 	/* 10059F80 */ void SetFreeRotationMatrix(bool param_1);
