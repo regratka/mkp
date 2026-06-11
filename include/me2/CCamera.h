@@ -36,7 +36,7 @@ public:
 	/* 1005FF30 */ void SetUp(D3DXVECTOR3 param_1);
 	/* 10060210 */ void SetRight(D3DXVECTOR3 param_1);
 
-private:
+protected:
 	/* 0xd10 */ bool isFreeRotationMatrix;
 	/* 0xd14 */ float fov;
 	/* 0xd18 */ float nearPlane;

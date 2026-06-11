@@ -206,7 +206,7 @@
 ??_ECCamera@@UAEPAXI@Z;CCamera::scalar_destructor;0x1000bf90;0x57;__thiscall;;CCamera*;CCamera*;uchar
 ??0CFreeCamera@@QAE@ABV0@@Z;CFreeCamera::CFreeCamera;0x1000bff0;0x12a;__thiscall;;uchar;CFreeCamera*;CFreeCamera*
 ??4CFreeCamera@@QAEAAV0@ABV0@@Z;CFreeCamera::operator=;0x1000c120;0x11e;__thiscall;;CFreeCamera*;CFreeCamera*;CFreeCamera*
-;CFreeCamera::scalar_destructor;0x1000c240;0x57;__thiscall;;CFreeCamera*;CFreeCamera*;uchar
+??_ECFreeCamera@@UAEPAXI@Z;CFreeCamera::scalar_destructor;0x1000c240;0x57;__thiscall;;CFreeCamera*;CFreeCamera*;uchar
 ?getActiveList@pgTerrain@@QAEAAPAVpgTerrainPatchBase@@XZ;pgTerrain::getActiveList;0x1000c2a0;0x4;__thiscall;;pgTerrainPatchBase**;pgTerrain*
 ?setMaxError@pgTerrain@@QAEXM@Z;pgTerrain::setMaxError;0x1000c2b0;0xa;__thiscall;;void;pgTerrain*;float
 ?getMaxError@pgTerrain@@QBEMXZ;pgTerrain::getMaxError;0x1000c2c0;0x4;__thiscall;;float;pgTerrain*
@@ -530,7 +530,7 @@
 ;CGame::scalar_destructor;0x1001a640;0x57;__thiscall;;CGame*;CGame*;uchar
 ??0CCollisionCamera@@QAE@ABV0@@Z;CCollisionCamera::CCollisionCamera;0x1001a6a0;0x25e;__thiscall;;uchar;CCollisionCamera*;CCollisionCamera*
 ??4CCollisionCamera@@QAEAAV0@ABV0@@Z;CCollisionCamera::operator=;0x1001a900;0x252;__thiscall;;CCollisionCamera*;CCollisionCamera*;CCollisionCamera*
-;CCollisionCamera::scalar_destructor;0x1001ab60;0x57;__thiscall;;CCollisionCamera*;CCollisionCamera*;uchar
+??_ECCollisionCamera@@UAEPAXI@Z;CCollisionCamera::scalar_destructor;0x1001ab60;0x57;__thiscall;;CCollisionCamera*;CCollisionCamera*;uchar
 ?MakeUpperCase@@YAXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z;MakeUpperCase;0x1001abc0;0xc9;__cdecl;;void;basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_>*
 ??0CParticle@@QAE@XZ;CParticle::CParticle;0x1001ac90;0x10b;__thiscall;;uchar;CParticle*
 ??1CParticle@@UAE@XZ;CParticle::~CParticle;0x1001ada0;0x5b;__thiscall;;void;CParticle*
@@ -1816,7 +1816,7 @@
 ?SetFreeDestinationDir@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::SetFreeDestinationDir;0x100597e0;0xd;__thiscall;;void;cMagMeshObject*;bool
 ?EnableDynamicLight@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::EnableDynamicLight;0x100597f0;0x2f;__thiscall;;void;cMagMeshObject*;bool
 ?SetUp@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetUp;0x10059820;0x370;__thiscall;;void;cMagMeshObject*;float
-?GetUp@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetUp;0x10059b90;0x21;__thiscall;;uchar;cMagMeshObject*;uint*
+?GetUp@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetUp;0x10059b90;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
 ?SetRight@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetRight;0x10059bc0;0x38d;__thiscall;;void;cMagMeshObject*;float
 ?GetRight@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetRight;0x10059f50;0x21;__thiscall;;uchar;cMagMeshObject*;uint*
 ?SetFreeRotationMatrix@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::SetFreeRotationMatrix;0x10059f80;0xd;__thiscall;;void;cMagMeshObject*;bool
@@ -2051,18 +2051,18 @@
 ?SetDistance@CCollisionCamera@@QAEXM@Z;CCollisionCamera::SetDistance;0x10060df0;0xd;__thiscall;;void;CCollisionCamera*;float
 ?SetLookAtAngle@CCollisionCamera@@QAEXM@Z;CCollisionCamera::SetLookAtAngle;0x10060e00;0xd;__thiscall;;void;CCollisionCamera*;float
 ?OnInputKey@CCollisionCamera@@UAEXPAE@Z;CCollisionCamera::OnInputKey;0x10060e10;0x1b9;__thiscall;;void;CCollisionCamera*;uchar*
-?GetObservedPosition@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetObservedPosition;0x10060fd0;0x6e;__thiscall;;D3DXVECTOR3*;CCollisionCamera*;D3DXVECTOR3*
-?GetOffset@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetOffset;0x10061040;0x46;__thiscall;;D3DXVECTOR3*;CCollisionCamera*;D3DXVECTOR3*
-?GetRadius@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetRadius;0x10061090;0x21;__thiscall;;uchar;CCollisionCamera*;uint*
+?GetObservedPosition@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetObservedPosition;0x10060fd0;0x6e;__thiscall;;D3DXVECTOR3;CCollisionCamera*
+?GetOffset@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetOffset;0x10061040;0x46;__thiscall;;D3DXVECTOR3;CCollisionCamera*
+?GetRadius@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetRadius;0x10061090;0x21;__thiscall;;D3DXVECTOR3;CCollisionCamera*
 ?UpdateView@CCollisionCamera@@QAEXXZ;CCollisionCamera::UpdateView;0x100610c0;0x44;__thiscall;;void;CCollisionCamera*
 ?GetDistenceToObserved@CCollisionCamera@@QAEMXZ;CCollisionCamera::GetDistenceToObserved;0x10061110;0x72;__thiscall;;float;CCollisionCamera*
-?Update2@CCollisionCamera@@QAEXM@Z;CCollisionCamera::Update2;0x10061190;0x1f1;__thiscall;;void;CCollisionCamera*;float
+?Update2@CCollisionCamera@@QAEXM@Z;CCollisionCamera::Update2;0x10061190;0x41a;__thiscall;;void;CCollisionCamera*;float
 ?SetRotSpeedY@CCollisionCamera@@QAEXM@Z;CCollisionCamera::SetRotSpeedY;0x100615b0;0xd;__thiscall;;void;CCollisionCamera*;float
 ?Update3@CCollisionCamera@@QAEXM@Z;CCollisionCamera::Update3;0x100615c0;0x149;__thiscall;;void;CCollisionCamera*;float
 ?ReadSettings@CCollisionCamera@@QAEXPAD@Z;CCollisionCamera::ReadSettings;0x10061740;0x268;__thiscall;;void;CCollisionCamera*;char*
 ?SetOppositeDirection@CCollisionCamera@@QAEX_N@Z;CCollisionCamera::SetOppositeDirection;0x100619b0;0x17;__thiscall;;void;CCollisionCamera*;bool
 ?GetOppositeDirection@CCollisionCamera@@QAE_NXZ;CCollisionCamera::GetOppositeDirection;0x100619d0;0x7;__thiscall;;bool;CCollisionCamera*
-?GetObservedDirection@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetObservedDirection;0x100619e0;0xa9;__thiscall;;D3DXVECTOR3*;CCollisionCamera*;D3DXVECTOR3*
+?GetObservedDirection@CCollisionCamera@@QAE?AUD3DXVECTOR3@@XZ;CCollisionCamera::GetObservedDirection;0x100619e0;0xa9;__thiscall;;D3DXVECTOR3;CCollisionCamera*
 ?Pause@CCollisionCamera@@QAEX_N@Z;CCollisionCamera::Pause;0x10061a90;0x22;__thiscall;;void;CCollisionCamera*;bool
 ?AfterPauseDelay@CCollisionCamera@@QAEX_N@Z;CCollisionCamera::AfterPauseDelay;0x10061ac0;0xd;__thiscall;;void;CCollisionCamera*;bool
 ;FUN_10061b10;0x10061b10;0xa;__stdcall;;uchar
@@ -3300,7 +3300,7 @@
 ;collision::FUN100a6300;0x100a6300;0x302;__thiscall;;bool;collision*;D3DXVECTOR3;D3DXVECTOR3;D3DXVECTOR3* const;float*;D3DXVECTOR3*
 ;FUN_100a6610;0x100a6610;0x385;__thiscall;;float*;void*;float*;int;float*;int
 ;FUN_100a69a0;0x100a69a0;0x223;__thiscall;;float*;void*;float*;float;float;float;float;float;float;float;float;float;uint
-;FUN_100a6bd0;0x100a6bd0;0xd;__thiscall;;uchar;void*;uint
+;collision::FUN100a6bd0;0x100a6bd0;0xd;__thiscall;;void;collision*;CCollisionCamera*
 ;FUN_100a6be0;0x100a6be0;0xc3;__thiscall;;uchar;void*;float
 ;FUN_100a6cb0;0x100a6cb0;0x1e;__stdcall;;ulong
 ;FUN_100a6cd0;0x100a6cd0;0x79;__fastcall;;uchar;cMagLog*
