@@ -2050,7 +2050,7 @@ void cMagMeshObject::SetUp(float param_1) {
 }
 
 /* 10059B90-10059BB1 00021	*/
-uchar cMagMeshObject::GetUp(uint* param_1) {
+D3DXVECTOR3 cMagMeshObject::GetUp() {
 	return 0;
 }
 
