@@ -27,13 +27,13 @@ void CPlayerTPP::OnActivateLevel() {
 }
 
 /* 408840-408847 00007	*/
-void* CPlayerTPP::FUN00408840() {
+CCollisionCamera* CPlayerTPP::FUN00408840() {
 	return 0;
 }
 
 /* 4094C0-4094E0 00020	*/
-uchar CPlayerTPP::OnPlaySoundEnd(int param_1) {
-	return 0;
+void CPlayerTPP::OnPlaySoundEnd(int param_1) {
+	return;
 }
 
 /* 4094E0-4094F1 00011	*/

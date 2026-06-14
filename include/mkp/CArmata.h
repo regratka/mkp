@@ -12,7 +12,7 @@
 
 class CArmata : public cMagMeshObject {
 public:
-	/* 4262D0 */ void OnLoadChunk(_ED_CHUNK param_1, FILE* param_2);
+	/* 4262D0 */ void OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2);
 	/* 439F40 */ CArmata();
 	/* 43A030 */ virtual ~CArmata();
 	/* 43A0B0 */ void* EXP();
@@ -35,11 +35,11 @@ private:
 	/* 0x2731 */ uchar field_0x2731[0x2734-0x2731];
 	/* 0x2734 */ cKbSettings kbSettings;
 	/* 0x2a28 */ float unk_2a28;
-	/* 0x2a2c */ int unk_2a2c;
-	/* 0x2a30 */ int unk_2a30;
-	/* 0x2a34 */ int unk_2a34;
+	/* 0x2a2c */ float unk_2a2c;
+	/* 0x2a30 */ float unk_2a30;
+	/* 0x2a34 */ float unk_2a34;
 	/* 0x2a38 */ CCollisionCamera* camera;
-	/* 0x2a3c */ cMagKernel* unk_2a3c;
+	/* 0x2a3c */ cMagMeshObject* unk_2a3c;
 	/* 0x2a40 */ std::vector<CArmataPocisk*> bullets;
 	/* 0x2a50 */ int unk_2a50;
 	/* 0x2a54 */ bool unk_2a54;

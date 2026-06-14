@@ -32,7 +32,7 @@ public:
 	/* 10061A90 */ void Pause(bool param_1);
 	/* 10061AC0 */ void AfterPauseDelay(bool param_1);
 
-private:
+public:
 	/* 0xdec */ float rotSpeedY;
 	/* 0xdf0 */ D3DXVECTOR3 unk_df0;
 	/* 0xdfc */ cMagMeshObject* observedObject;

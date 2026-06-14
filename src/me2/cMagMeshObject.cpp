@@ -2055,11 +2055,11 @@ D3DXVECTOR3 cMagMeshObject::GetUp() {
 }
 
 /* 10059BC0-10059F4D 0038D	*/
-void cMagMeshObject::SetRight(float param_1) {
+void cMagMeshObject::SetRight(D3DXVECTOR3 param_1) {
 }
 
 /* 10059F50-10059F71 00021	*/
-uchar cMagMeshObject::GetRight(uint* param_1) {
+D3DXVECTOR3 cMagMeshObject::GetRight() {
 	return 0;
 }
 

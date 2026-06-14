@@ -289,8 +289,8 @@ public:
 	/* 100597F0 */ void EnableDynamicLight(bool param_1);
 	/* 10059820 */ void SetUp(float param_1);
 	/* 10059B90 */ D3DXVECTOR3 GetUp();
-	/* 10059BC0 */ void SetRight(float param_1);
-	/* 10059F50 */ uchar GetRight(uint* param_1);
+	/* 10059BC0 */ void SetRight(D3DXVECTOR3 param_1);
+	/* 10059F50 */ D3DXVECTOR3 GetRight();
 	/* 10059F80 */ void SetFreeRotationMatrix(bool param_1);
 	/* 10059F90 */ bool GetFreeRotationMatrix();
 	/* 10059FA0 */ void SetOutsideViewPhysicsActivityRange(float param_1);

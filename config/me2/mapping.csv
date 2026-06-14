@@ -1817,8 +1817,8 @@
 ?EnableDynamicLight@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::EnableDynamicLight;0x100597f0;0x2f;__thiscall;;void;cMagMeshObject*;bool
 ?SetUp@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetUp;0x10059820;0x370;__thiscall;;void;cMagMeshObject*;float
 ?GetUp@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetUp;0x10059b90;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
-?SetRight@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetRight;0x10059bc0;0x38d;__thiscall;;void;cMagMeshObject*;float
-?GetRight@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetRight;0x10059f50;0x21;__thiscall;;uchar;cMagMeshObject*;uint*
+?SetRight@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetRight;0x10059bc0;0x38d;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
+?GetRight@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetRight;0x10059f50;0x21;__thiscall;;D3DXVECTOR3;cMagMeshObject*
 ?SetFreeRotationMatrix@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::SetFreeRotationMatrix;0x10059f80;0xd;__thiscall;;void;cMagMeshObject*;bool
 ?GetFreeRotationMatrix@cMagMeshObject@@QAE_NXZ;cMagMeshObject::GetFreeRotationMatrix;0x10059f90;0x7;__thiscall;;bool;cMagMeshObject*
 ?SetOutsideViewPhysicsActivityRange@cMagMeshObject@@QAEXM@Z;cMagMeshObject::SetOutsideViewPhysicsActivityRange;0x10059fa0;0x1b;__thiscall;;void;cMagMeshObject*;float
