@@ -11817,14 +11817,14 @@
     {
       "name": "me2/cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 73.960495,
+        "fuzzy_match_percent": 73.960304,
         "total_code": "32312",
-        "matched_code": "10777",
-        "matched_code_percent": 33.352936,
+        "matched_code": "10730",
+        "matched_code_percent": 33.207478,
         "matched_data_percent": 100.0,
         "total_functions": 144,
-        "matched_functions": 107,
-        "matched_functions_percent": 74.30556,
+        "matched_functions": 106,
+        "matched_functions_percent": 73.61111,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11832,7 +11832,7 @@
         {
           "name": ".text",
           "size": "32312",
-          "fuzzy_match_percent": 73.960495,
+          "fuzzy_match_percent": 73.960304,
           "metadata": {}
         }
       ],
@@ -12845,7 +12845,7 @@
         {
           "name": "?SetActiveCamera@cMagGameObject@@QAEXPAVCCamera@@@Z",
           "size": "47",
-          "fuzzy_match_percent": 100.0,
+          "fuzzy_match_percent": 99.86667,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetActiveCamera(class CCamera *)"
           },
