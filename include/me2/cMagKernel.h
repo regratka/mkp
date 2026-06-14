@@ -12,9 +12,10 @@ class cMagMeshObject;
 struct MsgObject;
 struct StateObject_Str;
 struct _ED_CHUNK {
-	uint _1;
-	uint _2;
-	uint _3;
+	short unk_00;
+	short chunkType;
+	int chunkDataSize;
+	int chunkEndPos;
 };
 
 
@@ -35,7 +36,7 @@ public:
 	/* 100117f0 */ virtual void OnDestinationPos(D3DXVECTOR3 param_1); /* vtbl 024 */
 	/* 10011760 */ virtual void OnChangeMovement(int param_1); /* vtbl 0x28 */
 
-	virtual void OnLoadChunk(_ED_CHUNK, FILE*); /* vtbl 0x2c */
+	virtual void OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2); /* vtbl 0x2c */
 
 	/* 100116a0 */ virtual void OnActivate(); /* vtbl 0x30 */
 	/* 100116e0 */ virtual void OnActivateLevel(); /* vtbl 0x34 */

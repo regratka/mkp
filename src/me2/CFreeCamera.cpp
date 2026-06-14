@@ -122,7 +122,7 @@ bool CFreeCamera::CheckWindowActivation()
 	{
 		if (!unk_e10)
 		{
-			OnDeactivateView();
+			OnActivateView();
 		}
 		unk_e10 = true;
 	}

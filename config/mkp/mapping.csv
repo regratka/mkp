@@ -192,7 +192,7 @@
 ;FUN_00409390;0x409390;0x5c;__fastcall;;uchar;uchar
 ;FUN_004093f0;0x4093f0;0x77;__fastcall;;uchar;uchar
 ;FUN_00409470;0x409470;0x4b;__thiscall;;uchar;void*;int
-;CPlayerTPP::OnPlaySoundEnd;0x4094c0;0x20;__thiscall;;uchar;CPlayerTPP*;int
+;CPlayerTPP::OnPlaySoundEnd;0x4094c0;0x20;__thiscall;;void;CPlayerTPP*;int
 ;CPlayerTPP::OnFrame;0x4094e0;0x11;__fastcall;;uchar;uchar
 ;CPlayerTPP::OnChangeMovement;0x409500;0xd;__thiscall;;uchar;CPlayerTPP*;uint
 ;FUN_00409510;0x409510;0x72;__fastcall;;uchar;uchar
@@ -910,7 +910,7 @@
 ;CPlanszaZadanie05::OnMouseArrive;0x425f60;0xec;__thiscall;;uchar;CPlanszaZadanie05*;int
 ;CPlanszaZadanie05::OnInputMouse;0x426050;0x227;__thiscall;;uchar;CPlanszaZadanie05*;uint;uint;char
 ;CPlanszaZadanie05::OnCollisionObject;0x426280;0x4c;__thiscall;;uchar;CPlanszaZadanie05*;int*
-?OnLoadChunk@CArmata@@UAEXU_ED_CHUNK@@PAU_iobuf@@@Z;CArmata::OnLoadChunk;0x4262d0;0x2a;__thiscall;;void;CArmata*;_ED_CHUNK;FILE*
+?OnLoadChunk@CArmata@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z;CArmata::OnLoadChunk;0x4262d0;0x2a;__thiscall;;void;CArmata*;_ED_CHUNK;std::ifstream&
 ;CPlanszaZadanie01::Save;0x426300;0xa4;__thiscall;;uchar;CPlanszaZadanie01*;int*
 ;CPlanszaZadanie05::Load;0x4263b0;0x34;__thiscall;;uchar;CPlanszaZadanie05*;void*;uint;int
 ;FUN_00426400;0x426400;0xa;__stdcall;;uchar

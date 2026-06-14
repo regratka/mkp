@@ -3,7 +3,10 @@
 
 #include <globals.h>
 
-class CPlayerTPP {
+#include "cMagMeshObject.h"
+#include "CCollisionCamera.h"
+
+class CPlayerTPP : public cMagMeshObject {
 
 	class STATE_Death {
 	public:
@@ -59,8 +62,8 @@ public:
 	/* 408180 */ void* EXP();
 	/* 4081E0 */ void OnActivate();
 	/* 4082F0 */ void OnActivateLevel();
-	/* 408840 */ void* FUN00408840();
-	/* 4094C0 */ uchar OnPlaySoundEnd(int param_1);
+	/* 408840 */ CCollisionCamera* FUN00408840();
+	/* 4094C0 */ void OnPlaySoundEnd(int param_1);
 	/* 4094E0 */ uchar OnFrame(uchar param_1);
 	/* 409500 */ uchar OnChangeMovement(uint param_1);
 	/* 409650 */ uchar OnCollisionObject(int* param_1);
