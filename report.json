@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 20.396614,
+    "fuzzy_match_percent": 20.59128,
     "total_code": "677825",
-    "matched_code": "72544",
-    "matched_code_percent": 10.702468,
+    "matched_code": "73871",
+    "matched_code_percent": 10.898241,
     "matched_data_percent": 100.0,
     "total_functions": 3090,
-    "matched_functions": 745,
-    "matched_functions_percent": 24.110033,
-    "complete_code": "9466",
-    "complete_code_percent": 1.3965256,
+    "matched_functions": 753,
+    "matched_functions_percent": 24.36893,
+    "complete_code": "10793",
+    "complete_code_percent": 1.592299,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 15
+    "complete_units": 16
   },
   "units": [
     {
@@ -11817,14 +11817,14 @@
     {
       "name": "me2/cMagGameObject",
       "measures": {
-        "fuzzy_match_percent": 73.960304,
+        "fuzzy_match_percent": 73.960495,
         "total_code": "32312",
-        "matched_code": "10730",
-        "matched_code_percent": 33.207478,
+        "matched_code": "10777",
+        "matched_code_percent": 33.352936,
         "matched_data_percent": 100.0,
         "total_functions": 144,
-        "matched_functions": 106,
-        "matched_functions_percent": 73.61111,
+        "matched_functions": 107,
+        "matched_functions_percent": 74.30556,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11832,7 +11832,7 @@
         {
           "name": ".text",
           "size": "32312",
-          "fuzzy_match_percent": 73.960304,
+          "fuzzy_match_percent": 73.960495,
           "metadata": {}
         }
       ],
@@ -12845,7 +12845,7 @@
         {
           "name": "?SetActiveCamera@cMagGameObject@@QAEXPAVCCamera@@@Z",
           "size": "47",
-          "fuzzy_match_percent": 99.86667,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagGameObject::SetActiveCamera(class CCamera *)"
           },
@@ -23203,75 +23203,104 @@
     {
       "name": "mkp/CBalon",
       "measures": {
-        "fuzzy_match_percent": 0.56518465,
+        "fuzzy_match_percent": 100.0,
         "total_code": "1327",
+        "matched_code": "1327",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 8,
+        "matched_functions": 8,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1327",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "1327",
-          "fuzzy_match_percent": 0.56518465,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CBalon::CBalon",
+          "name": "??0CBalon@@QAE@XZ",
           "size": "137",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CBalon::CBalon(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CBalon::scalar_destructor",
+          "name": "??_GCBalon@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CBalon::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "137"
         },
         {
-          "name": "CBalon::~CBalon",
+          "name": "??1CBalon@@UAE@XZ",
           "size": "60",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CBalon::~CBalon(void)"
+          },
           "address": "167"
         },
         {
           "name": "?EXP@CBalon@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CBalon::EXP(void)"
           },
           "address": "227"
         },
         {
-          "name": "CBalon::OnAction",
+          "name": "?OnAction@CBalon@@UAEXXZ",
           "size": "31",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBalon::OnAction(void)"
+          },
           "address": "317"
         },
         {
-          "name": "CBalon::OnFrame",
+          "name": "?OnFrame@CBalon@@UAEXXZ",
           "size": "214",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBalon::OnFrame(void)"
+          },
           "address": "348"
         },
         {
-          "name": "CBalon::OnDestinationPos",
+          "name": "?OnDestinationPos@CBalon@@UAEXUD3DXVECTOR3@@@Z",
           "size": "67",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBalon::OnDestinationPos(struct D3DXVECTOR3)"
+          },
           "address": "562"
         },
         {
-          "name": "CBalon::OnLoadChunk",
+          "name": "?OnLoadChunk@CBalon@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "698",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBalon::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
           "address": "629"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -30107,19 +30136,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 3.6217327,
+        "fuzzy_match_percent": 4.4266396,
         "total_code": "163932",
-        "matched_code": "4367",
-        "matched_code_percent": 2.6639094,
+        "matched_code": "5694",
+        "matched_code_percent": 3.4733913,
         "matched_data_percent": 100.0,
         "total_functions": 886,
-        "matched_functions": 64,
-        "matched_functions_percent": 7.2234764,
-        "complete_code": "2029",
-        "complete_code_percent": 1.2377083,
+        "matched_functions": 72,
+        "matched_functions_percent": 8.1264105,
+        "complete_code": "3356",
+        "complete_code_percent": 2.0471902,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 12
+        "complete_units": 13
       }
     }
   ]
