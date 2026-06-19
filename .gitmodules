@@ -1,0 +1,3 @@
+[submodule "utils/ghidra_delinker"]
+	path = utils/ghidra_delinker
+	url = https://github.com/Aszman/ghidra-delinker-extension.git

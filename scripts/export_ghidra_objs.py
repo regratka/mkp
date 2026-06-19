@@ -22,6 +22,7 @@ def exportObjs(unit: DecompUnit):
                 [
                     "ExportDelinker.java", 
                     str(unit.configPath/"units_listing.csv"),
+                    str(unit.configPath/"mapping.csv"),
                     str(unit.buildOrig),
                 ],
             ],

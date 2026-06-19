@@ -94,6 +94,7 @@ public class ImportFromCsv extends GhidraScript
             if (!mangledName.isEmpty() && getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
                 printf("Creating label %s\n", mangledName);
                 createLabel(addr, mangledName, false);
+                createLabel(addr, mangledName, curNamespace, false, SourceType.USER_DEFINED);
             }
         }
 
