@@ -124,9 +124,9 @@ public:
 
 	virtual void OnLostAdhesion(); /* vtbl 0x110 */
 
-	/* 10012460 */ virtual void Load(std::ifstream&, _ED_CHUNK);  /* vtbl 0x114 */
+	/* 10012460 */ virtual void Load(std::ifstream& param_1, _ED_CHUNK param_2);  /* vtbl 0x114 */
 
-	virtual void Save(); /* vtbl 0x118 */
+	virtual void Save(std::ostream& param_1); /* vtbl 0x118 */
 	virtual void OnPhysicsUpdate(); /* vtbl 0x11c */
 
 	/* 10012270 */ virtual void OnDestTime(float param_1); /* vtbl 0x120 */

@@ -31,6 +31,10 @@ CCollisionCamera* CPlayerTPP::FUN00408840() {
 	return 0;
 }
 
+/* 409260-409384 00124	*/
+void CPlayerTPP::FUN00409260() {
+}
+
 /* 4094C0-4094E0 00020	*/
 void CPlayerTPP::OnPlaySoundEnd(int param_1) {
 	return;
