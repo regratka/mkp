@@ -14,6 +14,7 @@ public:
 	/* 100304E0 */ void TextureErrorLog(char const * p_format, ...);
 	/* 10030560 */ void TexturesLog(char const * formp_formatat, ...);
 	/* 100305e0 */ void FileLog(char const * p_format, ...);
+	/* 100305e0 */ void OutputLog(char const * p_format, ...);
 	/* 10030660 */ void DummyLog(char const * p_format, ...);
 	/* 100306E0 */ void DebugLog(char const * format, ...);
 	/* 10030730 */ void DebugLog(D3DXMATRIX matrix);
