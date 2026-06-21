@@ -95,6 +95,21 @@ void cMagLog::FileLog(char const * p_format, ...) {
     DebugLog(buffer);
 }
 
+/* 100305E0-10030656 00076	*/
+void cMagLog::OutputLog(char const * p_format, ...) {
+    if (logEnabled == false) {
+        return;
+    }
+    char buffer[512];
+    va_list args;
+    va_start(args, p_format);
+    _snprintf(buffer, 0x200, p_format, args);
+    FILE* dataFile = fopen(logFilename, "a");
+    fprintf(dataFile, "%s\n", buffer);
+    fclose(dataFile);
+    DebugLog(buffer);
+}
+
 /* 10030660-100306D7 00077	*/
 void cMagLog::DummyLog(char const * p_format, ...) {
     if (logEnabled == false) {

@@ -1029,7 +1029,8 @@
 ?CrashLog@cMagLog@@QAAXPBDZZ;cMagLog::CrashLog;0x10030460;0x77;__cdecl;varargs;void;cMagLog*;char*
 ?TextureErrorLog@cMagLog@@QAAXPBDZZ;cMagLog::TextureErrorLog;0x100304e0;0x77;__cdecl;varargs;void;cMagLog*;char*
 ?TexturesLog@cMagLog@@QAAXPBDZZ;cMagLog::TexturesLog;0x10030560;0x77;__cdecl;varargs;void;cMagLog*;char*
-?OutputLog@cMagLog@@QAAXPBDZZ;cMagLog::FileLog;0x100305e0;0x76;__cdecl;varargs;void;cMagLog*;char*
+?FileLog@cMagLog@@QAAXPBDZZ;cMagLog::FileLog;0x100305e0;0x76;__cdecl;varargs;void;cMagLog*;char*
+?OutputLog@cMagLog@@QAAXPBDZZ;cMagLog::OutputLog;0x100305e0;0x76;__cdecl;varargs;void;cMagLog*;char*
 ?DummyLog@cMagLog@@QAAXPBDZZ;cMagLog::DummyLog;0x10030660;0x77;__cdecl;varargs;void;cMagLog*;char*
 ?DebugLog@cMagLog@@QAAXPBDZZ;cMagLog::DebugLog;0x100306e0;0x44;__cdecl;varargs;void;cMagLog*;char*
 ?DebugLog@cMagLog@@QAEXUD3DXMATRIX@@@Z;cMagLog::DebugLog;0x10030730;0x3;__thiscall;;void;cMagLog*;D3DXMATRIX
@@ -1845,7 +1846,8 @@
 ?SetRotationMatrix@cMagMeshObject@@QAEXUD3DXMATRIX@@@Z;cMagMeshObject::SetRotationMatrix;0x1005a4b0;0x10a;__thiscall;;void;cMagMeshObject*;D3DXMATRIX
 ?EnableNBFacesCollision@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::EnableNBFacesCollision;0x1005a5c0;0xd;__thiscall;;void;cMagMeshObject*;bool
 ?EnableNBFacesCollision@cMagMeshObject@@QAE_NXZ;cMagMeshObject::EnableNBFacesCollision;0x1005a5d0;0x7;__thiscall;;bool;cMagMeshObject*
-?DisableRenderingMeshInSector@cMagSector@@QAEXPAVcMagMeshObject@@@Z;cMagLog::DebugLog;0x1005a5e0;0x3;__thiscall;;void;cMagLog*;D3DXVECTOR3*
+?DebugLog@cMagLog@@QAEXPAUD3DXVECTOR3@@@Z;cMagLog::DebugLog;0x1005a5e0;0x3;__thiscall;;void;cMagLog*;D3DXVECTOR3*
+?DisableRenderingMeshInSector@cMagSector@@QAEXPAVcMagMeshObject@@@Z;cMagMeshObject::DisableRenderingMeshInSector;0x1005a5e0;0x3;__thiscall;;void;cMagMeshObject*
 ?AddLightmapMesh@cMagGameObject@@QAEXPAUMesh@@PAD@Z;cMagGameObject::AddLightmapMesh;0x1005a5f0;0x3;__thiscall;;void;cMagGameObject*;Mesh*;char*
 ?ActivateLightMap@cMagMeshObject@@QAEXH@Z;cMagMeshObject::ActivateLightMap;0x1005a600;0xd;__thiscall;;void;cMagMeshObject*;int
 ?SetEllipsoid@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetEllipsoid;0x1005a610;0x31;__thiscall;;void;cMagMeshObject*;uint;uint;uint

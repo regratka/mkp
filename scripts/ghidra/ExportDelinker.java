@@ -107,7 +107,6 @@ public class ExportDelinker extends GhidraScript
                 printf("Handling %s.obj - class %s\n", objClass, ghidraClassName);
                 
                 Set<String> classNames = preferredNamesByClass.get(ghidraClassName);
-                printf(classNames.toString());
                 if (classNames != null) {
                     for (String name : classNames) {
                         exporter.getActiveSymbolPreference().addPreferredName(name);
