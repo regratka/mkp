@@ -1,5 +1,13 @@
 #include "CBalon.h"
 
+/* 419BA0-419BA1 00001	*/
+void CBalon::OnActivate() {
+}
+
+/* 419BA0-419BA1 00001	*/
+void CBalon::OnActivateLevel() {
+}
+
 /* 4400B0-440139 00089	*/
 CBalon::CBalon() {
 	pointsLoadBuffer = NULL;

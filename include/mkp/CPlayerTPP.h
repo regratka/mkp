@@ -3,10 +3,11 @@
 
 #include <globals.h>
 
-#include "cMagMeshObject.h"
 #include "CCollisionCamera.h"
+#include "_Player.h"
+#include "CHudGratka.h"
 
-class CPlayerTPP : public cMagMeshObject {
+class CPlayerTPP : public _Player {
 
 	class STATE_Death {
 	public:
@@ -63,6 +64,7 @@ public:
 	/* 4081E0 */ void OnActivate();
 	/* 4082F0 */ void OnActivateLevel();
 	/* 408840 */ CCollisionCamera* FUN00408840();
+	/* 409260 */ void FUN00409260();
 	/* 4094C0 */ void OnPlaySoundEnd(int param_1);
 	/* 4094E0 */ uchar OnFrame(uchar param_1);
 	/* 409500 */ uchar OnChangeMovement(uint param_1);
@@ -74,6 +76,13 @@ public:
 	/* 40C760 */ uchar OnLoadChunk(uint param_1, int param_2, uint param_3, void* param_4);
 	/* 40C790 */ uchar Save(int* param_1);
 	/* 40C8A0 */ uchar Load(void* param_1, uint param_2, int param_3);
+
+public: 
+	/* 0x2658 */ uchar field_0x2658[0x3660-0x2658]; 
+	/* 0x3660 */ CCollisionCamera* unk_3660; 
+	/* 0x3664 */ uchar field_0x3664[0x3990-0x3664]; 
+	/* 0x3990 */ CHudGratka* unk_3990; 
+	/* 0x3994 */ uchar field_0x3994[0x3a30-0x3994]; 
 };
 
 

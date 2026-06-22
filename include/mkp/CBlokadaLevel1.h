@@ -3,17 +3,31 @@
 
 #include <globals.h>
 
-class CBlokadaLevel1 {
+#include "cMagMeshObject.h"
+
+struct CBlokadaLevel1SaveData{
+	/* 0x00 */ int unk_00;
+	/* 0x04 */ D3DXVECTOR3 unk_04;
+};
+
+class CBlokadaLevel1 : public cMagMeshObject {
 public:
+	/* 419BA0 */ void OnActivate();
+	/* 4262D0 */ void OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2);
 	/* 4406C0 */ CBlokadaLevel1();
-	/* 4406E0 */ uchar scalar_destructor(uchar param_1);
 	/* 440700 */ ~CBlokadaLevel1();
 	/* 440710 */ void* EXP();
 	/* 440770 */ void OnActivateLevel();
-	/* 4407D0 */ uchar OnCollisionObject(int* param_1);
-	/* 4408B0 */ uchar Save(int* param_1);
-	/* 4414D0 */ uchar OnPlaySoundEnd(int param_1);
-	/* 441920 */ uchar Load(void* param_1, uint param_2, int param_3);
+	/* 4407D0 */ void OnCollisionObject(cMagMeshObject* param_1);
+	/* 4408B0 */ void Save(std::ostream& param_1);
+	/* 4414D0 */ void OnPlaySoundEnd(int param_1);
+	/* 441920 */ void Load(std::ifstream& param_1, _ED_CHUNK param_2);
+
+private:
+	/* 0x2658 */ char unk_2658[200];
+	/* 0x2720 */ int unk_2720;
 };
+
+STATIC_ASSERT(sizeof(CBlokadaLevel1) == 0x2728);
 
 #endif

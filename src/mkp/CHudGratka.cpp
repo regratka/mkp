@@ -17,6 +17,10 @@ CHudGratka::~CHudGratka() {
 void CHudGratka::OnActivate() {
 }
 
+/* 42CC30-42CC77 00047	*/
+void CHudGratka::FUN0042CC30(bool param_1) {
+}
+
 /* 42CCF0-42CDFA 0010A	*/
 void CHudGratka::OnActivateLevel() {
 }
@@ -50,6 +54,11 @@ uchar CHudGratka::FUN0042d360(int param_1) {
 	return 0;
 }
 
+/* 42D450-42D457 00007	*/
+int CHudGratka::FUN0042d450() {
+	return 0;
+}
+
 /* 42D460-42D53C 000DC	*/
 uchar CHudGratka::FUN0042d460(int param_1) {
 	return 0;
@@ -60,9 +69,23 @@ uchar CHudGratka::FUN0042d6e0() {
 	return 0;
 }
 
+/* 42D750-42D778 00028	*/
+void CHudGratka::FUN0042d750(bool param_1) {
+}
+
 /* 42D780-42D805 00085	*/
 int CHudGratka::FUN0042d780(char* param_1) {
 	return 0;
+}
+
+/* 42D810-42D84E 0003E	*/
+void CHudGratka::FUN0042d810() {
+	
+}
+
+/* 42D850-42D874 00024	*/
+void CHudGratka::FUN0042d850() {
+	
 }
 
 /* 42DB90-42DD0A 0017A	*/

@@ -1,5 +1,10 @@
 #include "CArmataPocisk.h"
 
+/* 419BA0-419BA1 00001	*/
+void CArmataPocisk::OnActivateLevel() {
+}
+
+
 /* 43B090-43B0A3 00013	*/
 CArmataPocisk::CArmataPocisk() {
 }
