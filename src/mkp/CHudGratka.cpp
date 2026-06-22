@@ -69,6 +69,10 @@ uchar CHudGratka::FUN0042d6e0() {
 	return 0;
 }
 
+/* 42D750-42D778 00028	*/
+void CHudGratka::FUN0042d750(bool param_1) {
+}
+
 /* 42D780-42D805 00085	*/
 int CHudGratka::FUN0042d780(char* param_1) {
 	return 0;

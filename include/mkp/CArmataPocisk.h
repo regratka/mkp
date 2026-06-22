@@ -7,6 +7,7 @@
 
 class CArmataPocisk : public cMagMeshObject {
 public:
+	/* 419BA0 */ void OnActivateLevel();
 	/* 43B090 */ CArmataPocisk();
 	/* 43B0D0 */ virtual ~CArmataPocisk();
 	/* 43B0E0 */ void OnActivate();

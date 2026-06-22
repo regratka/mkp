@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 20.606247,
-    "total_code": "678053",
-    "matched_code": "74045",
-    "matched_code_percent": 10.920238,
+    "fuzzy_match_percent": 21.097006,
+    "total_code": "679638",
+    "matched_code": "77737",
+    "matched_code_percent": 11.438001,
     "matched_data_percent": 100.0,
-    "total_functions": 3092,
-    "matched_functions": 749,
-    "matched_functions_percent": 24.223803,
-    "complete_code": "12043",
-    "complete_code_percent": 1.7761148,
+    "total_functions": 3118,
+    "matched_functions": 799,
+    "matched_functions_percent": 25.625402,
+    "complete_code": "15735",
+    "complete_code_percent": 2.3152032,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 17
+    "complete_units": 21
   },
   "units": [
     {
@@ -22556,14 +22556,14 @@
       "name": "mkp/AIControlPoint",
       "measures": {
         "fuzzy_match_percent": 100.0,
-        "total_code": "176",
-        "matched_code": "176",
+        "total_code": "185",
+        "matched_code": "185",
         "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 6,
-        "matched_functions": 6,
+        "total_functions": 8,
+        "matched_functions": 8,
         "matched_functions_percent": 100.0,
-        "complete_code": "176",
+        "complete_code": "185",
         "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1,
@@ -22572,12 +22572,21 @@
       "sections": [
         {
           "name": ".text",
-          "size": "176",
+          "size": "185",
           "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
+        {
+          "name": "?OnActivate@AIControlPoint@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall AIControlPoint::OnActivate(void)"
+          },
+          "address": "0"
+        },
         {
           "name": "??0AIControlPoint@@QAE@XZ",
           "size": "25",
@@ -22585,7 +22594,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall AIControlPoint::AIControlPoint(void)"
           },
-          "address": "0"
+          "address": "1"
         },
         {
           "name": "??_GAIControlPoint@@UAEPAXI@Z",
@@ -22594,7 +22603,7 @@
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall AIControlPoint::`scalar deleting destructor'(unsigned int)"
           },
-          "address": "25"
+          "address": "26"
         },
         {
           "name": "??1AIControlPoint@@UAE@XZ",
@@ -22603,7 +22612,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall AIControlPoint::~AIControlPoint(void)"
           },
-          "address": "55"
+          "address": "56"
         },
         {
           "name": "?EXP@AIControlPoint@@QAEPAXXZ",
@@ -22612,7 +22621,16 @@
           "metadata": {
             "demangled_name": "public: void * __thiscall AIControlPoint::EXP(void)"
           },
-          "address": "66"
+          "address": "67"
+        },
+        {
+          "name": "?OnActivateLevel@AIControlPoint@@UAEXXZ",
+          "size": "8",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall AIControlPoint::OnActivateLevel(void)"
+          },
+          "address": "157"
         },
         {
           "name": "?FUN0043cee0@AIControlPoint@@QAE_NXZ",
@@ -22621,7 +22639,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall AIControlPoint::FUN0043cee0(void)"
           },
-          "address": "156"
+          "address": "165"
         },
         {
           "name": "?FUN0043cef0@AIControlPoint@@QAEX_N@Z",
@@ -22630,7 +22648,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall AIControlPoint::FUN0043cef0(bool)"
           },
-          "address": "163"
+          "address": "172"
         }
       ],
       "metadata": {
@@ -23126,14 +23144,14 @@
       "name": "mkp/CArmataPocisk",
       "measures": {
         "fuzzy_match_percent": 100.0,
-        "total_code": "343",
-        "matched_code": "343",
+        "total_code": "344",
+        "matched_code": "344",
         "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 6,
-        "matched_functions": 6,
+        "total_functions": 7,
+        "matched_functions": 7,
         "matched_functions_percent": 100.0,
-        "complete_code": "343",
+        "complete_code": "344",
         "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1,
@@ -23142,12 +23160,21 @@
       "sections": [
         {
           "name": ".text",
-          "size": "343",
+          "size": "344",
           "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
+        {
+          "name": "?OnActivateLevel@CArmataPocisk@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CArmataPocisk::OnActivateLevel(void)"
+          },
+          "address": "0"
+        },
         {
           "name": "??0CArmataPocisk@@QAE@XZ",
           "size": "19",
@@ -23155,7 +23182,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall CArmataPocisk::CArmataPocisk(void)"
           },
-          "address": "0"
+          "address": "1"
         },
         {
           "name": "??_GCArmataPocisk@@UAEPAXI@Z",
@@ -23164,7 +23191,7 @@
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CArmataPocisk::`scalar deleting destructor'(unsigned int)"
           },
-          "address": "19"
+          "address": "20"
         },
         {
           "name": "??1CArmataPocisk@@UAE@XZ",
@@ -23173,7 +23200,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall CArmataPocisk::~CArmataPocisk(void)"
           },
-          "address": "49"
+          "address": "50"
         },
         {
           "name": "?OnActivate@CArmataPocisk@@UAEXXZ",
@@ -23182,7 +23209,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CArmataPocisk::OnActivate(void)"
           },
-          "address": "61"
+          "address": "62"
         },
         {
           "name": "?FUN0043b1a0@CArmataPocisk@@QAEXUD3DXVECTOR3@@0@Z",
@@ -23191,7 +23218,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CArmataPocisk::FUN0043b1a0(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "253"
+          "address": "254"
         },
         {
           "name": "?OnCollisionObject@CArmataPocisk@@UAEXPAVcMagMeshObject@@@Z",
@@ -23200,7 +23227,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CArmataPocisk::OnCollisionObject(class cMagMeshObject *)"
           },
-          "address": "333"
+          "address": "334"
         }
       ],
       "metadata": {
@@ -23214,14 +23241,14 @@
       "name": "mkp/CBalon",
       "measures": {
         "fuzzy_match_percent": 100.0,
-        "total_code": "1327",
-        "matched_code": "1327",
+        "total_code": "1329",
+        "matched_code": "1329",
         "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 8,
-        "matched_functions": 8,
+        "total_functions": 10,
+        "matched_functions": 10,
         "matched_functions_percent": 100.0,
-        "complete_code": "1327",
+        "complete_code": "1329",
         "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1,
@@ -23230,12 +23257,30 @@
       "sections": [
         {
           "name": ".text",
-          "size": "1327",
+          "size": "1328",
           "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
+        {
+          "name": "?OnActivate@CBalon@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBalon::OnActivate(void)"
+          },
+          "address": "0"
+        },
+        {
+          "name": "?OnActivateLevel@CBalon@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBalon::OnActivateLevel(void)"
+          },
+          "address": "0"
+        },
         {
           "name": "??0CBalon@@QAE@XZ",
           "size": "137",
@@ -23243,7 +23288,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall CBalon::CBalon(void)"
           },
-          "address": "0"
+          "address": "1"
         },
         {
           "name": "??_GCBalon@@UAEPAXI@Z",
@@ -23252,7 +23297,7 @@
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CBalon::`scalar deleting destructor'(unsigned int)"
           },
-          "address": "137"
+          "address": "138"
         },
         {
           "name": "??1CBalon@@UAE@XZ",
@@ -23261,7 +23306,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall CBalon::~CBalon(void)"
           },
-          "address": "167"
+          "address": "168"
         },
         {
           "name": "?EXP@CBalon@@QAEPAXXZ",
@@ -23270,7 +23315,7 @@
           "metadata": {
             "demangled_name": "public: void * __thiscall CBalon::EXP(void)"
           },
-          "address": "227"
+          "address": "228"
         },
         {
           "name": "?OnAction@CBalon@@UAEXXZ",
@@ -23279,7 +23324,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CBalon::OnAction(void)"
           },
-          "address": "317"
+          "address": "318"
         },
         {
           "name": "?OnFrame@CBalon@@UAEXXZ",
@@ -23288,7 +23333,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CBalon::OnFrame(void)"
           },
-          "address": "348"
+          "address": "349"
         },
         {
           "name": "?OnDestinationPos@CBalon@@UAEXUD3DXVECTOR3@@@Z",
@@ -23297,7 +23342,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CBalon::OnDestinationPos(struct D3DXVECTOR3)"
           },
-          "address": "562"
+          "address": "563"
         },
         {
           "name": "?OnLoadChunk@CBalon@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
@@ -23306,7 +23351,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CBalon::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
           },
-          "address": "629"
+          "address": "630"
         }
       ],
       "metadata": {
@@ -23319,81 +23364,131 @@
     {
       "name": "mkp/CBlokadaLevel1",
       "measures": {
-        "fuzzy_match_percent": 0.89179546,
-        "total_code": "841",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "884",
+        "matched_code": "884",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 9,
+        "total_functions": 11,
+        "matched_functions": 11,
+        "matched_functions_percent": 100.0,
+        "complete_code": "884",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "841",
-          "fuzzy_match_percent": 0.89179546,
+          "size": "884",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CBlokadaLevel1::CBlokadaLevel1",
-          "size": "29",
-          "metadata": {},
+          "name": "?OnActivate@CBlokadaLevel1@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::OnActivate(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CBlokadaLevel1::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "29"
+          "name": "?OnLoadChunk@CBlokadaLevel1@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "42",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "1"
         },
         {
-          "name": "CBlokadaLevel1::~CBlokadaLevel1",
+          "name": "??0CBlokadaLevel1@@QAE@XZ",
+          "size": "29",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CBlokadaLevel1::CBlokadaLevel1(void)"
+          },
+          "address": "43"
+        },
+        {
+          "name": "??_GCBlokadaLevel1@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CBlokadaLevel1::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "72"
+        },
+        {
+          "name": "??1CBlokadaLevel1@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "59"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CBlokadaLevel1::~CBlokadaLevel1(void)"
+          },
+          "address": "102"
         },
         {
           "name": "?EXP@CBlokadaLevel1@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CBlokadaLevel1::EXP(void)"
           },
-          "address": "71"
+          "address": "114"
         },
         {
-          "name": "CBlokadaLevel1::OnActivateLevel",
+          "name": "?OnActivateLevel@CBlokadaLevel1@@UAEXXZ",
           "size": "95",
-          "metadata": {},
-          "address": "161"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::OnActivateLevel(void)"
+          },
+          "address": "204"
         },
         {
-          "name": "CBlokadaLevel1::OnCollisionObject",
+          "name": "?OnCollisionObject@CBlokadaLevel1@@UAEXPAVcMagMeshObject@@@Z",
           "size": "211",
-          "metadata": {},
-          "address": "256"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "299"
         },
         {
-          "name": "CBlokadaLevel1::Save",
+          "name": "?Save@CBlokadaLevel1@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "200",
-          "metadata": {},
-          "address": "467"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "510"
         },
         {
-          "name": "CBlokadaLevel1::OnPlaySoundEnd",
+          "name": "?OnPlaySoundEnd@CBlokadaLevel1@@UAEXH@Z",
           "size": "58",
-          "metadata": {},
-          "address": "667"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::OnPlaySoundEnd(int)"
+          },
+          "address": "710"
         },
         {
-          "name": "CBlokadaLevel1::Load",
+          "name": "?Load@CBlokadaLevel1@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "116",
-          "metadata": {},
-          "address": "725"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel1::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "768"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -23402,75 +23497,131 @@
     {
       "name": "mkp/CBlokadaLevel3",
       "measures": {
-        "fuzzy_match_percent": 0.984252,
-        "total_code": "762",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "1005",
+        "matched_code": "1005",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 11,
+        "matched_functions": 11,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1005",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "762",
-          "fuzzy_match_percent": 0.984252,
+          "size": "1005",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CBlokadaLevel3::CBlokadaLevel3",
-          "size": "39",
-          "metadata": {},
+          "name": "?OnActivate@CBlokadaLevel3@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::OnActivate(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CBlokadaLevel3::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "39"
+          "name": "?OnLoadChunk@CBlokadaLevel3@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "42",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "1"
         },
         {
-          "name": "CBlokadaLevel3::~CBlokadaLevel3",
+          "name": "?Save@CBlokadaLevel3@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "200",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "43"
+        },
+        {
+          "name": "??0CBlokadaLevel3@@QAE@XZ",
+          "size": "39",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CBlokadaLevel3::CBlokadaLevel3(void)"
+          },
+          "address": "243"
+        },
+        {
+          "name": "??_GCBlokadaLevel3@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CBlokadaLevel3::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "282"
+        },
+        {
+          "name": "??1CBlokadaLevel3@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "69"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CBlokadaLevel3::~CBlokadaLevel3(void)"
+          },
+          "address": "312"
         },
         {
           "name": "?EXP@CBlokadaLevel3@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CBlokadaLevel3::EXP(void)"
           },
-          "address": "81"
+          "address": "324"
         },
         {
-          "name": "CBlokadaLevel3::OnActivateLevel",
+          "name": "?OnActivateLevel@CBlokadaLevel3@@UAEXXZ",
           "size": "114",
-          "metadata": {},
-          "address": "171"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::OnActivateLevel(void)"
+          },
+          "address": "414"
         },
         {
-          "name": "CBlokadaLevel3::OnCollisionObject",
+          "name": "?OnCollisionObject@CBlokadaLevel3@@UAEXPAVcMagMeshObject@@@Z",
           "size": "301",
-          "metadata": {},
-          "address": "285"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "528"
         },
         {
-          "name": "CBlokadaLevel3::OnPlaySoundEnd",
+          "name": "?OnPlaySoundEnd@CBlokadaLevel3@@UAEXH@Z",
           "size": "56",
-          "metadata": {},
-          "address": "586"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::OnPlaySoundEnd(int)"
+          },
+          "address": "829"
         },
         {
-          "name": "CBlokadaLevel3::Load",
+          "name": "?Load@CBlokadaLevel3@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "120",
-          "metadata": {},
-          "address": "642"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "885"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -23479,63 +23630,131 @@
     {
       "name": "mkp/CBlokadaLevel3_1",
       "measures": {
-        "fuzzy_match_percent": 2.388535,
-        "total_code": "314",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "731",
+        "matched_code": "731",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 6,
+        "total_functions": 11,
+        "matched_functions": 11,
+        "matched_functions_percent": 100.0,
+        "complete_code": "731",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "314",
-          "fuzzy_match_percent": 2.388535,
+          "size": "731",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CBlokadaLevel3_1::OnActivateLevel",
-          "size": "16",
-          "metadata": {},
+          "name": "?OnActivate@CBlokadaLevel3_1@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::OnActivate(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CBlokadaLevel3_1::CBlokadaLevel3_1",
+          "name": "?OnLoadChunk@CBlokadaLevel3_1@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "42",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "1"
+        },
+        {
+          "name": "?OnActivateLevel@CBlokadaLevel3_1@@UAEXXZ",
+          "size": "16",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::OnActivateLevel(void)"
+          },
+          "address": "43"
+        },
+        {
+          "name": "?Save@CBlokadaLevel3_1@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "200",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "59"
+        },
+        {
+          "name": "??0CBlokadaLevel3_1@@QAE@XZ",
           "size": "29",
-          "metadata": {},
-          "address": "16"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CBlokadaLevel3_1::CBlokadaLevel3_1(void)"
+          },
+          "address": "259"
         },
         {
-          "name": "CBlokadaLevel3_1::scalar_destructor",
+          "name": "??_GCBlokadaLevel3_1@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
-          "address": "45"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CBlokadaLevel3_1::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "288"
         },
         {
-          "name": "CBlokadaLevel3_1::~CBlokadaLevel3_1",
+          "name": "??1CBlokadaLevel3_1@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "75"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CBlokadaLevel3_1::~CBlokadaLevel3_1(void)"
+          },
+          "address": "318"
         },
         {
           "name": "?EXP@CBlokadaLevel3_1@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CBlokadaLevel3_1::EXP(void)"
           },
-          "address": "87"
+          "address": "330"
         },
         {
-          "name": "CBlokadaLevel3_1::OnCollisionObject",
+          "name": "?OnCollisionObject@CBlokadaLevel3_1@@UAEXPAVcMagMeshObject@@@Z",
           "size": "137",
-          "metadata": {},
-          "address": "177"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "420"
+        },
+        {
+          "name": "?OnPlaySoundEnd@CBlokadaLevel3_1@@UAEXH@Z",
+          "size": "58",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::OnPlaySoundEnd(int)"
+          },
+          "address": "557"
+        },
+        {
+          "name": "?Load@CBlokadaLevel3_1@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
+          "size": "116",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel3_1::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "615"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -23544,69 +23763,140 @@
     {
       "name": "mkp/CBlokadaLevel4",
       "measures": {
-        "fuzzy_match_percent": 1.0744985,
-        "total_code": "698",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "1060",
+        "matched_code": "1060",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 7,
+        "total_functions": 12,
+        "matched_functions": 12,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1060",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "698",
-          "fuzzy_match_percent": 1.0744985,
+          "size": "1060",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CBlokadaLevel4::CBlokadaLevel4",
-          "size": "39",
-          "metadata": {},
+          "name": "?OnInputKey@CBlokadaLevel4@@UAEXPAE@Z",
+          "size": "3",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::OnInputKey(unsigned char *)"
+          },
           "address": "0"
         },
         {
-          "name": "CBlokadaLevel4::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "39"
+          "name": "?OnActivate@CBlokadaLevel4@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::OnActivate(void)"
+          },
+          "address": "3"
         },
         {
-          "name": "CBlokadaLevel4::~CBlokadaLevel4",
+          "name": "?OnLoadChunk@CBlokadaLevel4@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "42",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "4"
+        },
+        {
+          "name": "?Save@CBlokadaLevel4@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "200",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "46"
+        },
+        {
+          "name": "??0CBlokadaLevel4@@QAE@XZ",
+          "size": "39",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CBlokadaLevel4::CBlokadaLevel4(void)"
+          },
+          "address": "246"
+        },
+        {
+          "name": "??_GCBlokadaLevel4@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CBlokadaLevel4::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "285"
+        },
+        {
+          "name": "??1CBlokadaLevel4@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "69"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CBlokadaLevel4::~CBlokadaLevel4(void)"
+          },
+          "address": "315"
         },
         {
           "name": "?EXP@CBlokadaLevel4@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CBlokadaLevel4::EXP(void)"
           },
-          "address": "81"
+          "address": "327"
         },
         {
-          "name": "CBlokadaLevel4::OnActivateLevel",
+          "name": "?OnActivateLevel@CBlokadaLevel4@@UAEXXZ",
           "size": "170",
-          "metadata": {},
-          "address": "171"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::OnActivateLevel(void)"
+          },
+          "address": "417"
         },
         {
-          "name": "CBlokadaLevel4::OnPlaySoundEnd",
+          "name": "?OnPlaySoundEnd@CBlokadaLevel4@@UAEXH@Z",
           "size": "56",
-          "metadata": {},
-          "address": "341"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::OnPlaySoundEnd(int)"
+          },
+          "address": "587"
         },
         {
-          "name": "CBlokadaLevel4::OnCollisionObject",
+          "name": "?OnCollisionObject@CBlokadaLevel4@@UAEXPAVcMagMeshObject@@@Z",
           "size": "301",
-          "metadata": {},
-          "address": "397"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "643"
+        },
+        {
+          "name": "?Load@CBlokadaLevel4@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
+          "size": "116",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBlokadaLevel4::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "944"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -24826,16 +25116,16 @@
     {
       "name": "mkp/CHudGratka",
       "measures": {
-        "total_code": "4970",
+        "total_code": "5186",
         "matched_data_percent": 100.0,
-        "total_functions": 21,
+        "total_functions": 26,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4970",
+          "size": "5186",
           "metadata": {}
         }
       ],
@@ -24865,106 +25155,136 @@
           "address": "281"
         },
         {
+          "name": "CHudGratka::FUN0042cc30",
+          "size": "71",
+          "metadata": {},
+          "address": "1954"
+        },
+        {
           "name": "CHudGratka::OnActivateLevel",
           "size": "266",
           "metadata": {},
-          "address": "1954"
+          "address": "2025"
         },
         {
           "name": "CHudGratka::OnFrame",
           "size": "113",
           "metadata": {},
-          "address": "2220"
+          "address": "2291"
         },
         {
           "name": "CHudGratka::FUN0042ce80",
           "size": "181",
           "metadata": {},
-          "address": "2333"
+          "address": "2404"
         },
         {
           "name": "CHudGratka::FUN0042cf40",
           "size": "181",
           "metadata": {},
-          "address": "2514"
+          "address": "2585"
         },
         {
           "name": "CHudGratka::FUN0042d000",
           "size": "41",
           "metadata": {},
-          "address": "2695"
+          "address": "2766"
         },
         {
           "name": "CHudGratka::FUN0042d030",
           "size": "249",
           "metadata": {},
-          "address": "2736"
+          "address": "2807"
         },
         {
           "name": "CHudGratka::FUN0042d360",
           "size": "233",
           "metadata": {},
-          "address": "2985"
+          "address": "3056"
+        },
+        {
+          "name": "CHudGratka::FUN0042d450",
+          "size": "7",
+          "metadata": {},
+          "address": "3289"
         },
         {
           "name": "CHudGratka::FUN0042d460",
           "size": "220",
           "metadata": {},
-          "address": "3218"
+          "address": "3296"
         },
         {
           "name": "CHudGratka::FUN0042d6e0",
           "size": "66",
           "metadata": {},
-          "address": "3438"
+          "address": "3516"
+        },
+        {
+          "name": "CHudGratka::FUN0042d750",
+          "size": "40",
+          "metadata": {},
+          "address": "3582"
         },
         {
           "name": "CHudGratka::FUN0042d780",
           "size": "133",
           "metadata": {},
-          "address": "3504"
+          "address": "3622"
+        },
+        {
+          "name": "CHudGratka::FUN0042d810",
+          "size": "62",
+          "metadata": {},
+          "address": "3755"
+        },
+        {
+          "name": "CHudGratka::FUN0042d850",
+          "size": "36",
+          "metadata": {},
+          "address": "3817"
         },
         {
           "name": "CHudGratka::FUN0042db90",
           "size": "378",
           "metadata": {},
-          "address": "3637"
+          "address": "3853"
         },
         {
           "name": "CHudGratka::FUN0042dd10",
           "size": "77",
           "metadata": {},
-          "address": "4015"
+          "address": "4231"
         },
         {
           "name": "CHudGratka::FUN0042dd60",
           "size": "578",
           "metadata": {},
-          "address": "4092"
+          "address": "4308"
         },
         {
           "name": "CHudGratka::FUN0042dfb0",
           "size": "128",
           "metadata": {},
-          "address": "4670"
+          "address": "4886"
         },
         {
           "name": "CHudGratka::FUN0042e030",
           "size": "100",
           "metadata": {},
-          "address": "4798"
+          "address": "5014"
         },
         {
           "name": "CHudGratka::FUN0042e0a0",
           "size": "7",
           "metadata": {},
-          "address": "4898"
+          "address": "5114"
         },
         {
           "name": "CHudGratka::FUN0042e0b0",
           "size": "65",
           "metadata": {},
-          "address": "4905"
+          "address": "5121"
         }
       ],
       "metadata": {
@@ -27807,18 +28127,18 @@
     {
       "name": "mkp/CPlayerTPP",
       "measures": {
-        "fuzzy_match_percent": 0.06883892,
-        "total_code": "10895",
+        "fuzzy_match_percent": 0.067042105,
+        "total_code": "11187",
         "matched_data_percent": 100.0,
-        "total_functions": 48,
+        "total_functions": 49,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "10895",
-          "fuzzy_match_percent": 0.06883892,
+          "size": "11187",
+          "fuzzy_match_percent": 0.067042105,
           "metadata": {}
         }
       ],
@@ -27893,226 +28213,232 @@
           "address": "2507"
         },
         {
-          "name": "CPlayerTPP::FUN_00408ac0",
+          "name": "CPlayerTPP::FUN00408ac0",
           "size": "177",
           "metadata": {},
           "address": "3087"
         },
         {
+          "name": "CPlayerTPP::FUN00409260",
+          "size": "292",
+          "metadata": {},
+          "address": "3264"
+        },
+        {
           "name": "CPlayerTPP::OnPlaySoundEnd",
           "size": "32",
           "metadata": {},
-          "address": "3264"
+          "address": "3556"
         },
         {
           "name": "CPlayerTPP::OnFrame",
           "size": "17",
           "metadata": {},
-          "address": "3296"
+          "address": "3588"
         },
         {
           "name": "CPlayerTPP::OnChangeMovement",
           "size": "13",
           "metadata": {},
-          "address": "3313"
+          "address": "3605"
         },
         {
           "name": "CPlayerTPP::OnCollisionObject",
           "size": "350",
           "metadata": {},
-          "address": "3326"
+          "address": "3618"
         },
         {
           "name": "CPlayerTPP::OnExitYesNo",
           "size": "93",
           "metadata": {},
-          "address": "3676"
+          "address": "3968"
         },
         {
           "name": "CPlayerTPP::OnInputKey",
           "size": "882",
           "metadata": {},
-          "address": "3769"
+          "address": "4061"
         },
         {
           "name": "CPlayerTPP::OnInputMouse",
           "size": "162",
           "metadata": {},
-          "address": "4651"
+          "address": "4943"
         },
         {
           "name": "CPlayerTPP::FUN00409ff0",
           "size": "346",
           "metadata": {},
-          "address": "4813"
+          "address": "5105"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnEnterState",
           "size": "136",
           "metadata": {},
-          "address": "5159"
+          "address": "5451"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnFrame",
           "size": "114",
           "metadata": {},
-          "address": "5295"
+          "address": "5587"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "5409"
+          "address": "5701"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnInputKey",
           "size": "22",
           "metadata": {},
-          "address": "5429"
+          "address": "5721"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnEnterState",
           "size": "174",
           "metadata": {},
-          "address": "5451"
+          "address": "5743"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnFrame",
           "size": "109",
           "metadata": {},
-          "address": "5625"
+          "address": "5917"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnInputKey",
           "size": "1207",
           "metadata": {},
-          "address": "5734"
+          "address": "6026"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnInputMouse",
           "size": "350",
           "metadata": {},
-          "address": "6941"
+          "address": "7233"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnAnimEnd",
           "size": "96",
           "metadata": {},
-          "address": "7291"
+          "address": "7583"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnEnterState",
           "size": "130",
           "metadata": {},
-          "address": "7387"
+          "address": "7679"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnFrame",
           "size": "109",
           "metadata": {},
-          "address": "7517"
+          "address": "7809"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnInputKey",
           "size": "319",
           "metadata": {},
-          "address": "7626"
+          "address": "7918"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnInputMouse",
           "size": "355",
           "metadata": {},
-          "address": "7945"
+          "address": "8237"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnAnimEnd",
           "size": "101",
           "metadata": {},
-          "address": "8300"
+          "address": "8592"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "8401"
+          "address": "8693"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnEnterState",
           "size": "170",
           "metadata": {},
-          "address": "8421"
+          "address": "8713"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnFrame",
           "size": "11",
           "metadata": {},
-          "address": "8591"
+          "address": "8883"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnChangeMovement",
           "size": "19",
           "metadata": {},
-          "address": "8602"
+          "address": "8894"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnInputKey",
           "size": "365",
           "metadata": {},
-          "address": "8621"
+          "address": "8913"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnCollisionObject",
           "size": "19",
           "metadata": {},
-          "address": "8986"
+          "address": "9278"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnAnimEnd",
           "size": "132",
           "metadata": {},
-          "address": "9005"
+          "address": "9297"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "9137"
+          "address": "9429"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnEnterState",
           "size": "177",
           "metadata": {},
-          "address": "9157"
+          "address": "9449"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnFadeOutEnd",
           "size": "258",
           "metadata": {},
-          "address": "9334"
+          "address": "9626"
         },
         {
           "name": "CPlayerTPP::OnLoadChunk",
           "size": "42",
           "metadata": {},
-          "address": "9592"
+          "address": "9884"
         },
         {
           "name": "CPlayerTPP::Save",
           "size": "272",
           "metadata": {},
-          "address": "9634"
+          "address": "9926"
         },
         {
           "name": "CPlayerTPP::Load",
           "size": "180",
           "metadata": {},
-          "address": "9906"
+          "address": "10198"
         },
         {
           "name": "CPlayerTPP::FUN0040c960",
           "size": "809",
           "metadata": {},
-          "address": "10086"
+          "address": "10378"
         }
       ],
       "metadata": {
@@ -30146,19 +30472,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 4.4266396,
-        "total_code": "163932",
-        "matched_code": "5694",
-        "matched_code_percent": 3.4733913,
+        "fuzzy_match_percent": 6.596711,
+        "total_code": "165517",
+        "matched_code": "9386",
+        "matched_code_percent": 5.670717,
         "matched_data_percent": 100.0,
-        "total_functions": 886,
-        "matched_functions": 72,
-        "matched_functions_percent": 8.1264105,
-        "complete_code": "3356",
-        "complete_code_percent": 2.0471902,
+        "total_functions": 912,
+        "matched_functions": 122,
+        "matched_functions_percent": 13.3771925,
+        "complete_code": "7048",
+        "complete_code_percent": 4.258173,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 13
+        "complete_units": 17
       }
     }
   ]

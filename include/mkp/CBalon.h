@@ -9,6 +9,8 @@
 
 class CBalon : public cMagMeshObject {
 public:
+	/* 419BA0 */ void OnActivate();
+	/* 419BA0 */ void OnActivateLevel();
 	/* 4400B0 */ CBalon();
 	/* 440160 */ ~CBalon();
 	/* 4401A0 */ void* EXP();

@@ -22,6 +22,7 @@ public:
 	/* 42D450 */ int FUN0042d450();
 	/* 42D460 */ uchar FUN0042d460(int param_1);
 	/* 42D6E0 */ uchar FUN0042d6e0();
+	/* 42D750 */ void FUN0042d750(bool param_1);
 	/* 42D780 */ int FUN0042d780(char* param_1);
 	/* 42D810 */ void FUN0042d810();
 	/* 42D850 */ void FUN0042d850();

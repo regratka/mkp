@@ -3,10 +3,14 @@
 #include "GameSDK.h"
 #include "CPlayerTPP.h"
 
+/* 419BA0-419BA1 00001	*/
+void CBlokadaLevel1::OnActivate() {
+}
+
 /* 4262D0-4262FA 0002A	*/
 void CBlokadaLevel1::OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2) {
 	if (param_1.chunkType == 15 && param_1.chunkDataSize == 200) {
-		// param_2.read(unk_2658, 200);
+		param_2.read(unk_2658, 200);
 	}
 }
 
@@ -62,6 +66,16 @@ void CBlokadaLevel1::OnCollisionObject(cMagMeshObject* param_1) {
 
 /* 4408B0-440978 000C8	*/
 void CBlokadaLevel1::Save(std::ostream& param_1) {
+	_ED_CHUNK chunk;
+	chunk.chunkType = GetObjectID();
+	chunk.chunkDataSize = sizeof(CBlokadaLevel1SaveData);
+	chunk.chunkEndPos = (int)param_1.tellp() + chunk.chunkDataSize + sizeof(_ED_CHUNK);
+	param_1.write((char*) &chunk, sizeof(_ED_CHUNK));
+
+	CBlokadaLevel1SaveData saveData;
+	saveData.unk_00 = ((GameSDK*) GetGame())->unk_276c;
+	saveData.unk_04 = GetPosition();
+	param_1.write((char*) &saveData, sizeof(CBlokadaLevel1SaveData));
 }
 
 /* 4414D0-44150A 0003A	*/
@@ -70,7 +84,7 @@ void CBlokadaLevel1::OnPlaySoundEnd(int param_1) {
 		return;
 	}
 
-	if(((CPlayerTPP*) GetPlayerObject())->unk_3990 != NULL) {
+	if (((CPlayerTPP*) GetPlayerObject())->unk_3990 != NULL) {
 		((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042d850();
 	}
 }
@@ -79,6 +93,17 @@ void CBlokadaLevel1::OnPlaySoundEnd(int param_1) {
 void CBlokadaLevel1::Load(std::ifstream& param_1, _ED_CHUNK param_2) {
 	if (param_2.chunkDataSize != 16) {
 		return; 
+	}
+
+	CBlokadaLevel1SaveData local_10;
+	param_1.read((char*) &local_10, sizeof(CBlokadaLevel1SaveData));
+	((GameSDK*) GetGame())->unk_276c = local_10.unk_00;
+	SetPosition(local_10.unk_04);
+
+	if (((GameSDK*) GetGame())->unk_276c == 1) {
+		EnableCollisionObjects(true);
+	} else {
+		EnableCollisionObjects(true);
 	}
 }
 

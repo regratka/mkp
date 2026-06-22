@@ -5,8 +5,14 @@
 
 #include "cMagMeshObject.h"
 
+struct CBlokadaLevel1SaveData{
+	/* 0x00 */ int unk_00;
+	/* 0x04 */ D3DXVECTOR3 unk_04;
+};
+
 class CBlokadaLevel1 : public cMagMeshObject {
 public:
+	/* 419BA0 */ void OnActivate();
 	/* 4262D0 */ void OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2);
 	/* 4406C0 */ CBlokadaLevel1();
 	/* 440700 */ ~CBlokadaLevel1();
