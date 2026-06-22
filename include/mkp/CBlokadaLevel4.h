@@ -30,4 +30,6 @@ private:
 	/* 0x2730 */ int unk_2730;
 };
 
+STATIC_ASSERT(sizeof(CBlokadaLevel4) == 0x2738);
+
 #endif
