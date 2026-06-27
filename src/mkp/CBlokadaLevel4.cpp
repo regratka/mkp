@@ -37,7 +37,7 @@ void* CBlokadaLevel4::EXP() {
 
 /* 4410C0-44116A 000AA	*/
 void CBlokadaLevel4::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 	EnableFrustumPhysicsPause(false);
 	unk_2724 = GetPosition();
 	unk_2720 = (cMagMeshObject*) MagGetObject("plane14");

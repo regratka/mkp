@@ -16,7 +16,7 @@ void CBlokadaLevel4_1::OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2) {
 
 /* 4329E0-4329F0 00010	*/
 void CBlokadaLevel4_1::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 	EnableFrustumPhysicsPause(false);
 }
 

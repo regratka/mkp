@@ -31,13 +31,13 @@ void CArmataPocisk::OnActivate() {
 
 /* 43B1A0-43B1F0 00050	*/
 void CArmataPocisk::FUN0043b1a0(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2) {
-	enableRendering = true;
+	EnableRendering(true);
 	SetPosition(param_2);
 	SetDirection(param_1);
 }
 
 /* 43B1F0-43B1FA 0000A	*/
 void CArmataPocisk::OnCollisionObject(cMagMeshObject* param_1) {
-	enableRendering = false;
+	EnableRendering(false);
 }
 

@@ -46,7 +46,7 @@ void* CBlokadaLevel6::EXP() {
 
 /* 441860-441887 00027	*/
 void CBlokadaLevel6::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 	EnableFrustumPhysicsPause(false);
 	hud = (CHudGratka*) MagGetObject("HUD");
 }
