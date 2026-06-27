@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 21.372055,
-    "total_code": "680860",
-    "matched_code": "79890",
-    "matched_code_percent": 11.73369,
+    "fuzzy_match_percent": 21.485449,
+    "total_code": "680890",
+    "matched_code": "80676",
+    "matched_code_percent": 11.84861,
     "matched_data_percent": 100.0,
-    "total_functions": 3134,
-    "matched_functions": 832,
-    "matched_functions_percent": 26.547543,
+    "total_functions": 3137,
+    "matched_functions": 843,
+    "matched_functions_percent": 26.872808,
     "complete_code": "17888",
-    "complete_code_percent": 2.6272655,
+    "complete_code_percent": 2.6271498,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 24
@@ -25326,16 +25326,16 @@
     {
       "name": "mkp/CHudGratka",
       "measures": {
-        "total_code": "5186",
+        "total_code": "5210",
         "matched_data_percent": 100.0,
-        "total_functions": 26,
+        "total_functions": 27,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "5186",
+          "size": "5210",
           "metadata": {}
         }
       ],
@@ -25431,70 +25431,76 @@
           "address": "3516"
         },
         {
+          "name": "CHudGratka::FUN0042d730",
+          "size": "24",
+          "metadata": {},
+          "address": "3582"
+        },
+        {
           "name": "CHudGratka::FUN0042d750",
           "size": "40",
           "metadata": {},
-          "address": "3582"
+          "address": "3606"
         },
         {
           "name": "CHudGratka::FUN0042d780",
           "size": "133",
           "metadata": {},
-          "address": "3622"
+          "address": "3646"
         },
         {
           "name": "CHudGratka::FUN0042d810",
           "size": "62",
           "metadata": {},
-          "address": "3755"
+          "address": "3779"
         },
         {
           "name": "CHudGratka::FUN0042d850",
           "size": "36",
           "metadata": {},
-          "address": "3817"
+          "address": "3841"
         },
         {
           "name": "CHudGratka::FUN0042db90",
           "size": "378",
           "metadata": {},
-          "address": "3853"
+          "address": "3877"
         },
         {
           "name": "CHudGratka::FUN0042dd10",
           "size": "77",
           "metadata": {},
-          "address": "4231"
+          "address": "4255"
         },
         {
           "name": "CHudGratka::FUN0042dd60",
           "size": "578",
           "metadata": {},
-          "address": "4308"
+          "address": "4332"
         },
         {
           "name": "CHudGratka::FUN0042dfb0",
           "size": "128",
           "metadata": {},
-          "address": "4886"
+          "address": "4910"
         },
         {
           "name": "CHudGratka::FUN0042e030",
           "size": "100",
           "metadata": {},
-          "address": "5014"
+          "address": "5038"
         },
         {
           "name": "CHudGratka::FUN0042e0a0",
           "size": "7",
           "metadata": {},
-          "address": "5114"
+          "address": "5138"
         },
         {
           "name": "CHudGratka::FUN0042e0b0",
           "size": "65",
           "metadata": {},
-          "address": "5121"
+          "address": "5145"
         }
       ],
       "metadata": {
@@ -25697,18 +25703,18 @@
     {
       "name": "mkp/CKlucz",
       "measures": {
-        "fuzzy_match_percent": 0.9566327,
-        "total_code": "784",
+        "fuzzy_match_percent": 1.7321016,
+        "total_code": "433",
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 6,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "784",
-          "fuzzy_match_percent": 0.9566327,
+          "size": "433",
+          "fuzzy_match_percent": 1.7321016,
           "metadata": {}
         }
       ],
@@ -25751,18 +25757,6 @@
           "size": "187",
           "metadata": {},
           "address": "246"
-        },
-        {
-          "name": "CKlucz::OnActivate",
-          "size": "162",
-          "metadata": {},
-          "address": "433"
-        },
-        {
-          "name": "CKlucz::Save",
-          "size": "189",
-          "metadata": {},
-          "address": "595"
         }
       ],
       "metadata": {
@@ -25774,60 +25768,124 @@
     {
       "name": "mkp/CKrysztal",
       "measures": {
-        "fuzzy_match_percent": 2.0833333,
-        "total_code": "360",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "786",
+        "matched_code": "786",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 6,
+        "total_functions": 11,
+        "matched_functions": 11,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "360",
-          "fuzzy_match_percent": 2.0833333,
+          "size": "786",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CKrysztal::CKrysztal",
-          "size": "32",
-          "metadata": {},
+          "name": "?OnActivateLevel@CKrysztal@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrysztal::OnActivateLevel(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CKrysztal::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "32"
+          "name": "??0CKrysztal@@QAE@XZ",
+          "size": "32",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CKrysztal::CKrysztal(void)"
+          },
+          "address": "1"
         },
         {
-          "name": "CKrysztal::~CKrysztal",
+          "name": "??_GCKrysztal@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CKrysztal::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "33"
+        },
+        {
+          "name": "??1CKrysztal@@UAE@XZ",
           "size": "11",
-          "metadata": {},
-          "address": "62"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CKrysztal::~CKrysztal(void)"
+          },
+          "address": "63"
         },
         {
           "name": "?EXP@CKrysztal@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CKrysztal::EXP(void)"
           },
-          "address": "73"
+          "address": "74"
         },
         {
-          "name": "CKrysztal::OnCollisionObject",
+          "name": "?OnActivate@CKrysztal@@UAEXXZ",
+          "size": "5",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrysztal::OnActivate(void)"
+          },
+          "address": "164"
+        },
+        {
+          "name": "?OnActivateInternal@CKrysztal@@QAEXXZ",
+          "size": "162",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CKrysztal::OnActivateInternal(void)"
+          },
+          "address": "169"
+        },
+        {
+          "name": "?FUN00432f20@CKrysztal@@QAEXXZ",
+          "size": "69",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CKrysztal::FUN00432f20(void)"
+          },
+          "address": "331"
+        },
+        {
+          "name": "?OnCollisionObject@CKrysztal@@UAEXPAVcMagMeshObject@@@Z",
           "size": "83",
-          "metadata": {},
-          "address": "163"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrysztal::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "400"
         },
         {
-          "name": "CKrysztal::Load",
+          "name": "?Save@CKrysztal@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "189",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrysztal::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "483"
+        },
+        {
+          "name": "?Load@CKrysztal@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "114",
-          "metadata": {},
-          "address": "246"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrysztal::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "672"
         }
       ],
       "metadata": {
@@ -26677,45 +26735,39 @@
     {
       "name": "mkp/CMoneta",
       "measures": {
-        "fuzzy_match_percent": 1.2711865,
-        "total_code": "590",
+        "fuzzy_match_percent": 1.4395393,
+        "total_code": "521",
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 7,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "590",
-          "fuzzy_match_percent": 1.2711865,
+          "size": "521",
+          "fuzzy_match_percent": 1.4395393,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CMoneta::FUN00432f20",
-          "size": "69",
-          "metadata": {},
-          "address": "0"
-        },
-        {
           "name": "CMoneta::CMoneta",
           "size": "32",
           "metadata": {},
-          "address": "69"
+          "address": "0"
         },
         {
           "name": "CMoneta::scalar_destructor",
           "size": "30",
           "metadata": {},
-          "address": "101"
+          "address": "32"
         },
         {
           "name": "CMoneta::~CMoneta",
           "size": "11",
           "metadata": {},
-          "address": "131"
+          "address": "62"
         },
         {
           "name": "?EXP@CMoneta@@QAEPAXXZ",
@@ -26724,25 +26776,25 @@
           "metadata": {
             "demangled_name": "public: void * __thiscall CMoneta::EXP(void)"
           },
-          "address": "142"
+          "address": "73"
         },
         {
           "name": "CMoneta::OnCollisionObject",
           "size": "97",
           "metadata": {},
-          "address": "232"
+          "address": "163"
         },
         {
           "name": "CMoneta::Save",
           "size": "171",
           "metadata": {},
-          "address": "329"
+          "address": "260"
         },
         {
           "name": "CMoneta::Load",
           "size": "90",
           "metadata": {},
-          "address": "500"
+          "address": "431"
         }
       ],
       "metadata": {
@@ -30682,16 +30734,16 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 7.826111,
-        "total_code": "166739",
-        "matched_code": "11539",
-        "matched_code_percent": 6.9203963,
+        "fuzzy_match_percent": 8.291516,
+        "total_code": "166769",
+        "matched_code": "12325",
+        "matched_code_percent": 7.3904624,
         "matched_data_percent": 100.0,
-        "total_functions": 928,
-        "matched_functions": 155,
-        "matched_functions_percent": 16.702587,
+        "total_functions": 931,
+        "matched_functions": 166,
+        "matched_functions_percent": 17.83029,
         "complete_code": "9201",
-        "complete_code_percent": 5.518205,
+        "complete_code_percent": 5.5172124,
         "complete_data_percent": 100.0,
         "total_units": 97,
         "complete_units": 20
