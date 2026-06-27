@@ -73,6 +73,7 @@ public:
 	/* 409AB0 */ uchar OnInputKey(int param_1);
 	/* 409E30 */ uchar OnInputMouse(uchar param_1, uchar param_2, uchar param_3, uint param_4);
 	/* 409FF0 */ void FUN00409ff0(bool param_1);
+	/* 40A150 */ void FUN0040A150();
 	/* 40C760 */ uchar OnLoadChunk(uint param_1, int param_2, uint param_3, void* param_4);
 	/* 40C790 */ uchar Save(int* param_1);
 	/* 40C8A0 */ uchar Load(void* param_1, uint param_2, int param_3);

@@ -74,6 +74,10 @@ uchar CPlayerTPP::OnInputMouse(uchar param_1, uchar param_2, uchar param_3, uint
 void CPlayerTPP::FUN00409ff0(bool param_1) {
 }
 
+/* 40A150-40A19E 0004E	*/
+void CPlayerTPP::FUN0040A150() {
+}
+
 /* 40C760-40C78A 0002A	*/
 uchar CPlayerTPP::OnLoadChunk(uint param_1, int param_2, uint param_3, void* param_4) {
 	return 0;

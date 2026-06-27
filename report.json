@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 21.485449,
-    "total_code": "680890",
-    "matched_code": "80676",
-    "matched_code_percent": 11.84861,
+    "fuzzy_match_percent": 21.582867,
+    "total_code": "681294",
+    "matched_code": "81434",
+    "matched_code_percent": 11.952843,
     "matched_data_percent": 100.0,
-    "total_functions": 3137,
-    "matched_functions": 843,
-    "matched_functions_percent": 26.872808,
-    "complete_code": "17888",
-    "complete_code_percent": 2.6271498,
+    "total_functions": 3143,
+    "matched_functions": 854,
+    "matched_functions_percent": 27.171494,
+    "complete_code": "19432",
+    "complete_code_percent": 2.8522196,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 24
+    "complete_units": 26
   },
   "units": [
     {
@@ -25703,18 +25703,18 @@
     {
       "name": "mkp/CKlucz",
       "measures": {
-        "fuzzy_match_percent": 1.7321016,
-        "total_code": "433",
+        "fuzzy_match_percent": 1.25,
+        "total_code": "600",
         "matched_data_percent": 100.0,
-        "total_functions": 6,
+        "total_functions": 8,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "433",
-          "fuzzy_match_percent": 1.7321016,
+          "size": "600",
+          "fuzzy_match_percent": 1.25,
           "metadata": {}
         }
       ],
@@ -25757,6 +25757,22 @@
           "size": "187",
           "metadata": {},
           "address": "246"
+        },
+        {
+          "name": "?OnActivate@CKlucz@@UAEXXZ",
+          "size": "5",
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKlucz::OnActivate(void)"
+          },
+          "address": "433"
+        },
+        {
+          "name": "?Show@CKlucz@@QAEXXZ",
+          "size": "162",
+          "metadata": {
+            "demangled_name": "public: void __thiscall CKlucz::Show(void)"
+          },
+          "address": "438"
         }
       ],
       "metadata": {
@@ -25776,8 +25792,11 @@
         "total_functions": 11,
         "matched_functions": 11,
         "matched_functions_percent": 100.0,
+        "complete_code": "786",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -25843,20 +25862,20 @@
           "address": "164"
         },
         {
-          "name": "?OnActivateInternal@CKrysztal@@QAEXXZ",
+          "name": "?Show@CKrysztal@@QAEXXZ",
           "size": "162",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall CKrysztal::OnActivateInternal(void)"
+            "demangled_name": "public: void __thiscall CKrysztal::Show(void)"
           },
           "address": "169"
         },
         {
-          "name": "?FUN00432f20@CKrysztal@@QAEXXZ",
+          "name": "?Hide@CKrysztal@@QAEXXZ",
           "size": "69",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall CKrysztal::FUN00432f20(void)"
+            "demangled_name": "public: void __thiscall CKrysztal::Hide(void)"
           },
           "address": "331"
         },
@@ -25889,6 +25908,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -26735,69 +26755,131 @@
     {
       "name": "mkp/CMoneta",
       "measures": {
-        "fuzzy_match_percent": 1.4395393,
-        "total_code": "521",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "758",
+        "matched_code": "758",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 7,
+        "total_functions": 11,
+        "matched_functions": 11,
+        "matched_functions_percent": 100.0,
+        "complete_code": "758",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "521",
-          "fuzzy_match_percent": 1.4395393,
+          "size": "758",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CMoneta::CMoneta",
-          "size": "32",
-          "metadata": {},
+          "name": "?OnActivateLevel@CMoneta@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CMoneta::OnActivateLevel(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CMoneta::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "32"
+          "name": "?OnActivate@CMoneta@@UAEXXZ",
+          "size": "5",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CMoneta::OnActivate(void)"
+          },
+          "address": "1"
         },
         {
-          "name": "CMoneta::~CMoneta",
+          "name": "?Show@CMoneta@@QAEXXZ",
+          "size": "162",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CMoneta::Show(void)"
+          },
+          "address": "6"
+        },
+        {
+          "name": "?Hide@CMoneta@@QAEXXZ",
+          "size": "69",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CMoneta::Hide(void)"
+          },
+          "address": "168"
+        },
+        {
+          "name": "??0CMoneta@@QAE@XZ",
+          "size": "32",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CMoneta::CMoneta(void)"
+          },
+          "address": "237"
+        },
+        {
+          "name": "??_GCMoneta@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CMoneta::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "269"
+        },
+        {
+          "name": "??1CMoneta@@UAE@XZ",
           "size": "11",
-          "metadata": {},
-          "address": "62"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CMoneta::~CMoneta(void)"
+          },
+          "address": "299"
         },
         {
           "name": "?EXP@CMoneta@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CMoneta::EXP(void)"
           },
-          "address": "73"
+          "address": "310"
         },
         {
-          "name": "CMoneta::OnCollisionObject",
+          "name": "?OnCollisionObject@CMoneta@@UAEXPAVcMagMeshObject@@@Z",
           "size": "97",
-          "metadata": {},
-          "address": "163"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CMoneta::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "400"
         },
         {
-          "name": "CMoneta::Save",
+          "name": "?Save@CMoneta@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "171",
-          "metadata": {},
-          "address": "260"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CMoneta::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "497"
         },
         {
-          "name": "CMoneta::Load",
+          "name": "?Load@CMoneta@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "90",
-          "metadata": {},
-          "address": "431"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CMoneta::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "668"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -30734,19 +30816,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 8.291516,
-        "total_code": "166769",
-        "matched_code": "12325",
-        "matched_code_percent": 7.3904624,
+        "fuzzy_match_percent": 8.720414,
+        "total_code": "167173",
+        "matched_code": "13083",
+        "matched_code_percent": 7.826024,
         "matched_data_percent": 100.0,
-        "total_functions": 931,
-        "matched_functions": 166,
-        "matched_functions_percent": 17.83029,
-        "complete_code": "9201",
-        "complete_code_percent": 5.5172124,
+        "total_functions": 937,
+        "matched_functions": 177,
+        "matched_functions_percent": 18.890076,
+        "complete_code": "10745",
+        "complete_code_percent": 6.4274735,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 20
+        "complete_units": 22
       }
     }
   ]
