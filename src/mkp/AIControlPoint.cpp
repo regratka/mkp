@@ -20,7 +20,7 @@ void* AIControlPoint::EXP() {
 
 /* 43CED0-43CED8 00008	*/
 void AIControlPoint::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 }
 
 /* 43CEE0-43CEE7 00007	*/

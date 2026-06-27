@@ -46,7 +46,7 @@ void* CBlokadaLevel3::EXP() {
 
 /* 440AF0-440B62 00072	*/
 void CBlokadaLevel3::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 	EnableFrustumPhysicsPause(false);
 	unk_2720 = (cMagMeshObject*) MagGetObject("cube03");
 	unk_2724 = LoadSound("data\\sounds\\papatka\\OdszukajKlucz.wav");

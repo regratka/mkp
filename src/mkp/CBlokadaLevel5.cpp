@@ -64,7 +64,7 @@ void CBlokadaLevel5::OnCollisionObject(cMagMeshObject* param_1) {
 
 /* 441860-441887 00027	*/
 void CBlokadaLevel5::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 	EnableFrustumPhysicsPause(false);
 	hud = (CHudGratka*) MagGetObject("HUD");
 }

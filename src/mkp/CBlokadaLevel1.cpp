@@ -31,7 +31,7 @@ void* CBlokadaLevel1::EXP() {
 
 /* 440770-4407CF 0005F	*/
 void CBlokadaLevel1::OnActivateLevel() {
-	enableRendering = false;
+	EnableRendering(false);
 	EnableFrustumPhysicsPause(false);
 	unk_2720 = LoadSound("data\\sounds\\papatka\\level01_jezowa.wav");
 	float val = ((GameSDK*) GetGame())->FUN00401e10();
