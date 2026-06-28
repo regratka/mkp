@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 21.582867,
-    "total_code": "681294",
-    "matched_code": "81434",
-    "matched_code_percent": 11.952843,
+    "fuzzy_match_percent": 21.697117,
+    "total_code": "681631",
+    "matched_code": "82293",
+    "matched_code_percent": 12.072954,
     "matched_data_percent": 100.0,
-    "total_functions": 3143,
-    "matched_functions": 854,
-    "matched_functions_percent": 27.171494,
-    "complete_code": "19432",
-    "complete_code_percent": 2.8522196,
+    "total_functions": 3147,
+    "matched_functions": 865,
+    "matched_functions_percent": 27.486494,
+    "complete_code": "20291",
+    "complete_code_percent": 2.9768305,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 26
+    "complete_units": 27
   },
   "units": [
     {
@@ -25703,79 +25703,131 @@
     {
       "name": "mkp/CKlucz",
       "measures": {
-        "fuzzy_match_percent": 1.25,
-        "total_code": "600",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "859",
+        "matched_code": "859",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 11,
+        "matched_functions": 11,
+        "matched_functions_percent": 100.0,
+        "complete_code": "859",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "600",
-          "fuzzy_match_percent": 1.25,
+          "size": "859",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CKlucz::CKlucz",
-          "size": "32",
-          "metadata": {},
+          "name": "?OnActivateLevel@CKlucz@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKlucz::OnActivateLevel(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CKlucz::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "32"
+          "name": "??0CKlucz@@QAE@XZ",
+          "size": "32",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CKlucz::CKlucz(void)"
+          },
+          "address": "1"
         },
         {
-          "name": "CKlucz::~CKlucz",
+          "name": "??_GCKlucz@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CKlucz::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "33"
+        },
+        {
+          "name": "??1CKlucz@@UAE@XZ",
           "size": "11",
-          "metadata": {},
-          "address": "62"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CKlucz::~CKlucz(void)"
+          },
+          "address": "63"
         },
         {
           "name": "?EXP@CKlucz@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CKlucz::EXP(void)"
           },
-          "address": "73"
+          "address": "74"
         },
         {
-          "name": "CKlucz::OnCollisionObject",
+          "name": "?OnCollisionObject@CKlucz@@UAEXPAVcMagMeshObject@@@Z",
           "size": "83",
-          "metadata": {},
-          "address": "163"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKlucz::OnCollisionObject(class cMagMeshObject *)"
+          },
+          "address": "164"
         },
         {
-          "name": "CKlucz::Load",
+          "name": "?Load@CKlucz@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "187",
-          "metadata": {},
-          "address": "246"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKlucz::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
+          "address": "247"
         },
         {
           "name": "?OnActivate@CKlucz@@UAEXXZ",
           "size": "5",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CKlucz::OnActivate(void)"
           },
-          "address": "433"
+          "address": "434"
         },
         {
           "name": "?Show@CKlucz@@QAEXXZ",
           "size": "162",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CKlucz::Show(void)"
           },
-          "address": "438"
+          "address": "439"
+        },
+        {
+          "name": "?Hide@CKlucz@@QAEXXZ",
+          "size": "69",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CKlucz::Hide(void)"
+          },
+          "address": "601"
+        },
+        {
+          "name": "?Save@CKlucz@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
+          "size": "189",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKlucz::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "670"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -28471,18 +28523,18 @@
     {
       "name": "mkp/CPlayerTPP",
       "measures": {
-        "fuzzy_match_percent": 0.067042105,
-        "total_code": "11187",
+        "fuzzy_match_percent": 0.0665779,
+        "total_code": "11265",
         "matched_data_percent": 100.0,
-        "total_functions": 49,
+        "total_functions": 50,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "11187",
-          "fuzzy_match_percent": 0.067042105,
+          "size": "11265",
+          "fuzzy_match_percent": 0.0665779,
           "metadata": {}
         }
       ],
@@ -28617,172 +28669,178 @@
           "address": "5105"
         },
         {
+          "name": "CPlayerTPP::FUN0040a150",
+          "size": "78",
+          "metadata": {},
+          "address": "5451"
+        },
+        {
           "name": "CPlayerTPP::STATE_Idle::OnEnterState",
           "size": "136",
           "metadata": {},
-          "address": "5451"
+          "address": "5529"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnFrame",
           "size": "114",
           "metadata": {},
-          "address": "5587"
+          "address": "5665"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "5701"
+          "address": "5779"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnInputKey",
           "size": "22",
           "metadata": {},
-          "address": "5721"
+          "address": "5799"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnEnterState",
           "size": "174",
           "metadata": {},
-          "address": "5743"
+          "address": "5821"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnFrame",
           "size": "109",
           "metadata": {},
-          "address": "5917"
+          "address": "5995"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnInputKey",
           "size": "1207",
           "metadata": {},
-          "address": "6026"
+          "address": "6104"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnInputMouse",
           "size": "350",
           "metadata": {},
-          "address": "7233"
+          "address": "7311"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Forward::OnAnimEnd",
           "size": "96",
           "metadata": {},
-          "address": "7583"
+          "address": "7661"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnEnterState",
           "size": "130",
           "metadata": {},
-          "address": "7679"
+          "address": "7757"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnFrame",
           "size": "109",
           "metadata": {},
-          "address": "7809"
+          "address": "7887"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnInputKey",
           "size": "319",
           "metadata": {},
-          "address": "7918"
+          "address": "7996"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnInputMouse",
           "size": "355",
           "metadata": {},
-          "address": "8237"
+          "address": "8315"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnAnimEnd",
           "size": "101",
           "metadata": {},
-          "address": "8592"
+          "address": "8670"
         },
         {
           "name": "CPlayerTPP::STATE_Run_Back::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "8693"
+          "address": "8771"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnEnterState",
           "size": "170",
           "metadata": {},
-          "address": "8713"
+          "address": "8791"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnFrame",
           "size": "11",
           "metadata": {},
-          "address": "8883"
+          "address": "8961"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnChangeMovement",
           "size": "19",
           "metadata": {},
-          "address": "8894"
+          "address": "8972"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnInputKey",
           "size": "365",
           "metadata": {},
-          "address": "8913"
+          "address": "8991"
         },
         {
           "name": "CPlayerTPP::STATE_Idle::OnCollisionObject",
           "size": "19",
           "metadata": {},
-          "address": "9278"
+          "address": "9356"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnAnimEnd",
           "size": "132",
           "metadata": {},
-          "address": "9297"
+          "address": "9375"
         },
         {
           "name": "CPlayerTPP::STATE_Jump::OnExitState",
           "size": "20",
           "metadata": {},
-          "address": "9429"
+          "address": "9507"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnEnterState",
           "size": "177",
           "metadata": {},
-          "address": "9449"
+          "address": "9527"
         },
         {
           "name": "CPlayerTPP::STATE_Death::OnFadeOutEnd",
           "size": "258",
           "metadata": {},
-          "address": "9626"
+          "address": "9704"
         },
         {
           "name": "CPlayerTPP::OnLoadChunk",
           "size": "42",
           "metadata": {},
-          "address": "9884"
+          "address": "9962"
         },
         {
           "name": "CPlayerTPP::Save",
           "size": "272",
           "metadata": {},
-          "address": "9926"
+          "address": "10004"
         },
         {
           "name": "CPlayerTPP::Load",
           "size": "180",
           "metadata": {},
-          "address": "10198"
+          "address": "10276"
         },
         {
           "name": "CPlayerTPP::FUN0040c960",
           "size": "809",
           "metadata": {},
-          "address": "10378"
+          "address": "10456"
         }
       ],
       "metadata": {
@@ -30816,19 +30874,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 8.720414,
-        "total_code": "167173",
-        "matched_code": "13083",
-        "matched_code_percent": 7.826024,
+        "fuzzy_match_percent": 9.211199,
+        "total_code": "167510",
+        "matched_code": "13942",
+        "matched_code_percent": 8.323086,
         "matched_data_percent": 100.0,
-        "total_functions": 937,
-        "matched_functions": 177,
-        "matched_functions_percent": 18.890076,
-        "complete_code": "10745",
-        "complete_code_percent": 6.4274735,
+        "total_functions": 941,
+        "matched_functions": 188,
+        "matched_functions_percent": 19.978745,
+        "complete_code": "11604",
+        "complete_code_percent": 6.927348,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 22
+        "complete_units": 23
       }
     }
   ]
