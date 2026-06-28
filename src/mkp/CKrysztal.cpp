@@ -24,11 +24,11 @@ void*  CKrysztal::EXP() {
 
 /* 432E60-432E65 00005	*/
 void CKrysztal::OnActivate() {
-	OnActivateInternal();
+	Show();
 }
 
 /* 432E70-432F12 000A2	*/
-void CKrysztal::OnActivateInternal() {
+void CKrysztal::Show() {
 	EnableCollisionObjects(true);
 	SetCollisionType(2);
 	SetCollAction(0);
@@ -43,7 +43,7 @@ void CKrysztal::OnActivateInternal() {
 }
 
 /* 432F20-432F65 00045	*/
-void CKrysztal::FUN00432f20() {
+void CKrysztal::Hide() {
 	EnableCollisionObjects(false);
 	SetCollAction(0);
 	EnableRendering(false);
@@ -60,7 +60,7 @@ void CKrysztal::OnCollisionObject(cMagMeshObject* param_1) {
 	}
 
 	((GameSDK*) GetGame())->unk_276c = 1;
-	FUN00432f20();
+	Hide();
 	((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042d730(true);
 }
 
@@ -92,11 +92,10 @@ void CKrysztal::Load(std::ifstream& param_1, _ED_CHUNK param_2) {
 	((GameSDK*) GetGame())->unk_276c = saveData.unk_08;
 
 	if (unk_2659) {
-		OnActivateInternal();
+		Show();
 	}
 
 	if (unk_2658) {
-		FUN00432f20();
+		Hide();
 	}
-
 }
