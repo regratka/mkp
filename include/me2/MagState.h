@@ -56,7 +56,7 @@ public:
 	/* 10089920 */ void GOUpdateRelay(StateObject_Str* param_1);
 	/* 100899A0 */ void SendOnAnimEnd();
 
-private:
+protected:
 	/* 0xd10 */ DelayedMessage_Str** delayedMessages;
 	/* 0xd14 */ UNKN_0x14* unkn_d14;
 	/* 0xd18 */ StateObject_Str* stateObject;

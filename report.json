@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 21.697117,
-    "total_code": "681631",
-    "matched_code": "82293",
-    "matched_code_percent": 12.072954,
+    "fuzzy_match_percent": 21.931936,
+    "total_code": "681635",
+    "matched_code": "82958",
+    "matched_code_percent": 12.170443,
     "matched_data_percent": 100.0,
-    "total_functions": 3147,
-    "matched_functions": 865,
-    "matched_functions_percent": 27.486494,
+    "total_functions": 3149,
+    "matched_functions": 875,
+    "matched_functions_percent": 27.786598,
     "complete_code": "20291",
-    "complete_code_percent": 2.9768305,
+    "complete_code_percent": 2.976813,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 27
@@ -24304,78 +24304,124 @@
     {
       "name": "mkp/CBrama",
       "measures": {
-        "fuzzy_match_percent": 0.44964027,
-        "total_code": "1668",
+        "fuzzy_match_percent": 96.23069,
+        "total_code": "1672",
+        "matched_code": "665",
+        "matched_code_percent": 39.772728,
         "matched_data_percent": 100.0,
-        "total_functions": 9,
+        "total_functions": 11,
+        "matched_functions": 10,
+        "matched_functions_percent": 90.909096,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1668",
-          "fuzzy_match_percent": 0.44964027,
+          "size": "1672",
+          "fuzzy_match_percent": 96.23069,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CBrama::CBrama",
-          "size": "67",
-          "metadata": {},
+          "name": "?OnCollisionObject@CBrama@@UAEXPAVcMagMeshObject@@@Z",
+          "size": "3",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBrama::OnCollisionObject(class cMagMeshObject *)"
+          },
           "address": "0"
         },
         {
-          "name": "CBrama::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "67"
+          "name": "?OnFrame@CBrama@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBrama::OnFrame(void)"
+          },
+          "address": "3"
         },
         {
-          "name": "CBrama::~CBrama",
+          "name": "??0CBrama@@QAE@XZ",
+          "size": "67",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CBrama::CBrama(void)"
+          },
+          "address": "4"
+        },
+        {
+          "name": "??_GCBrama@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CBrama::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "71"
+        },
+        {
+          "name": "??1CBrama@@UAE@XZ",
           "size": "11",
-          "metadata": {},
-          "address": "97"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CBrama::~CBrama(void)"
+          },
+          "address": "101"
         },
         {
           "name": "?EXP@CBrama@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CBrama::EXP(void)"
           },
-          "address": "108"
+          "address": "112"
         },
         {
-          "name": "CBrama::OnActivate",
+          "name": "?OnActivate@CBrama@@UAEXXZ",
           "size": "45",
-          "metadata": {},
-          "address": "198"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBrama::OnActivate(void)"
+          },
+          "address": "202"
         },
         {
-          "name": "CBrama::OnActivateLevel",
+          "name": "?OnActivateLevel@CBrama@@UAEXXZ",
           "size": "343",
-          "metadata": {},
-          "address": "243"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBrama::OnActivateLevel(void)"
+          },
+          "address": "247"
         },
         {
-          "name": "CBrama::OnCrash",
+          "name": "?OnCrash@CBrama@@UAEXXZ",
           "size": "33",
-          "metadata": {},
-          "address": "586"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBrama::OnCrash(void)"
+          },
+          "address": "590"
         },
         {
-          "name": "CBrama::OnProcessStateMachine",
+          "name": "?OnProcessStateMachine@CBrama@@UAE_NPAUStateObject_Str@@HPAUMsgObject@@@Z",
           "size": "1007",
-          "metadata": {},
-          "address": "619"
+          "fuzzy_match_percent": 93.74154,
+          "metadata": {
+            "demangled_name": "public: virtual bool __thiscall CBrama::OnProcessStateMachine(struct StateObject_Str *, int, struct MsgObject *)"
+          },
+          "address": "623"
         },
         {
-          "name": "CBrama::OnLoadChunk",
+          "name": "?OnLoadChunk@CBrama@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "42",
-          "metadata": {},
-          "address": "1626"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CBrama::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
+          "address": "1630"
         }
       ],
       "metadata": {
@@ -30874,16 +30920,16 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 9.211199,
-        "total_code": "167510",
-        "matched_code": "13942",
-        "matched_code_percent": 8.323086,
+        "fuzzy_match_percent": 10.167005,
+        "total_code": "167514",
+        "matched_code": "14607",
+        "matched_code_percent": 8.719869,
         "matched_data_percent": 100.0,
-        "total_functions": 941,
-        "matched_functions": 188,
-        "matched_functions_percent": 19.978745,
+        "total_functions": 943,
+        "matched_functions": 198,
+        "matched_functions_percent": 20.996819,
         "complete_code": "11604",
-        "complete_code_percent": 6.927348,
+        "complete_code_percent": 6.9271827,
         "complete_data_percent": 100.0,
         "total_units": 97,
         "complete_units": 23
