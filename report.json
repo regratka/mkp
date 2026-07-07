@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 21.931936,
+    "fuzzy_match_percent": 22.205883,
     "total_code": "681635",
-    "matched_code": "82958",
-    "matched_code_percent": 12.170443,
+    "matched_code": "84852",
+    "matched_code_percent": 12.448304,
     "matched_data_percent": 100.0,
     "total_functions": 3149,
-    "matched_functions": 875,
-    "matched_functions_percent": 27.786598,
+    "matched_functions": 888,
+    "matched_functions_percent": 28.199429,
     "complete_code": "20291",
     "complete_code_percent": 2.976813,
     "complete_data_percent": 100.0,
@@ -10493,10 +10493,14 @@
     {
       "name": "me2/cGlow",
       "measures": {
-        "fuzzy_match_percent": 1.4084027,
+        "fuzzy_match_percent": 100.0,
         "total_code": "1894",
+        "matched_code": "1894",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 13,
+        "matched_functions": 13,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -10504,7 +10508,7 @@
         {
           "name": ".text",
           "size": "1894",
-          "fuzzy_match_percent": 1.4084027,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -10512,6 +10516,7 @@
         {
           "name": "??0cGlow@@QAE@ABV0@@Z",
           "size": "192",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cGlow::cGlow(class cGlow const &)"
           },
@@ -10520,21 +10525,25 @@
         {
           "name": "??4cGlow@@QAEAAV0@ABV0@@Z",
           "size": "186",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cGlow & __thiscall cGlow::operator=(class cGlow const &)"
           },
           "address": "192"
         },
         {
-          "name": "cGlow::scalar_destructor",
+          "name": "??_EcGlow@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cGlow::`vector deleting destructor'(unsigned int)"
+          },
           "address": "378"
         },
         {
           "name": "??0cGlow@@QAE@XZ",
           "size": "217",
-          "fuzzy_match_percent": 3.1111112,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cGlow::cGlow(void)"
           },
@@ -10543,6 +10552,7 @@
         {
           "name": "??1cGlow@@UAE@XZ",
           "size": "100",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cGlow::~cGlow(void)"
           },
@@ -10551,7 +10561,7 @@
         {
           "name": "?Create@cGlow@@QAEXPAD@Z",
           "size": "137",
-          "fuzzy_match_percent": 2.2222223,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::Create(char *)"
           },
@@ -10560,6 +10570,7 @@
         {
           "name": "?OnRender@cGlow@@UAEXXZ",
           "size": "397",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cGlow::OnRender(void)"
           },
@@ -10568,7 +10579,7 @@
         {
           "name": "?RenderGlow@cGlow@@QAEXXZ",
           "size": "487",
-          "fuzzy_match_percent": 0.6802721,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::RenderGlow(void)"
           },
@@ -10577,6 +10588,7 @@
         {
           "name": "?SetScale@cGlow@@QAEXUD3DXVECTOR3@@@Z",
           "size": "29",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::SetScale(struct D3DXVECTOR3)"
           },
@@ -10585,6 +10597,7 @@
         {
           "name": "?SetPosition@cGlow@@QAEXUD3DXVECTOR3@@@Z",
           "size": "29",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::SetPosition(struct D3DXVECTOR3)"
           },
@@ -10593,7 +10606,7 @@
         {
           "name": "?SetSize@cGlow@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::SetSize(float)"
           },
@@ -10602,7 +10615,7 @@
         {
           "name": "?EnableRendering@cGlow@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::EnableRendering(bool)"
           },
@@ -10611,7 +10624,7 @@
         {
           "name": "?EnableRendering@cGlow@@QAE_NXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cGlow::EnableRendering(void)"
           },
@@ -30901,14 +30914,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 25.765255,
+        "fuzzy_match_percent": 26.128462,
         "total_code": "514121",
-        "matched_code": "68351",
-        "matched_code_percent": 13.294729,
+        "matched_code": "70245",
+        "matched_code_percent": 13.663127,
         "matched_data_percent": 100.0,
         "total_functions": 2206,
-        "matched_functions": 677,
-        "matched_functions_percent": 30.689032,
+        "matched_functions": 690,
+        "matched_functions_percent": 31.278334,
         "complete_code": "8687",
         "complete_code_percent": 1.6896801,
         "complete_data_percent": 100.0,

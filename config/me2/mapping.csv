@@ -2464,14 +2464,14 @@
 ;FUN_10076c10;0x10076c10;0xc;__stdcall;;uchar
 ??0cGlow@@QAE@ABV0@@Z;cGlow::cGlow;0x10076c30;0xc0;__thiscall;;uchar;cGlow*;cGlow*
 ??4cGlow@@QAEAAV0@ABV0@@Z;cGlow::operator=;0x10076cf0;0xba;__thiscall;;cGlow*;cGlow*;cGlow*
-;cGlow::scalar_destructor;0x10076db0;0x57;__thiscall;;cGlow*;cGlow*;uchar
+??_EcGlow@@UAEPAXI@Z;cGlow::scalar_destructor;0x10076db0;0x57;__thiscall;;cGlow*;cGlow*;uchar
 ??0cGlow@@QAE@XZ;cGlow::cGlow;0x10076e10;0xd9;__thiscall;;uchar;cGlow*
 ??1cGlow@@UAE@XZ;cGlow::~cGlow;0x10076ef0;0x64;__thiscall;;void;cGlow*
 ?Create@cGlow@@QAEXPAD@Z;cGlow::Create;0x10076f60;0x89;__thiscall;;void;cGlow*;char*
 ?OnRender@cGlow@@UAEXXZ;cGlow::OnRender;0x10076ff0;0x18d;__thiscall;;void;cGlow*
 ?RenderGlow@cGlow@@QAEXXZ;cGlow::RenderGlow;0x10077180;0x1e7;__thiscall;;void;cGlow*
-?SetScale@cGlow@@QAEXUD3DXVECTOR3@@@Z;cGlow::SetScale;0x10077370;0x1d;__thiscall;;void;cGlow*;uint;uint;uint
-?SetPosition@cGlow@@QAEXUD3DXVECTOR3@@@Z;cGlow::SetPosition;0x10077390;0x1d;__thiscall;;void;cGlow*;uint;uint;uint
+?SetScale@cGlow@@QAEXUD3DXVECTOR3@@@Z;cGlow::SetScale;0x10077370;0x1d;__thiscall;;void;cGlow*;D3DXVECTOR3
+?SetPosition@cGlow@@QAEXUD3DXVECTOR3@@@Z;cGlow::SetPosition;0x10077390;0x1d;__thiscall;;void;cGlow*;D3DXVECTOR3
 ?SetSize@cGlow@@QAEXM@Z;cGlow::SetSize;0x100773b0;0xd;__thiscall;;void;cGlow*;float
 ?EnableRendering@cGlow@@QAEX_N@Z;cGlow::EnableRendering;0x100773c0;0xd;__thiscall;;void;cGlow*;bool
 ?EnableRendering@cGlow@@QAE_NXZ;cGlow::EnableRendering;0x100773d0;0x7;__thiscall;;bool;cGlow*
