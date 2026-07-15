@@ -73,23 +73,20 @@ int pgString::length() const {
 
 /* 10082410-10082481 00071	*/
 bool pgString::consistsJustOf(pgString const& param_1) const {
-	if (text == NULL) {
-		return true;
-	}
-	int index1 = 0;
-	while (index1 < length()) {
-		int index2 = 0;
-		bool bVar1 = false;
-		while (index2 < param_1.length()) {
-			if (text[index1] == param_1.text[index2]) {
-				bVar1 = true;
+	if (text != NULL) {
+		for (int iVar3 = 0; iVar3 < length(); iVar3++) {
+			int iVar4 = 0;
+			bool bVar1 = false;
+			while (iVar4 < param_1.length()) {
+				if (text[iVar3] == param_1.text[iVar4]) {
+					bVar1 = true;
+				}
+				iVar4++;
 			}
-			index2++;
+			if (!bVar1) {
+				return false;
+			}
 		}
-		if (!bVar1) {
-			return false;
-		}
-		index1++;
 	}
 	return true;
 }
@@ -103,6 +100,10 @@ int pgString::getIndex(char param_1, bool param_2) const {
 	}
 }
 
+#define B
+
+#ifdef A
+
 /* 100824D0-1008254C 0007C	*/
 int pgString::getIndex(int param_1, char param_2, bool param_3) const {
 	if (param_1 == -1) {
@@ -113,28 +114,67 @@ int pgString::getIndex(int param_1, char param_2, bool param_3) const {
 		}
 	}
 
-	if (text == NULL) {
-		return -1;
-	}
-
-	if (param_3) {
-		while(param_1 < length()) {
-			if (text[param_1] == param_2) {
-				return param_1;
+	if (text != NULL) {
+		if (param_3) {
+			while (param_1 < length()) {
+				if (text[param_1] == param_2) {
+					return param_1;
+				}
+				param_1++;
 			}
-			param_1++;
-		}
-	} else {
-		while (param_1 >= 0) {
-			if (text[param_1] == param_2) {
-				return param_1;
+			return -1;
+		} else {
+			while (param_1 >= 0) {
+				if (text[param_1] == param_2) {
+					return param_1;
+				}
+				param_1--;
 			}
-			param_1--;
+			return -1;
 		}
 	}
 
 	return -1;
 }
+
+#endif 
+
+#ifdef B
+
+/* 100824D0-1008254C 0007C	*/
+int pgString::getIndex(int param_1, char param_2, bool param_3) const {
+	if (param_1 == -1) {
+		if (param_3) {
+			param_1 = 0;
+		} else {
+			param_1 = length()-1;
+		}
+	}
+
+	if (text != NULL) {
+		if (param_3) {
+			while (param_1 < length()) {
+				if (text[param_1] == param_2) {
+					return param_1;
+				}
+				param_1++;
+			}
+			return -1;
+		} else {
+			while (param_1 >= 0) {
+				if (text[param_1] == param_2) {
+					return param_1;
+				}
+				param_1--;
+			}
+			return -1;
+		}
+	}
+
+	return -1;
+}
+
+#endif
 
 /* 10082550-10082586 00036	*/
 int pgString::getIndexNot(char param_1, bool param_2) const {
@@ -155,23 +195,23 @@ int pgString::getIndexNot(int param_1, char param_2, bool param_3) const {
 		}
 	}
 
-	if (text == NULL) {
-		return -1;
-	}
-
-	if (param_3) {
-		while(param_1 < length()) {
-			if (text[param_1] != param_2) {
-				return param_1;
+	if (text != NULL) {
+		if (param_3) {
+			while(param_1 < length()) {
+				if (text[param_1] != param_2) {
+					return param_1;
+				}
+				param_1++;
 			}
-			param_1++;
-		}
-	} else {
-		while (param_1 >= 0) {
-			if (text[param_1] != param_2) {
-				return param_1;
+			return -1;
+		} else {
+			while (param_1 >= 0) {
+				if (text[param_1] != param_2) {
+					return param_1;
+				}
+				param_1--;
 			}
-			param_1--;
+			return -1;
 		}
 	}
 
