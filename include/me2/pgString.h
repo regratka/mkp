@@ -57,19 +57,19 @@ public:
 	/* 10082890 */ pgString& toUpper();
 	/* 100828D0 */ static char toLower(char param_1);
 	/* 10082900 */ static char toUpper(char param_1);
-	/* 10082930 */ pgString* cutC(char param_1, bool param_2);
-	/* 10082A30 */ pgString* cut(char param_1);
-	/* 10082A60 */ pgString* cutS(pgString* param_1, bool param_2);
-	/* 10082B80 */ pgString* cut(pgString* param_1);
-	/* 10082BB0 */ int find(pgString* param_1);
-	/* 10082BF0 */ bool operator<(pgString* param_1);
-	/* 10082C60 */ bool operator>(pgString* param_1);
-	/* 10082CD0 */ bool operator==(pgString* param_1);
-	/* 10082D40 */ bool operator==(char* param_1);
-	/* 10082DB0 */ bool operator!=(pgString* param_1);
-	/* 10082E20 */ bool operator!=(char* param_1);
+	/* 10082930 */ pgString& cutC(char param_1, bool param_2);
+	/* 10082A30 */ pgString& cut(char param_1);
+	/* 10082A60 */ pgString& cutS(pgString const& param_1, bool param_2);
+	/* 10082B80 */ pgString& cut(pgString const& param_1);
+	/* 10082BB0 */ int find(pgString const& param_1);
+	/* 10082BF0 */ bool operator<(pgString const& param_1) const;
+	/* 10082C60 */ bool operator>(pgString const& param_1) const;
+	/* 10082CD0 */ bool operator==(pgString const& param_1) const;
+	/* 10082D40 */ bool operator==(char const* param_1) const;
+	/* 10082DB0 */ bool operator!=(pgString const& param_1) const;
+	/* 10082E20 */ bool operator!=(char const* param_1) const;
 	/* 10082E90 */ pgString& operator=(pgString const& param_1);
-	/* 10082F00 */ pgString* operator+=(pgString* param_1);
+	/* 10082F00 */ pgString& operator+=(pgString const& param_1);
 	/* 10082F20 */ void setBuffer(char* param_1);
 
 private:
