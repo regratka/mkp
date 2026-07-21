@@ -100,10 +100,6 @@ int pgString::getIndex(char param_1, bool param_2) const {
 	}
 }
 
-#define B
-
-#ifdef A
-
 /* 100824D0-1008254C 0007C	*/
 int pgString::getIndex(int param_1, char param_2, bool param_3) const {
 	if (param_1 == -1) {
@@ -116,65 +112,24 @@ int pgString::getIndex(int param_1, char param_2, bool param_3) const {
 
 	if (text != NULL) {
 		if (param_3) {
-			while (param_1 < length()) {
-				if (text[param_1] == param_2) {
-					return param_1;
+			for (int idx = param_1; idx < length(); idx++) {
+				if (text[idx] == param_2) {
+					return idx;
 				}
-				param_1++;
 			}
 			return -1;
 		} else {
-			while (param_1 >= 0) {
-				if (text[param_1] == param_2) {
-					return param_1;
+			for (int idx = param_1; idx >= 0; idx--) {
+				if (text[idx] == param_2) {
+					return idx;
 				}
-				param_1--;
 			}
 			return -1;
 		}
 	}
-
+	
 	return -1;
 }
-
-#endif 
-
-#ifdef B
-
-/* 100824D0-1008254C 0007C	*/
-int pgString::getIndex(int param_1, char param_2, bool param_3) const {
-	if (param_1 == -1) {
-		if (param_3) {
-			param_1 = 0;
-		} else {
-			param_1 = length()-1;
-		}
-	}
-
-	if (text != NULL) {
-		if (param_3) {
-			while (param_1 < length()) {
-				if (text[param_1] == param_2) {
-					return param_1;
-				}
-				param_1++;
-			}
-			return -1;
-		} else {
-			while (param_1 >= 0) {
-				if (text[param_1] == param_2) {
-					return param_1;
-				}
-				param_1--;
-			}
-			return -1;
-		}
-	}
-
-	return -1;
-}
-
-#endif
 
 /* 10082550-10082586 00036	*/
 int pgString::getIndexNot(char param_1, bool param_2) const {
@@ -197,19 +152,17 @@ int pgString::getIndexNot(int param_1, char param_2, bool param_3) const {
 
 	if (text != NULL) {
 		if (param_3) {
-			while(param_1 < length()) {
-				if (text[param_1] != param_2) {
-					return param_1;
+			for (int idx = param_1; idx < length(); idx++) {
+				if (text[idx] != param_2) {
+					return idx;
 				}
-				param_1++;
 			}
 			return -1;
 		} else {
-			while (param_1 >= 0) {
-				if (text[param_1] != param_2) {
-					return param_1;
+			for (int idx = param_1; idx >= 0; idx--) {
+				if (text[idx] != param_2) {
+					return idx;
 				}
-				param_1--;
 			}
 			return -1;
 		}
@@ -240,16 +193,20 @@ int pgString::getIndex(int param_1, pgString const& param_2, bool param_3) const
 	if (text == NULL || param_1 < 0 || param_1 >= length()) {
 		return -1;
 	}
-
+ 
+	int iVar2 = length();
+	int iVar3 = param_2.length();
 	if (param_3) {
-		while (param_1 < length()) {
+		while (param_1 < iVar2) {
 			int iVar4 = 0;
-			int iVar1 = param_1;
-			while (iVar1 < length() && iVar4 < param_2.length() && text[param_1+iVar4] == param_2.text[iVar4]) {
-				iVar4++;
-				iVar1 = iVar4 + param_1;
+			while (iVar4 + param_1 < iVar2 && iVar4 < iVar3) {
+				if (text[iVar4+param_1] == param_2.text[iVar4]) {
+					iVar4++;
+				} else {
+					break;
+				}
 			}
-			if (iVar4 == param_2.length()) {
+			if (iVar4 == iVar3) {
 				return param_1;
 			}
 			param_1++;
@@ -257,12 +214,14 @@ int pgString::getIndex(int param_1, pgString const& param_2, bool param_3) const
 	} else {
 		while (param_1 >= 0) {
 			int iVar4 = 0;
-			int iVar1 = param_1;
-			while (iVar1 < length() && iVar4 < param_2.length() && text[param_1+iVar4] == param_2.text[iVar4]) {
-				iVar4++;
-				iVar1 = iVar4 + param_1;
+			while (iVar4 + param_1 < iVar2 && iVar4 < iVar3) {
+				if (text[iVar4+param_1] == param_2.text[iVar4]) {
+					iVar4++;
+				} else {
+					break;
+				}
 			}
-			if (iVar4 == param_2.length()) {
+			if (iVar4 == iVar3) {
 				return param_1;
 			}
 			param_1--;
@@ -287,16 +246,21 @@ int pgString::getCNum(char param_1) const {
 
 /* 10082790-10082850 000C0	*/
 pgString pgString::getSubString(int param_1, int param_2) const {
-	int len = param_2;
-	if (param_2 == -1) {
-		len = length() - param_1;
-	}
+	// int len = param_2;
+	// if (param_2 == -1) {
+	// 	len = length();
+	// 	len -= param_1;
+	// }
+	int len = param_2 == -1 ?  length() - param_1 : param_2;
 
 	char* pcVar1 = new char[len+1];
-	for (int index = 0; index < len; index++) {
-		pcVar1[index] = text[index + param_1];
+	// char* pcVar2 = pcVar1;
+	for (int index = len; index > 0; index--) {
+		pcVar1[len-index] = text[len-index+param_1]; 
+		// *pcVar2 = text[pcVar2 - pcVar1 + param_1];
+		// pcVar2++;
 	}
-	pcVar1[len+1] = '\0';
+	pcVar1[len] = '\0';
 	pgString res;
 	res.setBuffer(pcVar1);
 	return res;
@@ -348,12 +312,12 @@ char pgString::toUpper(char param_1) {
 
 /* 10082930-10082A21 000F1	*/
 pgString& pgString::cutC(char param_1, bool param_2) {
+	int iVar4 = -1;
 	if (text == NULL) {
 		return *this;
 	}
-
+	
 	if (param_2) {
-		int iVar4 = -1;
 		for (int iVar5 = 0; iVar5 < length(); iVar5++) {
 			if (text[iVar5] != param_1) {
 				break;
@@ -365,11 +329,10 @@ pgString& pgString::cutC(char param_1, bool param_2) {
 			return *this;
 		}
 
-		pgString subString = getSubString(iVar4+1, -1);
-		*this = subString.text;
+		*this = getSubString(iVar4+1, -1);
+
 		return *this;
 	} else {
-		int iVar4 = -1;
 		for (int iVar5 = length()-1; iVar5 >= 0; iVar5--) {
 			if (text[iVar5] != param_1) {
 				break;
@@ -381,8 +344,7 @@ pgString& pgString::cutC(char param_1, bool param_2) {
 			return *this;
 		}
 
-		pgString subString = getSubString(0, iVar4-1);
-		*this = subString.text;
+		*this = getSubString(0, iVar4);
 		return *this;
 	}
 }
@@ -396,14 +358,14 @@ pgString& pgString::cut(char param_1) {
 
 /* 10082A60-10082B76 00116	*/
 pgString& pgString::cutS(pgString const& param_1, bool param_2) {
+	int iVar4 = -1;
 	if (text == NULL) {
 		return *this;
 	}
 
 	if (param_2) {
-		int iVar4 = -1;
 		for (int iVar5 = 0; iVar5 < length(); iVar5++) {
-			if (param_1.getIndex(text[iVar5], true) < 0) {
+			if (param_1.getIndex(text[iVar5], true) <= -1) {
 				break;
 			}
 			iVar4 = iVar5;
@@ -413,13 +375,11 @@ pgString& pgString::cutS(pgString const& param_1, bool param_2) {
 			return *this;
 		}
 
-		pgString subString = getSubString(iVar4+1, -1);
-		*this = subString.text;
+		*this = getSubString(iVar4+1, -1);
 		return *this;
 	} else {
-		int iVar4 = -1;
 		for (int iVar5 = length()-1; iVar5 >= 0; iVar5--) {
-			if (param_1.getIndex(text[iVar5], true) < 0) {
+			if (param_1.getIndex(text[iVar5], true) <= -1) {
 				break;
 			}
 			iVar4 = iVar5;
@@ -429,8 +389,7 @@ pgString& pgString::cutS(pgString const& param_1, bool param_2) {
 			return *this;
 		}
 
-		pgString subString = getSubString(0, iVar4-1);
-		*this = subString.text;
+		*this = getSubString(0, iVar4-1);
 		return *this;
 	}
 }
