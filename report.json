@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 22.205883,
-    "total_code": "681635",
-    "matched_code": "84852",
-    "matched_code_percent": 12.448304,
+    "fuzzy_match_percent": 22.65548,
+    "total_code": "681607",
+    "matched_code": "87613",
+    "matched_code_percent": 12.853888,
     "matched_data_percent": 100.0,
     "total_functions": 3149,
-    "matched_functions": 888,
-    "matched_functions_percent": 28.199429,
+    "matched_functions": 924,
+    "matched_functions_percent": 29.342648,
     "complete_code": "22185",
-    "complete_code_percent": 3.2546744,
+    "complete_code_percent": 3.2548082,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 28
@@ -19983,18 +19983,22 @@
     {
       "name": "me2/pgString",
       "measures": {
-        "fuzzy_match_percent": 0.5211051,
-        "total_code": "3207",
+        "fuzzy_match_percent": 96.72798,
+        "total_code": "3179",
+        "matched_code": "2761",
+        "matched_code_percent": 86.85121,
         "matched_data_percent": 100.0,
         "total_functions": 38,
+        "matched_functions": 36,
+        "matched_functions_percent": 94.73685,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "3207",
-          "fuzzy_match_percent": 0.5211051,
+          "size": "3167",
+          "fuzzy_match_percent": 96.72798,
           "metadata": {}
         }
       ],
@@ -20002,7 +20006,7 @@
         {
           "name": "??0pgString@@QAE@XZ",
           "size": "9",
-          "fuzzy_match_percent": 66.666664,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgString::pgString(void)"
           },
@@ -20011,14 +20015,25 @@
         {
           "name": "?getLength@pgString@@QBEHXZ",
           "size": "5",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getLength(void) const"
           },
           "address": "9"
         },
         {
+          "name": "??BpgString@@QBEPBDXZ",
+          "size": "12",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: char const * __thiscall pgString::operator char const *(void) const"
+          },
+          "address": "14"
+        },
+        {
           "name": "?get@pgString@@QBEPBDXZ",
           "size": "12",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: char const * __thiscall pgString::get(void) const"
           },
@@ -20027,6 +20042,7 @@
         {
           "name": "??ApgString@@QBEDH@Z",
           "size": "12",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: char __thiscall pgString::operator[](int) const"
           },
@@ -20035,6 +20051,7 @@
         {
           "name": "??0pgString@@QAE@ABV0@@Z",
           "size": "25",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgString::pgString(class pgString const &)"
           },
@@ -20043,6 +20060,7 @@
         {
           "name": "??0pgString@@QAE@PBD@Z",
           "size": "89",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgString::pgString(char const *)"
           },
@@ -20051,7 +20069,7 @@
         {
           "name": "??1pgString@@QAE@XZ",
           "size": "14",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgString::~pgString(void)"
           },
@@ -20060,6 +20078,7 @@
         {
           "name": "?set@pgString@@QAAAAV1@PBDZZ",
           "size": "148",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __cdecl pgString::set(char const *, ...)"
           },
@@ -20068,6 +20087,7 @@
         {
           "name": "?cat@pgString@@QAEAAV1@PBD@Z",
           "size": "210",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::cat(char const *)"
           },
@@ -20076,6 +20096,7 @@
         {
           "name": "?length@pgString@@QBEHXZ",
           "size": "25",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::length(void) const"
           },
@@ -20084,6 +20105,7 @@
         {
           "name": "?consistsJustOf@pgString@@QBE_NABV1@@Z",
           "size": "113",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::consistsJustOf(class pgString const &) const"
           },
@@ -20092,6 +20114,7 @@
         {
           "name": "?getIndex@pgString@@QBEHD_N@Z",
           "size": "54",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getIndex(char, bool) const"
           },
@@ -20100,6 +20123,7 @@
         {
           "name": "?getIndex@pgString@@QBEHHD_N@Z",
           "size": "124",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getIndex(int, char, bool) const"
           },
@@ -20108,6 +20132,7 @@
         {
           "name": "?getIndexNot@pgString@@QBEHD_N@Z",
           "size": "54",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getIndexNot(char, bool) const"
           },
@@ -20116,6 +20141,7 @@
         {
           "name": "?getIndexNot@pgString@@QBEHHD_N@Z",
           "size": "124",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getIndexNot(int, char, bool) const"
           },
@@ -20124,6 +20150,7 @@
         {
           "name": "?getIndex@pgString@@QBEHABV1@_N@Z",
           "size": "55",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getIndex(class pgString const &, bool) const"
           },
@@ -20132,6 +20159,7 @@
         {
           "name": "?getIndex@pgString@@QBEHHABV1@_N@Z",
           "size": "226",
+          "fuzzy_match_percent": 77.88172,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getIndex(int, class pgString const &, bool) const"
           },
@@ -20140,6 +20168,7 @@
         {
           "name": "?getCNum@pgString@@QBEHD@Z",
           "size": "66",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::getCNum(char) const"
           },
@@ -20148,6 +20177,7 @@
         {
           "name": "?getSubString@pgString@@QBE?AV1@HH@Z",
           "size": "192",
+          "fuzzy_match_percent": 71.859375,
           "metadata": {
             "demangled_name": "public: class pgString __thiscall pgString::getSubString(int, int) const"
           },
@@ -20156,6 +20186,7 @@
         {
           "name": "?toLower@pgString@@QAEAAV1@XZ",
           "size": "55",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::toLower(void)"
           },
@@ -20164,6 +20195,7 @@
         {
           "name": "?toUpper@pgString@@QAEAAV1@XZ",
           "size": "55",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::toUpper(void)"
           },
@@ -20172,7 +20204,7 @@
         {
           "name": "?toLower@pgString@@SADD@Z",
           "size": "43",
-          "fuzzy_match_percent": 7.368421,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: static char __cdecl pgString::toLower(char)"
           },
@@ -20181,7 +20213,7 @@
         {
           "name": "?toUpper@pgString@@SADD@Z",
           "size": "43",
-          "fuzzy_match_percent": 7.368421,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: static char __cdecl pgString::toUpper(char)"
           },
@@ -20190,6 +20222,7 @@
         {
           "name": "?cutC@pgString@@QAEAAV1@D_N@Z",
           "size": "241",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::cutC(char, bool)"
           },
@@ -20198,6 +20231,7 @@
         {
           "name": "?cut@pgString@@QAEAAV1@D@Z",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::cut(char)"
           },
@@ -20206,6 +20240,7 @@
         {
           "name": "?cutS@pgString@@QAEAAV1@ABV1@_N@Z",
           "size": "278",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::cutS(class pgString const &, bool)"
           },
@@ -20214,6 +20249,7 @@
         {
           "name": "?cut@pgString@@QAEAAV1@ABV1@@Z",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::cut(class pgString const &)"
           },
@@ -20222,6 +20258,7 @@
         {
           "name": "?find@pgString@@QAEHABV1@@Z",
           "size": "52",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall pgString::find(class pgString const &)"
           },
@@ -20230,6 +20267,7 @@
         {
           "name": "??MpgString@@QBE_NABV0@@Z",
           "size": "99",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::operator<(class pgString const &) const"
           },
@@ -20238,6 +20276,7 @@
         {
           "name": "??OpgString@@QBE_NABV0@@Z",
           "size": "99",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::operator>(class pgString const &) const"
           },
@@ -20246,6 +20285,7 @@
         {
           "name": "??8pgString@@QBE_NABV0@@Z",
           "size": "104",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::operator==(class pgString const &) const"
           },
@@ -20254,6 +20294,7 @@
         {
           "name": "??8pgString@@QBE_NPBD@Z",
           "size": "100",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::operator==(char const *) const"
           },
@@ -20262,6 +20303,7 @@
         {
           "name": "??9pgString@@QBE_NABV0@@Z",
           "size": "104",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::operator!=(class pgString const &) const"
           },
@@ -20270,6 +20312,7 @@
         {
           "name": "??9pgString@@QBE_NPBD@Z",
           "size": "100",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgString::operator!=(char const *) const"
           },
@@ -20278,6 +20321,7 @@
         {
           "name": "??4pgString@@QAEAAV0@ABV0@@Z",
           "size": "101",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::operator=(class pgString const &)"
           },
@@ -20286,6 +20330,7 @@
         {
           "name": "??YpgString@@QAEAAV0@ABV0@@Z",
           "size": "32",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgString & __thiscall pgString::operator+=(class pgString const &)"
           },
@@ -20294,17 +20339,11 @@
         {
           "name": "?setBuffer@pgString@@QAEXPAD@Z",
           "size": "38",
-          "fuzzy_match_percent": 6.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall pgString::setBuffer(char *)"
           },
           "address": "3129"
-        },
-        {
-          "name": "pgString::_islower",
-          "size": "40",
-          "metadata": {},
-          "address": "3167"
         }
       ],
       "metadata": {
@@ -30918,16 +30957,16 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 26.128462,
-        "total_code": "514121",
-        "matched_code": "70245",
-        "matched_code_percent": 13.663127,
+        "fuzzy_match_percent": 26.724771,
+        "total_code": "514093",
+        "matched_code": "73006",
+        "matched_code_percent": 14.200932,
         "matched_data_percent": 100.0,
         "total_functions": 2206,
-        "matched_functions": 690,
-        "matched_functions_percent": 31.278334,
+        "matched_functions": 726,
+        "matched_functions_percent": 32.910244,
         "complete_code": "10581",
-        "complete_code_percent": 2.0580757,
+        "complete_code_percent": 2.058188,
         "complete_data_percent": 100.0,
         "total_units": 110,
         "complete_units": 5

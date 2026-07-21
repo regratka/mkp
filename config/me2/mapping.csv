@@ -185,7 +185,8 @@
 ?addLastIndexAgain@pgTerrainPatchBase@@QAEXXZ;pgTerrainPatchBase::addLastIndexAgain;0x1000b3f0;0x21;__thiscall;;void;pgTerrainPatchBase*
 ??0pgString@@QAE@XZ;pgString::pgString;0x1000b420;0x9;__thiscall;;uchar;pgString*
 ?getLength@pgString@@QBEHXZ;pgString::getLength;0x1000b430;0x5;__thiscall;;int;pgString*
-?get@pgString@@QBEPBDXZ;pgString::operator_char_const*;0x1000b440;0xc;__thiscall;;char*;pgString*
+??BpgString@@QBEPBDXZ;pgString::operator_char_const*;0x1000b440;0xc;__thiscall;;char*;pgString*
+?get@pgString@@QBEPBDXZ;pgString::get;0x1000b440;0xc;__thiscall;;char*;pgString*
 ??ApgString@@QBEDH@Z;pgString::operator[];0x1000b450;0xc;__thiscall;;char;pgString*;int
 ?isCompressed@pgImage@@QBE_NXZ;pgImage::isCompressed;0x1000b460;0xd;__thiscall;;bool;pgImage*
 ?getName@pgImage@@QBEABVpgString@@XZ;CRay::Vector;0x1000b470;0x4;__thiscall;;uchar;CRay*
@@ -2644,7 +2645,7 @@
 ??0pgString@@QAE@ABV0@@Z;pgString::pgString;0x100821e0;0x19;__thiscall;;uchar;pgString*;pgString*
 ??0pgString@@QAE@PBD@Z;pgString::pgString;0x10082200;0x59;__thiscall;;uchar;pgString*;char*
 ??1pgString@@QAE@XZ;pgString::~pgString;0x10082260;0xe;__thiscall;;void;pgString*
-?set@pgString@@QAAAAV1@PBDZZ;pgString::set;0x10082270;0x94;__thiscall;varargs;pgString*;pgString*;char*
+?set@pgString@@QAAAAV1@PBDZZ;pgString::set;0x10082270;0x94;__thiscall;varargs;pgString&;pgString*;char*
 ?cat@pgString@@QAEAAV1@PBD@Z;pgString::cat;0x10082310;0xd2;__thiscall;;pgString*;pgString*;char*
 ?length@pgString@@QBEHXZ;pgString::length;0x100823f0;0x19;__thiscall;;int;pgString*
 ?consistsJustOf@pgString@@QBE_NABV1@@Z;pgString::consistsJustOf;0x10082410;0x71;__thiscall;;bool;pgString*;pgString*
@@ -5226,7 +5227,7 @@
 ;_rand;0x10110c5b;0x22;__cdecl;;int
 ;_isalpha;0x10110c7d;0x2e;__cdecl;;uint;int
 ;_islower;0x10110cab;0x28;__cdecl;;uint;int
-;pgString::_islower;0x10110cd3;0x28;__cdecl;;int;int
+;_isupper;0x10110cd3;0x28;__cdecl;;int;int
 ;FUN_10110cfb;0x10110cfb;0x28;__thiscall;;uint;void*;int
 ;FUN_10110d23;0x10110d23;0x28;__thiscall;;uint;void*;int
 ;snprintf_2;0x10110d4b;0x51;__cdecl;varargs;int;char*;int;char*
