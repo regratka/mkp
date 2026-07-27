@@ -128,6 +128,7 @@
 ??4CDirectXFont@@QAEAAV0@ABV0@@Z;CDirectXFont::operator=;0x1000a8e0;0x68;__thiscall;;CDirectXFont*;CDirectXFont*;CDirectXFont*
 ??_ECDirectXFont@@UAEPAXI@Z;CDirectXFont::scalar_destructor;0x1000a950;0x57;__thiscall;;CDirectXFont*;CDirectXFont*;uchar
 ?PlayMovie@cMagSprite@@QAEX_N@Z;cMagSprite::PlayMovie;0x1000a9b0;0xd;__thiscall;;void;cMagSprite*;bool
+??ApgVec2@@QAEAAMI@Z;pgVec2::operator[];0x1000a9c0;0xa;__thiscall;;float*;pgVec2*;uint
 ??ApgVec2@@QBEABMI@Z;pgVec2::operator[];0x1000a9c0;0xa;__thiscall;;float*;pgVec2*;uint
 ??0pgVec2@@QAE@XZ;pgVec2::pgVec2;0x1000a9d0;0x10;__thiscall;;uchar;pgVec2*
 ??0pgVec2@@QAE@MM@Z;pgVec2::pgVec2;0x1000a9e0;0x12;__thiscall;;uchar;pgVec2*;float;float
@@ -140,12 +141,17 @@
 ?addScaled@pgVec2@@QAEAAV1@ABV1@M0@Z;pgVec2::addScaled;0x1000aac0;0x24;__thiscall;;pgVec2*;pgVec2*;pgVec2*;float;pgVec2*
 ?almostEqual@pgVec2@@QBE_NABV1@M@Z;pgVec2::almostEqual;0x1000aaf0;0x62;__thiscall;;bool;pgVec2*;pgVec2*;float
 ?combine@pgVec2@@QAEAAV1@MABV1@M0@Z;pgVec2::combine;0x1000ab60;0x30;__thiscall;;pgVec2*;pgVec2*;float;pgVec2*;float;pgVec2*
-??0pgVec2@@QAE@PAM@Z;pgVec2::pgVec2;0x1000ab90;0x13;__thiscall;;uchar;pgVec2*;pgVec2*
+??0pgVec2@@QAE@ABV0@@Z;pgVec2::pgVec2;0x1000ab90;0x13;__thiscall;;uchar;pgVec2*;pgVec2*
+??0pgVec2@@QAE@PAM@Z;pgVec2::pgVec2;0x1000ab90;0x13;__thiscall;;uchar;pgVec2*;float*
+??4cMagLog@@QAEAAV0@ABV0@@Z;cMagLog::operator=;0x1000ab90;0x13;__thiscall;;cMagLog*;cMagLog*;cMagLog*
+??4pgVec2@@QAEAAV0@ABV0@@Z;pgVec2::pgVec2;0x1000ab90;0x13;__thiscall;;pgVec2*;pgVec2*;pgVec2*
+?copy@pgVec2@@QAEAAV1@ABV1@@Z;pgVec2::pgVec2;0x1000ab90;0x13;__thiscall;;pgVec2*;pgVec2*;pgVec2*
 ?sqrDistance@pgVec2@@QBEMABV1@@Z;pgVec2::sqrDistance;0x1000abb0;0x1f;__thiscall;;float;pgVec2*;pgVec2*
 ?dot@pgVec2@@QBEMABV1@@Z;pgVec2::dot;0x1000abd0;0x13;__thiscall;;float;pgVec2*;pgVec2*
 ?equal@pgVec2@@QBE_NABV1@@Z;pgVec2::equal;0x1000abf0;0x29;__thiscall;;bool;pgVec2*;pgVec2*
 ?negate@pgVec2@@QAEXXZ;pgVec2::negate;0x1000ac20;0xf;__thiscall;;void;pgVec2*
-?scale@pgVec2@@QAEAAV1@M@Z;pgVec2::operator*=;0x1000ac30;0x17;__thiscall;;pgVec2*;pgVec2*;float
+??XpgVec2@@QAEAAV0@M@Z;pgVec2::operator*=;0x1000ac30;0x17;__thiscall;;pgVec2*;pgVec2*;float
+?scale@pgVec2@@QAEAAV1@M@Z;pgVec2::scale;0x1000ac30;0x17;__thiscall;;pgVec2*;pgVec2*;float
 ?scale@pgVec2@@QAEAAV1@MABV1@@Z;pgVec2::scale;0x1000ac50;0x1b;__thiscall;;pgVec2*;pgVec2*;float;pgVec2*
 ?scaleBy@pgVec2@@QAEAAV1@ABV1@@Z;pgVec2::scaleBy;0x1000ac70;0x18;__thiscall;;pgVec2*;pgVec2*;pgVec2*
 ?set@pgVec2@@QAEXMM@Z;pgVec2::set;0x1000ac90;0x10;__thiscall;;void;pgVec2*;float;float
