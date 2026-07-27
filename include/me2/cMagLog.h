@@ -5,8 +5,9 @@
 
 #include <d3dx8math.h>
 
-class cMagLog {
+class DLLEXPORT cMagLog {
 public:
+
 	/* 10030390 */ cMagLog();
 	/* 100303B0 */ void DeleteLog();
 	/* 100303F0 */ void DataLog(char const * p_format, ...);

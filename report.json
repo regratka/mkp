@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 22.65548,
-    "total_code": "681607",
-    "matched_code": "87613",
-    "matched_code_percent": 12.853888,
+    "fuzzy_match_percent": 22.793978,
+    "total_code": "681804",
+    "matched_code": "88623",
+    "matched_code_percent": 12.99831,
     "matched_data_percent": 100.0,
-    "total_functions": 3149,
-    "matched_functions": 924,
-    "matched_functions_percent": 29.342648,
-    "complete_code": "22185",
-    "complete_code_percent": 3.2548082,
+    "total_functions": 3157,
+    "matched_functions": 959,
+    "matched_functions_percent": 30.376942,
+    "complete_code": "23195",
+    "complete_code_percent": 3.402004,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 28
+    "complete_units": 29
   },
   "units": [
     {
@@ -9134,18 +9134,18 @@
     {
       "name": "me2/MagTextureMgr",
       "measures": {
-        "fuzzy_match_percent": 0.51485825,
-        "total_code": "7810",
+        "fuzzy_match_percent": 0.50931513,
+        "total_code": "7895",
         "matched_data_percent": 100.0,
-        "total_functions": 28,
+        "total_functions": 29,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "7810",
-          "fuzzy_match_percent": 0.51485825,
+          "size": "7895",
+          "fuzzy_match_percent": 0.50931513,
           "metadata": {}
         }
       ],
@@ -9173,13 +9173,21 @@
           "address": "828"
         },
         {
+          "name": "?CreateNiceString@MagnumMesh@@QAEPADPAD@Z",
+          "size": "85",
+          "metadata": {
+            "demangled_name": "public: char * __thiscall MagnumMesh::CreateNiceString(char *)"
+          },
+          "address": "912"
+        },
+        {
           "name": "??0MagTextureMgr@@QAE@XZ",
           "size": "169",
           "fuzzy_match_percent": 3.5454545,
           "metadata": {
             "demangled_name": "public: __thiscall MagTextureMgr::MagTextureMgr(void)"
           },
-          "address": "912"
+          "address": "997"
         },
         {
           "name": "??1MagTextureMgr@@UAE@XZ",
@@ -9187,7 +9195,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagTextureMgr::~MagTextureMgr(void)"
           },
-          "address": "1081"
+          "address": "1166"
         },
         {
           "name": "?RestoreTextures@MagTextureMgr@@QAEXXZ",
@@ -9196,7 +9204,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::RestoreTextures(void)"
           },
-          "address": "1126"
+          "address": "1211"
         },
         {
           "name": "?GetTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PADAAU_D3DXIMAGE_INFO@@@Z",
@@ -9204,7 +9212,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTexture(char *, struct _D3DXIMAGE_INFO &)"
           },
-          "address": "1299"
+          "address": "1384"
         },
         {
           "name": "?GetTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z",
@@ -9212,7 +9220,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTexture(char *)"
           },
-          "address": "1696"
+          "address": "1781"
         },
         {
           "name": "?GetTextureMesh@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z",
@@ -9220,7 +9228,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTextureMesh(char *)"
           },
-          "address": "2067"
+          "address": "2152"
         },
         {
           "name": "?GetID@MagTextureMgr@@QAEHXZ",
@@ -9229,7 +9237,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall MagTextureMgr::GetID(void)"
           },
-          "address": "2289"
+          "address": "2374"
         },
         {
           "name": "?ReplaceTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD0@Z",
@@ -9238,7 +9246,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::ReplaceTexture(char *, char *)"
           },
-          "address": "2293"
+          "address": "2378"
         },
         {
           "name": "?DeleteTexture@MagTextureMgr@@QAEXPAD@Z",
@@ -9247,7 +9255,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::DeleteTexture(char *)"
           },
-          "address": "2489"
+          "address": "2574"
         },
         {
           "name": "?IsTexture@MagTextureMgr@@QAE_NPADAAH@Z",
@@ -9255,7 +9263,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTextureMgr::IsTexture(char *, int &)"
           },
-          "address": "2619"
+          "address": "2704"
         },
         {
           "name": "?LoadTexture@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PADAAU_D3DXIMAGE_INFO@@H@Z",
@@ -9263,7 +9271,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::LoadTexture(char *, struct _D3DXIMAGE_INFO &, int)"
           },
-          "address": "2726"
+          "address": "2811"
         },
         {
           "name": "?LoadTextureMesh@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PADAAU_D3DXIMAGE_INFO@@H@Z",
@@ -9271,7 +9279,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::LoadTextureMesh(char *, struct _D3DXIMAGE_INFO &, int)"
           },
-          "address": "3926"
+          "address": "4011"
         },
         {
           "name": "?GetBuforSize@MagTextureMgr@@QAEHXZ",
@@ -9280,7 +9288,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall MagTextureMgr::GetBuforSize(void)"
           },
-          "address": "5095"
+          "address": "5180"
         },
         {
           "name": "?LoadTextureA@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PADAAU_D3DXIMAGE_INFO@@@Z",
@@ -9288,7 +9296,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::LoadTextureA(char *, struct _D3DXIMAGE_INFO &)"
           },
-          "address": "5128"
+          "address": "5213"
         },
         {
           "name": "?GetTextureA@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z",
@@ -9296,7 +9304,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTextureA(char *)"
           },
-          "address": "5486"
+          "address": "5571"
         },
         {
           "name": "?Clear@MagTextureMgr@@QAEXXZ",
@@ -9305,7 +9313,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::Clear(void)"
           },
-          "address": "5585"
+          "address": "5670"
         },
         {
           "name": "?LoadTextureFullPath@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PADAAU_D3DXIMAGE_INFO@@0H@Z",
@@ -9313,7 +9321,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::LoadTextureFullPath(char *, struct _D3DXIMAGE_INFO &, char *, int)"
           },
-          "address": "5726"
+          "address": "5811"
         },
         {
           "name": "?SetAlfaGreatereQual@MagTextureMgr@@QAEXK@Z",
@@ -9322,7 +9330,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::SetAlfaGreatereQual(unsigned long)"
           },
-          "address": "6800"
+          "address": "6885"
         },
         {
           "name": "?BeginAlphaTexture@MagTextureMgr@@QAEXXZ",
@@ -9331,7 +9339,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::BeginAlphaTexture(void)"
           },
-          "address": "6810"
+          "address": "6895"
         },
         {
           "name": "?EndAlphaTexture@MagTextureMgr@@QAEXXZ",
@@ -9340,7 +9348,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::EndAlphaTexture(void)"
           },
-          "address": "6876"
+          "address": "6961"
         },
         {
           "name": "?BeginFilterTexture@MagTextureMgr@@QAEXXZ",
@@ -9349,7 +9357,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::BeginFilterTexture(void)"
           },
-          "address": "6920"
+          "address": "7005"
         },
         {
           "name": "?BeginFilterVertexColorTexture@MagTextureMgr@@QAEXXZ",
@@ -9358,7 +9366,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTextureMgr::BeginFilterVertexColorTexture(void)"
           },
-          "address": "7064"
+          "address": "7149"
         },
         {
           "name": "?ComputeBumpMap@MagTextureMgr@@QAEPAUIDirect3DTexture8@@PAD@Z",
@@ -9366,7 +9374,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::ComputeBumpMap(char *)"
           },
-          "address": "7233"
+          "address": "7318"
         },
         {
           "name": "?GetTextureBoundingBox@MagTextureMgr@@QAEPAUIDirect3DTexture8@@XZ",
@@ -9374,7 +9382,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTextureBoundingBox(void)"
           },
-          "address": "7754"
+          "address": "7839"
         },
         {
           "name": "?GetTextureGird@MagTextureMgr@@QAEPAUIDirect3DTexture8@@XZ",
@@ -9382,7 +9390,7 @@
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall MagTextureMgr::GetTextureGird(void)"
           },
-          "address": "7782"
+          "address": "7867"
         }
       ],
       "metadata": {
@@ -14213,14 +14221,14 @@
       "name": "me2/cMagLog",
       "measures": {
         "fuzzy_match_percent": 100.0,
-        "total_code": "1250",
-        "matched_code": "1250",
+        "total_code": "1272",
+        "matched_code": "1272",
         "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 13,
-        "matched_functions": 13,
+        "total_functions": 15,
+        "matched_functions": 15,
         "matched_functions_percent": 100.0,
-        "complete_code": "1250",
+        "complete_code": "1272",
         "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1,
@@ -14229,12 +14237,21 @@
       "sections": [
         {
           "name": ".text",
-          "size": "1132",
+          "size": "1154",
           "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
+        {
+          "name": "??4cMagLog@@QAEAAV0@ABV0@@Z",
+          "size": "19",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class cMagLog & __thiscall cMagLog::operator=(class cMagLog const &)"
+          },
+          "address": "0"
+        },
         {
           "name": "??0cMagLog@@QAE@XZ",
           "size": "27",
@@ -14242,7 +14259,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall cMagLog::cMagLog(void)"
           },
-          "address": "0"
+          "address": "19"
         },
         {
           "name": "?DeleteLog@cMagLog@@QAEXXZ",
@@ -14251,7 +14268,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagLog::DeleteLog(void)"
           },
-          "address": "27"
+          "address": "46"
         },
         {
           "name": "?DataLog@cMagLog@@QAAXPBDZZ",
@@ -14260,7 +14277,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::DataLog(char const *, ...)"
           },
-          "address": "91"
+          "address": "110"
         },
         {
           "name": "?CrashLog@cMagLog@@QAAXPBDZZ",
@@ -14269,7 +14286,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::CrashLog(char const *, ...)"
           },
-          "address": "192"
+          "address": "211"
         },
         {
           "name": "?TextureErrorLog@cMagLog@@QAAXPBDZZ",
@@ -14278,7 +14295,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::TextureErrorLog(char const *, ...)"
           },
-          "address": "311"
+          "address": "330"
         },
         {
           "name": "?TexturesLog@cMagLog@@QAAXPBDZZ",
@@ -14287,7 +14304,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::TexturesLog(char const *, ...)"
           },
-          "address": "430"
+          "address": "449"
         },
         {
           "name": "?FileLog@cMagLog@@QAAXPBDZZ",
@@ -14296,7 +14313,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::FileLog(char const *, ...)"
           },
-          "address": "549"
+          "address": "568"
         },
         {
           "name": "?OutputLog@cMagLog@@QAAXPBDZZ",
@@ -14305,7 +14322,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::OutputLog(char const *, ...)"
           },
-          "address": "549"
+          "address": "568"
         },
         {
           "name": "?DummyLog@cMagLog@@QAAXPBDZZ",
@@ -14314,7 +14331,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::DummyLog(char const *, ...)"
           },
-          "address": "667"
+          "address": "686"
         },
         {
           "name": "?DebugLog@cMagLog@@QAAXPBDZZ",
@@ -14323,7 +14340,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::DebugLog(char const *, ...)"
           },
-          "address": "786"
+          "address": "805"
         },
         {
           "name": "?DebugLog@cMagLog@@QAEXUD3DXMATRIX@@@Z",
@@ -14332,7 +14349,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagLog::DebugLog(struct D3DXMATRIX)"
           },
-          "address": "854"
+          "address": "873"
         },
         {
           "name": "?ClientServerLog@cMagLog@@QAAXPBDZZ",
@@ -14341,7 +14358,7 @@
           "metadata": {
             "demangled_name": "public: void __cdecl cMagLog::ClientServerLog(char const *, ...)"
           },
-          "address": "857"
+          "address": "876"
         },
         {
           "name": "?ReadSettings@cMagLog@@QAEXPAD@Z",
@@ -14350,7 +14367,16 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagLog::ReadSettings(char *)"
           },
-          "address": "976"
+          "address": "995"
+        },
+        {
+          "name": "?DebugLog@cMagLog@@QAEXPAUD3DXVECTOR3@@@Z",
+          "size": "3",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagLog::DebugLog(struct D3DXVECTOR3*)"
+          },
+          "address": "1151"
         }
       ],
       "metadata": {
@@ -21656,25 +21682,42 @@
     {
       "name": "me2/pgVec2",
       "measures": {
-        "fuzzy_match_percent": 2.3488705,
-        "total_code": "898",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "988",
+        "matched_code": "988",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 28,
+        "total_functions": 33,
+        "matched_functions": 33,
+        "matched_functions_percent": 100.0,
+        "complete_code": "988",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "898",
-          "fuzzy_match_percent": 2.3488705,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
+          "name": "??ApgVec2@@QAEAAMI@Z",
+          "size": "10",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: float & __thiscall pgVec2::operator[](unsigned int)"
+          },
+          "address": "0"
+        },
+        {
           "name": "??ApgVec2@@QBEABMI@Z",
           "size": "10",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float const & __thiscall pgVec2::operator[](unsigned int) const"
           },
@@ -21683,7 +21726,7 @@
         {
           "name": "??0pgVec2@@QAE@XZ",
           "size": "16",
-          "fuzzy_match_percent": 50.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgVec2::pgVec2(void)"
           },
@@ -21692,7 +21735,7 @@
         {
           "name": "??0pgVec2@@QAE@MM@Z",
           "size": "18",
-          "fuzzy_match_percent": 23.333334,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgVec2::pgVec2(float, float)"
           },
@@ -21701,6 +21744,7 @@
         {
           "name": "??HpgVec2@@QBE?AV0@XZ",
           "size": "17",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2 __thiscall pgVec2::operator+(void) const"
           },
@@ -21709,6 +21753,7 @@
         {
           "name": "??YpgVec2@@QAEAAV0@ABV0@@Z",
           "size": "24",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::operator+=(class pgVec2const &)"
           },
@@ -21717,6 +21762,7 @@
         {
           "name": "??GpgVec2@@QBE?AV0@XZ",
           "size": "21",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2 __thiscall pgVec2::operator-(void) const"
           },
@@ -21725,6 +21771,7 @@
         {
           "name": "??ZpgVec2@@QAEAAV0@ABV0@@Z",
           "size": "24",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::operator-=(class pgVec2const &)"
           },
@@ -21733,6 +21780,7 @@
         {
           "name": "??_0pgVec2@@QAEAAV0@M@Z",
           "size": "23",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::operator/=(float)"
           },
@@ -21741,6 +21789,7 @@
         {
           "name": "?add@pgVec2@@QAEAAV1@ABV1@0@Z",
           "size": "28",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::add(class pgVec2const &, class pgVec2const &)"
           },
@@ -21749,6 +21798,7 @@
         {
           "name": "?addScaled@pgVec2@@QAEAAV1@ABV1@M0@Z",
           "size": "36",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::addScaled(class pgVec2const &, float, class pgVec2const &)"
           },
@@ -21757,6 +21807,7 @@
         {
           "name": "?almostEqual@pgVec2@@QBE_NABV1@M@Z",
           "size": "98",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgVec2::almostEqual(class pgVec2const &, float) const"
           },
@@ -21765,22 +21816,52 @@
         {
           "name": "?combine@pgVec2@@QAEAAV1@MABV1@M0@Z",
           "size": "48",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::combine(float, class pgVec2const &, float, class pgVec2const &)"
           },
           "address": "315"
         },
         {
+          "name": "??0pgVec2@@QAE@ABV0@@Z",
+          "size": "19",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall pgVec2::pgVec2(class pgVec2const &)"
+          },
+          "address": "363"
+        },
+        {
           "name": "??0pgVec2@@QAE@PAM@Z",
           "size": "19",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgVec2::pgVec2(float *)"
           },
           "address": "363"
         },
         {
+          "name": "??4pgVec2@@QAEAAV0@ABV0@@Z",
+          "size": "19",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class pgVec2& __thiscall pgVec2::operator=(class pgVec2const &)"
+          },
+          "address": "363"
+        },
+        {
+          "name": "?copy@pgVec2@@QAEAAV1@ABV1@@Z",
+          "size": "19",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class pgVec2& __thiscall pgVec2::copy(class pgVec2const &)"
+          },
+          "address": "363"
+        },
+        {
           "name": "?sqrDistance@pgVec2@@QBEMABV1@@Z",
           "size": "31",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall pgVec2::sqrDistance(class pgVec2const &) const"
           },
@@ -21789,6 +21870,7 @@
         {
           "name": "?dot@pgVec2@@QBEMABV1@@Z",
           "size": "19",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall pgVec2::dot(class pgVec2const &) const"
           },
@@ -21797,6 +21879,7 @@
         {
           "name": "?equal@pgVec2@@QBE_NABV1@@Z",
           "size": "41",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall pgVec2::equal(class pgVec2const &) const"
           },
@@ -21805,15 +21888,25 @@
         {
           "name": "?negate@pgVec2@@QAEXXZ",
           "size": "15",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall pgVec2::negate(void)"
           },
           "address": "473"
         },
         {
+          "name": "??XpgVec2@@QAEAAV0@M@Z",
+          "size": "23",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: class pgVec2& __thiscall pgVec2::operator*=(float)"
+          },
+          "address": "488"
+        },
+        {
           "name": "?scale@pgVec2@@QAEAAV1@M@Z",
           "size": "23",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::scale(float)"
           },
@@ -21822,6 +21915,7 @@
         {
           "name": "?scale@pgVec2@@QAEAAV1@MABV1@@Z",
           "size": "27",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::scale(float, class pgVec2const &)"
           },
@@ -21830,6 +21924,7 @@
         {
           "name": "?scaleBy@pgVec2@@QAEAAV1@ABV1@@Z",
           "size": "24",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::scaleBy(class pgVec2const &)"
           },
@@ -21838,7 +21933,7 @@
         {
           "name": "?set@pgVec2@@QAEXMM@Z",
           "size": "16",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall pgVec2::set(float, float)"
           },
@@ -21847,6 +21942,7 @@
         {
           "name": "?set@pgVec2@@QAEXQBM@Z",
           "size": "17",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall pgVec2::set(float const *const)"
           },
@@ -21855,6 +21951,7 @@
         {
           "name": "?sub@pgVec2@@QAEAAV1@ABV1@0@Z",
           "size": "28",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class pgVec2& __thiscall pgVec2::sub(class pgVec2const &, class pgVec2const &)"
           },
@@ -21863,6 +21960,7 @@
         {
           "name": "?cosine@pgVec2@@SAMABV1@W4Axis@1@@Z",
           "size": "74",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: static float __cdecl pgVec2::cosine(class pgVec2const &, enum pgVec2::Axis)"
           },
@@ -21871,6 +21969,7 @@
         {
           "name": "?cosine@pgVec2@@SAMABV1@0@Z",
           "size": "75",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: static float __cdecl pgVec2::cosine(class pgVec2const &, class pgVec2const &)"
           },
@@ -21879,6 +21978,7 @@
         {
           "name": "?distance@pgVec2@@QBEMABV1@@Z",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall pgVec2::distance(class pgVec2const &) const"
           },
@@ -21887,6 +21987,7 @@
         {
           "name": "?length@pgVec2@@QBEMXZ",
           "size": "22",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall pgVec2::length(void) const"
           },
@@ -21895,7 +21996,7 @@
         {
           "name": "?normalize@pgVec2@@QAEMXZ",
           "size": "71",
-          "fuzzy_match_percent": 5.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall pgVec2::normalize(void)"
           },
@@ -21903,6 +22004,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -30957,19 +31059,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 26.724771,
-        "total_code": "514093",
-        "matched_code": "73006",
-        "matched_code_percent": 14.200932,
+        "fuzzy_match_percent": 26.90682,
+        "total_code": "514290",
+        "matched_code": "74016",
+        "matched_code_percent": 14.39188,
         "matched_data_percent": 100.0,
-        "total_functions": 2206,
-        "matched_functions": 726,
-        "matched_functions_percent": 32.910244,
-        "complete_code": "10581",
-        "complete_code_percent": 2.058188,
+        "total_functions": 2214,
+        "matched_functions": 761,
+        "matched_functions_percent": 34.372177,
+        "complete_code": "11591",
+        "complete_code_percent": 2.2537868,
         "complete_data_percent": 100.0,
         "total_units": 110,
-        "complete_units": 5
+        "complete_units": 6
       }
     },
     {

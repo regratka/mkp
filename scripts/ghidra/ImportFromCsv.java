@@ -91,10 +91,14 @@ public class ImportFromCsv extends GhidraScript
                 printf("DuplicateNameException for %s at %x\n", name, addr.getOffset());
             }
 
-            if (!mangledName.isEmpty() && getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
+            if (!mangledName.isEmpty()) {
                 printf("Creating label %s\n", mangledName);
-                createLabel(addr, mangledName, false);
-                createLabel(addr, mangledName, curNamespace, false, SourceType.USER_DEFINED);
+                if (getCurrentProgram().getSymbolTable().getGlobalSymbol(mangledName, addr) == null) {
+                    createLabel(addr, mangledName, false);
+                }
+                if (getCurrentProgram().getSymbolTable().getSymbol(mangledName, addr, curNamespace) == null) {
+                    createLabel(addr, mangledName, curNamespace, false, SourceType.USER_DEFINED);
+                }
             }
         }
 
