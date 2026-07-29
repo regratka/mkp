@@ -83,3 +83,7 @@ uchar CMotorboat::FUN0040e220(int param_1) {
 	return 0;
 }
 
+/* 40E550-40E59D 0004D	*/
+void CMotorboat::FUN0040e550(char* param_1) {
+}
+

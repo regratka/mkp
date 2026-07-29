@@ -17,6 +17,10 @@ UIEdit::~UIEdit() {
 void UIEdit::OnActivate() {
 }
 
+/* 412A20-412AF2 000D2	*/
+void UIEdit::FUN00412a20(bool param_1) {
+}
+
 /* 412B30-412E0E 002DE	*/
 uchar UIEdit::OnInputChar(char param_1) {
 	return 0;

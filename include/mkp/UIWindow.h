@@ -4,7 +4,7 @@
 #include <globals.h>
 #include "cMagSprite.h"
 
-class UIWindow {
+class UIWindow : public cMagSprite {
 public:
 	/* 4133E0 */ UIWindow();
 	/* 413450 */ cMagSprite* scalar_destructor(uchar param_1);

@@ -25,6 +25,7 @@ public:
 	/* 40E080 */ uchar OnCrash(cMagMeshObject* param_1);
 	/* 40E160 */ uchar FUN0040e160();
 	/* 40E220 */ uchar FUN0040e220(int param_1);
+	/* 40E550 */ void FUN0040e550(char* param_1);
 };
 
 #endif

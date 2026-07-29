@@ -59,25 +59,31 @@ class CPlayerTPP : public _Player {
 public:
 	/* 407E30 */ CPlayerTPP();
 	/* 407EC0 */ CPlayerTPP* scalar_destructor(uchar param_1);
+	/* 407EE0 */ void FUN00407ee0();
 	/* 4080B0 */ ~CPlayerTPP();
 	/* 408180 */ void* EXP();
 	/* 4081E0 */ void OnActivate();
 	/* 4082F0 */ void OnActivateLevel();
-	/* 408840 */ CCollisionCamera* FUN00408840();
+	/* 408640 */ void FUN00408640();
+	/* 408720 */ void FUN00408720();
+	/* 408840 */ void FUN00408840();
+	/* 408850 */ void FUN00408850();
+	/* 408AC0 */ void FUN00408ac0();
 	/* 409260 */ void FUN00409260();
 	/* 4094C0 */ void OnPlaySoundEnd(int param_1);
 	/* 4094E0 */ uchar OnFrame(uchar param_1);
 	/* 409500 */ uchar OnChangeMovement(uint param_1);
 	/* 409650 */ uchar OnCollisionObject(int* param_1);
 	/* 4098B0 */ uchar OnExitYesNo(char* param_1);
+	/* 409910 */ void FUN00409910(char* param_1);
 	/* 409AB0 */ uchar OnInputKey(int param_1);
 	/* 409E30 */ uchar OnInputMouse(uchar param_1, uchar param_2, uchar param_3, uint param_4);
 	/* 409FF0 */ void FUN00409ff0(bool param_1);
-	/* 40A150 */ void FUN0040A150();
+	/* 40A150 */ void FUN0040a150();
 	/* 40C760 */ uchar OnLoadChunk(uint param_1, int param_2, uint param_3, void* param_4);
 	/* 40C790 */ uchar Save(int* param_1);
 	/* 40C8A0 */ uchar Load(void* param_1, uint param_2, int param_3);
-
+	/* 40C960 */ void FUN0040c960(int param_1);
 public: 
 	/* 0x2658 */ uchar field_0x2658[0x3660-0x2658]; 
 	/* 0x3660 */ CCollisionCamera* unk_3660; 
@@ -85,6 +91,5 @@ public:
 	/* 0x3990 */ CHudGratka* unk_3990; 
 	/* 0x3994 */ uchar field_0x3994[0x3a30-0x3994]; 
 };
-
 
 #endif
