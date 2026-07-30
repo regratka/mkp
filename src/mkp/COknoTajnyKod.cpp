@@ -9,6 +9,17 @@ void COknoTajnyKod::OnActivateLevel() {
 
 /* 4272F0-42734D 0005D	*/
 COknoTajnyKod::COknoTajnyKod(CPlayerTPP* param_1) {
+    player = param_1;
+    motorboat = NULL;
+    uiEdit = NULL;
+    uiWindow = NULL;
+    unk_1745 = false;
+    unk_1788 = 0;
+    unk_178c = 0.0f;
+    unk_1790 = false;
+    uiWindow2 = NULL;
+    meshObject = NULL;
+    unk_1744 = false;
 }
 
 /* 427370-42737C 0000C	*/
@@ -17,6 +28,39 @@ COknoTajnyKod::~COknoTajnyKod() {
 
 /* 427380-427651 002D1	*/
 void COknoTajnyKod::OnActivate() {
+    meshObject = new cMagMeshObject();
+    CreateObject(meshObject);
+
+    uiWindow = new UIWindow(this);
+    CreateObject(uiWindow);
+    uiWindow->FUN004134e0("data\\textures\\menu\\tlokod.png");
+    uiWindow->FUN00413540(0.7f, 1.0f);
+    uiWindow->FUN00413560(0.5f, 0.55f);
+    uiWindow->FUN00413580(false);
+
+    uiEdit = new UIEdit("data\\textures\\menu\\edit.png", this);
+    CreateObject(uiEdit);
+    uiEdit->FUN004127e0(1.3f, 0.4f);
+    uiEdit->FUN00412830(0.5f, 0.5f);
+    uiEdit->FUN00412910("");
+    uiEdit->FUN00412770(false);
+
+    doorsTextureID = uiWindow->AddTexture("data\\textures\\hud\\drzwi.png");
+    uiWindow->SetScale(doorsTextureID ,0.7f, 0.7f);
+    uiWindow->SetPos(doorsTextureID, 0.72f, 0.32f, 0);
+    uiWindow->Hide(doorsTextureID);
+    uiWindow->EnableCheckMouse(doorsTextureID, true);
+
+    doorsATextureID = uiWindow->AddTexture("data\\textures\\hud\\drzwi_a.png");
+    uiWindow->SetScale(doorsATextureID ,0.7f, 0.7f);
+    uiWindow->SetPos(doorsATextureID, 0.72f, 0.32f, 0);
+    uiWindow->Hide(doorsATextureID);
+    uiWindow->EnableCheckMouse(doorsATextureID, true);
+
+    uiWindow2 = new UIWindow(this);
+    CreateObject(uiWindow2);
+    FUN004276f0();
+    FUN00427ae0();
 }
 
 /* 427660-4276E9 00089	*/

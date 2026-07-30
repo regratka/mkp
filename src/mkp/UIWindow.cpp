@@ -10,11 +10,32 @@ cMagSprite* UIWindow::scalar_destructor(uchar param_1) {
 }
 
 /* 413470-4134CD 0005D	*/
-UIWindow::UIWindow(uint param_1) {
+UIWindow::UIWindow(cMagSprite* param_1) {
+	return 0;
 }
 
 /* 4134D0-4134DC 0000C	*/
 UIWindow::~UIWindow() {
+}
+
+/* 4134E0-413510 00030	*/
+void UIWindow::FUN004134e0(char* param_1) {
+}
+
+/* 413510-413531 00021	*/
+void UIWindow::FUN00413510(bool param_1) {
+}
+
+/* 413540-41355A 0001A	*/
+void UIWindow::FUN00413540(float param_1, float param_2) {
+}
+
+/* 413560-41357C 0001C	*/
+void UIWindow::FUN00413560(float param_1, float param_2) {
+}
+
+/* 413580-4135A8 00028	*/
+void UIWindow::FUN00413580(bool param_1) {
 }
 
 /* 413720-413734 00014	*/
