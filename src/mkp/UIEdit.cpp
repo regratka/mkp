@@ -38,7 +38,8 @@ void UIEdit::FUN00412910(char* param_1) {
 }
 
 /* 412A20-412AF2 000D2	*/
-void UIEdit::FUN00412a20(bool param_1) {
+char* UIEdit::FUN00412a20(bool param_1) {
+	return 0;
 }
 
 /* 412B30-412E0E 002DE	*/
@@ -51,5 +52,9 @@ void UIEdit::OnInputKey(int param_1) {
 
 /* 412E60-412E8F 0002F	*/
 void UIEdit::OnInputMouse(uint param_1, uint param_2, char param_3) {
+}
+
+/* 413060-4131F5 00195	*/
+void UIEdit::FUN00413060() {
 }
 

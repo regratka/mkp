@@ -34,13 +34,14 @@ void COknoTajnyKod::OnActivate() {
     uiWindow = new UIWindow(this);
     CreateObject(uiWindow);
     uiWindow->FUN004134e0("data\\textures\\menu\\tlokod.png");
-    uiWindow->FUN00413540(0.7f, 1.0f);
-    uiWindow->FUN00413560(0.5f, 0.55f);
+    uiWindow->FUN00413540(D3DXVECTOR2(0.7f, 1.0f));
+    uiWindow->FUN00413560(D3DXVECTOR2(0.5f, 0.55f));
     uiWindow->FUN00413580(false);
 
     uiEdit = new UIEdit("data\\textures\\menu\\edit.png", this);
     CreateObject(uiEdit);
     uiEdit->FUN004127e0(1.3f, 0.4f);
+
     uiEdit->FUN00412830(0.5f, 0.5f);
     uiEdit->FUN00412910("");
     uiEdit->FUN00412770(false);
@@ -69,14 +70,53 @@ void COknoTajnyKod::FUN00427660() {
     DisableCallHandler("OnInputMouse");
     DisableCallHandler("OnInputKey");
     FUN00427910();
+    uiEdit->FUN00413060();
+    uiWindow->FUN00413580(false);
+    uiEdit->FUN00412770(false);
+    uiWindow->Hide(doorsTextureID);
+    uiWindow->Hide(doorsATextureID);
+    unk_1745 = false;
 }
 
 /* 4276F0-42785D 0016D	*/
 void COknoTajnyKod::FUN004276f0() {
+    cursorsTextureID[0] = uiWindow2->AddTexture("data\\textures\\menu\\kursor.png");
+    uiWindow2->SetScale(cursorsTextureID[0], 1.0f, 1.0f);
+    uiWindow2->SetPos(cursorsTextureID[0], 0.1f, 0.1f, 0);
+    uiWindow2->Hide(cursorsTextureID[0]);
+    
+    cursorsTextureID[1] = uiWindow2->AddTexture("data\\textures\\menu\\kursor1.png");
+    uiWindow2->SetScale(cursorsTextureID[1], 1.0f, 1.0f);
+    uiWindow2->SetPos(cursorsTextureID[1], 0.1f, 0.1f, 0);
+    uiWindow2->Hide(cursorsTextureID[1]);
+
+    cursorsTextureID[2] = uiWindow2->AddTexture("data\\textures\\menu\\kursor2.png");
+    uiWindow2->SetScale(cursorsTextureID[2], 1.0f, 1.0f);
+    uiWindow2->SetPos(cursorsTextureID[2], 0.1f, 0.1f, 0);
+    uiWindow2->Hide(cursorsTextureID[2]);
+
+    cursorsTextureID[3] = uiWindow2->AddTexture("data\\textures\\menu\\kursor3.png");
+    uiWindow2->SetScale(cursorsTextureID[3], 1.0f, 1.0f);
+    uiWindow2->SetPos(cursorsTextureID[3], 0.1f, 0.1f, 0);
+    uiWindow2->Hide(cursorsTextureID[3]);
 }
+
 
 /* 427860-427901 000A1	*/
 void COknoTajnyKod::FUN00427860() {
+    for (int index = 1; index < sizeof(cursorsTextureID)/sizeof(int); index++) {
+        uiWindow2->Hide(cursorsTextureID[index]);
+    }
+    uiWindow2->Hide(cursorsTextureID[0]);
+    float fVar1 = timeGetTime() * 0.001f;
+    if (fVar1 - unk_178c > 0.1f) {
+        unk_178c = fVar1;
+        unk_1788++;
+        if (unk_1788 > 3) {
+            unk_1788 = 1;
+        }
+    }
+
 }
 
 /* 427910-42794B 0003B	*/
@@ -156,13 +196,11 @@ void COknoTajnyKod::OnInputKey(uchar* param_1) {
     }
 
     if (player != NULL) {
-        uiEdit->FUN00412a20(false);
-        player->FUN00409910((char*)player);
+        player->FUN00409910(uiEdit->FUN00412a20(false));
     }
 
     if (motorboat != NULL) {
-        uiEdit->FUN00412a20(false);
-        motorboat->FUN0040e550((char*)motorboat);  
+        motorboat->FUN0040e550(uiEdit->FUN00412a20(false));  
     }
 
     FUN00427660();

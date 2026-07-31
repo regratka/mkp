@@ -15,10 +15,11 @@ public:
 	/* 4127E0 */ void FUN004127e0(float param_1, float param_2);
 	/* 412830 */ void FUN00412830(float param_1, float param_2);
 	/* 412910 */ void FUN00412910(char* param_1);
-	/* 412A20 */ void FUN00412a20(bool param_1);
+	/* 412A20 */ char* FUN00412a20(bool param_1);
 	/* 412B30 */ void OnInputChar(char param_1);
 	/* 412E10 */ void OnInputKey(int param_1);
 	/* 412E60 */ void OnInputMouse(uint param_1, uint param_2, char param_3);
+	/* 413060 */ void FUN00413060();
 
 private:
 	/* 0x1740 */ uchar field_0x1740[0x1b08-0x1740];

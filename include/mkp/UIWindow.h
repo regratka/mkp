@@ -12,8 +12,8 @@ public:
 	/* 4134D0 */ ~UIWindow();
 	/* 4134E0 */ void FUN004134e0(char* param_1);
 	/* 413510 */ void FUN00413510(bool param_1);
-	/* 413540 */ void FUN00413540(float param_1, float param_2);
-	/* 413560 */ void FUN00413560(float param_1, float param_2);
+	/* 413540 */ void FUN00413540(D3DXVECTOR2 param_1);
+	/* 413560 */ void FUN00413560(D3DXVECTOR2 param_1);
 	/* 413580 */ void FUN00413580(bool param_1);
 	/* 413720 */ void OnFrame();
 	/* 4138C0 */ uchar OnMouseArrive(uint param_1);

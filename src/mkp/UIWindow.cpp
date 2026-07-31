@@ -11,7 +11,6 @@ cMagSprite* UIWindow::scalar_destructor(uchar param_1) {
 
 /* 413470-4134CD 0005D	*/
 UIWindow::UIWindow(cMagSprite* param_1) {
-	return 0;
 }
 
 /* 4134D0-4134DC 0000C	*/
@@ -27,11 +26,11 @@ void UIWindow::FUN00413510(bool param_1) {
 }
 
 /* 413540-41355A 0001A	*/
-void UIWindow::FUN00413540(float param_1, float param_2) {
+void UIWindow::FUN00413540(D3DXVECTOR2 param_1) {
 }
 
 /* 413560-41357C 0001C	*/
-void UIWindow::FUN00413560(float param_1, float param_2) {
+void UIWindow::FUN00413560(D3DXVECTOR2 param_1) {
 }
 
 /* 413580-4135A8 00028	*/
