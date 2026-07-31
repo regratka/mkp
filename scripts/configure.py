@@ -27,7 +27,9 @@ def configure(decompUnits: list[DecompUnit], skipExport: bool):
     if not skipExport:
         for unit in decompUnits:
             exportObjs(unit)
-            generateSources(unit)
+
+    for unit in decompUnits:
+        generateSources(unit)
         
     generateNinja(decompUnits, Path("."))
     generateObjdiffConfig(decompUnits, Path("./build/orig"), Path("./build/src"), Path("."))

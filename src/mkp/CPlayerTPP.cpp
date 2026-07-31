@@ -9,6 +9,10 @@ CPlayerTPP* CPlayerTPP::scalar_destructor(uchar param_1) {
 	return 0;
 }
 
+/* 407EE0-4080AF 001CF	*/
+void CPlayerTPP::FUN00407ee0() {
+}
+
 /* 4080B0-40817C 000CC	*/
 CPlayerTPP::~CPlayerTPP() {
 }
@@ -26,9 +30,24 @@ void CPlayerTPP::OnActivate() {
 void CPlayerTPP::OnActivateLevel() {
 }
 
+/* 408640-40871D 000DD	*/
+void CPlayerTPP::FUN00408640() {
+}
+
+/* 408720-40881A 000FA	*/
+void CPlayerTPP::FUN00408720() {
+}
+
 /* 408840-408847 00007	*/
-CCollisionCamera* CPlayerTPP::FUN00408840() {
-	return 0;
+void CPlayerTPP::FUN00408840() {
+}
+
+/* 408850-408A94 00244	*/
+void CPlayerTPP::FUN00408850() {
+}
+
+/* 408AC0-408B71 000B1	*/
+void CPlayerTPP::FUN00408ac0() {
 }
 
 /* 409260-409384 00124	*/
@@ -37,7 +56,6 @@ void CPlayerTPP::FUN00409260() {
 
 /* 4094C0-4094E0 00020	*/
 void CPlayerTPP::OnPlaySoundEnd(int param_1) {
-	return;
 }
 
 /* 4094E0-4094F1 00011	*/
@@ -60,6 +78,10 @@ uchar CPlayerTPP::OnExitYesNo(char* param_1) {
 	return 0;
 }
 
+/* 409910-409A02 000F2	*/
+void CPlayerTPP::FUN00409910(char* param_1) {
+}
+
 /* 409AB0-409E22 00372	*/
 uchar CPlayerTPP::OnInputKey(int param_1) {
 	return 0;
@@ -75,7 +97,7 @@ void CPlayerTPP::FUN00409ff0(bool param_1) {
 }
 
 /* 40A150-40A19E 0004E	*/
-void CPlayerTPP::FUN0040A150() {
+void CPlayerTPP::FUN0040a150() {
 }
 
 /* 40C760-40C78A 0002A	*/
@@ -91,6 +113,10 @@ uchar CPlayerTPP::Save(int* param_1) {
 /* 40C8A0-40C954 000B4	*/
 uchar CPlayerTPP::Load(void* param_1, uint param_2, int param_3) {
 	return 0;
+}
+
+/* 40C960-40CC89 00329	*/
+void CPlayerTPP::FUN0040c960(int param_1) {
 }
 
 /* 40B320-40B333 00013	*/

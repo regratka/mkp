@@ -9,7 +9,7 @@
 struct Rect;
 struct D3DTLVERTEXS;
 
-class cMagSprite : public cMagUtility {
+class DLLEXPORT cMagSprite : public cMagUtility {
 public:
 	/* 1000A9B0 */ void PlayMovie(bool param_1);
 	/* 10062870 */ cMagSprite();
