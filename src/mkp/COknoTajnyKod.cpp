@@ -14,9 +14,9 @@ COknoTajnyKod::COknoTajnyKod(CPlayerTPP* param_1) {
     uiEdit = NULL;
     uiWindow = NULL;
     unk_1745 = false;
-    unk_1788 = 0;
-    unk_178c = 0.0f;
-    unk_1790 = false;
+    activeCursorIndex = 0;
+    lastCursorChangeTime = 0.0f;
+    isCursorOnDoorSprite = false;
     uiWindow2 = NULL;
     meshObject = NULL;
     unk_1744 = false;
@@ -46,40 +46,40 @@ void COknoTajnyKod::OnActivate() {
     uiEdit->FUN00412910("");
     uiEdit->FUN00412770(false);
 
-    doorsTextureID = uiWindow->AddTexture("data\\textures\\hud\\drzwi.png");
-    uiWindow->SetScale(doorsTextureID ,0.7f, 0.7f);
-    uiWindow->SetPos(doorsTextureID, 0.72f, 0.32f, 0);
-    uiWindow->Hide(doorsTextureID);
-    uiWindow->EnableCheckMouse(doorsTextureID, true);
+    doorTexID = uiWindow->AddTexture("data\\textures\\hud\\drzwi.png");
+    uiWindow->SetScale(doorTexID ,0.7f, 0.7f);
+    uiWindow->SetPos(doorTexID, 0.72f, 0.32f, 0);
+    uiWindow->Hide(doorTexID);
+    uiWindow->EnableCheckMouse(doorTexID, true);
 
-    doorsATextureID = uiWindow->AddTexture("data\\textures\\hud\\drzwi_a.png");
-    uiWindow->SetScale(doorsATextureID ,0.7f, 0.7f);
-    uiWindow->SetPos(doorsATextureID, 0.72f, 0.32f, 0);
-    uiWindow->Hide(doorsATextureID);
-    uiWindow->EnableCheckMouse(doorsATextureID, true);
+    doorActiveTexID = uiWindow->AddTexture("data\\textures\\hud\\drzwi_a.png");
+    uiWindow->SetScale(doorActiveTexID ,0.7f, 0.7f);
+    uiWindow->SetPos(doorActiveTexID, 0.72f, 0.32f, 0);
+    uiWindow->Hide(doorActiveTexID);
+    uiWindow->EnableCheckMouse(doorActiveTexID, true);
 
     uiWindow2 = new UIWindow(this);
     CreateObject(uiWindow2);
-    FUN004276f0();
-    FUN00427ae0();
+    PrepareCursors();
+    PrepareExitSound();
 }
 
 /* 427660-4276E9 00089	*/
-void COknoTajnyKod::FUN00427660() {
+void COknoTajnyKod::DisableWindow() {
     DisableCallHandler("OnFrame");
     DisableCallHandler("OnInputMouse");
     DisableCallHandler("OnInputKey");
-    FUN00427910();
+    ActivateDefaultCursor();
     uiEdit->FUN00413060();
     uiWindow->FUN00413580(false);
     uiEdit->FUN00412770(false);
-    uiWindow->Hide(doorsTextureID);
-    uiWindow->Hide(doorsATextureID);
+    uiWindow->Hide(doorTexID);
+    uiWindow->Hide(doorActiveTexID);
     unk_1745 = false;
 }
 
 /* 4276F0-42785D 0016D	*/
-void COknoTajnyKod::FUN004276f0() {
+void COknoTajnyKod::PrepareCursors() {
     cursorsTextureID[0] = uiWindow2->AddTexture("data\\textures\\menu\\kursor.png");
     uiWindow2->SetScale(cursorsTextureID[0], 1.0f, 1.0f);
     uiWindow2->SetPos(cursorsTextureID[0], 0.1f, 0.1f, 0);
@@ -103,39 +103,37 @@ void COknoTajnyKod::FUN004276f0() {
 
 
 /* 427860-427901 000A1	*/
-void COknoTajnyKod::FUN00427860() {
+void COknoTajnyKod::ChangeActiveCursor() {
     for (int index = 1; index < sizeof(cursorsTextureID)/sizeof(int); index++) {
         uiWindow2->Hide(cursorsTextureID[index]);
     }
     uiWindow2->Hide(cursorsTextureID[0]);
     float fVar1 = timeGetTime() * 0.001f;
-    if (fVar1 - unk_178c > 0.1f) {
-        unk_178c = fVar1;
-        unk_1788++;
-        if (unk_1788 > 3) {
-            unk_1788 = 1;
+    if (fVar1 - lastCursorChangeTime > 0.1f) {
+        lastCursorChangeTime = fVar1;
+        activeCursorIndex++;
+        if (activeCursorIndex > 3) {
+            activeCursorIndex = 1;
         }
     }
-
 }
 
 /* 427910-42794B 0003B	*/
-void COknoTajnyKod::FUN00427910() {
+void COknoTajnyKod::ActivateDefaultCursor() {
     // !!! out of bounds exception !!!
     for (int i = 0; i <= sizeof(cursorsTextureID)/sizeof(int); i++) {
         uiWindow2->Hide(cursorsTextureID[i]);
-    
     }
-    unk_1788 = 0;
-    unk_1790 = false;
+    activeCursorIndex = 0;
+    isCursorOnDoorSprite = false;
 }
 
 /* 427950-427A3E 000EE	*/
 void COknoTajnyKod::OnFrame() {
-    if (unk_1790) {
-        FUN00427860();
+    if (isCursorOnDoorSprite) {
+        ChangeActiveCursor();
     } else {
-        FUN00427910();
+        ActivateDefaultCursor();
     }
 
     POINT local_8;
@@ -143,47 +141,47 @@ void COknoTajnyKod::OnFrame() {
     ScreenToClient(GetHandleWindow(), &local_8);
     int iVar1 = GetWindowWidth();
     int iVar2 = GetWindowHeight();
-    unk_1754 = local_8.x / (float)iVar1;
-    unk_1758 = local_8.y / (float)iVar2;
-    uiWindow2->SetScale(cursorsTextureID[unk_1788], 1.0f, 1.0f);
-    uiWindow2->SetPos(cursorsTextureID[unk_1788], 
-        unk_1754 +  0.01f, unk_1758 + 0.01f, 0);
-    uiWindow2->Show(cursorsTextureID[unk_1788]);
+    cursorXPos = local_8.x / (float)iVar1;
+    cursorYPos = local_8.y / (float)iVar2;
+    uiWindow2->SetScale(cursorsTextureID[activeCursorIndex], 1.0f, 1.0f);
+    uiWindow2->SetPos(cursorsTextureID[activeCursorIndex], 
+        cursorXPos +  0.01f, cursorYPos + 0.01f, 0);
+    uiWindow2->Show(cursorsTextureID[activeCursorIndex]);
 }
 
 /* 427A40-427A97 00057	*/
 void COknoTajnyKod::OnMouseArrive(int param_1) {
-    if (doorsTextureID == param_1) {
-        unk_1790 = true;
-        meshObject->PlaySoundA(soundID, false);
-        uiWindow->Hide(doorsTextureID);
-        uiWindow->Show(doorsATextureID);
+    if (doorTexID == param_1) {
+        isCursorOnDoorSprite = true;
+        meshObject->PlaySoundA(exitSoundID, false);
+        uiWindow->Hide(doorTexID);
+        uiWindow->Show(doorActiveTexID);
     }
 }
 
 /* 427AA0-427ADC 0003C	*/
 void COknoTajnyKod::OnMouseLeave(int param_1) {
-    if (doorsATextureID == param_1) {
-        unk_1790 = false;
-        uiWindow->Hide(doorsATextureID);
-        uiWindow->Show(doorsTextureID);
+    if (doorActiveTexID == param_1) {
+        isCursorOnDoorSprite = false;
+        uiWindow->Hide(doorActiveTexID);
+        uiWindow->Show(doorTexID);
     }
 }
 
 /* 427AE0-427B34 00054	*/
-void COknoTajnyKod::FUN00427ae0() {
+void COknoTajnyKod::PrepareExitSound() {
     GameSDK* sdk = (GameSDK*) GetGame();
     float fVar2 = sdk->FUN00401e10();
-    soundID = meshObject->LoadSound("data\\sounds\\wyjscie.wav");
-    meshObject->SetVolume(soundID, fVar2);
-    meshObject->StopSound(soundID);
+    exitSoundID = meshObject->LoadSound("data\\sounds\\wyjscie.wav");
+    meshObject->SetVolume(exitSoundID, fVar2);
+    meshObject->StopSound(exitSoundID);
 }
 
 /* 427B40-427B7C 0003C	*/
 void COknoTajnyKod::OnInputMouse(float param_1, float param_2, bool param_3, bool param_4) {
     if (param_3 && !unk_1744) {
-        if (doorsATextureID == uiWindow->GetMouseActivateSprite()) {
-            FUN00427660();
+        if (doorActiveTexID == uiWindow->GetMouseActivateSprite()) {
+            DisableWindow();
         }
     }
     unk_1744 = param_3;
@@ -203,6 +201,6 @@ void COknoTajnyKod::OnInputKey(uchar* param_1) {
         motorboat->FUN0040e550(uiEdit->FUN00412a20(false));  
     }
 
-    FUN00427660();
+    DisableWindow();
 }
 

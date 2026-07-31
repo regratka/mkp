@@ -8,11 +8,11 @@
     "total_functions": 3185,
     "matched_functions": 974,
     "matched_functions_percent": 30.580849,
-    "complete_code": "23195",
-    "complete_code_percent": 3.3775964,
+    "complete_code": "25398",
+    "complete_code_percent": 3.6983914,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 29
+    "complete_units": 30
   },
   "units": [
     {
@@ -27509,8 +27509,11 @@
         "total_functions": 15,
         "matched_functions": 15,
         "matched_functions_percent": 100.0,
+        "complete_code": "2203",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -27567,38 +27570,38 @@
           "address": "136"
         },
         {
-          "name": "?FUN00427660@COknoTajnyKod@@QAEXXZ",
+          "name": "?DisableWindow@COknoTajnyKod@@QAEXXZ",
           "size": "137",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall COknoTajnyKod::FUN00427660(void)"
+            "demangled_name": "public: void __thiscall COknoTajnyKod::DisableWindow(void)"
           },
           "address": "857"
         },
         {
-          "name": "?FUN004276f0@COknoTajnyKod@@QAEXXZ",
+          "name": "?PrepareCursors@COknoTajnyKod@@QAEXXZ",
           "size": "365",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall COknoTajnyKod::FUN004276f0(void)"
+            "demangled_name": "public: void __thiscall COknoTajnyKod::PrepareCursors(void)"
           },
           "address": "994"
         },
         {
-          "name": "?FUN00427860@COknoTajnyKod@@QAEXXZ",
+          "name": "?ChangeActiveCursor@COknoTajnyKod@@QAEXXZ",
           "size": "161",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall COknoTajnyKod::FUN00427860(void)"
+            "demangled_name": "public: void __thiscall COknoTajnyKod::ChangeActiveCursor(void)"
           },
           "address": "1359"
         },
         {
-          "name": "?FUN00427910@COknoTajnyKod@@QAEXXZ",
+          "name": "?ActivateDefaultCursor@COknoTajnyKod@@QAEXXZ",
           "size": "59",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall COknoTajnyKod::FUN00427910(void)"
+            "demangled_name": "public: void __thiscall COknoTajnyKod::ActivateDefaultCursor(void)"
           },
           "address": "1520"
         },
@@ -27630,11 +27633,11 @@
           "address": "1904"
         },
         {
-          "name": "?FUN00427ae0@COknoTajnyKod@@QAEXXZ",
+          "name": "?PrepareExitSound@COknoTajnyKod@@QAEXXZ",
           "size": "84",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall COknoTajnyKod::FUN00427ae0(void)"
+            "demangled_name": "public: void __thiscall COknoTajnyKod::PrepareExitSound(void)"
           },
           "address": "1964"
         },
@@ -27658,6 +27661,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -31305,11 +31309,11 @@
         "total_functions": 971,
         "matched_functions": 213,
         "matched_functions_percent": 21.936148,
-        "complete_code": "11604",
-        "complete_code_percent": 6.729258,
+        "complete_code": "13807",
+        "complete_code_percent": 8.006796,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 23
+        "complete_units": 24
       }
     }
   ]
