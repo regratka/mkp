@@ -30,6 +30,10 @@ uchar MenuModule::OnMouseArrive(int param_1) {
 	return 0;
 }
 
+/* 4349A0-4349EA 0004A	*/
+void MenuModule::FUN004349a0(bool param_1) {
+}
+
 /* 4349F0-434A4C 0005C	*/
 void MenuModule::OnMouseLeave() {
 }
@@ -47,6 +51,10 @@ uchar MenuModule::OnInputKey(int param_1) {
 /* 434D30-434D7F 0004F	*/
 uchar MenuModule::OnExitYesNo(char* param_1) {
 	return 0;
+}
+
+/* 4351C0-4351D7 00017	*/
+void MenuModule::FUN004351c0() {
 }
 
 /* 4352B0-4352C8 00018	*/
