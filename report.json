@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 22.87664,
+    "fuzzy_match_percent": 23.122822,
     "total_code": "689540",
-    "matched_code": "90868",
-    "matched_code_percent": 13.178061,
+    "matched_code": "92610",
+    "matched_code_percent": 13.430693,
     "matched_data_percent": 100.0,
     "total_functions": 3195,
-    "matched_functions": 976,
-    "matched_functions_percent": 30.547731,
+    "matched_functions": 978,
+    "matched_functions_percent": 30.610329,
     "complete_code": "25398",
     "complete_code_percent": 3.6833253,
     "complete_data_percent": 100.0,
@@ -30906,14 +30906,14 @@
     {
       "name": "mkp/MenuOknoWyboru_CZ1",
       "measures": {
-        "fuzzy_match_percent": 2.1217315,
+        "fuzzy_match_percent": 29.754972,
         "total_code": "6143",
-        "matched_code": "42",
-        "matched_code_percent": 0.68370503,
+        "matched_code": "1784",
+        "matched_code_percent": 29.041185,
         "matched_data_percent": 100.0,
         "total_functions": 17,
-        "matched_functions": 2,
-        "matched_functions_percent": 11.764706,
+        "matched_functions": 4,
+        "matched_functions_percent": 23.529411,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -30921,7 +30921,7 @@
         {
           "name": ".text",
           "size": "6143",
-          "fuzzy_match_percent": 2.1217315,
+          "fuzzy_match_percent": 29.754972,
           "metadata": {}
         }
       ],
@@ -30929,7 +30929,6 @@
         {
           "name": "??0MenuOknoWyboru_CZ1@@QAE@XZ",
           "size": "209",
-          "fuzzy_match_percent": 17.225,
           "metadata": {
             "demangled_name": "public: __thiscall MenuOknoWyboru_CZ1::MenuOknoWyboru_CZ1(void)"
           },
@@ -30956,7 +30955,7 @@
         {
           "name": "?OnActivate@MenuOknoWyboru_CZ1@@UAEXXZ",
           "size": "1729",
-          "fuzzy_match_percent": 0.24038461,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuOknoWyboru_CZ1::OnActivate(void)"
           },
@@ -30965,7 +30964,7 @@
         {
           "name": "?FUN00435b60@MenuOknoWyboru_CZ1@@QAEXPAVMenuModule@@@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00435b60(class MenuModule *)"
           },
@@ -31418,14 +31417,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 11.04964,
+        "fuzzy_match_percent": 12.018263,
         "total_code": "175250",
-        "matched_code": "16852",
-        "matched_code_percent": 9.615977,
+        "matched_code": "18594",
+        "matched_code_percent": 10.609986,
         "matched_data_percent": 100.0,
         "total_functions": 981,
-        "matched_functions": 215,
-        "matched_functions_percent": 21.916412,
+        "matched_functions": 217,
+        "matched_functions_percent": 22.120285,
         "complete_code": "13807",
         "complete_code_percent": 7.8784595,
         "complete_data_percent": 100.0,
