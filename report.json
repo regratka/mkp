@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 23.122822,
+    "fuzzy_match_percent": 23.741293,
     "total_code": "689540",
-    "matched_code": "92610",
-    "matched_code_percent": 13.430693,
+    "matched_code": "96117",
+    "matched_code_percent": 13.939293,
     "matched_data_percent": 100.0,
     "total_functions": 3195,
-    "matched_functions": 978,
-    "matched_functions_percent": 30.610329,
+    "matched_functions": 990,
+    "matched_functions_percent": 30.985916,
     "complete_code": "25398",
     "complete_code_percent": 3.6833253,
     "complete_data_percent": 100.0,
@@ -30906,14 +30906,14 @@
     {
       "name": "mkp/MenuOknoWyboru_CZ1",
       "measures": {
-        "fuzzy_match_percent": 29.754972,
+        "fuzzy_match_percent": 99.17728,
         "total_code": "6143",
-        "matched_code": "1784",
-        "matched_code_percent": 29.041185,
+        "matched_code": "5291",
+        "matched_code_percent": 86.130554,
         "matched_data_percent": 100.0,
         "total_functions": 17,
-        "matched_functions": 4,
-        "matched_functions_percent": 23.529411,
+        "matched_functions": 16,
+        "matched_functions_percent": 94.117645,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -30921,7 +30921,7 @@
         {
           "name": ".text",
           "size": "6143",
-          "fuzzy_match_percent": 29.754972,
+          "fuzzy_match_percent": 99.17728,
           "metadata": {}
         }
       ],
@@ -30929,6 +30929,7 @@
         {
           "name": "??0MenuOknoWyboru_CZ1@@QAE@XZ",
           "size": "209",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall MenuOknoWyboru_CZ1::MenuOknoWyboru_CZ1(void)"
           },
@@ -30973,7 +30974,7 @@
         {
           "name": "?OnFrame@MenuOknoWyboru_CZ1@@UAEXXZ",
           "size": "257",
-          "fuzzy_match_percent": 1.5384616,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuOknoWyboru_CZ1::OnFrame(void)"
           },
@@ -30982,7 +30983,7 @@
         {
           "name": "?FUN00435c90@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "168",
-          "fuzzy_match_percent": 2.0833333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00435c90(void)"
           },
@@ -30991,7 +30992,7 @@
         {
           "name": "?FUN00435d40@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "288",
-          "fuzzy_match_percent": 1.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00435d40(void)"
           },
@@ -31000,7 +31001,7 @@
         {
           "name": "?OnMouseArrive@MenuOknoWyboru_CZ1@@UAEXH@Z",
           "size": "318",
-          "fuzzy_match_percent": 1.2987013,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuOknoWyboru_CZ1::OnMouseArrive(int)"
           },
@@ -31009,7 +31010,7 @@
         {
           "name": "?OnMouseLeave@MenuOknoWyboru_CZ1@@UAEXH@Z",
           "size": "67",
-          "fuzzy_match_percent": 5.5555553,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuOknoWyboru_CZ1::OnMouseLeave(int)"
           },
@@ -31018,7 +31019,7 @@
         {
           "name": "?OnInputMouse@MenuOknoWyboru_CZ1@@UAEXMM_N0@Z",
           "size": "360",
-          "fuzzy_match_percent": 0.88495576,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuOknoWyboru_CZ1::OnInputMouse(float, float, bool, bool)"
           },
@@ -31027,7 +31028,7 @@
         {
           "name": "?OnActivateLevel@MenuOknoWyboru_CZ1@@UAEXXZ",
           "size": "449",
-          "fuzzy_match_percent": 0.88495576,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuOknoWyboru_CZ1::OnActivateLevel(void)"
           },
@@ -31036,7 +31037,7 @@
         {
           "name": "?FUN00436330@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "161",
-          "fuzzy_match_percent": 1.9230769,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00436330(void)"
           },
@@ -31045,7 +31046,7 @@
         {
           "name": "?FUN004363e0@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "59",
-          "fuzzy_match_percent": 4.347826,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN004363e0(void)"
           },
@@ -31054,7 +31055,7 @@
         {
           "name": "?FUN00436420@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "39",
-          "fuzzy_match_percent": 10.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00436420(void)"
           },
@@ -31063,7 +31064,7 @@
         {
           "name": "?FUN00436450@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "1132",
-          "fuzzy_match_percent": 0.33222592,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00436450(void)"
           },
@@ -31072,7 +31073,7 @@
         {
           "name": "?FUN004368c0@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "852",
-          "fuzzy_match_percent": 0.5235602,
+          "fuzzy_match_percent": 94.06806,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN004368c0(void)"
           },
@@ -31417,14 +31418,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 12.018263,
+        "fuzzy_match_percent": 14.451706,
         "total_code": "175250",
-        "matched_code": "18594",
-        "matched_code_percent": 10.609986,
+        "matched_code": "22101",
+        "matched_code_percent": 12.611127,
         "matched_data_percent": 100.0,
         "total_functions": 981,
-        "matched_functions": 217,
-        "matched_functions_percent": 22.120285,
+        "matched_functions": 229,
+        "matched_functions_percent": 23.343527,
         "complete_code": "13807",
         "complete_code_percent": 7.8784595,
         "complete_data_percent": 100.0,
