@@ -8,11 +8,11 @@
     "total_functions": 3195,
     "matched_functions": 991,
     "matched_functions_percent": 31.017214,
-    "complete_code": "25398",
-    "complete_code_percent": 3.6833253,
+    "complete_code": "31541",
+    "complete_code_percent": 4.574209,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 30
+    "complete_units": 31
   },
   "units": [
     {
@@ -30914,8 +30914,11 @@
         "total_functions": 17,
         "matched_functions": 17,
         "matched_functions_percent": 100.0,
+        "complete_code": "6143",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -31081,6 +31084,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -31426,11 +31430,11 @@
         "total_functions": 981,
         "matched_functions": 230,
         "matched_functions_percent": 23.445463,
-        "complete_code": "13807",
-        "complete_code_percent": 7.8784595,
+        "complete_code": "19950",
+        "complete_code_percent": 11.383738,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 24
+        "complete_units": 25
       }
     }
   ]
