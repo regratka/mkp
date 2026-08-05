@@ -30963,11 +30963,11 @@
           "address": "251"
         },
         {
-          "name": "?FUN00435b60@MenuOknoWyboru_CZ1@@QAEXPAVMenuModule@@@Z",
+          "name": "?SetMenuModule@MenuOknoWyboru_CZ1@@QAEXPAVMenuModule@@@Z",
           "size": "13",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00435b60(class MenuModule *)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::SetMenuModule(class MenuModule *)"
           },
           "address": "1980"
         },
@@ -30981,20 +30981,20 @@
           "address": "1993"
         },
         {
-          "name": "?FUN00435c90@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?OpenWindow@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "168",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00435c90(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::OpenWindow(void)"
           },
           "address": "2250"
         },
         {
-          "name": "?FUN00435d40@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?CloseWindow@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "288",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00435d40(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::CloseWindow(void)"
           },
           "address": "2418"
         },
@@ -31035,47 +31035,47 @@
           "address": "3451"
         },
         {
-          "name": "?FUN00436330@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?ChangeActiveCursor@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "161",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00436330(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::ChangeActiveCursor(void)"
           },
           "address": "3900"
         },
         {
-          "name": "?FUN004363e0@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?ActivateDefaultCursor@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "59",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN004363e0(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::ActivateDefaultCursor(void)"
           },
           "address": "4061"
         },
         {
-          "name": "?FUN00436420@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?ActivateStopCursor@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "39",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00436420(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::ActivateStopCursor(void)"
           },
           "address": "4120"
         },
         {
-          "name": "?FUN00436450@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?ShowUnlockedLevels@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "1132",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN00436450(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::ShowUnlockedLevels(void)"
           },
           "address": "4159"
         },
         {
-          "name": "?FUN004368c0@MenuOknoWyboru_CZ1@@QAEXXZ",
+          "name": "?LoadUnlockedLevels@MenuOknoWyboru_CZ1@@QAEXXZ",
           "size": "852",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::FUN004368c0(void)"
+            "demangled_name": "public: void __thiscall MenuOknoWyboru_CZ1::LoadUnlockedLevels(void)"
           },
           "address": "5291"
         }

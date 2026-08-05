@@ -21,19 +21,19 @@ MenuOknoWyboru_CZ1::MenuOknoWyboru_CZ1() {
     deactLev4TexID = -1;
     deactLev5TexID = -1;
     deactLev6TexID = -1;
-    unk_17d4 = true;
-    unk_17d5 = true;
-    unk_17d6 = false;
-    unk_17d7 = false;
-    unk_17d8 = false;
-    unk_17d9 = false;
-    unk_17da = false;
+    isIntroUnlocked = true;
+    isLevel1Unlocked = true;
+    isLevel2Unlocked = false;
+    isLevel3Unlocked = false;
+    isLevel4Unlocked = false;
+    isLevel5Unlocked = false;
+    isLevel6Unlocked = false;
     unk_1744 = true;
-    unk_175c = 1;
+    unlockedLevels = 1;
     activeCursorIndex = 0;
     lastCursorChangeTime = 0.0f;
-    unk_1780 = false;
-    unk_1774 = false;
+    isHoveringUnlockedLevel = false;
+    isHoveringLockedLevel = false;
 }
 
 /* 435480-43548C 0000C	*/
@@ -135,24 +135,24 @@ void MenuOknoWyboru_CZ1::OnActivate() {
     uiWindow->Hide(deactLev6TexID);
     uiWindow->EnableCheckMouse(deactLev6TexID, true);
 
-    FUN004368c0();
+    LoadUnlockedLevels();
 }
 
 
 
 /* 435B60-435B6D 0000D	*/
-void MenuOknoWyboru_CZ1::FUN00435b60(MenuModule *param_1) {
+void MenuOknoWyboru_CZ1::SetMenuModule(MenuModule *param_1) {
     menuModule = param_1;
 }
 
 /* 435B80-435C81 00101	*/
 void MenuOknoWyboru_CZ1::OnFrame() {
-    if (unk_1780) {
-        FUN00436330();
-    } else if (unk_1774) {
-        FUN00436420();
+    if (isHoveringUnlockedLevel) {
+        ChangeActiveCursor();
+    } else if (isHoveringLockedLevel) {
+        ActivateStopCursor();
     } else {
-        FUN004363e0();
+        ActivateDefaultCursor();
     }
 
     POINT local_8;
@@ -169,7 +169,7 @@ void MenuOknoWyboru_CZ1::OnFrame() {
 }
 
 /* 435C90-435D38 000A8	*/
-void MenuOknoWyboru_CZ1::FUN00435c90() {
+void MenuOknoWyboru_CZ1::OpenWindow() {
     uiWindow->FUN00413580(true);
     uiWindow->Show(doorTexID);
     uiWindow->Show(lev1TexID);
@@ -178,14 +178,14 @@ void MenuOknoWyboru_CZ1::FUN00435c90() {
     uiWindow->Show(lev4TexID);
     uiWindow->Show(lev5TexID);
     uiWindow->Show(lev6TexID);
-    FUN00436450();
+    ShowUnlockedLevels();
     EnableCallHandler("OnInputMouse");
     EnableCallHandler("OnFrame");
 }
 
 /* 435D40-435E60 00120	*/
-void MenuOknoWyboru_CZ1::FUN00435d40() {
-    FUN004363e0();
+void MenuOknoWyboru_CZ1::CloseWindow() {
+    ActivateDefaultCursor();
     uiWindow->FUN00413580(false);
     uiWindow->Hide(doorTexID);
     uiWindow->Hide(doorActiveTexID);
@@ -210,36 +210,36 @@ void MenuOknoWyboru_CZ1::FUN00435d40() {
 
 /* 435E60-435F9E 0013E	*/
 void MenuOknoWyboru_CZ1::OnMouseArrive(int param_1) {
-    unk_1780 = true;
+    isHoveringUnlockedLevel = true;
     if (unk_17b8 == param_1 || deactLev1TexID == param_1 || deactLev2TexID == param_1 || deactLev3TexID == param_1
             || deactLev4TexID == param_1 || deactLev5TexID == param_1 || deactLev6TexID == param_1 ) {
-        unk_1780 = false;
-        unk_1774 = true;
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
 
-    if (lev1TexID == param_1 && !unk_17d5) {
-        unk_1780 = false;
-        unk_1774 = true;
+    if (lev1TexID == param_1 && !isLevel1Unlocked) {
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
-    if (lev2TexID == param_1 && !unk_17d6) {
-        unk_1780 = false;
-        unk_1774 = true;
+    if (lev2TexID == param_1 && !isLevel2Unlocked) {
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
-    if (lev3TexID == param_1 && !unk_17d7) {
-        unk_1780 = false;
-        unk_1774 = true;
+    if (lev3TexID == param_1 && !isLevel3Unlocked) {
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
-    if (lev4TexID == param_1 && !unk_17d8) {
-        unk_1780 = false;
-        unk_1774 = true;
+    if (lev4TexID == param_1 && !isLevel4Unlocked) {
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
-    if (lev5TexID == param_1 && !unk_17d9) {
-        unk_1780 = false;
-        unk_1774 = true;
+    if (lev5TexID == param_1 && !isLevel5Unlocked) {
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
-    if (lev6TexID == param_1 && !unk_17da) {
-        unk_1780 = false;
-        unk_1774 = true;
+    if (lev6TexID == param_1 && !isLevel6Unlocked) {
+        isHoveringUnlockedLevel = false;
+        isHoveringLockedLevel = true;
     }
 
     if (doorTexID == param_1) {
@@ -253,8 +253,8 @@ void MenuOknoWyboru_CZ1::OnMouseArrive(int param_1) {
 
 /* 435FA0-435FE3 00043	*/
 void MenuOknoWyboru_CZ1::OnMouseLeave(int param_1) {
-    unk_1780 = false;
-    unk_1774 = false;
+    isHoveringUnlockedLevel = false;
+    isHoveringLockedLevel = false;
     if (doorActiveTexID == param_1) {
         uiWindow->Hide(doorActiveTexID);
         uiWindow->Show(doorTexID);
@@ -265,35 +265,35 @@ void MenuOknoWyboru_CZ1::OnMouseLeave(int param_1) {
 void MenuOknoWyboru_CZ1::OnInputMouse(float param_1, float param_2, bool param_3, bool param_4) {
     if (param_3 && !unk_1744) {
         if (doorActiveTexID == uiWindow->GetMouseActivateSprite()) {
-            FUN00435d40();
+            CloseWindow();
         }
         if (lev1TexID == uiWindow->GetMouseActivateSprite()) {
-            if (unk_17d5) {
+            if (isLevel1Unlocked) {
                 GetGame()->LoadLevel("data\\levels\\Intro\\intro04.lev");
             }
         }
         if (lev2TexID == uiWindow->GetMouseActivateSprite()) {
-            if (unk_17d6) {
+            if (isLevel2Unlocked) {
                 GetGame()->LoadLevel("data\\levels\\Level02\\Level02a.lev");
             }
         }
-        if (lev3TexID == uiWindow->GetMouseActivateSprite() && unk_17d7) {
-            if (unk_17d7) {
+        if (lev3TexID == uiWindow->GetMouseActivateSprite() && isLevel3Unlocked) {
+            if (isLevel3Unlocked) {
                 GetGame()->LoadLevel("data\\levels\\Level03\\Level03.lev");
             }
         }
         if (lev4TexID == uiWindow->GetMouseActivateSprite()) {
-            if (unk_17d8) {
+            if (isLevel4Unlocked) {
                 GetGame()->LoadLevel("data\\levels\\Level04\\level04.lev");
             }
         }
         if (lev5TexID == uiWindow->GetMouseActivateSprite()) {
-            if (unk_17d9) {
+            if (isLevel5Unlocked) {
                 GetGame()->LoadLevel("data\\levels\\Level05\\Level05kk.lev");
             }
         }
         if (lev6TexID == uiWindow->GetMouseActivateSprite()) {
-            if (unk_17da) {
+            if (isLevel6Unlocked) {
                 GetGame()->LoadLevel("data\\levels\\Level06\\Level06.lev");
             }
         } 
@@ -330,7 +330,7 @@ void MenuOknoWyboru_CZ1::OnActivateLevel() {
 }
 
 /* 436330-4363D1 000A1	*/
-void MenuOknoWyboru_CZ1::FUN00436330() {
+void MenuOknoWyboru_CZ1::ChangeActiveCursor() {
     for (int index = 1; index < 4; index++) {
         uiWindow->Hide(cursorsTextureIDs[index]);
     }
@@ -346,23 +346,23 @@ void MenuOknoWyboru_CZ1::FUN00436330() {
 }
 
 /* 4363E0-43641B 0003B	*/
-void MenuOknoWyboru_CZ1::FUN004363e0() {
+void MenuOknoWyboru_CZ1::ActivateDefaultCursor() {
     for (int i = 0; i < sizeof(cursorsTextureIDs)/sizeof(int); i++) {
         uiWindow->Hide(cursorsTextureIDs[i]);
     }
     activeCursorIndex = 0;
-    unk_1780 = false;
+    isHoveringUnlockedLevel = false;
 }
 
 /* 436420-436447 00027	*/
-void MenuOknoWyboru_CZ1::FUN00436420() {
-    FUN004363e0();
+void MenuOknoWyboru_CZ1::ActivateStopCursor() {
+    ActivateDefaultCursor();
     activeCursorIndex = 4;
     uiWindow->Show(cursorsTextureIDs[activeCursorIndex]);
 }
 
 /* 436450-4368BC 0046C	*/
-void MenuOknoWyboru_CZ1::FUN00436450() {
+void MenuOknoWyboru_CZ1::ShowUnlockedLevels() {
     uiWindow->Hide(lev1TexID);
     uiWindow->Hide(lev2TexID);
     uiWindow->Hide(lev3TexID);
@@ -376,7 +376,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
     uiWindow->Hide(deactLev5TexID);
     uiWindow->Hide(deactLev6TexID);
 
-    if (unk_175c == 1 || unk_175c == 0) {
+    if (unlockedLevels == 1 || unlockedLevels == 0) {
         uiWindow->Show(lev1TexID);
         uiWindow->Hide(deactLev1TexID);
         uiWindow->Show(deactLev2TexID);
@@ -385,7 +385,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
         uiWindow->Show(deactLev5TexID);
         uiWindow->Show(deactLev6TexID);
     }
-    if (unk_175c == 2) {
+    if (unlockedLevels == 2) {
         uiWindow->Show(lev1TexID);
         uiWindow->Show(lev2TexID);
         uiWindow->Hide(deactLev1TexID);
@@ -395,7 +395,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
         uiWindow->Show(deactLev5TexID);
         uiWindow->Show(deactLev6TexID);
     }
-    if (unk_175c == 3) {
+    if (unlockedLevels == 3) {
         uiWindow->Show(lev1TexID);
         uiWindow->Show(lev2TexID);
         uiWindow->Show(lev3TexID);
@@ -406,7 +406,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
         uiWindow->Show(deactLev5TexID);
         uiWindow->Show(deactLev6TexID);
     }
-    if (unk_175c == 4) {
+    if (unlockedLevels == 4) {
         uiWindow->Show(lev1TexID);
         uiWindow->Show(lev2TexID);
         uiWindow->Show(lev3TexID);
@@ -418,7 +418,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
         uiWindow->Show(deactLev5TexID);
         uiWindow->Show(deactLev6TexID);
     }
-    if (unk_175c == 5) {
+    if (unlockedLevels == 5) {
         uiWindow->Show(lev1TexID);
         uiWindow->Show(lev2TexID);
         uiWindow->Show(lev3TexID);
@@ -431,7 +431,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
         uiWindow->Hide(deactLev5TexID);
         uiWindow->Show(deactLev6TexID);
     }
-    if (unk_175c == 6) {
+    if (unlockedLevels == 6) {
         uiWindow->Show(lev1TexID);
         uiWindow->Show(lev2TexID);
         uiWindow->Show(lev3TexID);
@@ -448,7 +448,7 @@ void MenuOknoWyboru_CZ1::FUN00436450() {
 }
 
 /* 4368C0-436C14 00354	*/
-void MenuOknoWyboru_CZ1::FUN004368c0() {
+void MenuOknoWyboru_CZ1::LoadUnlockedLevels() {
     int local_a4 = 1; 
     std::ifstream stream;
     stream.open("data\\save\\nl.sav", std::ios::binary);
@@ -458,73 +458,73 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
     stream.read((char*) &local_a4, sizeof(int));
     stream.close();
 
-    unk_175c = local_a4;
-    unk_17d4 = false;
-    unk_17d5 = false;
-    unk_17d6 = false;
-    unk_17d7 = false;
-    unk_17d8 = false;
-    unk_17d9 = false;
-    unk_17da = false;
+    unlockedLevels = local_a4;
+    isIntroUnlocked = false;
+    isLevel1Unlocked = false;
+    isLevel2Unlocked = false;
+    isLevel3Unlocked = false;
+    isLevel4Unlocked = false;
+    isLevel5Unlocked = false;
+    isLevel6Unlocked = false;
 
-    if (unk_175c == 1) {
-        unk_17d4 = true;
-        unk_17d5 = true;
-        unk_17d6 = false;
-        unk_17d7 = false;
-        unk_17d8 = false;
-        unk_17d9 = false;
-        unk_17da = false;
+    if (unlockedLevels == 1) {
+        isIntroUnlocked = true;
+        isLevel1Unlocked = true;
+        isLevel2Unlocked = false;
+        isLevel3Unlocked = false;
+        isLevel4Unlocked = false;
+        isLevel5Unlocked = false;
+        isLevel6Unlocked = false;
     }  
     
-    if (unk_175c == 2) {
-        unk_17d4 = true;
-        unk_17d5 = true;
-        unk_17d6 = true;
-        unk_17d7 = false;
-        unk_17d8 = false;
-        unk_17d9 = false;
-        unk_17da = false;
+    if (unlockedLevels == 2) {
+        isIntroUnlocked = true;
+        isLevel1Unlocked = true;
+        isLevel2Unlocked = true;
+        isLevel3Unlocked = false;
+        isLevel4Unlocked = false;
+        isLevel5Unlocked = false;
+        isLevel6Unlocked = false;
     }  
     
-    if (unk_175c == 3) {
-        unk_17d4 = true;
-        unk_17d5 = true;
-        unk_17d6 = true;
-        unk_17d7 = true;
-        unk_17d8 = false;
-        unk_17d9 = false;
-        unk_17da = false;
+    if (unlockedLevels == 3) {
+        isIntroUnlocked = true;
+        isLevel1Unlocked = true;
+        isLevel2Unlocked = true;
+        isLevel3Unlocked = true;
+        isLevel4Unlocked = false;
+        isLevel5Unlocked = false;
+        isLevel6Unlocked = false;
     }  
     
-    if (unk_175c == 4) {
-        unk_17d4 = true;
-        unk_17d5 = true;
-        unk_17d6 = true;
-        unk_17d7 = true;
-        unk_17d8 = true;
-        unk_17d9 = false;
-        unk_17da = false;
+    if (unlockedLevels == 4) {
+        isIntroUnlocked = true;
+        isLevel1Unlocked = true;
+        isLevel2Unlocked = true;
+        isLevel3Unlocked = true;
+        isLevel4Unlocked = true;
+        isLevel5Unlocked = false;
+        isLevel6Unlocked = false;
     }
 
-    if (unk_175c == 5) {
-        unk_17d4 = true;
-        unk_17d5 = true;
-        unk_17d6 = true;
-        unk_17d7 = true;
-        unk_17d8 = true;
-        unk_17d9 = true;
-        unk_17da = false;
+    if (unlockedLevels == 5) {
+        isIntroUnlocked = true;
+        isLevel1Unlocked = true;
+        isLevel2Unlocked = true;
+        isLevel3Unlocked = true;
+        isLevel4Unlocked = true;
+        isLevel5Unlocked = true;
+        isLevel6Unlocked = false;
     } 
 
-    if (unk_175c == 6) {
-        unk_17d4 = true;
-        unk_17d5 = true;
-        unk_17d6 = true;
-        unk_17d7 = true;
-        unk_17d8 = true;
-        unk_17d9 = true;
-        unk_17da = true;
+    if (unlockedLevels == 6) {
+        isIntroUnlocked = true;
+        isLevel1Unlocked = true;
+        isLevel2Unlocked = true;
+        isLevel3Unlocked = true;
+        isLevel4Unlocked = true;
+        isLevel5Unlocked = true;
+        isLevel6Unlocked = true;
     }
 
 }
