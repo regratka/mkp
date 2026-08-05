@@ -452,11 +452,9 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
     int local_a4 = 1; 
     std::ifstream stream;
     stream.open("data\\save\\nl.sav", std::ios::binary);
-
     if (stream.fail()) {
         return;
     }
-
     stream.read((char*) &local_a4, sizeof(int));
     stream.close();
 
@@ -477,7 +475,9 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
         unk_17d8 = false;
         unk_17d9 = false;
         unk_17da = false;
-    } else if (unk_175c == 2) {
+    }  
+    
+    if (unk_175c == 2) {
         unk_17d4 = true;
         unk_17d5 = true;
         unk_17d6 = true;
@@ -485,7 +485,9 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
         unk_17d8 = false;
         unk_17d9 = false;
         unk_17da = false;
-    } else if (unk_175c == 3) {
+    }  
+    
+    if (unk_175c == 3) {
         unk_17d4 = true;
         unk_17d5 = true;
         unk_17d6 = true;
@@ -493,7 +495,9 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
         unk_17d8 = false;
         unk_17d9 = false;
         unk_17da = false;
-    } else if (unk_175c == 4) {
+    }  
+    
+    if (unk_175c == 4) {
         unk_17d4 = true;
         unk_17d5 = true;
         unk_17d6 = true;
@@ -501,7 +505,9 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
         unk_17d8 = true;
         unk_17d9 = false;
         unk_17da = false;
-    } else if (unk_175c == 5) {
+    }
+
+    if (unk_175c == 5) {
         unk_17d4 = true;
         unk_17d5 = true;
         unk_17d6 = true;
@@ -509,7 +515,9 @@ void MenuOknoWyboru_CZ1::FUN004368c0() {
         unk_17d8 = true;
         unk_17d9 = true;
         unk_17da = false;
-    } else if (unk_175c == 6) {
+    } 
+
+    if (unk_175c == 6) {
         unk_17d4 = true;
         unk_17d5 = true;
         unk_17d6 = true;
