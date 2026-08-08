@@ -4,10 +4,10 @@
 #include <globals.h>
 #include <d3dx8.h>
 
-#include "cMagSprite.h"
 
 class CMediaType;
 class IMediaSample;
+class cMagSprite;
 
 
 class KTeksturyVideoDirectX {
