@@ -21,6 +21,7 @@ STATIC_ASSERT(sizeof(MeshData)==0x260);
 
 class DLLEXPORT cMagMeshMgr : public MagSingleton<cMagMeshMgr> {
 public:
+	/* 10012910 */ void RestoreMeshs();
 	/* 10044050 */ cMagMeshMgr();
 	/* 100441C0 */ virtual ~cMagMeshMgr();
 	/* 10044230 */ cStaticMesh* GetMesh(char* param_1);

@@ -4,6 +4,11 @@
 
 #include "cMagEngineMgr.h"
 
+/* 10012910-10012911 00001	*/
+void cMagMeshMgr::RestoreMeshs() {
+	return;
+}
+
 /* 10044050-100441B3 00163	*/
 cMagMeshMgr::cMagMeshMgr(): MagSingleton<cMagMeshMgr>(this) {
 	unkn_18 = 0;

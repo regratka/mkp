@@ -142,6 +142,11 @@ void cMagLog::DebugLog(D3DXMATRIX matrix) {
     return;
 }
 
+/* 10030740-10030743 00003	*/
+void cMagLog::DebugLog(D3DXVECTOR3 param_1) {
+    return;
+}
+
 /* 10030750-100307C7 00077	*/
 void cMagLog::ClientServerLog(char const * p_format, ...) {
     if (logEnabled == false) {
@@ -182,6 +187,11 @@ void cMagLog::ReadSettings(char* p_settingsPath) {
 
 /* 1005A5E0-1005A5E3 00003	*/
 void cMagLog::DebugLog(D3DXVECTOR3* p_vector) {
+    return;
+}
+
+/* 1005A5F0-1005A5F3 00003  */ 
+void cMagLog::DebugLog(char* param_1, D3DXVECTOR3* param_2) {
     return;
 }
 

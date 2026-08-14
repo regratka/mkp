@@ -1,16 +1,19 @@
 #include "cMagSprite.h"
+#include "cMagEngineMgr.h"
 
 /* 1000A9B0-1000A9BD 0000D	*/
 void cMagSprite::PlayMovie(bool param_1) {
+	shouldPlayMovie = param_1;
 }
 
 /* 1000FF70-1000FF77 00007	*/
 bool cMagSprite::GetStatusRemoveObject() {
-	return 0;
+	return shouldRemoveObject;
 }
 
 /* 1000FF80-1000FF8D 0000D	*/
 void cMagSprite::RemoveObject(bool param_1) {
+	shouldRemoveObject = param_1;
 }
 
 /* 10012910-10012911 00001	*/
@@ -31,94 +34,334 @@ void cMagSprite::SetCursorPosition(int param_1, int param_2) {
 
 /* 10062870-10062BD6 00366	*/
 cMagSprite::cMagSprite() {
+	SetObjectName("No_name");
+	SetClassName("cMagSprite");
+	unk_d6c = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	unk_d78 = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	scale = D3DXVECTOR3(1.0f, 1.0f, 1.0f);
+	d3dxSprite = NULL;
+	unk_dd0 = 1.0f;
+	subSprites = std::vector<SubSpriteData>();
+	unk_d4d = false;
+	shouldRenderSprites = true;
+	testTexture = NULL;
+	unk_14c4 = 0x14;
+	unk_d59 = false;
+	unk_d5a = false;
+	vertexBuffer = NULL;
+	unk_dd4 = 1.0f;
+	srcBlend = 2;
+	destBlend = 2;
+	D3DXMatrixIdentity(&unk_16a4);
+	D3DXMatrixIdentity(&unk_16e4);
+	movieScaleX = 1.0f;
+	movieScaleY = 1.0f;
+	unk_1730 = 1.0f;
+	rotationMovie = 0.0f;
+	texture = NULL;
+	unk_1724 = false;
+	shouldPlayMovie = false;
+	unk_1738 = false;
 }
 
-/* 10062BE0-10062C37 00057	*/
-cMagSprite* cMagSprite::scalar_destructor(uchar param_1) {
-	return 0;
-}
 
 /* 10062C40-10062D97 00157	*/
 cMagSprite::~cMagSprite() {
+	directXFont.DestroyFont();
+
+	if (vertexBuffer != NULL) {
+		vertexBuffer->Release();
+		vertexBuffer = NULL;
+	}
 }
 
 /* 10062DA0-10062E4F 000AF	*/
 void cMagSprite::SetTextColor(int param_1, float param_2, float param_3, float param_4, float param_5) {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			subSprites[index].textColor.r = param_2;
+			subSprites[index].textColor.g = param_3;
+			subSprites[index].textColor.b = param_4;
+			subSprites[index].textColor.a = param_5;
+			return;
+		}
+	} 
 }
 
 /* 10062DA0-10062E4F 000AF	*/
 void cMagSprite::ShowText(int param_1, float param_2, float param_3, float param_4, float param_5) {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			subSprites[index].textColor.r = param_2;
+			subSprites[index].textColor.g = param_3;
+			subSprites[index].textColor.b = param_4;
+			subSprites[index].textColor.a = param_5;
+			return;
+		}
+	} 
 }
 
 /* 10062E50-10062EC2 00072	*/
 void cMagSprite::ShowText(int param_1, bool param_2) {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			subSprites[index].shouldShowText = param_2;
+			return;
+		}
+	} 
 }
 
 /* 10062ED0-10062F84 000B4	*/
 void cMagSprite::SetText(int param_1, char* param_2) {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			ZeroMemory(subSprites[index].text, sizeof(subSprites[index].text));
+			strcpy(subSprites[index].text, param_2);
+			return;
+		}
+	} 
 }
 
 /* 10062F90-1006310A 0017A	*/
 void cMagSprite::SetText(int param_1, char* param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8) {
+	float posX = GetWindowWidth() * param_3;
+	float posY = GetWindowHeight() * param_4;
+	
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			ZeroMemory(subSprites[index].text, sizeof(subSprites[index].text));
+			strcpy(subSprites[index].text, param_2);
+			subSprites[index].unk_14 = D3DXVECTOR2(param_3,param_4);
+			subSprites[index].textPosition.x = posX;
+			subSprites[index].textPosition.y = posY;
+			subSprites[index].textColor.r = param_5;
+			subSprites[index].textColor.g = param_6;
+			subSprites[index].textColor.b = param_7;
+			subSprites[index].textColor.a = param_8;
+			return;
+		}
+	} 
 }
 
 /* 10063110-100631FB 000EB	*/
 void cMagSprite::SetTextPosition(int param_1, float param_2, float param_3) {
+	int windowWidth = GetWindowWidth();
+	float posX = windowWidth * param_2;
+	int windowHeight = GetWindowHeight();
+	float posY = windowHeight * param_3;
+
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			subSprites[index].unk_14 = D3DXVECTOR2(param_2,param_3);
+			subSprites[index].textPosition.x = posX;
+			subSprites[index].textPosition.y = posY;
+			return;
+		}
+	} 
 }
 
 /* 10063200-1006327D 0007D	*/
 char* cMagSprite::GetText(int param_1) {
-	return 0;
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
+			return subSprites[index].text;
+		}
+	} 
+	return "Empty";
 }
 
 /* 10063280-1006333A 000BA	*/
 void cMagSprite::ClearTextBuffer() {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].unk_17c) {
+			subSprites.erase(subSprites.begin()+index);
+		}
+	} 
 }
 
 /* 10063340-100636BC 0037C	*/
 int cMagSprite::SetText(char* param_1, float param_2, float param_3, float param_4, float param_5, float param_6, float param_7) {
-	return 0;
+	if (d3dxSprite == NULL) {
+		D3DXCreateSprite(cMagEngineMgr::getInstance()->engine, &d3dxSprite);
+	}
+	float fVar3 =  GetWindowWidth() * param_2;
+	float fVar4 =  GetWindowHeight() * param_3;
+	int iVar4 = -1;
+	if (subSprites.size() > 0) {
+		iVar4 = subSprites[subSprites.size()-1].texID;
+		if (iVar4 == -1) {
+			iVar4 = 0;
+		}
+	}
+
+	SubSpriteData local_294;
+	ZeroMemory(&local_294, sizeof(SubSpriteData));
+	strcpy(local_294.text, param_1);
+	local_294.unk_17c = true;
+	local_294.unk_14.x = param_2;
+	local_294.unk_14.y = param_3;
+	local_294.textColor.r = param_4;
+	local_294.textColor.g = param_5;
+	local_294.textColor.b = param_6;
+	local_294.textColor.a = param_7;
+	local_294.texID = iVar4 + 1;
+	subSprites.push_back(local_294);
+	return local_294.texID;
 }
 
 /* 100636C0-10063713 00053	*/
 void cMagSprite::CreateFontA(char* param_1, long param_2) {
+	strcpy(typefaceName, param_1); 
+	unk_14c4 = param_2;
+	directXFont.CreateFontA(cMagEngineMgr::getInstance()->engine, typefaceName, param_2);
 }
 
 /* 10063720-100637E0 000C0	*/
 void cMagSprite::Restore() {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].unk_17c) {
+			SetTextPosition(subSprites[index].texID, 
+				subSprites[index].unk_14.x, subSprites[index].unk_14.y);
+		}
+
+		if (subSprites[index].unk_34) {
+			SetScaleAsWindow(subSprites[index].texID);
+		} else {
+			SetScale(subSprites[index].texID, 
+				subSprites[index].unk_24, subSprites[index].unk_28);
+			SetPos(subSprites[index].texID, subSprites[index].unk_1c, subSprites[index].unk_20, 0);	
+		}
+	} 
 }
 
 /* 100637E0-100637FE 0001E	*/
 void cMagSprite::SetAlpha1(ulong param_1, ulong param_2) {
+	unk_d4d = true;
+	srcBlend = param_1;
+	destBlend = param_2;
 }
 
 /* 10063800-100638A7 000A7	*/
 void cMagSprite::LoadSprites(char* param_1) {
+	char* dataPath = cMagEngineMgr::getInstance()->gameObject->dataPath;
+	char local_12c[300];
+	if (dataPath != NULL) {
+		sprintf(local_12c, "%s%s", dataPath, param_1);
+	} else {
+		sprintf(local_12c, "%s", param_1);
+	}
+	magLog.FileLog("LoadSprites: <%s>", local_12c);
+	D3DXCreateTextureFromFileEx(cMagEngineMgr::getInstance()->engine, local_12c, 
+		-1, -1, -1, 0, D3DFMT_UNKNOWN, D3DPOOL_MANAGED, -1, -1, 
+		D3DCOLOR_ARGB(0xff,0,0,0), NULL, NULL, &gameObjectTexture);
 }
 
 /* 100638B0-100638D1 00021	*/
 void cMagSprite::SetScale(float param_1, float param_2, float param_3) {
+	scale.x = param_1;
+	scale.y = param_2;
+	scale.z = param_3;
 }
 
 /* 100638E0-100638ED 0000D	*/
 void cMagSprite::EnableSpriteRendering(bool param_1) {
+	shouldRenderSprites = param_1;
 }
 
 /* 100638F0-10063A91 001A1	*/
 void cMagSprite::OnRender() {
+	D3DXMATRIX local_40;
+	D3DXMATRIX local_80;
+	if (shouldPlayMovie && unk_1724) {
+		D3DXMatrixOrthoLH(&local_40, 1.0f, 1.0f, 0.0f, 100.0f);
+		D3DXMatrixIdentity(&local_80);
+		cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_PROJECTION, &local_40);
+		cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_VIEW, &local_80);
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_LIGHTING, FALSE);
+		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_CULLMODE, TRUE);
+		cMagEngineMgr::getInstance()->engine->SetTexture(0, teksturyVideo.texture);
+		teksturyVideo.SprawdzPetle(this);
+		RysujDuszkiEx(0.0f, 0.0f, 0.0f, rotationMovie, movieScaleX, movieScaleY);
+		return;
+	}
+
+	if (d3dxSprite != NULL && shouldRenderSprites) {
+		d3dxSprite->OnLostDevice();
+		CheckMouseRegion();
+		RenderSprites();
+	}
 }
 
 /* 10063AA0-10063AAD 0000D	*/
 void cMagSprite::SetScale(tagRECT param_1) {
+	scale.x = param_1.bottom;
 }
 
 /* 10063AB0-10063FB1 00501	*/
 int cMagSprite::AddTexture(char* param_1) {
-	return 0;
+	DataLog("[TEXTURE]:%s", param_1);
+	if (d3dxSprite == NULL) {
+		D3DXCreateSprite(cMagEngineMgr::getInstance()->engine, &d3dxSprite);
+	}
+	char* dataPath = cMagEngineMgr::getInstance()->gameObject->dataPath;
+	char local_12c[300];
+	if (dataPath != NULL) {
+		sprintf(local_12c, "%s%s", dataPath, param_1);
+	} else {
+		sprintf(local_12c, "%s", param_1);
+	}
+	FileLog("Create sprite: %s", local_12c);
+	D3DXIMAGE_INFO local_3dc;
+	HRESULT result = D3DXCreateTextureFromFileEx(cMagEngineMgr::getInstance()->engine, local_12c, 
+	-1, -1, -1, 0, D3DFMT_UNKNOWN, D3DPOOL_MANAGED, -1, -1, 
+	D3DCOLOR_ARGB(0xff,0,0,0), &local_3dc, NULL, &gameObjectTexture);
+	
+	if (result != S_OK) {
+		TextureErrorLog("can`t create sprite: %s (error)", param_1);
+		D3DXCreateTextureFromFileEx(cMagEngineMgr::getInstance()->engine, "data\\interface\\red.png", 
+		-1, -1, -1, 0, D3DFMT_UNKNOWN, D3DPOOL_MANAGED, -1, -1, 
+		D3DCOLOR_ARGB(0xff,0,0,0), &local_3dc, NULL, &gameObjectTexture);
+	}
+	DebugLog("SpriteSize w: %d  h: %d", local_3dc.Width, local_3dc.Height);
+	SubSpriteData local_3c0;
+	local_3c0.unk_38 = local_3dc.Width;
+	local_3c0.unk_3c = local_3dc.Height;
+	int iVar4 = -1;
+	if (subSprites.size() > 0) {
+		iVar4 = subSprites[subSprites.size()-1].texID;
+		if (iVar4 == -1) {
+			iVar4 = 0;
+		}
+	}
+	ZeroMemory(&local_3c0, sizeof(SubSpriteData));
+	local_3c0.texture = gameObjectTexture;
+	local_3c0.unk_40 = D3DXVECTOR2(0.0f, 0.0f);
+	local_3c0.unk_48 = D3DXVECTOR2(1.0f, 1.0f);
+	local_3c0.unk_64.bottom = local_3dc.Height;
+	local_3c0.unk_64.right = local_3dc.Width;
+	local_3c0.texID = iVar4+1;
+	local_3c0.unk_64.top = 0;
+	local_3c0.unk_58 = 0.0f;
+	local_3c0.unk_5c = D3DXVECTOR2(0.0f, 0.0f);
+	local_3c0.unk_74 = 1.0f;
+	local_3c0.shouldCheckMouse = false;
+	local_3c0.unk_34 = false;
+	local_3c0.shouldHideRender = false;
+	local_3c0.shouldShowText = false;
+	DebugLog("id: %d", local_3c0.texID);
+	strcpy(local_3c0.texturePath, param_1);
+	subSprites.push_back(local_3c0);
+
+	return local_3c0.texID;
 }
 
 /* 10063FC0-10064237 00277	*/
 void cMagSprite::Top(int param_1) {
+	if (param_1 < 0) {
+		param_1 = 0;
+	}
+
+
 }
 
 /* 10064240-100644C9 00289	*/
@@ -240,7 +483,16 @@ void cMagSprite::RenderTestSprite() {
 
 /* 10065A40-10065A86 00046	*/
 long cMagSprite::LoadMovie(char* param_1) {
-	return 0;
+	IDirect3DDevice8* engine = cMagEngineMgr::getInstance()->engine;
+	if (teksturyVideo.UtworzZPlikuAVI(engine, param_1) < S_OK) {
+		return FALSE;
+	}
+
+	if (UtworzBuforDuszkow() < S_OK) {
+		return FALSE;
+	}
+	unk_1724 = true;
+	return true;
 }
 
 /* 10065A90-10065BCC 0013C	*/
@@ -259,13 +511,31 @@ void cMagSprite::RenderPlane() {
 
 /* 10066020-10066137 00117	*/
 void cMagSprite::RysujDuszkiEx(float param_1, float param_2, float param_3, float param_4, float param_5, float param_6) {
+	D3DXMatrixTranslation(&unk_1664, param_1, param_2, param_3);
+	D3DXMatrixRotationZ(&unk_16a4, param_4);
+	D3DXMatrixScaling(&unk_16e4, param_5, param_6, 1.0f);
+	
+	D3DXMATRIX local_80;
+	D3DXMatrixMultiply(&local_80, &unk_16e4, &unk_16a4);
+	D3DXMATRIX DStack_100 = local_80;
+	D3DXMATRIX DStack_c0;
+	D3DXMatrixMultiply(&DStack_c0, &DStack_100, &unk_1664);
+	D3DXMATRIX DStack_40 = DStack_c0;
+	
+	cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_WORLD, &DStack_40);
+	cMagEngineMgr::getInstance()->engine->SetVertexShader(D3DFVF_TEX1 | D3DFVF_DIFFUSE | D3DFVF_XYZ);
+	cMagEngineMgr::getInstance()->engine->SetStreamSource(0, vertexBuffer, 0x18);
+	cMagEngineMgr::getInstance()->engine->DrawPrimitive(D3DPT_TRIANGLESTRIP, 0, 2);
 }
 
-/* 10066140-10066157 00017	*/
+/* g10066140-10066157 00017	*/
 void cMagSprite::SetScaleMovie(float param_1, float param_2) {
+	movieScaleX = param_1;
+	movieScaleY = param_2;
 }
 
 /* 10066160-1006616D 0000D	*/
 void cMagSprite::SetRotateMovie(float param_1) {
+	rotationMovie = param_1;
 }
 

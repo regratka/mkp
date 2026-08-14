@@ -255,8 +255,13 @@ public:
 
 	/* 0x8a0 */ D3DLIGHT8 light;
 
-	/* 0x908 */ uchar f_908[0x9c8-0x908];
+	/* 0x908 */ uchar f_908[0x978-0x908];
 	
+	/* 0x978 */ ID3DXSprite* d3dxSprite;
+	/* 0x97c */ IDirect3DTexture8* gameObjectTexture;
+
+	/* 0x980 */ uchar f_980[0x9c8-0x980];
+
 	/* 0x9c8 */ D3DXVECTOR3 kokoPos;
 	/* 0x9d4 */ float visibilityRange;
 	/* 0x9d8 */ float surfaceVisibilityRange;

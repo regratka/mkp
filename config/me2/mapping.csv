@@ -2997,7 +2997,7 @@
 ;FUN_1008dc92;0x1008dc92;0x5e;__stdcall;;uint
 ?IsAvailable@CCPUTicker@@QBEHXZ;CCPUTicker::IsAvailable;0x1008dd00;0x6;__thiscall;;int;CCPUTicker*
 ??0CCPUTicker@@QAE@XZ;CCPUTicker::CCPUTicker;0x1008dd10;0x4f;__thiscall;;uchar;CCPUTicker*
-;CCPUTicker::scalar_destructor;0x1008dd60;0x57;__thiscall;;CCPUTicker*;CCPUTicker*;uchar
+??_GCCPUTicker@@UAEPAXI@Z;CCPUTicker::scalar_destructor;0x1008dd60;0x57;__thiscall;;CCPUTicker*;CCPUTicker*;uchar
 ??0CCPUTicker@@QAE@ABV0@@Z;CCPUTicker::CCPUTicker;0x1008ddc0;0x1b;__thiscall;;uchar;CCPUTicker*;CCPUTicker*
 ??4CCPUTicker@@QAEAAV0@ABV0@@Z;CCPUTicker::operator=;0x1008dde0;0x15;__thiscall;;CCPUTicker*;CCPUTicker*;CCPUTicker*
 ?RunningOnNT@CCPUTicker@@KAHXZ;CCPUTicker::RunningOnNT;0x1008de00;0x76;__cdecl;;int
@@ -3070,7 +3070,7 @@
 ;CSplineCamera::scalar_destructor;0x100909f0;0x57;__thiscall;;bool*;CSplineCamera*;uchar
 ??0CTrack@@QAE@ABV0@@Z;CTrack::CTrack;0x10090a50;0x2fa;__thiscall;;uchar;CTrack*;CTrack*
 ??4CTrack@@QAEAAV0@ABV0@@Z;CTrack::operator=;0x10090d50;0x345;__thiscall;;CTrack*;CTrack*;CTrack*
-;CTrack::scalar_destructor;0x100910a0;0x57;__thiscall;;CTrack*;CTrack*;uchar
+??_ECTrack@@UAEPAXI@Z;CTrack::scalar_destructor;0x100910a0;0x57;__thiscall;;CTrack*;CTrack*;uchar
 ;_Java_Game_SetLoadLevelBackground@12;0x10091100;0x15;__stdcall;;uchar;uint;uint;int
 ;_Java_Game_SetProgressBarBackgroundPos@12;0x10091120;0x3f;__stdcall;;uchar;uint;uint;uint
 ;_Java_Game_SetProgressBarPos@12;0x10091160;0x3f;__stdcall;;uchar;uint;uint;uint

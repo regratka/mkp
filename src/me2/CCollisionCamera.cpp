@@ -2,6 +2,11 @@
 
 #include "cMagEngineMgr.h"
 
+/* 10012910-10012911 00001	*/
+void CCollisionCamera::OnFrame() {
+}
+
+
 /* 10060BF0-10060C02 00012	*/
 CCollisionCamera::CCollisionCamera() {
 }
