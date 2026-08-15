@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 24.612272,
+    "fuzzy_match_percent": 24.951954,
     "total_code": "687655",
-    "matched_code": "99238",
-    "matched_code_percent": 14.431365,
+    "matched_code": "101397",
+    "matched_code_percent": 14.745331,
     "matched_data_percent": 100.0,
     "total_functions": 3266,
-    "matched_functions": 1024,
-    "matched_functions_percent": 31.353336,
+    "matched_functions": 1037,
+    "matched_functions_percent": 31.751377,
     "complete_code": "31460",
     "complete_code_percent": 4.574969,
     "complete_data_percent": 100.0,
@@ -18391,14 +18391,14 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 40.164474,
+        "fuzzy_match_percent": 56.521824,
         "total_code": "14280",
-        "matched_code": "2337",
-        "matched_code_percent": 16.365545,
+        "matched_code": "4496",
+        "matched_code_percent": 31.484594,
         "matched_data_percent": 100.0,
         "total_functions": 63,
-        "matched_functions": 27,
-        "matched_functions_percent": 42.857143,
+        "matched_functions": 40,
+        "matched_functions_percent": 63.492065,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18406,7 +18406,7 @@
         {
           "name": ".text",
           "size": "14102",
-          "fuzzy_match_percent": 40.164474,
+          "fuzzy_match_percent": 56.521824,
           "metadata": {}
         }
       ],
@@ -18693,7 +18693,7 @@
         {
           "name": "?GetPos@cMagSprite@@QAE?AUD3DXVECTOR2@@H@Z",
           "size": "161",
-          "fuzzy_match_percent": 5.357143,
+          "fuzzy_match_percent": 95.67857,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSprite::GetPos(int)"
           },
@@ -18702,7 +18702,7 @@
         {
           "name": "?GetSize@cMagSprite@@QAE?AUD3DXVECTOR2@@H@Z",
           "size": "135",
-          "fuzzy_match_percent": 8.142858,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSprite::GetSize(int)"
           },
@@ -18720,7 +18720,7 @@
         {
           "name": "?GetScale@cMagSprite@@QAE?AUD3DXVECTOR2@@H@Z",
           "size": "135",
-          "fuzzy_match_percent": 8.142858,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSprite::GetScale(int)"
           },
@@ -18729,7 +18729,7 @@
         {
           "name": "?Show@cMagSprite@@QAEXH@Z",
           "size": "99",
-          "fuzzy_match_percent": 2.7027028,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Show(int)"
           },
@@ -18738,7 +18738,7 @@
         {
           "name": "?Hide@cMagSprite@@QAEXH@Z",
           "size": "99",
-          "fuzzy_match_percent": 2.7027028,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Hide(int)"
           },
@@ -18747,7 +18747,7 @@
         {
           "name": "?HideRender@cMagSprite@@QAEXH_N@Z",
           "size": "102",
-          "fuzzy_match_percent": 2.631579,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::HideRender(int, bool)"
           },
@@ -18765,7 +18765,7 @@
         {
           "name": "?SetAlpha@cMagSprite@@QAEXHM@Z",
           "size": "102",
-          "fuzzy_match_percent": 2.631579,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetAlpha(int, float)"
           },
@@ -18774,7 +18774,7 @@
         {
           "name": "?EnableCheckMouse@cMagSprite@@QAEXH_N@Z",
           "size": "105",
-          "fuzzy_match_percent": 2.631579,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::EnableCheckMouse(int, bool)"
           },
@@ -18792,7 +18792,7 @@
         {
           "name": "?SetScaleAsWindow@cMagSprite@@QAEXH@Z",
           "size": "183",
-          "fuzzy_match_percent": 1.7241379,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScaleAsWindow(int)"
           },
@@ -18801,7 +18801,7 @@
         {
           "name": "?GetMouseActivateSprite@cMagSprite@@QAEHXZ",
           "size": "91",
-          "fuzzy_match_percent": 4.634146,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::GetMouseActivateSprite(void)"
           },
@@ -18810,7 +18810,7 @@
         {
           "name": "?TexFromDigit@cMagSprite@@QAEXHHHHAAURect@@@Z",
           "size": "127",
-          "fuzzy_match_percent": 2.5,
+          "fuzzy_match_percent": 42.2,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::TexFromDigit(int, int, int, int, struct Rect &)"
           },
@@ -18828,7 +18828,7 @@
         {
           "name": "?SetTextureRect@cMagSprite@@QAEXHURect@@@Z",
           "size": "161",
-          "fuzzy_match_percent": 2.0204082,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetTextureRect(int, struct Rect)"
           },
@@ -18846,7 +18846,7 @@
         {
           "name": "?TransformVertices@cMagSprite@@QAEXQAUD3DTLVERTEXS@@PAUD3DXVECTOR2@@1M@Z",
           "size": "180",
-          "fuzzy_match_percent": 1.6949153,
+          "fuzzy_match_percent": 20.186441,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::TransformVertices(struct D3DTLVERTEXS *const, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float)"
           },
@@ -18882,7 +18882,7 @@
         {
           "name": "?CreateSurfaceFromFile@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAPAUIDirect3DSurface8@@QADK@Z",
           "size": "15",
-          "fuzzy_match_percent": 14.285714,
+          "fuzzy_match_percent": 40.714287,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CreateSurfaceFromFile(struct IDirect3DDevice8*, struct IDirect3DSurface8**, char *const, unsigned long)"
           },
@@ -18900,7 +18900,7 @@
         {
           "name": "?LoadSprite@cMagSprite@@QAEXPAD@Z",
           "size": "112",
-          "fuzzy_match_percent": 2.7027028,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::LoadSprite(char *)"
           },
@@ -18909,7 +18909,7 @@
         {
           "name": "?RenderTestSprite@cMagSprite@@QAEXXZ",
           "size": "55",
-          "fuzzy_match_percent": 6.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RenderTestSprite(void)"
           },
@@ -18945,7 +18945,7 @@
         {
           "name": "?RenderPlane@cMagSprite@@QAEXXZ",
           "size": "780",
-          "fuzzy_match_percent": 0.47393364,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RenderPlane(void)"
           },
@@ -32038,14 +32038,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 28.07747,
+        "fuzzy_match_percent": 28.533327,
         "total_code": "512405",
-        "matched_code": "76285",
-        "matched_code_percent": 14.887638,
+        "matched_code": "78444",
+        "matched_code_percent": 15.308984,
         "matched_data_percent": 100.0,
         "total_functions": 2285,
-        "matched_functions": 794,
-        "matched_functions_percent": 34.748356,
+        "matched_functions": 807,
+        "matched_functions_percent": 35.317287,
         "complete_code": "11510",
         "complete_code_percent": 2.24627,
         "complete_data_percent": 100.0,
