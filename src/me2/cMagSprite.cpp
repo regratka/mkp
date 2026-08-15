@@ -1,6 +1,7 @@
 #include "cMagSprite.h"
 #include "cMagEngineMgr.h"
 
+
 /* 1000A9B0-1000A9BD 0000D	*/
 void cMagSprite::PlayMovie(bool param_1) {
 	shouldPlayMovie = param_1;
@@ -444,6 +445,46 @@ void cMagSprite::HideRender(int param_1, bool param_2) {
 
 /* 10064C50-10064EB8 00268	*/
 void cMagSprite::RenderSprites() {
+	if (d3dxSprite == NULL) {
+		return;
+	}
+
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_TEXTURETRANSFORMFLAGS, 0);
+	d3dxSprite->Begin();
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].shouldHideRender || !subSprites[index].shouldShowText) {
+			continue;
+		}
+
+		if (subSprites[index].unk_17c && subSprites[index].texture != NULL) {
+			int iVar8;
+			if (subSprites[index].unk_74 < 1.0f) {
+				if (subSprites[index].unk_74 > 0.0f) {
+					iVar8 = subSprites[index].unk_74 * 255.0f + 0.5f;
+				} else {
+					iVar8 = 0;
+				}
+			} else {
+				iVar8 = 255;
+			}
+			d3dxSprite->Draw(subSprites[index].texture, &subSprites[index].unk_64, 
+				&subSprites[index].unk_48, &subSprites[index].unk_5c, subSprites[index].unk_58,
+				&subSprites[index].unk_40, D3DCOLOR_ARGB(iVar8, 0, 0, 0));
+		}
+		if (subSprites[index].unk_17c && cMagEngineMgr::getInstance()->gameObject->dxFont != NULL) {
+			int lVar13 = subSprites[index].textColor.a * 255.0f;
+			int lVar14 = subSprites[index].textColor.r * 255.0f;
+			int lVar15 = subSprites[index].textColor.g * 255.0f;
+			int lVar16 = subSprites[index].textColor.b * 255.0f;
+			RECT atStack_24;
+			SetRect(&atStack_24, subSprites[index].textPosition.x, subSprites[index].textPosition.y, 
+				GetWindowWidth(), GetWindowHeight());
+			atStack_24.right = strlen(subSprites[index].text);
+			cMagEngineMgr::getInstance()->gameObject->dxFont->DrawTextA(subSprites[index].text, -1, 
+				&atStack_24, 0x130, D3DCOLOR_ARGB(lVar13, lVar14, lVar15, lVar16));
+		}
+	} 
+	d3dxSprite->End();
 }
 
 /* 10064EC0-10064F26 00066	*/
@@ -586,12 +627,82 @@ long cMagSprite::LoadMovie(char* param_1) {
 
 /* 10065A90-10065BCC 0013C	*/
 long cMagSprite::UtworzBuforDuszkow() {
-	return 0;
+	HRESULT res = cMagEngineMgr::getInstance()->engine->CreateVertexBuffer(96, 0, D3DFVF_TEX1 | D3DFVF_DIFFUSE | D3DFVF_XYZ, 
+		D3DPOOL_MANAGED, &vertexBuffer);
+	if (res < S_OK) {
+		return E_FAIL;
+	}
+	
+	SPRITEVERTEX* vertexes;
+	vertexBuffer->Lock(0, 96, (BYTE**)&vertexes, 0);
+	float fVar2 = (float) teksturyVideo.unk_160 /  teksturyVideo.unk_168;
+	float fStack_4 = (float) teksturyVideo.unk_164 / teksturyVideo.unk_16c;
+	vertexes[0].x = -0.5f;
+	vertexes[0].y = -0.5f;
+	vertexes[0].z = 1.0f;
+	vertexes[0].u = 0.0f;
+	vertexes[0].v = 0.0f;
+	vertexes[0].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexes[1].x = -0.5f;
+	vertexes[1].y = 0.5f;
+	vertexes[1].z = 1.0f;
+	vertexes[1].u = 0.0f;
+	vertexes[1].v = fStack_4;
+	vertexes[1].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexes[2].x = 0.5f;
+	vertexes[2].y = -0.5f;
+	vertexes[2].z = 1.0f;
+	vertexes[2].u = fVar2;
+	vertexes[2].v = 0.0f;
+	vertexes[2].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexes[3].x = 0.5f;
+	vertexes[3].y = 0.5f;
+	vertexes[3].z = 1.0f;
+	vertexes[3].u = fVar2;
+	vertexes[3].v = fStack_4;
+	vertexes[3].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexBuffer->Unlock();
+	return S_OK;
 }
 
 /* 10065BD0-10065D05 00135	*/
 long cMagSprite::CreatePlane(char* param_1) {
-	return 0;
+	HRESULT res = cMagEngineMgr::getInstance()->engine->CreateVertexBuffer(96, 0, D3DFVF_TEX1 | D3DFVF_DIFFUSE | D3DFVF_XYZ, 
+		D3DPOOL_MANAGED, &vertexBuffer);
+	if (res < S_OK) {
+		return E_FAIL;
+	}
+
+	SPRITEVERTEX* vertexes;
+	vertexBuffer->Lock(0, 96, (BYTE**)&vertexes, 0);
+	vertexes[0].x = -0.5f;
+	vertexes[0].y = -0.5f;
+	vertexes[0].z = 1.0f;
+	vertexes[0].u = 0.0f;
+	vertexes[0].v = 0.0f;
+	vertexes[0].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexes[1].x = -0.5f;
+	vertexes[1].y = 0.5f;
+	vertexes[1].z = 1.0f;
+	vertexes[1].u = 0.0f;
+	vertexes[1].v = 1.0f;
+	vertexes[1].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexes[2].x = 0.5f;
+	vertexes[2].y = -0.5f;
+	vertexes[2].z = 1.0f;
+	vertexes[2].u = 1.0f;
+	vertexes[2].v = 0.0f;
+	vertexes[2].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexes[3].x = 0.5f;
+	vertexes[3].y = 0.5f;
+	vertexes[3].z = 1.0f;
+	vertexes[3].u = 1.0f;
+	vertexes[3].v = 1.0f;
+	vertexes[3].color = D3DCOLOR_ARGB(0xff, 0xff, 0xff, 0xff);
+	vertexBuffer->Unlock();
+	texture = MagTextureMgr::getInstance()->GetTexture(param_1);
+	unk_1738 = true;
+	return S_OK;
 }
 
 /* 10065D10-1006601C 0030C	*/

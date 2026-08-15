@@ -9,6 +9,15 @@
 #include "CDirectXFont.h"
 #include "KTeksturyVideoDirectX.h"
 
+struct SPRITEVERTEX {
+	float x;
+	float y;
+	float z;
+	ulong color;
+	float u;
+	float v;
+};
+
 struct Rect { 
 	/* 0x00  */ float unk_00;
 	/* 0x04  */ float unk_04;
@@ -28,7 +37,6 @@ private:
 		/* 0x07  */ uchar field_0x07[0x10-0x7];
 		/* 0x10  */ IDirect3DTexture8* texture;
 		/* 0x14  */ D3DXVECTOR2 unk_14;
-		// /* 0x18  */ float unk_18;
 		/* 0x1c  */ float unk_1c;
 		/* 0x20  */ float unk_20;
 		/* 0x24  */ float unk_24;

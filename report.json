@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 24.951954,
+    "fuzzy_match_percent": 25.105507,
     "total_code": "687655",
-    "matched_code": "101397",
-    "matched_code_percent": 14.745331,
+    "matched_code": "102022",
+    "matched_code_percent": 14.836219,
     "matched_data_percent": 100.0,
     "total_functions": 3266,
-    "matched_functions": 1037,
-    "matched_functions_percent": 31.751377,
+    "matched_functions": 1039,
+    "matched_functions_percent": 31.812614,
     "complete_code": "31460",
     "complete_code_percent": 4.574969,
     "complete_data_percent": 100.0,
@@ -18391,14 +18391,14 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 56.521824,
+        "fuzzy_match_percent": 63.91629,
         "total_code": "14280",
-        "matched_code": "4496",
-        "matched_code_percent": 31.484594,
+        "matched_code": "5121",
+        "matched_code_percent": 35.861343,
         "matched_data_percent": 100.0,
         "total_functions": 63,
-        "matched_functions": 40,
-        "matched_functions_percent": 63.492065,
+        "matched_functions": 42,
+        "matched_functions_percent": 66.66667,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18406,7 +18406,7 @@
         {
           "name": ".text",
           "size": "14102",
-          "fuzzy_match_percent": 56.521824,
+          "fuzzy_match_percent": 63.91629,
           "metadata": {}
         }
       ],
@@ -18756,7 +18756,7 @@
         {
           "name": "?RenderSprites@cMagSprite@@QAEXXZ",
           "size": "616",
-          "fuzzy_match_percent": 0.5555556,
+          "fuzzy_match_percent": 72.44444,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RenderSprites(void)"
           },
@@ -18927,7 +18927,7 @@
         {
           "name": "?UtworzBuforDuszkow@cMagSprite@@QAEJXZ",
           "size": "316",
-          "fuzzy_match_percent": 1.8867924,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSprite::UtworzBuforDuszkow(void)"
           },
@@ -18936,7 +18936,7 @@
         {
           "name": "?CreatePlane@cMagSprite@@QAEJPAD@Z",
           "size": "309",
-          "fuzzy_match_percent": 1.9230769,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSprite::CreatePlane(char *)"
           },
@@ -32038,14 +32038,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 28.533327,
+        "fuzzy_match_percent": 28.739399,
         "total_code": "512405",
-        "matched_code": "78444",
-        "matched_code_percent": 15.308984,
+        "matched_code": "79069",
+        "matched_code_percent": 15.430959,
         "matched_data_percent": 100.0,
         "total_functions": 2285,
-        "matched_functions": 807,
-        "matched_functions_percent": 35.317287,
+        "matched_functions": 809,
+        "matched_functions_percent": 35.40481,
         "complete_code": "11510",
         "complete_code_percent": 2.24627,
         "complete_data_percent": 100.0,
