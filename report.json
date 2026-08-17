@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 25.623175,
+    "fuzzy_match_percent": 25.709051,
     "total_code": "687655",
-    "matched_code": "103317",
-    "matched_code_percent": 15.02454,
+    "matched_code": "104530",
+    "matched_code_percent": 15.200937,
     "matched_data_percent": 100.0,
     "total_functions": 3266,
-    "matched_functions": 1042,
-    "matched_functions_percent": 31.90447,
+    "matched_functions": 1044,
+    "matched_functions_percent": 31.96571,
     "complete_code": "31460",
     "complete_code_percent": 4.574969,
     "complete_data_percent": 100.0,
@@ -18391,14 +18391,14 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 88.84468,
+        "fuzzy_match_percent": 92.980095,
         "total_code": "14280",
-        "matched_code": "6416",
-        "matched_code_percent": 44.929974,
+        "matched_code": "7629",
+        "matched_code_percent": 53.42437,
         "matched_data_percent": 100.0,
         "total_functions": 63,
-        "matched_functions": 45,
-        "matched_functions_percent": 71.42857,
+        "matched_functions": 47,
+        "matched_functions_percent": 74.60318,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18406,7 +18406,7 @@
         {
           "name": ".text",
           "size": "14102",
-          "fuzzy_match_percent": 88.84468,
+          "fuzzy_match_percent": 92.980095,
           "metadata": {}
         }
       ],
@@ -18477,7 +18477,7 @@
         {
           "name": "??0cMagSprite@@QAE@XZ",
           "size": "870",
-          "fuzzy_match_percent": 55.533333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSprite::cMagSprite(void)"
           },
@@ -18486,7 +18486,7 @@
         {
           "name": "??1cMagSprite@@UAE@XZ",
           "size": "343",
-          "fuzzy_match_percent": 40.618557,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSprite::~cMagSprite(void)"
           },
@@ -32038,14 +32038,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 29.434118,
+        "fuzzy_match_percent": 29.549366,
         "total_code": "512405",
-        "matched_code": "80364",
-        "matched_code_percent": 15.683688,
+        "matched_code": "81577",
+        "matched_code_percent": 15.920414,
         "matched_data_percent": 100.0,
         "total_functions": 2285,
-        "matched_functions": 812,
-        "matched_functions_percent": 35.536106,
+        "matched_functions": 814,
+        "matched_functions_percent": 35.623634,
         "complete_code": "11510",
         "complete_code_percent": 2.24627,
         "complete_data_percent": 100.0,

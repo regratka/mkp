@@ -42,7 +42,8 @@ cMagSprite::cMagSprite() {
 	scale = D3DXVECTOR3(1.0f, 1.0f, 1.0f);
 	d3dxSprite = NULL;
 	unk_dd0 = 1.0f;
-	subSprites = std::vector<SubSpriteData>();
+	subSprites.clear();
+	subSprites.reserve(512);
 	unk_d4d = false;
 	shouldRenderSprites = true;
 	testTexture = NULL;
@@ -53,6 +54,7 @@ cMagSprite::cMagSprite() {
 	unk_dd4 = 1.0f;
 	srcBlend = 2;
 	destBlend = 2;
+	D3DXMatrixIdentity(&unk_1664);
 	D3DXMatrixIdentity(&unk_16a4);
 	D3DXMatrixIdentity(&unk_16e4);
 	movieScaleX = 1.0f;
@@ -69,7 +71,13 @@ cMagSprite::cMagSprite() {
 /* 10062C40-10062D97 00157	*/
 cMagSprite::~cMagSprite() {
 	directXFont.DestroyFont();
-
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (!subSprites[index].unk_17c && subSprites[index].texture != NULL) {
+			subSprites[index].texture->Release();
+			subSprites[index].texture = NULL;
+		}
+ 	}
+	subSprites.clear();
 	if (vertexBuffer != NULL) {
 		vertexBuffer->Release();
 		vertexBuffer = NULL;
