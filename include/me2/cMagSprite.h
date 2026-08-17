@@ -24,7 +24,24 @@ struct Rect {
 	/* 0x08  */ float unk_08;
 	/* 0x0c  */ float unk_0c;
 };
-struct D3DTLVERTEXS;
+struct D3DTLVERTEXS {
+	/* 0x00  */ D3DXVECTOR2 unk_00;
+	/* 0x08  */ float unk_08;
+	/* 0x0c  */ float unk_0c;
+	/* 0x10  */ ulong unk_10;
+	/* 0x14  */ float unk_14;
+	/* 0x18  */ float unk_18;
+	/* 0x1c  */ float unk_1c;
+	/* 0x20  */ float unk_20;
+	/* 0x24  */ float unk_24;
+	/* 0x28  */ float unk_28;
+	/* 0x2c  */ ulong unk_2c;
+	/* 0x30  */ float unk_30;
+	/* 0x34  */ float unk_34;
+	/* 0x38  */ float unk_38;
+	/* 0x3c  */ float unk_3c;
+};
+
 
 class DLLEXPORT cMagSprite : public cMagUtility {
 
@@ -37,18 +54,14 @@ private:
 		/* 0x07  */ uchar field_0x07[0x10-0x7];
 		/* 0x10  */ IDirect3DTexture8* texture;
 		/* 0x14  */ D3DXVECTOR2 unk_14;
-		/* 0x1c  */ float unk_1c;
-		/* 0x20  */ float unk_20;
-		/* 0x24  */ float unk_24;
-		/* 0x28  */ float unk_28;
-		/* 0x2c  */ float unk_2c;
-		/* 0x30  */ float unk_30;
+		/* 0x1c  */ D3DXVECTOR2 unk_1c;
+		/* 0x24  */ D3DXVECTOR2 unk_24;
+		/* 0x2c  */ D3DXVECTOR2 unk_2c;
 		/* 0x34  */ bool unk_34;
 		/* 0x38  */ D3DXVECTOR2 unk_38;
 		/* 0x40  */ D3DXVECTOR2 unk_40;
 		/* 0x48  */ D3DXVECTOR2 unk_48;
-		/* 0x50  */ float unk_50;
-		/* 0x54  */ float unk_54;
+		/* 0x50  */ D3DXVECTOR2 unk_50;
 		/* 0x58  */ float unk_58;
 		/* 0x5c  */ D3DXVECTOR2 unk_5c;
 		/* 0x64  */ RECT unk_64;

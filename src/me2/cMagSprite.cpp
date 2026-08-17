@@ -229,8 +229,8 @@ void cMagSprite::Restore() {
 			SetScaleAsWindow(subSprites[index].texID);
 		} else {
 			SetScale(subSprites[index].texID, 
-				subSprites[index].unk_24, subSprites[index].unk_28);
-			SetPos(subSprites[index].texID, subSprites[index].unk_1c, subSprites[index].unk_20, 0);	
+				subSprites[index].unk_24.x, subSprites[index].unk_24.y);
+			SetPos(subSprites[index].texID, subSprites[index].unk_1c.x, subSprites[index].unk_1c.y, 0);	
 		}
 	} 
 }
@@ -361,21 +361,65 @@ void cMagSprite::Top(int param_1) {
 	if (param_1 < 0) {
 		param_1 = 0;
 	}
+	SubSpriteData local_294 = subSprites[param_1];
+	subSprites.erase(subSprites.begin()+param_1);
+	subSprites.push_back(local_294);
 }
 
 /* 10064240-100644C9 00289	*/
 void cMagSprite::Bottom(int param_1) {
+	if (param_1 < 0) {
+		param_1 = 0;
+	}
+	SubSpriteData local_294 = subSprites[param_1];
+	subSprites.erase(subSprites.begin()+param_1);
+	subSprites.insert(subSprites.begin(), local_294);
 }
 
 /* 100644D0-1006463F 0016F	*/
 void cMagSprite::SetRotate(int param_1, float param_2, D3DXVECTOR2 param_3) {
-	float local_4 = param_3.y;
-	float local_8 = param_3.x;
+	D3DXVECTOR2 local_4 = param_3;
+	if (GetWindowWidth() != 800 && GetWindowHeight() != 600) {
+		if (GetWindowWidth() > 800 && GetWindowHeight() > 600) {
+			local_4.x = param_3.x * (GetWindowWidth() / 800.0f);
+			local_4.y = param_3.y * (GetWindowHeight() / 600.0f);
+		}  
+		if (GetWindowWidth() < 800 && GetWindowHeight() < 600) {
+			local_4.x = param_3.x / (800.0f / GetWindowWidth());
+			local_4.y = param_3.y / (600.0f / GetWindowHeight());
+		}
+	}
 
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1) {
+			subSprites[index].unk_58 = param_2;
+			subSprites[index].unk_5c = local_4;
+			break;
+		}
+	} 
 }
 
 /* 10064640-1006479E 0015E	*/
 void cMagSprite::SetPos(int param_1, float param_2, float param_3, int param_4) {
+	D3DXVECTOR2 local_4;
+	local_4.x = GetWindowWidth() * param_2;
+	local_4.y = GetWindowHeight() * param_3;
+
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1) {
+			subSprites[index].unk_1c = D3DXVECTOR2(param_2, param_3);
+			subSprites[index].unk_2c = local_4;
+			if (param_4 == 0) {
+				subSprites[index].unk_50.x = subSprites[index].unk_48.x * subSprites[index].unk_38.x / 2;
+				subSprites[index].unk_50.y = subSprites[index].unk_48.y * subSprites[index].unk_38.y / 2;
+			} else if (param_4 == 1) {
+				subSprites[index].unk_50.x = subSprites[index].unk_48.x;
+				subSprites[index].unk_50.y = subSprites[index].unk_48.y;
+			}
+			subSprites[index].unk_40 = local_4 - subSprites[index].unk_50;
+			break;
+		}
+	} 
 }
 
 /* 100647A0-10064841 000A1	*/
@@ -401,6 +445,25 @@ D3DXVECTOR2 cMagSprite::GetSize(int param_1) {
 
 /* 100648E0-10064A63 00183	*/
 void cMagSprite::SetScale(int param_1, float param_2, float param_3) {
+	D3DXVECTOR2 local_4(param_2, param_3);
+	if (GetWindowWidth() != 800 && GetWindowHeight() != 600) {
+		if (GetWindowWidth() > 800 && GetWindowHeight() > 600) {
+			local_4.x = param_2 * (GetWindowWidth() / 800.0f);
+			local_4.y = param_3 * (GetWindowHeight() / 600.0f);
+		}  
+		if (GetWindowWidth() < 800 && GetWindowHeight() < 600) {
+			local_4.x = param_2 / (800.0f / GetWindowWidth());
+			local_4.y = param_3 / (600.0f / GetWindowHeight());
+		}
+	}
+
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1) {
+			subSprites[index].unk_24 = D3DXVECTOR2(param_2, param_3); 
+			subSprites[index].unk_48 = local_4;
+			break;
+		}
+	} 
 }
 
 /* 10064A70-10064AF7 00087	*/
@@ -509,6 +572,48 @@ void cMagSprite::EnableCheckMouse(int param_1, bool param_2) {
 
 /* 10064FA0-10065127 00187	*/
 void cMagSprite::CheckMouseRegion() {
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (!subSprites[index].shouldCheckMouse) {
+			continue;
+		}
+
+		D3DXVECTOR2 fVar1 = subSprites[index].unk_2c;
+		float fVar3 = subSprites[index].unk_48.x * subSprites[index].unk_38.x / 2;
+		float fVar4 = subSprites[index].unk_48.y * subSprites[index].unk_38.y / 2;
+		float fVar5 = fVar1.y - fVar4;
+		float fVar6 = fVar4 + fVar1.y;
+
+		POINT local_10;
+		local_10.x = 0;
+		local_10.y = 0;
+		ClientToScreen(GetHandleWindow(), &local_10);
+		
+		POINT local_18;
+		local_18.x = 0;
+		local_18.y = 0;
+		GetCursorPos(&local_18);
+		local_18.x -= local_10.x;
+		local_18.y -= local_10.y;
+
+		if (local_18.x < fVar1.x - fVar3 || fVar3 + fVar1.x <= local_18.x 
+				|| local_18.y < fVar5 || fVar4 <= local_18.y) {
+			if (subSprites[index].unk_06 && subSprites[index].shouldShowText) {
+				subSprites[index].unk_06 = false;
+				CallOnMouseLeave(index);
+				unk_d59 = false;
+			}
+			continue;
+		}  
+		if (!subSprites[index].shouldShowText) {
+			continue;
+		}
+		subSprites[index].unk_06 = true;
+		if (unk_d59) {
+			continue;
+		}
+		CallOnMouseArrive(index);
+		unk_d59 = true;
+	}
 }
 
 /* 10065130-100651E7 000B7	*/
@@ -544,6 +649,22 @@ void cMagSprite::TexFromDigit(int param_1, int param_2, int param_3, int param_4
 
 /* 100652D0-100653D7 00107	*/
 void cMagSprite::CutFrame(int param_1, int param_2, int param_3, int param_4, Rect& param_5) {
+	D3DXVECTOR2 local_10;
+	for (int index = 0; index < subSprites.size(); index++) {
+		if (subSprites[index].texID == param_1) {
+			local_10 = subSprites[index].unk_38;
+			break;
+		}
+	}
+
+	long lVar5 = local_10.x / param_3;
+	long lVar6 = local_10.y / param_4;
+	int iVar3 = param_2 / param_3;
+	int iVar2 = param_2 - iVar3 * param_3;
+	param_5.unk_00 = iVar2 * lVar5;
+	param_5.unk_04 = iVar3 * lVar6;
+	param_5.unk_08 = (iVar2+1) * lVar5;
+	param_5.unk_0c = (iVar3+1) * lVar6;
 }
 
 /* 100653E0-10065481 000A1	*/
@@ -560,7 +681,29 @@ void cMagSprite::SetTextureRect(int param_1, Rect param_2) {
 
 /* 10065490-10065701 00271	*/
 _D3DMATRIX* cMagSprite::BuildMatrix(_D3DMATRIX* param_1, D3DXVECTOR2* param_2, D3DXVECTOR2* param_3, float param_4) {
-	return 0;
+	D3DXMATRIX local_280;
+	D3DXMatrixTranslation(&local_280, -param_2->x, -param_2->y, 0.0f);
+	D3DXMATRIX local_240;
+	D3DXMatrixScaling(&local_240, param_3->x, param_3->y, 1.0f);
+	D3DXMATRIX local_200;
+	D3DXMatrixIdentity(&local_200);
+	D3DXMATRIX local_1c0;
+	D3DXMatrixIdentity(&local_1c0);
+	D3DXMatrixRotationZ(&local_200, param_4);
+	D3DXMatrixTranslation(&local_1c0, param_2->x, param_2->y, 0.0f);
+
+	D3DXMATRIX local_80;
+	D3DXMatrixMultiply(&local_80, &local_280, &local_240);
+	D3DXMATRIX DStack_40 = local_80;
+
+	D3DXMATRIX DStack_140;
+	D3DXMatrixMultiply(&DStack_140, &DStack_40, &local_200);
+	D3DXMATRIX DStack_100 = DStack_140;
+
+	D3DXMATRIX DStack_c0;
+	D3DXMatrixMultiply(&DStack_c0, &DStack_100, &local_1c0);
+	memcpy(param_1, &DStack_c0, sizeof(D3DMATRIX));
+	return param_1;
 }
 
 /* 10065710-100657C4 000B4	*/
@@ -571,6 +714,30 @@ void cMagSprite::TransformVertices(D3DTLVERTEXS* const param_1, D3DXVECTOR2* par
 
 /* 100657D0-10065922 00152	*/
 void cMagSprite::Blit(IDirect3DDevice8* param_1, IDirect3DTexture8* param_2, tagPOINT* param_3, D3DXVECTOR2* param_4, D3DXVECTOR2* param_5, float param_6, ulong param_7) {
+	D3DTLVERTEXS auStack_90;
+	auStack_90.unk_00.x = param_3->x;
+	auStack_90.unk_00.y = param_3->y;
+	auStack_90.unk_10 = param_7;
+	auStack_90.unk_2c = param_7;
+	uint local_8;
+	uint local_4;
+	auStack_90.unk_1c = local_8 + auStack_90.unk_00.x;
+	auStack_90.unk_08 = 0.0f;
+	auStack_90.unk_0c = 1.0f;
+	auStack_90.unk_3c = local_4 + auStack_90.unk_00.y;
+	auStack_90.unk_14 = 0.0f;
+	auStack_90.unk_18 = 0.0f;
+	auStack_90.unk_24 = 0.0f;
+	auStack_90.unk_28 = 1.0f;
+	auStack_90.unk_30 = 1.0f;
+	auStack_90.unk_34 = 0.0f;
+	D3DXVECTOR2 local_a8 = auStack_90.unk_00 + *param_4;
+	if (param_5 == NULL) {
+		param_5 = &D3DXVECTOR2(1.0f, 1.0f);
+	}
+	auStack_90.unk_20 = auStack_90.unk_00.y;
+	auStack_90.unk_38 = auStack_90.unk_1c;
+	TransformVertices(&auStack_90, &local_a8, param_5, param_6);
 }
 
 /* 10065930-10065933 00003	*/
@@ -583,11 +750,16 @@ void cMagSprite::InitSpriteAnim(int param_1, int param_2, int param_3, int param
 
 /* 10065940-1006594F 0000F	*/
 void cMagSprite::CreateSurfaceFromFile(IDirect3DDevice8* param_1, IDirect3DSurface8** param_2, char* const param_3, ulong param_4) {
-	GetObjectParam();
+	IDirect3DSurface8* local_4; // unknown type, probably just IDirect3DSurface8*
+	local_4->Release();
 }
 
 /* 10065950-1006598C 0003C	*/
 void cMagSprite::CreateTextureFromSurface(IDirect3DDevice8* param_1, IDirect3DSurface8* param_2, tagRECT* param_3, IDirect3DTexture8** param_4) {
+	IDirect3DTexture8* local_28;
+	IDirect3DSurface8* temp;
+	local_28->Release();
+	temp->Release();
 }
 
 /* 10065990-10065A00 00070	*/

@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 25.105507,
+    "fuzzy_match_percent": 25.623175,
     "total_code": "687655",
-    "matched_code": "102022",
-    "matched_code_percent": 14.836219,
+    "matched_code": "103317",
+    "matched_code_percent": 15.02454,
     "matched_data_percent": 100.0,
     "total_functions": 3266,
-    "matched_functions": 1039,
-    "matched_functions_percent": 31.812614,
+    "matched_functions": 1042,
+    "matched_functions_percent": 31.90447,
     "complete_code": "31460",
     "complete_code_percent": 4.574969,
     "complete_data_percent": 100.0,
@@ -18391,14 +18391,14 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 63.91629,
+        "fuzzy_match_percent": 88.84468,
         "total_code": "14280",
-        "matched_code": "5121",
-        "matched_code_percent": 35.861343,
+        "matched_code": "6416",
+        "matched_code_percent": 44.929974,
         "matched_data_percent": 100.0,
         "total_functions": 63,
-        "matched_functions": 42,
-        "matched_functions_percent": 66.66667,
+        "matched_functions": 45,
+        "matched_functions_percent": 71.42857,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18406,7 +18406,7 @@
         {
           "name": ".text",
           "size": "14102",
-          "fuzzy_match_percent": 63.91629,
+          "fuzzy_match_percent": 88.84468,
           "metadata": {}
         }
       ],
@@ -18567,7 +18567,7 @@
         {
           "name": "?SetText@cMagSprite@@QAEHPADMMMMMM@Z",
           "size": "892",
-          "fuzzy_match_percent": 94.49315,
+          "fuzzy_match_percent": 89.55822,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::SetText(char *, float, float, float, float, float, float)"
           },
@@ -18657,7 +18657,7 @@
         {
           "name": "?Top@cMagSprite@@QAEXH@Z",
           "size": "631",
-          "fuzzy_match_percent": 0.44444445,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Top(int)"
           },
@@ -18666,7 +18666,7 @@
         {
           "name": "?Bottom@cMagSprite@@QAEXH@Z",
           "size": "649",
-          "fuzzy_match_percent": 0.4385965,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Bottom(int)"
           },
@@ -18675,7 +18675,7 @@
         {
           "name": "?SetRotate@cMagSprite@@QAEXHMUD3DXVECTOR2@@@Z",
           "size": "367",
-          "fuzzy_match_percent": 0.93457943,
+          "fuzzy_match_percent": 94.01869,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetRotate(int, float, struct D3DXVECTOR2)"
           },
@@ -18684,7 +18684,7 @@
         {
           "name": "?SetPos@cMagSprite@@QAEXHMMH@Z",
           "size": "350",
-          "fuzzy_match_percent": 0.98039216,
+          "fuzzy_match_percent": 98.039215,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetPos(int, float, float, int)"
           },
@@ -18711,7 +18711,7 @@
         {
           "name": "?SetScale@cMagSprite@@QAEXHMM@Z",
           "size": "387",
-          "fuzzy_match_percent": 0.9009009,
+          "fuzzy_match_percent": 97.11712,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScale(int, float, float)"
           },
@@ -18783,7 +18783,7 @@
         {
           "name": "?CheckMouseRegion@cMagSprite@@QAEXXZ",
           "size": "391",
-          "fuzzy_match_percent": 0.8264463,
+          "fuzzy_match_percent": 65.181816,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CheckMouseRegion(void)"
           },
@@ -18819,7 +18819,7 @@
         {
           "name": "?CutFrame@cMagSprite@@QAEXHHHHAAURect@@@Z",
           "size": "263",
-          "fuzzy_match_percent": 1.1494253,
+          "fuzzy_match_percent": 81.333336,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CutFrame(int, int, int, int, struct Rect &)"
           },
@@ -18837,7 +18837,7 @@
         {
           "name": "?BuildMatrix@cMagSprite@@QAEPAU_D3DMATRIX@@PAU2@PAUD3DXVECTOR2@@1M@Z",
           "size": "625",
-          "fuzzy_match_percent": 1.2962962,
+          "fuzzy_match_percent": 99.5,
           "metadata": {
             "demangled_name": "public: struct _D3DMATRIX * __thiscall cMagSprite::BuildMatrix(struct _D3DMATRIX *, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float)"
           },
@@ -18855,7 +18855,7 @@
         {
           "name": "?Blit@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DTexture8@@PAUtagPOINT@@PAUD3DXVECTOR2@@3MK@Z",
           "size": "338",
-          "fuzzy_match_percent": 1.3157895,
+          "fuzzy_match_percent": 50.986843,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Blit(struct IDirect3DDevice8*, struct IDirect3DTexture8*, struct tagPOINT *, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float, unsigned long)"
           },
@@ -18882,7 +18882,7 @@
         {
           "name": "?CreateSurfaceFromFile@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAPAUIDirect3DSurface8@@QADK@Z",
           "size": "15",
-          "fuzzy_match_percent": 40.714287,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CreateSurfaceFromFile(struct IDirect3DDevice8*, struct IDirect3DSurface8**, char *const, unsigned long)"
           },
@@ -18891,7 +18891,7 @@
         {
           "name": "?CreateTextureFromSurface@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DSurface8@@PAUtagRECT@@PAPAUIDirect3DTexture8@@@Z",
           "size": "60",
-          "fuzzy_match_percent": 4.347826,
+          "fuzzy_match_percent": 42.173912,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CreateTextureFromSurface(struct IDirect3DDevice8*, struct IDirect3DSurface8*, struct tagRECT *, struct IDirect3DTexture8**)"
           },
@@ -32038,14 +32038,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 28.739399,
+        "fuzzy_match_percent": 29.434118,
         "total_code": "512405",
-        "matched_code": "79069",
-        "matched_code_percent": 15.430959,
+        "matched_code": "80364",
+        "matched_code_percent": 15.683688,
         "matched_data_percent": 100.0,
         "total_functions": 2285,
-        "matched_functions": 809,
-        "matched_functions_percent": 35.40481,
+        "matched_functions": 812,
+        "matched_functions_percent": 35.536106,
         "complete_code": "11510",
         "complete_code_percent": 2.24627,
         "complete_data_percent": 100.0,
