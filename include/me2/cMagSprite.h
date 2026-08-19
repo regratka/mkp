@@ -3,7 +3,6 @@
 
 #include <globals.h>
 #include <d3dx8math.h>
-// #include <vector>
 
 #include "cMagUtility.h"
 #include "CDirectXFont.h"
@@ -24,23 +23,23 @@ struct Rect {
 	/* 0x08  */ float unk_08;
 	/* 0x0c  */ float unk_0c;
 };
-struct D3DTLVERTEXS {
-	/* 0x00  */ D3DXVECTOR2 unk_00;
-	/* 0x08  */ float unk_08;
-	/* 0x0c  */ float unk_0c;
-	/* 0x10  */ ulong unk_10;
-	/* 0x14  */ float unk_14;
-	/* 0x18  */ float unk_18;
-	/* 0x1c  */ float unk_1c;
-	/* 0x20  */ float unk_20;
-	/* 0x24  */ float unk_24;
-	/* 0x28  */ float unk_28;
-	/* 0x2c  */ ulong unk_2c;
-	/* 0x30  */ float unk_30;
-	/* 0x34  */ float unk_34;
-	/* 0x38  */ float unk_38;
-	/* 0x3c  */ float unk_3c;
+
+struct D3DTLVERTEX {
+	/* 0x00 */ float sx;
+	/* 0x04 */ float sy;
+	/* 0x08 */ float sz;
+	/* 0x0c */ float rhw;
+	/* 0x10 */ D3DCOLOR color;
+	// /* 0x10 */ D3DCOLOR color2;
+	/* 0x14 */ float tu;
+	/* 0x18 */ float tv;
 };
+
+
+struct D3DTLVERTEXS {
+	/* 0x00 */ D3DTLVERTEX ver[5];
+};
+
 
 
 class DLLEXPORT cMagSprite : public cMagUtility {

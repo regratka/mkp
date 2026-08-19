@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 25.709051,
+    "fuzzy_match_percent": 25.732225,
     "total_code": "687655",
-    "matched_code": "104530",
-    "matched_code_percent": 15.200937,
+    "matched_code": "105143",
+    "matched_code_percent": 15.29008,
     "matched_data_percent": 100.0,
     "total_functions": 3266,
-    "matched_functions": 1044,
-    "matched_functions_percent": 31.96571,
+    "matched_functions": 1046,
+    "matched_functions_percent": 32.026943,
     "complete_code": "31460",
     "complete_code_percent": 4.574969,
     "complete_data_percent": 100.0,
@@ -18391,14 +18391,14 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 92.980095,
+        "fuzzy_match_percent": 94.0959,
         "total_code": "14280",
-        "matched_code": "7629",
-        "matched_code_percent": 53.42437,
+        "matched_code": "8242",
+        "matched_code_percent": 57.717087,
         "matched_data_percent": 100.0,
         "total_functions": 63,
-        "matched_functions": 47,
-        "matched_functions_percent": 74.60318,
+        "matched_functions": 49,
+        "matched_functions_percent": 77.77778,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18406,7 +18406,7 @@
         {
           "name": ".text",
           "size": "14102",
-          "fuzzy_match_percent": 92.980095,
+          "fuzzy_match_percent": 94.0959,
           "metadata": {}
         }
       ],
@@ -18531,7 +18531,7 @@
         {
           "name": "?SetText@cMagSprite@@QAEXHPADMMMMMM@Z",
           "size": "378",
-          "fuzzy_match_percent": 99.88074,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetText(int, char *, float, float, float, float, float, float)"
           },
@@ -18540,7 +18540,7 @@
         {
           "name": "?SetTextPosition@cMagSprite@@QAEXHMM@Z",
           "size": "235",
-          "fuzzy_match_percent": 99.89189,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetTextPosition(int, float, float)"
           },
@@ -18567,7 +18567,7 @@
         {
           "name": "?SetText@cMagSprite@@QAEHPADMMMMMM@Z",
           "size": "892",
-          "fuzzy_match_percent": 89.55822,
+          "fuzzy_match_percent": 91.630135,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::SetText(char *, float, float, float, float, float, float)"
           },
@@ -18846,7 +18846,7 @@
         {
           "name": "?TransformVertices@cMagSprite@@QAEXQAUD3DTLVERTEXS@@PAUD3DXVECTOR2@@1M@Z",
           "size": "180",
-          "fuzzy_match_percent": 20.186441,
+          "fuzzy_match_percent": 98.81356,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::TransformVertices(struct D3DTLVERTEXS *const, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float)"
           },
@@ -18855,7 +18855,7 @@
         {
           "name": "?Blit@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DTexture8@@PAUtagPOINT@@PAUD3DXVECTOR2@@3MK@Z",
           "size": "338",
-          "fuzzy_match_percent": 50.986843,
+          "fuzzy_match_percent": 50.57895,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Blit(struct IDirect3DDevice8*, struct IDirect3DTexture8*, struct tagPOINT *, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float, unsigned long)"
           },
@@ -32038,14 +32038,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 29.549366,
+        "fuzzy_match_percent": 29.580463,
         "total_code": "512405",
-        "matched_code": "81577",
-        "matched_code_percent": 15.920414,
+        "matched_code": "82190",
+        "matched_code_percent": 16.040047,
         "matched_data_percent": 100.0,
         "total_functions": 2285,
-        "matched_functions": 814,
-        "matched_functions_percent": 35.623634,
+        "matched_functions": 816,
+        "matched_functions_percent": 35.71116,
         "complete_code": "11510",
         "complete_code_percent": 2.24627,
         "complete_data_percent": 100.0,

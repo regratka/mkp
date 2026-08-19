@@ -133,16 +133,17 @@ void cMagSprite::SetText(int param_1, char* param_2) {
 
 /* 10062F90-1006310A 0017A	*/
 void cMagSprite::SetText(int param_1, char* param_2, float param_3, float param_4, float param_5, float param_6, float param_7, float param_8) {
-	float posX = GetWindowWidth() * param_3;
-	float posY = GetWindowHeight() * param_4;
+	D3DXVECTOR2 local_4;
+	local_4.x = GetWindowWidth() * param_3;
+	local_4.y = GetWindowHeight() * param_4;
 	
 	for (int index = 0; index < subSprites.size(); index++) {
 		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
 			ZeroMemory(subSprites[index].text, sizeof(subSprites[index].text));
 			strcpy(subSprites[index].text, param_2);
 			subSprites[index].unk_14 = D3DXVECTOR2(param_3,param_4);
-			subSprites[index].textPosition.x = posX;
-			subSprites[index].textPosition.y = posY;
+			subSprites[index].textPosition.x = local_4.x;
+			subSprites[index].textPosition.y = local_4.y;
 			subSprites[index].textColor.r = param_5;
 			subSprites[index].textColor.g = param_6;
 			subSprites[index].textColor.b = param_7;
@@ -154,16 +155,16 @@ void cMagSprite::SetText(int param_1, char* param_2, float param_3, float param_
 
 /* 10063110-100631FB 000EB	*/
 void cMagSprite::SetTextPosition(int param_1, float param_2, float param_3) {
-	int windowWidth = GetWindowWidth();
-	float posX = windowWidth * param_2;
-	int windowHeight = GetWindowHeight();
-	float posY = windowHeight * param_3;
+	D3DXVECTOR2 local_4;
+	local_4.x = GetWindowWidth() * param_2;
+	local_4.y = GetWindowHeight() * param_3;
+
 
 	for (int index = 0; index < subSprites.size(); index++) {
 		if (subSprites[index].texID == param_1 && subSprites[index].unk_17c) {
 			subSprites[index].unk_14 = D3DXVECTOR2(param_2,param_3);
-			subSprites[index].textPosition.x = posX;
-			subSprites[index].textPosition.y = posY;
+			subSprites[index].textPosition.x = local_4.x;
+			subSprites[index].textPosition.y = local_4.y;
 			return;
 		}
 	} 
@@ -193,8 +194,9 @@ int cMagSprite::SetText(char* param_1, float param_2, float param_3, float param
 	if (d3dxSprite == NULL) {
 		D3DXCreateSprite(cMagEngineMgr::getInstance()->engine, &d3dxSprite);
 	}
-	float fVar3 =  GetWindowWidth() * param_2;
-	float fVar4 =  GetWindowHeight() * param_3;
+	D3DXVECTOR2 local_4;
+	local_4.x = GetWindowWidth() * param_2;
+	local_4.y = GetWindowHeight() * param_3;
 	int iVar4 = -1;
 	if (subSprites.size() > 0) {
 		iVar4 = subSprites[subSprites.size()-1].texID;
@@ -206,6 +208,8 @@ int cMagSprite::SetText(char* param_1, float param_2, float param_3, float param
 	SubSpriteData local_294;
 	ZeroMemory(&local_294, sizeof(SubSpriteData));
 	strcpy(local_294.text, param_1);
+	local_294.textPosition.x = local_4.x;
+	local_294.textPosition.y = local_4.y;
 	local_294.unk_17c = true;
 	local_294.unk_14.x = param_2;
 	local_294.unk_14.y = param_3;
@@ -649,10 +653,15 @@ int cMagSprite::GetMouseActivateSprite() {
 /* 10065250-100652CF 0007F	*/
 
 void cMagSprite::TexFromDigit(int param_1, int param_2, int param_3, int param_4, Rect& param_5) {
-	param_5.unk_04 = (param_1 / param_2) * param_4;
-	param_5.unk_00 = param_1 * param_3;
-	param_5.unk_08 = (param_1 + 1) * param_3;
-	param_5.unk_0c = (param_1 / param_2 + 1) * param_4;
+	int local_1 = param_1 / param_2;
+	int local_2 = param_1 * param_3;
+	int local_3 = local_1 * param_4;
+	int local_4 = ++param_1 * param_3;
+	int local_5 = ++local_1 * param_4;
+	param_5.unk_04 = local_3;
+	param_5.unk_00 = local_2;
+	param_5.unk_08 = local_4;
+	param_5.unk_0c = local_5;
 }
 
 /* 100652D0-100653D7 00107	*/
@@ -718,33 +727,67 @@ _D3DMATRIX* cMagSprite::BuildMatrix(_D3DMATRIX* param_1, D3DXVECTOR2* param_2, D
 void cMagSprite::TransformVertices(D3DTLVERTEXS* const param_1, D3DXVECTOR2* param_2, D3DXVECTOR2* param_3, float param_4) {
 	D3DXMATRIX local_40;
 	BuildMatrix(&local_40, param_2, param_3, param_4);
+	D3DXMATRIX local_80;
+	for (int i = 0; i < 4; i++) {
+		local_80(i, 0) = param_1->ver[i].sx;
+		local_80(i, 1) = param_1->ver[i].sy;
+		local_80(i, 2) = param_1->ver[i].sz;
+		local_80(i, 3) = 1.0f;
+	} 
+	D3DXMATRIX local_c0;
+	local_c0 = *D3DXMatrixMultiply(&local_c0, &local_80, &local_40);
+	
+	for (int j = 0; j < 4; j++) {
+		param_1->ver[j].sx = local_c0(j, 0);
+		param_1->ver[j].sy = local_c0(j, 1);
+		param_1->ver[j].sz = local_c0(j, 2);
+	} 
 }
+
 
 /* 100657D0-10065922 00152	*/
 void cMagSprite::Blit(IDirect3DDevice8* param_1, IDirect3DTexture8* param_2, tagPOINT* param_3, D3DXVECTOR2* param_4, D3DXVECTOR2* param_5, float param_6, ulong param_7) {
 	D3DTLVERTEXS auStack_90;
-	auStack_90.unk_00.x = param_3->x;
-	auStack_90.unk_00.y = param_3->y;
-	auStack_90.unk_10 = param_7;
-	auStack_90.unk_2c = param_7;
-	uint local_8;
-	uint local_4;
-	auStack_90.unk_1c = local_8 + auStack_90.unk_00.x;
-	auStack_90.unk_08 = 0.0f;
-	auStack_90.unk_0c = 1.0f;
-	auStack_90.unk_3c = local_4 + auStack_90.unk_00.y;
-	auStack_90.unk_14 = 0.0f;
-	auStack_90.unk_18 = 0.0f;
-	auStack_90.unk_24 = 0.0f;
-	auStack_90.unk_28 = 1.0f;
-	auStack_90.unk_30 = 1.0f;
-	auStack_90.unk_34 = 0.0f;
-	D3DXVECTOR2 local_a8 = auStack_90.unk_00 + *param_4;
+	auStack_90.ver[0].sx = param_3->x;
+	auStack_90.ver[0].sy = param_3->y;
+	auStack_90.ver[0].sz = 0.0f;
+	auStack_90.ver[0].rhw = 1.0f;
+	auStack_90.ver[0].color = param_7;
+	auStack_90.ver[0].tu = 0.0f;
+	auStack_90.ver[0].tv = 0.0f;
+
+	auStack_90.ver[1].sx = param_3->x;
+	auStack_90.ver[1].sy = auStack_90.ver[0].sy;
+	auStack_90.ver[1].sz = 0.0f;
+	auStack_90.ver[1].rhw = 1.0f;
+	auStack_90.ver[1].color = param_7;
+	auStack_90.ver[1].tu = 1.0f;
+	auStack_90.ver[1].tv = 0.0f;
+
+	auStack_90.ver[2].sx = auStack_90.ver[1].sx;
+	auStack_90.ver[2].sy = auStack_90.ver[0].sy;
+	auStack_90.ver[2].sz = 0.0f;
+	auStack_90.ver[2].rhw = 1.0f;
+	auStack_90.ver[2].color = param_7;
+	auStack_90.ver[2].tu = 1.0f;
+	auStack_90.ver[2].tv = 1.0f;
+
+	auStack_90.ver[3].sx = auStack_90.ver[0].sx;
+	auStack_90.ver[3].sy = auStack_90.ver[2].sy;
+	auStack_90.ver[3].sz = 0.0f;
+	auStack_90.ver[3].rhw = 1.0f;
+	auStack_90.ver[3].color = param_7;
+	auStack_90.ver[3].tu = 0.0f;
+	auStack_90.ver[3].tv = 1.0f;
+
+	D3DXVECTOR2 local_a8;
+	local_a8.x = auStack_90.ver[0].sx + param_4->x;
+	local_a8.y = auStack_90.ver[0].sy + param_4->y;
 	if (param_5 == NULL) {
 		param_5 = &D3DXVECTOR2(1.0f, 1.0f);
 	}
-	auStack_90.unk_20 = auStack_90.unk_00.y;
-	auStack_90.unk_38 = auStack_90.unk_1c;
+	auStack_90.ver[1].sy = auStack_90.ver[0].sy;
+	auStack_90.ver[2].sx = auStack_90.ver[1].sx;
 	TransformVertices(&auStack_90, &local_a8, param_5, param_6);
 }
 
