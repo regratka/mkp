@@ -19,9 +19,11 @@ public:
 	/* 10030660 */ void DummyLog(char const * p_format, ...);
 	/* 100306E0 */ void DebugLog(char const * format, ...);
 	/* 10030730 */ void DebugLog(D3DXMATRIX matrix);
+	/* 10030740 */ void DebugLog(D3DXVECTOR3 param_1);
 	/* 10030750 */ void ClientServerLog(char const * format, ...);
 	/* 100307D0 */ void ReadSettings(char* param_1);
 	/* 1005A5E0 */ void DebugLog(D3DXVECTOR3* param_1);
+	/* 1005A5F0 */ void DebugLog(char* param_1, D3DXVECTOR3* param_2);
 
 protected:
 	/* 0x00 */ bool logEnabled;

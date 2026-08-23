@@ -7,6 +7,7 @@
 
 class DLLEXPORT CCollisionCamera : public CCamera {
 public:
+	/* 10012910 */ void OnFrame();
 	/* 10060BF0 */ CCollisionCamera();
 	/* 10060C10 */ CCollisionCamera(cMagMeshObject* param_1, bool param_2);
 	/* 10060C70 */ virtual ~CCollisionCamera();
