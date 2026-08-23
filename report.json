@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 25.723871,
+    "fuzzy_match_percent": 26.100256,
     "total_code": "689909",
-    "matched_code": "105434",
-    "matched_code_percent": 15.282306,
+    "matched_code": "108193",
+    "matched_code_percent": 15.682213,
     "matched_data_percent": 100.0,
     "total_functions": 3284,
-    "matched_functions": 1050,
-    "matched_functions_percent": 31.973204,
-    "complete_code": "31547",
-    "complete_code_percent": 4.5726323,
+    "matched_functions": 1066,
+    "matched_functions_percent": 32.460415,
+    "complete_code": "34336",
+    "complete_code_percent": 4.976888,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 31
+    "complete_units": 32
   },
   "units": [
     {
@@ -26073,22 +26073,25 @@
     {
       "name": "mkp/CElevator",
       "measures": {
-        "fuzzy_match_percent": 6.894686,
+        "fuzzy_match_percent": 100.0,
         "total_code": "2789",
-        "matched_code": "30",
-        "matched_code_percent": 1.0756544,
+        "matched_code": "2789",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 17,
-        "matched_functions": 1,
-        "matched_functions_percent": 5.882353,
+        "matched_functions": 17,
+        "matched_functions_percent": 100.0,
+        "complete_code": "2789",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "2789",
-          "fuzzy_match_percent": 6.894686,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -26096,7 +26099,7 @@
         {
           "name": "??0CElevator@@QAE@XZ",
           "size": "125",
-          "fuzzy_match_percent": 46.8,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CElevator::CElevator(void)"
           },
@@ -26114,7 +26117,7 @@
         {
           "name": "??1CElevator@@UAE@XZ",
           "size": "129",
-          "fuzzy_match_percent": 40.772728,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CElevator::~CElevator(void)"
           },
@@ -26123,7 +26126,7 @@
         {
           "name": "?EXP@CElevator@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CElevator::EXP(void)"
           },
@@ -26132,7 +26135,7 @@
         {
           "name": "?OnFrame@CElevator@@UAEXXZ",
           "size": "436",
-          "fuzzy_match_percent": 0.8196721,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnFrame(void)"
           },
@@ -26141,7 +26144,7 @@
         {
           "name": "?OnUpdateMenuSettings@CElevator@@UAEXXZ",
           "size": "44",
-          "fuzzy_match_percent": 6.25,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnUpdateMenuSettings(void)"
           },
@@ -26150,7 +26153,7 @@
         {
           "name": "?OnActivate@CElevator@@UAEXXZ",
           "size": "9",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnActivate(void)"
           },
@@ -26159,7 +26162,7 @@
         {
           "name": "?OnDestinationPos@CElevator@@UAEXUD3DXVECTOR3@@@Z",
           "size": "69",
-          "fuzzy_match_percent": 5.263158,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnDestinationPos(struct D3DXVECTOR3)"
           },
@@ -26168,7 +26171,7 @@
         {
           "name": "?OnAction@CElevator@@UAEXXZ",
           "size": "302",
-          "fuzzy_match_percent": 1.0638298,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnAction(void)"
           },
@@ -26177,7 +26180,7 @@
         {
           "name": "?OnCollisionObject@CElevator@@UAEXPAVcMagMeshObject@@@Z",
           "size": "29",
-          "fuzzy_match_percent": 12.5,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnCollisionObject(class cMagMeshObject *)"
           },
@@ -26186,7 +26189,7 @@
         {
           "name": "?OnAttachChild@CElevator@@UAEXPAVcMagMeshObject@@@Z",
           "size": "44",
-          "fuzzy_match_percent": 7.142857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnAttachChild(class cMagMeshObject *)"
           },
@@ -26195,7 +26198,7 @@
         {
           "name": "?OnDetachChild@CElevator@@UAEXPAVcMagMeshObject@@@Z",
           "size": "43",
-          "fuzzy_match_percent": 7.142857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnDetachChild(class cMagMeshObject *)"
           },
@@ -26204,7 +26207,7 @@
         {
           "name": "?OnActivateLevel@CElevator@@UAEXXZ",
           "size": "160",
-          "fuzzy_match_percent": 2.2222223,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnActivateLevel(void)"
           },
@@ -26213,7 +26216,7 @@
         {
           "name": "?OnCrash@CElevator@@UAEXXZ",
           "size": "34",
-          "fuzzy_match_percent": 12.5,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnCrash(void)"
           },
@@ -26222,7 +26225,7 @@
         {
           "name": "?OnLoadChunk@CElevator@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "777",
-          "fuzzy_match_percent": 0.37313432,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
           },
@@ -26231,7 +26234,7 @@
         {
           "name": "?Save@CElevator@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "282",
-          "fuzzy_match_percent": 1.2987013,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
           },
@@ -26240,7 +26243,7 @@
         {
           "name": "?Load@CElevator@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "186",
-          "fuzzy_match_percent": 1.7857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CElevator::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
           },
@@ -26248,6 +26251,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -32231,19 +32235,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 14.585992,
+        "fuzzy_match_percent": 16.067707,
         "total_code": "175250",
-        "matched_code": "22983",
-        "matched_code_percent": 13.114408,
+        "matched_code": "25742",
+        "matched_code_percent": 14.68873,
         "matched_data_percent": 100.0,
         "total_functions": 981,
-        "matched_functions": 231,
-        "matched_functions_percent": 23.547401,
-        "complete_code": "19950",
-        "complete_code_percent": 11.383738,
+        "matched_functions": 247,
+        "matched_functions_percent": 25.17839,
+        "complete_code": "22739",
+        "complete_code_percent": 12.975179,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 25
+        "complete_units": 26
       }
     }
   ]

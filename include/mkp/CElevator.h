@@ -5,8 +5,23 @@
 #include "_Platform.h"
 
 struct CElevatorChunkData {
-	/* 0x00 */ uchar field_0x00[0xe0-0x00];
+	/* 0x00 */ float unk_00;
+	/* 0x04 */ float unk_04;
+	/* 0x08 */ uchar field_0x08[0x0c-0x08];
+	/* 0x0c */ int unk_0c;
+	/* 0x10 */ int unk_10;
+	/* 0x14 */ int unk_14;
+	/* 0x18 */ char unk_18[200];
 };
+
+struct CElevatorSaveData {
+	/* 0x00 */ D3DXMATRIX unk_00;
+	/* 0x40 */ D3DXVECTOR3 unk_40;
+	/* 0x4c */ bool unk_4c;
+	/* 0x4d */ bool unk_4d;
+	/* 0x50 */ int unk_50;
+};
+
 
 
 class CElevator : public _Platform {
@@ -31,8 +46,8 @@ public:
 private:
 
 	/* 0x2658 */ CElevatorChunkData chunkData;
-	/* 0x2738 */ D3DXVECTOR3* unk_2738;
-	/* 0x273c */ std::vector<void*> unk_273c;
+	/* 0x2738 */ float* unk_2738;
+	/* 0x273c */ std::vector<D3DXVECTOR3> unk_273c;
 	/* 0x274c */ bool unk_274c;
 	/* 0x2750 */ int unk_2750;
 	/* 0x2754 */ int unk_2754;
