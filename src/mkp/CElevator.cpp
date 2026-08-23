@@ -4,11 +4,6 @@
 CElevator::CElevator() {
 }
 
-/* 41B050-41B06E 0001E	*/
-CElevator* CElevator::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 41B070-41B0F1 00081	*/
 CElevator::~CElevator() {
 }
@@ -31,7 +26,7 @@ void CElevator::OnActivate() {
 }
 
 /* 41B360-41B3A5 00045	*/
-void CElevator::OnDestinationPos() {
+void CElevator::OnDestinationPos(D3DXVECTOR3 param_1) {
 }
 
 /* 41B3B0-41B4DE 0012E	*/
@@ -39,18 +34,15 @@ void CElevator::OnAction() {
 }
 
 /* 41B4E0-41B4FD 0001D	*/
-uchar CElevator::OnCollisionObject(int* param_1) {
-	return 0;
+void CElevator::OnCollisionObject(cMagMeshObject* param_1) {
 }
 
 /* 41B500-41B52C 0002C	*/
-uchar CElevator::OnAttachChild(int* param_1) {
-	return 0;
+void CElevator::OnAttachChild(cMagMeshObject* param_1) {
 }
 
 /* 41B530-41B55B 0002B	*/
-uchar CElevator::OnDetachChild(int* param_1) {
-	return 0;
+void CElevator::OnDetachChild(cMagMeshObject* param_1) {
 }
 
 /* 41B560-41B600 000A0	*/
@@ -62,17 +54,14 @@ void CElevator::OnCrash() {
 }
 
 /* 41B630-41B939 00309	*/
-uchar CElevator::OnLoadChunk(int param_1, int param_2, uint param_3, void* param_4) {
-	return 0;
+void CElevator::OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2) {
 }
 
 /* 41B940-41BA5A 0011A	*/
-uchar CElevator::Save(int* param_1) {
-	return 0;
+void CElevator::Save(std::ostream& param_1) {
 }
 
 /* 41BA60-41BB1A 000BA	*/
-uchar CElevator::Load(void* param_1, uint param_2, int param_3) {
-	return 0;
+void CElevator::Load(std::ifstream& param_1, _ED_CHUNK param_2) {
 }
 

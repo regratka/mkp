@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 25.739859,
-    "total_code": "687655",
-    "matched_code": "105143",
-    "matched_code_percent": 15.29008,
+    "fuzzy_match_percent": 25.723871,
+    "total_code": "689909",
+    "matched_code": "105434",
+    "matched_code_percent": 15.282306,
     "matched_data_percent": 100.0,
-    "total_functions": 3266,
-    "matched_functions": 1046,
-    "matched_functions_percent": 32.026943,
-    "complete_code": "31460",
-    "complete_code_percent": 4.574969,
+    "total_functions": 3284,
+    "matched_functions": 1050,
+    "matched_functions_percent": 31.973204,
+    "complete_code": "31547",
+    "complete_code_percent": 4.5726323,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 31
@@ -120,22 +120,22 @@
     {
       "name": "me2/CCPUTicker",
       "measures": {
-        "fuzzy_match_percent": 53.921288,
-        "total_code": "1897",
+        "fuzzy_match_percent": 52.772087,
+        "total_code": "1984",
         "matched_code": "698",
-        "matched_code_percent": 36.79494,
+        "matched_code_percent": 35.18145,
         "matched_data_percent": 100.0,
-        "total_functions": 17,
+        "total_functions": 18,
         "matched_functions": 14,
-        "matched_functions_percent": 82.35294,
+        "matched_functions_percent": 77.77778,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1897",
-          "fuzzy_match_percent": 53.921288,
+          "size": "1984",
+          "fuzzy_match_percent": 52.772087,
           "metadata": {}
         }
       ],
@@ -176,13 +176,22 @@
           "address": "77"
         },
         {
+          "name": "??_GCCPUTicker@@UAEPAXI@Z",
+          "size": "87",
+          "fuzzy_match_percent": 27.714285,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CCPUTicker::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "156"
+        },
+        {
           "name": "??0CCPUTicker@@QAE@ABV0@@Z",
           "size": "27",
           "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CCPUTicker::CCPUTicker(class CCPUTicker const &)"
           },
-          "address": "156"
+          "address": "243"
         },
         {
           "name": "??4CCPUTicker@@QAEAAV0@ABV0@@Z",
@@ -191,7 +200,7 @@
           "metadata": {
             "demangled_name": "public: class CCPUTicker & __thiscall CCPUTicker::operator=(class CCPUTicker const &)"
           },
-          "address": "183"
+          "address": "270"
         },
         {
           "name": "?RunningOnNT@CCPUTicker@@KAHXZ",
@@ -200,7 +209,7 @@
           "metadata": {
             "demangled_name": "protected: static int __cdecl CCPUTicker::RunningOnNT(void)"
           },
-          "address": "204"
+          "address": "291"
         },
         {
           "name": "?Measure@CCPUTicker@@QAEXXZ",
@@ -209,7 +218,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CCPUTicker::Measure(void)"
           },
-          "address": "322"
+          "address": "409"
         },
         {
           "name": "?GetCPUFrequency@CCPUTicker@@SAHAAN0KI@Z",
@@ -218,7 +227,7 @@
           "metadata": {
             "demangled_name": "public: static int __cdecl CCPUTicker::GetCPUFrequency(double &, double &, unsigned long, unsigned int)"
           },
-          "address": "507"
+          "address": "594"
         },
         {
           "name": "?GetTickCountAsSeconds@CCPUTicker@@QBENXZ",
@@ -227,7 +236,7 @@
           "metadata": {
             "demangled_name": "public: double __thiscall CCPUTicker::GetTickCountAsSeconds(void) const"
           },
-          "address": "1457"
+          "address": "1544"
         },
         {
           "name": "??1CCPUTicker@@UAE@XZ",
@@ -236,7 +245,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall CCPUTicker::~CCPUTicker(void)"
           },
-          "address": "1527"
+          "address": "1614"
         },
         {
           "name": "?WriteRegistry@CCPUTicker@@SA_NPAD0@Z",
@@ -245,7 +254,7 @@
           "metadata": {
             "demangled_name": "public: static bool __cdecl CCPUTicker::WriteRegistry(char *, char *)"
           },
-          "address": "1534"
+          "address": "1621"
         },
         {
           "name": "?Installed@CCPUTicker@@SA_NXZ",
@@ -254,7 +263,7 @@
           "metadata": {
             "demangled_name": "public: static bool __cdecl CCPUTicker::Installed(void)"
           },
-          "address": "1650"
+          "address": "1737"
         },
         {
           "name": "?GetRegistryValue@CCPUTicker@@SAPADPAD@Z",
@@ -263,7 +272,7 @@
           "metadata": {
             "demangled_name": "public: static char * __cdecl CCPUTicker::GetRegistryValue(char *)"
           },
-          "address": "1702"
+          "address": "1789"
         },
         {
           "name": "?DeleteRegistryKey@CCPUTicker@@SAXXZ",
@@ -272,7 +281,7 @@
           "metadata": {
             "demangled_name": "public: static void __cdecl CCPUTicker::DeleteRegistryKey(void)"
           },
-          "address": "1813"
+          "address": "1900"
         },
         {
           "name": "?GetAverageTime@CCPUTicker@@QBENXZ",
@@ -281,7 +290,7 @@
           "metadata": {
             "demangled_name": "public: double __thiscall CCPUTicker::GetAverageTime(void) const"
           },
-          "address": "1830"
+          "address": "1917"
         },
         {
           "name": "?Reset@CCPUTicker@@QAEXXZ",
@@ -290,7 +299,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CCPUTicker::Reset(void)"
           },
-          "address": "1882"
+          "address": "1969"
         }
       ],
       "metadata": {
@@ -710,18 +719,18 @@
     {
       "name": "me2/CClientServer",
       "measures": {
-        "fuzzy_match_percent": 2.2624772,
-        "total_code": "2423",
+        "fuzzy_match_percent": 2.18667,
+        "total_code": "2507",
         "matched_data_percent": 100.0,
-        "total_functions": 18,
+        "total_functions": 19,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "2423",
-          "fuzzy_match_percent": 2.2624772,
+          "size": "2507",
+          "fuzzy_match_percent": 2.18667,
           "metadata": {}
         }
       ],
@@ -743,13 +752,19 @@
           "address": "63"
         },
         {
+          "name": "CClientServer::scalar_destructor",
+          "size": "84",
+          "metadata": {},
+          "address": "120"
+        },
+        {
           "name": "??0CClientServer@@QAE@XZ",
           "size": "40",
           "fuzzy_match_percent": 10.0,
           "metadata": {
             "demangled_name": "public: __thiscall CClientServer::CClientServer(void)"
           },
-          "address": "120"
+          "address": "204"
         },
         {
           "name": "??0CClientServer@@QAE@PAVCGame@@@Z",
@@ -758,7 +773,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall CClientServer::CClientServer(class CGame *)"
           },
-          "address": "160"
+          "address": "244"
         },
         {
           "name": "??1CClientServer@@UAE@XZ",
@@ -766,7 +781,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall CClientServer::~CClientServer(void)"
           },
-          "address": "206"
+          "address": "290"
         },
         {
           "name": "?InitServer@CClientServer@@QAE_NXZ",
@@ -775,7 +790,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall CClientServer::InitServer(void)"
           },
-          "address": "213"
+          "address": "297"
         },
         {
           "name": "?StartServer@CClientServer@@QAEJXZ",
@@ -784,7 +799,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall CClientServer::StartServer(void)"
           },
-          "address": "308"
+          "address": "392"
         },
         {
           "name": "?StopServer@CClientServer@@QAEXXZ",
@@ -793,7 +808,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::StopServer(void)"
           },
-          "address": "841"
+          "address": "925"
         },
         {
           "name": "?StartClient@CClientServer@@QAEJXZ",
@@ -802,7 +817,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall CClientServer::StartClient(void)"
           },
-          "address": "967"
+          "address": "1051"
         },
         {
           "name": "?InitDirectPlay@CClientServer@@QAEJXZ",
@@ -811,7 +826,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall CClientServer::InitDirectPlay(void)"
           },
-          "address": "1087"
+          "address": "1171"
         },
         {
           "name": "?SessionsDlgEnumHosts@CClientServer@@QAEJXZ",
@@ -820,7 +835,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall CClientServer::SessionsDlgEnumHosts(void)"
           },
-          "address": "1282"
+          "address": "1366"
         },
         {
           "name": "?SetSessionName@CClientServer@@QAEXPAD@Z",
@@ -829,7 +844,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::SetSessionName(char *)"
           },
-          "address": "1819"
+          "address": "1903"
         },
         {
           "name": "?SetPlayerName@CClientServer@@QAEXPAD@Z",
@@ -838,7 +853,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::SetPlayerName(char *)"
           },
-          "address": "1862"
+          "address": "1946"
         },
         {
           "name": "?SetPort@CClientServer@@QAEXH@Z",
@@ -846,7 +861,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::SetPort(int)"
           },
-          "address": "1905"
+          "address": "1989"
         },
         {
           "name": "?SetIP@CClientServer@@QAEXPAD@Z",
@@ -855,7 +870,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::SetIP(char *)"
           },
-          "address": "1917"
+          "address": "2001"
         },
         {
           "name": "?SendPositionToServerPlayer@CClientServer@@QAEXUD3DXVECTOR3@@0@Z",
@@ -864,7 +879,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::SendPositionToServerPlayer(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "1960"
+          "address": "2044"
         },
         {
           "name": "?PositionToAllPlayers@CClientServer@@QAEXUD3DXVECTOR3@@0@Z",
@@ -873,7 +888,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::PositionToAllPlayers(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "2079"
+          "address": "2163"
         },
         {
           "name": "?SendStateIdle@CClientServer@@QAEXUD3DXVECTOR3@@0@Z",
@@ -881,7 +896,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CClientServer::SendStateIdle(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
-          "address": "2196"
+          "address": "2280"
         }
       ],
       "metadata": {
@@ -6100,16 +6115,16 @@
     {
       "name": "me2/CPath",
       "measures": {
-        "total_code": "30",
+        "total_code": "1211",
         "matched_data_percent": 100.0,
-        "total_functions": 1,
+        "total_functions": 10,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "30",
+          "size": "1211",
           "metadata": {}
         }
       ],
@@ -6119,6 +6134,60 @@
           "size": "30",
           "metadata": {},
           "address": "0"
+        },
+        {
+          "name": "CPath::CPath",
+          "size": "45",
+          "metadata": {},
+          "address": "30"
+        },
+        {
+          "name": "CPath::~CPath",
+          "size": "21",
+          "metadata": {},
+          "address": "75"
+        },
+        {
+          "name": "CPath::InitInner",
+          "size": "433",
+          "metadata": {},
+          "address": "96"
+        },
+        {
+          "name": "CPath::InnerOnPath2",
+          "size": "89",
+          "metadata": {},
+          "address": "529"
+        },
+        {
+          "name": "CPath::InnerOnPath",
+          "size": "51",
+          "metadata": {},
+          "address": "618"
+        },
+        {
+          "name": "CPath::Init",
+          "size": "203",
+          "metadata": {},
+          "address": "669"
+        },
+        {
+          "name": "CPath::OnPath",
+          "size": "173",
+          "metadata": {},
+          "address": "872"
+        },
+        {
+          "name": "CPath::SetBMPMinMax",
+          "size": "115",
+          "metadata": {},
+          "address": "1045"
+        },
+        {
+          "name": "CPath::GetBMPMinMax",
+          "size": "51",
+          "metadata": {},
+          "address": "1160"
         }
       ],
       "metadata": {
@@ -6849,18 +6918,18 @@
     {
       "name": "me2/CSplineCamera",
       "measures": {
-        "fuzzy_match_percent": 1.3833035,
-        "total_code": "8673",
+        "fuzzy_match_percent": 1.3695652,
+        "total_code": "8760",
         "matched_data_percent": 100.0,
-        "total_functions": 36,
+        "total_functions": 37,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "8673",
-          "fuzzy_match_percent": 1.3833035,
+          "size": "8760",
+          "fuzzy_match_percent": 1.3695652,
           "metadata": {}
         }
       ],
@@ -6882,13 +6951,19 @@
           "address": "659"
         },
         {
+          "name": "CSplineCamera::scalar_destructor",
+          "size": "87",
+          "metadata": {},
+          "address": "1389"
+        },
+        {
           "name": "??0CSplineCamera@@QAE@XZ",
           "size": "217",
           "fuzzy_match_percent": 2.8,
           "metadata": {
             "demangled_name": "public: __thiscall CSplineCamera::CSplineCamera(void)"
           },
-          "address": "1389"
+          "address": "1476"
         },
         {
           "name": "??1CSplineCamera@@UAE@XZ",
@@ -6896,7 +6971,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall CSplineCamera::~CSplineCamera(void)"
           },
-          "address": "1606"
+          "address": "1693"
         },
         {
           "name": "?AddFrameKey@CSplineCamera@@QAEXUD3DXVECTOR3@@MMM0@Z",
@@ -6905,7 +6980,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::AddFrameKey(struct D3DXVECTOR3, float, float, float, struct D3DXVECTOR3)"
           },
-          "address": "1902"
+          "address": "1989"
         },
         {
           "name": "?Play@CSplineCamera@@QAEXM@Z",
@@ -6914,7 +6989,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::Play(float)"
           },
-          "address": "2434"
+          "address": "2521"
         },
         {
           "name": "?Stop@CSplineCamera@@QAEXXZ",
@@ -6923,7 +6998,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::Stop(void)"
           },
-          "address": "2513"
+          "address": "2600"
         },
         {
           "name": "?Play@CSplineCamera@@QAEXMM@Z",
@@ -6932,7 +7007,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::Play(float, float)"
           },
-          "address": "2521"
+          "address": "2608"
         },
         {
           "name": "?SetTimeAdjust@CSplineCamera@@QAEXM@Z",
@@ -6941,7 +7016,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::SetTimeAdjust(float)"
           },
-          "address": "2750"
+          "address": "2837"
         },
         {
           "name": "?GetTimeAdjust@CSplineCamera@@QAEMXZ",
@@ -6950,7 +7025,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall CSplineCamera::GetTimeAdjust(void)"
           },
-          "address": "2763"
+          "address": "2850"
         },
         {
           "name": "?Update@CSplineCamera@@QAE?AVCSplineControlPoint@@M@Z",
@@ -6958,7 +7033,7 @@
           "metadata": {
             "demangled_name": "public: class CSplineControlPoint __thiscall CSplineCamera::Update(float)"
           },
-          "address": "2770"
+          "address": "2857"
         },
         {
           "name": "?GetTotalTime@CSplineCamera@@QAEMXZ",
@@ -6967,7 +7042,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall CSplineCamera::GetTotalTime(void)"
           },
-          "address": "4431"
+          "address": "4518"
         },
         {
           "name": "?DeleteFrame@CSplineCamera@@QAEXH@Z",
@@ -6976,7 +7051,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::DeleteFrame(int)"
           },
-          "address": "4487"
+          "address": "4574"
         },
         {
           "name": "?GetFrameKeyAt@CSplineCamera@@QAEPAVCSplineControlPoint@@H@Z",
@@ -6985,7 +7060,7 @@
           "metadata": {
             "demangled_name": "public: class CSplineControlPoint * __thiscall CSplineCamera::GetFrameKeyAt(int)"
           },
-          "address": "4617"
+          "address": "4704"
         },
         {
           "name": "?GetTotalLen@CSplineCamera@@QAEMXZ",
@@ -6994,7 +7069,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall CSplineCamera::GetTotalLen(void)"
           },
-          "address": "4665"
+          "address": "4752"
         },
         {
           "name": "?SetType@CSplineCamera@@QAEXE@Z",
@@ -7003,7 +7078,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::SetType(unsigned char)"
           },
-          "address": "4721"
+          "address": "4808"
         },
         {
           "name": "?GetType@CSplineCamera@@QAEEXZ",
@@ -7012,7 +7087,7 @@
           "metadata": {
             "demangled_name": "public: unsigned char __thiscall CSplineCamera::GetType(void)"
           },
-          "address": "4734"
+          "address": "4821"
         },
         {
           "name": "?GetFrameCount@CSplineCamera@@QAEHXZ",
@@ -7021,7 +7096,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall CSplineCamera::GetFrameCount(void)"
           },
-          "address": "4741"
+          "address": "4828"
         },
         {
           "name": "?SetFPS@CSplineCamera@@QAEXM@Z",
@@ -7030,7 +7105,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::SetFPS(float)"
           },
-          "address": "4766"
+          "address": "4853"
         },
         {
           "name": "?GetFPS@CSplineCamera@@QAEMXZ",
@@ -7039,7 +7114,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall CSplineCamera::GetFPS(void)"
           },
-          "address": "4779"
+          "address": "4866"
         },
         {
           "name": "?InsertFrameKey@CSplineCamera@@QAEXAAVCSplineControlPoint@@H@Z",
@@ -7047,7 +7122,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::InsertFrameKey(class CSplineControlPoint &, int)"
           },
-          "address": "4786"
+          "address": "4873"
         },
         {
           "name": "?LookAt@CSplineCamera@@QAEXUD3DXVECTOR3@@@Z",
@@ -7056,7 +7131,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::LookAt(struct D3DXVECTOR3)"
           },
-          "address": "5262"
+          "address": "5349"
         },
         {
           "name": "?Roll@CSplineCamera@@QAEXM@Z",
@@ -7065,7 +7140,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::Roll(float)"
           },
-          "address": "5354"
+          "address": "5441"
         },
         {
           "name": "?CopyKeyFrames@CSplineCamera@@QAEXPAV1@@Z",
@@ -7074,7 +7149,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::CopyKeyFrames(class CSplineCamera *)"
           },
-          "address": "5414"
+          "address": "5501"
         },
         {
           "name": "?CopyKeyFrames@CSplineCamera@@QAEXAAV?$vector@VCSplineControlPoint@@V?$allocator@VCSplineControlPoint@@@std@@@std@@@Z",
@@ -7082,7 +7157,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::CopyKeyFrames(class std::vector<class CSplineControlPoint, class std::allocator<class CSplineControlPoint> > &)"
           },
-          "address": "5835"
+          "address": "5922"
         },
         {
           "name": "?OnRender@CSplineCamera@@UAEXXZ",
@@ -7090,7 +7165,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CSplineCamera::OnRender(void)"
           },
-          "address": "6250"
+          "address": "6337"
         },
         {
           "name": "?PlayReverse@CSplineCamera@@QAEXM@Z",
@@ -7099,7 +7174,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::PlayReverse(float)"
           },
-          "address": "6598"
+          "address": "6685"
         },
         {
           "name": "?SetHandlerObject@CSplineCamera@@QAEXPAVcMagGameObject@@@Z",
@@ -7108,7 +7183,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::SetHandlerObject(class cMagGameObject *)"
           },
-          "address": "6741"
+          "address": "6828"
         },
         {
           "name": "?SetDestTime@CSplineCamera@@QAEXM@Z",
@@ -7117,7 +7192,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::SetDestTime(float)"
           },
-          "address": "6754"
+          "address": "6841"
         },
         {
           "name": "?ClearDestTime@CSplineCamera@@QAEXXZ",
@@ -7126,7 +7201,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::ClearDestTime(void)"
           },
-          "address": "6855"
+          "address": "6942"
         },
         {
           "name": "?CallDestTimeHandler@CSplineCamera@@QAEXM@Z",
@@ -7135,7 +7210,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::CallDestTimeHandler(float)"
           },
-          "address": "6889"
+          "address": "6976"
         },
         {
           "name": "?IsPlaying@CSplineCamera@@QAE_NXZ",
@@ -7144,7 +7219,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall CSplineCamera::IsPlaying(void)"
           },
-          "address": "7003"
+          "address": "7090"
         },
         {
           "name": "?UpdateByLen@CSplineCamera@@QAE?AVCSplineControlPoint@@M@Z",
@@ -7152,7 +7227,7 @@
           "metadata": {
             "demangled_name": "public: class CSplineControlPoint __thiscall CSplineCamera::UpdateByLen(float)"
           },
-          "address": "7010"
+          "address": "7097"
         },
         {
           "name": "?GetCurLen@CSplineCamera@@QAEMXZ",
@@ -7161,7 +7236,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall CSplineCamera::GetCurLen(void)"
           },
-          "address": "8619"
+          "address": "8706"
         },
         {
           "name": "?GetCurTime@CSplineCamera@@QAEMXZ",
@@ -7170,7 +7245,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall CSplineCamera::GetCurTime(void)"
           },
-          "address": "8626"
+          "address": "8713"
         },
         {
           "name": "?SetLerp@CSplineCamera@@QAEX_N@Z",
@@ -7179,7 +7254,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CSplineCamera::SetLerp(bool)"
           },
-          "address": "8660"
+          "address": "8747"
         }
       ],
       "metadata": {
@@ -7346,22 +7421,22 @@
     {
       "name": "me2/CTrack",
       "measures": {
-        "fuzzy_match_percent": 92.67949,
-        "total_code": "2991",
-        "matched_code": "1599",
-        "matched_code_percent": 53.460384,
+        "fuzzy_match_percent": 92.8864,
+        "total_code": "3078",
+        "matched_code": "1686",
+        "matched_code_percent": 54.77583,
         "matched_data_percent": 100.0,
-        "total_functions": 5,
-        "matched_functions": 2,
-        "matched_functions_percent": 40.0,
+        "total_functions": 6,
+        "matched_functions": 3,
+        "matched_functions_percent": 50.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "2991",
-          "fuzzy_match_percent": 92.67949,
+          "size": "3078",
+          "fuzzy_match_percent": 92.8864,
           "metadata": {}
         }
       ],
@@ -7385,13 +7460,22 @@
           "address": "762"
         },
         {
+          "name": "??_ECTrack@@UAEPAXI@Z",
+          "size": "87",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CTrack::`vector deleting destructor'(unsigned int)"
+          },
+          "address": "1599"
+        },
+        {
           "name": "??0CTrack@@QAE@XZ",
           "size": "442",
           "fuzzy_match_percent": 85.874016,
           "metadata": {
             "demangled_name": "public: __thiscall CTrack::CTrack(void)"
           },
-          "address": "1599"
+          "address": "1686"
         },
         {
           "name": "??1CTrack@@UAE@XZ",
@@ -7400,7 +7484,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall CTrack::~CTrack(void)"
           },
-          "address": "2041"
+          "address": "2128"
         },
         {
           "name": "?Load@CTrack@@QAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
@@ -7409,7 +7493,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall CTrack::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &)"
           },
-          "address": "2331"
+          "address": "2418"
         }
       ],
       "metadata": {
@@ -8065,18 +8149,18 @@
     {
       "name": "me2/KTeksturyVideoDirectX",
       "measures": {
-        "fuzzy_match_percent": 0.7779093,
-        "total_code": "1821",
+        "fuzzy_match_percent": 0.74243855,
+        "total_code": "1908",
         "matched_data_percent": 100.0,
-        "total_functions": 7,
+        "total_functions": 8,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1821",
-          "fuzzy_match_percent": 0.7779093,
+          "size": "1908",
+          "fuzzy_match_percent": 0.74243855,
           "metadata": {}
         }
       ],
@@ -8091,12 +8175,18 @@
           "address": "0"
         },
         {
+          "name": "KTeksturyVideoDirectX::scalar_destructor",
+          "size": "87",
+          "metadata": {},
+          "address": "237"
+        },
+        {
           "name": "??1KTeksturyVideoDirectX@@UAE@XZ",
           "size": "333",
           "metadata": {
             "demangled_name": "public: virtual __thiscall KTeksturyVideoDirectX::~KTeksturyVideoDirectX(void)"
           },
-          "address": "237"
+          "address": "324"
         },
         {
           "name": "?CheckMediaType@KTeksturyVideoDirectX@@UAEJPBVCMediaType@@@Z",
@@ -8104,7 +8194,7 @@
           "metadata": {
             "demangled_name": "public: virtual long __thiscall KTeksturyVideoDirectX::CheckMediaType(class CMediaType const *)"
           },
-          "address": "570"
+          "address": "657"
         },
         {
           "name": "?SetMediaType@KTeksturyVideoDirectX@@UAEJPBVCMediaType@@@Z",
@@ -8112,7 +8202,7 @@
           "metadata": {
             "demangled_name": "public: virtual long __thiscall KTeksturyVideoDirectX::SetMediaType(class CMediaType const *)"
           },
-          "address": "657"
+          "address": "744"
         },
         {
           "name": "?DoRenderSample@KTeksturyVideoDirectX@@UAEJPAUIMediaSample@@@Z",
@@ -8120,7 +8210,7 @@
           "metadata": {
             "demangled_name": "public: virtual long __thiscall KTeksturyVideoDirectX::DoRenderSample(struct IMediaSample *)"
           },
-          "address": "826"
+          "address": "913"
         },
         {
           "name": "?UtworzZPlikuAVI@KTeksturyVideoDirectX@@QAEJPAUIDirect3DDevice8@@PAD@Z",
@@ -8129,7 +8219,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall KTeksturyVideoDirectX::UtworzZPlikuAVI(struct IDirect3DDevice8*, char *)"
           },
-          "address": "1052"
+          "address": "1139"
         },
         {
           "name": "?SprawdzPetle@KTeksturyVideoDirectX@@QAEXPAVcMagSprite@@@Z",
@@ -8138,7 +8228,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall KTeksturyVideoDirectX::SprawdzPetle(class cMagSprite *)"
           },
-          "address": "1740"
+          "address": "1827"
         }
       ],
       "metadata": {
@@ -8788,18 +8878,18 @@
     {
       "name": "me2/MagTerrain",
       "measures": {
-        "fuzzy_match_percent": 2.5871992,
-        "total_code": "4391",
+        "fuzzy_match_percent": 2.3399365,
+        "total_code": "4855",
         "matched_data_percent": 100.0,
-        "total_functions": 33,
+        "total_functions": 34,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4391",
-          "fuzzy_match_percent": 2.5871992,
+          "size": "4855",
+          "fuzzy_match_percent": 2.3399365,
           "metadata": {}
         }
       ],
@@ -8854,13 +8944,19 @@
           "address": "1733"
         },
         {
+          "name": "MagTerrain::loadImage",
+          "size": "464",
+          "metadata": {},
+          "address": "1820"
+        },
+        {
           "name": "??0MagTerrain@@QAE@XZ",
           "size": "172",
           "fuzzy_match_percent": 15.0,
           "metadata": {
             "demangled_name": "public: __thiscall MagTerrain::MagTerrain(void)"
           },
-          "address": "1820"
+          "address": "2284"
         },
         {
           "name": "??1MagTerrain@@UAE@XZ",
@@ -8869,7 +8965,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagTerrain::~MagTerrain(void)"
           },
-          "address": "1992"
+          "address": "2456"
         },
         {
           "name": "?Build@MagTerrain@@QAEXXZ",
@@ -8878,7 +8974,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::Build(void)"
           },
-          "address": "2144"
+          "address": "2608"
         },
         {
           "name": "?Update@MagTerrain@@QAEXUD3DXMATRIX@@@Z",
@@ -8886,7 +8982,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::Update(struct D3DXMATRIX)"
           },
-          "address": "2624"
+          "address": "3088"
         },
         {
           "name": "?Render@MagTerrain@@QAEXXZ",
@@ -8895,7 +8991,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::Render(void)"
           },
-          "address": "2823"
+          "address": "3287"
         },
         {
           "name": "?OnRender@MagTerrain@@UAEXXZ",
@@ -8904,7 +9000,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MagTerrain::OnRender(void)"
           },
-          "address": "2915"
+          "address": "3379"
         },
         {
           "name": "?EnableRendering@MagTerrain@@QAE_NXZ",
@@ -8913,7 +9009,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTerrain::EnableRendering(void)"
           },
-          "address": "3295"
+          "address": "3759"
         },
         {
           "name": "?EnableRendering@MagTerrain@@QAEX_N@Z",
@@ -8922,7 +9018,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::EnableRendering(bool)"
           },
-          "address": "3302"
+          "address": "3766"
         },
         {
           "name": "?SetLODRadius@MagTerrain@@QAEXM@Z",
@@ -8931,7 +9027,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::SetLODRadius(float)"
           },
-          "address": "3315"
+          "address": "3779"
         },
         {
           "name": "?GetLODRadius@MagTerrain@@QAEMXZ",
@@ -8940,7 +9036,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall MagTerrain::GetLODRadius(void)"
           },
-          "address": "3328"
+          "address": "3792"
         },
         {
           "name": "?SetDetailTile@MagTerrain@@QAEXM@Z",
@@ -8949,7 +9045,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::SetDetailTile(float)"
           },
-          "address": "3335"
+          "address": "3799"
         },
         {
           "name": "?GetDetailTile@MagTerrain@@QAEMXZ",
@@ -8958,7 +9054,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall MagTerrain::GetDetailTile(void)"
           },
-          "address": "3348"
+          "address": "3812"
         },
         {
           "name": "?GetMapSize@MagTerrain@@QAE?AUD3DXVECTOR3@@XZ",
@@ -8966,7 +9062,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall MagTerrain::GetMapSize(void)"
           },
-          "address": "3355"
+          "address": "3819"
         },
         {
           "name": "?SetHeighMap@MagTerrain@@QAE_NPAD@Z",
@@ -8975,7 +9071,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTerrain::SetHeighMap(char *)"
           },
-          "address": "3388"
+          "address": "3852"
         },
         {
           "name": "?SetDetailMap@MagTerrain@@QAEXPAD@Z",
@@ -8984,7 +9080,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::SetDetailMap(char *)"
           },
-          "address": "3475"
+          "address": "3939"
         },
         {
           "name": "?SetColorMap@MagTerrain@@QAEXPAD@Z",
@@ -8993,7 +9089,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::SetColorMap(char *)"
           },
-          "address": "3550"
+          "address": "4014"
         },
         {
           "name": "?GetHeigh@MagTerrain@@QAE_NUD3DXVECTOR3@@AAM@Z",
@@ -9001,7 +9097,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTerrain::GetHeigh(struct D3DXVECTOR3, float &)"
           },
-          "address": "3625"
+          "address": "4089"
         },
         {
           "name": "?GetNormal@MagTerrain@@QAE?AUD3DXVECTOR3@@U2@@Z",
@@ -9009,7 +9105,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall MagTerrain::GetNormal(struct D3DXVECTOR3)"
           },
-          "address": "3741"
+          "address": "4205"
         },
         {
           "name": "?ShowWireframe@MagTerrain@@QAEX_N@Z",
@@ -9018,7 +9114,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::ShowWireframe(bool)"
           },
-          "address": "3915"
+          "address": "4379"
         },
         {
           "name": "?ShowWireframe@MagTerrain@@QAE_NXZ",
@@ -9027,7 +9123,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTerrain::ShowWireframe(void)"
           },
-          "address": "3928"
+          "address": "4392"
         },
         {
           "name": "?SetScale@MagTerrain@@QAEXUD3DXVECTOR3@@@Z",
@@ -9035,7 +9131,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::SetScale(struct D3DXVECTOR3)"
           },
-          "address": "3935"
+          "address": "4399"
         },
         {
           "name": "?GetWorldMatrix@MagTerrain@@QAE?AUD3DXMATRIX@@XZ",
@@ -9043,7 +9139,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXMATRIX __thiscall MagTerrain::GetWorldMatrix(void)"
           },
-          "address": "3964"
+          "address": "4428"
         },
         {
           "name": "?SetGrassMap@MagTerrain@@QAEXPAD@Z",
@@ -9052,7 +9148,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MagTerrain::SetGrassMap(char *)"
           },
-          "address": "3986"
+          "address": "4450"
         },
         {
           "name": "?GetColorGrassMap@MagTerrain@@QAEHHH@Z",
@@ -9061,7 +9157,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall MagTerrain::GetColorGrassMap(int, int)"
           },
-          "address": "4054"
+          "address": "4518"
         },
         {
           "name": "?GetPositionGrassMap@MagTerrain@@QAE_NHHAAUD3DXVECTOR3@@@Z",
@@ -9069,7 +9165,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTerrain::GetPositionGrassMap(int, int, struct D3DXVECTOR3&)"
           },
-          "address": "4082"
+          "address": "4546"
         },
         {
           "name": "?GetNumTris@MagTerrain@@QAEHXZ",
@@ -9078,7 +9174,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall MagTerrain::GetNumTris(void)"
           },
-          "address": "4266"
+          "address": "4730"
         },
         {
           "name": "?Pick@MagTerrain@@QAE_NUD3DXVECTOR3@@0PAMPAU2@PAUD3DXMATRIX@@@Z",
@@ -9086,7 +9182,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall MagTerrain::Pick(struct D3DXVECTOR3, struct D3DXVECTOR3, float *, struct D3DXVECTOR3*, struct D3DXMATRIX *)"
           },
-          "address": "4293"
+          "address": "4757"
         }
       ],
       "metadata": {
@@ -10522,14 +10618,14 @@
       "name": "me2/cGlow",
       "measures": {
         "fuzzy_match_percent": 100.0,
-        "total_code": "1807",
-        "matched_code": "1807",
+        "total_code": "1894",
+        "matched_code": "1894",
         "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 12,
-        "matched_functions": 12,
+        "total_functions": 13,
+        "matched_functions": 13,
         "matched_functions_percent": 100.0,
-        "complete_code": "1807",
+        "complete_code": "1894",
         "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1,
@@ -10538,7 +10634,7 @@
       "sections": [
         {
           "name": ".text",
-          "size": "1807",
+          "size": "1894",
           "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
@@ -10563,13 +10659,22 @@
           "address": "192"
         },
         {
+          "name": "??_EcGlow@@UAEPAXI@Z",
+          "size": "87",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cGlow::`vector deleting destructor'(unsigned int)"
+          },
+          "address": "378"
+        },
+        {
           "name": "??0cGlow@@QAE@XZ",
           "size": "217",
           "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cGlow::cGlow(void)"
           },
-          "address": "378"
+          "address": "465"
         },
         {
           "name": "??1cGlow@@UAE@XZ",
@@ -10578,7 +10683,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall cGlow::~cGlow(void)"
           },
-          "address": "595"
+          "address": "682"
         },
         {
           "name": "?Create@cGlow@@QAEXPAD@Z",
@@ -10587,7 +10692,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::Create(char *)"
           },
-          "address": "695"
+          "address": "782"
         },
         {
           "name": "?OnRender@cGlow@@UAEXXZ",
@@ -10596,7 +10701,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cGlow::OnRender(void)"
           },
-          "address": "832"
+          "address": "919"
         },
         {
           "name": "?RenderGlow@cGlow@@QAEXXZ",
@@ -10605,7 +10710,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::RenderGlow(void)"
           },
-          "address": "1229"
+          "address": "1316"
         },
         {
           "name": "?SetScale@cGlow@@QAEXUD3DXVECTOR3@@@Z",
@@ -10614,7 +10719,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::SetScale(struct D3DXVECTOR3)"
           },
-          "address": "1716"
+          "address": "1803"
         },
         {
           "name": "?SetPosition@cGlow@@QAEXUD3DXVECTOR3@@@Z",
@@ -10623,7 +10728,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::SetPosition(struct D3DXVECTOR3)"
           },
-          "address": "1745"
+          "address": "1832"
         },
         {
           "name": "?SetSize@cGlow@@QAEXM@Z",
@@ -10632,7 +10737,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::SetSize(float)"
           },
-          "address": "1774"
+          "address": "1861"
         },
         {
           "name": "?EnableRendering@cGlow@@QAEX_N@Z",
@@ -10641,7 +10746,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cGlow::EnableRendering(bool)"
           },
-          "address": "1787"
+          "address": "1874"
         },
         {
           "name": "?EnableRendering@cGlow@@QAE_NXZ",
@@ -10650,7 +10755,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cGlow::EnableRendering(void)"
           },
-          "address": "1800"
+          "address": "1887"
         }
       ],
       "metadata": {
@@ -14868,14 +14973,14 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 62.64371,
-        "total_code": "52146",
+        "fuzzy_match_percent": 62.64011,
+        "total_code": "52149",
         "matched_code": "11490",
-        "matched_code_percent": 22.034288,
+        "matched_code_percent": 22.03302,
         "matched_data_percent": 100.0,
-        "total_functions": 290,
+        "total_functions": 291,
         "matched_functions": 197,
-        "matched_functions_percent": 67.93103,
+        "matched_functions_percent": 67.69759,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14883,7 +14988,7 @@
         {
           "name": ".text",
           "size": "52010",
-          "fuzzy_match_percent": 62.64371,
+          "fuzzy_match_percent": 62.64011,
           "metadata": {}
         }
       ],
@@ -16999,6 +17104,14 @@
           "address": "44610"
         },
         {
+          "name": "?SetMorfLoop@cMagMeshObject@@QAEXPAD_N@Z",
+          "size": "3",
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagMeshObject::SetMorfLoop(char *, bool)"
+          },
+          "address": "44610"
+        },
+        {
           "name": "?ActivateLightMap@cMagMeshObject@@QAEXH@Z",
           "size": "13",
           "fuzzy_match_percent": 100.0,
@@ -18391,22 +18504,22 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 94.46344,
-        "total_code": "14280",
-        "matched_code": "8242",
-        "matched_code_percent": 57.717087,
+        "fuzzy_match_percent": 94.49696,
+        "total_code": "14367",
+        "matched_code": "8329",
+        "matched_code_percent": 57.973133,
         "matched_data_percent": 100.0,
-        "total_functions": 63,
-        "matched_functions": 49,
-        "matched_functions_percent": 77.77778,
+        "total_functions": 64,
+        "matched_functions": 50,
+        "matched_functions_percent": 78.125,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "14102",
-          "fuzzy_match_percent": 94.46344,
+          "size": "14189",
+          "fuzzy_match_percent": 94.49696,
           "metadata": {}
         }
       ],
@@ -18484,13 +18597,22 @@
           "address": "43"
         },
         {
+          "name": "??_EcMagSprite@@UAEPAXI@Z",
+          "size": "87",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagSprite::`vector deleting destructor'(unsigned int)"
+          },
+          "address": "913"
+        },
+        {
           "name": "??1cMagSprite@@UAE@XZ",
           "size": "343",
           "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSprite::~cMagSprite(void)"
           },
-          "address": "913"
+          "address": "1000"
         },
         {
           "name": "?SetTextColor@cMagSprite@@QAEXHMMMM@Z",
@@ -18499,7 +18621,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetTextColor(int, float, float, float, float)"
           },
-          "address": "1256"
+          "address": "1343"
         },
         {
           "name": "?ShowText@cMagSprite@@QAEXHMMMM@Z",
@@ -18508,7 +18630,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::ShowText(int, float, float, float, float)"
           },
-          "address": "1256"
+          "address": "1343"
         },
         {
           "name": "?ShowText@cMagSprite@@QAEXH_N@Z",
@@ -18517,7 +18639,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::ShowText(int, bool)"
           },
-          "address": "1431"
+          "address": "1518"
         },
         {
           "name": "?SetText@cMagSprite@@QAEXHPAD@Z",
@@ -18526,7 +18648,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetText(int, char *)"
           },
-          "address": "1545"
+          "address": "1632"
         },
         {
           "name": "?SetText@cMagSprite@@QAEXHPADMMMMMM@Z",
@@ -18535,7 +18657,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetText(int, char *, float, float, float, float, float, float)"
           },
-          "address": "1725"
+          "address": "1812"
         },
         {
           "name": "?SetTextPosition@cMagSprite@@QAEXHMM@Z",
@@ -18544,7 +18666,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetTextPosition(int, float, float)"
           },
-          "address": "2103"
+          "address": "2190"
         },
         {
           "name": "?GetText@cMagSprite@@QAEPADH@Z",
@@ -18553,7 +18675,7 @@
           "metadata": {
             "demangled_name": "public: char * __thiscall cMagSprite::GetText(int)"
           },
-          "address": "2338"
+          "address": "2425"
         },
         {
           "name": "?ClearTextBuffer@cMagSprite@@QAEXXZ",
@@ -18562,7 +18684,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::ClearTextBuffer(void)"
           },
-          "address": "2463"
+          "address": "2550"
         },
         {
           "name": "?SetText@cMagSprite@@QAEHPADMMMMMM@Z",
@@ -18571,7 +18693,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::SetText(char *, float, float, float, float, float, float)"
           },
-          "address": "2649"
+          "address": "2736"
         },
         {
           "name": "?CreateFontA@cMagSprite@@QAEXPADJ@Z",
@@ -18580,7 +18702,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CreateFontA(char *, long)"
           },
-          "address": "3541"
+          "address": "3628"
         },
         {
           "name": "?Restore@cMagSprite@@QAEXXZ",
@@ -18589,7 +18711,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Restore(void)"
           },
-          "address": "3624"
+          "address": "3711"
         },
         {
           "name": "?SetAlpha1@cMagSprite@@QAEXKK@Z",
@@ -18598,7 +18720,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetAlpha1(unsigned long, unsigned long)"
           },
-          "address": "3816"
+          "address": "3903"
         },
         {
           "name": "?LoadSprites@cMagSprite@@QAEXPAD@Z",
@@ -18607,7 +18729,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::LoadSprites(char *)"
           },
-          "address": "3846"
+          "address": "3933"
         },
         {
           "name": "?SetScale@cMagSprite@@QAEXMMM@Z",
@@ -18616,7 +18738,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScale(float, float, float)"
           },
-          "address": "4013"
+          "address": "4100"
         },
         {
           "name": "?EnableSpriteRendering@cMagSprite@@QAEX_N@Z",
@@ -18625,7 +18747,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::EnableSpriteRendering(bool)"
           },
-          "address": "4046"
+          "address": "4133"
         },
         {
           "name": "?OnRender@cMagSprite@@UAEXXZ",
@@ -18634,7 +18756,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagSprite::OnRender(void)"
           },
-          "address": "4059"
+          "address": "4146"
         },
         {
           "name": "?SetScale@cMagSprite@@QAEXUtagRECT@@@Z",
@@ -18643,7 +18765,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScale(struct tagRECT)"
           },
-          "address": "4476"
+          "address": "4563"
         },
         {
           "name": "?AddTexture@cMagSprite@@QAEHPAD@Z",
@@ -18652,7 +18774,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::AddTexture(char *)"
           },
-          "address": "4489"
+          "address": "4576"
         },
         {
           "name": "?Top@cMagSprite@@QAEXH@Z",
@@ -18661,7 +18783,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Top(int)"
           },
-          "address": "5770"
+          "address": "5857"
         },
         {
           "name": "?Bottom@cMagSprite@@QAEXH@Z",
@@ -18670,7 +18792,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Bottom(int)"
           },
-          "address": "6401"
+          "address": "6488"
         },
         {
           "name": "?SetRotate@cMagSprite@@QAEXHMUD3DXVECTOR2@@@Z",
@@ -18679,7 +18801,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetRotate(int, float, struct D3DXVECTOR2)"
           },
-          "address": "7050"
+          "address": "7137"
         },
         {
           "name": "?SetPos@cMagSprite@@QAEXHMMH@Z",
@@ -18688,7 +18810,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetPos(int, float, float, int)"
           },
-          "address": "7417"
+          "address": "7504"
         },
         {
           "name": "?GetPos@cMagSprite@@QAE?AUD3DXVECTOR2@@H@Z",
@@ -18697,7 +18819,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSprite::GetPos(int)"
           },
-          "address": "7767"
+          "address": "7854"
         },
         {
           "name": "?GetSize@cMagSprite@@QAE?AUD3DXVECTOR2@@H@Z",
@@ -18706,7 +18828,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSprite::GetSize(int)"
           },
-          "address": "7928"
+          "address": "8015"
         },
         {
           "name": "?SetScale@cMagSprite@@QAEXHMM@Z",
@@ -18715,7 +18837,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScale(int, float, float)"
           },
-          "address": "8063"
+          "address": "8150"
         },
         {
           "name": "?GetScale@cMagSprite@@QAE?AUD3DXVECTOR2@@H@Z",
@@ -18724,7 +18846,7 @@
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSprite::GetScale(int)"
           },
-          "address": "8450"
+          "address": "8537"
         },
         {
           "name": "?Show@cMagSprite@@QAEXH@Z",
@@ -18733,7 +18855,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Show(int)"
           },
-          "address": "8585"
+          "address": "8672"
         },
         {
           "name": "?Hide@cMagSprite@@QAEXH@Z",
@@ -18742,7 +18864,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Hide(int)"
           },
-          "address": "8684"
+          "address": "8771"
         },
         {
           "name": "?HideRender@cMagSprite@@QAEXH_N@Z",
@@ -18751,7 +18873,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::HideRender(int, bool)"
           },
-          "address": "8783"
+          "address": "8870"
         },
         {
           "name": "?RenderSprites@cMagSprite@@QAEXXZ",
@@ -18760,7 +18882,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RenderSprites(void)"
           },
-          "address": "8885"
+          "address": "8972"
         },
         {
           "name": "?SetAlpha@cMagSprite@@QAEXHM@Z",
@@ -18769,7 +18891,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetAlpha(int, float)"
           },
-          "address": "9501"
+          "address": "9588"
         },
         {
           "name": "?EnableCheckMouse@cMagSprite@@QAEXH_N@Z",
@@ -18778,7 +18900,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::EnableCheckMouse(int, bool)"
           },
-          "address": "9603"
+          "address": "9690"
         },
         {
           "name": "?CheckMouseRegion@cMagSprite@@QAEXXZ",
@@ -18787,7 +18909,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CheckMouseRegion(void)"
           },
-          "address": "9708"
+          "address": "9795"
         },
         {
           "name": "?SetScaleAsWindow@cMagSprite@@QAEXH@Z",
@@ -18796,7 +18918,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScaleAsWindow(int)"
           },
-          "address": "10099"
+          "address": "10186"
         },
         {
           "name": "?GetMouseActivateSprite@cMagSprite@@QAEHXZ",
@@ -18805,7 +18927,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::GetMouseActivateSprite(void)"
           },
-          "address": "10282"
+          "address": "10369"
         },
         {
           "name": "?TexFromDigit@cMagSprite@@QAEXHHHHAAURect@@@Z",
@@ -18814,7 +18936,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::TexFromDigit(int, int, int, int, struct Rect &)"
           },
-          "address": "10373"
+          "address": "10460"
         },
         {
           "name": "?CutFrame@cMagSprite@@QAEXHHHHAAURect@@@Z",
@@ -18823,7 +18945,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CutFrame(int, int, int, int, struct Rect &)"
           },
-          "address": "10500"
+          "address": "10587"
         },
         {
           "name": "?SetTextureRect@cMagSprite@@QAEXHURect@@@Z",
@@ -18832,7 +18954,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetTextureRect(int, struct Rect)"
           },
-          "address": "10763"
+          "address": "10850"
         },
         {
           "name": "?BuildMatrix@cMagSprite@@QAEPAU_D3DMATRIX@@PAU2@PAUD3DXVECTOR2@@1M@Z",
@@ -18841,7 +18963,7 @@
           "metadata": {
             "demangled_name": "public: struct _D3DMATRIX * __thiscall cMagSprite::BuildMatrix(struct _D3DMATRIX *, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float)"
           },
-          "address": "10924"
+          "address": "11011"
         },
         {
           "name": "?TransformVertices@cMagSprite@@QAEXQAUD3DTLVERTEXS@@PAUD3DXVECTOR2@@1M@Z",
@@ -18850,7 +18972,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::TransformVertices(struct D3DTLVERTEXS *const, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float)"
           },
-          "address": "11549"
+          "address": "11636"
         },
         {
           "name": "?Blit@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DTexture8@@PAUtagPOINT@@PAUD3DXVECTOR2@@3MK@Z",
@@ -18859,7 +18981,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Blit(struct IDirect3DDevice8*, struct IDirect3DTexture8*, struct tagPOINT *, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float, unsigned long)"
           },
-          "address": "11729"
+          "address": "11816"
         },
         {
           "name": "?BlitX@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DTexture8@@PAUtagPOINT@@KMM@Z",
@@ -18868,7 +18990,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::BlitX(struct IDirect3DDevice8*, struct IDirect3DTexture8*, struct tagPOINT *, unsigned long, float, float)"
           },
-          "address": "12067"
+          "address": "12154"
         },
         {
           "name": "?InitSpriteAnim@cMagSprite@@QAEXHHHHHH@Z",
@@ -18877,7 +18999,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::InitSpriteAnim(int, int, int, int, int, int)"
           },
-          "address": "12067"
+          "address": "12154"
         },
         {
           "name": "?CreateSurfaceFromFile@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAPAUIDirect3DSurface8@@QADK@Z",
@@ -18886,7 +19008,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CreateSurfaceFromFile(struct IDirect3DDevice8*, struct IDirect3DSurface8**, char *const, unsigned long)"
           },
-          "address": "12070"
+          "address": "12157"
         },
         {
           "name": "?CreateTextureFromSurface@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DSurface8@@PAUtagRECT@@PAPAUIDirect3DTexture8@@@Z",
@@ -18895,7 +19017,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::CreateTextureFromSurface(struct IDirect3DDevice8*, struct IDirect3DSurface8*, struct tagRECT *, struct IDirect3DTexture8**)"
           },
-          "address": "12085"
+          "address": "12172"
         },
         {
           "name": "?LoadSprite@cMagSprite@@QAEXPAD@Z",
@@ -18904,7 +19026,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::LoadSprite(char *)"
           },
-          "address": "12145"
+          "address": "12232"
         },
         {
           "name": "?RenderTestSprite@cMagSprite@@QAEXXZ",
@@ -18913,7 +19035,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RenderTestSprite(void)"
           },
-          "address": "12257"
+          "address": "12344"
         },
         {
           "name": "?LoadMovie@cMagSprite@@QAEJPAD@Z",
@@ -18922,7 +19044,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSprite::LoadMovie(char *)"
           },
-          "address": "12312"
+          "address": "12399"
         },
         {
           "name": "?UtworzBuforDuszkow@cMagSprite@@QAEJXZ",
@@ -18931,7 +19053,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSprite::UtworzBuforDuszkow(void)"
           },
-          "address": "12382"
+          "address": "12469"
         },
         {
           "name": "?CreatePlane@cMagSprite@@QAEJPAD@Z",
@@ -18940,7 +19062,7 @@
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSprite::CreatePlane(char *)"
           },
-          "address": "12698"
+          "address": "12785"
         },
         {
           "name": "?RenderPlane@cMagSprite@@QAEXXZ",
@@ -18949,7 +19071,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RenderPlane(void)"
           },
-          "address": "13007"
+          "address": "13094"
         },
         {
           "name": "?RysujDuszkiEx@cMagSprite@@QAEXMMMMMM@Z",
@@ -18958,7 +19080,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::RysujDuszkiEx(float, float, float, float, float, float)"
           },
-          "address": "13787"
+          "address": "13874"
         },
         {
           "name": "?SetScaleMovie@cMagSprite@@QAEXMM@Z",
@@ -18967,7 +19089,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetScaleMovie(float, float)"
           },
-          "address": "14066"
+          "address": "14153"
         },
         {
           "name": "?SetRotateMovie@cMagSprite@@QAEXM@Z",
@@ -18976,7 +19098,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::SetRotateMovie(float)"
           },
-          "address": "14089"
+          "address": "14176"
         }
       ],
       "metadata": {
@@ -25951,10 +26073,14 @@
     {
       "name": "mkp/CElevator",
       "measures": {
-        "fuzzy_match_percent": 0.2689136,
+        "fuzzy_match_percent": 6.894686,
         "total_code": "2789",
+        "matched_code": "30",
+        "matched_code_percent": 1.0756544,
         "matched_data_percent": 100.0,
         "total_functions": 17,
+        "matched_functions": 1,
+        "matched_functions_percent": 5.882353,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -25962,27 +26088,36 @@
         {
           "name": ".text",
           "size": "2789",
-          "fuzzy_match_percent": 0.2689136,
+          "fuzzy_match_percent": 6.894686,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CElevator::CElevator",
+          "name": "??0CElevator@@QAE@XZ",
           "size": "125",
-          "metadata": {},
+          "fuzzy_match_percent": 46.8,
+          "metadata": {
+            "demangled_name": "public: __thiscall CElevator::CElevator(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CElevator::scalar_destructor",
+          "name": "??_GCElevator@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CElevator::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "125"
         },
         {
-          "name": "CElevator::~CElevator",
+          "name": "??1CElevator@@UAE@XZ",
           "size": "129",
-          "metadata": {},
+          "fuzzy_match_percent": 40.772728,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CElevator::~CElevator(void)"
+          },
           "address": "155"
         },
         {
@@ -25995,81 +26130,120 @@
           "address": "284"
         },
         {
-          "name": "CElevator::OnFrame",
+          "name": "?OnFrame@CElevator@@UAEXXZ",
           "size": "436",
-          "metadata": {},
+          "fuzzy_match_percent": 0.8196721,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnFrame(void)"
+          },
           "address": "374"
         },
         {
-          "name": "CElevator::OnUpdateMenuSettings",
+          "name": "?OnUpdateMenuSettings@CElevator@@UAEXXZ",
           "size": "44",
-          "metadata": {},
+          "fuzzy_match_percent": 6.25,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnUpdateMenuSettings(void)"
+          },
           "address": "810"
         },
         {
-          "name": "CElevator::OnActivate",
+          "name": "?OnActivate@CElevator@@UAEXXZ",
           "size": "9",
-          "metadata": {},
+          "fuzzy_match_percent": 33.333332,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnActivate(void)"
+          },
           "address": "854"
         },
         {
-          "name": "CElevator::OnDestinationPos",
+          "name": "?OnDestinationPos@CElevator@@UAEXUD3DXVECTOR3@@@Z",
           "size": "69",
-          "metadata": {},
+          "fuzzy_match_percent": 5.263158,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnDestinationPos(struct D3DXVECTOR3)"
+          },
           "address": "863"
         },
         {
-          "name": "CElevator::OnAction",
+          "name": "?OnAction@CElevator@@UAEXXZ",
           "size": "302",
-          "metadata": {},
+          "fuzzy_match_percent": 1.0638298,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnAction(void)"
+          },
           "address": "932"
         },
         {
-          "name": "CElevator::OnCollisionObject",
+          "name": "?OnCollisionObject@CElevator@@UAEXPAVcMagMeshObject@@@Z",
           "size": "29",
-          "metadata": {},
+          "fuzzy_match_percent": 12.5,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnCollisionObject(class cMagMeshObject *)"
+          },
           "address": "1234"
         },
         {
-          "name": "CElevator::OnAttachChild",
+          "name": "?OnAttachChild@CElevator@@UAEXPAVcMagMeshObject@@@Z",
           "size": "44",
-          "metadata": {},
+          "fuzzy_match_percent": 7.142857,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnAttachChild(class cMagMeshObject *)"
+          },
           "address": "1263"
         },
         {
-          "name": "CElevator::OnDetachChild",
+          "name": "?OnDetachChild@CElevator@@UAEXPAVcMagMeshObject@@@Z",
           "size": "43",
-          "metadata": {},
+          "fuzzy_match_percent": 7.142857,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnDetachChild(class cMagMeshObject *)"
+          },
           "address": "1307"
         },
         {
-          "name": "CElevator::OnActivateLevel",
+          "name": "?OnActivateLevel@CElevator@@UAEXXZ",
           "size": "160",
-          "metadata": {},
+          "fuzzy_match_percent": 2.2222223,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnActivateLevel(void)"
+          },
           "address": "1350"
         },
         {
-          "name": "CElevator::OnCrash",
+          "name": "?OnCrash@CElevator@@UAEXXZ",
           "size": "34",
-          "metadata": {},
+          "fuzzy_match_percent": 12.5,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnCrash(void)"
+          },
           "address": "1510"
         },
         {
-          "name": "CElevator::OnLoadChunk",
+          "name": "?OnLoadChunk@CElevator@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "777",
-          "metadata": {},
+          "fuzzy_match_percent": 0.37313432,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
           "address": "1544"
         },
         {
-          "name": "CElevator::Save",
+          "name": "?Save@CElevator@@UAEXAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "282",
-          "metadata": {},
+          "fuzzy_match_percent": 1.2987013,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::Save(class std::basic_ostream<char, struct std::char_traits<char> > &)"
+          },
           "address": "2321"
         },
         {
-          "name": "CElevator::Load",
+          "name": "?Load@CElevator@@UAEXAAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@U_ED_CHUNK@@@Z",
           "size": "186",
-          "metadata": {},
+          "fuzzy_match_percent": 1.7857143,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CElevator::Load(class std::basic_ifstream<char, struct std::char_traits<char> > &, struct _ED_CHUNK)"
+          },
           "address": "2603"
         }
       ],
@@ -31965,7 +32139,7 @@
           "address": "106"
         },
         {
-          "name": "UIWindow::UIWindow_",
+          "name": "UIWindow::UIWindow2",
           "size": "93",
           "metadata": {},
           "address": "136"
@@ -32038,16 +32212,16 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 29.590704,
-        "total_code": "512405",
-        "matched_code": "82190",
-        "matched_code_percent": 16.040047,
+        "fuzzy_match_percent": 29.516506,
+        "total_code": "514659",
+        "matched_code": "82451",
+        "matched_code_percent": 16.020512,
         "matched_data_percent": 100.0,
-        "total_functions": 2285,
-        "matched_functions": 816,
-        "matched_functions_percent": 35.71116,
-        "complete_code": "11510",
-        "complete_code_percent": 2.24627,
+        "total_functions": 2303,
+        "matched_functions": 819,
+        "matched_functions_percent": 35.56231,
+        "complete_code": "11597",
+        "complete_code_percent": 2.2533367,
         "complete_data_percent": 100.0,
         "total_units": 110,
         "complete_units": 6
@@ -32057,14 +32231,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 14.480545,
+        "fuzzy_match_percent": 14.585992,
         "total_code": "175250",
-        "matched_code": "22953",
-        "matched_code_percent": 13.097289,
+        "matched_code": "22983",
+        "matched_code_percent": 13.114408,
         "matched_data_percent": 100.0,
         "total_functions": 981,
-        "matched_functions": 230,
-        "matched_functions_percent": 23.445463,
+        "matched_functions": 231,
+        "matched_functions_percent": 23.547401,
         "complete_code": "19950",
         "complete_code_percent": 11.383738,
         "complete_data_percent": 100.0,

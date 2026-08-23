@@ -1942,7 +1942,7 @@
 ?OnInputKey@cMagKernel@@UAEXH_N@Z;cMagKernel::OnInputKey;0x1005a5f0;0x3;__thiscall;;void;cMagKernel*;int;bool
 ?SetCursorPosition@cMagSprite@@QAEXHH@Z;cMagSprite::SetCursorPosition;0x1005a5f0;0x3;__thiscall;;void;cMagSprite*;int;int
 ?SetEnviromentMappingTexture@cMagMeshObject@@QAEXPAD0@Z;cMagMeshObject::SetEnviromentMappingTexture;0x1005a5f0;0x3;__thiscall;;void;cMagMeshObject*;char*;char*
-?SetMorfLoop@cMagMeshObject@@QAEXPAD_N@Z ;cMagMeshObject::SetMorfLoop;0x1005a5f0;0x3;__thiscall;;void;cMagMeshObject*;char*;bool
+?SetMorfLoop@cMagMeshObject@@QAEXPAD_N@Z;cMagMeshObject::SetMorfLoop;0x1005a5f0;0x3;__thiscall;;void;cMagMeshObject*;char*;bool
 ?ActivateLightMap@cMagMeshObject@@QAEXH@Z;cMagMeshObject::ActivateLightMap;0x1005a600;0xd;__thiscall;;void;cMagMeshObject*;int
 ?SetEllipsoid@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetEllipsoid;0x1005a610;0x31;__thiscall;;void;cMagMeshObject*;uint;uint;uint
 ?GetEllipsoid@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GetEllipsoid;0x1005a650;0x2a;__thiscall;;uchar;cMagMeshObject*;uint*
