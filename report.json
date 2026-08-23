@@ -1,6 +1,6 @@
 {
   "measures": {
-    "fuzzy_match_percent": 25.732225,
+    "fuzzy_match_percent": 25.739859,
     "total_code": "687655",
     "matched_code": "105143",
     "matched_code_percent": 15.29008,
@@ -18391,7 +18391,7 @@
     {
       "name": "me2/cMagSprite",
       "measures": {
-        "fuzzy_match_percent": 94.0959,
+        "fuzzy_match_percent": 94.46344,
         "total_code": "14280",
         "matched_code": "8242",
         "matched_code_percent": 57.717087,
@@ -18406,7 +18406,7 @@
         {
           "name": ".text",
           "size": "14102",
-          "fuzzy_match_percent": 94.0959,
+          "fuzzy_match_percent": 94.46344,
           "metadata": {}
         }
       ],
@@ -18567,7 +18567,7 @@
         {
           "name": "?SetText@cMagSprite@@QAEHPADMMMMMM@Z",
           "size": "892",
-          "fuzzy_match_percent": 91.630135,
+          "fuzzy_match_percent": 95.904106,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::SetText(char *, float, float, float, float, float, float)"
           },
@@ -18648,7 +18648,7 @@
         {
           "name": "?AddTexture@cMagSprite@@QAEHPAD@Z",
           "size": "1281",
-          "fuzzy_match_percent": 93.27586,
+          "fuzzy_match_percent": 94.86207,
           "metadata": {
             "demangled_name": "public: int __thiscall cMagSprite::AddTexture(char *)"
           },
@@ -18855,7 +18855,7 @@
         {
           "name": "?Blit@cMagSprite@@QAEXPAUIDirect3DDevice8@@PAUIDirect3DTexture8@@PAUtagPOINT@@PAUD3DXVECTOR2@@3MK@Z",
           "size": "338",
-          "fuzzy_match_percent": 50.57895,
+          "fuzzy_match_percent": 48.81579,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSprite::Blit(struct IDirect3DDevice8*, struct IDirect3DTexture8*, struct tagPOINT *, struct D3DXVECTOR2*, struct D3DXVECTOR2*, float, unsigned long)"
           },
@@ -32038,7 +32038,7 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 29.580463,
+        "fuzzy_match_percent": 29.590704,
         "total_code": "512405",
         "matched_code": "82190",
         "matched_code_percent": 16.040047,

@@ -207,17 +207,18 @@ int cMagSprite::SetText(char* param_1, float param_2, float param_3, float param
 
 	SubSpriteData local_294;
 	ZeroMemory(&local_294, sizeof(SubSpriteData));
+	local_294.unk_17c = true;
 	strcpy(local_294.text, param_1);
 	local_294.textPosition.x = local_4.x;
 	local_294.textPosition.y = local_4.y;
-	local_294.unk_17c = true;
-	local_294.unk_14.x = param_2;
-	local_294.unk_14.y = param_3;
+	local_294.unk_14 = D3DXVECTOR2(param_2, param_3);
 	local_294.textColor.r = param_4;
 	local_294.textColor.g = param_5;
 	local_294.textColor.b = param_6;
 	local_294.textColor.a = param_7;
+	local_294.shouldShowText = false;
 	local_294.texID = iVar4 + 1;
+	
 	subSprites.push_back(local_294);
 	return local_294.texID;
 }
@@ -325,7 +326,8 @@ int cMagSprite::AddTexture(char* param_1) {
 	}
 	FileLog("Create sprite: %s", local_12c);
 	D3DXIMAGE_INFO local_3dc;
-	HRESULT result = D3DXCreateTextureFromFileEx(cMagEngineMgr::getInstance()->engine, local_12c, 
+	cMagEngineMgr* engineMgr = cMagEngineMgr::getInstance();
+	HRESULT result = D3DXCreateTextureFromFileEx(engineMgr->engine, local_12c, 
 	-1, -1, -1, 0, D3DFMT_UNKNOWN, D3DPOOL_MANAGED, -1, -1, 
 	D3DCOLOR_ARGB(0xff,0,0,0), &local_3dc, NULL, &gameObjectTexture);
 	
@@ -350,10 +352,10 @@ int cMagSprite::AddTexture(char* param_1) {
 	local_3c0.texture = gameObjectTexture;
 	local_3c0.unk_40 = D3DXVECTOR2(0.0f, 0.0f);
 	local_3c0.unk_48 = D3DXVECTOR2(1.0f, 1.0f);
-	local_3c0.unk_64.bottom = local_3dc.Height;
-	local_3c0.unk_64.right = local_3dc.Width;
-	local_3c0.texID = iVar4+1;
+	local_3c0.unk_64.left = 0;
+	local_3c0.unk_64.right = (float) local_3dc.Width;
 	local_3c0.unk_64.top = 0;
+	local_3c0.unk_64.bottom = (float) local_3dc.Height;
 	local_3c0.unk_58 = 0.0f;
 	local_3c0.unk_5c = D3DXVECTOR2(0.0f, 0.0f);
 	local_3c0.unk_74 = 1.0f;
@@ -361,6 +363,7 @@ int cMagSprite::AddTexture(char* param_1) {
 	local_3c0.unk_34 = false;
 	local_3c0.shouldHideRender = false;
 	local_3c0.shouldShowText = false;
+	local_3c0.texID = iVar4+1;
 	DebugLog("id: %d", local_3c0.texID);
 	strcpy(local_3c0.texturePath, param_1);
 	subSprites.push_back(local_3c0);
@@ -394,7 +397,7 @@ void cMagSprite::SetRotate(int param_1, float param_2, D3DXVECTOR2 param_3) {
 	if (GetWindowWidth() != 800 && GetWindowHeight() != 600) {
 		if (GetWindowWidth() > 800 && GetWindowHeight() > 600) {
 			local_4.x = param_3.x * (GetWindowWidth() / 800.0f);
-			local_4.y = param_3.y * (GetWindowHeight() / 600.0f);
+			local_4.y = param_3.y *  (GetWindowHeight() / 600.0f);
 		}  
 		if (GetWindowWidth() < 800 && GetWindowHeight() < 600) {
 			local_4.x = param_3.x / (800.0f / GetWindowWidth());
@@ -748,19 +751,24 @@ void cMagSprite::TransformVertices(D3DTLVERTEXS* const param_1, D3DXVECTOR2* par
 /* 100657D0-10065922 00152	*/
 void cMagSprite::Blit(IDirect3DDevice8* param_1, IDirect3DTexture8* param_2, tagPOINT* param_3, D3DXVECTOR2* param_4, D3DXVECTOR2* param_5, float param_6, ulong param_7) {
 	D3DTLVERTEXS auStack_90;
+	// ZeroMemory(&auStack_90, sizeof(D3DTLVERTEXS));
+	D3DXVECTOR2 temp;
+
 	auStack_90.ver[0].sx = param_3->x;
 	auStack_90.ver[0].sy = param_3->y;
+	auStack_90.ver[0].color = param_7;
+	auStack_90.ver[1].sx = temp.x + auStack_90.ver[0].sx;
+	auStack_90.ver[2].color = param_7;
+	auStack_90.ver[3].color = param_7;
 	auStack_90.ver[0].sz = 0.0f;
 	auStack_90.ver[0].rhw = 1.0f;
-	auStack_90.ver[0].color = param_7;
 	auStack_90.ver[0].tu = 0.0f;
 	auStack_90.ver[0].tv = 0.0f;
 
 	auStack_90.ver[1].sx = param_3->x;
-	auStack_90.ver[1].sy = auStack_90.ver[0].sy;
+	auStack_90.ver[1].sy =  temp.y + auStack_90.ver[0].sy;
 	auStack_90.ver[1].sz = 0.0f;
 	auStack_90.ver[1].rhw = 1.0f;
-	auStack_90.ver[1].color = param_7;
 	auStack_90.ver[1].tu = 1.0f;
 	auStack_90.ver[1].tv = 0.0f;
 
@@ -768,7 +776,6 @@ void cMagSprite::Blit(IDirect3DDevice8* param_1, IDirect3DTexture8* param_2, tag
 	auStack_90.ver[2].sy = auStack_90.ver[0].sy;
 	auStack_90.ver[2].sz = 0.0f;
 	auStack_90.ver[2].rhw = 1.0f;
-	auStack_90.ver[2].color = param_7;
 	auStack_90.ver[2].tu = 1.0f;
 	auStack_90.ver[2].tv = 1.0f;
 
@@ -776,7 +783,6 @@ void cMagSprite::Blit(IDirect3DDevice8* param_1, IDirect3DTexture8* param_2, tag
 	auStack_90.ver[3].sy = auStack_90.ver[2].sy;
 	auStack_90.ver[3].sz = 0.0f;
 	auStack_90.ver[3].rhw = 1.0f;
-	auStack_90.ver[3].color = param_7;
 	auStack_90.ver[3].tu = 0.0f;
 	auStack_90.ver[3].tv = 1.0f;
 
