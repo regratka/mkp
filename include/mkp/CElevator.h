@@ -5,24 +5,22 @@
 #include "_Platform.h"
 
 struct CElevatorChunkData {
-	/* 0x00 */ float unk_00;
-	/* 0x04 */ float unk_04;
+	/* 0x00 */ float speedValue;
+	/* 0x04 */ float movementUpdateInverval;
 	/* 0x08 */ uchar field_0x08[0x0c-0x08];
-	/* 0x0c */ int unk_0c;
-	/* 0x10 */ int unk_10;
-	/* 0x14 */ int unk_14;
-	/* 0x18 */ char unk_18[200];
+	/* 0x0c */ BOOL shouldPlayMoveSound;
+	/* 0x10 */ int minSoundRange;
+	/* 0x14 */ int maxSoundRange;
+	/* 0x18 */ char soundFilePath[200];
 };
 
 struct CElevatorSaveData {
-	/* 0x00 */ D3DXMATRIX unk_00;
-	/* 0x40 */ D3DXVECTOR3 unk_40;
+	/* 0x00 */ D3DXMATRIX rotMatrix;
+	/* 0x40 */ D3DXVECTOR3 position;
 	/* 0x4c */ bool unk_4c;
-	/* 0x4d */ bool unk_4d;
-	/* 0x50 */ int unk_50;
+	/* 0x4d */ bool reachedDestPos;
+	/* 0x50 */ int nextDestinationIndex;
 };
-
-
 
 class CElevator : public _Platform {
 public:
@@ -46,18 +44,18 @@ public:
 private:
 
 	/* 0x2658 */ CElevatorChunkData chunkData;
-	/* 0x2738 */ float* unk_2738;
-	/* 0x273c */ std::vector<D3DXVECTOR3> unk_273c;
-	/* 0x274c */ bool unk_274c;
-	/* 0x2750 */ int unk_2750;
-	/* 0x2754 */ int unk_2754;
-	/* 0x2758 */ float unk_2758;
-	/* 0x275c */ bool unk_275c;
+	/* 0x2738 */ float* destPositionsBuffer;
+	/* 0x273c */ std::vector<D3DXVECTOR3> destinationPositions;
+	/* 0x274c */ bool hasPlayer;
+	/* 0x2750 */ int nextDestinationIndex;
+	/* 0x2754 */ int destPositionsCount;
+	/* 0x2758 */ float elevatorSpeedValue;
+	/* 0x275c */ bool shouldUpdateMovement;
 	/* 0x275d */ bool unk_275d;
-	/* 0x2760 */ float unk_2760;
-	/* 0x2764 */ int unk_2764;
+	/* 0x2760 */ float lastUpdateTime;
+	/* 0x2764 */ int elevatorMoveSoundID;
 	/* 0x2768 */ bool unk_2768;
-	/* 0x2769 */ bool unk_2769;
+	/* 0x2769 */ bool reachedDestPos;
 };
 
 STATIC_ASSERT(sizeof(CElevator) == 0x2770);
