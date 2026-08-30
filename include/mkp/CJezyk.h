@@ -12,7 +12,14 @@ class CJezyk : public cMagMeshObject {
 		/* 419BA0 */ void OnFrame();
 		/* 419BA0 */ void OnExitState();
 		/* 43DC50 */ void OnEnterState();
+
+	private:
+		/* 0x1dc */ CJezyk* jezyk;
+		/* 0x1e0 */ int unk_1e0;
+
 	};
+
+	STATIC_ASSERT(sizeof(Idle) == 0x1e4);
 
 	class WalkNaviPath : public CState {
 	public:
@@ -22,7 +29,14 @@ class CJezyk : public cMagMeshObject {
 		/* 43DAC0 */ void OnDestinationPos(D3DXVECTOR3 param_1);
 		/* 43DB60 */ void OnCollisionObject(cMagMeshObject* param_1);
 		/* 43DC30 */ void OnAnimEnd(char* param_1);
+
+	private:
+		/* 0x1dc */ CJezyk* jezyk;
+		/* 0x1e0 */ D3DXVECTOR3 unk_1e0;
+		/* 0x1ec */ uchar field_0x1ec[0x1f8-0x1ec];
 	};
+
+	STATIC_ASSERT(sizeof(WalkNaviPath) == 0x1f8);
 
 public:
 	/* 4164E0 */ void OnDestTime(float param_1);
@@ -38,7 +52,7 @@ public:
 	/* 43D5F0 */ void FUN0043d5f0();
 	/* 43D620 */ void FUN0043d620();
 
-private:
+public:
 	/* 0x2658 */ char navigationPath[200];
 	/* 0x2720 */ int unk_2720;
 	/* 0x2724 */ int unk_2724;

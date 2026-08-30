@@ -1998,7 +1998,7 @@
 ?BuildNaviPoints@cMagMeshObject@@QAE_NUD3DXVECTOR3@@0@Z;cMagMeshObject::BuildNaviPoints;0x1005c280;0x332;__thiscall;;bool;cMagMeshObject*;D3DXVECTOR3;D3DXVECTOR3
 ;FUN_1005c5c0;0x1005c5c0;0x4d;__fastcall;;uchar;int
 ?GetNaviPointsCount@cMagMeshObject@@QAEHXZ;cMagMeshObject::GetNaviPointsCount;0x1005c610;0x26;__thiscall;;int;cMagMeshObject*
-?GetNaviPointAt@cMagMeshObject@@QAE?AUD3DXVECTOR3@@H@Z;cMagMeshObject::GetNaviPointAt;0x1005c640;0xc5;__thiscall;;uchar;cMagMeshObject*;uint*;uint
+?GetNaviPointAt@cMagMeshObject@@QAE?AUD3DXVECTOR3@@H@Z;cMagMeshObject::GetNaviPointAt;0x1005c640;0xc5;__thiscall;;D3DXVECTOR3;cMagMeshObject*;int
 ?GotoRandomLocation@cMagMeshObject@@QAE?AUD3DXVECTOR3@@XZ;cMagMeshObject::GotoRandomLocation;0x1005c710;0xa5;__thiscall;;uchar;cMagMeshObject*;uint*
 ;FUN_1005c7c0;0x1005c7c0;0x29;__fastcall;;uchar;int
 ;FUN_1005c7f0;0x1005c7f0;0x38;__fastcall;;uchar;int

@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 26.185368,
-    "total_code": "689958",
-    "matched_code": "108715",
-    "matched_code_percent": 15.756756,
+    "fuzzy_match_percent": 26.471895,
+    "total_code": "690379",
+    "matched_code": "110436",
+    "matched_code_percent": 15.99643,
     "matched_data_percent": 100.0,
-    "total_functions": 3290,
-    "matched_functions": 1077,
-    "matched_functions_percent": 32.73556,
+    "total_functions": 3293,
+    "matched_functions": 1089,
+    "matched_functions_percent": 33.07015,
     "complete_code": "34336",
-    "complete_code_percent": 4.976535,
+    "complete_code_percent": 4.9735003,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 32
@@ -26349,16 +26349,16 @@
     {
       "name": "mkp/CHudGratka",
       "measures": {
-        "total_code": "5210",
+        "total_code": "5631",
         "matched_data_percent": 100.0,
-        "total_functions": 27,
+        "total_functions": 30,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "5210",
+          "size": "5631",
           "metadata": {}
         }
       ],
@@ -26430,100 +26430,118 @@
           "address": "2807"
         },
         {
+          "name": "CHudGratka::FUN0042d320",
+          "size": "20",
+          "metadata": {},
+          "address": "3056"
+        },
+        {
           "name": "CHudGratka::FUN0042d360",
           "size": "233",
           "metadata": {},
-          "address": "3056"
+          "address": "3076"
         },
         {
           "name": "CHudGratka::FUN0042d450",
           "size": "7",
           "metadata": {},
-          "address": "3289"
+          "address": "3309"
         },
         {
           "name": "CHudGratka::FUN0042d460",
           "size": "220",
           "metadata": {},
-          "address": "3296"
+          "address": "3316"
+        },
+        {
+          "name": "CHudGratka::FUN0042d540",
+          "size": "76",
+          "metadata": {},
+          "address": "3536"
+        },
+        {
+          "name": "CHudGratka::FUN0042d590",
+          "size": "325",
+          "metadata": {},
+          "address": "3612"
         },
         {
           "name": "CHudGratka::FUN0042d6e0",
           "size": "66",
           "metadata": {},
-          "address": "3516"
+          "address": "3937"
         },
         {
           "name": "CHudGratka::FUN0042d730",
           "size": "24",
           "metadata": {},
-          "address": "3582"
+          "address": "4003"
         },
         {
           "name": "CHudGratka::FUN0042d750",
           "size": "40",
           "metadata": {},
-          "address": "3606"
+          "address": "4027"
         },
         {
           "name": "CHudGratka::FUN0042d780",
           "size": "133",
           "metadata": {},
-          "address": "3646"
+          "address": "4067"
         },
         {
           "name": "CHudGratka::FUN0042d810",
           "size": "62",
           "metadata": {},
-          "address": "3779"
+          "address": "4200"
         },
         {
           "name": "CHudGratka::FUN0042d850",
           "size": "36",
           "metadata": {},
-          "address": "3841"
+          "address": "4262"
         },
         {
           "name": "CHudGratka::FUN0042db90",
           "size": "378",
           "metadata": {},
-          "address": "3877"
+          "address": "4298"
         },
         {
           "name": "CHudGratka::FUN0042dd10",
           "size": "77",
           "metadata": {},
-          "address": "4255"
+          "address": "4676"
         },
         {
           "name": "CHudGratka::FUN0042dd60",
           "size": "578",
           "metadata": {},
-          "address": "4332"
+          "address": "4753"
         },
         {
           "name": "CHudGratka::FUN0042dfb0",
           "size": "128",
           "metadata": {},
-          "address": "4910"
+          "address": "5331"
         },
         {
           "name": "CHudGratka::FUN0042e030",
           "size": "100",
           "metadata": {},
-          "address": "5038"
+          "address": "5459"
         },
         {
           "name": "CHudGratka::FUN0042e0a0",
           "size": "7",
           "metadata": {},
-          "address": "5138"
+          "address": "5559"
         },
         {
           "name": "CHudGratka::FUN0042e0b0",
           "size": "65",
           "metadata": {},
-          "address": "5145"
+          "address": "5566"
         }
       ],
       "metadata": {
@@ -26601,14 +26619,14 @@
     {
       "name": "mkp/CJezyk",
       "measures": {
-        "fuzzy_match_percent": 9.71584,
+        "fuzzy_match_percent": 83.19749,
         "total_code": "2842",
-        "matched_code": "187",
-        "matched_code_percent": 6.579873,
+        "matched_code": "1908",
+        "matched_code_percent": 67.135826,
         "matched_data_percent": 100.0,
         "total_functions": 22,
-        "matched_functions": 8,
-        "matched_functions_percent": 36.363636,
+        "matched_functions": 20,
+        "matched_functions_percent": 90.909096,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -26616,7 +26634,7 @@
         {
           "name": ".text",
           "size": "2839",
-          "fuzzy_match_percent": 9.71584,
+          "fuzzy_match_percent": 83.19749,
           "metadata": {}
         }
       ],
@@ -26669,7 +26687,7 @@
         {
           "name": "?OnLoadChunk@CJezyk@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "42",
-          "fuzzy_match_percent": 10.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
           },
@@ -26678,7 +26696,7 @@
         {
           "name": "??0CJezyk@@QAE@XZ",
           "size": "325",
-          "fuzzy_match_percent": 13.4,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CJezyk::CJezyk(void)"
           },
@@ -26714,7 +26732,7 @@
         {
           "name": "?OnActivateLevel@CJezyk@@UAEXXZ",
           "size": "254",
-          "fuzzy_match_percent": 1.4492754,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::OnActivateLevel(void)"
           },
@@ -26723,7 +26741,7 @@
         {
           "name": "?FUN0043d420@CJezyk@@QAEXXZ",
           "size": "176",
-          "fuzzy_match_percent": 1.754386,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CJezyk::FUN0043d420(void)"
           },
@@ -26732,7 +26750,7 @@
         {
           "name": "?OnPlaySoundEnd@CJezyk@@UAEXH@Z",
           "size": "36",
-          "fuzzy_match_percent": 11.111111,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::OnPlaySoundEnd(int)"
           },
@@ -26741,7 +26759,7 @@
         {
           "name": "?FUN0043d500@CJezyk@@QAEXXZ",
           "size": "230",
-          "fuzzy_match_percent": 1.4925373,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CJezyk::FUN0043d500(void)"
           },
@@ -26750,7 +26768,7 @@
         {
           "name": "?FUN0043d5f0@CJezyk@@QAEXXZ",
           "size": "35",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CJezyk::FUN0043d5f0(void)"
           },
@@ -26759,7 +26777,7 @@
         {
           "name": "?FUN0043d620@CJezyk@@QAEXXZ",
           "size": "402",
-          "fuzzy_match_percent": 0.7194245,
+          "fuzzy_match_percent": 26.215828,
           "metadata": {
             "demangled_name": "public: void __thiscall CJezyk::FUN0043d620(void)"
           },
@@ -26768,7 +26786,7 @@
         {
           "name": "?OnEnterState@WalkNaviPath@CJezyk@@UAEXXZ",
           "size": "212",
-          "fuzzy_match_percent": 1.8518518,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnEnterState(void)"
           },
@@ -26777,7 +26795,7 @@
         {
           "name": "?OnFrame@WalkNaviPath@CJezyk@@UAEXXZ",
           "size": "532",
-          "fuzzy_match_percent": 0.65789473,
+          "fuzzy_match_percent": 65.99342,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnFrame(void)"
           },
@@ -26786,7 +26804,7 @@
         {
           "name": "?OnDestinationPos@WalkNaviPath@CJezyk@@UAEXUD3DXVECTOR3@@@Z",
           "size": "160",
-          "fuzzy_match_percent": 2.2727273,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnDestinationPos(struct D3DXVECTOR3)"
           },
@@ -26795,7 +26813,7 @@
         {
           "name": "?OnCollisionObject@WalkNaviPath@CJezyk@@UAEXPAVcMagMeshObject@@@Z",
           "size": "198",
-          "fuzzy_match_percent": 1.6393442,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnCollisionObject(class cMagMeshObject *)"
           },
@@ -26804,7 +26822,7 @@
         {
           "name": "?OnAnimEnd@WalkNaviPath@CJezyk@@UAEXPAD@Z",
           "size": "21",
-          "fuzzy_match_percent": 16.666666,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnAnimEnd(char *)"
           },
@@ -26813,7 +26831,7 @@
         {
           "name": "?OnEnterState@Idle@CJezyk@@UAEXXZ",
           "size": "32",
-          "fuzzy_match_percent": 11.111111,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::Idle::OnEnterState(void)"
           },
@@ -32344,16 +32362,16 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 16.216454,
-        "total_code": "175299",
-        "matched_code": "25929",
-        "matched_code_percent": 14.7913,
+        "fuzzy_match_percent": 17.366055,
+        "total_code": "175720",
+        "matched_code": "27650",
+        "matched_code_percent": 15.735261,
         "matched_data_percent": 100.0,
-        "total_functions": 987,
-        "matched_functions": 255,
-        "matched_functions_percent": 25.835865,
+        "total_functions": 990,
+        "matched_functions": 267,
+        "matched_functions_percent": 26.969698,
         "complete_code": "22739",
-        "complete_code_percent": 12.971552,
+        "complete_code_percent": 12.940474,
         "complete_data_percent": 100.0,
         "total_units": 97,
         "complete_units": 26

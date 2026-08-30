@@ -10,7 +10,7 @@
 #include "cMagMeshObject.h"
 
 
-class CSplineCamera {
+class DLLEXPORT CSplineCamera : public CCamera {
 public:
 	/* 10090470 */ CSplineCamera(CSplineCamera* param_1);
 	/* 10090710 */ CSplineCamera* operator=(CSplineCamera* param_1);

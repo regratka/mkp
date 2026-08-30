@@ -4,7 +4,7 @@
 #include <globals.h>
 #include "cMagKernel.h"
 
-class CState : public cMagKernel {
+class DLLEXPORT CState : public cMagKernel {
 public:
 	/* 10001320 */ CState* operator=(CState* param_1);
 	/* 10011020 */ CState(CState* param_1);

@@ -368,7 +368,7 @@ public:
 	/* 1005BB40 */ bool CreateNavigationPath(char* param_1);
 	/* 1005C280 */ bool BuildNaviPoints(D3DXVECTOR3 param_1, D3DXVECTOR3 param_2);
 	/* 1005C610 */ int GetNaviPointsCount();
-	/* 1005C640 */ uchar GetNaviPointAt(uint* param_1, uint param_2);
+	/* 1005C640 */ D3DXVECTOR3 GetNaviPointAt(int param_1);
 	/* 1005C710 */ uchar GotoRandomLocation(uint* param_1);
 	/* 100393E0 */ char* CreateNiceString(char* param_1);
 

@@ -119,8 +119,8 @@ public:
 	/* 10012140 */ virtual void DisableCallHandler(char* param_1); /* vtbl 0x100 */
 
 	/* 10012240 */ virtual void DisableAllHandlers(); /* vtbl 0x104 */
-	/* 10012470 */ virtual void OnAction(); /* vtbl 0108 */
-	/* 10012480 */ virtual void OnAction(char* param_1); /* vtbl 0x10c */
+	/* 10012470 */ virtual void OnAction(); /* vtbl 010c */
+	/* 10012480 */ virtual void OnAction(char* param_1); /* vtbl 0x108 */
 
 	virtual void OnLostAdhesion(); /* vtbl 0x110 */
 

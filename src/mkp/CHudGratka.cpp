@@ -18,7 +18,7 @@ void CHudGratka::OnActivate() {
 }
 
 /* 42CC30-42CC77 00047	*/
-void CHudGratka::FUN0042CC30(bool param_1) {
+void CHudGratka::FUN0042cc30(bool param_1) {
 }
 
 /* 42CCF0-42CDFA 0010A	*/
@@ -30,43 +30,48 @@ void CHudGratka::OnFrame() {
 }
 
 /* 42CE80-42CF35 000B5	*/
-uchar CHudGratka::FUN0042ce80(int param_1) {
-	return 0;
+void CHudGratka::FUN0042ce80(int param_1) {
 }
 
 /* 42CF40-42CFF5 000B5	*/
-uchar CHudGratka::FUN0042cf40(int param_1) {
-	return 0;
+void CHudGratka::FUN0042cf40(int param_1) {
 }
 
 /* 42D000-42D029 00029	*/
-uchar CHudGratka::FUN0042d000() {
-	return 0;
+void CHudGratka::FUN0042d000() {
 }
 
 /* 42D030-42D129 000F9	*/
-uchar CHudGratka::FUN0042d030() {
-	return 0;
+void CHudGratka::FUN0042d030() {
+}
+
+/* 42D320-42D334 00014	*/
+void CHudGratka::FUN0042d320() {
 }
 
 /* 42D360-42D449 000E9	*/
-uchar CHudGratka::FUN0042d360(int param_1) {
-	return 0;
+void CHudGratka::FUN0042d360(int param_1) {
 }
 
 /* 42D450-42D457 00007	*/
-int CHudGratka::FUN0042d450() {
+uint CHudGratka::FUN0042d450() {
 	return 0;
 }
 
 /* 42D460-42D53C 000DC	*/
-uchar CHudGratka::FUN0042d460(int param_1) {
-	return 0;
+void CHudGratka::FUN0042d460(int param_1) {
+}
+
+/* 42D540-42D58C 0004C	*/
+void CHudGratka::FUN0042d540(bool param_1) {
+}
+
+/* 42D590-42D6D5 00145	*/
+void CHudGratka::FUN0042d590(bool param_1) {
 }
 
 /* 42D6E0-42D722 00042	*/
-uchar CHudGratka::FUN0042d6e0() {
-	return 0;
+void CHudGratka::FUN0042d6e0() {
 }
 
 /* 42D730-42D748 00018	*/
@@ -84,12 +89,10 @@ int CHudGratka::FUN0042d780(char* param_1) {
 
 /* 42D810-42D84E 0003E	*/
 void CHudGratka::FUN0042d810() {
-	
 }
 
 /* 42D850-42D874 00024	*/
 void CHudGratka::FUN0042d850() {
-	
 }
 
 /* 42DB90-42DD0A 0017A	*/
