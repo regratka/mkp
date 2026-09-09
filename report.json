@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 26.471895,
+    "fuzzy_match_percent": 26.528116,
     "total_code": "690379",
-    "matched_code": "110436",
-    "matched_code_percent": 15.99643,
+    "matched_code": "110838",
+    "matched_code_percent": 16.05466,
     "matched_data_percent": 100.0,
     "total_functions": 3293,
-    "matched_functions": 1089,
-    "matched_functions_percent": 33.07015,
+    "matched_functions": 1090,
+    "matched_functions_percent": 33.100517,
     "complete_code": "34336",
     "complete_code_percent": 4.9735003,
     "complete_data_percent": 100.0,
@@ -26619,14 +26619,14 @@
     {
       "name": "mkp/CJezyk",
       "measures": {
-        "fuzzy_match_percent": 83.19749,
+        "fuzzy_match_percent": 96.85468,
         "total_code": "2842",
-        "matched_code": "1908",
-        "matched_code_percent": 67.135826,
+        "matched_code": "2310",
+        "matched_code_percent": 81.280785,
         "matched_data_percent": 100.0,
         "total_functions": 22,
-        "matched_functions": 20,
-        "matched_functions_percent": 90.909096,
+        "matched_functions": 21,
+        "matched_functions_percent": 95.454544,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -26634,7 +26634,7 @@
         {
           "name": ".text",
           "size": "2839",
-          "fuzzy_match_percent": 83.19749,
+          "fuzzy_match_percent": 96.85468,
           "metadata": {}
         }
       ],
@@ -26775,11 +26775,11 @@
           "address": "1247"
         },
         {
-          "name": "?FUN0043d620@CJezyk@@QAEXXZ",
+          "name": "?FUN0043d620@CJezyk@@QAE_NXZ",
           "size": "402",
-          "fuzzy_match_percent": 26.215828,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall CJezyk::FUN0043d620(void)"
+            "demangled_name": "public: bool __thiscall CJezyk::FUN0043d620(void)"
           },
           "address": "1282"
         },
@@ -26795,7 +26795,7 @@
         {
           "name": "?OnFrame@WalkNaviPath@CJezyk@@UAEXXZ",
           "size": "532",
-          "fuzzy_match_percent": 65.99342,
+          "fuzzy_match_percent": 83.197365,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnFrame(void)"
           },
@@ -32362,14 +32362,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 17.366055,
+        "fuzzy_match_percent": 17.586937,
         "total_code": "175720",
-        "matched_code": "27650",
-        "matched_code_percent": 15.735261,
+        "matched_code": "28052",
+        "matched_code_percent": 15.964034,
         "matched_data_percent": 100.0,
         "total_functions": 990,
-        "matched_functions": 267,
-        "matched_functions_percent": 26.969698,
+        "matched_functions": 268,
+        "matched_functions_percent": 27.070707,
         "complete_code": "22739",
         "complete_code_percent": 12.940474,
         "complete_data_percent": 100.0,

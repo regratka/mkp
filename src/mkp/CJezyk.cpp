@@ -112,15 +112,33 @@ void CJezyk::FUN0043d5f0() {
 }
 
 /* 43D620-43D7B2 00192	*/
-void CJezyk::FUN0043d620() {
+bool CJezyk::FUN0043d620() {
+	float local_1c = 1e11;
+	AIControlPoint* this_00 = NULL;
 	unk_2738.clear();
-	D3DXVECTOR3 puVar3 = GetPosition();
-	GetObjectsInRadiusFromClass(5000000.0f, puVar3, "AIControlPoint", *((std::vector<cMagKernel*>*) &unk_2738));
-
-	for (int index = 0; index < unk_2738.size(); index++) {
-
-	}
+	GetObjectsInRadiusFromClass(5000000.0f, GetPosition(), "AIControlPoint", *((std::vector<cMagKernel*>*) &unk_2738));
 	
+	for (int index = 0; index < unk_2738.size(); index++) {
+		if (unk_2738[index]->FUN0043cee0()) {
+			float fVar9 = GetDistanceTo(this, unk_2738[index]->GetPosition());
+			if (fVar9 < local_1c) {
+				local_1c = fVar9;
+				unk_272c = unk_2738[index]->GetPosition();
+				this_00 = unk_2738[index];
+			}
+		}
+	}
+
+	unk_2738.clear();
+	if (this_00 != NULL) {
+		this_00->FUN0043cef0(false);
+		if (unk_2748 != NULL) {
+			unk_2748->FUN0043cef0(true);
+		} 
+		unk_2748 = this_00;
+		return true;
+	}
+	return false;
 }
 
 /* 419BA0-419BA1 00001	*/
@@ -165,17 +183,21 @@ void CJezyk::WalkNaviPath::OnFrame() {
 		return;
 	}
 
-	D3DXVECTOR3 pDVar4 = jezyk->GetNaviPointAt(jezyk->unk_2720);
-	pDVar4.y = jezyk->GetPosition().y;
-	jezyk->SetDestinationPos(pDVar4, 150.0f);
-	D3DXVECTOR3 auStack_54 = pDVar4 - jezyk->GetPosition();
+	float fVar1 = jezyk->GetNaviPointAt(jezyk->unk_2720).z;
+	D3DXVECTOR3 DStack_18 = jezyk->GetNaviPointAt(jezyk->unk_2720);
+	D3DXVECTOR3 DStack_c = jezyk->GetNaviPointAt(jezyk->unk_2720);
+	DStack_c.y = jezyk->GetPosition().y;
+	jezyk->SetDestinationPos(DStack_c, 150.0f);
+	D3DXVECTOR3 auStack_54 = DStack_18 - jezyk->GetPosition();
 	D3DXVec3Normalize(&auStack_54, &auStack_54);
 	jezyk->SetDestinationDir(auStack_54, 2);
-	float dist = D3DXVec3Length(&(jezyk->GetPlayerObject()->GetPosition() - jezyk->GetPosition()));
+	D3DXVECTOR3 Dstack_48 = jezyk->GetPlayerObject()->GetPosition() ;
+	D3DXVECTOR3 Dstack_40 = jezyk->GetPosition();
+	D3DXVECTOR3 diff = Dstack_48 - Dstack_40;
+	float dist = D3DXVec3Length(&diff);
 	if (dist < 200.0f) {
 		jezyk->unk_2720 = 0;
 		jezyk->unk_2720 = 0;
-		jezyk->patrolObject->GetPosition();
 		jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->patrolObject->GetPosition());
 	}
 }

@@ -50,7 +50,7 @@ public:
 	/* 43D4D0 */ void OnPlaySoundEnd(int param_1);
 	/* 43D500 */ void FUN0043d500();
 	/* 43D5F0 */ void FUN0043d5f0();
-	/* 43D620 */ void FUN0043d620();
+	/* 43D620 */ bool FUN0043d620();
 
 public:
 	/* 0x2658 */ char navigationPath[200];
