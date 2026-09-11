@@ -22,12 +22,12 @@ void CJezyk::OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2) {
 /* 43D110-43D255 00145	*/
 CJezyk::CJezyk() {
 	ZeroMemory(navigationPath, sizeof(navigationPath));
-	unk_2720 = 0;
-	unk_2724 = -1;
+	visitedNaviPoints = 0;
+	allCapturedSoundID = -1;
 	patrolObject = NULL;
-	unk_2748 = NULL;
-	unk_272c = D3DXVECTOR3(0.0f,0.0f,0.0f);
-	unk_2738.reserve(100);
+	nextWalkPoint = NULL;
+	destinationPosition = D3DXVECTOR3(0.0f,0.0f,0.0f);
+	walkPathPoints.reserve(100);
 }
 
 /* 43D280-43D2BC 0003C	*/
@@ -44,20 +44,20 @@ void CJezyk::OnActivateLevel() {
 	EnableFrustumPhysicsPause(false);
 	SetGravityAcceleration(200.0f);
 	patrolObject = MagGetObject("patrol01");
-	FUN0043d5f0();
+	StartRunning();
 	if (navigationPath[0] != '\0') {
 		CreateNavigationPath(navigationPath);
 	}
-	unk_2724 = LoadSound("data\\sounds\\papatka\\P_jezowa-2.wav");
+	allCapturedSoundID = LoadSound("data\\sounds\\papatka\\P_jezowa-2.wav");
 	GameSDK* sdk = ((GameSDK*) GetGame());
 	float fVar3 = sdk->FUN00401e10();
-	SetVolume(unk_2724, fVar3);
-	StopSound(unk_2724);
+	SetVolume(allCapturedSoundID, fVar3);
+	StopSound(allCapturedSoundID);
 	SetState(new WalkNaviPath());
 }
 
 /* 43D420-43D4D0 000B0	*/
-void CJezyk::FUN0043d420() {
+void CJezyk::OnLastCaptured() {
 	if (GetPlayerObject() != NULL) {
 		((CPlayerTPP*) GetPlayerObject())->FUN00409ff0(true);
 	}
@@ -67,8 +67,8 @@ void CJezyk::FUN0043d420() {
 		((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042d540(true);
 	}
 
-	EnableCallHandlerOnPlaySoundEnd(unk_2724);
-	PlaySoundA(unk_2724, false);
+	EnableCallHandlerOnPlaySoundEnd(allCapturedSoundID);
+	PlaySoundA(allCapturedSoundID, false);
 	CSplineCamera* camera = (CSplineCamera*) MagGetObject("Camera02"); 
 	camera->SetHandlerObject(this);
 	camera->SetDestTime(-1.0f);
@@ -79,13 +79,13 @@ void CJezyk::FUN0043d420() {
 
 /* 43D4D0-43D4F4 00024	*/
 void CJezyk::OnPlaySoundEnd(int param_1) {
-	if (param_1 == unk_2724) {
+	if (param_1 == allCapturedSoundID) {
 		GetGame()->LoadLevel("data\\levels\\Level03\\Level03.lev");
 	}
 }
 
 /* 43D500-43D5E6 000E6	*/
-void CJezyk::FUN0043d500() {
+void CJezyk::SetAsCaptured() {
 	EnableRendering(false);
 	EnableCollision(false);
 	if (((CPlayerTPP*) GetPlayerObject())->unk_3990 != NULL) {
@@ -98,7 +98,7 @@ void CJezyk::FUN0043d500() {
 		if (pcVar2 != NULL) {
 			pcVar2->OnAction();
 		}
-		FUN0043d420();
+		OnLastCaptured();
 		return;
 	}
 
@@ -106,36 +106,36 @@ void CJezyk::FUN0043d500() {
 }
 
 /* 43D5F0-43D613 00023	*/
-void CJezyk::FUN0043d5f0() {
+void CJezyk::StartRunning() {
 	InitAnimSeq("Run", 0, 51);
 	SetAnimFreq("Run", 35);
 }
 
 /* 43D620-43D7B2 00192	*/
-bool CJezyk::FUN0043d620() {
+bool CJezyk::FindNextControlPoint() {
 	float local_1c = 1e11;
 	AIControlPoint* this_00 = NULL;
-	unk_2738.clear();
-	GetObjectsInRadiusFromClass(5000000.0f, GetPosition(), "AIControlPoint", *((std::vector<cMagKernel*>*) &unk_2738));
+	walkPathPoints.clear();
+	GetObjectsInRadiusFromClass(5000000.0f, GetPosition(), "AIControlPoint", *((std::vector<cMagKernel*>*) &walkPathPoints));
 	
-	for (int index = 0; index < unk_2738.size(); index++) {
-		if (unk_2738[index]->FUN0043cee0()) {
-			float fVar9 = GetDistanceTo(this, unk_2738[index]->GetPosition());
+	for (int index = 0; index < walkPathPoints.size(); index++) {
+		if (walkPathPoints[index]->FUN0043cee0()) {
+			float fVar9 = GetDistanceTo(this, walkPathPoints[index]->GetPosition());
 			if (fVar9 < local_1c) {
 				local_1c = fVar9;
-				unk_272c = unk_2738[index]->GetPosition();
-				this_00 = unk_2738[index];
+				destinationPosition = walkPathPoints[index]->GetPosition();
+				this_00 = walkPathPoints[index];
 			}
 		}
 	}
 
-	unk_2738.clear();
+	walkPathPoints.clear();
 	if (this_00 != NULL) {
 		this_00->FUN0043cef0(false);
-		if (unk_2748 != NULL) {
-			unk_2748->FUN0043cef0(true);
+		if (nextWalkPoint != NULL) {
+			nextWalkPoint->FUN0043cef0(true);
 		} 
-		unk_2748 = this_00;
+		nextWalkPoint = this_00;
 		return true;
 	}
 	return false;
@@ -170,9 +170,9 @@ void CJezyk::WalkNaviPath::OnEnterState() {
 	jezyk->SetSpeedValue(350.0f);
 	jezyk->EnableCallHandler("OnFrame");
 	jezyk->SetMaxAngSpeed(500.0f);
-	jezyk->unk_2720 = 0;
-	jezyk->FUN0043d620();
-	jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->unk_272c);
+	jezyk->visitedNaviPoints = 0;
+	jezyk->FindNextControlPoint();
+	jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->destinationPosition);
 
 }
 
@@ -183,7 +183,7 @@ void CJezyk::WalkNaviPath::OnFrame() {
 		return;
 	}
 
-	D3DXVECTOR3 auStack_54 = D3DXVECTOR3(jezyk->GetNaviPointAt(jezyk->unk_2720).x,jezyk->GetNaviPointAt(jezyk->unk_2720).y, jezyk->GetNaviPointAt(jezyk->unk_2720).z);
+	D3DXVECTOR3 auStack_54 = D3DXVECTOR3(jezyk->GetNaviPointAt(jezyk->visitedNaviPoints).x,jezyk->GetNaviPointAt(jezyk->visitedNaviPoints).y, jezyk->GetNaviPointAt(jezyk->visitedNaviPoints).z);
 	auStack_54.y = jezyk->GetPosition().y;
 	jezyk->SetDestinationPos(auStack_54, 150.0f);
 	D3DXVECTOR3 Dstack_3c = jezyk->GetPosition();
@@ -195,8 +195,8 @@ void CJezyk::WalkNaviPath::OnFrame() {
 	D3DXVECTOR3 diff = Dstack_48 - Dstack_40;
 	float dist = D3DXVec3Length(&diff);
 	if (dist < 200.0f) {
-		jezyk->unk_2720 = 0;
-		jezyk->unk_2720 = 0;
+		jezyk->visitedNaviPoints = 0;
+		jezyk->visitedNaviPoints = 0;
 		D3DXVECTOR3 pcVar1 = jezyk->patrolObject->GetPosition();
 		jezyk->BuildNaviPoints(jezyk->GetPosition(), pcVar1);
 	}
@@ -204,25 +204,25 @@ void CJezyk::WalkNaviPath::OnFrame() {
 
 /* 43DAC0-43DB60 000A0	*/
 void CJezyk::WalkNaviPath::OnDestinationPos(D3DXVECTOR3 param_1) {
-	jezyk->unk_2720++;
-	if (jezyk->unk_2720 < jezyk->GetNaviPointsCount()) {
+	jezyk->visitedNaviPoints++;
+	if (jezyk->visitedNaviPoints < jezyk->GetNaviPointsCount()) {
 		return;
 	}
-	jezyk->unk_2720 = 0;
-	jezyk->FUN0043d620();
-	jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->unk_272c);
+	jezyk->visitedNaviPoints = 0;
+	jezyk->FindNextControlPoint();
+	jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->destinationPosition);
 }
 
 /* 43DB60-43DC26 000C6	*/
 void CJezyk::WalkNaviPath::OnCollisionObject(cMagMeshObject* param_1) {
 	if (strncmp("CJezyk", param_1->GetClassNameA(), 6) == 0) {
-		jezyk->unk_2720 = 0;
-		jezyk->FUN0043d620();
-		jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->unk_272c);
+		jezyk->visitedNaviPoints = 0;
+		jezyk->FindNextControlPoint();
+		jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->destinationPosition);
 	}
 
 	if (strncmp("CDomekJeza", param_1->GetClassNameA(), 10) == 0) {
-		jezyk->FUN0043d500();
+		jezyk->SetAsCaptured();
 	}
 }
 

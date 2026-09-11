@@ -26742,11 +26742,11 @@
           "address": "551"
         },
         {
-          "name": "?FUN0043d420@CJezyk@@QAEXXZ",
+          "name": "?OnLastCaptured@CJezyk@@QAEXXZ",
           "size": "176",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall CJezyk::FUN0043d420(void)"
+            "demangled_name": "public: void __thiscall CJezyk::OnLastCaptured(void)"
           },
           "address": "805"
         },
@@ -26760,29 +26760,29 @@
           "address": "981"
         },
         {
-          "name": "?FUN0043d500@CJezyk@@QAEXXZ",
+          "name": "?SetAsCaptured@CJezyk@@QAEXXZ",
           "size": "230",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall CJezyk::FUN0043d500(void)"
+            "demangled_name": "public: void __thiscall CJezyk::SetAsCaptured(void)"
           },
           "address": "1017"
         },
         {
-          "name": "?FUN0043d5f0@CJezyk@@QAEXXZ",
+          "name": "?StartRunning@CJezyk@@QAEXXZ",
           "size": "35",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall CJezyk::FUN0043d5f0(void)"
+            "demangled_name": "public: void __thiscall CJezyk::StartRunning(void)"
           },
           "address": "1247"
         },
         {
-          "name": "?FUN0043d620@CJezyk@@QAE_NXZ",
+          "name": "?FindNextControlPoint@CJezyk@@QAE_NXZ",
           "size": "402",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: bool __thiscall CJezyk::FUN0043d620(void)"
+            "demangled_name": "public: bool __thiscall CJezyk::FindNextControlPoint(void)"
           },
           "address": "1282"
         },

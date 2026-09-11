@@ -46,20 +46,20 @@ public:
 	/* 43D280 */ virtual ~CJezyk();
 	/* 43D2C0 */ void* EXP();
 	/* 43D320 */ void OnActivateLevel();
-	/* 43D420 */ void FUN0043d420();
+	/* 43D420 */ void OnLastCaptured();
 	/* 43D4D0 */ void OnPlaySoundEnd(int param_1);
-	/* 43D500 */ void FUN0043d500();
-	/* 43D5F0 */ void FUN0043d5f0();
-	/* 43D620 */ bool FUN0043d620();
+	/* 43D500 */ void SetAsCaptured();
+	/* 43D5F0 */ void StartRunning();
+	/* 43D620 */ bool FindNextControlPoint();
 
 public:
 	/* 0x2658 */ char navigationPath[200];
-	/* 0x2720 */ int unk_2720;
-	/* 0x2724 */ int unk_2724;
+	/* 0x2720 */ int visitedNaviPoints;
+	/* 0x2724 */ int allCapturedSoundID;
 	/* 0x2728 */ cMagKernel* patrolObject;
-	/* 0x272c */ D3DXVECTOR3 unk_272c;
-	/* 0x2738 */ std::vector<AIControlPoint*> unk_2738;
-	/* 0x2748 */ AIControlPoint* unk_2748;
+	/* 0x272c */ D3DXVECTOR3 destinationPosition;
+	/* 0x2738 */ std::vector<AIControlPoint*> walkPathPoints;
+	/* 0x2748 */ AIControlPoint* nextWalkPoint;
 };
 
 STATIC_ASSERT(sizeof(CJezyk) == 0x2750);

@@ -1481,11 +1481,11 @@
 ??1CJezyk@@UAE@XZ;CJezyk::~CJezyk;0x43d280;0x3c;__thiscall;;uchar;CJezyk*
 ?EXP@CJezyk@@QAEPAXXZ;CJezyk::EXP;0x43d2c0;0x5a;__thiscall;;void*;CJezyk*
 ?OnActivateLevel@CJezyk@@UAEXXZ;CJezyk::OnActivateLevel;0x43d320;0xfe;__thiscall;;void;CJezyk*
-?FUN0043d420@CJezyk@@QAEXXZ;CJezyk::FUN0043d420;0x43d420;0xb0;__thiscall;;void;CJezyk*
+?OnLastCaptured@CJezyk@@QAEXXZ;CJezyk::OnLastCaptured;0x43d420;0xb0;__thiscall;;void;CJezyk*
 ?OnPlaySoundEnd@CJezyk@@UAEXH@Z;CJezyk::OnPlaySoundEnd;0x43d4d0;0x24;__thiscall;;void;CJezyk*;int
-?FUN0043d500@CJezyk@@QAEXXZ;CJezyk::FUN0043d500;0x43d500;0xe6;__thiscall;;void;CJezyk*
-?FUN0043d5f0@CJezyk@@QAEXXZ;CJezyk::FUN0043d5f0;0x43d5f0;0x23;__thiscall;;void;CJezyk*
-?FUN0043d620@CJezyk@@QAE_NXZ;CJezyk::FUN0043d620;0x43d620;0x192;__thiscall;;bool;CJezyk*
+?SetAsCaptured@CJezyk@@QAEXXZ;CJezyk::SetAsCaptured;0x43d500;0xe6;__thiscall;;void;CJezyk*
+?StartRunning@CJezyk@@QAEXXZ;CJezyk::StartRunning;0x43d5f0;0x23;__thiscall;;void;CJezyk*
+?FindNextControlPoint@CJezyk@@QAE_NXZ;CJezyk::FindNextControlPoint;0x43d620;0x192;__thiscall;;bool;CJezyk*
 ?OnEnterState@WalkNaviPath@CJezyk@@UAEXXZ;CJezyk::WalkNaviPath::OnEnterState;0x43d7c0;0xd4;__thiscall;;void;WalkNaviPath*
 ?OnFrame@WalkNaviPath@CJezyk@@UAEXXZ;CJezyk::WalkNaviPath::OnFrame;0x43d8a0;0x214;__thiscall;;void;WalkNaviPath*
 ?OnDestinationPos@WalkNaviPath@CJezyk@@UAEXUD3DXVECTOR3@@@Z;CJezyk::WalkNaviPath::OnDestinationPos;0x43dac0;0xa0;__thiscall;;void;WalkNaviPath*;D3DXVECTOR3
