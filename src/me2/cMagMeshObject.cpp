@@ -2664,7 +2664,7 @@ int cMagMeshObject::GetNaviPointsCount() {
 }
 
 /* 1005C640-1005C705 000C5	*/
-uchar cMagMeshObject::GetNaviPointAt(uint* param_1, uint param_2) {
+D3DXVECTOR3 cMagMeshObject::GetNaviPointAt(int param_1) {
 	return 0;
 }
 
