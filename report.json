@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 26.528116,
+    "fuzzy_match_percent": 26.541061,
     "total_code": "690379",
-    "matched_code": "110838",
-    "matched_code_percent": 16.05466,
+    "matched_code": "111370",
+    "matched_code_percent": 16.131718,
     "matched_data_percent": 100.0,
     "total_functions": 3293,
-    "matched_functions": 1090,
-    "matched_functions_percent": 33.100517,
-    "complete_code": "34336",
-    "complete_code_percent": 4.9735003,
+    "matched_functions": 1091,
+    "matched_functions_percent": 33.130882,
+    "complete_code": "37178",
+    "complete_code_percent": 5.385158,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 32
+    "complete_units": 33
   },
   "units": [
     {
@@ -26619,22 +26619,25 @@
     {
       "name": "mkp/CJezyk",
       "measures": {
-        "fuzzy_match_percent": 96.85468,
+        "fuzzy_match_percent": 100.0,
         "total_code": "2842",
-        "matched_code": "2310",
-        "matched_code_percent": 81.280785,
+        "matched_code": "2842",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 22,
-        "matched_functions": 21,
-        "matched_functions_percent": 95.454544,
+        "matched_functions": 22,
+        "matched_functions_percent": 100.0,
+        "complete_code": "2842",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "2839",
-          "fuzzy_match_percent": 96.85468,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -26795,7 +26798,7 @@
         {
           "name": "?OnFrame@WalkNaviPath@CJezyk@@UAEXXZ",
           "size": "532",
-          "fuzzy_match_percent": 83.197365,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall CJezyk::WalkNaviPath::OnFrame(void)"
           },
@@ -26839,6 +26842,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -32362,19 +32366,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 17.586937,
+        "fuzzy_match_percent": 17.637808,
         "total_code": "175720",
-        "matched_code": "28052",
-        "matched_code_percent": 15.964034,
+        "matched_code": "28584",
+        "matched_code_percent": 16.266788,
         "matched_data_percent": 100.0,
         "total_functions": 990,
-        "matched_functions": 268,
-        "matched_functions_percent": 27.070707,
-        "complete_code": "22739",
-        "complete_code_percent": 12.940474,
+        "matched_functions": 269,
+        "matched_functions_percent": 27.171717,
+        "complete_code": "25581",
+        "complete_code_percent": 14.557819,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 26
+        "complete_units": 27
       }
     }
   ]

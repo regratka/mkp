@@ -183,14 +183,13 @@ void CJezyk::WalkNaviPath::OnFrame() {
 		return;
 	}
 
-	float fVar1 = jezyk->GetNaviPointAt(jezyk->unk_2720).z;
-	D3DXVECTOR3 DStack_18 = jezyk->GetNaviPointAt(jezyk->unk_2720);
-	D3DXVECTOR3 DStack_c = jezyk->GetNaviPointAt(jezyk->unk_2720);
-	DStack_c.y = jezyk->GetPosition().y;
-	jezyk->SetDestinationPos(DStack_c, 150.0f);
-	D3DXVECTOR3 auStack_54 = DStack_18 - jezyk->GetPosition();
-	D3DXVec3Normalize(&auStack_54, &auStack_54);
-	jezyk->SetDestinationDir(auStack_54, 2);
+	D3DXVECTOR3 auStack_54 = D3DXVECTOR3(jezyk->GetNaviPointAt(jezyk->unk_2720).x,jezyk->GetNaviPointAt(jezyk->unk_2720).y, jezyk->GetNaviPointAt(jezyk->unk_2720).z);
+	auStack_54.y = jezyk->GetPosition().y;
+	jezyk->SetDestinationPos(auStack_54, 150.0f);
+	D3DXVECTOR3 Dstack_3c = jezyk->GetPosition();
+	D3DXVECTOR3 DStack_48 = auStack_54 - Dstack_3c;
+	D3DXVec3Normalize(&DStack_48, &DStack_48);
+	jezyk->SetDestinationDir(DStack_48, 2);
 	D3DXVECTOR3 Dstack_48 = jezyk->GetPlayerObject()->GetPosition() ;
 	D3DXVECTOR3 Dstack_40 = jezyk->GetPosition();
 	D3DXVECTOR3 diff = Dstack_48 - Dstack_40;
@@ -198,7 +197,8 @@ void CJezyk::WalkNaviPath::OnFrame() {
 	if (dist < 200.0f) {
 		jezyk->unk_2720 = 0;
 		jezyk->unk_2720 = 0;
-		jezyk->BuildNaviPoints(jezyk->GetPosition(), jezyk->patrolObject->GetPosition());
+		D3DXVECTOR3 pcVar1 = jezyk->patrolObject->GetPosition();
+		jezyk->BuildNaviPoints(jezyk->GetPosition(), pcVar1);
 	}
 }
 
