@@ -23,14 +23,14 @@ cMagSkyBox::cMagSkyBox() {
 	unk_277c = 1.0f;
 	unk_2780 = 1.0f;
 	mesh = NULL;
-	unk_2778 = false;
-	unk_2ae4 = 0;
-	unk_2ae8 = 0;
+	shouldUseDayCycle = false;
+	currentDayTextureIndex = 0;
+	nextDayTextureIndex = 0;
 	unk_2aed = false;
-	unk_2af0 = 0.0;
+	lastTickTime = 0.0;
 	posY = -10.3f;
-	unk_2ae0 = 0xff;
-	unk_2aec = true;
+	ticksToChangeDay = 0xff;
+	shouldGoDayDown = true;
 }
 
 /* 100728E0-1007295C 0007C	*/
@@ -94,10 +94,10 @@ void cMagSkyBox::Render(D3DXMATRIX& param_1) {
 	MagTextureMgr::getInstance()->BeginFilterVertexColorTexture();
 	MagTextureMgr::getInstance()->BeginAlphaTexture();
 
-	if (unk_2778) {
+	if (shouldUseDayCycle) {
 		cpuTicker.Measure();
 		double dVar8 = cpuTicker.GetTickCountAsSeconds();
-		unk_2af0 = dVar8;
+		lastTickTime = dVar8;
 		double fVar11;
 		if (unk_1e98 == 0.0) {
 			fVar11 = 0.0;
@@ -106,7 +106,7 @@ void cMagSkyBox::Render(D3DXMATRIX& param_1) {
 			fVar11 = dVar8 - unk_1e98;
 		}
 
-		if (unk_2aec) {
+		if (shouldGoDayDown) {
 			DayDown(fVar11);
 		} else {
 			DayUp(fVar11);
@@ -123,18 +123,18 @@ void cMagSkyBox::DayDown(float param_1) {
 		return;
 	}
 
-	unk_2ae0--;
-	unk_1e98 = unk_2af0;
-	if (unk_2ae0 > 0) {
+	ticksToChangeDay--;
+	unk_1e98 = lastTickTime;
+	if (ticksToChangeDay > 0) {
 		return;
 	} 
-	unk_2ae0 = 0xff;
-	unk_2ae4++;
-	unk_2ae8 = unk_2ae4+1;
+	ticksToChangeDay = 0xff;
+	currentDayTextureIndex++;
+	nextDayTextureIndex = currentDayTextureIndex+1;
 
-	if (unk_2ae4 >= textures.size() - 1) {
-		unk_2ae4 = textures.size() - 1;
-		unk_2aec = false;
+	if (currentDayTextureIndex >= textures.size() - 1) {
+		currentDayTextureIndex = textures.size() - 1;
+		shouldGoDayDown = false;
 	}
 }
 
@@ -144,19 +144,19 @@ void cMagSkyBox::DayUp(float param_1) {
 		return;
 	}
 
-	unk_2ae0--;
-	unk_1e98 = unk_2af0;
-	if (unk_2ae0 > 0) {
+	ticksToChangeDay--;
+	unk_1e98 = lastTickTime;
+	if (ticksToChangeDay > 0) {
 		return;
 	} 
 
-	unk_2ae0 = 0;
-	unk_2ae4--;
-	unk_2ae8 = unk_2ae4-1;
+	ticksToChangeDay = 0;
+	currentDayTextureIndex--;
+	nextDayTextureIndex = currentDayTextureIndex-1;
 
-	if (unk_2ae4 < 0) {
-		unk_2ae4 = 0;
-		unk_2aec = true;
+	if (currentDayTextureIndex < 0) {
+		currentDayTextureIndex = 0;
+		shouldGoDayDown = true;
 	}
 }
 
