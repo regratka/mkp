@@ -753,7 +753,7 @@
 ;cMagCamera::scalar_destructor;0x10021660;0x57;__thiscall;;cMagCamera*;cMagCamera*;uchar
 ??0cMagSkyBox@@QAE@ABV0@@Z;cMagSkyBox::cMagSkyBox;0x100216c0;0x20c;__thiscall;;uchar;cMagSkyBox*;cMagSkyBox*
 ??4cMagSkyBox@@QAEAAV0@ABV0@@Z;cMagSkyBox::operator=;0x100218d0;0x2eb;__thiscall;;cMagSkyBox*;cMagSkyBox*;cMagSkyBox*
-;cMagSkyBox::scalar_destructor;0x10021bc0;0x57;__thiscall;;cMagSkyBox*;cMagSkyBox*;uchar
+??_EcMagSkyBox@@UAEPAXI@Z;cMagSkyBox::scalar_destructor;0x10021bc0;0x57;__thiscall;;cMagSkyBox*;cMagSkyBox*;uchar
 ?SetScale@cMagSun@@QAEXUD3DXVECTOR2@@@Z;cMagSun::SetScale;0x10021c20;0x17;__thiscall;;void;cMagSun*;uint;uint
 ?GetScale@cMagSun@@QAE?AUD3DXVECTOR2@@XZ;cMagSun::GetScale;0x10021c40;0x28;__thiscall;;D3DXVECTOR2;cMagSun*;uint*
 ??0cMagSun@@QAE@ABV0@@Z;cMagSun::cMagSun;0x10021c70;0x29c;__thiscall;;uchar;cMagSun*;cMagSun*
@@ -877,8 +877,7 @@
 ?OnPostRender@cMagGameObject@@QAEXXZ;cMagGameObject::OnPostRender;0x10026300;0x2e;__thiscall;;void;cMagGameObject*
 ?Render@cMagGameObject@@QAE_NXZ;cMagGameObject::Render;0x10026330;0x36d;__thiscall;;bool;cMagGameObject*
 ?RenderScene@cMagGameObject@@QAEXXZ;cMagGameObject::RenderScene;0x100266a0;0xe5;__thiscall;;void;cMagGameObject*
-?RestoreScene@cMagGameObject@@QAEXXZ;cMagGameObject::RestoreScene;0x10026790;0x3e0;__thiscall;;void;cMagGameObject*
-;Catch@10026b1d;0x10026b1d;0x1a;__fastcall;;uchar*;cMagLog*
+?RestoreScene@cMagGameObject@@QAEXXZ;cMagGameObject::RestoreScene;0x10026790;0x3d9;__thiscall;;void;cMagGameObject*
 ?CallHandlerOnUpdate_@cMagGameObject@@QAEXXZ;cMagGameObject::CallHandlerOnUpdate_;0x10026b70;0x112;__thiscall;;void;cMagGameObject*
 ?CallOnUpdateMenuSettings@cMagGameObject@@QAEXXZ;cMagGameObject::CallOnUpdateMenuSettings;0x10026c90;0x7b;__thiscall;;void;cMagGameObject*
 ?CallAllHandler@cMagGameObject@@QAEXPAEMM_N1@Z;cMagGameObject::CallAllHandler;0x10026d10;0x30f;__thiscall;;void;cMagGameObject*;uchar*;float;float;bool;bool
@@ -1844,7 +1843,8 @@
 ?TestSoundRanges@cMagMeshObject@@QAEXXZ;cMagMeshObject::TestSoundRanges;0x10058bf0;0x19f;__thiscall;;void;cMagMeshObject*
 ?MatrixToEuler@cMagMeshObject@@QAEXUD3DXMATRIX@@AAM11@Z;cMagMeshObject::MatrixToEuler;0x10058d90;0xf6;__thiscall;;void;cMagMeshObject*;D3DXMATRIX;float&;float&;float&
 ?RepairEuler@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::RepairEuler;0x10058e90;0xc;__thiscall;;void;cMagMeshObject*;bool
-?IsEnabled@cMagSkyBox@@QAE_NXZ;cMagMeshObject::EnableRendering;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
+?EnableRendering@cMagMeshObject@@QAE_NXZ;cMagMeshObject::EnableRendering;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
+?IsEnabled@cMagSkyBox@@QAE_NXZ;cMagSkyBox::IsEnabled;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
 ?OnAttachChild@cMagMeshObject@@UAEXPAV1@@Z;cMagMeshObject::OnAttachChild;0x10058eb0;0x7d;__thiscall;;void;cMagMeshObject*;cMagMeshObject*
 ?OnDetachChild@cMagMeshObject@@UAEXPAV1@@Z;cMagMeshObject::OnDetachChild;0x10058f30;0x85;__thiscall;;void;cMagMeshObject*;cMagMeshObject*
 ?SetDestRotation@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetDestRotation;0x10058fc0;0x42;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
@@ -2484,16 +2484,16 @@
 ;FUN_100727d0;0x100727d0;0xc;__stdcall;;uchar
 ??0cMagSkyBox@@QAE@XZ;cMagSkyBox::cMagSkyBox;0x100727f0;0xe3;__thiscall;;uchar;cMagSkyBox*
 ??1cMagSkyBox@@UAE@XZ;cMagSkyBox::~cMagSkyBox;0x100728e0;0x7c;__thiscall;;void;cMagSkyBox*
-?CreateSkyBox@cMagSkyBox@@QAEXPAD@Z;cMagSkyBox::CreateSkyBox;0x10072960;0x8b;__thiscall;;void;cMagSkyBox*;char*
+?CreateSkyBox@cMagSkyBox@@QAEXPAD@Z;cMagSkyBox::CreateSkyBox;0x10072960;0x166;__thiscall;;void;cMagSkyBox*;char*
 ;Catch@100729eb;0x100729eb;0x25;__stdcall;;uchar*
 ;FUN_10072a15;0x10072a15;0xb1;__stdcall;;uchar
 ?SetPosY@cMagSkyBox@@QAEXM@Z;cMagSkyBox::SetPosY;0x10072ad0;0xd;__thiscall;;void;cMagSkyBox*;float
 ?SetScale@cMagSkyBox@@QAEXUD3DXVECTOR3@@@Z;cMagSkyBox::SetScale;0x10072ae0;0x54;__thiscall;;void;cMagSkyBox*;D3DXVECTOR3
-?Render@cMagSkyBox@@QAEXAAUD3DXMATRIX@@@Z;cMagSkyBox::Render;0x10072b40;0x232;__thiscall;;void;cMagSkyBox*;uchar
+?Render@cMagSkyBox@@QAEXAAUD3DXMATRIX@@@Z;cMagSkyBox::Render;0x10072b40;0x232;__thiscall;;void;cMagSkyBox*;D3DXMATRIX&
 ?DayDown@cMagSkyBox@@QAEXM@Z;cMagSkyBox::DayDown;0x10072d80;0xaf;__thiscall;;void;cMagSkyBox*;float
 ?DayUp@cMagSkyBox@@QAEXM@Z;cMagSkyBox::DayUp;0x10072e30;0x5e;__thiscall;;void;cMagSkyBox*;float
 ?OnRender@cMagSkyBox@@UAEXXZ;cMagSkyBox::OnRender;0x10072e90;0x2f;__thiscall;;void;cMagSkyBox*
-?GetBBox@cMagSkyBox@@QAEXAAUD3DXVECTOR3@@0@Z;cMagSkyBox::GetBBox;0x10072ec0;0x61;__thiscall;;void;cMagSkyBox*;uchar;uchar
+?GetBBox@cMagSkyBox@@QAEXAAUD3DXVECTOR3@@0@Z;cMagSkyBox::GetBBox;0x10072ec0;0x61;__thiscall;;void;cMagSkyBox*;D3DXVECTOR3&;D3DXVECTOR3&
 ?AddTexture@cMagSkyBox@@QAEXPAD@Z;cMagSkyBox::AddTexture;0x10072f30;0x1c7;__thiscall;;void;cMagSkyBox*;char*
 ;FUN_10073140;0x10073140;0xa;__stdcall;;uchar
 ;FUN_10073150;0x10073150;0xc;__stdcall;;uchar
@@ -3478,7 +3478,6 @@
 ;CColTreeNode::FUN_100ad400;0x100ad400;0x1e;__thiscall;;uint*;CColTreeNode*;uchar
 ;CColTreeNode::CColTreeNode2;0x100ad420;0x93;__thiscall;;CColTreeNode*;CColTreeNode*;uint
 ;CColTreeNode::~CColTreeNode;0x100ad4c0;0x114;__thiscall;;CColTreeNode*;CColTreeNode*
-;Catch@100ad524;0x100ad524;0x6;__stdcall;;uchar*
 ;FUN_100ad5f0;0x100ad5f0;0x20f;__thiscall;;uchar;void*;uint;float*;float*
 ;FUN_100ad820;0x100ad820;0x267;__thiscall;;uchar;void*;int;float;float;float;float;float;float;void*;uint
 ;FUN_100ada90;0x100ada90;0x2d3;__thiscall;;uchar;void*;int;float;float;float;float;float;float
@@ -3679,8 +3678,7 @@
 ;CDynObjTree::CDynObjTree;0x100b9640;0x16f;__thiscall;;uint*;CDynObjTree*;uint
 ;FUN_100b97b0;0x100b97b0;0x1e;__thiscall;;uint*;void*;uchar
 ;CDynObjTree::CDynObjTree2;0x100b97d0;0x169;__thiscall;;uint*;CDynObjTree*
-;CDynObjTree::~CDynObjTree;0x100b9940;0xed;__thiscall;;void;CDynObjTree*
-;Catch@100b999a;0x100b999a;0x6;__stdcall;;uchar*
+;CDynObjTree::~CDynObjTree;0x100b9940;0xfe;__thiscall;;void;CDynObjTree*
 ;FUN_100b9a40;0x100b9a40;0x135;__thiscall;;uchar;void*;float;uint;float;float;uint;float;void*
 ;FUN_100b9b80;0x100b9b80;0x245;__thiscall;;uchar;void*;int
 ;FUN_100b9dd0;0x100b9dd0;0x59;__thiscall;;uchar;void*;int
@@ -3746,8 +3744,7 @@
 ;FUN_100bbd30;0x100bbd30;0xc;__stdcall;;uchar
 ;CPath::CPath;0x100bbd50;0x2d;__thiscall;;CPath*;CPath*
 ;CPath::~CPath;0x100bbd80;0x15;__thiscall;;void;CPath*
-;CPath::InitInner;0x100bbda0;0x1b1;__thiscall;;uint;CPath*;char*;int;int
-;Catch@100bbf3c;0x100bbf3c;0x6;__stdcall;;uint
+;CPath::InitInner;0x100bbda0;0x1b7;__thiscall;;uint;CPath*;char*;int;int
 ;CPath::InnerOnPath2;0x100bbf60;0x59;__thiscall;;uint;CPath*;int;uchar;uint;uint
 ;CPath::InnerOnPath;0x100bbfc0;0x33;__thiscall;;bool;CPath*;float;uint;uchar;uint
 ;CPath::Init;0x100bc000;0xcb;__thiscall;;bool;CPath*;cMagMeshObject*;char*;D3DXVECTOR3;D3DXVECTOR3
