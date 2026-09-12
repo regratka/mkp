@@ -753,7 +753,7 @@
 ;cMagCamera::scalar_destructor;0x10021660;0x57;__thiscall;;cMagCamera*;cMagCamera*;uchar
 ??0cMagSkyBox@@QAE@ABV0@@Z;cMagSkyBox::cMagSkyBox;0x100216c0;0x20c;__thiscall;;uchar;cMagSkyBox*;cMagSkyBox*
 ??4cMagSkyBox@@QAEAAV0@ABV0@@Z;cMagSkyBox::operator=;0x100218d0;0x2eb;__thiscall;;cMagSkyBox*;cMagSkyBox*;cMagSkyBox*
-;cMagSkyBox::scalar_destructor;0x10021bc0;0x57;__thiscall;;cMagSkyBox*;cMagSkyBox*;uchar
+??_EcMagSkyBox@@UAEPAXI@Z;cMagSkyBox::scalar_destructor;0x10021bc0;0x57;__thiscall;;cMagSkyBox*;cMagSkyBox*;uchar
 ?SetScale@cMagSun@@QAEXUD3DXVECTOR2@@@Z;cMagSun::SetScale;0x10021c20;0x17;__thiscall;;void;cMagSun*;uint;uint
 ?GetScale@cMagSun@@QAE?AUD3DXVECTOR2@@XZ;cMagSun::GetScale;0x10021c40;0x28;__thiscall;;D3DXVECTOR2;cMagSun*;uint*
 ??0cMagSun@@QAE@ABV0@@Z;cMagSun::cMagSun;0x10021c70;0x29c;__thiscall;;uchar;cMagSun*;cMagSun*
@@ -1844,7 +1844,8 @@
 ?TestSoundRanges@cMagMeshObject@@QAEXXZ;cMagMeshObject::TestSoundRanges;0x10058bf0;0x19f;__thiscall;;void;cMagMeshObject*
 ?MatrixToEuler@cMagMeshObject@@QAEXUD3DXMATRIX@@AAM11@Z;cMagMeshObject::MatrixToEuler;0x10058d90;0xf6;__thiscall;;void;cMagMeshObject*;D3DXMATRIX;float&;float&;float&
 ?RepairEuler@cMagMeshObject@@QAEX_N@Z;cMagMeshObject::RepairEuler;0x10058e90;0xc;__thiscall;;void;cMagMeshObject*;bool
-?IsEnabled@cMagSkyBox@@QAE_NXZ;cMagMeshObject::EnableRendering;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
+?EnableRendering@cMagMeshObject@@QAE_NXZ;cMagMeshObject::EnableRendering;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
+?IsEnabled@cMagSkyBox@@QAE_NXZ;cMagSkyBox::IsEnabled;0x10058ea0;0x7;__thiscall;;bool;cMagMeshObject*
 ?OnAttachChild@cMagMeshObject@@UAEXPAV1@@Z;cMagMeshObject::OnAttachChild;0x10058eb0;0x7d;__thiscall;;void;cMagMeshObject*;cMagMeshObject*
 ?OnDetachChild@cMagMeshObject@@UAEXPAV1@@Z;cMagMeshObject::OnDetachChild;0x10058f30;0x85;__thiscall;;void;cMagMeshObject*;cMagMeshObject*
 ?SetDestRotation@cMagMeshObject@@QAEXUD3DXVECTOR3@@@Z;cMagMeshObject::SetDestRotation;0x10058fc0;0x42;__thiscall;;void;cMagMeshObject*;D3DXVECTOR3
@@ -2489,11 +2490,11 @@
 ;FUN_10072a15;0x10072a15;0xb1;__stdcall;;uchar
 ?SetPosY@cMagSkyBox@@QAEXM@Z;cMagSkyBox::SetPosY;0x10072ad0;0xd;__thiscall;;void;cMagSkyBox*;float
 ?SetScale@cMagSkyBox@@QAEXUD3DXVECTOR3@@@Z;cMagSkyBox::SetScale;0x10072ae0;0x54;__thiscall;;void;cMagSkyBox*;D3DXVECTOR3
-?Render@cMagSkyBox@@QAEXAAUD3DXMATRIX@@@Z;cMagSkyBox::Render;0x10072b40;0x232;__thiscall;;void;cMagSkyBox*;uchar
+?Render@cMagSkyBox@@QAEXAAUD3DXMATRIX@@@Z;cMagSkyBox::Render;0x10072b40;0x232;__thiscall;;void;cMagSkyBox*;D3DXMATRIX&
 ?DayDown@cMagSkyBox@@QAEXM@Z;cMagSkyBox::DayDown;0x10072d80;0xaf;__thiscall;;void;cMagSkyBox*;float
 ?DayUp@cMagSkyBox@@QAEXM@Z;cMagSkyBox::DayUp;0x10072e30;0x5e;__thiscall;;void;cMagSkyBox*;float
 ?OnRender@cMagSkyBox@@UAEXXZ;cMagSkyBox::OnRender;0x10072e90;0x2f;__thiscall;;void;cMagSkyBox*
-?GetBBox@cMagSkyBox@@QAEXAAUD3DXVECTOR3@@0@Z;cMagSkyBox::GetBBox;0x10072ec0;0x61;__thiscall;;void;cMagSkyBox*;uchar;uchar
+?GetBBox@cMagSkyBox@@QAEXAAUD3DXVECTOR3@@0@Z;cMagSkyBox::GetBBox;0x10072ec0;0x61;__thiscall;;void;cMagSkyBox*;D3DXVECTOR3&;D3DXVECTOR3&
 ?AddTexture@cMagSkyBox@@QAEXPAD@Z;cMagSkyBox::AddTexture;0x10072f30;0x1c7;__thiscall;;void;cMagSkyBox*;char*
 ;FUN_10073140;0x10073140;0xa;__stdcall;;uchar
 ;FUN_10073150;0x10073150;0xc;__stdcall;;uchar

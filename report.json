@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 26.541061,
-    "total_code": "690379",
-    "matched_code": "111370",
-    "matched_code_percent": 16.131718,
+    "fuzzy_match_percent": 26.73316,
+    "total_code": "690386",
+    "matched_code": "111475",
+    "matched_code_percent": 16.146765,
     "matched_data_percent": 100.0,
-    "total_functions": 3293,
-    "matched_functions": 1091,
-    "matched_functions_percent": 33.130882,
+    "total_functions": 3294,
+    "matched_functions": 1096,
+    "matched_functions_percent": 33.272617,
     "complete_code": "37178",
-    "complete_code_percent": 5.385158,
+    "complete_code_percent": 5.385103,
     "complete_data_percent": 100.0,
     "total_units": 207,
     "complete_units": 33
@@ -14979,14 +14979,14 @@
     {
       "name": "me2/cMagMeshObject",
       "measures": {
-        "fuzzy_match_percent": 62.64011,
+        "fuzzy_match_percent": 62.65353,
         "total_code": "52149",
-        "matched_code": "11490",
-        "matched_code_percent": 22.03302,
+        "matched_code": "11497",
+        "matched_code_percent": 22.046444,
         "matched_data_percent": 100.0,
         "total_functions": 291,
-        "matched_functions": 197,
-        "matched_functions_percent": 67.69759,
+        "matched_functions": 198,
+        "matched_functions_percent": 68.04124,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -14994,7 +14994,7 @@
         {
           "name": ".text",
           "size": "52010",
-          "fuzzy_match_percent": 62.64011,
+          "fuzzy_match_percent": 62.65353,
           "metadata": {}
         }
       ],
@@ -16493,10 +16493,11 @@
           "address": "39083"
         },
         {
-          "name": "?IsEnabled@cMagSkyBox@@QAE_NXZ",
+          "name": "?EnableRendering@cMagMeshObject@@QAE_NXZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: bool __thiscall cMagSkyBox::IsEnabled(void)"
+            "demangled_name": "public: bool __thiscall cMagMeshObject::EnableRendering(void)"
           },
           "address": "39095"
         },
@@ -18204,18 +18205,22 @@
     {
       "name": "me2/cMagSkyBox",
       "measures": {
-        "fuzzy_match_percent": 1.6299661,
-        "total_code": "3379",
+        "fuzzy_match_percent": 40.642982,
+        "total_code": "3386",
+        "matched_code": "98",
+        "matched_code_percent": 2.8942707,
         "matched_data_percent": 100.0,
-        "total_functions": 16,
+        "total_functions": 17,
+        "matched_functions": 4,
+        "matched_functions_percent": 23.529411,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "3379",
-          "fuzzy_match_percent": 1.6299661,
+          "size": "3386",
+          "fuzzy_match_percent": 40.642982,
           "metadata": {}
         }
       ],
@@ -18223,6 +18228,7 @@
         {
           "name": "?RestoreSkyBox@cMagSkyBox@@QAEXXZ",
           "size": "1",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::RestoreSkyBox(void)"
           },
@@ -18231,6 +18237,7 @@
         {
           "name": "??0cMagSkyBox@@QAE@ABV0@@Z",
           "size": "524",
+          "fuzzy_match_percent": 81.61539,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSkyBox::cMagSkyBox(class cMagSkyBox const &)"
           },
@@ -18239,42 +18246,56 @@
         {
           "name": "??4cMagSkyBox@@QAEAAV0@ABV0@@Z",
           "size": "747",
+          "fuzzy_match_percent": 77.576035,
           "metadata": {
             "demangled_name": "public: class cMagSkyBox & __thiscall cMagSkyBox::operator=(class cMagSkyBox const &)"
           },
           "address": "525"
         },
         {
-          "name": "cMagSkyBox::scalar_destructor",
+          "name": "??_EcMagSkyBox@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagSkyBox::`vector deleting destructor'(unsigned int)"
+          },
           "address": "1272"
         },
         {
-          "name": "?InitDeviceObjects@cMagSkyBox@@QAEXPAVcMagGameObject@@@Z",
-          "size": "3",
+          "name": "?IsEnabled@cMagSkyBox@@QAE_NXZ",
+          "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall cMagSkyBox::InitDeviceObjects(class cMagGameObject *)"
+            "demangled_name": "public: bool __thiscall cMagSkyBox::IsEnabled(void)"
           },
           "address": "1359"
         },
         {
+          "name": "?InitDeviceObjects@cMagSkyBox@@QAEXPAVcMagGameObject@@@Z",
+          "size": "3",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMagSkyBox::InitDeviceObjects(class cMagGameObject *)"
+          },
+          "address": "1366"
+        },
+        {
           "name": "??0cMagSkyBox@@QAE@XZ",
           "size": "227",
-          "fuzzy_match_percent": 12.510204,
+          "fuzzy_match_percent": 52.142857,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSkyBox::cMagSkyBox(void)"
           },
-          "address": "1362"
+          "address": "1369"
         },
         {
           "name": "??1cMagSkyBox@@UAE@XZ",
           "size": "124",
-          "fuzzy_match_percent": 4.3,
+          "fuzzy_match_percent": 99.86667,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSkyBox::~cMagSkyBox(void)"
           },
-          "address": "1589"
+          "address": "1596"
         },
         {
           "name": "?CreateSkyBox@cMagSkyBox@@QAEXPAD@Z",
@@ -18283,7 +18304,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::CreateSkyBox(char *)"
           },
-          "address": "1713"
+          "address": "1720"
         },
         {
           "name": "?SetPosY@cMagSkyBox@@QAEXM@Z",
@@ -18292,7 +18313,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::SetPosY(float)"
           },
-          "address": "1852"
+          "address": "1859"
         },
         {
           "name": "?SetScale@cMagSkyBox@@QAEXUD3DXVECTOR3@@@Z",
@@ -18301,15 +18322,16 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::SetScale(struct D3DXVECTOR3)"
           },
-          "address": "1865"
+          "address": "1872"
         },
         {
           "name": "?Render@cMagSkyBox@@QAEXAAUD3DXMATRIX@@@Z",
           "size": "562",
+          "fuzzy_match_percent": 0.6097561,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::Render(struct D3DXMATRIX &)"
           },
-          "address": "1949"
+          "address": "1956"
         },
         {
           "name": "?DayDown@cMagSkyBox@@QAEXM@Z",
@@ -18318,7 +18340,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::DayDown(float)"
           },
-          "address": "2511"
+          "address": "2518"
         },
         {
           "name": "?DayUp@cMagSkyBox@@QAEXM@Z",
@@ -18327,7 +18349,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::DayUp(float)"
           },
-          "address": "2686"
+          "address": "2693"
         },
         {
           "name": "?OnRender@cMagSkyBox@@UAEXXZ",
@@ -18336,15 +18358,16 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagSkyBox::OnRender(void)"
           },
-          "address": "2780"
+          "address": "2787"
         },
         {
           "name": "?GetBBox@cMagSkyBox@@QAEXAAUD3DXVECTOR3@@0@Z",
           "size": "97",
+          "fuzzy_match_percent": 4.1666665,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::GetBBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
           },
-          "address": "2827"
+          "address": "2834"
         },
         {
           "name": "?AddTexture@cMagSkyBox@@QAEXPAD@Z",
@@ -18353,7 +18376,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSkyBox::AddTexture(char *)"
           },
-          "address": "2924"
+          "address": "2931"
         }
       ],
       "metadata": {
@@ -32347,16 +32370,16 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 29.580898,
-        "total_code": "514659",
-        "matched_code": "82786",
-        "matched_code_percent": 16.085602,
+        "fuzzy_match_percent": 29.838545,
+        "total_code": "514666",
+        "matched_code": "82891",
+        "matched_code_percent": 16.105785,
         "matched_data_percent": 100.0,
-        "total_functions": 2303,
-        "matched_functions": 822,
-        "matched_functions_percent": 35.692577,
+        "total_functions": 2304,
+        "matched_functions": 827,
+        "matched_functions_percent": 35.894096,
         "complete_code": "11597",
-        "complete_code_percent": 2.2533367,
+        "complete_code_percent": 2.2533062,
         "complete_data_percent": 100.0,
         "total_units": 110,
         "complete_units": 6

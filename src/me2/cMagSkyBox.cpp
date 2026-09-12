@@ -1,17 +1,16 @@
 #include "cMagSkyBox.h"
 
-/* 100216C0-100218CC 0020C	*/
-cMagSkyBox::cMagSkyBox(cMagSkyBox* param_1) {
+/* 10012910-10012911 00001	*/
+void cMagSkyBox::RestoreSkyBox() {
 }
 
-/* 100218D0-10021BBB 002EB	*/
-cMagSkyBox* cMagSkyBox::operator=(cMagSkyBox* param_1) {
-	return 0;
+/* 10058EA0-10058EA7 00007	*/
+bool cMagSkyBox::IsEnabled() {
+	return enableRendering;
 }
 
-/* 10021BC0-10021C17 00057	*/
-cMagSkyBox* cMagSkyBox::scalar_destructor(uchar param_1) {
-	return 0;
+/* 1005A5E0-1005A5E3 00003	*/
+void cMagSkyBox::InitDeviceObjects(cMagGameObject* param_1) {
 }
 
 /* 100727F0-100728D3 000E3	*/
@@ -35,7 +34,7 @@ void cMagSkyBox::SetScale(D3DXVECTOR3 param_1) {
 }
 
 /* 10072B40-10072D72 00232	*/
-void cMagSkyBox::Render(uchar param_1) {
+void cMagSkyBox::Render(D3DXMATRIX& param_1) {
 }
 
 /* 10072D80-10072E2F 000AF	*/
@@ -51,7 +50,7 @@ void cMagSkyBox::OnRender() {
 }
 
 /* 10072EC0-10072F21 00061	*/
-void cMagSkyBox::GetBBox(uchar param_1, uchar param_2) {
+void cMagSkyBox::GetBBox(D3DXVECTOR3& param_1, D3DXVECTOR3& param_2) {
 }
 
 /* 10072F30-100730F7 001C7	*/
