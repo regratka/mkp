@@ -498,7 +498,7 @@ public:
 	/* 0x1b58 */ bool unk_1b58;
 	/* 0x1b59 */ uchar f_1b59[0x1b60 - 0x1b59];
 	/* 0x1b60 */ CCPUTicker cpuTicker;
-	/* 0x1e98 */ int unk_1e98;
+	/* 0x1e98 */ float unk_1e98;
 	/* 0x1e9c */ IStudioMesh* studioMesh;
 	/* 0x1ea0 */ cStaticMesh* staticMesh;
 	/* 0x1ea4 */ bool unk_1ea4;
