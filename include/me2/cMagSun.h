@@ -13,14 +13,14 @@ public:
 
 	/* 10021C20-10021C37 00017	*/ 
 	void SetScale(D3DXVECTOR2 param_1) {
-		unk_d74 = param_1;
+		scale = param_1;
 	}
 
 	/* 10021C40-10021C68 00028	*/
 	D3DXVECTOR2 cMagSun::GetScale() {
 		D3DXVECTOR2 fVar1;
-		fVar1.x = unk_d74.x;
-		fVar1.y = unk_d74.y;
+		fVar1.x = scale.x;
+		fVar1.y = scale.y;
 		return fVar1;
 	}
 
@@ -47,24 +47,24 @@ public:
 	/* 10073D80 */ void Update();
 
 private:
-	/* 0xd4c */ bool unk_d4c;
-	/* 0xd4d */ bool unk_d4d;
+	/* 0xd4c */ bool isRenderingEnabled;
+	/* 0xd4d */ bool isAnimTextureEnabled;
 	/* 0xd50 */ int animTextureFPS;
 	/* 0xd54 */ int animTextureFrameCount;
-	/* 0xd58 */ float unk_d58;
-	/* 0xd5c */ float unk_d5c;
-	/* 0xd60 */ std::vector<IDirect3DTexture8*> unk_d60;
+	/* 0xd58 */ float lastTextureChangeTime;
+	/* 0xd5c */ float currentAnimTextureIndex;
+	/* 0xd60 */ std::vector<IDirect3DTexture8*> animTextures;
 	/* 0xd70 */ IDirect3DTexture8* texture;
-	/* 0xd74 */ D3DXVECTOR2 unk_d74;
-	/* 0xd7c */ float unk_d7c;
-	/* 0xd80 */ float unk_d80;
-	/* 0xd84 */ float unk_d84;
+	/* 0xd74 */ D3DXVECTOR2 scale;
+	/* 0xd7c */ float yaw;
+	/* 0xd80 */ float pitch;
+	/* 0xd84 */ float roll;
 	/* 0xd88 */ IDirect3DVertexBuffer8* buffer;
 	/* 0xd90 */ cMagMeshObject meshObject;
-	/* 0x33e8 */ D3DXVECTOR3 unk_33e8;
+	/* 0x33e8 */ D3DXVECTOR3 cameraPosition;
 	/* 0x33f4 */ D3DXMATRIX unk_33f4;
-	/* 0x3434 */ float unk_3434;
-	/* 0x3438 */ float unk_3438;
+	/* 0x3434 */ float oldAngleXZ;
+	/* 0x3438 */ float oldAngleYZ;
 	/* 0x343c */ float angleXZ;
 	/* 0x3440 */ float angleYZ;
 	/* 0x3444 */ float distance;

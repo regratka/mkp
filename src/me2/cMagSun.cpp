@@ -29,22 +29,22 @@ cMagSun::cMagSun() {
 	SetClassName("cMagSun");
 	texture = NULL;
 	buffer = NULL;
-	unk_d7c = 0.0f;
-	unk_d80 = 0.0f;
-	unk_d84 = 0.0f;
+	yaw = 0.0f;
+	pitch = 0.0f;
+	roll = 0.0f;
 	magLog.FileLog("Create Sun ... ");
 	CreateQuad(&buffer, D3DPOOL_MANAGED, 1.0f, -1, cMagEngineMgr::getInstance()->engine, 1.0f, 1.0f, true);
-	unk_d4c = true;
-	unk_d4d = false;
+	isRenderingEnabled = true;
+	isAnimTextureEnabled = false;
 	animTextureFPS = 30;
 	animTextureFrameCount = 0;
-	unk_d58 = 0.0f;
-	unk_d5c = 0.0f;
+	lastTextureChangeTime = 0.0f;
+	currentAnimTextureIndex = 0.0f;
 	meshObject.SetPosition(D3DXVECTOR3(0.0f, 0.0f, 1000.0f));
 	meshObject.EnableRendering(false);
-	unk_33e8 = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
-	unk_3434 = 0.0f;
-	unk_3438 = 0.0f;
+	cameraPosition = D3DXVECTOR3(0.0f, 0.0f, 0.0f);
+	oldAngleXZ = 0.0f;
+	oldAngleYZ = 0.0f;
 	angleXZ = 0.0f;
 	angleYZ = 0.0f;
 	distance = 1000.0f;
@@ -54,7 +54,7 @@ cMagSun::cMagSun() {
 cMagSun::~cMagSun() {
 	DeleteTexture();
 	DeleteQuad();
-	unk_d60.clear();
+	animTextures.clear();
 }
 
 /* 10073410-1007345A 0004A	*/
@@ -114,9 +114,9 @@ void cMagSun::Render(D3DXMATRIX param_1) {
 
 	D3DXMatrixTranslation(&local_364, meshObject.GetPosition().x, meshObject.GetPosition().y, meshObject.GetPosition().z);
 	D3DXMATRIX Dstack_240;
-	D3DXMatrixRotationYawPitchRoll(&Dstack_240, unk_d7c, unk_d80, unk_d84);
+	D3DXMatrixRotationYawPitchRoll(&Dstack_240, yaw, pitch, roll);
 	D3DXMATRIX Dstack_100;
-	D3DXMatrixScaling(&Dstack_100, unk_d74.x, unk_d74.y, 1.0f);
+	D3DXMatrixScaling(&Dstack_100, scale.x, scale.y, 1.0f);
 
 	D3DXMATRIX DStack_180;
 	D3DXMatrixMultiply(&DStack_180, &Dstack_100, &Dstack_240);
@@ -148,7 +148,7 @@ void cMagSun::Render(D3DXMATRIX param_1) {
 		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHAREF, 2);
 		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHAFUNC, D3DCMP_GREATEREQUAL);
 		
-		if (!unk_d4d) {
+		if (!isAnimTextureEnabled) {
 			cMagEngineMgr::getInstance()->engine->SetTexture(0, texture);
 		} else {
 			RenderAnimTexture();
@@ -176,7 +176,7 @@ void cMagSun::DeleteQuad() {
 
 /* 10073A00-10073A5D 0005D	*/
 void cMagSun::OnRender() {
-	if (!unk_d4c) {
+	if (!isRenderingEnabled) {
 		return;
 	}
 
@@ -188,41 +188,41 @@ void cMagSun::OnRender() {
 
 /* 10073A60-10073A6D 0000D	*/
 void cMagSun::EnableRendering(bool param_1) {
-	unk_d4c = param_1;
+	isRenderingEnabled = param_1;
 }
 
 /* 10073A70-10073A77 00007	*/
 bool cMagSun::IsEnabled() {
-	return unk_d4c;
+	return isRenderingEnabled;
 }
 
 /* 10073A80-10073C47 001C7	*/
 void cMagSun::AddAnimTexture(char* param_1) {
-	unk_d60.push_back(MagTextureMgr::getInstance()->GetTexture(param_1));
+	animTextures.push_back(MagTextureMgr::getInstance()->GetTexture(param_1));
 }
 
 /* 10073C50-10073D2C 000DC	*/
 void cMagSun::RenderAnimTexture() {
 	float fVar1 = timeGetTime() * 0.001f;
-    if (fVar1 - unk_d58 > 1.0f / animTextureFPS) {
-		unk_d58 = fVar1;
-		unk_d5c += 1.0f;
+    if (fVar1 - lastTextureChangeTime > 1.0f / animTextureFPS) {
+		lastTextureChangeTime = fVar1;
+		currentAnimTextureIndex += 1.0f;
     }
 
-	if (animTextureFrameCount <= unk_d5c) {
-		unk_d5c = 0.0f;
+	if (animTextureFrameCount <= currentAnimTextureIndex) {
+		currentAnimTextureIndex = 0.0f;
 	}
 
-	if (unk_d60.size() <= unk_d5c) {
-		unk_d5c = 0.0f;
+	if (animTextures.size() <= currentAnimTextureIndex) {
+		currentAnimTextureIndex = 0.0f;
 	}
 
-	cMagEngineMgr::getInstance()->engine->SetTexture(0, unk_d60[unk_d5c]);
+	cMagEngineMgr::getInstance()->engine->SetTexture(0, animTextures[currentAnimTextureIndex]);
 }
 
 /* 10073D30-10073D3D 0000D	*/
 void cMagSun::EnableAnimTexture(bool param_1) {
-	unk_d4d = param_1;
+	isAnimTextureEnabled = param_1;
 }
 
 /* 10073D40-10073D4D 0000D	*/
@@ -249,10 +249,10 @@ void cMagSun::SetDistance(float param_1) {
 void cMagSun::Update() {
 
 	meshObject.SetPosition(D3DXVECTOR3(0.0f, 0.0f, distance));
-	meshObject.Rotate(D3DXVECTOR3(0.0f, 1.0f, 0.0f), -unk_3434);
-	meshObject.Rotate(meshObject.GetRight(), -unk_3438);
-	unk_3434 = angleXZ;
-	unk_3438 = angleYZ;
+	meshObject.Rotate(D3DXVECTOR3(0.0f, 1.0f, 0.0f), -oldAngleXZ);
+	meshObject.Rotate(meshObject.GetRight(), -oldAngleYZ);
+	oldAngleXZ = angleXZ;
+	oldAngleYZ = angleYZ;
 	
 	D3DXVECTOR3 local_30(0.0f, 0.0f, 0.0f);
 	if (cMagEngineMgr::getInstance()->gameObject->GetActiveCamera() != NULL) {
@@ -261,9 +261,9 @@ void cMagSun::Update() {
 
 	D3DXVECTOR3 local_c = meshObject.GetPosition();
 	D3DXVECTOR3 fVar8 = local_30 - local_c;
-	if (unk_33e8 != local_30) {
+	if (cameraPosition != local_30) {
 		meshObject.SetDirection(fVar8);
-		unk_33e8 = local_30;
+		cameraPosition = local_30;
 	}
 	
 	float fVar9 = angleXZ;
