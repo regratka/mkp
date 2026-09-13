@@ -94,7 +94,15 @@ void cMagSun::Render(D3DXMATRIX param_1) {
 	cMagEngineMgr::getInstance()->engine->SetTransform(D3DTS_VIEW, &auStack_280);
 	D3DXMATRIX DStack_2e4;
 	D3DXMatrixTranspose(&DStack_2e4, &param_1);
-	D3DXMATRIX DStack_324 = DStack_2e4;
+	D3DXMATRIX DStack_324;
+	DStack_324(0, 0) = DStack_2e4(0, 0);
+	DStack_324(0, 1) = DStack_2e4(0, 1);
+	DStack_324(0, 2) = DStack_2e4(0, 2);
+	DStack_324(1, 0) = DStack_2e4(1, 0);
+	DStack_324(1, 1) = DStack_2e4(1, 1);
+	DStack_324(1, 2) = DStack_2e4(1, 2);
+	DStack_324(2, 0) = DStack_2e4(2, 0);
+	DStack_324(2, 1) = DStack_2e4(2, 1);
 	DStack_324(3,2) = 0.0f;
 	DStack_324(3,1) = 0.0f;
 	DStack_324(3,0) = 0.0f;
@@ -102,6 +110,7 @@ void cMagSun::Render(D3DXMATRIX param_1) {
 	DStack_324(1,3) = 0.0f;
 	DStack_324(0,3) = 0.0f;
 	DStack_324(3,3) = 1.0f;
+	DStack_324(2, 2) = DStack_2e4(2, 2);
 
 	D3DXMatrixTranslation(&local_364, meshObject.GetPosition().x, meshObject.GetPosition().y, meshObject.GetPosition().z);
 	D3DXMATRIX Dstack_240;
@@ -128,7 +137,7 @@ void cMagSun::Render(D3DXMATRIX param_1) {
 	MagTextureMgr::getInstance()->BeginFilterVertexColorTexture();
 	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ALPHAOP, 2);
 	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_TEXTURETRANSFORMFLAGS, 0);
-	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ADDRESSU, 4);
+	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ADDRESSU, 3);
 	cMagEngineMgr::getInstance()->engine->SetTextureStageState(0, D3DTSS_ADDRESSV, 3);
 	if (buffer == NULL) {
 		magLog.CrashLog("cMagSun Quad is NULL (error)");
@@ -139,10 +148,10 @@ void cMagSun::Render(D3DXMATRIX param_1) {
 		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHAREF, 2);
 		cMagEngineMgr::getInstance()->engine->SetRenderState(D3DRS_ALPHAFUNC, D3DCMP_GREATEREQUAL);
 		
-		if (unk_d4d) {
-			RenderAnimTexture();
-		} else {
+		if (!unk_d4d) {
 			cMagEngineMgr::getInstance()->engine->SetTexture(0, texture);
+		} else {
+			RenderAnimTexture();
 		}
 		cMagEngineMgr::getInstance()->engine->SetVertexShader(0x142);
 		cMagEngineMgr::getInstance()->engine->SetStreamSource(0, buffer, 0x24);

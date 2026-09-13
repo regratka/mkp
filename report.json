@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 27.826546,
+    "fuzzy_match_percent": 27.8474,
     "total_code": "690832",
-    "matched_code": "120509",
-    "matched_code_percent": 17.444038,
+    "matched_code": "121817",
+    "matched_code_percent": 17.633375,
     "matched_data_percent": 100.0,
     "total_functions": 3298,
-    "matched_functions": 1136,
-    "matched_functions_percent": 34.445118,
+    "matched_functions": 1137,
+    "matched_functions_percent": 34.47544,
     "complete_code": "40783",
     "complete_code_percent": 5.903461,
     "complete_data_percent": 100.0,
@@ -19176,14 +19176,14 @@
     {
       "name": "me2/cMagSun",
       "measures": {
-        "fuzzy_match_percent": 97.29727,
+        "fuzzy_match_percent": 100.0,
         "total_code": "5331",
-        "matched_code": "4023",
-        "matched_code_percent": 75.464264,
+        "matched_code": "5331",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 27,
-        "matched_functions": 26,
-        "matched_functions_percent": 96.296295,
+        "matched_functions": 27,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -19191,7 +19191,7 @@
         {
           "name": ".text",
           "size": "5331",
-          "fuzzy_match_percent": 97.29727,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -19325,7 +19325,7 @@
         {
           "name": "?Render@cMagSun@@QAEXUD3DXMATRIX@@@Z",
           "size": "1308",
-          "fuzzy_match_percent": 88.98452,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::Render(struct D3DXMATRIX)"
           },
@@ -32426,14 +32426,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 31.302227,
+        "fuzzy_match_percent": 31.330198,
         "total_code": "515112",
-        "matched_code": "91925",
-        "matched_code_percent": 17.845634,
+        "matched_code": "93233",
+        "matched_code_percent": 18.099558,
         "matched_data_percent": 100.0,
         "total_functions": 2308,
-        "matched_functions": 867,
-        "matched_functions_percent": 37.56499,
+        "matched_functions": 868,
+        "matched_functions_percent": 37.60832,
         "complete_code": "15202",
         "complete_code_percent": 2.9512029,
         "complete_data_percent": 100.0,
