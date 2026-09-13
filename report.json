@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 27.333523,
+    "fuzzy_match_percent": 27.826546,
     "total_code": "690832",
-    "matched_code": "116577",
-    "matched_code_percent": 16.874868,
+    "matched_code": "120509",
+    "matched_code_percent": 17.444038,
     "matched_data_percent": 100.0,
     "total_functions": 3298,
-    "matched_functions": 1113,
-    "matched_functions_percent": 33.747726,
+    "matched_functions": 1136,
+    "matched_functions_percent": 34.445118,
     "complete_code": "40783",
     "complete_code_percent": 5.903461,
     "complete_data_percent": 100.0,
@@ -19176,14 +19176,14 @@
     {
       "name": "me2/cMagSun",
       "measures": {
-        "fuzzy_match_percent": 33.40745,
+        "fuzzy_match_percent": 97.29727,
         "total_code": "5331",
-        "matched_code": "91",
-        "matched_code_percent": 1.7069968,
+        "matched_code": "4023",
+        "matched_code_percent": 75.464264,
         "matched_data_percent": 100.0,
         "total_functions": 27,
-        "matched_functions": 3,
-        "matched_functions_percent": 11.111112,
+        "matched_functions": 26,
+        "matched_functions_percent": 96.296295,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -19191,7 +19191,7 @@
         {
           "name": ".text",
           "size": "5331",
-          "fuzzy_match_percent": 33.40745,
+          "fuzzy_match_percent": 97.29727,
           "metadata": {}
         }
       ],
@@ -19208,7 +19208,7 @@
         {
           "name": "?SetScale@cMagSun@@QAEXUD3DXVECTOR2@@@Z",
           "size": "23",
-          "fuzzy_match_percent": 20.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::SetScale(struct D3DXVECTOR2)"
           },
@@ -19217,7 +19217,7 @@
         {
           "name": "?GetScale@cMagSun@@QAE?AUD3DXVECTOR2@@XZ",
           "size": "40",
-          "fuzzy_match_percent": 40.909092,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR2 __thiscall cMagSun::GetScale(void)"
           },
@@ -19226,7 +19226,7 @@
         {
           "name": "??0cMagSun@@QAE@ABV0@@Z",
           "size": "668",
-          "fuzzy_match_percent": 93.58741,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSun::cMagSun(class cMagSun const &)"
           },
@@ -19235,7 +19235,7 @@
         {
           "name": "??4cMagSun@@QAEAAV0@ABV0@@Z",
           "size": "802",
-          "fuzzy_match_percent": 95.59606,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagSun & __thiscall cMagSun::operator=(class cMagSun const &)"
           },
@@ -19262,7 +19262,7 @@
         {
           "name": "?SetAnimTextureFPS@cMagSun@@QAEXH@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::SetAnimTextureFPS(int)"
           },
@@ -19271,7 +19271,7 @@
         {
           "name": "?SetAnimTextureFrameCount@cMagSun@@QAEXH@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::SetAnimTextureFrameCount(int)"
           },
@@ -19280,7 +19280,7 @@
         {
           "name": "??0cMagSun@@QAE@XZ",
           "size": "394",
-          "fuzzy_match_percent": 24.82653,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSun::cMagSun(void)"
           },
@@ -19289,7 +19289,7 @@
         {
           "name": "??1cMagSun@@UAE@XZ",
           "size": "193",
-          "fuzzy_match_percent": 56.82,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSun::~cMagSun(void)"
           },
@@ -19298,7 +19298,7 @@
         {
           "name": "?RestoreSun@cMagSun@@QAEXXZ",
           "size": "74",
-          "fuzzy_match_percent": 3.8461537,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::RestoreSun(void)"
           },
@@ -19307,7 +19307,7 @@
         {
           "name": "?AddTexture@cMagSun@@QAEPAUIDirect3DTexture8@@PBD@Z",
           "size": "62",
-          "fuzzy_match_percent": 6.6666665,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct IDirect3DTexture8* __thiscall cMagSun::AddTexture(char const *)"
           },
@@ -19316,7 +19316,7 @@
         {
           "name": "?GetPosition@cMagSun@@UAE?AUD3DXVECTOR3@@XZ",
           "size": "30",
-          "fuzzy_match_percent": 7.6666665,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual struct D3DXVECTOR3 __thiscall cMagSun::GetPosition(void)"
           },
@@ -19325,7 +19325,7 @@
         {
           "name": "?Render@cMagSun@@QAEXUD3DXMATRIX@@@Z",
           "size": "1308",
-          "fuzzy_match_percent": 0.30959752,
+          "fuzzy_match_percent": 88.98452,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::Render(struct D3DXMATRIX)"
           },
@@ -19334,7 +19334,7 @@
         {
           "name": "?DeleteQuad@cMagSun@@QAEXXZ",
           "size": "31",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::DeleteQuad(void)"
           },
@@ -19343,7 +19343,7 @@
         {
           "name": "?OnRender@cMagSun@@UAEXXZ",
           "size": "93",
-          "fuzzy_match_percent": 2.857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagSun::OnRender(void)"
           },
@@ -19352,7 +19352,7 @@
         {
           "name": "?EnableRendering@cMagSun@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::EnableRendering(bool)"
           },
@@ -19361,7 +19361,7 @@
         {
           "name": "?IsEnabled@cMagSun@@QAE_NXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagSun::IsEnabled(void)"
           },
@@ -19370,7 +19370,7 @@
         {
           "name": "?AddAnimTexture@cMagSun@@QAEXPAD@Z",
           "size": "455",
-          "fuzzy_match_percent": 0.5681818,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::AddAnimTexture(char *)"
           },
@@ -19379,7 +19379,7 @@
         {
           "name": "?RenderAnimTexture@cMagSun@@QAEXXZ",
           "size": "220",
-          "fuzzy_match_percent": 1.5384616,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::RenderAnimTexture(void)"
           },
@@ -19388,7 +19388,7 @@
         {
           "name": "?EnableAnimTexture@cMagSun@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::EnableAnimTexture(bool)"
           },
@@ -19397,7 +19397,7 @@
         {
           "name": "?deg2rad@cMagSun@@QAEMM@Z",
           "size": "13",
-          "fuzzy_match_percent": 46.666668,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall cMagSun::deg2rad(float)"
           },
@@ -19406,7 +19406,7 @@
         {
           "name": "?SetAngleXZ@cMagSun@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::SetAngleXZ(float)"
           },
@@ -19415,7 +19415,7 @@
         {
           "name": "?SetAngleYZ@cMagSun@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::SetAngleYZ(float)"
           },
@@ -19424,7 +19424,7 @@
         {
           "name": "?SetDistance@cMagSun@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::SetDistance(float)"
           },
@@ -19433,7 +19433,7 @@
         {
           "name": "?Update@cMagSun@@QAEXXZ",
           "size": "736",
-          "fuzzy_match_percent": 0.4878049,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSun::Update(void)"
           },
@@ -32426,14 +32426,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 30.641018,
+        "fuzzy_match_percent": 31.302227,
         "total_code": "515112",
-        "matched_code": "87993",
-        "matched_code_percent": 17.082304,
+        "matched_code": "91925",
+        "matched_code_percent": 17.845634,
         "matched_data_percent": 100.0,
         "total_functions": 2308,
-        "matched_functions": 844,
-        "matched_functions_percent": 36.56846,
+        "matched_functions": 867,
+        "matched_functions_percent": 37.56499,
         "complete_code": "15202",
         "complete_code_percent": 2.9512029,
         "complete_data_percent": 100.0,

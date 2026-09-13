@@ -10,8 +10,20 @@
 class DLLEXPORT cMagSun : public cMagUtility {
 public:
 	/* 10012910 */ void DeleteTexture();
-	/* 10021C20 */ void SetScale(D3DXVECTOR2 param_1);
-	/* 10021C40 */ D3DXVECTOR2 GetScale();
+
+	/* 10021C20-10021C37 00017	*/ 
+	void SetScale(D3DXVECTOR2 param_1) {
+		unk_d74 = param_1;
+	}
+
+	/* 10021C40-10021C68 00028	*/
+	D3DXVECTOR2 cMagSun::GetScale() {
+		D3DXVECTOR2 fVar1;
+		fVar1.x = unk_d74.x;
+		fVar1.y = unk_d74.y;
+		return fVar1;
+	}
+
 	/* 1005A5E0 */ void InitDeviceDx(cMagGameObject* param_1);
 	/* 10072620 */ void SetAnimTextureFPS(int param_1);
 	/* 10072630 */ void SetAnimTextureFrameCount(int param_1);
@@ -41,10 +53,12 @@ private:
 	/* 0xd54 */ int animTextureFrameCount;
 	/* 0xd58 */ float unk_d58;
 	/* 0xd5c */ float unk_d5c;
-	/* 0xd60 */ std::vector<void*> unk_d60;
+	/* 0xd60 */ std::vector<IDirect3DTexture8*> unk_d60;
 	/* 0xd70 */ IDirect3DTexture8* texture;
 	/* 0xd74 */ D3DXVECTOR2 unk_d74;
-	/* 0xd7c */ D3DXVECTOR3 unk_d7c;
+	/* 0xd7c */ float unk_d7c;
+	/* 0xd80 */ float unk_d80;
+	/* 0xd84 */ float unk_d84;
 	/* 0xd88 */ IDirect3DVertexBuffer8* buffer;
 	/* 0xd90 */ cMagMeshObject meshObject;
 	/* 0x33e8 */ D3DXVECTOR3 unk_33e8;
