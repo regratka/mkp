@@ -754,11 +754,11 @@
 ??0cMagSkyBox@@QAE@ABV0@@Z;cMagSkyBox::cMagSkyBox;0x100216c0;0x20c;__thiscall;;uchar;cMagSkyBox*;cMagSkyBox*
 ??4cMagSkyBox@@QAEAAV0@ABV0@@Z;cMagSkyBox::operator=;0x100218d0;0x2eb;__thiscall;;cMagSkyBox*;cMagSkyBox*;cMagSkyBox*
 ??_EcMagSkyBox@@UAEPAXI@Z;cMagSkyBox::scalar_destructor;0x10021bc0;0x57;__thiscall;;cMagSkyBox*;cMagSkyBox*;uchar
-?SetScale@cMagSun@@QAEXUD3DXVECTOR2@@@Z;cMagSun::SetScale;0x10021c20;0x17;__thiscall;;void;cMagSun*;uint;uint
-?GetScale@cMagSun@@QAE?AUD3DXVECTOR2@@XZ;cMagSun::GetScale;0x10021c40;0x28;__thiscall;;D3DXVECTOR2;cMagSun*;uint*
+?SetScale@cMagSun@@QAEXUD3DXVECTOR2@@@Z;cMagSun::SetScale;0x10021c20;0x17;__thiscall;;void;cMagSun*;D3DXVECTOR2
+?GetScale@cMagSun@@QAE?AUD3DXVECTOR2@@XZ;cMagSun::GetScale;0x10021c40;0x28;__thiscall;;D3DXVECTOR2;cMagSun*;
 ??0cMagSun@@QAE@ABV0@@Z;cMagSun::cMagSun;0x10021c70;0x29c;__thiscall;;uchar;cMagSun*;cMagSun*
 ??4cMagSun@@QAEAAV0@ABV0@@Z;cMagSun::operator=;0x10021f10;0x322;__thiscall;;cMagSun*;cMagSun*;cMagSun*
-;cMagSun::scalar_destructor;0x10022240;0x57;__thiscall;;cMagSun*;cMagSun*;uchar
+??_EcMagSun@@UAEPAXI@Z;cMagSun::scalar_destructor;0x10022240;0x57;__thiscall;;cMagSun*;cMagSun*;uchar
 ?SetTexture@CLensFlareSpot@@QAEXPAUIDirect3DTexture8@@@Z;CLensFlareSpot::SetTexture;0x100222a0;0xd;__thiscall;;void;CLensFlareSpot*;IDirect3DTexture8*
 ?GetTexture@CLensFlareSpot@@QAEPAUIDirect3DTexture8@@XZ;CLensFlareSpot::GetTexture;0x100222b0;0x7;__thiscall;;uchar;CLensFlareSpot*
 ?GetSize@CLensFlareSpot@@QBEMXZ;CLensFlareSpot::GetSize;0x100222c0;0x7;__thiscall;;float;CLensFlareSpot*
@@ -2470,8 +2470,11 @@
 ?TypeFog@cMagFog@@QAEXK@Z;cMagFog::TypeFog;0x10072560;0xd;__thiscall;;void;cMagFog*;ulong
 ?InitFog@cMagFog@@QAEXXZ;cMagFog::InitFog;0x10072570;0x97;__thiscall;;void;cMagFog*
 ?SetFogRangeNear@cMagFog@@QAEXM@Z;cMagFog::SetFogRangeNear;0x10072610;0xd;__thiscall;;void;cMagFog*;float
-?SetFogRangeFar@cMagFog@@QAEXM@Z;cMagSun::SetAnimTextureFPS;0x10072620;0xd;__thiscall;;void;cMagSun*;int
-?SetFogDensity@cMagFog@@QAEXM@Z;cMagSun::SetAnimTextureFrameCount;0x10072630;0xd;__thiscall;;void;cMagSun*;int
+?SetAnimTextureFPS@cMagSun@@QAEXH@Z;cMagSun::SetAnimTextureFPS;0x10072620;0xd;__thiscall;;void;cMagSun*;int
+?SetFogRangeFar@cMagFog@@QAEXM@Z;cMagFog::SetFogRangeFar;0x10072620;0xd;__thiscall;;void;cMagFog*;float
+?SetMagMeshObject@MagnumMesh@@QAEXPAVcMagMeshObject@@@Z;MagnumMesh::SetMagMeshObject;0x10072620;0xd;__thiscall;;void;cMagSun*;cMagMeshObject*
+?SetAnimTextureFrameCount@cMagSun@@QAEXH@Z;cMagSun::SetAnimTextureFrameCount;0x10072630;0xd;__thiscall;;void;cMagSun*;int
+?SetFogDensity@cMagFog@@QAEXM@Z;cMagFog::SetFogDensity;0x10072630;0xd;__thiscall;;void;cMagFog*;float
 ?SetColorFog@cMagFog@@QAEXEEE@Z;cMagFog::SetColorFog;0x10072640;0x35;__thiscall;;void;cMagFog*;uchar;uchar;uchar
 ?EnableFog@cMagFog@@QAEXXZ;cMagFog::EnableFog;0x10072680;0x25;__thiscall;;void;cMagFog*
 ?DisableFog@cMagFog@@QAEXXZ;cMagFog::DisableFog;0x100726b0;0x25;__thiscall;;void;cMagFog*
@@ -2502,12 +2505,13 @@
 ??0cMagSun@@QAE@XZ;cMagSun::cMagSun;0x100731b0;0x18a;__thiscall;;uchar;cMagSun*
 ??1cMagSun@@UAE@XZ;cMagSun::~cMagSun;0x10073340;0xc1;__thiscall;;void;cMagSun*
 ?RestoreSun@cMagSun@@QAEXXZ;cMagSun::RestoreSun;0x10073410;0x4a;__thiscall;;void;cMagSun*
-?AddTexture@cMagSun@@QAEPAUIDirect3DTexture8@@PBD@Z;cMagSun::AddTexture;0x10073460;0x3e;__thiscall;;uchar;cMagSun*;char*
-?GetPosition@cMagSun@@UAE?AUD3DXVECTOR3@@XZ;cMagSun::GetPosition;0x100734a0;0x1e;__thiscall;;uint;cMagSun*;uint
-?Render@cMagSun@@QAEXUD3DXMATRIX@@@Z;cMagSun::Render;0x100734c0;0x51c;__thiscall;;void;cMagSun*
+?AddTexture@cMagSun@@QAEPAUIDirect3DTexture8@@PBD@Z;cMagSun::AddTexture;0x10073460;0x3e;__thiscall;;IDirect3DTexture8*;cMagSun*;char const*
+?GetPosition@cMagSun@@UAE?AUD3DXVECTOR3@@XZ;cMagSun::GetPosition;0x100734a0;0x1e;__thiscall;;D3DXVECTOR3;cMagSun*
+?Render@cMagSun@@QAEXUD3DXMATRIX@@@Z;cMagSun::Render;0x100734c0;0x51c;__thiscall;;void;cMagSun*;D3DXMATRIX
 ?DeleteQuad@cMagSun@@QAEXXZ;cMagSun::DeleteQuad;0x100739e0;0x1f;__thiscall;;void;cMagSun*
 ?OnRender@cMagSun@@UAEXXZ;cMagSun::OnRender;0x10073a00;0x5d;__thiscall;;void;cMagSun*
-?EnableZBuffer@MagnumMesh@@QAEX_N@Z;cMagSun::EnableRendering;0x10073a60;0xd;__thiscall;;void;cMagSun*;bool
+?EnableZBuffer@MagnumMesh@@QAEX_N@Z;MagnumMesh::EnableZBuffer;0x10073a60;0xd;__thiscall;;void;MagnumMesh*;bool
+?EnableRendering@cMagSun@@QAEX_N@Z;cMagSun::EnableRendering;0x10073a60;0xd;__thiscall;;void;cMagSun*;bool
 ?IsEnabled@cMagSun@@QAE_NXZ;cMagSun::IsEnabled;0x10073a70;0x7;__thiscall;;bool;cMagSun*
 ?AddAnimTexture@cMagSun@@QAEXPAD@Z;cMagSun::AddAnimTexture;0x10073a80;0x1c7;__thiscall;;void;cMagSun*;char*
 ?RenderAnimTexture@cMagSun@@QAEXXZ;cMagSun::RenderAnimTexture;0x10073c50;0xdc;__thiscall;;void;cMagSun*

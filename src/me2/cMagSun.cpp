@@ -1,26 +1,20 @@
 #include "cMagSun.h"
 
+/* 10012910-10012911 00001	*/
+void cMagSun::DeleteTexture() {
+}
+
 /* 10021C20-10021C37 00017	*/
-void cMagSun::SetScale(uint param_1, uint param_2) {
+void cMagSun::SetScale(D3DXVECTOR2 param_1) {
 }
 
 /* 10021C40-10021C68 00028	*/
-D3DXVECTOR2 cMagSun::GetScale(uint* param_1) {
+D3DXVECTOR2 cMagSun::GetScale() {
 	return 0;
 }
 
-/* 10021C70-10021F0C 0029C	*/
-cMagSun::cMagSun(cMagSun* param_1) {
-}
-
-/* 10021F10-10022232 00322	*/
-cMagSun* cMagSun::operator=(cMagSun* param_1) {
-	return 0;
-}
-
-/* 10022240-10022297 00057	*/
-cMagSun* cMagSun::scalar_destructor(uchar param_1) {
-	return 0;
+/* 1005A5E0-1005A5E3 00003	*/
+void cMagSun::InitDeviceDx(cMagGameObject* param_1) {
 }
 
 /* 10072620-1007262D 0000D	*/
@@ -44,17 +38,17 @@ void cMagSun::RestoreSun() {
 }
 
 /* 10073460-1007349E 0003E	*/
-uchar cMagSun::AddTexture(char* param_1) {
+IDirect3DTexture8* cMagSun::AddTexture(char const * param_1) {
 	return 0;
 }
 
 /* 100734A0-100734BE 0001E	*/
-uint cMagSun::GetPosition(uint param_1) {
+D3DXVECTOR3 cMagSun::GetPosition() {
 	return 0;
 }
 
 /* 100734C0-100739DC 0051C	*/
-void cMagSun::Render() {
+void cMagSun::Render(D3DXMATRIX param_1) {
 }
 
 /* 100739E0-100739FF 0001F	*/
