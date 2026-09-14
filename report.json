@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.06458,
+    "fuzzy_match_percent": 28.11173,
     "total_code": "690860",
-    "matched_code": "123356",
-    "matched_code_percent": 17.855427,
+    "matched_code": "123529",
+    "matched_code_percent": 17.880468,
     "matched_data_percent": 100.0,
     "total_functions": 3298,
-    "matched_functions": 1158,
-    "matched_functions_percent": 35.11219,
+    "matched_functions": 1162,
+    "matched_functions_percent": 35.233475,
     "complete_code": "47355",
     "complete_code_percent": 6.8545,
     "complete_data_percent": 100.0,
@@ -18441,14 +18441,14 @@
     {
       "name": "me2/cMagSound",
       "measures": {
-        "fuzzy_match_percent": 28.605282,
+        "fuzzy_match_percent": 54.896015,
         "total_code": "1239",
-        "matched_code": "298",
-        "matched_code_percent": 24.051655,
+        "matched_code": "471",
+        "matched_code_percent": 38.014526,
         "matched_data_percent": 100.0,
         "total_functions": 14,
-        "matched_functions": 4,
-        "matched_functions_percent": 28.57143,
+        "matched_functions": 8,
+        "matched_functions_percent": 57.14286,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -18456,7 +18456,7 @@
         {
           "name": ".text",
           "size": "1239",
-          "fuzzy_match_percent": 28.605282,
+          "fuzzy_match_percent": 54.896015,
           "metadata": {}
         }
       ],
@@ -18491,7 +18491,7 @@
         {
           "name": "??0cMagSound@@QAE@XZ",
           "size": "44",
-          "fuzzy_match_percent": 53.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSound::cMagSound(void)"
           },
@@ -18518,7 +18518,7 @@
         {
           "name": "?Kill@cMagSound@@QAEXXZ",
           "size": "152",
-          "fuzzy_match_percent": 1.6666666,
+          "fuzzy_match_percent": 99.98333,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::Kill(void)"
           },
@@ -18527,7 +18527,7 @@
         {
           "name": "?Play@cMagSound@@QAEJ_N@Z",
           "size": "77",
-          "fuzzy_match_percent": 5.5882354,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::Play(bool)"
           },
@@ -18536,7 +18536,7 @@
         {
           "name": "?IsPlaying@cMagSound@@QAE_NXZ",
           "size": "22",
-          "fuzzy_match_percent": 12.727273,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagSound::IsPlaying(void)"
           },
@@ -18545,7 +18545,7 @@
         {
           "name": "?SetVolume@cMagSound@@QAEXH@Z",
           "size": "70",
-          "fuzzy_match_percent": 3.7037036,
+          "fuzzy_match_percent": 57.51852,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::SetVolume(int)"
           },
@@ -18554,7 +18554,7 @@
         {
           "name": "?Stop@cMagSound@@QAEJXZ",
           "size": "30",
-          "fuzzy_match_percent": 12.666667,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::Stop(void)"
           },
@@ -32457,14 +32457,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 31.621267,
+        "fuzzy_match_percent": 31.684502,
         "total_code": "515140",
-        "matched_code": "94772",
-        "matched_code_percent": 18.397327,
+        "matched_code": "94945",
+        "matched_code_percent": 18.430912,
         "matched_data_percent": 100.0,
         "total_functions": 2308,
-        "matched_functions": 889,
-        "matched_functions_percent": 38.518196,
+        "matched_functions": 893,
+        "matched_functions_percent": 38.69151,
         "complete_code": "21774",
         "complete_code_percent": 4.226812,
         "complete_data_percent": 100.0,
