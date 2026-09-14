@@ -1,19 +1,5 @@
 #include "cMagSound.h"
 
-/* 10001F90-10001FF9 00069	*/
-cMagSound::cMagSound(cMagSound* param_1) {
-}
-
-/* 10002000-10002063 00063	*/
-cMagSound* cMagSound::operator=(cMagSound* param_1) {
-	return 0;
-}
-
-/* 10002070-100020C7 00057	*/
-cMagSound* cMagSound::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 100885E0-1008860C 0002C	*/
 cMagSound::cMagSound() {
 }
@@ -23,7 +9,7 @@ cMagSound::~cMagSound() {
 }
 
 /* 10088620-1008878D 0016D	*/
-long cMagSound::Setup(char* param_1, uchar param_2, uchar param_3) {
+HRESULT cMagSound::Setup(char* param_1, IDirectMusicPerformance8* param_2, IDirectMusicLoader8* param_3) {
 	return 0;
 }
 
@@ -32,7 +18,7 @@ void cMagSound::Kill() {
 }
 
 /* 10088830-1008887D 0004D	*/
-long cMagSound::Play(bool param_1) {
+HRESULT cMagSound::Play(bool param_1) {
 	return 0;
 }
 
@@ -46,7 +32,7 @@ void cMagSound::SetVolume(int param_1) {
 }
 
 /* 100888F0-1008890E 0001E	*/
-long cMagSound::Stop() {
+HRESULT cMagSound::Stop() {
 	return 0;
 }
 
@@ -55,12 +41,12 @@ void cMagSound::Set3DSoundParams(float param_1, float param_2, float param_3, fl
 }
 
 /* 10088960-10088993 00033	*/
-long cMagSound::SetPosition(float param_1, float param_2, float param_3) {
+HRESULT cMagSound::SetPosition(float param_1, float param_2, float param_3) {
 	return 0;
 }
 
 /* 100889A0-100889D3 00033	*/
-long cMagSound::setListenerPos(float param_1, float param_2, float param_3) {
+HRESULT cMagSound::setListenerPos(float param_1, float param_2, float param_3) {
 	return 0;
 }
 
