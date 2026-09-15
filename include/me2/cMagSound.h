@@ -21,14 +21,14 @@ public:
 	/* 100889A0 */ HRESULT setListenerPos(float param_1, float param_2, float param_3);
 
 private:
-	/* 0x4 */ IDirectMusicPerformance8* unk_4;
-	/* 0x8 */ IDirectMusicLoader8* unk_8;
-	/* 0xc */ IDirectMusicSegment8* unk_c;
-	/* 0x10 */ IDirectMusicAudioPath* unk_10;
-	/* 0x14 */ IDirectSound3DBuffer* unk_14;
-	/* 0x18 */ IDirectSound3DListener* unk_18;
-	/* 0x1c */ DS3DBUFFER unk_1c;
-	/* 0x5c */ DS3DLISTENER unk_5c;
+	/* 0x4 */ IDirectMusicPerformance8* musicPerformance;
+	/* 0x8 */ IDirectMusicLoader8* musicLoader;
+	/* 0xc */ IDirectMusicSegment8* musicSegment;
+	/* 0x10 */ IDirectMusicAudioPath* musicAudioPath;
+	/* 0x14 */ IDirectSound3DBuffer* sound3DBuffer;
+	/* 0x18 */ IDirectSound3DListener* sound3DListener;
+	/* 0x1c */ DS3DBUFFER bufferParams;
+	/* 0x5c */ DS3DLISTENER listenerParams;
 	/* 0x9c */ cMagLog log;
 };
 
