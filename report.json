@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.192616,
-    "total_code": "690860",
-    "matched_code": "124145",
-    "matched_code_percent": 17.969631,
+    "fuzzy_match_percent": 28.25622,
+    "total_code": "690906",
+    "matched_code": "124457",
+    "matched_code_percent": 18.013594,
     "matched_data_percent": 100.0,
-    "total_functions": 3298,
-    "matched_functions": 1167,
-    "matched_functions_percent": 35.385082,
-    "complete_code": "48594",
-    "complete_code_percent": 7.033842,
+    "total_functions": 3303,
+    "matched_functions": 1176,
+    "matched_functions_percent": 35.603996,
+    "complete_code": "49053",
+    "complete_code_percent": 7.099808,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 37
+    "complete_units": 38
   },
   "units": [
     {
@@ -10790,18 +10790,25 @@
     {
       "name": "me2/cMagAudio",
       "measures": {
-        "fuzzy_match_percent": 2.4860528,
-        "total_code": "425",
+        "fuzzy_match_percent": 99.99469,
+        "total_code": "459",
+        "matched_code": "308",
+        "matched_code_percent": 67.102394,
         "matched_data_percent": 100.0,
-        "total_functions": 7,
+        "total_functions": 9,
+        "matched_functions": 8,
+        "matched_functions_percent": 88.88889,
+        "complete_code": "459",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "425",
-          "fuzzy_match_percent": 2.4860528,
+          "size": "459",
+          "fuzzy_match_percent": 99.99469,
           "metadata": {}
         }
       ],
@@ -10809,6 +10816,7 @@
         {
           "name": "??0cMagAudio@@QAE@ABV0@@Z",
           "size": "39",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagAudio::cMagAudio(class cMagAudio const &)"
           },
@@ -10817,54 +10825,78 @@
         {
           "name": "??4cMagAudio@@QAEAAV0@ABV0@@Z",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagAudio & __thiscall cMagAudio::operator=(class cMagAudio const &)"
           },
           "address": "39"
         },
         {
-          "name": "cMagAudio::scalar_destructor",
+          "name": "??_EcMagAudio@@UAEPAXI@Z",
           "size": "84",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagAudio::`vector deleting destructor'(unsigned int)"
+          },
           "address": "72"
         },
         {
-          "name": "??0cMagAudio@@QAE@XZ",
-          "size": "29",
-          "fuzzy_match_percent": 12.727273,
+          "name": "?getPerformance@cMagAudio@@QAEPAUIDirectMusicPerformance8@@XZ",
+          "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: __thiscall cMagAudio::cMagAudio(void)"
+            "demangled_name": "public: struct IDirectMusicPerformance8* __thiscall cMagAudio::getPerformance(void)"
           },
           "address": "156"
         },
         {
+          "name": "?getLoader@cMagAudio@@QAEPAUIDirectMusicLoader8@@XZ",
+          "size": "4",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: struct IDirectMusicLoader8* __thiscall cMagAudio::getLoader(void)"
+          },
+          "address": "160"
+        },
+        {
+          "name": "??0cMagAudio@@QAE@XZ",
+          "size": "29",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall cMagAudio::cMagAudio(void)"
+          },
+          "address": "164"
+        },
+        {
           "name": "??1cMagAudio@@UAE@XZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagAudio::~cMagAudio(void)"
           },
-          "address": "185"
+          "address": "193"
         },
         {
           "name": "?Setup@cMagAudio@@QAEJXZ",
           "size": "108",
-          "fuzzy_match_percent": 4.2222223,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagAudio::Setup(void)"
           },
-          "address": "192"
+          "address": "200"
         },
         {
           "name": "?Kill@cMagAudio@@QAEXXZ",
-          "size": "125",
-          "fuzzy_match_percent": 1.8518518,
+          "size": "151",
+          "fuzzy_match_percent": 99.98387,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagAudio::Kill(void)"
           },
-          "address": "300"
+          "address": "308"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -11400,14 +11432,14 @@
     {
       "name": "me2/cMagEngineMgr",
       "measures": {
-        "fuzzy_match_percent": 77.22429,
+        "fuzzy_match_percent": 78.36714,
         "total_code": "350",
-        "matched_code": "216",
-        "matched_code_percent": 61.714287,
+        "matched_code": "220",
+        "matched_code_percent": 62.857143,
         "matched_data_percent": 100.0,
         "total_functions": 12,
-        "matched_functions": 7,
-        "matched_functions_percent": 58.333332,
+        "matched_functions": 8,
+        "matched_functions_percent": 66.66667,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -11415,7 +11447,7 @@
         {
           "name": ".text",
           "size": "350",
-          "fuzzy_match_percent": 77.22429,
+          "fuzzy_match_percent": 78.36714,
           "metadata": {}
         }
       ],
@@ -11464,10 +11496,11 @@
           "address": "61"
         },
         {
-          "name": "?GetLoader@CMusicManager@@QAEPAUIDirectMusicLoader8@@XZ",
+          "name": "?GetEngine@cMagEngineMgr@@QAEPAUIDirect3DDevice8@@XZ",
           "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: struct IDirectMusicLoader8* __thiscall CMusicManager::GetLoader(void)"
+            "demangled_name": "public: struct IDirect3DDevice8* __thiscall cMagEngineMgr::GetEngine(void)"
           },
           "address": "64"
         },
@@ -20738,18 +20771,18 @@
     {
       "name": "me2/pgImage",
       "measures": {
-        "fuzzy_match_percent": 0.6375502,
-        "total_code": "996",
+        "fuzzy_match_percent": 0.635,
+        "total_code": "1000",
         "matched_data_percent": 100.0,
-        "total_functions": 13,
+        "total_functions": 14,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "996",
-          "fuzzy_match_percent": 0.6375502,
+          "size": "1000",
+          "fuzzy_match_percent": 0.635,
           "metadata": {}
         }
       ],
@@ -20796,13 +20829,21 @@
           "address": "112"
         },
         {
+          "name": "?getHeight@pgImage@@QBEHXZ",
+          "size": "4",
+          "metadata": {
+            "demangled_name": "public: int __thiscall pgImage::getHeight(void) const"
+          },
+          "address": "120"
+        },
+        {
           "name": "??0pgImage@@QAE@XZ",
           "size": "19",
           "fuzzy_match_percent": 25.0,
           "metadata": {
             "demangled_name": "public: __thiscall pgImage::pgImage(void)"
           },
-          "address": "120"
+          "address": "124"
         },
         {
           "name": "??0pgImage@@QAE@HHW4FORMAT@0@ABVpgString@@PAE_N@Z",
@@ -20810,7 +20851,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgImage::pgImage(int, int, enum pgImage::FORMAT, class pgString const &, unsigned char *, bool)"
           },
-          "address": "139"
+          "address": "143"
         },
         {
           "name": "?getPixelSize@pgImage@@QBEHXZ",
@@ -20818,7 +20859,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall pgImage::getPixelSize(void) const"
           },
-          "address": "342"
+          "address": "346"
         },
         {
           "name": "?getPixelSize@pgImage@@SAHW4FORMAT@1@@Z",
@@ -20826,7 +20867,7 @@
           "metadata": {
             "demangled_name": "public: static int __cdecl pgImage::getPixelSize(enum pgImage::FORMAT)"
           },
-          "address": "355"
+          "address": "359"
         },
         {
           "name": "?getFormatString@pgImage@@SA?AVpgString@@W4_D3DFORMAT@@@Z",
@@ -20834,7 +20875,7 @@
           "metadata": {
             "demangled_name": "public: static class pgString __cdecl pgImage::getFormatString(enum _D3DFORMAT)"
           },
-          "address": "409"
+          "address": "413"
         },
         {
           "name": "?getFormatString@pgImage@@SA?AVpgString@@W4FORMAT@1@@Z",
@@ -20842,7 +20883,7 @@
           "metadata": {
             "demangled_name": "public: static class pgString __cdecl pgImage::getFormatString(enum pgImage::FORMAT)"
           },
-          "address": "442"
+          "address": "446"
         },
         {
           "name": "?isCompressed@pgImage@@SA_NW4FORMAT@1@@Z",
@@ -20850,7 +20891,7 @@
           "metadata": {
             "demangled_name": "public: static bool __cdecl pgImage::isCompressed(enum pgImage::FORMAT)"
           },
-          "address": "871"
+          "address": "875"
         },
         {
           "name": "?hasAlpha@pgImage@@SA_NW4FORMAT@1@@Z",
@@ -20858,7 +20899,7 @@
           "metadata": {
             "demangled_name": "public: static bool __cdecl pgImage::hasAlpha(enum pgImage::FORMAT)"
           },
-          "address": "921"
+          "address": "925"
         }
       ],
       "metadata": {
@@ -21567,29 +21608,45 @@
     {
       "name": "me2/pgTerrainPVS",
       "measures": {
-        "fuzzy_match_percent": 0.5406459,
-        "total_code": "1796",
+        "fuzzy_match_percent": 0.53824836,
+        "total_code": "1804",
         "matched_data_percent": 100.0,
-        "total_functions": 10,
+        "total_functions": 12,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1796",
-          "fuzzy_match_percent": 0.5406459,
+          "size": "1804",
+          "fuzzy_match_percent": 0.53824836,
           "metadata": {}
         }
       ],
       "functions": [
+        {
+          "name": "?getDataY@pgTerrainPVS@@QBEHXZ",
+          "size": "4",
+          "metadata": {
+            "demangled_name": "public: int __thiscall pgTerrainPVS::getDataY(void) const"
+          },
+          "address": "0"
+        },
+        {
+          "name": "?getDataZ@pgTerrainPVS@@QBEHXZ",
+          "size": "4",
+          "metadata": {
+            "demangled_name": "public: int __thiscall pgTerrainPVS::getDataZ(void) const"
+          },
+          "address": "4"
+        },
         {
           "name": "??4pgTerrainPVS@@QAEAAV0@ABV0@@Z",
           "size": "22",
           "metadata": {
             "demangled_name": "public: class pgTerrainPVS & __thiscall pgTerrainPVS::operator=(class pgTerrainPVS const &)"
           },
-          "address": "0"
+          "address": "8"
         },
         {
           "name": "??0pgTerrainPVS@@QAE@XZ",
@@ -21598,7 +21655,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgTerrainPVS::pgTerrainPVS(void)"
           },
-          "address": "22"
+          "address": "30"
         },
         {
           "name": "??1pgTerrainPVS@@QAE@XZ",
@@ -21607,7 +21664,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgTerrainPVS::~pgTerrainPVS(void)"
           },
-          "address": "41"
+          "address": "49"
         },
         {
           "name": "?calc@pgTerrainPVS@@QAEXPBE0IIII@Z",
@@ -21615,7 +21672,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall pgTerrainPVS::calc(unsigned char const *, unsigned char const *, unsigned int, unsigned int, unsigned int, unsigned int)"
           },
-          "address": "56"
+          "address": "64"
         },
         {
           "name": "?shrink@pgTerrainPVS@@QAEXXZ",
@@ -21624,7 +21681,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall pgTerrainPVS::shrink(void)"
           },
-          "address": "670"
+          "address": "678"
         },
         {
           "name": "?save@pgTerrainPVS@@QAE_NPBD@Z",
@@ -21632,7 +21689,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall pgTerrainPVS::save(char const *)"
           },
-          "address": "1163"
+          "address": "1171"
         },
         {
           "name": "?load@pgTerrainPVS@@QAE_NPBD@Z",
@@ -21640,7 +21697,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall pgTerrainPVS::load(char const *)"
           },
-          "address": "1313"
+          "address": "1321"
         },
         {
           "name": "?setVisible@pgTerrainPVS@@AAEXHHHHH_N@Z",
@@ -21648,7 +21705,7 @@
           "metadata": {
             "demangled_name": "private: void __thiscall pgTerrainPVS::setVisible(int, int, int, int, int, bool)"
           },
-          "address": "1542"
+          "address": "1550"
         },
         {
           "name": "?isVisible@pgTerrainPVS@@QBE_NHHHHH@Z",
@@ -21656,7 +21713,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall pgTerrainPVS::isVisible(int, int, int, int, int) const"
           },
-          "address": "1624"
+          "address": "1632"
         },
         {
           "name": "?getIdx@pgTerrainPVS@@ABEIHHHHH@Z",
@@ -21664,7 +21721,7 @@
           "metadata": {
             "demangled_name": "private: unsigned int __thiscall pgTerrainPVS::getIdx(int, int, int, int, int) const"
           },
-          "address": "1752"
+          "address": "1760"
         }
       ],
       "metadata": {
@@ -32461,19 +32518,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 31.792978,
-        "total_code": "515140",
-        "matched_code": "95561",
-        "matched_code_percent": 18.550491,
+        "fuzzy_match_percent": 31.877954,
+        "total_code": "515186",
+        "matched_code": "95873",
+        "matched_code_percent": 18.609396,
         "matched_data_percent": 100.0,
-        "total_functions": 2308,
-        "matched_functions": 898,
-        "matched_functions_percent": 38.908146,
-        "complete_code": "23013",
-        "complete_code_percent": 4.4673295,
+        "total_functions": 2313,
+        "matched_functions": 907,
+        "matched_functions_percent": 39.213142,
+        "complete_code": "23472",
+        "complete_code_percent": 4.5560246,
         "complete_data_percent": 100.0,
         "total_units": 110,
-        "complete_units": 10
+        "complete_units": 11
       }
     },
     {

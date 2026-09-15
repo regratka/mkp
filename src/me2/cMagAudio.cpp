@@ -1,21 +1,19 @@
 #include "cMagAudio.h"
 
-/* 10001ED0-10001EF7 00027	*/
-cMagAudio::cMagAudio(cMagAudio* param_1) {
+/* 1000B510-1000B514 00004	*/
+IDirectMusicPerformance8* cMagAudio::getPerformance() {
+	return musicPerformance;
 }
 
-/* 10001F00-10001F21 00021	*/
-cMagAudio* cMagAudio::operator=(cMagAudio* param_1) {
-	return 0;
-}
-
-/* 10001F30-10001F84 00054	*/
-cMagAudio* cMagAudio::scalar_destructor(uchar param_1) {
-	return 0;
+/* 1000B520-1000B524 00004	*/
+IDirectMusicLoader8* cMagAudio::getLoader() {
+	return musicLoader;
 }
 
 /* 100884A0-100884BD 0001D	*/
 cMagAudio::cMagAudio() {
+	musicPerformance = NULL;
+	musicLoader = NULL;
 }
 
 /* 100884C0-100884C7 00007	*/
@@ -23,11 +21,59 @@ cMagAudio::~cMagAudio() {
 }
 
 /* 100884D0-1008853C 0006C	*/
-long cMagAudio::Setup() {
-	return 0;
+HRESULT cMagAudio::Setup() {
+	HRESULT res = CoInitialize(NULL);
+	if (res < S_OK) {
+		return res;
+	}
+
+	res = CoCreateInstance(CLSID_DirectMusicLoader, NULL, CLSCTX_INPROC_SERVER|CLSCTX_INPROC_HANDLER,
+		IID_IDirectMusicLoader8, (void**)&musicLoader);
+	if (res < S_OK) {
+		return res;
+	}
+
+	res = CoCreateInstance(CLSID_DirectMusicPerformance, NULL, CLSCTX_INPROC_SERVER|CLSCTX_INPROC_HANDLER,
+		IID_IDirectMusicPerformance8, (void**)&musicPerformance);
+	if (res < S_OK) {
+		return res;
+	}
+
+	res = musicPerformance->InitAudio(NULL, NULL, NULL, DMUS_APATH_DYNAMIC_STEREO, 64, DMUS_AUDIOF_ALL, NULL);
+	if (res < S_OK) {
+		return res;
+	}
+
+	return S_OK;
 }
 
 /* 10088540-100885BD 0007D	*/
 void cMagAudio::Kill() {
+	try {
+		
+		if (musicPerformance != NULL) {
+			musicPerformance->Stop(NULL, NULL, 0, 0);
+		}
+
+		if (musicLoader != NULL) {
+			musicLoader->Release();
+		}
+		musicLoader = NULL;
+
+		if (musicPerformance != NULL) {
+			musicPerformance->CloseDown();
+		}
+		
+		if (musicPerformance != NULL) {
+			musicPerformance->Release();
+		}
+		musicPerformance = NULL;
+	} catch (...) {
+		// TODO 
+		// catch block returns offset to next code block instead of address 
+		// as in target exe. I assume it is because the offset is replaced 
+		// during the linking phase
+		this->log.DebugLog("Error kill sound");
+	}
 }
 
