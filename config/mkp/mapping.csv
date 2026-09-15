@@ -321,7 +321,7 @@
 ;CPlaneTerrain::scalar_destructor;0x40eed0;0x1e;__thiscall;;uchar;CPlaneTerrain*;uchar
 ;CPlaneTerrain::~CPlaneTerrain;0x40eef0;0xc;__thiscall;;void;CPlaneTerrain*
 ;CPlaneTerrain::OnActivate;0x40ef00;0x81;__thiscall;;void;CPlaneTerrain*
-;CDomekJeza::OnActivateLevel;0x40ef90;0x14;__thiscall;;void;CDomekJeza*
+?OnActivateLevel@CDomekJeza@@UAEXXZ;CDomekJeza::OnActivateLevel;0x40ef90;0x14;__thiscall;;void;CDomekJeza*
 ;FUN_0040efb0;0x40efb0;0x22;__thiscall;;uchar;void*;uint;uint;uint
 ;FUN_0040efe0;0x40efe0;0x22;__thiscall;;uchar;void*;uint;uint;uint
 ;FUN_0040f050;0x40f050;0xa;__stdcall;;uchar
@@ -648,6 +648,7 @@
 ?OnActivate@CBlokadaLevel5@@UAEXXZ;CBlokadaLevel5::OnActivate;0x419ba0;0x1;__thiscall;;void;CBlokadaLevel5*
 ?OnActivate@CBlokadaLevel6@@UAEXXZ;CBlokadaLevel6::OnActivate;0x419ba0;0x1;__thiscall;;void;CBlokadaLevel6*
 ?OnActivate@CJezyk@@UAEXXZ;CJezyk::OnActivate;0x419ba0;0x1;__thiscall;;void;CJezyk*
+?OnActivate@CDomekJeza@@UAEXXZ;CDomekJeza::OnActivate;0x419ba0;0x1;__thiscall;;void;CDomekJeza*
 ?OnActivateLevel@CBalon@@UAEXXZ;CBalon::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;CBalon*
 ?OnActivateLevel@CArmataPocisk@@UAEXXZ;CArmataPocisk::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;CArmataPocisk*
 ?OnActivateLevel@CKrysztal@@UAEXXZ;CKrysztal::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;CKrysztal*
@@ -1468,9 +1469,9 @@
 ;FUN_0043cf50;0x43cf50;0xc;__stdcall;;uchar
 ;FUN_0043cf80;0x43cf80;0xa;__stdcall;;uchar
 ;FUN_0043cf90;0x43cf90;0xc;__stdcall;;uchar
-;CDomekJeza::CDomekJeza;0x43cfb0;0x13;__thiscall;;CDomekJeza*;CDomekJeza*
-;CDomekJeza::scalar_destructor;0x43cfd0;0x1e;__thiscall;;CDomekJeza*;CDomekJeza*;uchar
-;CDomekJeza::~CDomekJeza;0x43cff0;0xc;__thiscall;;uchar;CDomekJeza*
+??0CDomekJeza@@QAE@XZ;CDomekJeza::CDomekJeza;0x43cfb0;0x13;__thiscall;;CDomekJeza*;CDomekJeza*
+??_GCDomekJeza@@UAEPAXI@Z;CDomekJeza::scalar_destructor;0x43cfd0;0x1e;__thiscall;;CDomekJeza*;CDomekJeza*;uchar
+??1CDomekJeza@@UAE@XZ;CDomekJeza::~CDomekJeza;0x43cff0;0xc;__thiscall;;uchar;CDomekJeza*
 ?EXP@CDomekJeza@@QAEPAXXZ;CDomekJeza::EXP;0x43d000;0x5a;__thiscall;;void*;CDomekJeza*
 ;FUN_0043d0a0;0x43d0a0;0xa;__stdcall;;uchar
 ;FUN_0043d0b0;0x43d0b0;0xc;__stdcall;;uchar

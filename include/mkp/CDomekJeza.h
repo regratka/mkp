@@ -3,12 +3,14 @@
 
 #include <globals.h>
 
-class CDomekJeza {
+#include "cMagMeshObject.h"
+
+class CDomekJeza : public cMagMeshObject {
 public:
 	/* 40EF90 */ void OnActivateLevel();
+	/* 419BA0 */ void OnActivate();
 	/* 43CFB0 */ CDomekJeza();
-	/* 43CFD0 */ CDomekJeza* scalar_destructor(uchar param_1);
-	/* 43CFF0 */ ~CDomekJeza();
+	/* 43CFF0 */ virtual ~CDomekJeza();
 	/* 43D000 */ void* EXP();
 };
 

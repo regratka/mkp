@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.25622,
-    "total_code": "690906",
-    "matched_code": "124457",
-    "matched_code_percent": 18.013594,
+    "fuzzy_match_percent": 28.27999,
+    "total_code": "690907",
+    "matched_code": "124629",
+    "matched_code_percent": 18.038462,
     "matched_data_percent": 100.0,
-    "total_functions": 3303,
-    "matched_functions": 1176,
-    "matched_functions_percent": 35.603996,
-    "complete_code": "49053",
-    "complete_code_percent": 7.099808,
+    "total_functions": 3304,
+    "matched_functions": 1182,
+    "matched_functions_percent": 35.77482,
+    "complete_code": "49225",
+    "complete_code_percent": 7.124693,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 38
+    "complete_units": 39
   },
   "units": [
     {
@@ -26191,57 +26191,86 @@
     {
       "name": "mkp/CDomekJeza",
       "measures": {
-        "fuzzy_match_percent": 4.385965,
-        "total_code": "171",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "172",
+        "matched_code": "172",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 5,
+        "total_functions": 6,
+        "matched_functions": 6,
+        "matched_functions_percent": 100.0,
+        "complete_code": "172",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "171",
-          "fuzzy_match_percent": 4.385965,
+          "size": "172",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CDomekJeza::OnActivateLevel",
+          "name": "?OnActivateLevel@CDomekJeza@@UAEXXZ",
           "size": "20",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CDomekJeza::OnActivateLevel(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CDomekJeza::CDomekJeza",
-          "size": "19",
-          "metadata": {},
+          "name": "?OnActivate@CDomekJeza@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CDomekJeza::OnActivate(void)"
+          },
           "address": "20"
         },
         {
-          "name": "CDomekJeza::scalar_destructor",
-          "size": "30",
-          "metadata": {},
-          "address": "39"
+          "name": "??0CDomekJeza@@QAE@XZ",
+          "size": "19",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CDomekJeza::CDomekJeza(void)"
+          },
+          "address": "21"
         },
         {
-          "name": "CDomekJeza::~CDomekJeza",
+          "name": "??_GCDomekJeza@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CDomekJeza::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "40"
+        },
+        {
+          "name": "??1CDomekJeza@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "69"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CDomekJeza::~CDomekJeza(void)"
+          },
+          "address": "70"
         },
         {
           "name": "?EXP@CDomekJeza@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CDomekJeza::EXP(void)"
           },
-          "address": "81"
+          "address": "82"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -32537,19 +32566,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 17.637808,
-        "total_code": "175720",
-        "matched_code": "28584",
-        "matched_code_percent": 16.266788,
+        "fuzzy_match_percent": 17.731321,
+        "total_code": "175721",
+        "matched_code": "28756",
+        "matched_code_percent": 16.364578,
         "matched_data_percent": 100.0,
-        "total_functions": 990,
-        "matched_functions": 269,
-        "matched_functions_percent": 27.171717,
-        "complete_code": "25581",
-        "complete_code_percent": 14.557819,
+        "total_functions": 991,
+        "matched_functions": 275,
+        "matched_functions_percent": 27.749746,
+        "complete_code": "25753",
+        "complete_code_percent": 14.655619,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 27
+        "complete_units": 28
       }
     }
   ]
