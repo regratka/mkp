@@ -2,23 +2,36 @@
 #define C_MAG_SOUND
 
 #include <globals.h>
+#include <Dmusici.h>
 
-class cMagSound {
+#include "cMagLog.h" 
+
+class DLLEXPORT cMagSound {
 public:
-	/* 10001F90 */ cMagSound(cMagSound* param_1);
-	/* 10002000 */ cMagSound* operator=(cMagSound* param_1);
-	/* 10002070 */ cMagSound* scalar_destructor(uchar param_1);
 	/* 100885E0 */ cMagSound();
-	/* 10088610 */ ~cMagSound();
-	/* 10088620 */ long Setup(char* param_1, uchar param_2, uchar param_3);
+	/* 10088610 */ virtual ~cMagSound();
+	/* 10088620 */ HRESULT Setup(char* param_1, IDirectMusicPerformance8* param_2, IDirectMusicLoader8* param_3);
 	/* 10088790 */ void Kill();
-	/* 10088830 */ long Play(bool param_1);
+	/* 10088830 */ HRESULT Play(bool param_1);
 	/* 10088880 */ bool IsPlaying();
 	/* 100888A0 */ void SetVolume(int param_1);
-	/* 100888F0 */ long Stop();
+	/* 100888F0 */ HRESULT Stop();
 	/* 10088910 */ void Set3DSoundParams(float param_1, float param_2, float param_3, float param_4);
-	/* 10088960 */ long SetPosition(float param_1, float param_2, float param_3);
-	/* 100889A0 */ long setListenerPos(float param_1, float param_2, float param_3);
+	/* 10088960 */ HRESULT SetPosition(float param_1, float param_2, float param_3);
+	/* 100889A0 */ HRESULT setListenerPos(float param_1, float param_2, float param_3);
+
+private:
+	/* 0x4 */ IDirectMusicPerformance8* musicPerformance;
+	/* 0x8 */ IDirectMusicLoader8* musicLoader;
+	/* 0xc */ IDirectMusicSegment8* musicSegment;
+	/* 0x10 */ IDirectMusicAudioPath* musicAudioPath;
+	/* 0x14 */ IDirectSound3DBuffer* sound3DBuffer;
+	/* 0x18 */ IDirectSound3DListener* sound3DListener;
+	/* 0x1c */ DS3DBUFFER bufferParams;
+	/* 0x5c */ DS3DLISTENER listenerParams;
+	/* 0x9c */ cMagLog log;
 };
+
+STATIC_ASSERT(sizeof(cMagSound) == 0xa4);
 
 #endif

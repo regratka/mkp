@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.019024,
-    "total_code": "690832",
-    "matched_code": "123058",
-    "matched_code_percent": 17.813013,
+    "fuzzy_match_percent": 28.192616,
+    "total_code": "690860",
+    "matched_code": "124145",
+    "matched_code_percent": 17.969631,
     "matched_data_percent": 100.0,
     "total_functions": 3298,
-    "matched_functions": 1154,
-    "matched_functions_percent": 34.990902,
-    "complete_code": "47355",
-    "complete_code_percent": 6.854778,
+    "matched_functions": 1167,
+    "matched_functions_percent": 35.385082,
+    "complete_code": "48594",
+    "complete_code_percent": 7.033842,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 36
+    "complete_units": 37
   },
   "units": [
     {
@@ -18441,18 +18441,25 @@
     {
       "name": "me2/cMagSound",
       "measures": {
-        "fuzzy_match_percent": 2.629952,
-        "total_code": "1211",
+        "fuzzy_match_percent": 99.997955,
+        "total_code": "1239",
+        "matched_code": "1087",
+        "matched_code_percent": 87.73204,
         "matched_data_percent": 100.0,
         "total_functions": 14,
+        "matched_functions": 13,
+        "matched_functions_percent": 92.85714,
+        "complete_code": "1239",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1211",
-          "fuzzy_match_percent": 2.629952,
+          "size": "1239",
+          "fuzzy_match_percent": 99.997955,
           "metadata": {}
         }
       ],
@@ -18460,6 +18467,7 @@
         {
           "name": "??0cMagSound@@QAE@ABV0@@Z",
           "size": "105",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSound::cMagSound(class cMagSound const &)"
           },
@@ -18468,21 +18476,25 @@
         {
           "name": "??4cMagSound@@QAEAAV0@ABV0@@Z",
           "size": "99",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagSound & __thiscall cMagSound::operator=(class cMagSound const &)"
           },
           "address": "105"
         },
         {
-          "name": "cMagSound::scalar_destructor",
+          "name": "??_EcMagSound@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagSound::`vector deleting destructor'(unsigned int)"
+          },
           "address": "204"
         },
         {
           "name": "??0cMagSound@@QAE@XZ",
           "size": "44",
-          "fuzzy_match_percent": 9.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagSound::cMagSound(void)"
           },
@@ -18491,6 +18503,7 @@
         {
           "name": "??1cMagSound@@UAE@XZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagSound::~cMagSound(void)"
           },
@@ -18499,6 +18512,7 @@
         {
           "name": "?Setup@cMagSound@@QAEJPADPAUIDirectMusicPerformance8@@PAUIDirectMusicLoader8@@@Z",
           "size": "365",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::Setup(char *, struct IDirectMusicPerformance8*, struct IDirectMusicLoader8*)"
           },
@@ -18506,8 +18520,8 @@
         },
         {
           "name": "?Kill@cMagSound@@QAEXXZ",
-          "size": "124",
-          "fuzzy_match_percent": 1.9230769,
+          "size": "152",
+          "fuzzy_match_percent": 99.98333,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::Kill(void)"
           },
@@ -18516,68 +18530,69 @@
         {
           "name": "?Play@cMagSound@@QAEJ_N@Z",
           "size": "77",
-          "fuzzy_match_percent": 5.5882354,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::Play(bool)"
           },
-          "address": "831"
+          "address": "859"
         },
         {
           "name": "?IsPlaying@cMagSound@@QAE_NXZ",
           "size": "22",
-          "fuzzy_match_percent": 12.727273,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagSound::IsPlaying(void)"
           },
-          "address": "908"
+          "address": "936"
         },
         {
           "name": "?SetVolume@cMagSound@@QAEXH@Z",
           "size": "70",
-          "fuzzy_match_percent": 3.7037036,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::SetVolume(int)"
           },
-          "address": "930"
+          "address": "958"
         },
         {
           "name": "?Stop@cMagSound@@QAEJXZ",
           "size": "30",
-          "fuzzy_match_percent": 12.666667,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::Stop(void)"
           },
-          "address": "1000"
+          "address": "1028"
         },
         {
           "name": "?Set3DSoundParams@cMagSound@@QAEXMMMM@Z",
           "size": "79",
-          "fuzzy_match_percent": 3.3333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::Set3DSoundParams(float, float, float, float)"
           },
-          "address": "1030"
+          "address": "1058"
         },
         {
           "name": "?SetPosition@cMagSound@@QAEJMMM@Z",
           "size": "51",
-          "fuzzy_match_percent": 9.047619,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::SetPosition(float, float, float)"
           },
-          "address": "1109"
+          "address": "1137"
         },
         {
           "name": "?setListenerPos@cMagSound@@QAEJMMM@Z",
           "size": "51",
-          "fuzzy_match_percent": 9.047619,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::setListenerPos(float, float, float)"
           },
-          "address": "1160"
+          "address": "1188"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -32446,19 +32461,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 31.560366,
-        "total_code": "515112",
-        "matched_code": "94474",
-        "matched_code_percent": 18.340477,
+        "fuzzy_match_percent": 31.792978,
+        "total_code": "515140",
+        "matched_code": "95561",
+        "matched_code_percent": 18.550491,
         "matched_data_percent": 100.0,
         "total_functions": 2308,
-        "matched_functions": 885,
-        "matched_functions_percent": 38.344887,
-        "complete_code": "21774",
-        "complete_code_percent": 4.2270417,
+        "matched_functions": 898,
+        "matched_functions_percent": 38.908146,
+        "complete_code": "23013",
+        "complete_code_percent": 4.4673295,
         "complete_data_percent": 100.0,
         "total_units": 110,
-        "complete_units": 9
+        "complete_units": 10
       }
     },
     {
