@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.11173,
+    "fuzzy_match_percent": 28.192616,
     "total_code": "690860",
-    "matched_code": "123529",
-    "matched_code_percent": 17.880468,
+    "matched_code": "124145",
+    "matched_code_percent": 17.969631,
     "matched_data_percent": 100.0,
     "total_functions": 3298,
-    "matched_functions": 1162,
-    "matched_functions_percent": 35.233475,
-    "complete_code": "47355",
-    "complete_code_percent": 6.8545,
+    "matched_functions": 1167,
+    "matched_functions_percent": 35.385082,
+    "complete_code": "48594",
+    "complete_code_percent": 7.033842,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 36
+    "complete_units": 37
   },
   "units": [
     {
@@ -18441,22 +18441,25 @@
     {
       "name": "me2/cMagSound",
       "measures": {
-        "fuzzy_match_percent": 54.896015,
+        "fuzzy_match_percent": 99.997955,
         "total_code": "1239",
-        "matched_code": "471",
-        "matched_code_percent": 38.014526,
+        "matched_code": "1087",
+        "matched_code_percent": 87.73204,
         "matched_data_percent": 100.0,
         "total_functions": 14,
-        "matched_functions": 8,
-        "matched_functions_percent": 57.14286,
+        "matched_functions": 13,
+        "matched_functions_percent": 92.85714,
+        "complete_code": "1239",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "1239",
-          "fuzzy_match_percent": 54.896015,
+          "fuzzy_match_percent": 99.997955,
           "metadata": {}
         }
       ],
@@ -18509,7 +18512,7 @@
         {
           "name": "?Setup@cMagSound@@QAEJPADPAUIDirectMusicPerformance8@@PAUIDirectMusicLoader8@@@Z",
           "size": "365",
-          "fuzzy_match_percent": 1.3868613,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::Setup(char *, struct IDirectMusicPerformance8*, struct IDirectMusicLoader8*)"
           },
@@ -18545,7 +18548,7 @@
         {
           "name": "?SetVolume@cMagSound@@QAEXH@Z",
           "size": "70",
-          "fuzzy_match_percent": 57.51852,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::SetVolume(int)"
           },
@@ -18563,7 +18566,7 @@
         {
           "name": "?Set3DSoundParams@cMagSound@@QAEXMMMM@Z",
           "size": "79",
-          "fuzzy_match_percent": 3.3333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagSound::Set3DSoundParams(float, float, float, float)"
           },
@@ -18572,7 +18575,7 @@
         {
           "name": "?SetPosition@cMagSound@@QAEJMMM@Z",
           "size": "51",
-          "fuzzy_match_percent": 9.047619,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::SetPosition(float, float, float)"
           },
@@ -18581,7 +18584,7 @@
         {
           "name": "?setListenerPos@cMagSound@@QAEJMMM@Z",
           "size": "51",
-          "fuzzy_match_percent": 9.047619,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall cMagSound::setListenerPos(float, float, float)"
           },
@@ -18589,6 +18592,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -32457,19 +32461,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 31.684502,
+        "fuzzy_match_percent": 31.792978,
         "total_code": "515140",
-        "matched_code": "94945",
-        "matched_code_percent": 18.430912,
+        "matched_code": "95561",
+        "matched_code_percent": 18.550491,
         "matched_data_percent": 100.0,
         "total_functions": 2308,
-        "matched_functions": 893,
-        "matched_functions_percent": 38.69151,
-        "complete_code": "21774",
-        "complete_code_percent": 4.226812,
+        "matched_functions": 898,
+        "matched_functions_percent": 38.908146,
+        "complete_code": "23013",
+        "complete_code_percent": 4.4673295,
         "complete_data_percent": 100.0,
         "total_units": 110,
-        "complete_units": 9
+        "complete_units": 10
       }
     },
     {
