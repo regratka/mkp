@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.27999,
+    "fuzzy_match_percent": 28.35764,
     "total_code": "690907",
-    "matched_code": "124629",
-    "matched_code_percent": 18.038462,
+    "matched_code": "125173",
+    "matched_code_percent": 18.117199,
     "matched_data_percent": 100.0,
     "total_functions": 3304,
-    "matched_functions": 1182,
-    "matched_functions_percent": 35.77482,
-    "complete_code": "49225",
-    "complete_code_percent": 7.124693,
+    "matched_functions": 1190,
+    "matched_functions_percent": 36.01695,
+    "complete_code": "49769",
+    "complete_code_percent": 7.20343,
     "complete_data_percent": 100.0,
     "total_units": 207,
-    "complete_units": 39
+    "complete_units": 40
   },
   "units": [
     {
@@ -27317,75 +27317,104 @@
     {
       "name": "mkp/CKrzak",
       "measures": {
-        "fuzzy_match_percent": 1.3786764,
+        "fuzzy_match_percent": 100.0,
         "total_code": "544",
+        "matched_code": "544",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 8,
+        "matched_functions": 8,
+        "matched_functions_percent": 100.0,
+        "complete_code": "544",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "544",
-          "fuzzy_match_percent": 1.3786764,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CKrzak::CKrzak",
+          "name": "??0CKrzak@@QAE@XZ",
           "size": "52",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CKrzak::CKrzak(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CKrzak::scalar_destructor",
+          "name": "??_GCKrzak@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CKrzak::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "52"
         },
         {
-          "name": "CKrzak::~CKrzak",
+          "name": "??1CKrzak@@UAE@XZ",
           "size": "12",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CKrzak::~CKrzak(void)"
+          },
           "address": "82"
         },
         {
           "name": "?EXP@CKrzak@@QAEPAXXZ",
           "size": "90",
-          "fuzzy_match_percent": 8.333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void * __thiscall CKrzak::EXP(void)"
           },
           "address": "94"
         },
         {
-          "name": "CKrzak::OnActivate",
+          "name": "?OnActivate@CKrzak@@UAEXXZ",
           "size": "49",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrzak::OnActivate(void)"
+          },
           "address": "184"
         },
         {
-          "name": "CKrzak::OnActivateLevel",
+          "name": "?OnActivateLevel@CKrzak@@UAEXXZ",
           "size": "76",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrzak::OnActivateLevel(void)"
+          },
           "address": "233"
         },
         {
-          "name": "CKrzak::OnFrame",
+          "name": "?OnFrame@CKrzak@@UAEXXZ",
           "size": "199",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrzak::OnFrame(void)"
+          },
           "address": "309"
         },
         {
-          "name": "CKrzak::OnLoadChunk",
+          "name": "?OnLoadChunk@CKrzak@@UAEXU_ED_CHUNK@@AAV?$basic_ifstream@DU?$char_traits@D@std@@@std@@@Z",
           "size": "36",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CKrzak::OnLoadChunk(struct _ED_CHUNK, class std::basic_ifstream<char, struct std::char_traits<char> > &)"
+          },
           "address": "508"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -32566,19 +32595,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 17.731321,
+        "fuzzy_match_percent": 18.036634,
         "total_code": "175721",
-        "matched_code": "28756",
-        "matched_code_percent": 16.364578,
+        "matched_code": "29300",
+        "matched_code_percent": 16.67416,
         "matched_data_percent": 100.0,
         "total_functions": 991,
-        "matched_functions": 275,
-        "matched_functions_percent": 27.749746,
-        "complete_code": "25753",
-        "complete_code_percent": 14.655619,
+        "matched_functions": 283,
+        "matched_functions_percent": 28.557014,
+        "complete_code": "26297",
+        "complete_code_percent": 14.9652,
         "complete_data_percent": 100.0,
         "total_units": 97,
-        "complete_units": 28
+        "complete_units": 29
       }
     }
   ]
