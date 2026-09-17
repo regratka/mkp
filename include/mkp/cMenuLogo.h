@@ -24,8 +24,8 @@ private:
 	/* 0x1740 */ int logoEgmontTexID;
 	/* 0x1744 */ int logoGratkaTexID;
 	/* 0x1748 */ uchar field_0x1748[0x174c-0x1748];
-	/* 0x174c */ int unk_174c;
-	/* 0x1750 */ float unk_1750;
+	/* 0x174c */ int madefadesOut;
+	/* 0x1750 */ float timeFromLastFade;
 	/* 0x1754 */ MenuModule* menuModule;
 	/* 0x1758 */ cFadeInOut* fadeInOut;
 	/* 0x175c */ uchar field_0x175c[0x1760-0x175c];

@@ -34,8 +34,8 @@ void cMenuLogo::OnActivate() {
 /* 433C10-433CCE 000BE	*/
 void cMenuLogo::FUN00433c10() {
 	Show(logoEgmontTexID);
-	unk_1750 = 0.0f;
-	unk_174c = 0;
+	timeFromLastFade = 0.0f;
+	madefadesOut = 0;
 	EnableCallHandler("OnFrame");
 	EnableCallHandler("OnInputKey");
 	fadeInOut = new cFadeInOut();
@@ -46,9 +46,9 @@ void cMenuLogo::FUN00433c10() {
 
 /* 433CD0-433D7C 000AC	*/
 void cMenuLogo::OnFadeOutEnd() {
-	unk_174c++;
+	madefadesOut++;
 
-	if (unk_174c > 1) {
+	if (madefadesOut > 1) {
 		Hide(logoEgmontTexID);
 		Hide(logoGratkaTexID);
 		DisableCallHandler("OnFrame");
@@ -60,7 +60,7 @@ void cMenuLogo::OnFadeOutEnd() {
 			menuModule->FUN00434680();
 		}
 	} else {
-		unk_1750 = 0.0f;
+		timeFromLastFade = 0.0f;
 		Hide(logoEgmontTexID);
 		Show(logoGratkaTexID);
 		if (fadeInOut != NULL) {
@@ -71,9 +71,9 @@ void cMenuLogo::OnFadeOutEnd() {
 
 /* 433D80-433DC5 00045	*/
 void cMenuLogo::OnFrame() {
-	unk_1750 += GetGame()->GetFrameTime();
-	if (unk_1750 > 4.0f) {
-		unk_1750 = 0.0f;
+	timeFromLastFade += GetGame()->GetFrameTime();
+	if (timeFromLastFade > 4.0f) {
+		timeFromLastFade = 0.0f;
 		if (fadeInOut != NULL) {
 			fadeInOut->FUN0041c7b0();
 		}
@@ -88,7 +88,7 @@ void cMenuLogo::OnInputKey(uchar* param_1) {
 		return;
 	}
 
-	unk_174c = 10;
+	madefadesOut = 10;
 	Hide(logoEgmontTexID);
 	Hide(logoGratkaTexID);
 	DisableCallHandler("OnFrame");
