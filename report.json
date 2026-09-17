@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.37507,
+    "fuzzy_match_percent": 28.499716,
     "total_code": "693161",
-    "matched_code": "125933",
-    "matched_code_percent": 18.167929,
+    "matched_code": "126797",
+    "matched_code_percent": 18.292576,
     "matched_data_percent": 100.0,
     "total_functions": 3321,
-    "matched_functions": 1201,
-    "matched_functions_percent": 36.163807,
-    "complete_code": "50499",
-    "complete_code_percent": 7.2853208,
+    "matched_functions": 1211,
+    "matched_functions_percent": 36.46492,
+    "complete_code": "51363",
+    "complete_code_percent": 7.409967,
     "complete_data_percent": 100.0,
     "total_units": 208,
-    "complete_units": 41
+    "complete_units": 42
   },
   "units": [
     {
@@ -31208,82 +31208,122 @@
     {
       "name": "mkp/cFadeInOut",
       "measures": {
+        "fuzzy_match_percent": 100.0,
         "total_code": "864",
+        "matched_code": "864",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 10,
+        "matched_functions": 10,
+        "matched_functions_percent": 100.0,
+        "complete_code": "864",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "864",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "cFadeInOut::cFadeInOut",
+          "name": "??0cFadeInOut@@QAE@XZ",
           "size": "138",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall cFadeInOut::cFadeInOut(void)"
+          },
           "address": "0"
         },
         {
-          "name": "cFadeInOut::scalar_destructor",
+          "name": "??_GcFadeInOut@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cFadeInOut::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "138"
         },
         {
-          "name": "cFadeInOut::~cFadeInOut",
+          "name": "??1cFadeInOut@@UAE@XZ",
           "size": "12",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall cFadeInOut::~cFadeInOut(void)"
+          },
           "address": "168"
         },
         {
-          "name": "cFadeInOut::FUN0041c560",
+          "name": "?FUN0041c560@cFadeInOut@@QAEXXZ",
           "size": "54",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cFadeInOut::FUN0041c560(void)"
+          },
           "address": "180"
         },
         {
-          "name": "cFadeInOut::OnActivate",
+          "name": "?OnActivate@cFadeInOut@@UAEXXZ",
           "size": "59",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cFadeInOut::OnActivate(void)"
+          },
           "address": "234"
         },
         {
-          "name": "cFadeInOut::FUN0041c5e0",
+          "name": "?FUN0041c5e0@cFadeInOut@@QAEXPAVcMagKernel@@@Z",
           "size": "26",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cFadeInOut::FUN0041c5e0(class cMagKernel *)"
+          },
           "address": "293"
         },
         {
-          "name": "cFadeInOut::OnFrame",
+          "name": "?OnFrame@cFadeInOut@@UAEXXZ",
           "size": "323",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cFadeInOut::OnFrame(void)"
+          },
           "address": "319"
         },
         {
-          "name": "cFadeInOut::FUN0041c750",
+          "name": "?FUN0041c750@cFadeInOut@@QAEXXZ",
           "size": "91",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cFadeInOut::FUN0041c750(void)"
+          },
           "address": "642"
         },
         {
-          "name": "cFadeInOut::FUN0041c7b0",
+          "name": "?FUN0041c7b0@cFadeInOut@@QAEXXZ",
           "size": "118",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cFadeInOut::FUN0041c7b0(void)"
+          },
           "address": "733"
         },
         {
-          "name": "cFadeInOut::FUN0041c830",
+          "name": "?FUN0041c830@cFadeInOut@@QAEX_N@Z",
           "size": "13",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cFadeInOut::FUN0041c830(bool)"
+          },
           "address": "851"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -32770,19 +32810,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 18.235233,
+        "fuzzy_match_percent": 18.720694,
         "total_code": "177975",
-        "matched_code": "30060",
-        "matched_code_percent": 16.890013,
+        "matched_code": "30924",
+        "matched_code_percent": 17.375473,
         "matched_data_percent": 100.0,
         "total_functions": 1008,
-        "matched_functions": 294,
-        "matched_functions_percent": 29.166666,
-        "complete_code": "27027",
-        "complete_code_percent": 15.185841,
+        "matched_functions": 304,
+        "matched_functions_percent": 30.158731,
+        "complete_code": "27891",
+        "complete_code_percent": 15.671303,
         "complete_data_percent": 100.0,
         "total_units": 98,
-        "complete_units": 30
+        "complete_units": 31
       }
     }
   ]
