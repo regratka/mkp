@@ -39,7 +39,8 @@ void CPlayerTPP::FUN00408720() {
 }
 
 /* 408840-408847 00007	*/
-void CPlayerTPP::FUN00408840() {
+void* CPlayerTPP::FUN00408840() {
+	return NULL;
 }
 
 /* 408850-408A94 00244	*/

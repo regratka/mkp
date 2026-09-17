@@ -49,7 +49,7 @@ void CBlokadaLevel3_1::OnCollisionObject(cMagMeshObject* param_1) {
 		return;
 	}
 
-	((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042CC30(true);
+	((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042cc30(true);
 }
 
 /* 4408B0-440978 000C8	*/

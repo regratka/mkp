@@ -179,7 +179,7 @@
 ;CPlayerTPP::FUN00408640;0x408640;0xdd;__thiscall;;void;CPlayerTPP*
 ;CPlayerTPP::FUN00408720;0x408720;0xfa;__thiscall;;void;CPlayerTPP*
 ;FUN_00408820;0x408820;0x1f;__thiscall;;CCollisionCamera*;void*;uchar
-;CPlayerTPP::FUN00408840;0x408840;0x7;__thiscall;;void;CPlayerTPP*
+;CPlayerTPP::FUN00408840;0x408840;0x7;__thiscall;;void*;CPlayerTPP*
 ;CPlayerTPP::FUN00408850;0x408850;0x244;__thiscall;;void;CPlayerTPP*
 ;FUN_00408aa0;0x408aa0;0x1f;__thiscall;;cBlob*;void*;uchar
 ;CPlayerTPP::FUN00408ac0;0x408ac0;0xb1;__thiscall;;void;CPlayerTPP*
@@ -758,13 +758,13 @@
 ??0cFadeInOut@@QAE@XZ;cFadeInOut::cFadeInOut;0x41c4a0;0x8a;__thiscall;;cFadeInOut*;cFadeInOut*
 ??_GcFadeInOut@@UAEPAXI@Z;cFadeInOut::scalar_destructor;0x41c530;0x1e;__thiscall;;cMagSprite*;cFadeInOut*;uchar
 ??1cFadeInOut@@UAE@XZ;cFadeInOut::~cFadeInOut;0x41c550;0xc;__thiscall;;void;cFadeInOut*
-?FUN0041c560@cFadeInOut@@QAEXXZ;cFadeInOut::FUN0041c560;0x41c560;0x36;__thiscall;;void;cFadeInOut*
+?HideFade@cFadeInOut@@QAEXXZ;cFadeInOut::HideFade;0x41c560;0x36;__thiscall;;void;cFadeInOut*
 ?OnActivate@cFadeInOut@@UAEXXZ;cFadeInOut::OnActivate;0x41c5a0;0x3b;__thiscall;;void;cFadeInOut*
-?FUN0041c5e0@cFadeInOut@@QAEXPAVcMagKernel@@@Z;cFadeInOut::FUN0041c5e0;0x41c5e0;0x1a;__thiscall;;void;cFadeInOut*;cMagKernel*
+?SetListener@cFadeInOut@@QAEXPAVcMagKernel@@@Z;cFadeInOut::SetListener;0x41c5e0;0x1a;__thiscall;;void;cFadeInOut*;cMagKernel*
 ?OnFrame@cFadeInOut@@UAEXXZ;cFadeInOut::OnFrame;0x41c600;0x143;__thiscall;;void;cFadeInOut*
-?FUN0041c750@cFadeInOut@@QAEXXZ;cFadeInOut::FUN0041c750;0x41c750;0x5b;__thiscall;;void;cFadeInOut*
-?FUN0041c7b0@cFadeInOut@@QAEXXZ;cFadeInOut::FUN0041c7b0;0x41c7b0;0x76;__thiscall;;void;cFadeInOut*
-?FUN0041c830@cFadeInOut@@QAEX_N@Z;cFadeInOut::FUN0041c830;0x41c830;0xd;__thiscall;;void;cFadeInOut*;bool
+?StartFadingIn@cFadeInOut@@QAEXXZ;cFadeInOut::StartFadingIn;0x41c750;0x5b;__thiscall;;void;cFadeInOut*
+?StartFadingOut@cFadeInOut@@QAEXXZ;cFadeInOut::StartFadingOut;0x41c7b0;0x76;__thiscall;;void;cFadeInOut*
+?MustUseSecondaryTexture@cFadeInOut@@QAEX_N@Z;cFadeInOut::MustUseSecondaryTexture;0x41c830;0xd;__thiscall;;void;cFadeInOut*;bool
 ;FUN_0041c880;0x41c880;0xa;__stdcall;;uchar
 ;FUN_0041c890;0x41c890;0xc;__stdcall;;uchar
 ;FUN_0041c8c0;0x41c8c0;0xa;__stdcall;;uchar
@@ -1074,7 +1074,7 @@
 ;CHudGratka::FUN0042d320;0x42d320;0x14;__thiscall;;void;CHudGratka*
 ;FUN_0042d340;0x42d340;0x1d;__thiscall;;uchar;void*;int
 ;CHudGratka::FUN0042d360;0x42d360;0xe9;__thiscall;;void;CHudGratka*;int
-;CHudGratka::FUN0042d450;0x42d450;0x7;__thiscall;;uint;CHudGratka*
+;CHudGratka::FUN0042d450;0x42d450;0x7;__thiscall;;int;CHudGratka*
 ;CHudGratka::FUN0042d460;0x42d460;0xdc;__thiscall;;void;CHudGratka*;int
 ;CHudGratka::FUN0042d540;0x42d540;0x4c;__thiscall;;void;CHudGratka*;bool
 ;CHudGratka::FUN0042d590;0x42d590;0x145;__thiscall;;void;CHudGratka*;bool

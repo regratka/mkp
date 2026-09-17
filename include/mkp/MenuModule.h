@@ -2,6 +2,7 @@
 #define _MENU_MODULE
 
 #include <globals.h>
+#include "cMagSprite.h"
 
 class MenuModule {
 public:

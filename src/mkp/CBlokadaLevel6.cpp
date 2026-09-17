@@ -67,7 +67,7 @@ void CBlokadaLevel6::OnCollisionObject(cMagMeshObject* param_1) {
 		return;
 	}
 
-	hud->FUN0042CC30(true);
+	hud->FUN0042cc30(true);
 }
 
 /* 441900-441920 00020	*/
