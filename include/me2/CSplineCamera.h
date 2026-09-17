@@ -8,6 +8,7 @@
 #include "CSplineControlPoint.h"
 
 #include "cMagMeshObject.h"
+#include "CCamera.h"
 
 
 class DLLEXPORT CSplineCamera : public CCamera {

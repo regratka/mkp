@@ -66,7 +66,7 @@ public:
 	/* 4082F0 */ void OnActivateLevel();
 	/* 408640 */ void FUN00408640();
 	/* 408720 */ void FUN00408720();
-	/* 408840 */ void FUN00408840();
+	/* 408840 */ void* FUN00408840();
 	/* 408850 */ void FUN00408850();
 	/* 408AC0 */ void FUN00408ac0();
 	/* 409260 */ void FUN00409260();

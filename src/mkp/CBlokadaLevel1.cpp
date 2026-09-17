@@ -60,7 +60,7 @@ void CBlokadaLevel1::OnCollisionObject(cMagMeshObject* param_1) {
 		if (((CPlayerTPP*) GetPlayerObject())->unk_3990 != NULL) {
 			((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042d810();
 		}
-		((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042CC30(1);
+		((CPlayerTPP*) GetPlayerObject())->unk_3990->FUN0042cc30(1);
 	}
 }
 

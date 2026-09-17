@@ -173,7 +173,7 @@ void CArmata::FUN0043a7e0() {
 		hud->FUN0042dfb0(true);
 	}
 	CPlayerTPP* player = (CPlayerTPP*) GetPlayerObject();
-	camera = player->FUN00408840();
+	camera = (CCollisionCamera*) player->FUN00408840();
 	camera->observedObject = this;
 	
 	GetGame()->SetActiveCamera(camera);

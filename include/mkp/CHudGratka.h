@@ -2,6 +2,7 @@
 #define _C_HUD_GRATKA
 
 #include <globals.h>
+#include <d3dx8math.h>
 
 class CHudGratka {
 public:
@@ -18,7 +19,7 @@ public:
 	/* 42D030 */ void FUN0042d030();
 	/* 42D320 */ void FUN0042d320();
 	/* 42D360 */ void FUN0042d360(int param_1);
-	/* 42D450 */ uint FUN0042d450();
+	/* 42D450 */ int FUN0042d450();
 	/* 42D460 */ void FUN0042d460(int param_1);
 	/* 42D540 */ void FUN0042d540(bool param_1);
 	/* 42D590 */ void FUN0042d590(bool param_1);

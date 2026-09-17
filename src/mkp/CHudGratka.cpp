@@ -54,7 +54,7 @@ void CHudGratka::FUN0042d360(int param_1) {
 }
 
 /* 42D450-42D457 00007	*/
-uint CHudGratka::FUN0042d450() {
+int CHudGratka::FUN0042d450() {
 	return 0;
 }
 

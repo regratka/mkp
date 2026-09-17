@@ -56,7 +56,7 @@ void* CMoneta::EXP() {
 /* 433270-4332D1 00061	*/
 void CMoneta::OnCollisionObject(cMagMeshObject* param_1) {
 	if (strcmpi("CPlayerTPP", param_1->GetClassNameA()) == 0) {
-		((CPlayerTPP*) param_1)->FUN0040A150();
+		((CPlayerTPP*) param_1)->FUN0040a150();
 		Hide();
 	}
 

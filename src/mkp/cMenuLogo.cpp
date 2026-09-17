@@ -40,8 +40,8 @@ void cMenuLogo::FUN00433c10() {
 	EnableCallHandler("OnInputKey");
 	fadeInOut = new cFadeInOut();
 	CreateObject(fadeInOut);
-	fadeInOut->FUN0041c5e0(this);
-	fadeInOut->FUN0041c750();
+	fadeInOut->SetListener(this);
+	fadeInOut->StartFadingIn();
 }
 
 /* 433CD0-433D7C 000AC	*/
@@ -54,7 +54,7 @@ void cMenuLogo::OnFadeOutEnd() {
 		DisableCallHandler("OnFrame");
 		DisableCallHandler("OnInputKey");
 		if (fadeInOut != NULL) {
-			fadeInOut->FUN0041c560();
+			fadeInOut->HideFade();
 		}
 		if (menuModule != NULL) {
 			menuModule->FUN00434680();
@@ -64,7 +64,7 @@ void cMenuLogo::OnFadeOutEnd() {
 		Hide(logoEgmontTexID);
 		Show(logoGratkaTexID);
 		if (fadeInOut != NULL) {
-			fadeInOut->FUN0041c750();
+			fadeInOut->StartFadingIn();
 		}
 	}
 }
@@ -75,7 +75,7 @@ void cMenuLogo::OnFrame() {
 	if (timeFromLastFade > 4.0f) {
 		timeFromLastFade = 0.0f;
 		if (fadeInOut != NULL) {
-			fadeInOut->FUN0041c7b0();
+			fadeInOut->StartFadingOut();
 		}
 	}
 }
@@ -99,7 +99,7 @@ void cMenuLogo::OnInputKey(uchar* param_1) {
 	}
 	
 	if (fadeInOut != NULL) {
-		fadeInOut->FUN0041c560();
+		fadeInOut->HideFade();
 	}
 }
 
