@@ -5,8 +5,8 @@
 #include "cMagMeshObject.h"
 
 struct CKrzakChunkData {
-	/* 0x00 */ float unk_00;
-	/* 0x04 */ float unk_04;
+	/* 0x00 */ float directionUpdateInterval;
+	/* 0x04 */ float directionChangeValue;
 };
 
 class CKrzak : public cMagMeshObject {
@@ -20,13 +20,12 @@ public:
 	/* 441C80 */ void OnLoadChunk(_ED_CHUNK param_1, std::ifstream& param_2);
 
 private:
-	/* 0x2658 */ CKrzakChunkData unk_2658;
-	// /* 0x265c */ float unk_265c;
-	/* 0x2660 */ float unk_2660;
-	/* 0x2664 */ float unk_2664;
-	/* 0x2668 */ bool unk_2668;
-	/* 0x266c */ float unk_266c;
-	/* 0x2670 */ float unk_2670;
+	/* 0x2658 */ CKrzakChunkData chunkData;
+	/* 0x2660 */ float lastUpdateTick;
+	/* 0x2664 */ float direction;
+	/* 0x2668 */ bool shouldDecreaseDirection;
+	/* 0x266c */ float directionUpdateInterval;
+	/* 0x2670 */ float directionChangeValue;
 };
 
 STATIC_ASSERT(sizeof(CKrzak) == 0x2678);
