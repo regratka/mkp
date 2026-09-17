@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.35764,
-    "total_code": "690907",
-    "matched_code": "125173",
-    "matched_code_percent": 18.117199,
+    "fuzzy_match_percent": 28.37507,
+    "total_code": "693161",
+    "matched_code": "125933",
+    "matched_code_percent": 18.167929,
     "matched_data_percent": 100.0,
-    "total_functions": 3304,
-    "matched_functions": 1190,
-    "matched_functions_percent": 36.01695,
-    "complete_code": "49769",
-    "complete_code_percent": 7.20343,
+    "total_functions": 3321,
+    "matched_functions": 1201,
+    "matched_functions_percent": 36.163807,
+    "complete_code": "50499",
+    "complete_code_percent": 7.2853208,
     "complete_data_percent": 100.0,
-    "total_units": 207,
-    "complete_units": 40
+    "total_units": 208,
+    "complete_units": 41
   },
   "units": [
     {
@@ -31208,16 +31208,16 @@
     {
       "name": "mkp/cFadeInOut",
       "measures": {
-        "total_code": "562",
+        "total_code": "864",
         "matched_data_percent": 100.0,
-        "total_functions": 5,
+        "total_functions": 10,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "562",
+          "size": "864",
           "metadata": {}
         }
       ],
@@ -31241,16 +31241,46 @@
           "address": "168"
         },
         {
+          "name": "cFadeInOut::FUN0041c560",
+          "size": "54",
+          "metadata": {},
+          "address": "180"
+        },
+        {
           "name": "cFadeInOut::OnActivate",
           "size": "59",
           "metadata": {},
-          "address": "180"
+          "address": "234"
+        },
+        {
+          "name": "cFadeInOut::FUN0041c5e0",
+          "size": "26",
+          "metadata": {},
+          "address": "293"
         },
         {
           "name": "cFadeInOut::OnFrame",
           "size": "323",
           "metadata": {},
-          "address": "239"
+          "address": "319"
+        },
+        {
+          "name": "cFadeInOut::FUN0041c750",
+          "size": "91",
+          "metadata": {},
+          "address": "642"
+        },
+        {
+          "name": "cFadeInOut::FUN0041c7b0",
+          "size": "118",
+          "metadata": {},
+          "address": "733"
+        },
+        {
+          "name": "cFadeInOut::FUN0041c830",
+          "size": "13",
+          "metadata": {},
+          "address": "851"
         }
       ],
       "metadata": {
@@ -31454,64 +31484,122 @@
     {
       "name": "mkp/cMenuLogo",
       "measures": {
-        "total_code": "538",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "730",
+        "matched_code": "730",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 7,
+        "total_functions": 10,
+        "matched_functions": 10,
+        "matched_functions_percent": 100.0,
+        "complete_code": "730",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "538",
+          "size": "729",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "cMenuLogo::scalar_destructor",
-          "size": "30",
-          "metadata": {},
+          "name": "?OnActivateLevel@cMenuLogo@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cMenuLogo::OnActivateLevel(void)"
+          },
           "address": "0"
         },
         {
-          "name": "cMenuLogo::cMenuLogo",
+          "name": "?OnFadeInEnd@cMenuLogo@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cMenuLogo::OnFadeInEnd(void)"
+          },
+          "address": "0"
+        },
+        {
+          "name": "??_GcMenuLogo@@UAEPAXI@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMenuLogo::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "1"
+        },
+        {
+          "name": "??0cMenuLogo@@QAE@PAVMenuModule@@@Z",
           "size": "31",
-          "metadata": {},
-          "address": "30"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall cMenuLogo::cMenuLogo(class MenuModule *)"
+          },
+          "address": "31"
         },
         {
-          "name": "cMenuLogo::~cMenuLogo",
+          "name": "??1cMenuLogo@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "61"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall cMenuLogo::~cMenuLogo(void)"
+          },
+          "address": "62"
         },
         {
-          "name": "cMenuLogo::OnActivate",
+          "name": "?OnActivate@cMenuLogo@@UAEXXZ",
           "size": "103",
-          "metadata": {},
-          "address": "73"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cMenuLogo::OnActivate(void)"
+          },
+          "address": "74"
         },
         {
-          "name": "cMenuLogo::OnFadeOutEnd",
+          "name": "?FUN00433c10@cMenuLogo@@QAEXXZ",
+          "size": "190",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall cMenuLogo::FUN00433c10(void)"
+          },
+          "address": "177"
+        },
+        {
+          "name": "?OnFadeOutEnd@cMenuLogo@@UAEXXZ",
           "size": "172",
-          "metadata": {},
-          "address": "176"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cMenuLogo::OnFadeOutEnd(void)"
+          },
+          "address": "367"
         },
         {
-          "name": "cMenuLogo::OnFrame",
+          "name": "?OnFrame@cMenuLogo@@UAEXXZ",
           "size": "69",
-          "metadata": {},
-          "address": "348"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cMenuLogo::OnFrame(void)"
+          },
+          "address": "539"
         },
         {
-          "name": "cMenuLogo::OnInputKey",
+          "name": "?OnInputKey@cMenuLogo@@UAEXPAE@Z",
           "size": "121",
-          "metadata": {},
-          "address": "417"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall cMenuLogo::OnInputKey(unsigned char *)"
+          },
+          "address": "608"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -31971,16 +32059,16 @@
     {
       "name": "mkp/MenuModule",
       "measures": {
-        "total_code": "2992",
+        "total_code": "4722",
         "matched_data_percent": 100.0,
-        "total_functions": 14,
+        "total_functions": 22,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "2992",
+          "size": "4722",
           "metadata": {}
         }
       ],
@@ -32022,52 +32110,100 @@
           "address": "1431"
         },
         {
+          "name": "MenuModule::FUN00434680",
+          "size": "497",
+          "metadata": {},
+          "address": "1709"
+        },
+        {
           "name": "MenuModule::OnMouseArrive",
           "size": "274",
           "metadata": {},
-          "address": "1709"
+          "address": "2206"
         },
         {
           "name": "MenuModule::FUN004349a0",
           "size": "74",
           "metadata": {},
-          "address": "1983"
+          "address": "2480"
         },
         {
           "name": "MenuModule::OnMouseLeave",
           "size": "92",
           "metadata": {},
-          "address": "2057"
+          "address": "2554"
         },
         {
           "name": "MenuModule::OnInputMouse",
           "size": "222",
           "metadata": {},
-          "address": "2149"
+          "address": "2646"
         },
         {
           "name": "MenuModule::OnInputKey",
           "size": "495",
           "metadata": {},
-          "address": "2371"
+          "address": "2868"
         },
         {
           "name": "MenuModule::OnExitYesNo",
           "size": "79",
           "metadata": {},
-          "address": "2866"
+          "address": "3363"
+        },
+        {
+          "name": "MenuModule::FUN00434d80",
+          "size": "449",
+          "metadata": {},
+          "address": "3442"
+        },
+        {
+          "name": "MenuModule::FUN00434f50",
+          "size": "161",
+          "metadata": {},
+          "address": "3891"
+        },
+        {
+          "name": "MenuModule::FUN00435000",
+          "size": "59",
+          "metadata": {},
+          "address": "4052"
+        },
+        {
+          "name": "MenuModule::FUN00435040",
+          "size": "39",
+          "metadata": {},
+          "address": "4111"
+        },
+        {
+          "name": "MenuModule::FUN00435070",
+          "size": "328",
+          "metadata": {},
+          "address": "4150"
         },
         {
           "name": "MenuModule::FUN004351c0",
           "size": "23",
           "metadata": {},
-          "address": "2945"
+          "address": "4478"
+        },
+        {
+          "name": "MenuModule::FUN004351e0",
+          "size": "118",
+          "metadata": {},
+          "address": "4501"
+        },
+        {
+          "name": "MenuModule::FUN00435260",
+          "size": "79",
+          "metadata": {},
+          "address": "4619"
         },
         {
           "name": "MenuModule::OnPlaySoundEnd",
           "size": "24",
           "metadata": {},
-          "address": "2968"
+          "address": "4698"
         }
       ],
       "metadata": {
@@ -32568,6 +32704,45 @@
           "Game code"
         ]
       }
+    },
+    {
+      "name": "mkp/mkp_utils",
+      "measures": {
+        "fuzzy_match_percent": 100.0,
+        "total_code": "30",
+        "matched_code": "30",
+        "matched_code_percent": 100.0,
+        "matched_data_percent": 100.0,
+        "total_functions": 1,
+        "matched_functions": 1,
+        "matched_functions_percent": 100.0,
+        "complete_data_percent": 100.0,
+        "total_units": 1
+      },
+      "sections": [
+        {
+          "name": ".text",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {}
+        }
+      ],
+      "functions": [
+        {
+          "name": "?FUN00412b00@@YG_NPAE@Z",
+          "size": "30",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "bool __stdcall FUN00412b00(unsigned char *)"
+          },
+          "address": "0"
+        }
+      ],
+      "metadata": {
+        "progress_categories": [
+          "Game code"
+        ]
+      }
     }
   ],
   "version": 2,
@@ -32595,19 +32770,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 18.036634,
-        "total_code": "175721",
-        "matched_code": "29300",
-        "matched_code_percent": 16.67416,
+        "fuzzy_match_percent": 18.235233,
+        "total_code": "177975",
+        "matched_code": "30060",
+        "matched_code_percent": 16.890013,
         "matched_data_percent": 100.0,
-        "total_functions": 991,
-        "matched_functions": 283,
-        "matched_functions_percent": 28.557014,
-        "complete_code": "26297",
-        "complete_code_percent": 14.9652,
+        "total_functions": 1008,
+        "matched_functions": 294,
+        "matched_functions_percent": 29.166666,
+        "complete_code": "27027",
+        "complete_code_percent": 15.185841,
         "complete_data_percent": 100.0,
-        "total_units": 97,
-        "complete_units": 29
+        "total_units": 98,
+        "complete_units": 30
       }
     }
   ]

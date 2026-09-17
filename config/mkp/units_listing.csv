@@ -94,4 +94,5 @@ MenuOknoWyboru_CZ1,MenuOknoWyboru_CZ1
 MyParticle,MyParticle
 UIButton,UIButton
 UIEdit,UIEdit
-UIWindow,UIWindow
+UIWindow,
+mkp_utils,mkp_utils
