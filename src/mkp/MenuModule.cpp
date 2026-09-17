@@ -25,6 +25,10 @@ void MenuModule::OnUpdateMenuSettings() {
 void MenuModule::OnFrame() {
 }
 
+/* 434680-434871 001F1	*/
+void MenuModule::FUN00434680() {
+}
+
 /* 434880-434992 00112	*/
 uchar MenuModule::OnMouseArrive(int param_1) {
 	return 0;
@@ -53,8 +57,36 @@ uchar MenuModule::OnExitYesNo(char* param_1) {
 	return 0;
 }
 
+/* 434D80-434F41 001C1	*/
+void MenuModule::FUN00434d80() {
+}
+
+/* 434F50-434FF1 000A1	*/
+void MenuModule::FUN00434f50() {
+}
+
+/* 435000-43503B 0003B	*/
+void MenuModule::FUN00435000() {
+}
+
+/* 435040-435067 00027	*/
+void MenuModule::FUN00435040() {
+}
+
+/* 435070-4351B8 00148	*/
+void MenuModule::FUN00435070() {
+}
+
 /* 4351C0-4351D7 00017	*/
 void MenuModule::FUN004351c0() {
+}
+
+/* 4351E0-435256 00076	*/
+void MenuModule::FUN004351e0() {
+}
+
+/* 435260-4352AF 0004F	*/
+void MenuModule::FUN00435260(int param_1) {
 }
 
 /* 4352B0-4352C8 00018	*/
