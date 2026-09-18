@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.574984,
-    "total_code": "693161",
-    "matched_code": "127084",
-    "matched_code_percent": 18.33398,
+    "fuzzy_match_percent": 28.320404,
+    "total_code": "699909",
+    "matched_code": "127130",
+    "matched_code_percent": 18.16379,
     "matched_data_percent": 100.0,
-    "total_functions": 3321,
-    "matched_functions": 1212,
-    "matched_functions_percent": 36.495033,
+    "total_functions": 3343,
+    "matched_functions": 1216,
+    "matched_functions_percent": 36.374516,
     "complete_code": "51363",
-    "complete_code_percent": 7.409967,
+    "complete_code_percent": 7.3385253,
     "complete_data_percent": 100.0,
     "total_units": 208,
     "complete_units": 42
@@ -28028,16 +28028,16 @@
     {
       "name": "mkp/CMenuOpcje",
       "measures": {
-        "total_code": "6906",
+        "total_code": "12325",
         "matched_data_percent": 100.0,
-        "total_functions": 12,
+        "total_functions": 25,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "6906",
+          "size": "12325",
           "metadata": {}
         }
       ],
@@ -28067,52 +28067,130 @@
           "address": "462"
         },
         {
+          "name": "CMenuOpcje::FUN00437c70",
+          "size": "365",
+          "metadata": {},
+          "address": "3822"
+        },
+        {
+          "name": "CMenuOpcje::FUN00437de0",
+          "size": "161",
+          "metadata": {},
+          "address": "4187"
+        },
+        {
+          "name": "CMenuOpcje::FUN00437e90",
+          "size": "59",
+          "metadata": {},
+          "address": "4348"
+        },
+        {
           "name": "CMenuOpcje::OnFrame",
           "size": "238",
           "metadata": {},
-          "address": "3822"
+          "address": "4407"
         },
         {
           "name": "CMenuOpcje::OnActivateLevel",
           "size": "66",
           "metadata": {},
-          "address": "4060"
+          "address": "4645"
+        },
+        {
+          "name": "CMenuOpcje::FUN00438010",
+          "size": "419",
+          "metadata": {},
+          "address": "4711"
+        },
+        {
+          "name": "CMenuOpcje::FUN004381c0",
+          "size": "724",
+          "metadata": {},
+          "address": "5130"
         },
         {
           "name": "CMenuOpcje::OnButtonDown",
           "size": "836",
           "metadata": {},
-          "address": "4126"
+          "address": "5854"
+        },
+        {
+          "name": "CMenuOpcje::FUN004387f0",
+          "size": "537",
+          "metadata": {},
+          "address": "6690"
         },
         {
           "name": "CMenuOpcje::OnInputKey",
           "size": "1591",
           "metadata": {},
-          "address": "4962"
+          "address": "7227"
+        },
+        {
+          "name": "CMenuOpcje::FUN00439050",
+          "size": "84",
+          "metadata": {},
+          "address": "8818"
+        },
+        {
+          "name": "CMenuOpcje::FUN004390b0",
+          "size": "175",
+          "metadata": {},
+          "address": "8902"
+        },
+        {
+          "name": "CMenuOpcje::FUN00439160",
+          "size": "132",
+          "metadata": {},
+          "address": "9077"
         },
         {
           "name": "CMenuOpcje::OnButtonUp",
           "size": "132",
           "metadata": {},
-          "address": "6553"
+          "address": "9209"
         },
         {
           "name": "CMenuOpcje::OnInputMouse",
           "size": "100",
           "metadata": {},
-          "address": "6685"
+          "address": "9341"
+        },
+        {
+          "name": "CMenuOpcje::FUN004392f0",
+          "size": "224",
+          "metadata": {},
+          "address": "9441"
+        },
+        {
+          "name": "CMenuOpcje::FUN004393d0",
+          "size": "578",
+          "metadata": {},
+          "address": "9665"
+        },
+        {
+          "name": "CMenuOpcje::FUN00439620",
+          "size": "680",
+          "metadata": {},
+          "address": "10243"
+        },
+        {
+          "name": "CMenuOpcje::FUN004398d0",
+          "size": "1281",
+          "metadata": {},
+          "address": "10923"
         },
         {
           "name": "CMenuOpcje::OnMouseArrive",
           "size": "68",
           "metadata": {},
-          "address": "6785"
+          "address": "12204"
         },
         {
           "name": "CMenuOpcje::OnMouseLeave",
           "size": "53",
           "metadata": {},
-          "address": "6853"
+          "address": "12272"
         }
       ],
       "metadata": {
@@ -31015,16 +31093,16 @@
     {
       "name": "mkp/CWindowExitYesNo",
       "measures": {
-        "total_code": "2078",
+        "total_code": "3403",
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 15,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "2078",
+          "size": "3403",
           "metadata": {}
         }
       ],
@@ -31054,28 +31132,70 @@
           "address": "186"
         },
         {
+          "name": "CWindowExitYesNo::FUN004269e0",
+          "size": "393",
+          "metadata": {},
+          "address": "1334"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426b70",
+          "size": "207",
+          "metadata": {},
+          "address": "1727"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426c40",
+          "size": "7",
+          "metadata": {},
+          "address": "1934"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426c50",
+          "size": "365",
+          "metadata": {},
+          "address": "1941"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426dc0",
+          "size": "161",
+          "metadata": {},
+          "address": "2306"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426e70",
+          "size": "59",
+          "metadata": {},
+          "address": "2467"
+        },
+        {
           "name": "CWindowExitYesNo::OnFrame",
           "size": "238",
           "metadata": {},
-          "address": "1334"
+          "address": "2526"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426fa0",
+          "size": "133",
+          "metadata": {},
+          "address": "2764"
         },
         {
           "name": "CWindowExitYesNo::OnMouseArrive",
           "size": "242",
           "metadata": {},
-          "address": "1572"
+          "address": "2897"
         },
         {
           "name": "CWindowExitYesNo::OnMouseLeave",
           "size": "90",
           "metadata": {},
-          "address": "1814"
+          "address": "3139"
         },
         {
           "name": "CWindowExitYesNo::OnInputMouse",
           "size": "174",
           "metadata": {},
-          "address": "1904"
+          "address": "3229"
         }
       ],
       "metadata": {
@@ -32104,151 +32224,241 @@
     {
       "name": "mkp/MenuModule",
       "measures": {
-        "total_code": "4722",
+        "fuzzy_match_percent": 3.098277,
+        "total_code": "4726",
+        "matched_code": "46",
+        "matched_code_percent": 0.973339,
         "matched_data_percent": 100.0,
-        "total_functions": 22,
+        "total_functions": 24,
+        "matched_functions": 4,
+        "matched_functions_percent": 16.666668,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4722",
+          "size": "4726",
+          "fuzzy_match_percent": 3.098277,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "MenuModule::MenuModule",
-          "size": "210",
-          "metadata": {},
+          "name": "?OnButtonUp@MenuModule@@UAEXPAVcMagKernel@@@Z",
+          "size": "3",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnButtonUp(class cMagKernel *)"
+          },
           "address": "0"
         },
         {
-          "name": "MenuModule::scalar_destructor",
+          "name": "?OnActivateLevel@MenuModule@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnActivateLevel(void)"
+          },
+          "address": "3"
+        },
+        {
+          "name": "??0MenuModule@@QAE@XZ",
+          "size": "210",
+          "fuzzy_match_percent": 17.225,
+          "metadata": {
+            "demangled_name": "public: __thiscall MenuModule::MenuModule(void)"
+          },
+          "address": "4"
+        },
+        {
+          "name": "??_GMenuModule@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
-          "address": "210"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall MenuModule::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "214"
         },
         {
-          "name": "MenuModule::~MenuModule",
+          "name": "??1MenuModule@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "240"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall MenuModule::~MenuModule(void)"
+          },
+          "address": "244"
         },
         {
-          "name": "MenuModule::OnActivate",
+          "name": "?OnActivate@MenuModule@@UAEXXZ",
           "size": "1083",
-          "metadata": {},
-          "address": "252"
+          "fuzzy_match_percent": 0.36764705,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnActivate(void)"
+          },
+          "address": "256"
         },
         {
-          "name": "MenuModule::OnUpdateMenuSettings",
+          "name": "?OnUpdateMenuSettings@MenuModule@@UAEXXZ",
           "size": "96",
-          "metadata": {},
-          "address": "1335"
+          "fuzzy_match_percent": 3.4482758,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnUpdateMenuSettings(void)"
+          },
+          "address": "1339"
         },
         {
-          "name": "MenuModule::OnFrame",
+          "name": "?OnFrame@MenuModule@@UAEXXZ",
           "size": "278",
-          "metadata": {},
-          "address": "1431"
+          "fuzzy_match_percent": 1.4285715,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnFrame(void)"
+          },
+          "address": "1435"
         },
         {
-          "name": "MenuModule::FUN00434680",
+          "name": "?FUN00434680@MenuModule@@QAEXXZ",
           "size": "497",
-          "metadata": {},
-          "address": "1709"
+          "fuzzy_match_percent": 0.7092199,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00434680(void)"
+          },
+          "address": "1713"
         },
         {
-          "name": "MenuModule::OnMouseArrive",
+          "name": "?OnMouseArrive@MenuModule@@UAEXH@Z",
           "size": "274",
-          "metadata": {},
-          "address": "2206"
+          "fuzzy_match_percent": 1.3513514,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseArrive(int)"
+          },
+          "address": "2210"
         },
         {
-          "name": "MenuModule::FUN004349a0",
+          "name": "?FUN004349a0@MenuModule@@QAEX_N@Z",
           "size": "74",
-          "metadata": {},
-          "address": "2480"
+          "fuzzy_match_percent": 4.347826,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN004349a0(bool)"
+          },
+          "address": "2484"
         },
         {
-          "name": "MenuModule::OnMouseLeave",
+          "name": "?OnMouseLeave@MenuModule@@UAEXXZ",
           "size": "92",
-          "metadata": {},
-          "address": "2554"
+          "fuzzy_match_percent": 1.6,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseLeave(void)"
+          },
+          "address": "2558"
         },
         {
-          "name": "MenuModule::OnInputMouse",
+          "name": "?OnInputMouse@MenuModule@@UAEXMM_N0@Z",
           "size": "222",
-          "metadata": {},
-          "address": "2646"
+          "fuzzy_match_percent": 1.5625,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnInputMouse(float, float, bool, bool)"
+          },
+          "address": "2650"
         },
         {
-          "name": "MenuModule::OnInputKey",
+          "name": "?OnInputKey@MenuModule@@UAEXPAE@Z",
           "size": "495",
-          "metadata": {},
-          "address": "2868"
+          "fuzzy_match_percent": 0.6802721,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnInputKey(unsigned char *)"
+          },
+          "address": "2872"
         },
         {
-          "name": "MenuModule::OnExitYesNo",
+          "name": "?OnExitYesNo@MenuModule@@UAEXPAD@Z",
           "size": "79",
-          "metadata": {},
-          "address": "3363"
+          "fuzzy_match_percent": 3.7037036,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnExitYesNo(char *)"
+          },
+          "address": "3367"
         },
         {
-          "name": "MenuModule::FUN00434d80",
+          "name": "?FUN00434d80@MenuModule@@QAEXXZ",
           "size": "449",
-          "metadata": {},
-          "address": "3442"
+          "fuzzy_match_percent": 0.88495576,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00434d80(void)"
+          },
+          "address": "3446"
         },
         {
-          "name": "MenuModule::FUN00434f50",
+          "name": "?FUN00434f50@MenuModule@@QAEXXZ",
           "size": "161",
-          "metadata": {},
-          "address": "3891"
+          "fuzzy_match_percent": 1.9230769,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00434f50(void)"
+          },
+          "address": "3895"
         },
         {
-          "name": "MenuModule::FUN00435000",
+          "name": "?FUN00435000@MenuModule@@QAEXXZ",
           "size": "59",
-          "metadata": {},
-          "address": "4052"
+          "fuzzy_match_percent": 4.347826,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00435000(void)"
+          },
+          "address": "4056"
         },
         {
-          "name": "MenuModule::FUN00435040",
+          "name": "?FUN00435040@MenuModule@@QAEXXZ",
           "size": "39",
-          "metadata": {},
-          "address": "4111"
+          "fuzzy_match_percent": 10.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00435040(void)"
+          },
+          "address": "4115"
         },
         {
-          "name": "MenuModule::FUN00435070",
+          "name": "?FUN00435070@MenuModule@@QAEXXZ",
           "size": "328",
-          "metadata": {},
-          "address": "4150"
+          "fuzzy_match_percent": 1.0752689,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00435070(void)"
+          },
+          "address": "4154"
         },
         {
-          "name": "MenuModule::FUN004351c0",
+          "name": "?FUN004351c0@MenuModule@@QAEXXZ",
           "size": "23",
-          "metadata": {},
-          "address": "4478"
+          "fuzzy_match_percent": 14.285714,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN004351c0(void)"
+          },
+          "address": "4482"
         },
         {
-          "name": "MenuModule::FUN004351e0",
+          "name": "?FUN004351e0@MenuModule@@QAEXXZ",
           "size": "118",
-          "metadata": {},
-          "address": "4501"
+          "fuzzy_match_percent": 2.857143,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN004351e0(void)"
+          },
+          "address": "4505"
         },
         {
-          "name": "MenuModule::FUN00435260",
+          "name": "?FUN00435260@MenuModule@@QAEXH@Z",
           "size": "79",
-          "metadata": {},
-          "address": "4619"
+          "fuzzy_match_percent": 4.5454545,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::FUN00435260(int)"
+          },
+          "address": "4623"
         },
         {
-          "name": "MenuModule::OnPlaySoundEnd",
+          "name": "?OnPlaySoundEnd@MenuModule@@UAEXH@Z",
           "size": "24",
-          "metadata": {},
-          "address": "4698"
+          "fuzzy_match_percent": 16.666666,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnPlaySoundEnd(int)"
+          },
+          "address": "4702"
         }
       ],
       "metadata": {
@@ -32815,16 +33025,16 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 18.720694,
-        "total_code": "177975",
-        "matched_code": "30924",
-        "matched_code_percent": 17.375473,
+        "fuzzy_match_percent": 18.116087,
+        "total_code": "184723",
+        "matched_code": "30970",
+        "matched_code_percent": 16.765644,
         "matched_data_percent": 100.0,
-        "total_functions": 1008,
-        "matched_functions": 304,
-        "matched_functions_percent": 30.158731,
+        "total_functions": 1030,
+        "matched_functions": 308,
+        "matched_functions_percent": 29.902912,
         "complete_code": "27891",
-        "complete_code_percent": 15.671303,
+        "complete_code_percent": 15.098824,
         "complete_data_percent": 100.0,
         "total_units": 98,
         "complete_units": 31

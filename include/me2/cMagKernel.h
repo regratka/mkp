@@ -105,9 +105,9 @@ public:
 	
 	/* 10011d10 */ virtual void OnMouseEnter(int param_1); /* vtbl 0xdc */
 
-	virtual void OnButtonDown(); /* vtbl 0xe0 */
-	virtual void OnButtonUp(); /* vtbl 0xe4 */
-	virtual void OnExitYesNo(); /* vtbl 0xe8 */
+	virtual void OnButtonDown(cMagKernel* param_1); /* vtbl 0xe0 */
+	virtual void OnButtonUp(cMagKernel* param_1); /* vtbl 0xe4 */
+	virtual void OnExitYesNo(char* param_1); /* vtbl 0xe8 */
 
 	virtual void OnRender(); /* vtbl 0xec */
 	

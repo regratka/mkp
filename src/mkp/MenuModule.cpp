@@ -1,12 +1,16 @@
 #include "MenuModule.h"
 
-/* 433FB0-434082 000D2	*/
-MenuModule::MenuModule() {
+/* 4164E0-4164E3 00003	*/
+void MenuModule::OnButtonUp(cMagKernel* param_1) {
 }
 
-/* 434090-4340AE 0001E	*/
-cMagSprite* MenuModule::scalar_destructor(uchar param_1) {
-	return 0;
+
+/* 419BA0-419BA1 00001	*/
+void MenuModule::OnActivateLevel() {
+}
+
+/* 433FB0-434082 000D2	*/
+MenuModule::MenuModule() {
 }
 
 /* 4340B0-4340BC 0000C	*/
@@ -30,8 +34,7 @@ void MenuModule::FUN00434680() {
 }
 
 /* 434880-434992 00112	*/
-uchar MenuModule::OnMouseArrive(int param_1) {
-	return 0;
+void MenuModule::OnMouseArrive(int param_1) {
 }
 
 /* 4349A0-4349EA 0004A	*/
@@ -43,18 +46,15 @@ void MenuModule::OnMouseLeave() {
 }
 
 /* 434A50-434B2E 000DE	*/
-uchar MenuModule::OnInputMouse(uint param_1, uint param_2, char param_3) {
-	return 0;
+void MenuModule::OnInputMouse(float param_1, float param_2, bool param_3, bool param_4) {
 }
 
 /* 434B40-434D2F 001EF	*/
-uchar MenuModule::OnInputKey(int param_1) {
-	return 0;
+void MenuModule::OnInputKey(uchar* param_1) {
 }
 
 /* 434D30-434D7F 0004F	*/
-uchar MenuModule::OnExitYesNo(char* param_1) {
-	return 0;
+void MenuModule::OnExitYesNo(char* param_1) {
 }
 
 /* 434D80-434F41 001C1	*/
@@ -90,7 +90,6 @@ void MenuModule::FUN00435260(int param_1) {
 }
 
 /* 4352B0-4352C8 00018	*/
-uchar MenuModule::OnPlaySoundEnd(int param_1) {
-	return 0;
+void MenuModule::OnPlaySoundEnd(int param_1) {
 }
 
