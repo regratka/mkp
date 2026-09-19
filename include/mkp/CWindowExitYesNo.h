@@ -6,7 +6,7 @@
 
 class MenuModule;
 
-class CWindowExitYesNo {
+class CWindowExitYesNo : public cMagSprite {
 public:
 	/* 4264A0 */ CWindowExitYesNo();
 	/* 426530 */ cMagSprite* scalar_destructor(uchar param_1);
@@ -23,6 +23,10 @@ public:
 	/* 427030 */ void OnMouseArrive(int param_1);
 	/* 427130 */ void OnMouseLeave(int param_1);
 	/* 427190 */ void OnInputMouse(float param_1, float param_2, bool param_3, bool param_4);
+
+private:
+	/* 0x1740 */ uchar field_0x1740[0x17b0 - 0x1740];
+
 };
 
 #endif

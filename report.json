@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.320404,
-    "total_code": "699909",
-    "matched_code": "127130",
-    "matched_code_percent": 18.16379,
+    "fuzzy_match_percent": 28.768343,
+    "total_code": "699914",
+    "matched_code": "129961",
+    "matched_code_percent": 18.568138,
     "matched_data_percent": 100.0,
-    "total_functions": 3343,
-    "matched_functions": 1216,
-    "matched_functions_percent": 36.374516,
+    "total_functions": 3344,
+    "matched_functions": 1226,
+    "matched_functions_percent": 36.66268,
     "complete_code": "51363",
-    "complete_code_percent": 7.3385253,
+    "complete_code_percent": 7.3384733,
     "complete_data_percent": 100.0,
     "total_units": 208,
     "complete_units": 42
@@ -32224,22 +32224,22 @@
     {
       "name": "mkp/MenuModule",
       "measures": {
-        "fuzzy_match_percent": 3.098277,
-        "total_code": "4726",
-        "matched_code": "46",
-        "matched_code_percent": 0.973339,
+        "fuzzy_match_percent": 69.39388,
+        "total_code": "4731",
+        "matched_code": "2877",
+        "matched_code_percent": 60.81167,
         "matched_data_percent": 100.0,
-        "total_functions": 24,
-        "matched_functions": 4,
-        "matched_functions_percent": 16.666668,
+        "total_functions": 25,
+        "matched_functions": 14,
+        "matched_functions_percent": 56.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4726",
-          "fuzzy_match_percent": 3.098277,
+          "size": "4731",
+          "fuzzy_match_percent": 69.39388,
           "metadata": {}
         }
       ],
@@ -32265,7 +32265,7 @@
         {
           "name": "??0MenuModule@@QAE@XZ",
           "size": "210",
-          "fuzzy_match_percent": 17.225,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall MenuModule::MenuModule(void)"
           },
@@ -32292,25 +32292,25 @@
         {
           "name": "?OnActivate@MenuModule@@UAEXXZ",
           "size": "1083",
-          "fuzzy_match_percent": 0.36764705,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnActivate(void)"
           },
           "address": "256"
         },
         {
-          "name": "?OnUpdateMenuSettings@MenuModule@@UAEXXZ",
+          "name": "?FUN00434500@MenuModule@@QAEXXZ",
           "size": "96",
-          "fuzzy_match_percent": 3.4482758,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: virtual void __thiscall MenuModule::OnUpdateMenuSettings(void)"
+            "demangled_name": "public: void __thiscall MenuModule::FUN00434500(void)"
           },
           "address": "1339"
         },
         {
           "name": "?OnFrame@MenuModule@@UAEXXZ",
           "size": "278",
-          "fuzzy_match_percent": 1.4285715,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnFrame(void)"
           },
@@ -32319,7 +32319,7 @@
         {
           "name": "?FUN00434680@MenuModule@@QAEXXZ",
           "size": "497",
-          "fuzzy_match_percent": 0.7092199,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00434680(void)"
           },
@@ -32328,7 +32328,7 @@
         {
           "name": "?OnMouseArrive@MenuModule@@UAEXH@Z",
           "size": "274",
-          "fuzzy_match_percent": 1.3513514,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseArrive(int)"
           },
@@ -32337,38 +32337,47 @@
         {
           "name": "?FUN004349a0@MenuModule@@QAEX_N@Z",
           "size": "74",
-          "fuzzy_match_percent": 4.347826,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN004349a0(bool)"
           },
           "address": "2484"
         },
         {
-          "name": "?OnMouseLeave@MenuModule@@UAEXXZ",
+          "name": "?OnMouseLeave@MenuModule@@UAEXH@Z",
           "size": "92",
-          "fuzzy_match_percent": 1.6,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseLeave(void)"
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseLeave(int)"
           },
           "address": "2558"
         },
         {
           "name": "?OnInputMouse@MenuModule@@UAEXMM_N0@Z",
           "size": "222",
-          "fuzzy_match_percent": 1.5625,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnInputMouse(float, float, bool, bool)"
           },
           "address": "2650"
         },
         {
+          "name": "?OnUpdateMenuSettings@MenuModule@@UAEXXZ",
+          "size": "5",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnUpdateMenuSettings(void)"
+          },
+          "address": "2872"
+        },
+        {
           "name": "?OnInputKey@MenuModule@@UAEXPAE@Z",
           "size": "495",
-          "fuzzy_match_percent": 0.6802721,
+          "fuzzy_match_percent": 75.10884,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnInputKey(unsigned char *)"
           },
-          "address": "2872"
+          "address": "2877"
         },
         {
           "name": "?OnExitYesNo@MenuModule@@UAEXPAD@Z",
@@ -32377,7 +32386,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnExitYesNo(char *)"
           },
-          "address": "3367"
+          "address": "3372"
         },
         {
           "name": "?FUN00434d80@MenuModule@@QAEXXZ",
@@ -32386,7 +32395,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00434d80(void)"
           },
-          "address": "3446"
+          "address": "3451"
         },
         {
           "name": "?FUN00434f50@MenuModule@@QAEXXZ",
@@ -32395,7 +32404,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00434f50(void)"
           },
-          "address": "3895"
+          "address": "3900"
         },
         {
           "name": "?FUN00435000@MenuModule@@QAEXXZ",
@@ -32404,7 +32413,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00435000(void)"
           },
-          "address": "4056"
+          "address": "4061"
         },
         {
           "name": "?FUN00435040@MenuModule@@QAEXXZ",
@@ -32413,7 +32422,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00435040(void)"
           },
-          "address": "4115"
+          "address": "4120"
         },
         {
           "name": "?FUN00435070@MenuModule@@QAEXXZ",
@@ -32422,7 +32431,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00435070(void)"
           },
-          "address": "4154"
+          "address": "4159"
         },
         {
           "name": "?FUN004351c0@MenuModule@@QAEXXZ",
@@ -32431,7 +32440,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN004351c0(void)"
           },
-          "address": "4482"
+          "address": "4487"
         },
         {
           "name": "?FUN004351e0@MenuModule@@QAEXXZ",
@@ -32440,7 +32449,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN004351e0(void)"
           },
-          "address": "4505"
+          "address": "4510"
         },
         {
           "name": "?FUN00435260@MenuModule@@QAEXH@Z",
@@ -32449,7 +32458,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall MenuModule::FUN00435260(int)"
           },
-          "address": "4623"
+          "address": "4628"
         },
         {
           "name": "?OnPlaySoundEnd@MenuModule@@UAEXH@Z",
@@ -32458,7 +32467,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall MenuModule::OnPlaySoundEnd(int)"
           },
-          "address": "4702"
+          "address": "4707"
         }
       ],
       "metadata": {
@@ -33025,16 +33034,16 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 18.116087,
-        "total_code": "184723",
-        "matched_code": "30970",
-        "matched_code_percent": 16.765644,
+        "fuzzy_match_percent": 19.813553,
+        "total_code": "184728",
+        "matched_code": "33801",
+        "matched_code_percent": 18.297714,
         "matched_data_percent": 100.0,
-        "total_functions": 1030,
-        "matched_functions": 308,
-        "matched_functions_percent": 29.902912,
+        "total_functions": 1031,
+        "matched_functions": 318,
+        "matched_functions_percent": 30.843842,
         "complete_code": "27891",
-        "complete_code_percent": 15.098824,
+        "complete_code_percent": 15.098415,
         "complete_data_percent": 100.0,
         "total_units": 98,
         "complete_units": 31

@@ -1320,13 +1320,14 @@
 ??_GMenuModule@@UAEPAXI@Z;MenuModule::scalar_destructor;0x434090;0x1e;__thiscall;;cMagSprite*;MenuModule*;uchar
 ??1MenuModule@@UAE@XZ;MenuModule::~MenuModule;0x4340b0;0xc;__thiscall;;void;MenuModule*
 ?OnActivate@MenuModule@@UAEXXZ;MenuModule::OnActivate;0x4340c0;0x43b;__thiscall;;void;MenuModule*
-?OnUpdateMenuSettings@MenuModule@@UAEXXZ;MenuModule::OnUpdateMenuSettings;0x434500;0x60;__thiscall;;void;MenuModule*
+?FUN00434500@MenuModule@@QAEXXZ;MenuModule::FUN00434500;0x434500;0x60;__thiscall;;void;MenuModule*
 ?OnFrame@MenuModule@@UAEXXZ;MenuModule::OnFrame;0x434560;0x116;__thiscall;;void;MenuModule*
 ?FUN00434680@MenuModule@@QAEXXZ;MenuModule::FUN00434680;0x434680;0x1f1;__thiscall;;void;MenuModule*
 ?OnMouseArrive@MenuModule@@UAEXH@Z;MenuModule::OnMouseArrive;0x434880;0x112;__thiscall;;void;MenuModule*;int
 ?FUN004349a0@MenuModule@@QAEX_N@Z;MenuModule::FUN004349a0;0x4349a0;0x4a;__thiscall;;void;MenuModule*;bool
-?OnMouseLeave@MenuModule@@UAEXXZ;MenuModule::OnMouseLeave;0x4349f0;0x5c;__thiscall;;void;MenuModule*
+?OnMouseLeave@MenuModule@@UAEXH@Z;MenuModule::OnMouseLeave;0x4349f0;0x5c;__thiscall;;void;MenuModule*;int
 ?OnInputMouse@MenuModule@@UAEXMM_N0@Z;MenuModule::OnInputMouse;0x434a50;0xde;__thiscall;;void;MenuModule*;float;float;bool;bool
+?OnUpdateMenuSettings@MenuModule@@UAEXXZ;MenuModule::OnUpdateMenuSettings;0x434b30;0x5;__thiscall;;void;MenuModule*
 ?OnInputKey@MenuModule@@UAEXPAE@Z;MenuModule::OnInputKey;0x434b40;0x1ef;__thiscall;;void;MenuModule*;uchar*
 ?OnExitYesNo@MenuModule@@UAEXPAD@Z;MenuModule::OnExitYesNo;0x434d30;0x4f;__thiscall;;void;MenuModule*;char*
 ?FUN00434d80@MenuModule@@QAEXXZ;MenuModule::FUN00434d80;0x434d80;0x1c1;__thiscall;;void;MenuModule*

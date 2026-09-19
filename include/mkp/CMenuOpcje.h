@@ -8,7 +8,7 @@
 class MenuModule;
 class UIButton;
 
-class CMenuOpcje {
+class CMenuOpcje : public cMagSprite {
 public:
 	/* 436D70 */ CMenuOpcje();
 	/* 436ED0 */ cMagSprite* scalar_destructor(uchar param_1);
@@ -35,6 +35,10 @@ public:
 	/* 4398D0 */ void FUN004398d0();
 	/* 439DE0 */ void OnMouseArrive(int param_1);
 	/* 439E30 */ void OnMouseLeave(int param_1);
+
+public:
+	/* 0x1740 */ MenuModule* menuModule;
+	/* 0x1744 */ uchar field_0x1744[0x1b50 - 0x1744];
 };
 
 #endif
