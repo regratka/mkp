@@ -300,71 +300,173 @@ void MenuModule::OnInputKey(uchar* param_1) {
     }
 
     int iVar3 = uiWindow->GetMouseActivateSprite();
-    D3DXVECTOR2 DStack_10(uiWindow->GetScale(iVar3).x, uiWindow->GetScale(iVar3).y);
-
+    float fVar1 = uiWindow->GetScale(iVar3).x;
+    float fVar2 = uiWindow->GetScale(iVar3).y;
     if (param_1[203] != '\0') {
-        unk_1788 += 1e-05;
-        uiWindow->SetScale(iVar3, DStack_10.x - unk_1788, DStack_10.y);
+        unk_1788 += 1e-05f;
+        uiWindow->SetScale(iVar3, fVar1 - unk_1788, fVar2);
     }
     if (param_1[205] != '\0') {
-        unk_1788 += 1e-05;
-        uiWindow->SetScale(iVar3, DStack_10.x + unk_1788, DStack_10.y);
+        unk_1788 += 1e-05f;
+        uiWindow->SetScale(iVar3, fVar1 + unk_1788,fVar2);
     }
     if (param_1[200] != '\0') {
-        unk_178c += 1e-05;
-        uiWindow->SetScale(iVar3, DStack_10.x, DStack_10.y - unk_178c);
+        unk_178c += 1e-05f;
+        uiWindow->SetScale(iVar3, fVar1, fVar2 - unk_178c);
     }
     if (param_1[208] != '\0') {
-        unk_1788 += 1e-05;
-        uiWindow->SetScale(iVar3, DStack_10.x, DStack_10.y + unk_178c);
+        unk_178c += 1e-05f;
+        uiWindow->SetScale(iVar3, fVar1, fVar2 + unk_178c);
     }
 
     if (param_1[31] != '\0') {
         DebugLog("-----");
-        DebugLog("scale: <%f , %f>", DStack_10.x, DStack_10.y);
-        DStack_10.x = uiWindow->GetPos(iVar3).x;
+        DebugLog("scale: <%f , %f>", fVar1, fVar2);
 
-
+        DebugLog("pos: <%f , %f>", uiWindow->GetPos(iVar3).x / GetWindowWidth(), uiWindow->GetPos(iVar3).y / GetWindowHeight());
+        unk_1784 = false;
     }
 }
 
 /* 434D30-434D7F 0004F	*/
 void MenuModule::OnExitYesNo(char* param_1) {
+    if (strcmpi("Yes", param_1) == 0) {
+        GetGame()->ExitGame();
+    }
+    if (strcmpi("No", param_1) == 0) {
+        unk_17c4 = false;
+        FUN004349a0(false);
+    }
 }
 
 /* 434D80-434F41 001C1	*/
 void MenuModule::FUN00434d80() {
+    unk_1758[0] = uiWindow->AddTexture("data\\textures\\menu\\kursor.png");
+    uiWindow->SetScale(unk_1758[0], 1.0f, 1.0f);
+    uiWindow->SetPos(unk_1758[0], 0.1f, 0.1f, 0);
+    uiWindow->Hide(unk_1758[0]);
+
+    unk_1758[1] = uiWindow->AddTexture("data\\textures\\menu\\kursor1.png");
+    uiWindow->SetScale(unk_1758[1], 1.0f, 1.0f);
+    uiWindow->SetPos(unk_1758[1], 0.1f, 0.1f, 0);
+    uiWindow->Hide(unk_1758[1]);
+
+    unk_1758[2] = uiWindow->AddTexture("data\\textures\\menu\\kursor2.png");
+    uiWindow->SetScale(unk_1758[2], 1.0f, 1.0f);
+    uiWindow->SetPos(unk_1758[2], 0.1f, 0.1f, 0);
+    uiWindow->Hide(unk_1758[2]);
+
+    unk_1758[3] = uiWindow->AddTexture("data\\textures\\menu\\kursor3.png");
+    uiWindow->SetScale(unk_1758[3], 1.0f, 1.0f);
+    uiWindow->SetPos(unk_1758[3], 0.1f, 0.1f, 0);
+    uiWindow->Hide(unk_1758[3]);
+
+    unk_1768 = uiWindow->AddTexture("data\\textures\\menu\\kursor_stop.png");
+    uiWindow->SetScale(unk_1768, 1.0f, 1.0f);
+    uiWindow->SetPos(unk_1768, 0.1f, 0.1f, 0);
+    uiWindow->Hide(unk_1768);
 }
 
 /* 434F50-434FF1 000A1	*/
 void MenuModule::FUN00434f50() {
+    for (int index = 1; index < 4; index++) {
+        uiWindow->Hide(unk_1758[index]);
+    }
+    
+    uiWindow->Hide(unk_1758[0]);
+    float fVar1 = timeGetTime() * 0.001f;
+    if (fVar1 - unk_1770 > 0.1f) {
+        unk_1770 = fVar1;
+        unk_176c++;
+        if (unk_176c > 3) {
+            unk_176c = 1;
+        }
+    }
 }
 
 /* 435000-43503B 0003B	*/
 void MenuModule::FUN00435000() {
+    for (int i = 0; i <= sizeof(unk_1758)/sizeof(int); i++) {
+        uiWindow->Hide(unk_1758[i]);
+    }
+    unk_176c = 0;
+    unk_1774 = false;
 }
 
 /* 435040-435067 00027	*/
 void MenuModule::FUN00435040() {
+    FUN00435000();
+    unk_176c = 4;
+    uiWindow->Show(unk_1758[unk_176c]);
 }
 
 /* 435070-4351B8 00148	*/
 void MenuModule::FUN00435070() {
+    float fVar2 = ((GameSDK*) GetGame())->FUN00401e10();
+
+    unk_17cc = unk_17c8->LoadSound("data\\sounds\\menu\\wyjscie.wav");
+    unk_17c8->SetVolume(unk_17cc, fVar2);
+
+    unk_17d0 = unk_17c8->LoadSound("data\\sounds\\menu\\opcje.wav");
+    unk_17c8->SetVolume(unk_17d0, fVar2);
+
+    unk_17d4 = unk_17c8->LoadSound("data\\sounds\\menu\\niedostepny.wav");
+    unk_17c8->SetVolume(unk_17d0, fVar2);
+
+    unk_17d8 = unk_17c8->LoadSound("data\\sounds\\menu\\niedostepny.wav");
+    unk_17c8->SetVolume(unk_17d0, fVar2);
+
+    unk_17dc = unk_17c8->LoadSound("data\\sounds\\menu\\niedostepny.wav");
+    unk_17c8->SetVolume(unk_17d0, fVar2);
+
+    unk_17e0 = unk_17c8->LoadSound("data\\sounds\\menu\\wybierzpoziom.wav");
+    unk_17c8->SetVolume(unk_17e0, fVar2);
+
+    unk_17e4 = unk_17c8->LoadSound("data\\sounds\\menu\\menu.wav");
+    unk_17c8->SetVolume(unk_17e4, fVar2 * 0.8f);
+
+    unk_17e8 = unk_17c8->LoadSound("data\\sounds\\wyjscie.wav");
+    unk_17c8->SetVolume(unk_17e8, fVar2);
+
+    unk_17c8->StopSound(unk_17e8);
 }
 
 /* 4351C0-4351D7 00017	*/
 void MenuModule::FUN004351c0() {
+    if (unk_1748 == NULL) {
+        FUN00435260(unk_17e8);
+    } 
 }
 
 /* 4351E0-435256 00076	*/
 void MenuModule::FUN004351e0() {
+    unk_17c8->StopSound(unk_17cc);
+    unk_17c8->StopSound(unk_17d0);
+    unk_17c8->StopSound(unk_17d4);
+    unk_17c8->StopSound(unk_17d8);
+    unk_17c8->StopSound(unk_17dc);
+    unk_17c8->StopSound(unk_17e0);
+    unk_17c8->StopSound(unk_17e8);
 }
 
 /* 435260-4352AF 0004F	*/
 void MenuModule::FUN00435260(int param_1) {
+    if (unk_1754) {
+        return;
+    }
+
+    unk_1754 = true;
+    unk_174c = param_1;
+    if (unk_1748 == NULL) {
+        unk_17c8->PlaySoundA(param_1, false);
+    }
+    unk_17c8->EnableCallHandlerOnPlaySoundEnd(unk_174c, this);
 }
 
 /* 4352B0-4352C8 00018	*/
 void MenuModule::OnPlaySoundEnd(int param_1) {
+    if (unk_174c == param_1) {
+        unk_1754 = false;
+    }
 }
 
