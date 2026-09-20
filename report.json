@@ -32302,11 +32302,11 @@
           "address": "256"
         },
         {
-          "name": "?FUN00434500@MenuModule@@QAEXXZ",
+          "name": "?LoadSoundsSettings@MenuModule@@QAEXXZ",
           "size": "96",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00434500(void)"
+            "demangled_name": "public: void __thiscall MenuModule::LoadSoundsSettings(void)"
           },
           "address": "1339"
         },
@@ -32320,11 +32320,11 @@
           "address": "1435"
         },
         {
-          "name": "?FUN00434680@MenuModule@@QAEXXZ",
+          "name": "?Initialize@MenuModule@@QAEXXZ",
           "size": "497",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00434680(void)"
+            "demangled_name": "public: void __thiscall MenuModule::Initialize(void)"
           },
           "address": "1713"
         },
@@ -32338,11 +32338,11 @@
           "address": "2210"
         },
         {
-          "name": "?FUN004349a0@MenuModule@@QAEX_N@Z",
+          "name": "?SetSubWindowOpened@MenuModule@@QAEX_N@Z",
           "size": "74",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN004349a0(bool)"
+            "demangled_name": "public: void __thiscall MenuModule::SetSubWindowOpened(bool)"
           },
           "address": "2484"
         },
@@ -32392,74 +32392,74 @@
           "address": "3372"
         },
         {
-          "name": "?FUN00434d80@MenuModule@@QAEXXZ",
+          "name": "?LoadCursorTextures@MenuModule@@QAEXXZ",
           "size": "449",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00434d80(void)"
+            "demangled_name": "public: void __thiscall MenuModule::LoadCursorTextures(void)"
           },
           "address": "3451"
         },
         {
-          "name": "?FUN00434f50@MenuModule@@QAEXXZ",
+          "name": "?ChangeActiveCursor@MenuModule@@QAEXXZ",
           "size": "161",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00434f50(void)"
+            "demangled_name": "public: void __thiscall MenuModule::ChangeActiveCursor(void)"
           },
           "address": "3900"
         },
         {
-          "name": "?FUN00435000@MenuModule@@QAEXXZ",
+          "name": "?ActivateDefaultCursor@MenuModule@@QAEXXZ",
           "size": "59",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00435000(void)"
+            "demangled_name": "public: void __thiscall MenuModule::ActivateDefaultCursor(void)"
           },
           "address": "4061"
         },
         {
-          "name": "?FUN00435040@MenuModule@@QAEXXZ",
+          "name": "?ActivateStopCursor@MenuModule@@QAEXXZ",
           "size": "39",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00435040(void)"
+            "demangled_name": "public: void __thiscall MenuModule::ActivateStopCursor(void)"
           },
           "address": "4120"
         },
         {
-          "name": "?FUN00435070@MenuModule@@QAEXXZ",
+          "name": "?LoadSounds@MenuModule@@QAEXXZ",
           "size": "328",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00435070(void)"
+            "demangled_name": "public: void __thiscall MenuModule::LoadSounds(void)"
           },
           "address": "4159"
         },
         {
-          "name": "?FUN004351c0@MenuModule@@QAEXXZ",
+          "name": "?PlayBackgroundMusic@MenuModule@@QAEXXZ",
           "size": "23",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN004351c0(void)"
+            "demangled_name": "public: void __thiscall MenuModule::PlayBackgroundMusic(void)"
           },
           "address": "4487"
         },
         {
-          "name": "?FUN004351e0@MenuModule@@QAEXXZ",
+          "name": "?StopAllSounds@MenuModule@@QAEXXZ",
           "size": "118",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN004351e0(void)"
+            "demangled_name": "public: void __thiscall MenuModule::StopAllSounds(void)"
           },
           "address": "4510"
         },
         {
-          "name": "?FUN00435260@MenuModule@@QAEXH@Z",
+          "name": "?PlayMenuSound@MenuModule@@QAEXH@Z",
           "size": "79",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall MenuModule::FUN00435260(int)"
+            "demangled_name": "public: void __thiscall MenuModule::PlayMenuSound(int)"
           },
           "address": "4628"
         },

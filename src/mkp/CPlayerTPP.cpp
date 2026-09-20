@@ -75,8 +75,7 @@ uchar CPlayerTPP::OnCollisionObject(int* param_1) {
 }
 
 /* 4098B0-40990D 0005D	*/
-uchar CPlayerTPP::OnExitYesNo(char* param_1) {
-	return 0;
+void CPlayerTPP::OnExitYesNo(char* param_1) {
 }
 
 /* 409910-409A02 000F2	*/

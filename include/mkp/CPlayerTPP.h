@@ -74,7 +74,7 @@ public:
 	/* 4094E0 */ uchar OnFrame(uchar param_1);
 	/* 409500 */ uchar OnChangeMovement(uint param_1);
 	/* 409650 */ uchar OnCollisionObject(int* param_1);
-	/* 4098B0 */ uchar OnExitYesNo(char* param_1);
+	/* 4098B0 */ void OnExitYesNo(char* param_1);
 	/* 409910 */ void FUN00409910(char* param_1);
 	/* 409AB0 */ uchar OnInputKey(int param_1);
 	/* 409E30 */ uchar OnInputMouse(uchar param_1, uchar param_2, uchar param_3, uint param_4);

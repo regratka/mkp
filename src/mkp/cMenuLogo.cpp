@@ -57,7 +57,7 @@ void cMenuLogo::OnFadeOutEnd() {
 			fadeInOut->HideFade();
 		}
 		if (menuModule != NULL) {
-			menuModule->FUN00434680();
+			menuModule->Initialize();
 		}
 	} else {
 		timeFromLastFade = 0.0f;
@@ -95,7 +95,7 @@ void cMenuLogo::OnInputKey(uchar* param_1) {
 	DisableCallHandler("OnInputKey");
 
 	if (menuModule != NULL) {
-		menuModule->FUN00434680();
+		menuModule->Initialize();
 	}
 	
 	if (fadeInOut != NULL) {
