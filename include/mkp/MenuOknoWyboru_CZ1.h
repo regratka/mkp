@@ -4,8 +4,9 @@
 #include <globals.h>
 
 #include "cMagSprite.h"
-#include "MenuModule.h"
 #include "UIWindow.h"
+
+class MenuModule;
 
 class MenuOknoWyboru_CZ1 : public cMagSprite
 {
@@ -28,7 +29,7 @@ public:
 	/* 4368C0 */ void LoadUnlockedLevels();
 
 private:
-	/* 0x1740 */ void *unk_1740;
+	/* 0x1740 */ BOOL unk_1740;
 	/* 0x1744 */ bool unk_1744;
 	/* 0x1748 */ MenuModule *menuModule;
 	/* 0x174c */ UIWindow *uiWindow;

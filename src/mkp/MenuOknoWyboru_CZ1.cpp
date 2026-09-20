@@ -1,6 +1,7 @@
 #include "MenuOknoWyboru_CZ1.h"
 
 #include "GameSDK.h"
+#include "MenuModule.h"
 
 /* 435380-435451 000D1	*/
 MenuOknoWyboru_CZ1::MenuOknoWyboru_CZ1() {
@@ -204,7 +205,7 @@ void MenuOknoWyboru_CZ1::CloseWindow() {
     DisableCallHandler("OnInputMouse");
     DisableCallHandler("OnFrame");
     if (menuModule != NULL) {
-        menuModule->FUN004349a0(false);
+        menuModule->SetSubWindowOpened(false);
     }
 }
 
@@ -246,7 +247,7 @@ void MenuOknoWyboru_CZ1::OnMouseArrive(int param_1) {
         uiWindow->Hide(doorTexID);
         uiWindow->Show(doorActiveTexID);
         if (menuModule != NULL) {
-            menuModule->FUN004351c0();
+            menuModule->PlayBackgroundMusic();
         }
     }
 }

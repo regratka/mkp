@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.574984,
-    "total_code": "693161",
-    "matched_code": "127084",
-    "matched_code_percent": 18.33398,
+    "fuzzy_match_percent": 28.975224,
+    "total_code": "699914",
+    "matched_code": "131815",
+    "matched_code_percent": 18.833027,
     "matched_data_percent": 100.0,
-    "total_functions": 3321,
-    "matched_functions": 1212,
-    "matched_functions_percent": 36.495033,
-    "complete_code": "51363",
-    "complete_code_percent": 7.409967,
+    "total_functions": 3344,
+    "matched_functions": 1237,
+    "matched_functions_percent": 36.991627,
+    "complete_code": "56094",
+    "complete_code_percent": 8.014413,
     "complete_data_percent": 100.0,
     "total_units": 208,
-    "complete_units": 42
+    "complete_units": 43
   },
   "units": [
     {
@@ -28028,16 +28028,16 @@
     {
       "name": "mkp/CMenuOpcje",
       "measures": {
-        "total_code": "6906",
+        "total_code": "12325",
         "matched_data_percent": 100.0,
-        "total_functions": 12,
+        "total_functions": 25,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "6906",
+          "size": "12325",
           "metadata": {}
         }
       ],
@@ -28067,52 +28067,130 @@
           "address": "462"
         },
         {
+          "name": "CMenuOpcje::FUN00437c70",
+          "size": "365",
+          "metadata": {},
+          "address": "3822"
+        },
+        {
+          "name": "CMenuOpcje::FUN00437de0",
+          "size": "161",
+          "metadata": {},
+          "address": "4187"
+        },
+        {
+          "name": "CMenuOpcje::FUN00437e90",
+          "size": "59",
+          "metadata": {},
+          "address": "4348"
+        },
+        {
           "name": "CMenuOpcje::OnFrame",
           "size": "238",
           "metadata": {},
-          "address": "3822"
+          "address": "4407"
         },
         {
           "name": "CMenuOpcje::OnActivateLevel",
           "size": "66",
           "metadata": {},
-          "address": "4060"
+          "address": "4645"
+        },
+        {
+          "name": "CMenuOpcje::FUN00438010",
+          "size": "419",
+          "metadata": {},
+          "address": "4711"
+        },
+        {
+          "name": "CMenuOpcje::FUN004381c0",
+          "size": "724",
+          "metadata": {},
+          "address": "5130"
         },
         {
           "name": "CMenuOpcje::OnButtonDown",
           "size": "836",
           "metadata": {},
-          "address": "4126"
+          "address": "5854"
+        },
+        {
+          "name": "CMenuOpcje::FUN004387f0",
+          "size": "537",
+          "metadata": {},
+          "address": "6690"
         },
         {
           "name": "CMenuOpcje::OnInputKey",
           "size": "1591",
           "metadata": {},
-          "address": "4962"
+          "address": "7227"
+        },
+        {
+          "name": "CMenuOpcje::FUN00439050",
+          "size": "84",
+          "metadata": {},
+          "address": "8818"
+        },
+        {
+          "name": "CMenuOpcje::FUN004390b0",
+          "size": "175",
+          "metadata": {},
+          "address": "8902"
+        },
+        {
+          "name": "CMenuOpcje::FUN00439160",
+          "size": "132",
+          "metadata": {},
+          "address": "9077"
         },
         {
           "name": "CMenuOpcje::OnButtonUp",
           "size": "132",
           "metadata": {},
-          "address": "6553"
+          "address": "9209"
         },
         {
           "name": "CMenuOpcje::OnInputMouse",
           "size": "100",
           "metadata": {},
-          "address": "6685"
+          "address": "9341"
+        },
+        {
+          "name": "CMenuOpcje::FUN004392f0",
+          "size": "224",
+          "metadata": {},
+          "address": "9441"
+        },
+        {
+          "name": "CMenuOpcje::FUN004393d0",
+          "size": "578",
+          "metadata": {},
+          "address": "9665"
+        },
+        {
+          "name": "CMenuOpcje::FUN00439620",
+          "size": "680",
+          "metadata": {},
+          "address": "10243"
+        },
+        {
+          "name": "CMenuOpcje::FUN004398d0",
+          "size": "1281",
+          "metadata": {},
+          "address": "10923"
         },
         {
           "name": "CMenuOpcje::OnMouseArrive",
           "size": "68",
           "metadata": {},
-          "address": "6785"
+          "address": "12204"
         },
         {
           "name": "CMenuOpcje::OnMouseLeave",
           "size": "53",
           "metadata": {},
-          "address": "6853"
+          "address": "12272"
         }
       ],
       "metadata": {
@@ -31015,16 +31093,16 @@
     {
       "name": "mkp/CWindowExitYesNo",
       "measures": {
-        "total_code": "2078",
+        "total_code": "3403",
         "matched_data_percent": 100.0,
-        "total_functions": 8,
+        "total_functions": 15,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "2078",
+          "size": "3403",
           "metadata": {}
         }
       ],
@@ -31054,28 +31132,70 @@
           "address": "186"
         },
         {
+          "name": "CWindowExitYesNo::FUN004269e0",
+          "size": "393",
+          "metadata": {},
+          "address": "1334"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426b70",
+          "size": "207",
+          "metadata": {},
+          "address": "1727"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426c40",
+          "size": "7",
+          "metadata": {},
+          "address": "1934"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426c50",
+          "size": "365",
+          "metadata": {},
+          "address": "1941"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426dc0",
+          "size": "161",
+          "metadata": {},
+          "address": "2306"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426e70",
+          "size": "59",
+          "metadata": {},
+          "address": "2467"
+        },
+        {
           "name": "CWindowExitYesNo::OnFrame",
           "size": "238",
           "metadata": {},
-          "address": "1334"
+          "address": "2526"
+        },
+        {
+          "name": "CWindowExitYesNo::FUN00426fa0",
+          "size": "133",
+          "metadata": {},
+          "address": "2764"
         },
         {
           "name": "CWindowExitYesNo::OnMouseArrive",
           "size": "242",
           "metadata": {},
-          "address": "1572"
+          "address": "2897"
         },
         {
           "name": "CWindowExitYesNo::OnMouseLeave",
           "size": "90",
           "metadata": {},
-          "address": "1814"
+          "address": "3139"
         },
         {
           "name": "CWindowExitYesNo::OnInputMouse",
           "size": "174",
           "metadata": {},
-          "address": "1904"
+          "address": "3229"
         }
       ],
       "metadata": {
@@ -32104,154 +32224,257 @@
     {
       "name": "mkp/MenuModule",
       "measures": {
-        "total_code": "4722",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "4731",
+        "matched_code": "4731",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 22,
+        "total_functions": 25,
+        "matched_functions": 25,
+        "matched_functions_percent": 100.0,
+        "complete_code": "4731",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "4722",
+          "size": "4731",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "MenuModule::MenuModule",
-          "size": "210",
-          "metadata": {},
+          "name": "?OnButtonUp@MenuModule@@UAEXPAVcMagKernel@@@Z",
+          "size": "3",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnButtonUp(class cMagKernel *)"
+          },
           "address": "0"
         },
         {
-          "name": "MenuModule::scalar_destructor",
+          "name": "?OnActivateLevel@MenuModule@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnActivateLevel(void)"
+          },
+          "address": "3"
+        },
+        {
+          "name": "??0MenuModule@@QAE@XZ",
+          "size": "210",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall MenuModule::MenuModule(void)"
+          },
+          "address": "4"
+        },
+        {
+          "name": "??_GMenuModule@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
-          "address": "210"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall MenuModule::`scalar deleting destructor'(unsigned int)"
+          },
+          "address": "214"
         },
         {
-          "name": "MenuModule::~MenuModule",
+          "name": "??1MenuModule@@UAE@XZ",
           "size": "12",
-          "metadata": {},
-          "address": "240"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall MenuModule::~MenuModule(void)"
+          },
+          "address": "244"
         },
         {
-          "name": "MenuModule::OnActivate",
+          "name": "?OnActivate@MenuModule@@UAEXXZ",
           "size": "1083",
-          "metadata": {},
-          "address": "252"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnActivate(void)"
+          },
+          "address": "256"
         },
         {
-          "name": "MenuModule::OnUpdateMenuSettings",
+          "name": "?LoadSoundsSettings@MenuModule@@QAEXXZ",
           "size": "96",
-          "metadata": {},
-          "address": "1335"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::LoadSoundsSettings(void)"
+          },
+          "address": "1339"
         },
         {
-          "name": "MenuModule::OnFrame",
+          "name": "?OnFrame@MenuModule@@UAEXXZ",
           "size": "278",
-          "metadata": {},
-          "address": "1431"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnFrame(void)"
+          },
+          "address": "1435"
         },
         {
-          "name": "MenuModule::FUN00434680",
+          "name": "?Initialize@MenuModule@@QAEXXZ",
           "size": "497",
-          "metadata": {},
-          "address": "1709"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::Initialize(void)"
+          },
+          "address": "1713"
         },
         {
-          "name": "MenuModule::OnMouseArrive",
+          "name": "?OnMouseArrive@MenuModule@@UAEXH@Z",
           "size": "274",
-          "metadata": {},
-          "address": "2206"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseArrive(int)"
+          },
+          "address": "2210"
         },
         {
-          "name": "MenuModule::FUN004349a0",
+          "name": "?SetSubWindowOpened@MenuModule@@QAEX_N@Z",
           "size": "74",
-          "metadata": {},
-          "address": "2480"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::SetSubWindowOpened(bool)"
+          },
+          "address": "2484"
         },
         {
-          "name": "MenuModule::OnMouseLeave",
+          "name": "?OnMouseLeave@MenuModule@@UAEXH@Z",
           "size": "92",
-          "metadata": {},
-          "address": "2554"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnMouseLeave(int)"
+          },
+          "address": "2558"
         },
         {
-          "name": "MenuModule::OnInputMouse",
+          "name": "?OnInputMouse@MenuModule@@UAEXMM_N0@Z",
           "size": "222",
-          "metadata": {},
-          "address": "2646"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnInputMouse(float, float, bool, bool)"
+          },
+          "address": "2650"
         },
         {
-          "name": "MenuModule::OnInputKey",
+          "name": "?OnUpdateMenuSettings@MenuModule@@UAEXXZ",
+          "size": "5",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnUpdateMenuSettings(void)"
+          },
+          "address": "2872"
+        },
+        {
+          "name": "?OnInputKey@MenuModule@@UAEXPAE@Z",
           "size": "495",
-          "metadata": {},
-          "address": "2868"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnInputKey(unsigned char *)"
+          },
+          "address": "2877"
         },
         {
-          "name": "MenuModule::OnExitYesNo",
+          "name": "?OnExitYesNo@MenuModule@@UAEXPAD@Z",
           "size": "79",
-          "metadata": {},
-          "address": "3363"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnExitYesNo(char *)"
+          },
+          "address": "3372"
         },
         {
-          "name": "MenuModule::FUN00434d80",
+          "name": "?LoadCursorTextures@MenuModule@@QAEXXZ",
           "size": "449",
-          "metadata": {},
-          "address": "3442"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::LoadCursorTextures(void)"
+          },
+          "address": "3451"
         },
         {
-          "name": "MenuModule::FUN00434f50",
+          "name": "?ChangeActiveCursor@MenuModule@@QAEXXZ",
           "size": "161",
-          "metadata": {},
-          "address": "3891"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::ChangeActiveCursor(void)"
+          },
+          "address": "3900"
         },
         {
-          "name": "MenuModule::FUN00435000",
+          "name": "?ActivateDefaultCursor@MenuModule@@QAEXXZ",
           "size": "59",
-          "metadata": {},
-          "address": "4052"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::ActivateDefaultCursor(void)"
+          },
+          "address": "4061"
         },
         {
-          "name": "MenuModule::FUN00435040",
+          "name": "?ActivateStopCursor@MenuModule@@QAEXXZ",
           "size": "39",
-          "metadata": {},
-          "address": "4111"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::ActivateStopCursor(void)"
+          },
+          "address": "4120"
         },
         {
-          "name": "MenuModule::FUN00435070",
+          "name": "?LoadSounds@MenuModule@@QAEXXZ",
           "size": "328",
-          "metadata": {},
-          "address": "4150"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::LoadSounds(void)"
+          },
+          "address": "4159"
         },
         {
-          "name": "MenuModule::FUN004351c0",
+          "name": "?PlayBackgroundMusic@MenuModule@@QAEXXZ",
           "size": "23",
-          "metadata": {},
-          "address": "4478"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::PlayBackgroundMusic(void)"
+          },
+          "address": "4487"
         },
         {
-          "name": "MenuModule::FUN004351e0",
+          "name": "?StopAllSounds@MenuModule@@QAEXXZ",
           "size": "118",
-          "metadata": {},
-          "address": "4501"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::StopAllSounds(void)"
+          },
+          "address": "4510"
         },
         {
-          "name": "MenuModule::FUN00435260",
+          "name": "?PlayMenuSound@MenuModule@@QAEXH@Z",
           "size": "79",
-          "metadata": {},
-          "address": "4619"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MenuModule::PlayMenuSound(int)"
+          },
+          "address": "4628"
         },
         {
-          "name": "MenuModule::OnPlaySoundEnd",
+          "name": "?OnPlaySoundEnd@MenuModule@@UAEXH@Z",
           "size": "24",
-          "metadata": {},
-          "address": "4698"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall MenuModule::OnPlaySoundEnd(int)"
+          },
+          "address": "4707"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -32815,19 +33038,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 18.720694,
-        "total_code": "177975",
-        "matched_code": "30924",
-        "matched_code_percent": 17.375473,
+        "fuzzy_match_percent": 20.597395,
+        "total_code": "184728",
+        "matched_code": "35655",
+        "matched_code_percent": 19.301352,
         "matched_data_percent": 100.0,
-        "total_functions": 1008,
-        "matched_functions": 304,
-        "matched_functions_percent": 30.158731,
-        "complete_code": "27891",
-        "complete_code_percent": 15.671303,
+        "total_functions": 1031,
+        "matched_functions": 329,
+        "matched_functions_percent": 31.910765,
+        "complete_code": "32622",
+        "complete_code_percent": 17.659477,
         "complete_data_percent": 100.0,
         "total_units": 98,
-        "complete_units": 31
+        "complete_units": 32
       }
     }
   ]
