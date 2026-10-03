@@ -141,7 +141,7 @@ public:
 	/* 10066140 */ void SetScaleMovie(float param_1, float param_2);
 	/* 10066160 */ void SetRotateMovie(float param_1);
 
-private:
+protected:
 	/* 0xd4c  */ bool shouldRemoveObject;
 	/* 0xd4d  */ bool unk_d4d;
 	/* 0xd50  */ int srcBlend;
