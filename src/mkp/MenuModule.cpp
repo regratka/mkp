@@ -59,9 +59,9 @@ void MenuModule::OnActivate() {
     uiWindow = new UIWindow(this);
     CreateObject(uiWindow);
     
-    uiWindow->FUN004134e0("data\\textures\\menu\\menu_start.png");
-    uiWindow->FUN00413510(true);
-    uiWindow->FUN00413580(false);
+    uiWindow->SetBackground("data\\textures\\menu\\menu_start.png");
+    uiWindow->SetCoveringWholeWindow(true);
+    uiWindow->SetBackgroundVisible(false);
     
     wormButtonTexID = uiWindow->AddTexture("data\\textures\\hud\\b1.png");
     uiWindow->SetScale(wormButtonTexID, 0.725f, 1.344f);
@@ -163,7 +163,7 @@ void MenuModule::Initialize() {
     menuOpcje->menuModule = this;
     windowExit = new CWindowExitYesNo();
     CreateObject(windowExit);
-    uiWindow->FUN00413580(true);
+    uiWindow->SetBackgroundVisible(true);
     uiWindow->Show(wormButtonTexID);
     uiWindow->EnableCheckMouse(wormButtonTexID, true);
     uiWindow->Show(birdButtonTexID);

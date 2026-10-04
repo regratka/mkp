@@ -238,7 +238,7 @@ void cMagSprite::Restore() {
 				subSprites[index].unk_14.x, subSprites[index].unk_14.y);
 		}
 
-		if (subSprites[index].unk_34) {
+		if (subSprites[index].coversWholeWindow) {
 			SetScaleAsWindow(subSprites[index].texID);
 		} else {
 			SetScale(subSprites[index].texID, 
@@ -360,7 +360,7 @@ int cMagSprite::AddTexture(char* param_1) {
 	local_3c0.unk_5c = D3DXVECTOR2(0.0f, 0.0f);
 	local_3c0.unk_74 = 1.0f;
 	local_3c0.shouldCheckMouse = false;
-	local_3c0.unk_34 = false;
+	local_3c0.coversWholeWindow = false;
 	local_3c0.shouldHideRender = false;
 	local_3c0.shouldShowText = false;
 	local_3c0.texID = iVar4+1;

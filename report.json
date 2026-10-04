@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.975224,
-    "total_code": "699914",
-    "matched_code": "131815",
-    "matched_code_percent": 18.833027,
+    "fuzzy_match_percent": 29.113714,
+    "total_code": "700593",
+    "matched_code": "132982",
+    "matched_code_percent": 18.981348,
     "matched_data_percent": 100.0,
-    "total_functions": 3344,
-    "matched_functions": 1237,
-    "matched_functions_percent": 36.991627,
-    "complete_code": "56094",
-    "complete_code_percent": 8.014413,
+    "total_functions": 3351,
+    "matched_functions": 1256,
+    "matched_functions_percent": 37.48135,
+    "complete_code": "57261",
+    "complete_code_percent": 8.173219,
     "complete_data_percent": 100.0,
     "total_units": 208,
-    "complete_units": 43
+    "complete_units": 44
   },
   "units": [
     {
@@ -32880,94 +32880,203 @@
     {
       "name": "mkp/UIWindow",
       "measures": {
-        "total_code": "488",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "1167",
+        "matched_code": "1167",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
-        "total_functions": 12,
+        "total_functions": 19,
+        "matched_functions": 19,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1167",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "488",
+          "size": "1167",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "UIWindow::UIWindow",
+          "name": "??0UIWindow@@QAE@XZ",
           "size": "106",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall UIWindow::UIWindow(void)"
+          },
           "address": "0"
         },
         {
-          "name": "UIWindow::scalar_destructor",
+          "name": "??_GUIWindow@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall UIWindow::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "106"
         },
         {
-          "name": "UIWindow::UIWindow2",
+          "name": "??0UIWindow@@QAE@PAVcMagSprite@@@Z",
           "size": "93",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall UIWindow::UIWindow(class cMagSprite *)"
+          },
           "address": "136"
         },
         {
-          "name": "UIWindow::~UIWindow",
+          "name": "??1UIWindow@@UAE@XZ",
           "size": "12",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall UIWindow::~UIWindow(void)"
+          },
           "address": "229"
         },
         {
-          "name": "UIWindow::FUN004134e0",
+          "name": "?SetBackground@UIWindow@@QAEXPAD@Z",
           "size": "48",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::SetBackground(char *)"
+          },
           "address": "241"
         },
         {
-          "name": "UIWindow::FUN00413510",
+          "name": "?SetCoveringWholeWindow@UIWindow@@QAEX_N@Z",
           "size": "33",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::SetCoveringWholeWindow(bool)"
+          },
           "address": "289"
         },
         {
-          "name": "UIWindow::FUN00413540",
+          "name": "?SetBackgroundScale@UIWindow@@QAEXUD3DXVECTOR2@@@Z",
           "size": "26",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundScale(struct D3DXVECTOR2)"
+          },
           "address": "322"
         },
         {
-          "name": "UIWindow::FUN00413560",
+          "name": "?SetBackgroundPos@UIWindow@@QAEXUD3DXVECTOR2@@@Z",
           "size": "28",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundPos(struct D3DXVECTOR2)"
+          },
           "address": "348"
         },
         {
-          "name": "UIWindow::FUN00413580",
+          "name": "?SetBackgroundVisible@UIWindow@@QAEX_N@Z",
           "size": "40",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundVisible(bool)"
+          },
           "address": "376"
         },
         {
-          "name": "UIWindow::OnFrame",
-          "size": "20",
-          "metadata": {},
+          "name": "?SetBackgroundAlpha@UIWindow@@QAEXM@Z",
+          "size": "21",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundAlpha(float)"
+          },
           "address": "416"
         },
         {
-          "name": "UIWindow::OnMouseArrive",
-          "size": "26",
-          "metadata": {},
-          "address": "436"
+          "name": "?FUN004135d0@UIWindow@@QAEXHHHH@Z",
+          "size": "113",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::FUN004135d0(int, int, int, int)"
+          },
+          "address": "437"
         },
         {
-          "name": "UIWindow::OnMouseLeave",
+          "name": "?FUN00413650@UIWindow@@QAEXMHH_N@Z",
+          "size": "72",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::FUN00413650(float, int, int, bool)"
+          },
+          "address": "550"
+        },
+        {
+          "name": "?FUN004136a0@UIWindow@@QAEXXZ",
+          "size": "53",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::FUN004136a0(void)"
+          },
+          "address": "622"
+        },
+        {
+          "name": "?FUN004136e0@UIWindow@@QAEXH@Z",
+          "size": "53",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::FUN004136e0(int)"
+          },
+          "address": "675"
+        },
+        {
+          "name": "?OnFrame@UIWindow@@UAEXXZ",
+          "size": "20",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIWindow::OnFrame(void)"
+          },
+          "address": "728"
+        },
+        {
+          "name": "?FUN00413740@UIWindow@@QAEXXZ",
+          "size": "217",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::FUN00413740(void)"
+          },
+          "address": "748"
+        },
+        {
+          "name": "?FUN00413820@UIWindow@@QAEXXZ",
+          "size": "150",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIWindow::FUN00413820(void)"
+          },
+          "address": "965"
+        },
+        {
+          "name": "?OnMouseArrive@UIWindow@@UAEXH@Z",
           "size": "26",
-          "metadata": {},
-          "address": "462"
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIWindow::OnMouseArrive(int)"
+          },
+          "address": "1115"
+        },
+        {
+          "name": "?OnMouseLeave@UIWindow@@UAEXH@Z",
+          "size": "26",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIWindow::OnMouseLeave(int)"
+          },
+          "address": "1141"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -33038,19 +33147,19 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 20.597395,
-        "total_code": "184728",
-        "matched_code": "35655",
-        "matched_code_percent": 19.301352,
+        "fuzzy_match_percent": 21.151388,
+        "total_code": "185407",
+        "matched_code": "36822",
+        "matched_code_percent": 19.860092,
         "matched_data_percent": 100.0,
-        "total_functions": 1031,
-        "matched_functions": 329,
-        "matched_functions_percent": 31.910765,
-        "complete_code": "32622",
-        "complete_code_percent": 17.659477,
+        "total_functions": 1038,
+        "matched_functions": 348,
+        "matched_functions_percent": 33.526012,
+        "complete_code": "33789",
+        "complete_code_percent": 18.22423,
         "complete_data_percent": 100.0,
         "total_units": 98,
-        "complete_units": 32
+        "complete_units": 33
       }
     }
   ]

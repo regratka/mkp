@@ -33,10 +33,10 @@ void COknoTajnyKod::OnActivate() {
 
     uiWindow = new UIWindow(this);
     CreateObject(uiWindow);
-    uiWindow->FUN004134e0("data\\textures\\menu\\tlokod.png");
-    uiWindow->FUN00413540(D3DXVECTOR2(0.7f, 1.0f));
-    uiWindow->FUN00413560(D3DXVECTOR2(0.5f, 0.55f));
-    uiWindow->FUN00413580(false);
+    uiWindow->SetBackground("data\\textures\\menu\\tlokod.png");
+    uiWindow->SetBackgroundScale(D3DXVECTOR2(0.7f, 1.0f));
+    uiWindow->SetBackgroundPos(D3DXVECTOR2(0.5f, 0.55f));
+    uiWindow->SetBackgroundVisible(false);
 
     uiEdit = new UIEdit("data\\textures\\menu\\edit.png", this);
     CreateObject(uiEdit);
@@ -71,7 +71,7 @@ void COknoTajnyKod::DisableWindow() {
     DisableCallHandler("OnInputKey");
     ActivateDefaultCursor();
     uiEdit->FUN00413060();
-    uiWindow->FUN00413580(false);
+    uiWindow->SetBackgroundVisible(false);
     uiEdit->FUN00412770(false);
     uiWindow->Hide(doorTexID);
     uiWindow->Hide(doorActiveTexID);

@@ -56,7 +56,7 @@ private:
 		/* 0x1c  */ D3DXVECTOR2 unk_1c;
 		/* 0x24  */ D3DXVECTOR2 unk_24;
 		/* 0x2c  */ D3DXVECTOR2 unk_2c;
-		/* 0x34  */ bool unk_34;
+		/* 0x34  */ bool coversWholeWindow;
 		/* 0x38  */ D3DXVECTOR2 unk_38;
 		/* 0x40  */ D3DXVECTOR2 unk_40;
 		/* 0x48  */ D3DXVECTOR2 unk_48;
@@ -141,7 +141,7 @@ public:
 	/* 10066140 */ void SetScaleMovie(float param_1, float param_2);
 	/* 10066160 */ void SetRotateMovie(float param_1);
 
-private:
+protected:
 	/* 0xd4c  */ bool shouldRemoveObject;
 	/* 0xd4d  */ bool unk_d4d;
 	/* 0xd50  */ int srcBlend;
