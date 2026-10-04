@@ -56,7 +56,7 @@ private:
 		/* 0x1c  */ D3DXVECTOR2 unk_1c;
 		/* 0x24  */ D3DXVECTOR2 unk_24;
 		/* 0x2c  */ D3DXVECTOR2 unk_2c;
-		/* 0x34  */ bool unk_34;
+		/* 0x34  */ bool coversWholeWindow;
 		/* 0x38  */ D3DXVECTOR2 unk_38;
 		/* 0x40  */ D3DXVECTOR2 unk_40;
 		/* 0x48  */ D3DXVECTOR2 unk_48;

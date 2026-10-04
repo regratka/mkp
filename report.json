@@ -32940,56 +32940,56 @@
           "address": "229"
         },
         {
-          "name": "?FUN004134e0@UIWindow@@QAEXPAD@Z",
+          "name": "?SetBackground@UIWindow@@QAEXPAD@Z",
           "size": "48",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIWindow::FUN004134e0(char *)"
+            "demangled_name": "public: void __thiscall UIWindow::SetBackground(char *)"
           },
           "address": "241"
         },
         {
-          "name": "?FUN00413510@UIWindow@@QAEX_N@Z",
+          "name": "?SetCoveringWholeWindow@UIWindow@@QAEX_N@Z",
           "size": "33",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIWindow::FUN00413510(bool)"
+            "demangled_name": "public: void __thiscall UIWindow::SetCoveringWholeWindow(bool)"
           },
           "address": "289"
         },
         {
-          "name": "?FUN00413540@UIWindow@@QAEXUD3DXVECTOR2@@@Z",
+          "name": "?SetBackgroundScale@UIWindow@@QAEXUD3DXVECTOR2@@@Z",
           "size": "26",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIWindow::FUN00413540(struct D3DXVECTOR2)"
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundScale(struct D3DXVECTOR2)"
           },
           "address": "322"
         },
         {
-          "name": "?FUN00413560@UIWindow@@QAEXUD3DXVECTOR2@@@Z",
+          "name": "?SetBackgroundPos@UIWindow@@QAEXUD3DXVECTOR2@@@Z",
           "size": "28",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIWindow::FUN00413560(struct D3DXVECTOR2)"
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundPos(struct D3DXVECTOR2)"
           },
           "address": "348"
         },
         {
-          "name": "?FUN00413580@UIWindow@@QAEX_N@Z",
+          "name": "?SetBackgroundVisible@UIWindow@@QAEX_N@Z",
           "size": "40",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIWindow::FUN00413580(bool)"
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundVisible(bool)"
           },
           "address": "376"
         },
         {
-          "name": "?FUN004135b0@UIWindow@@QAEXM@Z",
+          "name": "?SetBackgroundAlpha@UIWindow@@QAEXM@Z",
           "size": "21",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIWindow::FUN004135b0(float)"
+            "demangled_name": "public: void __thiscall UIWindow::SetBackgroundAlpha(float)"
           },
           "address": "416"
         },

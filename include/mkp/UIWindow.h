@@ -10,12 +10,12 @@ public:
 	/* 4133E0 */ UIWindow();
 	/* 413470 */ UIWindow(cMagSprite* param_1);
 	/* 4134D0 */ virtual ~UIWindow();
-	/* 4134E0 */ void FUN004134e0(char* param_1);
-	/* 413510 */ void FUN00413510(bool param_1);
-	/* 413540 */ void FUN00413540(D3DXVECTOR2 param_1);
-	/* 413560 */ void FUN00413560(D3DXVECTOR2 param_1);
-	/* 413580 */ void FUN00413580(bool param_1);
-	/* 4135B0 */ void FUN004135b0(float param_1);
+	/* 4134E0 */ void SetBackground(char* param_1); // SetBackground
+	/* 413510 */ void SetCoveringWholeWindow(bool param_1);
+	/* 413540 */ void SetBackgroundScale(D3DXVECTOR2 param_1);
+	/* 413560 */ void SetBackgroundPos(D3DXVECTOR2 param_1);
+	/* 413580 */ void SetBackgroundVisible(bool param_1);
+	/* 4135B0 */ void SetBackgroundAlpha(float param_1);
 	/* 4135D0 */ void FUN004135d0(int param_1, int param_2, int param_3, int param_4);
 	/* 413650 */ void FUN00413650(float param_1, int param_2, int param_3, bool param_4);
 	/* 4136A0 */ void FUN004136a0();
@@ -27,8 +27,8 @@ public:
 	/* 4138E0 */ void OnMouseLeave(int param_1);
 
 private:
-	/* 0x1740 */ cMagSprite* unk_1740;
-	/* 0x1744 */ int unk_1744;
+	/* 0x1740 */ cMagSprite* unk_1740; // parent
+	/* 0x1744 */ int backgroundTexID;
 	/* 0x1748 */ float unk_1748;
 	/* 0x174c */ float unk_174c;
 	/* 0x1750 */ int unk_1750;

@@ -47,10 +47,10 @@ void MenuOknoWyboru_CZ1::OnActivate() {
 
     uiWindow = new UIWindow(this);
     CreateObject(uiWindow);
-    uiWindow->FUN004134e0("data\\textures\\menu\\ramka.png");
-    uiWindow->FUN00413540(D3DXVECTOR2(1.0f, 0.8f));
-    uiWindow->FUN00413560(D3DXVECTOR2(0.552f, 0.466f));
-    uiWindow->FUN00413580(false);
+    uiWindow->SetBackground("data\\textures\\menu\\ramka.png");
+    uiWindow->SetBackgroundScale(D3DXVECTOR2(1.0f, 0.8f));
+    uiWindow->SetBackgroundPos(D3DXVECTOR2(0.552f, 0.466f));
+    uiWindow->SetBackgroundVisible(false);
 
     doorTexID = uiWindow->AddTexture("data\\textures\\hud\\drzwi.png");
     uiWindow->SetScale(doorTexID, 0.7f, 0.7f);
@@ -171,7 +171,7 @@ void MenuOknoWyboru_CZ1::OnFrame() {
 
 /* 435C90-435D38 000A8	*/
 void MenuOknoWyboru_CZ1::OpenWindow() {
-    uiWindow->FUN00413580(true);
+    uiWindow->SetBackgroundVisible(true);
     uiWindow->Show(doorTexID);
     uiWindow->Show(lev1TexID);
     uiWindow->Show(lev2TexID);
@@ -187,7 +187,7 @@ void MenuOknoWyboru_CZ1::OpenWindow() {
 /* 435D40-435E60 00120	*/
 void MenuOknoWyboru_CZ1::CloseWindow() {
     ActivateDefaultCursor();
-    uiWindow->FUN00413580(false);
+    uiWindow->SetBackgroundVisible(false);
     uiWindow->Hide(doorTexID);
     uiWindow->Hide(doorActiveTexID);
     uiWindow->Hide(lev1TexID);
