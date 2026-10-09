@@ -4,11 +4,6 @@
 CWindowExitYesNo::CWindowExitYesNo() {
 }
 
-/* 426530-42654E 0001E	*/
-cMagSprite* CWindowExitYesNo::scalar_destructor(uchar param_1) {
-	return 0;
-}
-
 /* 426550-42655C 0000C	*/
 CWindowExitYesNo::~CWindowExitYesNo() {
 }

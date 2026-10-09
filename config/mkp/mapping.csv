@@ -951,9 +951,9 @@
 ;FUN_00426410;0x426410;0xc;__stdcall;;uchar
 ;FUN_00426440;0x426440;0xa;__stdcall;;uchar
 ;FUN_00426450;0x426450;0xc;__stdcall;;uchar
-;CWindowExitYesNo::CWindowExitYesNo;0x4264a0;0x90;__thiscall;;CWindowExitYesNo*;CWindowExitYesNo*
-;CWindowExitYesNo::scalar_destructor;0x426530;0x1e;__thiscall;;cMagSprite*;CWindowExitYesNo*;uchar
-;CWindowExitYesNo::~CWindowExitYesNo;0x426550;0xc;__thiscall;;void;CWindowExitYesNo*
+??0CWindowExitYesNo@@QAE@XZ;CWindowExitYesNo::CWindowExitYesNo;0x4264a0;0x90;__thiscall;;CWindowExitYesNo*;CWindowExitYesNo*
+??_GCWindowExitYesNo@@UAEPAXI@Z;CWindowExitYesNo::scalar_destructor;0x426530;0x1e;__thiscall;;cMagSprite*;CWindowExitYesNo*;uchar
+??1CWindowExitYesNo@@UAE@XZ;CWindowExitYesNo::~CWindowExitYesNo;0x426550;0xc;__thiscall;;void;CWindowExitYesNo*
 ;CWindowExitYesNo::OnActivate;0x426560;0x47c;__thiscall;;void;CWindowExitYesNo*
 ;CWindowExitYesNo::FUN004269e0;0x4269e0;0x189;__thiscall;;void;CWindowExitYesNo*;MenuModule*
 ;CWindowExitYesNo::FUN00426b70;0x426b70;0xcf;__thiscall;;void;CWindowExitYesNo*
