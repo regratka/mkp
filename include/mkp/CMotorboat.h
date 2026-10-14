@@ -16,6 +16,7 @@ public:
 	/* 40DA30 */ uchar OnPlaySoundEnd(int param_1);
 	/* 40DA90 */ uchar OnExitYesNo(char* param_1);
 	/* 40DAF0 */ uchar FUN0040daf0();
+	/* 40DB40 */ void FUN0040db40();
 	/* 40DC10 */ uchar OnInputKey(int param_1);
 	/* 40DE40 */ cMagMeshObject* FUN0040de40(char* param_1, uint* param_2);
 	/* 40DF10 */ void FUN0040df10();

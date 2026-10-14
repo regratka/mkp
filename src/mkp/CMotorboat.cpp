@@ -41,6 +41,11 @@ uchar CMotorboat::FUN0040daf0() {
 	return 0;
 }
 
+/* 40DB40-40DC0A 000CA */ 
+void CMotorboat::FUN0040db40() {
+
+}
+
 /* 40DC10-40DE3E 0022E	*/
 uchar CMotorboat::OnInputKey(int param_1) {
 	return 0;
