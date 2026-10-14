@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.113714,
+    "fuzzy_match_percent": 29.599445,
     "total_code": "700593",
-    "matched_code": "132982",
-    "matched_code_percent": 18.981348,
+    "matched_code": "136385",
+    "matched_code_percent": 19.46708,
     "matched_data_percent": 100.0,
     "total_functions": 3351,
-    "matched_functions": 1256,
-    "matched_functions_percent": 37.48135,
+    "matched_functions": 1271,
+    "matched_functions_percent": 37.928978,
     "complete_code": "57261",
     "complete_code_percent": 8.173219,
     "complete_data_percent": 100.0,
@@ -31093,9 +31093,14 @@
     {
       "name": "mkp/CWindowExitYesNo",
       "measures": {
+        "fuzzy_match_percent": 100.0,
         "total_code": "3403",
+        "matched_code": "3403",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 15,
+        "matched_functions": 15,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -31103,98 +31108,144 @@
         {
           "name": ".text",
           "size": "3403",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "CWindowExitYesNo::CWindowExitYesNo",
+          "name": "??0CWindowExitYesNo@@QAE@XZ",
           "size": "144",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall CWindowExitYesNo::CWindowExitYesNo(void)"
+          },
           "address": "0"
         },
         {
-          "name": "CWindowExitYesNo::scalar_destructor",
+          "name": "??_GCWindowExitYesNo@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall CWindowExitYesNo::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "144"
         },
         {
-          "name": "CWindowExitYesNo::~CWindowExitYesNo",
+          "name": "??1CWindowExitYesNo@@UAE@XZ",
           "size": "12",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall CWindowExitYesNo::~CWindowExitYesNo(void)"
+          },
           "address": "174"
         },
         {
-          "name": "CWindowExitYesNo::OnActivate",
+          "name": "?OnActivate@CWindowExitYesNo@@UAEXXZ",
           "size": "1148",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CWindowExitYesNo::OnActivate(void)"
+          },
           "address": "186"
         },
         {
-          "name": "CWindowExitYesNo::FUN004269e0",
+          "name": "?FUN004269e0@CWindowExitYesNo@@QAEXPAVMenuModule@@@Z",
           "size": "393",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CWindowExitYesNo::FUN004269e0(class MenuModule *)"
+          },
           "address": "1334"
         },
         {
-          "name": "CWindowExitYesNo::FUN00426b70",
+          "name": "?FUN00426b70@CWindowExitYesNo@@QAEXXZ",
           "size": "207",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CWindowExitYesNo::FUN00426b70(void)"
+          },
           "address": "1727"
         },
         {
-          "name": "CWindowExitYesNo::FUN00426c40",
+          "name": "?FUN00426c40@CWindowExitYesNo@@QAE_NXZ",
           "size": "7",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: bool __thiscall CWindowExitYesNo::FUN00426c40(void)"
+          },
           "address": "1934"
         },
         {
-          "name": "CWindowExitYesNo::FUN00426c50",
+          "name": "?FUN00426c50@CWindowExitYesNo@@QAEXXZ",
           "size": "365",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CWindowExitYesNo::FUN00426c50(void)"
+          },
           "address": "1941"
         },
         {
-          "name": "CWindowExitYesNo::FUN00426dc0",
+          "name": "?FUN00426dc0@CWindowExitYesNo@@QAEXXZ",
           "size": "161",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CWindowExitYesNo::FUN00426dc0(void)"
+          },
           "address": "2306"
         },
         {
-          "name": "CWindowExitYesNo::FUN00426e70",
+          "name": "?FUN00426e70@CWindowExitYesNo@@QAEXXZ",
           "size": "59",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CWindowExitYesNo::FUN00426e70(void)"
+          },
           "address": "2467"
         },
         {
-          "name": "CWindowExitYesNo::OnFrame",
+          "name": "?OnFrame@CWindowExitYesNo@@UAEXXZ",
           "size": "238",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CWindowExitYesNo::OnFrame(void)"
+          },
           "address": "2526"
         },
         {
-          "name": "CWindowExitYesNo::FUN00426fa0",
+          "name": "?FUN00426fa0@CWindowExitYesNo@@QAEXXZ",
           "size": "133",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall CWindowExitYesNo::FUN00426fa0(void)"
+          },
           "address": "2764"
         },
         {
-          "name": "CWindowExitYesNo::OnMouseArrive",
+          "name": "?OnMouseArrive@CWindowExitYesNo@@UAEXH@Z",
           "size": "242",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CWindowExitYesNo::OnMouseArrive(int)"
+          },
           "address": "2897"
         },
         {
-          "name": "CWindowExitYesNo::OnMouseLeave",
+          "name": "?OnMouseLeave@CWindowExitYesNo@@UAEXH@Z",
           "size": "90",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CWindowExitYesNo::OnMouseLeave(int)"
+          },
           "address": "3139"
         },
         {
-          "name": "CWindowExitYesNo::OnInputMouse",
+          "name": "?OnInputMouse@CWindowExitYesNo@@UAEXMM_N0@Z",
           "size": "174",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall CWindowExitYesNo::OnInputMouse(float, float, bool, bool)"
+          },
           "address": "3229"
         }
       ],
@@ -33147,14 +33198,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 21.151388,
+        "fuzzy_match_percent": 22.98681,
         "total_code": "185407",
-        "matched_code": "36822",
-        "matched_code_percent": 19.860092,
+        "matched_code": "40225",
+        "matched_code_percent": 21.695513,
         "matched_data_percent": 100.0,
         "total_functions": 1038,
-        "matched_functions": 348,
-        "matched_functions_percent": 33.526012,
+        "matched_functions": 363,
+        "matched_functions_percent": 34.971096,
         "complete_code": "33789",
         "complete_code_percent": 18.22423,
         "complete_data_percent": 100.0,

@@ -36,7 +36,7 @@ private:
 	/* 0x1764 */ float cursorXPos;
 	/* 0x1768 */ float cursorYPos;
 	/* 0x176c */ bool unk_176c;
-	/* 0x1770 */ int cursorsTextureID[5];
+	/* 0x1770 */ int cursorsTextureIDs[5];
 	/* 0x1784 */ int unk_1784; // probably disabled cursor
 	/* 0x1788 */ int activeCursorIndex;
 	/* 0x178c */ float lastCursorChangeTime;

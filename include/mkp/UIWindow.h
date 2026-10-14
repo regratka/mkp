@@ -26,7 +26,7 @@ public:
 	/* 4138C0 */ void OnMouseArrive(int param_1);
 	/* 4138E0 */ void OnMouseLeave(int param_1);
 
-private:
+public:
 	/* 0x1740 */ cMagSprite* unk_1740; // parent
 	/* 0x1744 */ int backgroundTexID;
 	/* 0x1748 */ float unk_1748;
