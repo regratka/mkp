@@ -130,7 +130,7 @@ void MenuModule::LoadSoundsSettings() {
 
 /* 434560-434676 00116	*/
 void MenuModule::OnFrame() {
-    if (windowExit->FUN00426c40()) {
+    if (windowExit->IsOpen()) {
         return;
     } 
 
@@ -264,7 +264,7 @@ void MenuModule::OnInputMouse(float param_1, float param_2, bool param_3, bool p
             ActivateDefaultCursor();
             StopAllSounds();
             if (windowExit != NULL) {
-                windowExit->FUN004269e0(this);
+                windowExit->Open(this);
             }
             isExitWindowOpened = true;
             SetSubWindowOpened(true);
