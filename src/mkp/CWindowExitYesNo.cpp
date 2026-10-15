@@ -16,7 +16,7 @@ CWindowExitYesNo::CWindowExitYesNo() {
     cursorYPos = 0.0;
     unk_176c = false;
     soundsManager = NULL;
-    unk_17a0 = false;
+    isOpen = false;
     unk_17ac = false;
     unk_1791 = false;
     yesHitboxTexID = -1;
@@ -27,7 +27,7 @@ CWindowExitYesNo::CWindowExitYesNo() {
     noSoundID = -1;
     activeCursorIndex = 0;
     lastCursorChangeTime = 0.0;
-    unk_1790 = false;
+    shouldCycleCursorTextures = false;
 }
 
 /* 426550-42655C 0000C	*/
@@ -74,7 +74,7 @@ void CWindowExitYesNo::OnActivate() {
 
     hitboxesLayer = new UIWindow(this);
     CreateObject(hitboxesLayer);
-    FUN00426c50();
+    LoadCursorTextures();
     yesHitboxTexID = hitboxesLayer->AddTexture("data\\textures\\hud\\b1.png");
     hitboxesLayer->SetScale(yesHitboxTexID, 0.8f, 0.8f);
     hitboxesLayer->SetPos(yesHitboxTexID, 0.432f, 0.613f, 0);
@@ -86,12 +86,12 @@ void CWindowExitYesNo::OnActivate() {
     hitboxesLayer->SetPos(noHitboxTexID, 0.57f, 0.61f, 0);
     hitboxesLayer->Hide(noHitboxTexID);
     hitboxesLayer->EnableCheckMouse(noHitboxTexID, true);
-    FUN00426fa0();
+    LoadSounds();
 
 }
 
 /* 4269E0-426B69 00189	*/
-void CWindowExitYesNo::FUN004269e0(MenuModule* param_1) {
+void CWindowExitYesNo::Open(MenuModule* param_1) {
     menuModule = param_1;
     areSoundMuted = ((GameSDK*) GetGame())->unk_2548;
     mainWindow->SetBackgroundVisible(true);
@@ -108,7 +108,7 @@ void CWindowExitYesNo::FUN004269e0(MenuModule* param_1) {
     if (!areSoundMuted) {
         soundsManager->PlaySoundA(questionSoundID, false);
     }
-    unk_17a0 = true;
+    isOpen = true;
     
     if (strcmpi("menu.lev", GetGame()->GetLevelFileName()) != 0) {
         if (strcmpi("Level05kk.lev", GetGame()->GetLevelFileName()) != 0) {
@@ -126,7 +126,7 @@ void CWindowExitYesNo::FUN004269e0(MenuModule* param_1) {
 }
 
 /* 426B70-426C3F 000CF	*/
-void CWindowExitYesNo::FUN00426b70() {
+void CWindowExitYesNo::Close() {
     mainWindow->SetBackgroundVisible(false);
     bodySprite->SetBackgroundVisible(false);
     headYesSprite->FUN004136a0();
@@ -138,19 +138,19 @@ void CWindowExitYesNo::FUN00426b70() {
     DisableCallHandler("OnInputMouse");
     DisableCallHandler("OnFrame");
     hitboxesLayer->Hide(unk_1760);
-    unk_17a0 = false;
+    isOpen = false;
     int iVar1 = GetWindowWidth();
     int iVar2 = GetWindowHeight();
     SetCursorPos(iVar1/2, iVar2/2);
 }
 
 /* 426C40-426C47 00007	*/
-bool CWindowExitYesNo::FUN00426c40() {
-	return unk_17a0;
+bool CWindowExitYesNo::IsOpen() {
+	return isOpen;
 }
 
 /* 426C50-426DBD 0016D	*/
-void CWindowExitYesNo::FUN00426c50() {
+void CWindowExitYesNo::LoadCursorTextures() {
     cursorsTextureIDs[0] = hitboxesLayer->AddTexture("data\\textures\\menu\\kursor.png");
     hitboxesLayer->SetScale(cursorsTextureIDs[0], 1.0f, 1.0f);
     hitboxesLayer->SetPos(cursorsTextureIDs[0], 0.1f, 0.1f, 0);
@@ -173,7 +173,7 @@ void CWindowExitYesNo::FUN00426c50() {
 }
 
 /* 426DC0-426E61 000A1	*/
-void CWindowExitYesNo::FUN00426dc0() {
+void CWindowExitYesNo::ChangeActiveCursor() {
     for (int index = 1; index < 4; index++) {
         hitboxesLayer->Hide(cursorsTextureIDs[index]);
     }
@@ -190,20 +190,20 @@ void CWindowExitYesNo::FUN00426dc0() {
 }
 
 /* 426E70-426EAB 0003B	*/
-void CWindowExitYesNo::FUN00426e70() {
+void CWindowExitYesNo::ActivateDefaultCursor() {
     for (int i = 0; i < sizeof(cursorsTextureIDs)/sizeof(int); i++) {
         hitboxesLayer->Hide(cursorsTextureIDs[i]);
     }
     activeCursorIndex = 0;
-    unk_1790 = false;
+    shouldCycleCursorTextures = false;
 }
 
 /* 426EB0-426F9E 000EE	*/
 void CWindowExitYesNo::OnFrame() {
-    if (unk_1790) {
-        FUN00426dc0();
+    if (shouldCycleCursorTextures) {
+        ChangeActiveCursor();
     } else {
-        FUN00426e70();
+        ActivateDefaultCursor();
     }
 
     tagPOINT local_8;
@@ -220,7 +220,7 @@ void CWindowExitYesNo::OnFrame() {
 }
 
 /* 426FA0-427025 00085	*/
-void CWindowExitYesNo::FUN00426fa0() {
+void CWindowExitYesNo::LoadSounds() {
     float fVar2 = ((GameSDK*) GetGame())->FUN00401e10();
 
     questionSoundID = soundsManager->LoadSound("data\\sounds\\papatka\\papatka-czy chcesz wyjsc.wav");
@@ -236,7 +236,7 @@ void CWindowExitYesNo::FUN00426fa0() {
 
 /* 427030-427122 000F2	*/
 void CWindowExitYesNo::OnMouseArrive(int param_1) {
-    unk_1790 = true;
+    shouldCycleCursorTextures = true;
     if (yesHitboxTexID == param_1) {
         headNoSprite->SetBackgroundVisible(false);
         headYesSprite->SetBackgroundVisible(true);
@@ -264,7 +264,7 @@ void CWindowExitYesNo::OnMouseArrive(int param_1) {
 
 /* 427130-42718A 0005A	*/
 void CWindowExitYesNo::OnMouseLeave(int param_1) {
-    unk_1790 = false;
+    shouldCycleCursorTextures = false;
     if (yesHitboxTexID == param_1) {
         headYesSprite->SetBackgroundVisible(false);
         headNoSprite->SetBackgroundVisible(true);
@@ -280,15 +280,15 @@ void CWindowExitYesNo::OnMouseLeave(int param_1) {
 void CWindowExitYesNo::OnInputMouse(float param_1, float param_2, bool param_3, bool param_4) {
     if (param_3 && !unk_17ac) {
         if (yesHitboxTexID == hitboxesLayer->GetMouseActivateSprite()) {
-            FUN00426b70();
-            FUN00426e70();
+            Close();
+            ActivateDefaultCursor();
             if (menuModule != NULL) {
                 menuModule->OnExitYesNo("Yes");
             }
         }
         if (noHitboxTexID == hitboxesLayer->GetMouseActivateSprite()) {
-            FUN00426b70();
-            FUN00426e70();
+            Close();
+            ActivateDefaultCursor();
             if (menuModule != NULL) {
                 OutputDebugString("menu NONO");
                 menuModule->OnExitYesNo("Yes");
