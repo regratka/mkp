@@ -1,15 +1,15 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.590914,
-    "total_code": "700795",
-    "matched_code": "136385",
-    "matched_code_percent": 19.46147,
+    "fuzzy_match_percent": 29.527449,
+    "total_code": "702308",
+    "matched_code": "136387",
+    "matched_code_percent": 19.419827,
     "matched_data_percent": 100.0,
-    "total_functions": 3352,
-    "matched_functions": 1271,
-    "matched_functions_percent": 37.917664,
+    "total_functions": 3366,
+    "matched_functions": 1273,
+    "matched_functions_percent": 37.81937,
     "complete_code": "60664",
-    "complete_code_percent": 8.656454,
+    "complete_code_percent": 8.637805,
     "complete_data_percent": 100.0,
     "total_units": 208,
     "complete_units": 45
@@ -32773,16 +32773,22 @@
     {
       "name": "mkp/UIButton",
       "measures": {
-        "total_code": "1011",
+        "fuzzy_match_percent": 0.0792393,
+        "total_code": "2524",
+        "matched_code": "2",
+        "matched_code_percent": 0.07923931,
         "matched_data_percent": 100.0,
-        "total_functions": 6,
+        "total_functions": 20,
+        "matched_functions": 2,
+        "matched_functions_percent": 10.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1011",
+          "size": "2523",
+          "fuzzy_match_percent": 0.0792393,
           "metadata": {}
         }
       ],
@@ -32806,22 +32812,112 @@
           "address": "289"
         },
         {
+          "name": "UIButton::FUN004119a0",
+          "size": "371",
+          "metadata": {},
+          "address": "301"
+        },
+        {
+          "name": "UIButton::FUN00411b20",
+          "size": "117",
+          "metadata": {},
+          "address": "672"
+        },
+        {
+          "name": "UIButton::FUN00411ba0",
+          "size": "117",
+          "metadata": {},
+          "address": "789"
+        },
+        {
+          "name": "UIButton::FUN00411c20",
+          "size": "43",
+          "metadata": {},
+          "address": "906"
+        },
+        {
+          "name": "UIButton::FUN00411c50",
+          "size": "246",
+          "metadata": {},
+          "address": "949"
+        },
+        {
+          "name": "UIButton::FUN00411d50",
+          "size": "236",
+          "metadata": {},
+          "address": "1195"
+        },
+        {
+          "name": "UIButton::FUN00411e40",
+          "size": "80",
+          "metadata": {},
+          "address": "1431"
+        },
+        {
+          "name": "UIButton::FUN00411e90",
+          "size": "21",
+          "metadata": {},
+          "address": "1511"
+        },
+        {
+          "name": "UIButton::FUN00411eb0",
+          "size": "118",
+          "metadata": {},
+          "address": "1532"
+        },
+        {
+          "name": "UIButton::FUN00411f30",
+          "size": "114",
+          "metadata": {},
+          "address": "1650"
+        },
+        {
+          "name": "UIButton::FUN00411fb0",
+          "size": "24",
+          "metadata": {},
+          "address": "1764"
+        },
+        {
+          "name": "UIButton::FUN00411fd0",
+          "size": "24",
+          "metadata": {},
+          "address": "1788"
+        },
+        {
           "name": "UIButton::OnMouseArrive",
           "size": "151",
           "metadata": {},
-          "address": "301"
+          "address": "1812"
         },
         {
           "name": "UIButton::OnMouseLeave",
           "size": "194",
           "metadata": {},
-          "address": "452"
+          "address": "1963"
         },
         {
           "name": "UIButton::OnInputMouse",
           "size": "365",
           "metadata": {},
-          "address": "646"
+          "address": "2157"
+        },
+        {
+          "name": "?OnActivate@UIButton@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIButton::OnActivate(void)"
+          },
+          "address": "2522"
+        },
+        {
+          "name": "?OnActivateLevel@UIButton@@UAEXXZ",
+          "size": "1",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIButton::OnActivateLevel(void)"
+          },
+          "address": "2522"
         }
       ],
       "metadata": {
@@ -33208,16 +33304,16 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 22.961794,
-        "total_code": "185609",
-        "matched_code": "40225",
-        "matched_code_percent": 21.671902,
+        "fuzzy_match_percent": 22.7772,
+        "total_code": "187122",
+        "matched_code": "40227",
+        "matched_code_percent": 21.49774,
         "matched_data_percent": 100.0,
-        "total_functions": 1039,
-        "matched_functions": 363,
-        "matched_functions_percent": 34.93744,
+        "total_functions": 1053,
+        "matched_functions": 365,
+        "matched_functions_percent": 34.662865,
         "complete_code": "37192",
-        "complete_code_percent": 20.03782,
+        "complete_code_percent": 19.875803,
         "complete_data_percent": 100.0,
         "total_units": 98,
         "complete_units": 34
