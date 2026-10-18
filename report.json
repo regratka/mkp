@@ -8,11 +8,11 @@
     "total_functions": 3366,
     "matched_functions": 1291,
     "matched_functions_percent": 38.35413,
-    "complete_code": "60664",
-    "complete_code_percent": 8.637805,
+    "complete_code": "63188",
+    "complete_code_percent": 8.997192,
     "complete_data_percent": 100.0,
     "total_units": 208,
-    "complete_units": 45
+    "complete_units": 46
   },
   "units": [
     {
@@ -32781,8 +32781,11 @@
         "total_functions": 20,
         "matched_functions": 20,
         "matched_functions_percent": 100.0,
+        "complete_code": "2524",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
@@ -32821,110 +32824,110 @@
           "address": "289"
         },
         {
-          "name": "?FUN004119a0@UIButton@@QAEXPAD0PAVcMagSprite@@@Z",
+          "name": "?SetTexture@UIButton@@QAEXPAD0PAVcMagSprite@@@Z",
           "size": "371",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN004119a0(char *, char *, class cMagSprite *)"
+            "demangled_name": "public: void __thiscall UIButton::SetTexture(char *, char *, class cMagSprite *)"
           },
           "address": "301"
         },
         {
-          "name": "?FUN00411b20@UIButton@@QAEXPAD@Z",
+          "name": "?SetHoverTexture@UIButton@@QAEXPAD@Z",
           "size": "117",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411b20(char *)"
+            "demangled_name": "public: void __thiscall UIButton::SetHoverTexture(char *)"
           },
           "address": "672"
         },
         {
-          "name": "?FUN00411ba0@UIButton@@QAEXPAD@Z",
+          "name": "?SetPressTexture@UIButton@@QAEXPAD@Z",
           "size": "117",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411ba0(char *)"
+            "demangled_name": "public: void __thiscall UIButton::SetPressTexture(char *)"
           },
           "address": "789"
         },
         {
-          "name": "?FUN00411c20@UIButton@@QAEXMMMM@Z",
+          "name": "?SetDisabledTextColor@UIButton@@QAEXMMMM@Z",
           "size": "43",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411c20(float, float, float, float)"
+            "demangled_name": "public: void __thiscall UIButton::SetDisabledTextColor(float, float, float, float)"
           },
           "address": "906"
         },
         {
-          "name": "?FUN00411c50@UIButton@@QAEXMM@Z",
+          "name": "?SetButtonPosition@UIButton@@QAEXMM@Z",
           "size": "246",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411c50(float, float)"
+            "demangled_name": "public: void __thiscall UIButton::SetButtonPosition(float, float)"
           },
           "address": "949"
         },
         {
-          "name": "?FUN00411d50@UIButton@@QAEXMM@Z",
+          "name": "?SetButtonScale@UIButton@@QAEXMM@Z",
           "size": "236",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411d50(float, float)"
+            "demangled_name": "public: void __thiscall UIButton::SetButtonScale(float, float)"
           },
           "address": "1195"
         },
         {
-          "name": "?FUN00411e40@UIButton@@QAEXPAD@Z",
+          "name": "?SetButtonText@UIButton@@QAEXPAD@Z",
           "size": "80",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411e40(char *)"
+            "demangled_name": "public: void __thiscall UIButton::SetButtonText(char *)"
           },
           "address": "1431"
         },
         {
-          "name": "?FUN00411e90@UIButton@@QAEXM@Z",
+          "name": "?SetButtonAlpha@UIButton@@QAEXM@Z",
           "size": "21",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411e90(float)"
+            "demangled_name": "public: void __thiscall UIButton::SetButtonAlpha(float)"
           },
           "address": "1511"
         },
         {
-          "name": "?FUN00411eb0@UIButton@@QAEX_N@Z",
+          "name": "?EnableButton@UIButton@@QAEX_N@Z",
           "size": "118",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411eb0(bool)"
+            "demangled_name": "public: void __thiscall UIButton::EnableButton(bool)"
           },
           "address": "1532"
         },
         {
-          "name": "?FUN00411f30@UIButton@@QAEX_N@Z",
+          "name": "?SetButtonVisibility@UIButton@@QAEX_N@Z",
           "size": "114",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411f30(bool)"
+            "demangled_name": "public: void __thiscall UIButton::SetButtonVisibility(bool)"
           },
           "address": "1650"
         },
         {
-          "name": "?FUN00411fb0@UIButton@@QAEXXZ",
+          "name": "?PlayHoverSound@UIButton@@QAEXXZ",
           "size": "24",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411fb0(void)"
+            "demangled_name": "public: void __thiscall UIButton::PlayHoverSound(void)"
           },
           "address": "1764"
         },
         {
-          "name": "?FUN00411fd0@UIButton@@QAEXXZ",
+          "name": "?PlayPressSound@UIButton@@QAEXXZ",
           "size": "24",
           "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: void __thiscall UIButton::FUN00411fd0(void)"
+            "demangled_name": "public: void __thiscall UIButton::PlayPressSound(void)"
           },
           "address": "1788"
         },
@@ -32975,6 +32978,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Game code"
         ]
@@ -33366,11 +33370,11 @@
         "total_functions": 1053,
         "matched_functions": 383,
         "matched_functions_percent": 36.372272,
-        "complete_code": "37192",
-        "complete_code_percent": 19.875803,
+        "complete_code": "39716",
+        "complete_code_percent": 21.224655,
         "complete_data_percent": 100.0,
         "total_units": 98,
-        "complete_units": 34
+        "complete_units": 35
       }
     }
   ]
