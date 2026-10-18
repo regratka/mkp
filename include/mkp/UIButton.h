@@ -63,7 +63,7 @@ private:
 	/* 0x18ac */ bool unk_18ac;
 	/* 0x18ad */ bool unk_18ad;
 	/* 0x18b0 */ CMusicSegment* musicSegment;
-	/* 0x18b4 */ CMusicSegment* musicSegmen2;
+	/* 0x18b4 */ CMusicSegment* musicSegment2;
 };
 
 STATIC_ASSERT(sizeof(UIButton) == 0x18b8);

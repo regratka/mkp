@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.527449,
+    "fuzzy_match_percent": 29.88655,
     "total_code": "702308",
-    "matched_code": "136387",
-    "matched_code_percent": 19.419827,
+    "matched_code": "138909",
+    "matched_code_percent": 19.778929,
     "matched_data_percent": 100.0,
     "total_functions": 3366,
-    "matched_functions": 1273,
-    "matched_functions_percent": 37.81937,
+    "matched_functions": 1291,
+    "matched_functions_percent": 38.35413,
     "complete_code": "60664",
     "complete_code_percent": 8.637805,
     "complete_data_percent": 100.0,
@@ -32773,14 +32773,14 @@
     {
       "name": "mkp/UIButton",
       "measures": {
-        "fuzzy_match_percent": 0.0792393,
+        "fuzzy_match_percent": 100.0,
         "total_code": "2524",
-        "matched_code": "2",
-        "matched_code_percent": 0.07923931,
+        "matched_code": "2524",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 20,
-        "matched_functions": 2,
-        "matched_functions_percent": 10.0,
+        "matched_functions": 20,
+        "matched_functions_percent": 100.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -32788,117 +32788,171 @@
         {
           "name": ".text",
           "size": "2523",
-          "fuzzy_match_percent": 0.0792393,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "UIButton::UIButton",
+          "name": "??0UIButton@@QAE@XZ",
           "size": "259",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: __thiscall UIButton::UIButton(void)"
+          },
           "address": "0"
         },
         {
-          "name": "UIButton::scalar_destructor",
+          "name": "??_GUIButton@@UAEPAXI@Z",
           "size": "30",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall UIButton::`scalar deleting destructor'(unsigned int)"
+          },
           "address": "259"
         },
         {
-          "name": "UIButton::~UIButton",
+          "name": "??1UIButton@@UAE@XZ",
           "size": "12",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual __thiscall UIButton::~UIButton(void)"
+          },
           "address": "289"
         },
         {
-          "name": "UIButton::FUN004119a0",
+          "name": "?FUN004119a0@UIButton@@QAEXPAD0PAVcMagSprite@@@Z",
           "size": "371",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN004119a0(char *, char *, class cMagSprite *)"
+          },
           "address": "301"
         },
         {
-          "name": "UIButton::FUN00411b20",
+          "name": "?FUN00411b20@UIButton@@QAEXPAD@Z",
           "size": "117",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411b20(char *)"
+          },
           "address": "672"
         },
         {
-          "name": "UIButton::FUN00411ba0",
+          "name": "?FUN00411ba0@UIButton@@QAEXPAD@Z",
           "size": "117",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411ba0(char *)"
+          },
           "address": "789"
         },
         {
-          "name": "UIButton::FUN00411c20",
+          "name": "?FUN00411c20@UIButton@@QAEXMMMM@Z",
           "size": "43",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411c20(float, float, float, float)"
+          },
           "address": "906"
         },
         {
-          "name": "UIButton::FUN00411c50",
+          "name": "?FUN00411c50@UIButton@@QAEXMM@Z",
           "size": "246",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411c50(float, float)"
+          },
           "address": "949"
         },
         {
-          "name": "UIButton::FUN00411d50",
+          "name": "?FUN00411d50@UIButton@@QAEXMM@Z",
           "size": "236",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411d50(float, float)"
+          },
           "address": "1195"
         },
         {
-          "name": "UIButton::FUN00411e40",
+          "name": "?FUN00411e40@UIButton@@QAEXPAD@Z",
           "size": "80",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411e40(char *)"
+          },
           "address": "1431"
         },
         {
-          "name": "UIButton::FUN00411e90",
+          "name": "?FUN00411e90@UIButton@@QAEXM@Z",
           "size": "21",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411e90(float)"
+          },
           "address": "1511"
         },
         {
-          "name": "UIButton::FUN00411eb0",
+          "name": "?FUN00411eb0@UIButton@@QAEX_N@Z",
           "size": "118",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411eb0(bool)"
+          },
           "address": "1532"
         },
         {
-          "name": "UIButton::FUN00411f30",
+          "name": "?FUN00411f30@UIButton@@QAEX_N@Z",
           "size": "114",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411f30(bool)"
+          },
           "address": "1650"
         },
         {
-          "name": "UIButton::FUN00411fb0",
+          "name": "?FUN00411fb0@UIButton@@QAEXXZ",
           "size": "24",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411fb0(void)"
+          },
           "address": "1764"
         },
         {
-          "name": "UIButton::FUN00411fd0",
+          "name": "?FUN00411fd0@UIButton@@QAEXXZ",
           "size": "24",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall UIButton::FUN00411fd0(void)"
+          },
           "address": "1788"
         },
         {
-          "name": "UIButton::OnMouseArrive",
+          "name": "?OnMouseArrive@UIButton@@UAEXH@Z",
           "size": "151",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIButton::OnMouseArrive(int)"
+          },
           "address": "1812"
         },
         {
-          "name": "UIButton::OnMouseLeave",
+          "name": "?OnMouseLeave@UIButton@@UAEXH@Z",
           "size": "194",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIButton::OnMouseLeave(int)"
+          },
           "address": "1963"
         },
         {
-          "name": "UIButton::OnInputMouse",
+          "name": "?OnInputMouse@UIButton@@UAEXMM_N0@Z",
           "size": "365",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void __thiscall UIButton::OnInputMouse(float, float, bool, bool)"
+          },
           "address": "2157"
         },
         {
@@ -33304,14 +33358,14 @@
       "id": "Game code",
       "name": "Game code",
       "measures": {
-        "fuzzy_match_percent": 22.7772,
+        "fuzzy_match_percent": 24.124985,
         "total_code": "187122",
-        "matched_code": "40227",
-        "matched_code_percent": 21.49774,
+        "matched_code": "42749",
+        "matched_code_percent": 22.845524,
         "matched_data_percent": 100.0,
         "total_functions": 1053,
-        "matched_functions": 365,
-        "matched_functions_percent": 34.662865,
+        "matched_functions": 383,
+        "matched_functions_percent": 36.372272,
         "complete_code": "37192",
         "complete_code_percent": 19.875803,
         "complete_data_percent": 100.0,

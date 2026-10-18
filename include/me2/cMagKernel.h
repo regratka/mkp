@@ -98,7 +98,7 @@ public:
 
 	/* 10011bf0 */ virtual void OnMouseArrive(int param_1); /* vtbl 0xd0 */
 	
-	virtual void OnMouseArrive(); /* vtbl 0xcc */
+	virtual void OnMouseArrive(cMagKernel* param_1); /* vtbl 0xcc */
 
 	/* 10011c80 */ virtual void OnMouseLeave(int param_1); /* vtbl 0xd8 */
 	virtual void OnMouseLeave(cMagKernel* param_1); /* vtbl 0xd4 */
