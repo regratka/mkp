@@ -1,5 +1,6 @@
 CAlphaObject,CAlphaObject
 CBaseColObject,CBaseColObject
+CBox,CBox
 CCPUTicker,CCPUTicker
 CCamera,CCamera
 CClassParameter,CClassParameter
@@ -11,6 +12,7 @@ CColTreeNode,CColTreeNode
 CCollisionCamera,CCollisionCamera
 CDirectXFont,CDirectXFont
 CDynObjCol,CDynObjCol
+CDynObjCollInfo,CDynObjCollInfo
 CDynObjTree,CDynObjTree
 CExtendedParameterLoader,CExtendedParameterLoader
 CFreeCamera,CFreeCamera
@@ -22,7 +24,11 @@ CLevel,CLevel
 CLevelsManager,CLevelsManager
 CMagnumEngine,CMagnumEngine
 CMemoryManager,CMemoryManager
+CMovColFaceTree,CMovColFaceTree
 COctree,COctree
+ColFace,ColFace
+ColObject,ColObject
+Collision,Collision
 CParticle,CParticle
 CParticleEmitter,CParticleEmitter
 CParticleEmitterToken,CParticleEmitterToken
@@ -42,7 +48,12 @@ CParticleEvent_VelocityY,CParticleEvent_VelocityY
 CParticleEvent_VelocityZ,CParticleEvent_VelocityZ
 CPath,CPath
 CPhysics,CPhysics
+CPhysics4Wheels,CPhysics4Wheels
+CPhysicsGravityWalk,CPhysicsGravityWalk
 CPhysicsMotorboat,CPhysicsMotorboat
+CPhysicsRigidBody,CPhysicsRigidBody
+CPhysicsSnowboard,CPhysicsSnowboard
+CPhysicsWalk,CPhysicsWalk
 CRay,CRay
 CRect,CRect
 CSimpleLine,CSimpleLine
@@ -52,8 +63,7 @@ CState,CState
 CTrack,CTrack
 CTrackData,CTrackData
 CUSTOMVERTEXM,CUSTOMVERTEXM
-ColObject,ColObject
-Collision,Collision
+CWheel,CWheel
 IStudioMesh,IStudioMesh
 KTeksturyVideoDirectX,KTeksturyVideoDirectX
 MagAnimMeshMgr,MagAnimMeshMgr
