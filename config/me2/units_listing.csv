@@ -108,6 +108,7 @@ cPortalEngine,cPortalEngine
 cStaticMesh,cStaticMesh
 cStaticSurface,cStaticSurface
 cTGA,cTGA
+CWheel,CWheel
 cVideoPlayer,cVideoPlayer
 CollisionManager,collision
 pgImage,pgImage
