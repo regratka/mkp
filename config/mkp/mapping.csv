@@ -12,7 +12,7 @@
 ;GameSDK::scalar_destructor;0x401780;0x1e;__thiscall;;CGame*;GameSDK*;uchar
 ;GameSDK::~GameSDK;0x4017a0;0x81;__thiscall;;void;GameSDK*
 ;GameSDK::Run;0x401830;0x97;__thiscall;;void;GameSDK*;HINSTANCE__*;bool;int;int;int;char*;bool
-;GameSDK::OnActivateLevel;0x4018f0;0xba;__thiscall;;void;GameSDK*
+;GameSDK::OnActivate;0x4018f0;0xba;__thiscall;;void;GameSDK*
 ;GameSDK::OnInputKey;0x4019b0;0xd2;__thiscall;;void;GameSDK*;char*
 ;GameSDK::OnFrame;0x401a90;0x1a;__thiscall;;void;GameSDK*
 ;GameSDK::FUN00401ab0;0x401ab0;0xd;__thiscall;;uchar;GameSDK*;uchar
@@ -30,7 +30,7 @@
 ;GameSDK::FUN00401e10;0x401e10;0x7;__thiscall;;float;GameSDK*
 ;GameSDK::FUN00401e20;0x401e20;0x17;__thiscall;;uchar;GameSDK*;char*
 ;GameSDK::FUN00401e40;0x401e40;0x45a;__thiscall;;uint;GameSDK*
-;FUN_004022a0;0x4022a0;0x14;__fastcall;;uchar;int
+;UNWIND_FUN_004022a0;0x4022a0;0x14;__fastcall;;uchar;int
 ;GameSDK::FUN004022c0;0x4022c0;0x19;__thiscall;;uchar;GameSDK*;char*
 ;GameSDK::FUN004022e0;0x4022e0;0x17;__thiscall;;uchar;GameSDK*;char*
 ;GameSDK::FUN00402300;0x402300;0x247;__thiscall;;uint;GameSDK*
@@ -150,7 +150,7 @@
 ;CPlayerFPP::OnFadeOutEnd;0x4067c0;0x43;__thiscall;;void;CPlayerFPP*
 ;CPlayerFPP::OnFadeInEnd;0x406810;0x41;__thiscall;;void;CPlayerFPP*
 ;CPlayerFPP::FUN00406860;0x406860;0x1b0;__thiscall;;uchar;CPlayerFPP*
-;FUN_00406a10;0x406a10;0x196;__thiscall;;uchar;void*;char*
+;CPlayerFPP::FUN00406a10;0x406a10;0x196;__thiscall;;uchar;CPlayerFPP*;char*
 ;CPlayerFPP::FUN00406bb0;0x406bb0;0x351;__thiscall;;uchar;CPlayerFPP*;char*
 ;FUN_00406f10;0x406f10;0x2e;__fastcall;;uchar;int
 ;CPlayerFPP::OnLoadChunk;0x406f40;0x24;__thiscall;;uchar;CPlayerFPP*;uint;int;uint;void*
@@ -660,6 +660,7 @@
 ?OnActivateLevel@cMenuLogo@@UAEXXZ;cMenuLogo::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;cMenuLogo*
 ?OnActivateLevel@MenuModule@@UAEXXZ;MenuModule::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;MenuModule*
 ?OnActivateLevel@UIButton@@UAEXXZ;UIButton::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;UIButton*
+?OnActivateLevel@CGame@@UAEXXZ;CGame::OnActivateLevel;0x419ba0;0x1;__thiscall;;void;CGame*
 ?OnFadeInEnd@cMenuLogo@@UAEXXZ;cMenuLogo::OnFadeInEnd;0x419ba0;0x1;__thiscall;;void;cMenuLogo*
 ?OnFrame@CBrama@@UAEXXZ;CBrama::OnFrame;0x419ba0;0x1;__thiscall;;void;CBrama*
 ?OnFrame@Idle@CJezyk@@UAEXXZ;CJezyk::Idle::OnFrame;0x419ba0;0x1;__thiscall;;void;CJezyk::Idle*
