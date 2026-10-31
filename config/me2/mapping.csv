@@ -195,7 +195,8 @@
 ?get@pgString@@QBEPBDXZ;pgString::get;0x1000b440;0xc;__thiscall;;char*;pgString*
 ??ApgString@@QBEDH@Z;pgString::operator[];0x1000b450;0xc;__thiscall;;char;pgString*;int
 ?isCompressed@pgImage@@QBE_NXZ;pgImage::isCompressed;0x1000b460;0xd;__thiscall;;bool;pgImage*
-?getName@pgImage@@QBEABVpgString@@XZ;CRay::Vector;0x1000b470;0x4;__thiscall;;uchar;CRay*
+?Vector@CRay@@QBEABUD3DXVECTOR3@@XZ;CRay::Vector;0x1000b470;0x4;__thiscall;;D3DXVECTOR3 const&;CRay*
+?getName@pgImage@@QBEABVpgString@@XZ;pgImage::getName;0x1000b470;0x4;__thiscall;;pgString const&;CRay*
 ?getD3DFormat@pgImage@@SA?AW4_D3DFORMAT@@W4FORMAT@1@@Z;pgImage::getD3DFormat;0x1000b480;0x5;__cdecl;;_D3DFORMAT;FORMAT
 ??0pgImage@@QAE@ABV0@@Z;pgImage::pgImage;0x1000b490;0x2f;__thiscall;;uchar;pgImage*;pgImage*
 ??4pgImage@@QAEAAV0@ABV0@@Z;pgImage::operator=;0x1000b4c0;0x2f;__thiscall;;pgImage*;pgImage*;pgImage*
@@ -275,7 +276,7 @@
 ?SetPosition@cMagBillboard@@QAEXUD3DXVECTOR3@@@Z;cMagBillboard::SetPosition;0x1000ffc0;0x1d;__thiscall;;void;cMagBillboard*;uint;uint;uint
 ?GetRotationYaw@cMagBillboard@@QAEMXZ;cMagBillboard::GetRotationYaw;0x1000ffe0;0x7;__thiscall;;float;cMagBillboard*
 ?GetRotationPitch@cMagBillboard@@QAEMXZ;cMagBillboard::GetRotationPitch;0x1000fff0;0x7;__thiscall;;float;cMagBillboard*
-?GetRotationRoll@cMagBillboard@@QAEMXZ;cMagBillboard::GetRotationRoll;0x10010000;0x7;__thiscall;;float;cMagBillboard*
+?GetRotationRoll@cMagBillboard@@QAEMXZ;cMagBillboargd::GetRotationRoll;0x10010000;0x7;__thiscall;;float;cMagBillboard*
 ?GetPosition@cMagBillboard@@UAE?AUD3DXVECTOR3@@XZ;cMagBillboard::GetPosition;0x10010010;0x21;__thiscall;;uchar;cMagBillboard*;uint*
 ?GetZPosition@cMagBillboard@@QAEMXZ;cMagBillboard::GetZPosition;0x10010040;0x7;__thiscall;;float;cMagBillboard*
 ?GetXPosition@cMagBillboard@@QAEMXZ;cMagBillboard::GetXPosition;0x10010050;0x7;__thiscall;;float;cMagBillboard*
@@ -288,16 +289,16 @@
 ??4cMagBillboard@@QAEAAV0@ABV0@@Z;cMagBillboard::operator=;0x10010470;0x42b;__thiscall;;cMagBillboard*;cMagBillboard*;cMagBillboard*
 ??_EcMagBillboard@@UAEPAXI@Z;cMagBillboard::scalar_destructor;0x100108a0;0x57;__thiscall;;cMagBillboard*;cMagBillboard*;uchar
 ?Length@CRay@@QBEMXZ;CRay::Length;0x10010900;0x33;__thiscall;;float;CRay*
-?End@CRay@@QAE?AUD3DXVECTOR3@@M@Z;CRay::End;0x10010940;0x73;__thiscall;;D3DXVECTOR3*;CRay*;D3DXVECTOR3*;float
-?Closest@CRay@@QAE?AUD3DXVECTOR3@@ABU2@@Z;CRay::Closest;0x100109c0;0x82;__thiscall;;D3DXVECTOR3*;CRay*;D3DXVECTOR3*;D3DXVECTOR3*
-?SetVector@CRay@@QAEXABUD3DXVECTOR3@@@Z;CRay::SetVector;0x10010a50;0x2a;__thiscall;;void;CRay*;D3DXVECTOR3*
-?SetOrigin@CRay@@QAEXABUD3DXVECTOR3@@@Z;CRay::SetOrigin;0x10010a80;0x2a;__thiscall;;void;CRay*;uchar
-?Origin@CRay@@QBEABUD3DXVECTOR3@@XZ;CRay::Origin;0x10010ab0;0x4;__thiscall;;uchar;CRay*
+?End@CRay@@QAE?AUD3DXVECTOR3@@M@Z;CRay::End;0x10010940;0x73;__thiscall;;D3DXVECTOR3;CRay*;float
+?Closest@CRay@@QAE?AUD3DXVECTOR3@@ABU2@@Z;CRay::Closest;0x100109c0;0x82;__thiscall;;D3DXVECTOR3;CRay*;D3DXVECTOR3 const&
+?SetVector@CRay@@QAEXABUD3DXVECTOR3@@@Z;CRay::SetVector;0x10010a50;0x2a;__thiscall;;void;CRay*;D3DXVECTOR3 const&
+?SetOrigin@CRay@@QAEXABUD3DXVECTOR3@@@Z;CRay::SetOrigin;0x10010a80;0x2a;__thiscall;;void;CRay*;D3DXVECTOR3 const&
+?Origin@CRay@@QBEABUD3DXVECTOR3@@XZ;CRay::Origin;0x10010ab0;0x4;__thiscall;;D3DXVECTOR3 const&;CRay*
 ?D@CRay@@QBEMXZ;CRay::D;0x10010ac0;0x5a;__thiscall;;float;CRay*
 ?Normal@CRay@@QBEAAUD3DXVECTOR3@@XZ;CRay::Normal;0x10010b20;0x39;__thiscall;;uchar;CRay*
 ?Intersect@CRay@@QBE_NAAV1@AAM@Z;CRay::Intersect;0x10010b60;0x142;__thiscall;;bool;CRay*;CRay*;float*
-?Distance@CRay@@QBEMABUD3DXVECTOR3@@@Z;CRay::Distance;0x10010cb0;0x1a7;__thiscall;;float;CRay*;D3DXVECTOR3*
-?End@CRay@@QBE?AUD3DXVECTOR3@@XZ;CRay::End;0x10010e60;0x21;__thiscall;;D3DXVECTOR3*;CRay*;D3DXVECTOR3*
+?Distance@CRay@@QBEMABUD3DXVECTOR3@@@Z;CRay::Distance;0x10010cb0;0x1a7;__thiscall;;float;CRay*;D3DXVECTOR3 const&
+?End@CRay@@QBE?AUD3DXVECTOR3@@XZ;CRay::End;0x10010e60;0x21;__thiscall;;D3DXVECTOR3;CRay*
 ?Reset@CRay@@IAEXXZ;CRay::Reset;0x10010e90;0xf;__thiscall;;void;CRay*
 ??0CRay@@QAE@ABV0@@Z;CRay::CRay;0x10010ea0;0x79;__thiscall;;uchar;CRay*;CRay*
 ??4CRay@@QAEAAV0@ABV0@@Z;CRay::operator=;0x10010f20;0x73;__thiscall;;CRay*;CRay*;CRay*
@@ -3755,7 +3756,7 @@
 ;FUN_100bc820;0x100bc820;0xa;__stdcall;;uchar
 ;FUN_100bc830;0x100bc830;0xc;__stdcall;;uchar
 ??0CRay@@QAE@XZ;CRay::CRay;0x100bc850;0x17;__thiscall;;uchar;CRay*
-??0CRay@@QAE@ABUD3DXVECTOR3@@0@Z;CRay::CRay;0x100bc870;0x49;__thiscall;;void;CRay*;D3DXVECTOR3*;D3DXVECTOR3*
+??0CRay@@QAE@ABUD3DXVECTOR3@@0@Z;CRay::CRay;0x100bc870;0x49;__thiscall;;void;CRay*;D3DXVECTOR3 const&;D3DXVECTOR3 const&
 ??1CRay@@UAE@XZ;CRay::~CRay;0x100bc8c0;0x7;__thiscall;;void;CRay*
 ;FUN_100bc910;0x100bc910;0xa;__stdcall;;uchar
 ;FUN_100bc920;0x100bc920;0xc;__stdcall;;uchar

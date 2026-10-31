@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.695171,
-    "total_code": "765691",
-    "matched_code": "144507",
-    "matched_code_percent": 18.872757,
+    "fuzzy_match_percent": 28.882435,
+    "total_code": "765760",
+    "matched_code": "146323",
+    "matched_code_percent": 19.108206,
     "matched_data_percent": 100.0,
-    "total_functions": 3561,
-    "matched_functions": 1340,
-    "matched_functions_percent": 37.62988,
-    "complete_code": "63188",
-    "complete_code_percent": 8.252415,
+    "total_functions": 3563,
+    "matched_functions": 1360,
+    "matched_functions_percent": 38.170082,
+    "complete_code": "64939",
+    "complete_code_percent": 8.480333,
     "complete_data_percent": 100.0,
     "total_units": 216,
-    "complete_units": 46
+    "complete_units": 47
   },
   "units": [
     {
@@ -7207,37 +7207,42 @@
     {
       "name": "me2/CRay",
       "measures": {
-        "fuzzy_match_percent": 4.147756,
+        "fuzzy_match_percent": 100.0,
         "total_code": "1751",
-        "matched_code": "7",
-        "matched_code_percent": 0.39977157,
+        "matched_code": "1751",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 19,
-        "matched_functions": 1,
-        "matched_functions_percent": 5.263158,
+        "matched_functions": 19,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1751",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "1751",
-          "fuzzy_match_percent": 4.147756,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
       "functions": [
         {
-          "name": "?getName@pgImage@@QBEABVpgString@@XZ",
+          "name": "?Vector@CRay@@QBEABUD3DXVECTOR3@@XZ",
           "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
-            "demangled_name": "public: class pgString const & __thiscall pgImage::getName(void) const"
+            "demangled_name": "public: struct D3DXVECTOR3const & __thiscall CRay::Vector(void) const"
           },
           "address": "0"
         },
         {
           "name": "?Length@CRay@@QBEMXZ",
           "size": "51",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CRay::Length(void) const"
           },
@@ -7246,6 +7251,7 @@
         {
           "name": "?End@CRay@@QAE?AUD3DXVECTOR3@@M@Z",
           "size": "115",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CRay::End(float)"
           },
@@ -7254,6 +7260,7 @@
         {
           "name": "?Closest@CRay@@QAE?AUD3DXVECTOR3@@ABU2@@Z",
           "size": "130",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CRay::Closest(struct D3DXVECTOR3const &)"
           },
@@ -7262,6 +7269,7 @@
         {
           "name": "?SetVector@CRay@@QAEXABUD3DXVECTOR3@@@Z",
           "size": "42",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CRay::SetVector(struct D3DXVECTOR3const &)"
           },
@@ -7270,6 +7278,7 @@
         {
           "name": "?SetOrigin@CRay@@QAEXABUD3DXVECTOR3@@@Z",
           "size": "42",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CRay::SetOrigin(struct D3DXVECTOR3const &)"
           },
@@ -7278,6 +7287,7 @@
         {
           "name": "?Origin@CRay@@QBEABUD3DXVECTOR3@@XZ",
           "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3const & __thiscall CRay::Origin(void) const"
           },
@@ -7286,6 +7296,7 @@
         {
           "name": "?D@CRay@@QBEMXZ",
           "size": "90",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CRay::D(void) const"
           },
@@ -7294,7 +7305,7 @@
         {
           "name": "?Normal@CRay@@QBEAAUD3DXVECTOR3@@XZ",
           "size": "57",
-          "fuzzy_match_percent": 91.69231,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3& __thiscall CRay::Normal(void) const"
           },
@@ -7303,6 +7314,7 @@
         {
           "name": "?Intersect@CRay@@QBE_NAAV1@AAM@Z",
           "size": "322",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CRay::Intersect(class CRay &, float &) const"
           },
@@ -7311,6 +7323,7 @@
         {
           "name": "?Distance@CRay@@QBEMABUD3DXVECTOR3@@@Z",
           "size": "423",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float __thiscall CRay::Distance(struct D3DXVECTOR3const &) const"
           },
@@ -7319,6 +7332,7 @@
         {
           "name": "?End@CRay@@QBE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall CRay::End(void) const"
           },
@@ -7327,6 +7341,7 @@
         {
           "name": "?Reset@CRay@@IAEXXZ",
           "size": "15",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "protected: void __thiscall CRay::Reset(void)"
           },
@@ -7335,6 +7350,7 @@
         {
           "name": "??0CRay@@QAE@ABV0@@Z",
           "size": "121",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CRay::CRay(class CRay const &)"
           },
@@ -7343,6 +7359,7 @@
         {
           "name": "??4CRay@@QAEAAV0@ABV0@@Z",
           "size": "115",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CRay & __thiscall CRay::operator=(class CRay const &)"
           },
@@ -7351,6 +7368,7 @@
         {
           "name": "??_ECRay@@UAEPAXI@Z",
           "size": "84",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CRay::`vector deleting destructor'(unsigned int)"
           },
@@ -7359,7 +7377,7 @@
         {
           "name": "??0CRay@@QAE@XZ",
           "size": "23",
-          "fuzzy_match_percent": 36.125,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CRay::CRay(void)"
           },
@@ -7368,7 +7386,7 @@
         {
           "name": "??0CRay@@QAE@ABUD3DXVECTOR3@@0@Z",
           "size": "73",
-          "fuzzy_match_percent": 6.923077,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CRay::CRay(struct D3DXVECTOR3const &, struct D3DXVECTOR3const &)"
           },
@@ -7385,6 +7403,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -10201,14 +10220,14 @@
     {
       "name": "me2/MagnumMesh",
       "measures": {
-        "fuzzy_match_percent": 19.690287,
-        "total_code": "38678",
-        "matched_code": "2908",
-        "matched_code_percent": 7.518486,
+        "fuzzy_match_percent": 19.077976,
+        "total_code": "38750",
+        "matched_code": "2980",
+        "matched_code_percent": 7.6903224,
         "matched_data_percent": 100.0,
-        "total_functions": 76,
-        "matched_functions": 47,
-        "matched_functions_percent": 61.84211,
+        "total_functions": 78,
+        "matched_functions": 49,
+        "matched_functions_percent": 62.82051,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -10216,7 +10235,7 @@
         {
           "name": ".text",
           "size": "38674",
-          "fuzzy_match_percent": 19.690287,
+          "fuzzy_match_percent": 19.077976,
           "metadata": {}
         }
       ],
@@ -10401,6 +10420,15 @@
           "address": "24195"
         },
         {
+          "name": "?GetVectorMinAndMax@MagnumMesh@@QAEXAAUD3DXVECTOR3@@0@Z",
+          "size": "57",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: void __thiscall MagnumMesh::GetVectorMinAndMax(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
+          },
+          "address": "24208"
+        },
+        {
           "name": "?MagComputeBoundingBox@MagnumMesh@@QAEXAAUD3DXVECTOR3@@0@Z",
           "size": "57",
           "fuzzy_match_percent": 100.0,
@@ -10417,6 +10445,15 @@
             "demangled_name": "public: void __thiscall MagnumMesh::InitWater(void)"
           },
           "address": "24265"
+        },
+        {
+          "name": "?SetAlpha@MagnumMesh@@QAEJH@Z",
+          "size": "15",
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: long __thiscall MagnumMesh::SetAlpha(int)"
+          },
+          "address": "24310"
         },
         {
           "name": "?SetMeshAlpha@MagnumMesh@@QAEJH@Z",
@@ -10601,7 +10638,7 @@
         {
           "name": "?CalculateVertexColor@MagnumMesh@@QAEXXZ",
           "size": "1065",
-          "fuzzy_match_percent": 64.632576,
+          "fuzzy_match_percent": 36.924244,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::CalculateVertexColor(void)"
           },
@@ -11661,18 +11698,18 @@
     {
       "name": "me2/cMagBillboard",
       "measures": {
-        "fuzzy_match_percent": 2.407198,
-        "total_code": "5849",
+        "fuzzy_match_percent": 2.326207,
+        "total_code": "5842",
         "matched_data_percent": 100.0,
-        "total_functions": 39,
+        "total_functions": 38,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "5849",
-          "fuzzy_match_percent": 2.407198,
+          "size": "5842",
+          "fuzzy_match_percent": 2.326207,
           "metadata": {}
         }
       ],
@@ -11731,21 +11768,12 @@
           "address": "69"
         },
         {
-          "name": "?GetRotationRoll@cMagBillboard@@QAEMXZ",
-          "size": "7",
-          "fuzzy_match_percent": 70.0,
-          "metadata": {
-            "demangled_name": "public: float __thiscall cMagBillboard::GetRotationRoll(void)"
-          },
-          "address": "76"
-        },
-        {
           "name": "?GetPosition@cMagBillboard@@UAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
           "metadata": {
             "demangled_name": "public: virtual struct D3DXVECTOR3 __thiscall cMagBillboard::GetPosition(void)"
           },
-          "address": "83"
+          "address": "76"
         },
         {
           "name": "?GetZPosition@cMagBillboard@@QAEMXZ",
@@ -11754,7 +11782,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagBillboard::GetZPosition(void)"
           },
-          "address": "116"
+          "address": "109"
         },
         {
           "name": "?GetXPosition@cMagBillboard@@QAEMXZ",
@@ -11763,7 +11791,7 @@
           "metadata": {
             "demangled_name": "public: float __thiscall cMagBillboard::GetXPosition(void)"
           },
-          "address": "123"
+          "address": "116"
         },
         {
           "name": "?SetZPosition@cMagBillboard@@QAEXM@Z",
@@ -11772,7 +11800,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetZPosition(float)"
           },
-          "address": "130"
+          "address": "123"
         },
         {
           "name": "?SetXPosition@cMagBillboard@@QAEXM@Z",
@@ -11781,7 +11809,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetXPosition(float)"
           },
-          "address": "143"
+          "address": "136"
         },
         {
           "name": "?SetBlendAlpha@cMagBillboard@@QAEX_N@Z",
@@ -11790,7 +11818,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetBlendAlpha(bool)"
           },
-          "address": "156"
+          "address": "149"
         },
         {
           "name": "?GetWorldMat@cMagBillboard@@UAE?AUD3DXMATRIX@@XZ",
@@ -11798,7 +11826,7 @@
           "metadata": {
             "demangled_name": "public: virtual struct D3DXMATRIX __thiscall cMagBillboard::GetWorldMat(void)"
           },
-          "address": "176"
+          "address": "169"
         },
         {
           "name": "?EnableFrustum@cMagBillboard@@QAEX_N@Z",
@@ -11807,7 +11835,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::EnableFrustum(bool)"
           },
-          "address": "202"
+          "address": "195"
         },
         {
           "name": "??0cMagBillboard@@QAE@ABV0@@Z",
@@ -11815,7 +11843,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall cMagBillboard::cMagBillboard(class cMagBillboard const &)"
           },
-          "address": "215"
+          "address": "208"
         },
         {
           "name": "??4cMagBillboard@@QAEAAV0@ABV0@@Z",
@@ -11823,7 +11851,7 @@
           "metadata": {
             "demangled_name": "public: class cMagBillboard & __thiscall cMagBillboard::operator=(class cMagBillboard const &)"
           },
-          "address": "1130"
+          "address": "1123"
         },
         {
           "name": "??_EcMagBillboard@@UAEPAXI@Z",
@@ -11831,7 +11859,7 @@
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall cMagBillboard::`vector deleting destructor'(unsigned int)"
           },
-          "address": "2197"
+          "address": "2190"
         },
         {
           "name": "?Restore@cMagBillboard@@QAEXXZ",
@@ -11839,7 +11867,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::Restore(void)"
           },
-          "address": "2284"
+          "address": "2277"
         },
         {
           "name": "?InitDeviceDx@cMagBillboard@@QAEXPAVcMagGameObject@@@Z",
@@ -11847,7 +11875,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::InitDeviceDx(class cMagGameObject *)"
           },
-          "address": "2285"
+          "address": "2278"
         },
         {
           "name": "??0cMagBillboard@@QAE@XZ",
@@ -11856,7 +11884,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall cMagBillboard::cMagBillboard(void)"
           },
-          "address": "2288"
+          "address": "2281"
         },
         {
           "name": "??1cMagBillboard@@UAE@XZ",
@@ -11865,7 +11893,7 @@
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagBillboard::~cMagBillboard(void)"
           },
-          "address": "2633"
+          "address": "2626"
         },
         {
           "name": "?SetTexture@cMagBillboard@@QAEXPAD@Z",
@@ -11874,7 +11902,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetTexture(char *)"
           },
-          "address": "2890"
+          "address": "2883"
         },
         {
           "name": "?Render@cMagBillboard@@QAEXUD3DXMATRIX@@@Z",
@@ -11882,7 +11910,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::Render(struct D3DXMATRIX)"
           },
-          "address": "2919"
+          "address": "2912"
         },
         {
           "name": "?AddFrame@cMagBillboard@@QAE_NPADM@Z",
@@ -11891,7 +11919,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagBillboard::AddFrame(char *, float)"
           },
-          "address": "3313"
+          "address": "3306"
         },
         {
           "name": "?GetCurFrame@cMagBillboard@@QAEHXZ",
@@ -11900,7 +11928,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall cMagBillboard::GetCurFrame(void)"
           },
-          "address": "3972"
+          "address": "3965"
         },
         {
           "name": "?EnableRendering@cMagBillboard@@QAEX_N@Z",
@@ -11909,7 +11937,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::EnableRendering(bool)"
           },
-          "address": "4087"
+          "address": "4080"
         },
         {
           "name": "?OnUpdate_@cMagBillboard@@UAEXXZ",
@@ -11918,7 +11946,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagBillboard::OnUpdate_(void)"
           },
-          "address": "4100"
+          "address": "4093"
         },
         {
           "name": "?OnRender@cMagBillboard@@UAEXXZ",
@@ -11927,7 +11955,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagBillboard::OnRender(void)"
           },
-          "address": "5066"
+          "address": "5059"
         },
         {
           "name": "?EnableAnim@cMagBillboard@@QAEX_N@Z",
@@ -11936,7 +11964,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::EnableAnim(bool)"
           },
-          "address": "5413"
+          "address": "5406"
         },
         {
           "name": "?Enable3Axis@cMagBillboard@@QAEX_N@Z",
@@ -11945,7 +11973,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::Enable3Axis(bool)"
           },
-          "address": "5436"
+          "address": "5429"
         },
         {
           "name": "?SetUpMode@cMagBillboard@@QAEX_N@Z",
@@ -11954,7 +11982,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetUpMode(bool)"
           },
-          "address": "5449"
+          "address": "5442"
         },
         {
           "name": "?SetAlpha@cMagBillboard@@QAEXKK@Z",
@@ -11963,7 +11991,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetAlpha(unsigned long, unsigned long)"
           },
-          "address": "5462"
+          "address": "5455"
         },
         {
           "name": "?CalculateVectorMinMax@cMagBillboard@@QAEXXZ",
@@ -11972,7 +12000,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::CalculateVectorMinMax(void)"
           },
-          "address": "5492"
+          "address": "5485"
         },
         {
           "name": "?GetBoundingBox@cMagBillboard@@UAEXAAUD3DXVECTOR3@@0H@Z",
@@ -11980,7 +12008,7 @@
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagBillboard::GetBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&, int)"
           },
-          "address": "5725"
+          "address": "5718"
         },
         {
           "name": "?GetTransformMatrix@cMagBillboard@@UAE?AUD3DXMATRIX@@XZ",
@@ -11988,7 +12016,7 @@
           "metadata": {
             "demangled_name": "public: virtual struct D3DXMATRIX __thiscall cMagBillboard::GetTransformMatrix(void)"
           },
-          "address": "5790"
+          "address": "5783"
         },
         {
           "name": "?EnableZBuffeWrite@cMagBillboard@@QAE_NXZ",
@@ -11997,7 +12025,7 @@
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagBillboard::EnableZBuffeWrite(void)"
           },
-          "address": "5816"
+          "address": "5809"
         },
         {
           "name": "?EnableZBuffeWrite@cMagBillboard@@QAEX_N@Z",
@@ -12006,7 +12034,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::EnableZBuffeWrite(bool)"
           },
-          "address": "5823"
+          "address": "5816"
         },
         {
           "name": "?SetHandlerObject@cMagBillboard@@QAEXPAVcMagGameObject@@@Z",
@@ -12015,7 +12043,7 @@
           "metadata": {
             "demangled_name": "public: void __thiscall cMagBillboard::SetHandlerObject(class cMagGameObject *)"
           },
-          "address": "5836"
+          "address": "5829"
         }
       ],
       "metadata": {
@@ -20803,7 +20831,7 @@
     {
       "name": "me2/cPortalEngine",
       "measures": {
-        "fuzzy_match_percent": 0.28115988,
+        "fuzzy_match_percent": 0.3139066,
         "total_code": "10447",
         "matched_data_percent": 100.0,
         "total_functions": 17,
@@ -20814,7 +20842,7 @@
         {
           "name": ".text",
           "size": "10447",
-          "fuzzy_match_percent": 0.28115988,
+          "fuzzy_match_percent": 0.3139066,
           "metadata": {}
         }
       ],
@@ -20863,6 +20891,7 @@
         {
           "name": "?CreatePlanePortal@cPortalEngine@@QAEXPAUMesh@@UD3DXMATRIX@@@Z",
           "size": "390",
+          "fuzzy_match_percent": 0.877193,
           "metadata": {
             "demangled_name": "public: void __thiscall cPortalEngine::CreatePlanePortal(struct Mesh *, struct D3DXMATRIX)"
           },
@@ -21607,18 +21636,18 @@
     {
       "name": "me2/pgImage",
       "measures": {
-        "fuzzy_match_percent": 0.635,
-        "total_code": "1000",
+        "fuzzy_match_percent": 0.63247013,
+        "total_code": "1004",
         "matched_data_percent": 100.0,
-        "total_functions": 14,
+        "total_functions": 15,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "1000",
-          "fuzzy_match_percent": 0.635,
+          "size": "1004",
+          "fuzzy_match_percent": 0.63247013,
           "metadata": {}
         }
       ],
@@ -21632,12 +21661,20 @@
           "address": "0"
         },
         {
+          "name": "?getName@pgImage@@QBEABVpgString@@XZ",
+          "size": "4",
+          "metadata": {
+            "demangled_name": "public: class pgString const & __thiscall pgImage::getName(void) const"
+          },
+          "address": "13"
+        },
+        {
           "name": "?getD3DFormat@pgImage@@SA?AW4_D3DFORMAT@@W4FORMAT@1@@Z",
           "size": "5",
           "metadata": {
             "demangled_name": "public: static enum _D3DFORMAT __cdecl pgImage::getD3DFormat(enum pgImage::FORMAT)"
           },
-          "address": "13"
+          "address": "17"
         },
         {
           "name": "??0pgImage@@QAE@ABV0@@Z",
@@ -21645,7 +21682,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgImage::pgImage(class pgImage const &)"
           },
-          "address": "18"
+          "address": "22"
         },
         {
           "name": "??4pgImage@@QAEAAV0@ABV0@@Z",
@@ -21653,7 +21690,7 @@
           "metadata": {
             "demangled_name": "public: class pgImage & __thiscall pgImage::operator=(class pgImage const &)"
           },
-          "address": "65"
+          "address": "69"
         },
         {
           "name": "??1pgImage@@QAE@XZ",
@@ -21662,7 +21699,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgImage::~pgImage(void)"
           },
-          "address": "112"
+          "address": "116"
         },
         {
           "name": "?getHeight@pgImage@@QBEHXZ",
@@ -21670,7 +21707,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall pgImage::getHeight(void) const"
           },
-          "address": "120"
+          "address": "124"
         },
         {
           "name": "??0pgImage@@QAE@XZ",
@@ -21679,7 +21716,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgImage::pgImage(void)"
           },
-          "address": "124"
+          "address": "128"
         },
         {
           "name": "??0pgImage@@QAE@HHW4FORMAT@0@ABVpgString@@PAE_N@Z",
@@ -21687,7 +21724,7 @@
           "metadata": {
             "demangled_name": "public: __thiscall pgImage::pgImage(int, int, enum pgImage::FORMAT, class pgString const &, unsigned char *, bool)"
           },
-          "address": "143"
+          "address": "147"
         },
         {
           "name": "?getPixelSize@pgImage@@QBEHXZ",
@@ -21695,7 +21732,7 @@
           "metadata": {
             "demangled_name": "public: int __thiscall pgImage::getPixelSize(void) const"
           },
-          "address": "346"
+          "address": "350"
         },
         {
           "name": "?getPixelSize@pgImage@@SAHW4FORMAT@1@@Z",
@@ -21703,7 +21740,7 @@
           "metadata": {
             "demangled_name": "public: static int __cdecl pgImage::getPixelSize(enum pgImage::FORMAT)"
           },
-          "address": "359"
+          "address": "363"
         },
         {
           "name": "?getFormatString@pgImage@@SA?AVpgString@@W4_D3DFORMAT@@@Z",
@@ -21711,7 +21748,7 @@
           "metadata": {
             "demangled_name": "public: static class pgString __cdecl pgImage::getFormatString(enum _D3DFORMAT)"
           },
-          "address": "413"
+          "address": "417"
         },
         {
           "name": "?getFormatString@pgImage@@SA?AVpgString@@W4FORMAT@1@@Z",
@@ -21719,7 +21756,7 @@
           "metadata": {
             "demangled_name": "public: static class pgString __cdecl pgImage::getFormatString(enum pgImage::FORMAT)"
           },
-          "address": "446"
+          "address": "450"
         },
         {
           "name": "?isCompressed@pgImage@@SA_NW4FORMAT@1@@Z",
@@ -21727,7 +21764,7 @@
           "metadata": {
             "demangled_name": "public: static bool __cdecl pgImage::isCompressed(enum pgImage::FORMAT)"
           },
-          "address": "875"
+          "address": "879"
         },
         {
           "name": "?hasAlpha@pgImage@@SA_NW4FORMAT@1@@Z",
@@ -21735,7 +21772,7 @@
           "metadata": {
             "demangled_name": "public: static bool __cdecl pgImage::hasAlpha(enum pgImage::FORMAT)"
           },
-          "address": "925"
+          "address": "929"
         }
       ],
       "metadata": {
@@ -34798,19 +34835,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 31.948359,
-        "total_code": "546423",
-        "matched_code": "101758",
-        "matched_code_percent": 18.622568,
+        "fuzzy_match_percent": 32.21035,
+        "total_code": "546492",
+        "matched_code": "103574",
+        "matched_code_percent": 18.952518,
         "matched_data_percent": 100.0,
-        "total_functions": 2404,
-        "matched_functions": 957,
-        "matched_functions_percent": 39.80865,
-        "complete_code": "23472",
-        "complete_code_percent": 4.295573,
+        "total_functions": 2406,
+        "matched_functions": 977,
+        "matched_functions_percent": 40.60682,
+        "complete_code": "25223",
+        "complete_code_percent": 4.615438,
         "complete_data_percent": 100.0,
         "total_units": 118,
-        "complete_units": 11
+        "complete_units": 12
       }
     },
     {
