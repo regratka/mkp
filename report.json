@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 27.493036,
+    "fuzzy_match_percent": 28.695171,
     "total_code": "765691",
-    "matched_code": "139461",
-    "matched_code_percent": 18.213745,
+    "matched_code": "144507",
+    "matched_code_percent": 18.872757,
     "matched_data_percent": 100.0,
     "total_functions": 3561,
-    "matched_functions": 1298,
-    "matched_functions_percent": 36.450436,
+    "matched_functions": 1340,
+    "matched_functions_percent": 37.62988,
     "complete_code": "63188",
     "complete_code_percent": 8.252415,
     "complete_data_percent": 100.0,
@@ -7207,10 +7207,14 @@
     {
       "name": "me2/CRay",
       "measures": {
-        "fuzzy_match_percent": 0.32838377,
+        "fuzzy_match_percent": 4.147756,
         "total_code": "1751",
+        "matched_code": "7",
+        "matched_code_percent": 0.39977157,
         "matched_data_percent": 100.0,
         "total_functions": 19,
+        "matched_functions": 1,
+        "matched_functions_percent": 5.263158,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -7218,7 +7222,7 @@
         {
           "name": ".text",
           "size": "1751",
-          "fuzzy_match_percent": 0.32838377,
+          "fuzzy_match_percent": 4.147756,
           "metadata": {}
         }
       ],
@@ -7290,6 +7294,7 @@
         {
           "name": "?Normal@CRay@@QBEAAUD3DXVECTOR3@@XZ",
           "size": "57",
+          "fuzzy_match_percent": 91.69231,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3& __thiscall CRay::Normal(void) const"
           },
@@ -7354,7 +7359,7 @@
         {
           "name": "??0CRay@@QAE@XZ",
           "size": "23",
-          "fuzzy_match_percent": 25.0,
+          "fuzzy_match_percent": 36.125,
           "metadata": {
             "demangled_name": "public: __thiscall CRay::CRay(void)"
           },
@@ -7363,6 +7368,7 @@
         {
           "name": "??0CRay@@QAE@ABUD3DXVECTOR3@@0@Z",
           "size": "73",
+          "fuzzy_match_percent": 6.923077,
           "metadata": {
             "demangled_name": "public: __thiscall CRay::CRay(struct D3DXVECTOR3const &, struct D3DXVECTOR3const &)"
           },
@@ -7371,6 +7377,7 @@
         {
           "name": "??1CRay@@UAE@XZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CRay::~CRay(void)"
           },
@@ -10194,14 +10201,14 @@
     {
       "name": "me2/MagnumMesh",
       "measures": {
-        "fuzzy_match_percent": 3.290363,
+        "fuzzy_match_percent": 19.690287,
         "total_code": "38678",
-        "matched_code": "161",
-        "matched_code_percent": 0.41625732,
+        "matched_code": "2908",
+        "matched_code_percent": 7.518486,
         "matched_data_percent": 100.0,
         "total_functions": 76,
-        "matched_functions": 9,
-        "matched_functions_percent": 11.842106,
+        "matched_functions": 47,
+        "matched_functions_percent": 61.84211,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -10209,7 +10216,7 @@
         {
           "name": ".text",
           "size": "38674",
-          "fuzzy_match_percent": 3.290363,
+          "fuzzy_match_percent": 19.690287,
           "metadata": {}
         }
       ],
@@ -10244,7 +10251,7 @@
         {
           "name": "??0MagnumMesh@@QAE@ABV0@@Z",
           "size": "2306",
-          "fuzzy_match_percent": 16.822878,
+          "fuzzy_match_percent": 96.31365,
           "metadata": {
             "demangled_name": "public: __thiscall MagnumMesh::MagnumMesh(class MagnumMesh const &)"
           },
@@ -10253,7 +10260,6 @@
         {
           "name": "??4MagnumMesh@@QAEAAV0@ABV0@@Z",
           "size": "2280",
-          "fuzzy_match_percent": 15.024305,
           "metadata": {
             "demangled_name": "public: class MagnumMesh & __thiscall MagnumMesh::operator=(class MagnumMesh const &)"
           },
@@ -10271,6 +10277,7 @@
         {
           "name": "?RenderAnimTexture@MagnumMesh@@QAEXXZ",
           "size": "1",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RenderAnimTexture(void)"
           },
@@ -10279,6 +10286,7 @@
         {
           "name": "?RestoreMesh@MagnumMesh@@QAEXXZ",
           "size": "1",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RestoreMesh(void)"
           },
@@ -10296,7 +10304,7 @@
         {
           "name": "??0MagnumMesh@@QAE@XZ",
           "size": "1342",
-          "fuzzy_match_percent": 6.0033,
+          "fuzzy_match_percent": 30.91089,
           "metadata": {
             "demangled_name": "public: __thiscall MagnumMesh::MagnumMesh(void)"
           },
@@ -10305,7 +10313,7 @@
         {
           "name": "??1MagnumMesh@@UAE@XZ",
           "size": "719",
-          "fuzzy_match_percent": 7.957547,
+          "fuzzy_match_percent": 27.919811,
           "metadata": {
             "demangled_name": "public: virtual __thiscall MagnumMesh::~MagnumMesh(void)"
           },
@@ -10359,7 +10367,7 @@
         {
           "name": "?LoadMagMesh@MagnumMesh@@QAEJPAD@Z",
           "size": "345",
-          "fuzzy_match_percent": 1.7699115,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall MagnumMesh::LoadMagMesh(char *)"
           },
@@ -10386,7 +10394,7 @@
         {
           "name": "?SetCullMode@MagnumMesh@@QAEXH@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetCullMode(int)"
           },
@@ -10395,6 +10403,7 @@
         {
           "name": "?MagComputeBoundingBox@MagnumMesh@@QAEXAAUD3DXVECTOR3@@0@Z",
           "size": "57",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::MagComputeBoundingBox(struct D3DXVECTOR3&, struct D3DXVECTOR3&)"
           },
@@ -10403,7 +10412,7 @@
         {
           "name": "?InitWater@MagnumMesh@@QAEXXZ",
           "size": "45",
-          "fuzzy_match_percent": 7.142857,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::InitWater(void)"
           },
@@ -10412,6 +10421,7 @@
         {
           "name": "?SetMeshAlpha@MagnumMesh@@QAEJH@Z",
           "size": "15",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: long __thiscall MagnumMesh::SetMeshAlpha(int)"
           },
@@ -10420,7 +10430,7 @@
         {
           "name": "?RenderWaterAnim@MagnumMesh@@QAEXXZ",
           "size": "240",
-          "fuzzy_match_percent": 1.4925373,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RenderWaterAnim(void)"
           },
@@ -10447,7 +10457,7 @@
         {
           "name": "?SetBlendTexture@MagnumMesh@@QAEXXZ",
           "size": "120",
-          "fuzzy_match_percent": 2.4390244,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetBlendTexture(void)"
           },
@@ -10456,7 +10466,7 @@
         {
           "name": "?RenderQuad@MagnumMesh@@QAEXXZ",
           "size": "142",
-          "fuzzy_match_percent": 1.9607843,
+          "fuzzy_match_percent": 94.117645,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RenderQuad(void)"
           },
@@ -10465,7 +10475,7 @@
         {
           "name": "?RenderWaterEfect@MagnumMesh@@QAEXXZ",
           "size": "206",
-          "fuzzy_match_percent": 1.7857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RenderWaterEfect(void)"
           },
@@ -10474,7 +10484,7 @@
         {
           "name": "?RenderWaterEfect1@MagnumMesh@@QAEXXZ",
           "size": "209",
-          "fuzzy_match_percent": 1.7857143,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::RenderWaterEfect1(void)"
           },
@@ -10483,7 +10493,7 @@
         {
           "name": "?SetiCount@MagnumMesh@@QAEXH@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetiCount(int)"
           },
@@ -10492,7 +10502,7 @@
         {
           "name": "?TextureIsRender@MagnumMesh@@QAEHH@Z",
           "size": "59",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 52.68182,
           "metadata": {
             "demangled_name": "public: int __thiscall MagnumMesh::TextureIsRender(int)"
           },
@@ -10501,7 +10511,7 @@
         {
           "name": "?AddWaterTexture@MagnumMesh@@QAEXPAD@Z",
           "size": "638",
-          "fuzzy_match_percent": 0.4385965,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::AddWaterTexture(char *)"
           },
@@ -10510,7 +10520,7 @@
         {
           "name": "?SetFadeSpeed@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetFadeSpeed(float)"
           },
@@ -10519,7 +10529,7 @@
         {
           "name": "?SetOpacity@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetOpacity(float)"
           },
@@ -10528,7 +10538,7 @@
         {
           "name": "?PlayWaterAnim@MagnumMesh@@QAEXXZ",
           "size": "8",
-          "fuzzy_match_percent": 50.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::PlayWaterAnim(void)"
           },
@@ -10537,7 +10547,7 @@
         {
           "name": "?StopWaterAnim@MagnumMesh@@QAEXXZ",
           "size": "8",
-          "fuzzy_match_percent": 50.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::StopWaterAnim(void)"
           },
@@ -10546,7 +10556,7 @@
         {
           "name": "?SetScaleTile@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetScaleTile(float)"
           },
@@ -10555,7 +10565,7 @@
         {
           "name": "?SetFps@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetFps(float)"
           },
@@ -10564,7 +10574,7 @@
         {
           "name": "?SetAnimVel@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetAnimVel(float)"
           },
@@ -10573,7 +10583,7 @@
         {
           "name": "?SetSpeedMove@MagnumMesh@@QAEXM@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetSpeedMove(float)"
           },
@@ -10582,7 +10592,7 @@
         {
           "name": "?SetAlpha@MagnumMesh@@QAEXKK@Z",
           "size": "30",
-          "fuzzy_match_percent": 16.666666,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetAlpha(unsigned long, unsigned long)"
           },
@@ -10591,7 +10601,7 @@
         {
           "name": "?CalculateVertexColor@MagnumMesh@@QAEXXZ",
           "size": "1065",
-          "fuzzy_match_percent": 0.37878788,
+          "fuzzy_match_percent": 64.632576,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::CalculateVertexColor(void)"
           },
@@ -10600,6 +10610,7 @@
         {
           "name": "?CalculateColor@MagnumMesh@@QAE?AUD3DXVECTOR3@@U2@0@Z",
           "size": "498",
+          "fuzzy_match_percent": 99.210526,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall MagnumMesh::CalculateColor(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -10608,6 +10619,7 @@
         {
           "name": "?Odleglosc@MagnumMesh@@QAEMUD3DXVECTOR3@@0@Z",
           "size": "51",
+          "fuzzy_match_percent": 99.789474,
           "metadata": {
             "demangled_name": "public: float __thiscall MagnumMesh::Odleglosc(struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -10616,7 +10628,7 @@
         {
           "name": "?SetAlphaGreatereQual@MagnumMesh@@QAEXK@Z",
           "size": "19",
-          "fuzzy_match_percent": 25.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetAlphaGreatereQual(unsigned long)"
           },
@@ -10625,7 +10637,7 @@
         {
           "name": "?GetAlphaGreatereQual@MagnumMesh@@QAEKXZ",
           "size": "7",
-          "fuzzy_match_percent": 70.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: unsigned long __thiscall MagnumMesh::GetAlphaGreatereQual(void)"
           },
@@ -10715,6 +10727,7 @@
         {
           "name": "?TransformHelpers@MagnumMesh@@QAEXUD3DXMATRIX@@@Z",
           "size": "24",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::TransformHelpers(struct D3DXMATRIX)"
           },
@@ -10723,6 +10736,7 @@
         {
           "name": "?GetHelperPosition@MagnumMesh@@QAE?AUD3DXVECTOR3@@PADUD3DXMATRIX@@@Z",
           "size": "304",
+          "fuzzy_match_percent": 93.639175,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall MagnumMesh::GetHelperPosition(char *, struct D3DXMATRIX)"
           },
@@ -10731,6 +10745,7 @@
         {
           "name": "?TestVector@MagnumMesh@@QAE_NUD3DXVECTOR3@@000@Z",
           "size": "210",
+          "fuzzy_match_percent": 2.9850745,
           "metadata": {
             "demangled_name": "public: bool __thiscall MagnumMesh::TestVector(struct D3DXVECTOR3, struct D3DXVECTOR3, struct D3DXVECTOR3, struct D3DXVECTOR3)"
           },
@@ -10739,7 +10754,7 @@
         {
           "name": "?EnableBlur@MagnumMesh@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::EnableBlur(bool)"
           },
@@ -10748,7 +10763,7 @@
         {
           "name": "?EnableEnviromentMapping@MagnumMesh@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::EnableEnviromentMapping(bool)"
           },
@@ -10757,7 +10772,7 @@
         {
           "name": "?SetEnviromentMappingTexture@MagnumMesh@@QAEXPAD@Z",
           "size": "36",
-          "fuzzy_match_percent": 10.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetEnviromentMappingTexture(char *)"
           },
@@ -10766,7 +10781,7 @@
         {
           "name": "?ActivateLightMap@MagnumMesh@@QAEXH@Z",
           "size": "109",
-          "fuzzy_match_percent": 2.9411764,
+          "fuzzy_match_percent": 86.47059,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::ActivateLightMap(int)"
           },
@@ -10775,7 +10790,7 @@
         {
           "name": "?EnableAnimTexture@MagnumMesh@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::EnableAnimTexture(bool)"
           },
@@ -10784,7 +10799,7 @@
         {
           "name": "?AddAnimTexture@MagnumMesh@@QAEXPAD@Z",
           "size": "455",
-          "fuzzy_match_percent": 0.5681818,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::AddAnimTexture(char *)"
           },
@@ -10793,7 +10808,7 @@
         {
           "name": "?SetAnimTextureFPS@MagnumMesh@@QAEXH@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetAnimTextureFPS(int)"
           },
@@ -10802,7 +10817,7 @@
         {
           "name": "?SetAnimTextureFrameCount@MagnumMesh@@QAEXH@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetAnimTextureFrameCount(int)"
           },
@@ -10811,7 +10826,7 @@
         {
           "name": "?EnableAnimTextureMove@MagnumMesh@@QAEX_N@Z",
           "size": "13",
-          "fuzzy_match_percent": 33.333332,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::EnableAnimTextureMove(bool)"
           },
@@ -10820,7 +10835,7 @@
         {
           "name": "?Pause@MagnumMesh@@QAEX_N@Z",
           "size": "69",
-          "fuzzy_match_percent": 35.38095,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::Pause(bool)"
           },
@@ -10856,6 +10871,7 @@
         {
           "name": "?InitDeviceMeshDx@MagnumMesh@@QAEXPAVcMagGameObject@@@Z",
           "size": "3",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::InitDeviceMeshDx(class cMagGameObject *)"
           },
@@ -10864,6 +10880,7 @@
         {
           "name": "?SetLodLevel@MagnumMesh@@QAEXM@Z",
           "size": "3",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetLodLevel(float)"
           },
@@ -10872,6 +10889,7 @@
         {
           "name": "?SetMagMeshObject@MagnumMesh@@QAEXPAVcMagMeshObject@@@Z",
           "size": "13",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::SetMagMeshObject(class cMagMeshObject *)"
           },
@@ -10880,6 +10898,7 @@
         {
           "name": "?EnableZBuffer@MagnumMesh@@QAEX_N@Z",
           "size": "13",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall MagnumMesh::EnableZBuffer(bool)"
           },
@@ -10895,10 +10914,14 @@
     {
       "name": "me2/Mesh",
       "measures": {
-        "fuzzy_match_percent": 0.3877234,
+        "fuzzy_match_percent": 97.72732,
         "total_code": "2871",
+        "matched_code": "2292",
+        "matched_code_percent": 79.83281,
         "matched_data_percent": 100.0,
         "total_functions": 4,
+        "matched_functions": 3,
+        "matched_functions_percent": 75.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -10906,7 +10929,7 @@
         {
           "name": ".text",
           "size": "2871",
-          "fuzzy_match_percent": 0.3877234,
+          "fuzzy_match_percent": 97.72732,
           "metadata": {}
         }
       ],
@@ -10914,7 +10937,7 @@
         {
           "name": "??0Mesh@@QAE@XZ",
           "size": "371",
-          "fuzzy_match_percent": 2.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall Mesh::Mesh(void)"
           },
@@ -10923,6 +10946,7 @@
         {
           "name": "??0Mesh@@QAE@ABU0@@Z",
           "size": "1008",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall Mesh::Mesh(struct Mesh const &)"
           },
@@ -10931,6 +10955,7 @@
         {
           "name": "??4Mesh@@QAEAAU0@ABU0@@Z",
           "size": "913",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct Mesh & __thiscall Mesh::operator=(struct Mesh const &)"
           },
@@ -10939,7 +10964,7 @@
         {
           "name": "??1Mesh@@QAE@XZ",
           "size": "579",
-          "fuzzy_match_percent": 0.64102566,
+          "fuzzy_match_percent": 88.73077,
           "metadata": {
             "demangled_name": "public: __thiscall Mesh::~Mesh(void)"
           },
@@ -34773,14 +34798,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 30.263832,
+        "fuzzy_match_percent": 31.948359,
         "total_code": "546423",
-        "matched_code": "96712",
-        "matched_code_percent": 17.699108,
+        "matched_code": "101758",
+        "matched_code_percent": 18.622568,
         "matched_data_percent": 100.0,
         "total_functions": 2404,
-        "matched_functions": 915,
-        "matched_functions_percent": 38.061565,
+        "matched_functions": 957,
+        "matched_functions_percent": 39.80865,
         "complete_code": "23472",
         "complete_code_percent": 4.295573,
         "complete_data_percent": 100.0,

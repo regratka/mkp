@@ -39,12 +39,19 @@ float CRay::D() {
 }
 
 /* 10010B20-10010B59 00039	*/
-uchar CRay::Normal() {
-	return 0;
+D3DXVECTOR3 & CRay::Normal() const {
+	if (!computedNormalizedVector) {
+		D3DXVECTOR3* pDVar1 = const_cast<D3DXVECTOR3*>(&normalizeVector);
+		*pDVar1 = vector;
+		D3DXVec3Normalize(pDVar1, pDVar1);
+		*const_cast<bool*>(&computedNormalizedVector) = true;
+	}
+
+	return (D3DXVECTOR3&) normalizeVector;
 }
 
 /* 10010B60-10010CA2 00142	*/
-bool CRay::Intersect(CRay* param_1, float* param_2) {
+bool CRay::Intersect(const CRay& param_1, float& param_2) {
 	return 0;
 }
 
@@ -81,7 +88,7 @@ CRay::CRay() {
 }
 
 /* 100BC870-100BC8B9 00049	*/
-CRay::CRay(D3DXVECTOR3* param_1, D3DXVECTOR3* param_2) {
+CRay::CRay(D3DXVECTOR3 const& param_1, D3DXVECTOR3 const& param_2) {
 }
 
 /* 100BC8C0-100BC8C7 00007	*/

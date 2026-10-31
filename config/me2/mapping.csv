@@ -1143,9 +1143,11 @@
 ?CreateTextures@MagnumMesh@@QAEJPAD@Z;MagnumMesh::CreateTextures;0x10036060;0x47c;__thiscall;;long;MagnumMesh*;char*
 ?RenderMagMesh@MagnumMesh@@QAEXXZ;MagnumMesh::RenderMagMesh;0x100364e0;0x5;__thiscall;;void;MagnumMesh*
 ?SetCullMode@MagnumMesh@@QAEXH@Z;MagnumMesh::SetCullMode;0x100364f0;0xd;__thiscall;;void;MagnumMesh*;int
-?MagComputeBoundingBox@MagnumMesh@@QAEXAAUD3DXVECTOR3@@0@Z;MagnumMesh::GetVectorMinAndMax;0x10036500;0x39;__thiscall;;void;MagnumMesh*;uchar;uchar
+?MagComputeBoundingBox@MagnumMesh@@QAEXAAUD3DXVECTOR3@@0@Z;MagnumMesh::MagComputeBoundingBox;0x10036500;0x39;__thiscall;;void;MagnumMesh*;D3DXVECTOR3&;D3DXVECTOR3&
+?GetVectorMinAndMax@MagnumMesh@@QAEXAAUD3DXVECTOR3@@0@Z;MagnumMesh::GetVectorMinAndMax;0x10036500;0x39;__thiscall;;void;MagnumMesh*;D3DXVECTOR3&;D3DXVECTOR3&
 ?InitWater@MagnumMesh@@QAEXXZ;MagnumMesh::InitWater;0x10036540;0x2d;__thiscall;;void;MagnumMesh*
-?SetMeshAlpha@MagnumMesh@@QAEJH@Z;MagnumMesh::SetAlpha;0x10036570;0xf;__thiscall;;long;MagnumMesh*;int
+?SetAlpha@MagnumMesh@@QAEJH@Z;MagnumMesh::SetAlpha;0x10036570;0xf;__thiscall;;long;MagnumMesh*;int
+?SetMeshAlpha@MagnumMesh@@QAEJH@Z;MagnumMesh::SetMeshAlpha;0x10036570;0xf;__thiscall;;long;MagnumMesh*;int
 ?RenderWaterAnim@MagnumMesh@@QAEXXZ;MagnumMesh::RenderWaterAnim;0x10036580;0xf0;__thiscall;;void;MagnumMesh*
 ?SetMultipleTexture@MagnumMesh@@QAEJM@Z;MagnumMesh::SetMultipleTexture;0x10036670;0x103;__thiscall;;long;MagnumMesh*;float
 ?SetMultipleAndMoveTexture@MagnumMesh@@QAEJMMM@Z;MagnumMesh::SetMultipleAndMoveTexture;0x10036780;0x185;__thiscall;;long;MagnumMesh*;float;float;float
@@ -1169,7 +1171,7 @@
 ;FUN_10037370;0x10037370;0x19;__thiscall;;uchar;void*;uint;uint;uint
 ;FUN_10037390;0x10037390;0x23;__thiscall;;uchar;void*;float*;float*
 ;FUN_100373c0;0x100373c0;0x23;__thiscall;;uchar;void*;float*;float
-?CalculateColor@MagnumMesh@@QAE?AUD3DXVECTOR3@@U2@0@Z;MagnumMesh::CalculateColor;0x100373f0;0x1f2;__thiscall;;uchar;MagnumMesh*;float*;float;float;float;float;float;float
+?CalculateColor@MagnumMesh@@QAE?AUD3DXVECTOR3@@U2@0@Z;MagnumMesh::CalculateColor;0x100373f0;0x1f2;__thiscall;;D3DXVECTOR3;MagnumMesh*;D3DXVECTOR3;D3DXVECTOR3
 ?Odleglosc@MagnumMesh@@QAEMUD3DXVECTOR3@@0@Z;MagnumMesh::Odleglosc;0x100375f0;0x33;__thiscall;;float10;uint;float;float;float;float;float;float
 ?SetAlphaGreatereQual@MagnumMesh@@QAEXK@Z;MagnumMesh::SetAlphaGreatereQual;0x10037630;0x13;__thiscall;;void;MagnumMesh*;ulong
 ?GetAlphaGreatereQual@MagnumMesh@@QAEKXZ;MagnumMesh::GetAlphaGreatereQual;0x10037650;0x7;__thiscall;;ulong;MagnumMesh*
@@ -1185,8 +1187,8 @@
 ?CreateColTypeTexIni@MagnumMesh@@QAEXPAD@Z;MagnumMesh::CreateColTypeTexIni;0x10039440;0x269;__thiscall;;void;MagnumMesh*;char*
 ;FUN_100396b0;0x100396b0;0x14;__fastcall;;uchar;int
 ?LoadColTypeTexIni@MagnumMesh@@QAEXPAD@Z;MagnumMesh::LoadColTypeTexIni;0x100396d0;0x37a;__thiscall;;void;MagnumMesh*;char*
-?TransformHelpers@MagnumMesh@@QAEXUD3DXMATRIX@@@Z;MagnumMesh::TransformHelpers;0x10039a50;0x18;__thiscall;;void;MagnumMesh*;uchar
-?GetHelperPosition@MagnumMesh@@QAE?AUD3DXVECTOR3@@PADUD3DXMATRIX@@@Z;MagnumMesh::GetHelperPosition;0x10039a70;0x130;__thiscall;;uchar;MagnumMesh*;uint*;uchar*
+?TransformHelpers@MagnumMesh@@QAEXUD3DXMATRIX@@@Z;MagnumMesh::TransformHelpers;0x10039a50;0x18;__thiscall;;void;MagnumMesh*;D3DXMATRIX
+?GetHelperPosition@MagnumMesh@@QAE?AUD3DXVECTOR3@@PADUD3DXMATRIX@@@Z;MagnumMesh::GetHelperPosition;0x10039a70;0x130;__thiscall;;D3DXVECTOR3;MagnumMesh*;char*;D3DXMATRIX
 ?TestVector@MagnumMesh@@QAE_NUD3DXVECTOR3@@000@Z;MagnumMesh::TestVector;0x10039ba0;0xd2;__thiscall;;ulonglong;uchar;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint;uint
 ?EnableBlur@MagnumMesh@@QAEX_N@Z;MagnumMesh::EnableBlur;0x10039c80;0xd;__thiscall;;void;MagnumMesh*;bool
 ?EnableEnviromentMapping@MagnumMesh@@QAEX_N@Z;MagnumMesh::EnableEnviromentMapping;0x10039c90;0xd;__thiscall;;void;MagnumMesh*;bool
