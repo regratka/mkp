@@ -14,8 +14,8 @@ public:
 	/* 10010A80 */ void SetOrigin(uchar param_1);
 	/* 10010AB0 */ uchar Origin();
 	/* 10010AC0 */ float D();
-	/* 10010B20 */ uchar Normal();
-	/* 10010B60 */ bool Intersect(CRay* param_1, float* param_2);
+	/* 10010B20 */ D3DXVECTOR3& Normal() const;
+	/* 10010B60 */ bool Intersect(const CRay& param_1, float& param_2);
 	/* 10010CB0 */ float Distance(D3DXVECTOR3* param_1);
 	/* 10010E60 */ D3DXVECTOR3* End(D3DXVECTOR3* param_1);
 	/* 10010E90 */ void Reset();
@@ -23,8 +23,19 @@ public:
 	/* 10010F20 */ CRay* operator=(CRay* param_1);
 	/* 10010FA0 */ CRay* scalar_destructor(uchar param_1);
 	/* 100BC850 */ CRay();
-	/* 100BC870 */ CRay(D3DXVECTOR3* param_1, D3DXVECTOR3* param_2);
-	/* 100BC8C0 */ ~CRay();
+	/* 100BC870 */ CRay(D3DXVECTOR3 const& param_1, D3DXVECTOR3 const& param_2);
+	/* 100BC8C0 */ virtual ~CRay();
+
+public:
+	/* 0x04 */ D3DXVECTOR3 origin; 
+	/* 0x10 */ D3DXVECTOR3 vector; 
+	/* 0x1c */ D3DXVECTOR3 normalizeVector; 
+	/* 0x28 */ bool computedNormalizedVector; 
+	/* 0x29 */ bool unk_29; 
+	/* 0x2a */ bool computedD; 
+	/* 0x2b */ bool computedLength; 
+	/* 0x2c */ float DValue; 
+	/* 0x30 */ float length; 
 };
 
 #endif
