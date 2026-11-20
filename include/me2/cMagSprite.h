@@ -21,7 +21,7 @@ struct Rect {
 	/* 0x00  */ float unk_00;
 	/* 0x04  */ float unk_04;
 	/* 0x08  */ float unk_08;
-	/* 0x0c  */ float unk_0c;
+	/* 0x0c  */ float resetTime;
 };
 
 struct D3DTLVERTEX {

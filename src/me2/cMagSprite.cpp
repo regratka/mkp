@@ -664,7 +664,7 @@ void cMagSprite::TexFromDigit(int param_1, int param_2, int param_3, int param_4
 	param_5.unk_04 = local_3;
 	param_5.unk_00 = local_2;
 	param_5.unk_08 = local_4;
-	param_5.unk_0c = local_5;
+	param_5.resetTime = local_5;
 }
 
 /* 100652D0-100653D7 00107	*/
@@ -684,7 +684,7 @@ void cMagSprite::CutFrame(int param_1, int param_2, int param_3, int param_4, Re
 	param_5.unk_00 = iVar2 * lVar5;
 	param_5.unk_04 = iVar3 * lVar6;
 	param_5.unk_08 = (iVar2+1) * lVar5;
-	param_5.unk_0c = (iVar3+1) * lVar6;
+	param_5.resetTime = (iVar3+1) * lVar6;
 }
 
 /* 100653E0-10065481 000A1	*/
@@ -694,7 +694,7 @@ void cMagSprite::SetTextureRect(int param_1, Rect param_2) {
 			subSprites[index].unk_64.left = param_2.unk_00;
 			subSprites[index].unk_64.top = param_2.unk_04;
 			subSprites[index].unk_64.right = param_2.unk_08;
-			subSprites[index].unk_64.bottom = param_2.unk_0c;
+			subSprites[index].unk_64.bottom = param_2.resetTime;
 		}
 	} 
 }

@@ -11,7 +11,7 @@ public:
 
 private:
 	/* 0x000 */ D3DXVECTOR3 unk_00;
-	/* 0x00c */ char unk_0c[255];
+	/* 0x00c */ char resetTime[255];
 	/* 0x10c */ int unk_10c;
 	/* 0x110 */ std::vector<D3DXVECTOR3> unk_110;
 	/* 0x120 */ int unk_120;
