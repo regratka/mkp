@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.005274,
+    "fuzzy_match_percent": 29.074072,
     "total_code": "765760",
-    "matched_code": "147272",
-    "matched_code_percent": 19.232136,
+    "matched_code": "147811",
+    "matched_code_percent": 19.302523,
     "matched_data_percent": 100.0,
     "total_functions": 3563,
-    "matched_functions": 1366,
-    "matched_functions_percent": 38.338478,
-    "complete_code": "64939",
-    "complete_code_percent": 8.480333,
+    "matched_functions": 1378,
+    "matched_functions_percent": 38.675274,
+    "complete_code": "65478",
+    "complete_code_percent": 8.55072,
     "complete_data_percent": 100.0,
     "total_units": 216,
-    "complete_units": 47
+    "complete_units": 48
   },
   "units": [
     {
@@ -20308,18 +20308,25 @@
     {
       "name": "me2/cMagTime",
       "measures": {
-        "fuzzy_match_percent": 2.2569098,
+        "fuzzy_match_percent": 100.0,
         "total_code": "539",
+        "matched_code": "539",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 12,
+        "matched_functions": 12,
+        "matched_functions_percent": 100.0,
+        "complete_code": "539",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "539",
-          "fuzzy_match_percent": 2.2569098,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -20327,6 +20334,7 @@
         {
           "name": "?MagGetCurrentTime@cMagTime@@QAEAAMXZ",
           "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float & __thiscall cMagTime::MagGetCurrentTime(void)"
           },
@@ -20335,6 +20343,7 @@
         {
           "name": "?MagGetFrameTime@cMagTime@@QAEAAMXZ",
           "size": "4",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: float & __thiscall cMagTime::MagGetFrameTime(void)"
           },
@@ -20343,6 +20352,7 @@
         {
           "name": "??0cMagTime@@QAE@ABV0@@Z",
           "size": "75",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagTime::cMagTime(class cMagTime const &)"
           },
@@ -20351,6 +20361,7 @@
         {
           "name": "??4cMagTime@@QAEAAV0@ABV0@@Z",
           "size": "69",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagTime & __thiscall cMagTime::operator=(class cMagTime const &)"
           },
@@ -20359,6 +20370,7 @@
         {
           "name": "??_EcMagTime@@UAEPAXI@Z",
           "size": "84",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall cMagTime::`vector deleting destructor'(unsigned int)"
           },
@@ -20367,7 +20379,7 @@
         {
           "name": "??0cMagTime@@QAE@XZ",
           "size": "47",
-          "fuzzy_match_percent": 8.235294,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagTime::cMagTime(void)"
           },
@@ -20376,6 +20388,7 @@
         {
           "name": "??1cMagTime@@UAE@XZ",
           "size": "7",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagTime::~cMagTime(void)"
           },
@@ -20384,7 +20397,7 @@
         {
           "name": "?InitTimer@cMagTime@@QAEXXZ",
           "size": "107",
-          "fuzzy_match_percent": 3.5714285,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagTime::InitTimer(void)"
           },
@@ -20393,6 +20406,7 @@
         {
           "name": "?GetPerformanceCounterTime@cMagTime@@AAEMXZ",
           "size": "53",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "private: float __thiscall cMagTime::GetPerformanceCounterTime(void)"
           },
@@ -20401,6 +20415,7 @@
         {
           "name": "?GetMMTime@cMagTime@@AAEMXZ",
           "size": "42",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "private: float __thiscall cMagTime::GetMMTime(void)"
           },
@@ -20409,7 +20424,7 @@
         {
           "name": "?UpdateTimer@cMagTime@@QAEXXZ",
           "size": "25",
-          "fuzzy_match_percent": 9.090909,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagTime::UpdateTimer(void)"
           },
@@ -20418,7 +20433,7 @@
         {
           "name": "?ResetTimer@cMagTime@@QAEXXZ",
           "size": "22",
-          "fuzzy_match_percent": 10.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagTime::ResetTimer(void)"
           },
@@ -20426,6 +20441,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -34843,19 +34859,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 32.382473,
+        "fuzzy_match_percent": 32.478878,
         "total_code": "546492",
-        "matched_code": "104523",
-        "matched_code_percent": 19.126173,
+        "matched_code": "105062",
+        "matched_code_percent": 19.224802,
         "matched_data_percent": 100.0,
         "total_functions": 2406,
-        "matched_functions": 983,
-        "matched_functions_percent": 40.85619,
-        "complete_code": "25223",
-        "complete_code_percent": 4.615438,
+        "matched_functions": 995,
+        "matched_functions_percent": 41.354946,
+        "complete_code": "25762",
+        "complete_code_percent": 4.7140675,
         "complete_data_percent": 100.0,
         "total_units": 118,
-        "complete_units": 12
+        "complete_units": 13
       }
     },
     {

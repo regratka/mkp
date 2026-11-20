@@ -4,8 +4,8 @@
 ;FUN_10001060;0x10001060;0xc;__stdcall;;uchar
 ??0cMagInput@@QAE@XZ;cMagInput::cMagInput;0x10001080;0x12;__thiscall;;uchar;cMagInput*
 ??4cMagInput@@QAEAAV0@ABV0@@Z;cMagInput::operator=;0x100010a0;0x16;__thiscall;;cMagInput*;cMagInput*;cMagInput*
-?MagGetCurrentTime@cMagTime@@QAEAAMXZ;cMagTime::MagGetCurrentTime;0x100010c0;0x4;__thiscall;;float*;cMagTime*
-?MagGetFrameTime@cMagTime@@QAEAAMXZ;cMagTime::MagGetFrameTime;0x100010d0;0x4;__thiscall;;float*;cMagTime*
+?MagGetCurrentTime@cMagTime@@QAEAAMXZ;cMagTime::MagGetCurrentTime;0x100010c0;0x4;__thiscall;;float&;cMagTime*
+?MagGetFrameTime@cMagTime@@QAEAAMXZ;cMagTime::MagGetFrameTime;0x100010d0;0x4;__thiscall;;float&;cMagTime*
 ??0cMagTime@@QAE@ABV0@@Z;cMagTime::cMagTime;0x100010e0;0x4b;__thiscall;;uchar;cMagTime*;cMagTime*
 ??4cMagTime@@QAEAAV0@ABV0@@Z;cMagTime::operator=;0x10001130;0x45;__thiscall;;cMagTime*;cMagTime*;cMagTime*
 ??_EcMagTime@@UAEPAXI@Z;cMagTime::scalar_destructor;0x10001180;0x54;__thiscall;;cMagTime*;cMagTime*;uchar
