@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 28.882435,
+    "fuzzy_match_percent": 29.005274,
     "total_code": "765760",
-    "matched_code": "146323",
-    "matched_code_percent": 19.108206,
+    "matched_code": "147272",
+    "matched_code_percent": 19.232136,
     "matched_data_percent": 100.0,
     "total_functions": 3563,
-    "matched_functions": 1360,
-    "matched_functions_percent": 38.170082,
+    "matched_functions": 1366,
+    "matched_functions_percent": 38.338478,
     "complete_code": "64939",
     "complete_code_percent": 8.480333,
     "complete_data_percent": 100.0,
@@ -20599,10 +20599,14 @@
     {
       "name": "me2/cMagVertex",
       "measures": {
-        "fuzzy_match_percent": 1.7535555,
+        "fuzzy_match_percent": 92.99059,
         "total_code": "1031",
+        "matched_code": "949",
+        "matched_code_percent": 92.04656,
         "matched_data_percent": 100.0,
         "total_functions": 7,
+        "matched_functions": 6,
+        "matched_functions_percent": 85.71429,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -20610,7 +20614,7 @@
         {
           "name": ".text",
           "size": "1031",
-          "fuzzy_match_percent": 1.7535555,
+          "fuzzy_match_percent": 92.99059,
           "metadata": {}
         }
       ],
@@ -20618,6 +20622,7 @@
         {
           "name": "??0cMagVertex@@QAE@ABV0@@Z",
           "size": "323",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagVertex::cMagVertex(class cMagVertex const &)"
           },
@@ -20626,6 +20631,7 @@
         {
           "name": "??4cMagVertex@@QAEAAV0@ABV0@@Z",
           "size": "305",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagVertex & __thiscall cMagVertex::operator=(class cMagVertex const &)"
           },
@@ -20634,6 +20640,7 @@
         {
           "name": "??_EcMagVertex@@UAEPAXI@Z",
           "size": "87",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall cMagVertex::`vector deleting destructor'(unsigned int)"
           },
@@ -20642,7 +20649,7 @@
         {
           "name": "??0cMagVertex@@QAE@XZ",
           "size": "82",
-          "fuzzy_match_percent": 8.478261,
+          "fuzzy_match_percent": 11.869565,
           "metadata": {
             "demangled_name": "public: __thiscall cMagVertex::cMagVertex(void)"
           },
@@ -20651,7 +20658,7 @@
         {
           "name": "??0cMagVertex@@QAE@MMMMMMKKMM@Z",
           "size": "120",
-          "fuzzy_match_percent": 5.185185,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagVertex::cMagVertex(float, float, float, float, float, float, unsigned long, unsigned long, float, float)"
           },
@@ -20660,6 +20667,7 @@
         {
           "name": "??1cMagVertex@@UAE@XZ",
           "size": "11",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall cMagVertex::~cMagVertex(void)"
           },
@@ -20668,7 +20676,7 @@
         {
           "name": "?Set@cMagVertex@@QAEXMMMMMMKKMM@Z",
           "size": "103",
-          "fuzzy_match_percent": 4.7619047,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagVertex::Set(float, float, float, float, float, float, unsigned long, unsigned long, float, float)"
           },
@@ -34835,14 +34843,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 32.21035,
+        "fuzzy_match_percent": 32.382473,
         "total_code": "546492",
-        "matched_code": "103574",
-        "matched_code_percent": 18.952518,
+        "matched_code": "104523",
+        "matched_code_percent": 19.126173,
         "matched_data_percent": 100.0,
         "total_functions": 2406,
-        "matched_functions": 977,
-        "matched_functions_percent": 40.60682,
+        "matched_functions": 983,
+        "matched_functions_percent": 40.85619,
         "complete_code": "25223",
         "complete_code_percent": 4.615438,
         "complete_data_percent": 100.0,
