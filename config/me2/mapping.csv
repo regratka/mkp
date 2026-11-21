@@ -597,8 +597,8 @@
 ?MakeUpperCase@@YAXAAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z;MakeUpperCase;0x1001abc0;0xc9;__cdecl;;void;basic_string<char,struct_std::char_traits<char>,class_std::allocator<char>_>*
 ??0CParticle@@QAE@XZ;CParticle::CParticle;0x1001ac90;0x10b;__thiscall;;uchar;CParticle*
 ??1CParticle@@UAE@XZ;CParticle::~CParticle;0x1001ada0;0x5b;__thiscall;;void;CParticle*
-?GetPosition@CParticle@@UAE?AUD3DXVECTOR3@@XZ;CParticle::GetPosition;0x1001ae00;0x21;__thiscall;;uchar;CParticle*;uint*
-?SetPosition@CParticle@@QAEXUD3DXVECTOR3@@@Z;CParticle::SetPosition;0x1001ae30;0x33;__thiscall;;void;CParticle*;float;float;float
+?GetPosition@CParticle@@UAE?AUD3DXVECTOR3@@XZ;CParticle::GetPosition;0x1001ae00;0x21;__thiscall;;D3DXVECTOR3;CParticle*
+?SetPosition@CParticle@@QAEXUD3DXVECTOR3@@@Z;CParticle::SetPosition;0x1001ae30;0x33;__thiscall;;void;CParticle*;D3DXVECTOR3
 ?Update@CParticle@@QAE_NM@Z;CParticle::Update;0x1001ae70;0x16a;__thiscall;;bool;CParticle*;float
 ??0CParticle@@QAE@ABV0@@Z;CParticle::CParticle;0x1001afe0;0x203;__thiscall;;uchar;CParticle*;CParticle*
 ??4CParticle@@QAEAAV0@ABV0@@Z;CParticle::operator=;0x1001b1f0;0x1f1;__thiscall;;CParticle*;CParticle*;CParticle*

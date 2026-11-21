@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.302666,
+    "fuzzy_match_percent": 29.54891,
     "total_code": "765760",
-    "matched_code": "149205",
-    "matched_code_percent": 19.484564,
+    "matched_code": "151108",
+    "matched_code_percent": 19.733076,
     "matched_data_percent": 100.0,
     "total_functions": 3563,
-    "matched_functions": 1391,
-    "matched_functions_percent": 39.040134,
-    "complete_code": "65478",
-    "complete_code_percent": 8.55072,
+    "matched_functions": 1399,
+    "matched_functions_percent": 39.264664,
+    "complete_code": "67381",
+    "complete_code_percent": 8.799232,
     "complete_data_percent": 100.0,
     "total_units": 216,
-    "complete_units": 48
+    "complete_units": 49
   },
   "units": [
     {
@@ -4256,18 +4256,25 @@
     {
       "name": "me2/CParticle",
       "measures": {
-        "fuzzy_match_percent": 0.9111769,
+        "fuzzy_match_percent": 100.0,
         "total_code": "1903",
+        "matched_code": "1903",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 8,
+        "matched_functions": 8,
+        "matched_functions_percent": 100.0,
+        "complete_code": "1903",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
           "size": "1903",
-          "fuzzy_match_percent": 0.9111769,
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -4275,7 +4282,7 @@
         {
           "name": "??0CParticle@@QAE@XZ",
           "size": "267",
-          "fuzzy_match_percent": 2.878788,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticle::CParticle(void)"
           },
@@ -4284,6 +4291,7 @@
         {
           "name": "??1CParticle@@UAE@XZ",
           "size": "91",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticle::~CParticle(void)"
           },
@@ -4292,6 +4300,7 @@
         {
           "name": "?GetPosition@CParticle@@UAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual struct D3DXVECTOR3 __thiscall CParticle::GetPosition(void)"
           },
@@ -4300,6 +4309,7 @@
         {
           "name": "?SetPosition@CParticle@@QAEXUD3DXVECTOR3@@@Z",
           "size": "51",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall CParticle::SetPosition(struct D3DXVECTOR3)"
           },
@@ -4308,7 +4318,7 @@
         {
           "name": "?Update@CParticle@@QAE_NM@Z",
           "size": "362",
-          "fuzzy_match_percent": 2.6666667,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticle::Update(float)"
           },
@@ -4317,6 +4327,7 @@
         {
           "name": "??0CParticle@@QAE@ABV0@@Z",
           "size": "515",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticle::CParticle(class CParticle const &)"
           },
@@ -4325,6 +4336,7 @@
         {
           "name": "??4CParticle@@QAEAAV0@ABV0@@Z",
           "size": "497",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CParticle & __thiscall CParticle::operator=(class CParticle const &)"
           },
@@ -4333,6 +4345,7 @@
         {
           "name": "??_ECParticle@@UAEPAXI@Z",
           "size": "87",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CParticle::`vector deleting destructor'(unsigned int)"
           },
@@ -4340,6 +4353,7 @@
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -34870,19 +34884,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 32.799187,
+        "fuzzy_match_percent": 33.144234,
         "total_code": "546492",
-        "matched_code": "106456",
-        "matched_code_percent": 19.479883,
+        "matched_code": "108359",
+        "matched_code_percent": 19.828104,
         "matched_data_percent": 100.0,
         "total_functions": 2406,
-        "matched_functions": 1008,
-        "matched_functions_percent": 41.89526,
-        "complete_code": "25762",
-        "complete_code_percent": 4.7140675,
+        "matched_functions": 1016,
+        "matched_functions_percent": 42.227764,
+        "complete_code": "27665",
+        "complete_code_percent": 5.0622883,
         "complete_data_percent": 100.0,
         "total_units": 118,
-        "complete_units": 13
+        "complete_units": 14
       }
     },
     {

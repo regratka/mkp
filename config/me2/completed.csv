@@ -8,6 +8,7 @@ cMagSkyBox
 cMagSound
 cMagSun
 cMagTime
+CParticle
 CRay
 MagRelayMachine
 pgVec2
