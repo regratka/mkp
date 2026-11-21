@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.074072,
+    "fuzzy_match_percent": 29.302666,
     "total_code": "765760",
-    "matched_code": "147811",
-    "matched_code_percent": 19.302523,
+    "matched_code": "149205",
+    "matched_code_percent": 19.484564,
     "matched_data_percent": 100.0,
     "total_functions": 3563,
-    "matched_functions": 1378,
-    "matched_functions_percent": 38.675274,
+    "matched_functions": 1391,
+    "matched_functions_percent": 39.040134,
     "complete_code": "65478",
     "complete_code_percent": 8.55072,
     "complete_data_percent": 100.0,
@@ -12055,14 +12055,14 @@
     {
       "name": "me2/cMagCamera",
       "measures": {
-        "fuzzy_match_percent": 3.1469746,
+        "fuzzy_match_percent": 97.510925,
         "total_code": "1855",
-        "matched_code": "11",
-        "matched_code_percent": 0.5929919,
+        "matched_code": "1405",
+        "matched_code_percent": 75.741234,
         "matched_data_percent": 100.0,
         "total_functions": 16,
-        "matched_functions": 1,
-        "matched_functions_percent": 6.25,
+        "matched_functions": 14,
+        "matched_functions_percent": 87.5,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -12070,7 +12070,7 @@
         {
           "name": ".text",
           "size": "1855",
-          "fuzzy_match_percent": 3.1469746,
+          "fuzzy_match_percent": 97.510925,
           "metadata": {}
         }
       ],
@@ -12078,6 +12078,7 @@
         {
           "name": "?OnRender@cMagCamera@@UAEXXZ",
           "size": "1",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void __thiscall cMagCamera::OnRender(void)"
           },
@@ -12086,6 +12087,7 @@
         {
           "name": "?SetPosition@cMagCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "29",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::SetPosition(struct D3DXVECTOR3)"
           },
@@ -12094,6 +12096,7 @@
         {
           "name": "?SetView@cMagCamera@@QAEXUD3DXVECTOR3@@@Z",
           "size": "29",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::SetView(struct D3DXVECTOR3)"
           },
@@ -12102,6 +12105,7 @@
         {
           "name": "?GePosition@cMagCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagCamera::GePosition(void)"
           },
@@ -12110,6 +12114,7 @@
         {
           "name": "?GetView@cMagCamera@@QAE?AUD3DXVECTOR3@@XZ",
           "size": "33",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: struct D3DXVECTOR3 __thiscall cMagCamera::GetView(void)"
           },
@@ -12118,6 +12123,7 @@
         {
           "name": "??0cMagCamera@@QAE@ABV0@@Z",
           "size": "303",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagCamera::cMagCamera(class cMagCamera const &)"
           },
@@ -12126,6 +12132,7 @@
         {
           "name": "??4cMagCamera@@QAEAAV0@ABV0@@Z",
           "size": "285",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class cMagCamera & __thiscall cMagCamera::operator=(class cMagCamera const &)"
           },
@@ -12134,15 +12141,19 @@
         {
           "name": "??_FcMagCamera@@QAEXXZ",
           "size": "30",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::`default constructor closure'(void)"
           },
           "address": "713"
         },
         {
-          "name": "cMagCamera::scalar_destructor",
+          "name": "??_EcMagCamera@@UAEPAXI@Z",
           "size": "87",
-          "metadata": {},
+          "fuzzy_match_percent": 100.0,
+          "metadata": {
+            "demangled_name": "public: virtual void * __thiscall cMagCamera::`vector deleting destructor'(unsigned int)"
+          },
           "address": "743"
         },
         {
@@ -12157,7 +12168,7 @@
         {
           "name": "??0cMagCamera@@QAE@MMMMMMMMM@Z",
           "size": "92",
-          "fuzzy_match_percent": 28.083334,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall cMagCamera::cMagCamera(float, float, float, float, float, float, float, float, float)"
           },
@@ -12166,7 +12177,7 @@
         {
           "name": "?Init@cMagCamera@@QAEXMMMMMMMMM@Z",
           "size": "53",
-          "fuzzy_match_percent": 5.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::Init(float, float, float, float, float, float, float, float, float)"
           },
@@ -12175,7 +12186,7 @@
         {
           "name": "?PositionCamera@cMagCamera@@QAEXMMMMMMMMM@Z",
           "size": "178",
-          "fuzzy_match_percent": 2.7027028,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::PositionCamera(float, float, float, float, float, float, float, float, float)"
           },
@@ -12184,7 +12195,7 @@
         {
           "name": "?RotateView@cMagCamera@@QAEXMMM@Z",
           "size": "287",
-          "fuzzy_match_percent": 1.1111112,
+          "fuzzy_match_percent": 86.166664,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::RotateView(float, float, float)"
           },
@@ -12193,7 +12204,7 @@
         {
           "name": "?MoveCamera@cMagCamera@@QAEXM@Z",
           "size": "163",
-          "fuzzy_match_percent": 3.030303,
+          "fuzzy_match_percent": 96.030304,
           "metadata": {
             "demangled_name": "public: void __thiscall cMagCamera::MoveCamera(float)"
           },
@@ -12202,7 +12213,7 @@
         {
           "name": "?MoveCameraByMouse@cMagCamera@@QAE_NHHHH@Z",
           "size": "241",
-          "fuzzy_match_percent": 2.4691358,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall cMagCamera::MoveCameraByMouse(int, int, int, int)"
           },
@@ -34859,14 +34870,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 32.478878,
+        "fuzzy_match_percent": 32.799187,
         "total_code": "546492",
-        "matched_code": "105062",
-        "matched_code_percent": 19.224802,
+        "matched_code": "106456",
+        "matched_code_percent": 19.479883,
         "matched_data_percent": 100.0,
         "total_functions": 2406,
-        "matched_functions": 995,
-        "matched_functions_percent": 41.354946,
+        "matched_functions": 1008,
+        "matched_functions_percent": 41.89526,
         "complete_code": "25762",
         "complete_code_percent": 4.7140675,
         "complete_data_percent": 100.0,
