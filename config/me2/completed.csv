@@ -9,6 +9,7 @@ cMagSound
 cMagSun
 cMagTime
 CParticle
+CParticleEmitterToken
 CRay
 MagRelayMachine
 pgVec2

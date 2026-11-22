@@ -619,7 +619,7 @@
 ?IsGravity@CParticleEmitterToken@@QAE_NXZ;CParticleEmitterToken::IsGravity;0x1001be10;0xb3;__thiscall;;bool;CParticleEmitterToken*
 ?IsSrcBlendMode@CParticleEmitterToken@@QAE_NXZ;CParticleEmitterToken::IsSrcBlendMode;0x1001bed0;0xb3;__thiscall;;bool;CParticleEmitterToken*
 ?IsDestBlendMode@CParticleEmitterToken@@QAE_NXZ;CParticleEmitterToken::IsDestBlendMode;0x1001bf90;0xb3;__thiscall;;bool;CParticleEmitterToken*
-?TypeAsString@CParticleEmitterToken@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ;CParticleEmitterToken::TypeAsString;0x1001c050;0x867;__thiscall;;uchar*;CParticleEmitterToken*;uchar*
+?TypeAsString@CParticleEmitterToken@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ;CParticleEmitterToken::TypeAsString;0x1001c050;0x8EC;__thiscall;;uchar*;CParticleEmitterToken*;uchar*
 ??0CParticleEmitterToken@@QAE@XZ;CParticleEmitterToken::CParticleEmitterToken;0x1001c940;0x32;__thiscall;;uchar;CParticleEmitterToken*
 ??0CParticleEmitterToken@@QAE@ABV0@@Z;CParticleEmitterToken::CParticleEmitterToken;0x1001c980;0x1eb;__thiscall;;uchar;CParticleEmitterToken*;CParticleEmitterToken*
 ??4CParticleEmitterToken@@QAEAAV0@ABV0@@Z;CParticleEmitterToken::operator=;0x1001cb70;0x1f3;__thiscall;;CParticleEmitterToken*;CParticleEmitterToken*;CParticleEmitterToken*

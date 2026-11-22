@@ -1,18 +1,18 @@
 {
   "measures": {
-    "fuzzy_match_percent": 29.54891,
-    "total_code": "765760",
-    "matched_code": "151108",
-    "matched_code_percent": 19.733076,
+    "fuzzy_match_percent": 30.37214,
+    "total_code": "765893",
+    "matched_code": "157463",
+    "matched_code_percent": 20.559399,
     "matched_data_percent": 100.0,
     "total_functions": 3563,
-    "matched_functions": 1399,
-    "matched_functions_percent": 39.264664,
-    "complete_code": "67381",
-    "complete_code_percent": 8.799232,
+    "matched_functions": 1421,
+    "matched_functions_percent": 39.882122,
+    "complete_code": "73736",
+    "complete_code_percent": 9.627455,
     "complete_data_percent": 100.0,
     "total_units": 216,
-    "complete_units": 49
+    "complete_units": 50
   },
   "units": [
     {
@@ -4748,18 +4748,25 @@
     {
       "name": "me2/CParticleEmitterToken",
       "measures": {
-        "fuzzy_match_percent": 1.6776689,
-        "total_code": "6222",
+        "fuzzy_match_percent": 100.0,
+        "total_code": "6355",
+        "matched_code": "6355",
+        "matched_code_percent": 100.0,
         "matched_data_percent": 100.0,
         "total_functions": 22,
+        "matched_functions": 22,
+        "matched_functions_percent": 100.0,
+        "complete_code": "6355",
+        "complete_code_percent": 100.0,
         "complete_data_percent": 100.0,
-        "total_units": 1
+        "total_units": 1,
+        "complete_units": 1
       },
       "sections": [
         {
           "name": ".text",
-          "size": "6222",
-          "fuzzy_match_percent": 1.6776689,
+          "size": "6355",
+          "fuzzy_match_percent": 100.0,
           "metadata": {}
         }
       ],
@@ -4767,7 +4774,7 @@
         {
           "name": "?IsEmitRate@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsEmitRate(void)"
           },
@@ -4776,7 +4783,7 @@
         {
           "name": "?IsPosition@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsPosition(void)"
           },
@@ -4785,7 +4792,7 @@
         {
           "name": "?IsSpawnDir@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsSpawnDir(void)"
           },
@@ -4794,7 +4801,7 @@
         {
           "name": "?IsEmitRadius@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsEmitRadius(void)"
           },
@@ -4803,7 +4810,7 @@
         {
           "name": "?IsLifeTime@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsLifeTime(void)"
           },
@@ -4812,7 +4819,7 @@
         {
           "name": "?IsNumParticles@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsNumParticles(void)"
           },
@@ -4821,7 +4828,7 @@
         {
           "name": "?IsLoops@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsLoops(void)"
           },
@@ -4830,7 +4837,7 @@
         {
           "name": "?IsLoop@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsLoop(void)"
           },
@@ -4839,7 +4846,7 @@
         {
           "name": "?IsAnimFrames@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsAnimFrames(void)"
           },
@@ -4848,7 +4855,7 @@
         {
           "name": "?IsFrameWidth@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsFrameWidth(void)"
           },
@@ -4857,7 +4864,7 @@
         {
           "name": "?IsFrameHeight@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsFrameHeight(void)"
           },
@@ -4866,7 +4873,7 @@
         {
           "name": "?IsFramesPerLine@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsFramesPerLine(void)"
           },
@@ -4875,7 +4882,7 @@
         {
           "name": "?IsAnimDelay@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsAnimDelay(void)"
           },
@@ -4884,7 +4891,7 @@
         {
           "name": "?IsGravity@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsGravity(void)"
           },
@@ -4893,7 +4900,7 @@
         {
           "name": "?IsSrcBlendMode@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsSrcBlendMode(void)"
           },
@@ -4902,7 +4909,7 @@
         {
           "name": "?IsDestBlendMode@CParticleEmitterToken@@QAE_NXZ",
           "size": "179",
-          "fuzzy_match_percent": 2.835821,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: bool __thiscall CParticleEmitterToken::IsDestBlendMode(void)"
           },
@@ -4910,7 +4917,8 @@
         },
         {
           "name": "?TypeAsString@CParticleEmitterToken@@QAE?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ",
-          "size": "2151",
+          "size": "2284",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class std::basic_string<char, struct std::char_traits<char>, class std::allocator<char> > __thiscall CParticleEmitterToken::TypeAsString(void)"
           },
@@ -4919,47 +4927,51 @@
         {
           "name": "??0CParticleEmitterToken@@QAE@XZ",
           "size": "50",
-          "fuzzy_match_percent": 41.0,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitterToken::CParticleEmitterToken(void)"
           },
-          "address": "5015"
+          "address": "5148"
         },
         {
           "name": "??0CParticleEmitterToken@@QAE@ABV0@@Z",
           "size": "491",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitterToken::CParticleEmitterToken(class CParticleEmitterToken const &)"
           },
-          "address": "5065"
+          "address": "5198"
         },
         {
           "name": "??4CParticleEmitterToken@@QAEAAV0@ABV0@@Z",
           "size": "499",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CParticleEmitterToken & __thiscall CParticleEmitterToken::operator=(class CParticleEmitterToken const &)"
           },
-          "address": "5556"
+          "address": "5689"
         },
         {
           "name": "??1CParticleEmitterToken@@UAE@XZ",
           "size": "80",
-          "fuzzy_match_percent": 3.3333333,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticleEmitterToken::~CParticleEmitterToken(void)"
           },
-          "address": "6055"
+          "address": "6188"
         },
         {
           "name": "??_ECParticleEmitterToken@@UAEPAXI@Z",
           "size": "87",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CParticleEmitterToken::`vector deleting destructor'(unsigned int)"
           },
-          "address": "6135"
+          "address": "6268"
         }
       ],
       "metadata": {
+        "complete": true,
         "progress_categories": [
           "Engine"
         ]
@@ -4968,7 +4980,7 @@
     {
       "name": "me2/CParticleEmitterTokenizer",
       "measures": {
-        "fuzzy_match_percent": 0.2850281,
+        "fuzzy_match_percent": 1.2901262,
         "total_code": "9326",
         "matched_data_percent": 100.0,
         "total_functions": 14,
@@ -4979,7 +4991,7 @@
         {
           "name": ".text",
           "size": "9326",
-          "fuzzy_match_percent": 0.2850281,
+          "fuzzy_match_percent": 1.2901262,
           "metadata": {}
         }
       ],
@@ -4995,7 +5007,7 @@
         {
           "name": "??0CParticleEmitterTokenizer@@QAE@XZ",
           "size": "78",
-          "fuzzy_match_percent": 30.75,
+          "fuzzy_match_percent": 70.65,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitterTokenizer::CParticleEmitterTokenizer(void)"
           },
@@ -5020,7 +5032,7 @@
         {
           "name": "??1CParticleEmitterTokenizer@@UAE@XZ",
           "size": "198",
-          "fuzzy_match_percent": 1.3114754,
+          "fuzzy_match_percent": 32.934425,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticleEmitterTokenizer::~CParticleEmitterTokenizer(void)"
           },
@@ -34884,19 +34896,19 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 33.144234,
-        "total_code": "546492",
-        "matched_code": "108359",
-        "matched_code_percent": 19.828104,
+        "fuzzy_match_percent": 34.29681,
+        "total_code": "546625",
+        "matched_code": "114714",
+        "matched_code_percent": 20.985867,
         "matched_data_percent": 100.0,
         "total_functions": 2406,
-        "matched_functions": 1016,
-        "matched_functions_percent": 42.227764,
-        "complete_code": "27665",
-        "complete_code_percent": 5.0622883,
+        "matched_functions": 1038,
+        "matched_functions_percent": 43.142147,
+        "complete_code": "34020",
+        "complete_code_percent": 6.223645,
         "complete_data_percent": 100.0,
         "total_units": 118,
-        "complete_units": 14
+        "complete_units": 15
       }
     },
     {
