@@ -19,7 +19,7 @@ void CParticleEmitter::DeleteAllParticles() {
 
 /* 10020650-10020674 00024	*/
 CMinMax<D3DXVECTOR3> CParticleEmitter::GetPosRange(uint* param_1) {
-	return CMinMax<D3DXVECTOR3>();
+	return CMinMax<D3DXVECTOR3>(0,0);
 }
 
 /* 10020680-10020698 00018	*/

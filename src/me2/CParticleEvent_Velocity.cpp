@@ -2,7 +2,7 @@
 
 /* 1001E920-1001E944 00024	*/
 CMinMax<D3DXVECTOR3> CParticleEvent_Velocity::GetVelocity(uint* param_1) {
-	return CMinMax<D3DXVECTOR3>();
+	return CMinMax<D3DXVECTOR3>(0,0);
 }
 
 /* 1001E950-1001E968 00018	*/

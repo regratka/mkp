@@ -2,7 +2,7 @@
 
 /* 1001DB00-1001DB24 00024	*/
 CMinMax<D3DXCOLOR> CParticleEvent_Color::GetColor(uint* param_1) {
-	return CMinMax<D3DXCOLOR>();
+	return CMinMax<D3DXCOLOR>(D3DXCOLOR(),D3DXCOLOR());
 }
 
 /* 1001DB30-1001DB48 00018	*/

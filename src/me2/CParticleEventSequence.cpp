@@ -10,7 +10,7 @@ void CParticleEventSequence::SetLoop(int param_1) {
 
 /* 1001F650-1001F672 00022	*/
 CMinMax<float> CParticleEventSequence::GetLifetime(uint* param_1) {
-	return CMinMax<float>();
+	return CMinMax<float>(0,0);
 }
 
 /* 1001F680-1001F697 00017	*/
@@ -37,7 +37,7 @@ void CParticleEventSequence::SetDestBlendMode(int param_1) {
 
 /* 1001F6E0-1001F702 00022	*/
 CMinMax<float> CParticleEventSequence::GetEmitRate(uint* param_1) {
-	return CMinMax<float>();
+	return CMinMax<float>(0,0);
 }
 
 /* 1001F710-1001F727 00017	*/
@@ -46,7 +46,7 @@ void CParticleEventSequence::SetEmitRate(uint param_1, uint param_2) {
 
 /* 1001F730-1001F754 00024	*/
 CMinMax<D3DXVECTOR3> CParticleEventSequence::GetEmitRadius(uint* param_1) {
-	return CMinMax<D3DXVECTOR3>();
+	return CMinMax<D3DXVECTOR3>(0,0);
 }
 
 /* 1001F760-1001F778 00018	*/
@@ -55,7 +55,7 @@ void CParticleEventSequence::SetEmitRadius(CMinMax<D3DXVECTOR3>* param_1) {
 
 /* 1001F780-1001F7A4 00024	*/
 CMinMax<D3DXVECTOR3> CParticleEventSequence::GetGravity(uint* param_1) {
-	return CMinMax<D3DXVECTOR3>();
+	return CMinMax<D3DXVECTOR3>(0,0);
 }
 
 /* 1001F7B0-1001F7C8 00018	*/
@@ -146,7 +146,7 @@ bool CParticleEventSequence::IsEnableAnim() {
 
 /* 1001FB90-1001FBB4 00024	*/
 CMinMax<D3DXVECTOR3> CParticleEventSequence::GetSpawnDir(uint* param_1) {
-	return CMinMax<D3DXVECTOR3>();
+	return CMinMax<D3DXVECTOR3>(0,0);
 }
 
 /* 1001FBC0-1001FBD8 00018	*/

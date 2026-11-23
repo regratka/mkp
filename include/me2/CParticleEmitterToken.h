@@ -196,7 +196,7 @@ public:
 		return std::string("**Unknown!**");
 	}
 
-private:
+public:
 	/* 0xd4c */ std::string unk_d4c;
 	/* 0xd5c */ int unk_d5c;
 };

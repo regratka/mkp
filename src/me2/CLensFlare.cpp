@@ -2,7 +2,7 @@
 
 /* 10022600-10022622 00022	*/
 CMinMax<float> CLensFlare::GetIntensity(uint* param_1) {
-	return CMinMax<float>();
+	return CMinMax<float>(0,0);
 }
 
 /* 10022630-10022648 00018	*/

@@ -1,13 +1,13 @@
 {
   "measures": {
-    "fuzzy_match_percent": 30.37214,
+    "fuzzy_match_percent": 30.868477,
     "total_code": "765893",
-    "matched_code": "157463",
-    "matched_code_percent": 20.559399,
+    "matched_code": "159286",
+    "matched_code_percent": 20.797422,
     "matched_data_percent": 100.0,
     "total_functions": 3563,
-    "matched_functions": 1421,
-    "matched_functions_percent": 39.882122,
+    "matched_functions": 1428,
+    "matched_functions_percent": 40.078587,
     "complete_code": "73736",
     "complete_code_percent": 9.627455,
     "complete_data_percent": 100.0,
@@ -4362,7 +4362,7 @@
     {
       "name": "me2/CParticleEmitter",
       "measures": {
-        "fuzzy_match_percent": 0.6086661,
+        "fuzzy_match_percent": 2.131869,
         "total_code": "15495",
         "matched_data_percent": 100.0,
         "total_functions": 43,
@@ -4373,7 +4373,7 @@
         {
           "name": ".text",
           "size": "15495",
-          "fuzzy_match_percent": 0.6086661,
+          "fuzzy_match_percent": 2.131869,
           "metadata": {}
         }
       ],
@@ -4504,7 +4504,7 @@
         {
           "name": "??0CParticleEmitter@@QAE@XZ",
           "size": "1703",
-          "fuzzy_match_percent": 1.9101449,
+          "fuzzy_match_percent": 4.6550727,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitter::CParticleEmitter(void)"
           },
@@ -4521,7 +4521,7 @@
         {
           "name": "??1CParticleEmitter@@UAE@XZ",
           "size": "409",
-          "fuzzy_match_percent": 1.0840336,
+          "fuzzy_match_percent": 47.361343,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticleEmitter::~CParticleEmitter(void)"
           },
@@ -4980,10 +4980,14 @@
     {
       "name": "me2/CParticleEmitterTokenizer",
       "measures": {
-        "fuzzy_match_percent": 1.2901262,
+        "fuzzy_match_percent": 39.520397,
         "total_code": "9326",
+        "matched_code": "1823",
+        "matched_code_percent": 19.5475,
         "matched_data_percent": 100.0,
         "total_functions": 14,
+        "matched_functions": 7,
+        "matched_functions_percent": 50.0,
         "complete_data_percent": 100.0,
         "total_units": 1
       },
@@ -4991,7 +4995,7 @@
         {
           "name": ".text",
           "size": "9326",
-          "fuzzy_match_percent": 1.2901262,
+          "fuzzy_match_percent": 39.520397,
           "metadata": {}
         }
       ],
@@ -4999,6 +5003,7 @@
         {
           "name": "?NextToken@CParticleEmitterTokenizer@@SAXAAPAVCParticleEmitterToken@@0@Z",
           "size": "45",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: static void __cdecl CParticleEmitterTokenizer::NextToken(class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
@@ -5007,7 +5012,7 @@
         {
           "name": "??0CParticleEmitterTokenizer@@QAE@XZ",
           "size": "78",
-          "fuzzy_match_percent": 70.65,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitterTokenizer::CParticleEmitterTokenizer(void)"
           },
@@ -5016,6 +5021,7 @@
         {
           "name": "??0CParticleEmitterTokenizer@@QAE@ABV0@@Z",
           "size": "503",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: __thiscall CParticleEmitterTokenizer::CParticleEmitterTokenizer(class CParticleEmitterTokenizer const &)"
           },
@@ -5024,6 +5030,7 @@
         {
           "name": "??4CParticleEmitterTokenizer@@QAEAAV0@ABV0@@Z",
           "size": "739",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: class CParticleEmitterTokenizer & __thiscall CParticleEmitterTokenizer::operator=(class CParticleEmitterTokenizer const &)"
           },
@@ -5032,7 +5039,7 @@
         {
           "name": "??1CParticleEmitterTokenizer@@UAE@XZ",
           "size": "198",
-          "fuzzy_match_percent": 32.934425,
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual __thiscall CParticleEmitterTokenizer::~CParticleEmitterTokenizer(void)"
           },
@@ -5041,6 +5048,7 @@
         {
           "name": "??_ECParticleEmitterTokenizer@@UAEPAXI@Z",
           "size": "87",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "public: virtual void * __thiscall CParticleEmitterTokenizer::`vector deleting destructor'(unsigned int)"
           },
@@ -5049,6 +5057,7 @@
         {
           "name": "?ProcessNumber@CParticleEmitterTokenizer@@SA_NAAV?$CMinMax@M@@AAPAVCParticleEmitterToken@@1@Z",
           "size": "565",
+          "fuzzy_match_percent": 91.89474,
           "metadata": {
             "demangled_name": "public: static bool __cdecl CParticleEmitterTokenizer::ProcessNumber(class CMinMax<float> &, class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
@@ -5057,6 +5066,7 @@
         {
           "name": "?ProcessVector@CParticleEmitterTokenizer@@SA_NAAV?$CMinMax@UD3DXVECTOR3@@@@AAPAVCParticleEmitterToken@@1@Z",
           "size": "600",
+          "fuzzy_match_percent": 81.27389,
           "metadata": {
             "demangled_name": "public: static bool __cdecl CParticleEmitterTokenizer::ProcessVector(class CMinMax<struct D3DXVECTOR3> &, class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
@@ -5065,6 +5075,7 @@
         {
           "name": "?ProcessColor@CParticleEmitterTokenizer@@SA_NAAV?$CMinMax@UD3DXCOLOR@@@@AAPAVCParticleEmitterToken@@1@Z",
           "size": "734",
+          "fuzzy_match_percent": 79.58247,
           "metadata": {
             "demangled_name": "public: static bool __cdecl CParticleEmitterTokenizer::ProcessColor(class CMinMax<struct D3DXCOLOR> &, class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
@@ -5073,6 +5084,7 @@
         {
           "name": "?ProcessAlphaBlendMode@CParticleEmitterTokenizer@@SA_NAAHAAPAVCParticleEmitterToken@@1@Z",
           "size": "376",
+          "fuzzy_match_percent": 8.024,
           "metadata": {
             "demangled_name": "public: static bool __cdecl CParticleEmitterTokenizer::ProcessAlphaBlendMode(int &, class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
@@ -5081,6 +5093,7 @@
         {
           "name": "?ProcessTime@CParticleEmitterTokenizer@@SA_NAAV?$CMinMax@M@@AA_NMMAAPAVCParticleEmitterToken@@2@Z",
           "size": "377",
+          "fuzzy_match_percent": 63.29091,
           "metadata": {
             "demangled_name": "public: static bool __cdecl CParticleEmitterTokenizer::ProcessTime(class CMinMax<float> &, bool &, float, float, class CParticleEmitterToken *&, class CParticleEmitterToken *&)"
           },
@@ -5089,6 +5102,7 @@
         {
           "name": "?DetermineTokenType@CParticleEmitterTokenizer@@AAEXAAVCParticleEmitterToken@@@Z",
           "size": "3531",
+          "fuzzy_match_percent": 0.08244023,
           "metadata": {
             "demangled_name": "private: void __thiscall CParticleEmitterTokenizer::DetermineTokenType(class CParticleEmitterToken &)"
           },
@@ -5097,6 +5111,7 @@
         {
           "name": "?AddToken@CParticleEmitterTokenizer@@AAEXVCParticleEmitterToken@@@Z",
           "size": "173",
+          "fuzzy_match_percent": 100.0,
           "metadata": {
             "demangled_name": "private: void __thiscall CParticleEmitterTokenizer::AddToken(class CParticleEmitterToken)"
           },
@@ -34896,14 +34911,14 @@
       "id": "Engine",
       "name": "Engine",
       "measures": {
-        "fuzzy_match_percent": 34.29681,
+        "fuzzy_match_percent": 34.99224,
         "total_code": "546625",
-        "matched_code": "114714",
-        "matched_code_percent": 20.985867,
+        "matched_code": "116537",
+        "matched_code_percent": 21.319368,
         "matched_data_percent": 100.0,
         "total_functions": 2406,
-        "matched_functions": 1038,
-        "matched_functions_percent": 43.142147,
+        "matched_functions": 1045,
+        "matched_functions_percent": 43.433086,
         "complete_code": "34020",
         "complete_code_percent": 6.223645,
         "complete_data_percent": 100.0,
