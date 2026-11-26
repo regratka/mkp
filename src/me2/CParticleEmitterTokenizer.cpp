@@ -1,5 +1,19 @@
 #include "CParticleEmitterTokenizer.h"
 
+BLENDINGMODE const CParticleEmitterTokenizer::m_BlendingModes[11] = {
+	{"D3DBLEND_ZERO",1},
+	{"D3DBLEND_ONE",2},
+	{"D3DBLEND_SRCCOLOR",3},
+	{"D3DBLEND_INVSRCCOLOR",4},
+	{"D3DBLEND_SRCALPHA",5},
+	{"D3DBLEND_INVSRCALPHA",6},
+	{"D3DBLEND_DESTALPHA",7},
+	{"D3DBLEND_INVDESTALPHA",8},
+	{"D3DBLEND_DESTCOLOR",9},
+	{"D3DBLEND_INVDESTCOLOR",10},
+	{"D3DBLEND_SRCALPHASAT",11}
+};
+
 /* 10068A90-10068CC5 00235	*/
 bool CParticleEmitterTokenizer::ProcessNumber(CMinMax<float>& param_1, CParticleEmitterToken*& param_2, CParticleEmitterToken*& param_3) {
 	if (param_2->unk_d5c != REAL_NUMBER) {
@@ -140,8 +154,19 @@ bool CParticleEmitterTokenizer::ProcessAlphaBlendMode(int& param_1, CParticleEmi
 	if (param_2->unk_d5c != ALPHA_BLEND_MODE) {
 		throw "Expecting alpha blend mode (D3DBLEND_ZERO, D3DBLEND_ONE, etc.).";
 	}
-	
-	return 0;
+
+	for (int index = 0; index < 11; index++) {
+		if (param_2->unk_d4c.find(m_BlendingModes[index].modeName) == std::string::npos) {
+			continue;
+		}
+		if (param_2->unk_d4c.length() == strlen(m_BlendingModes[index].modeName)) {
+			param_1 = m_BlendingModes[index].blendMode;
+			NextToken(param_2, param_3);
+			return true;
+		}
+	}
+
+	throw "Invalid alpha blending mode!";
 }
 
 /* 10069390-10069509 00179	*/
@@ -159,24 +184,26 @@ bool CParticleEmitterTokenizer::ProcessTime(CMinMax<float>& param_1, bool& param
 		param_2 = false;
 	}
 
-	if (param_5->unk_d5c == KEYWORD_AT) {
-		NextToken(param_5, param_6);
-		ProcessNumber(param_1, param_5, param_6);
-		return true;
-	} else if (param_5->unk_d5c == KEYWORD_INITIAL) {
-		if (param_2) {
-			throw "Cannot use \"fade so\" modifier on \"initial\" times.";
-		}
-		param_1.min = param_3;
-		param_1.max = param_3;
-
-		NextToken(param_5, param_6);
-	} else if (param_5->unk_d5c == KEYWORD_FINAL) {
-		param_1.min = param_4;
-		param_1.max = param_4;
-		NextToken(param_5, param_6);
-	} else {
-		throw "Expected time specifier: \"[fade so] at\", \"initial\", or \"[fade so] final\"";
+	switch (param_5->unk_d5c) {
+		case KEYWORD_AT:
+			NextToken(param_5, param_6);
+			ProcessNumber(param_1, param_5, param_6);
+			break;
+		case KEYWORD_INITIAL:
+			if (param_2) {
+				throw "Cannot use \"fade so\" modifier on \"initial\" times.";
+			}
+			param_1.min = param_3;
+			param_1.max = param_3;
+			NextToken(param_5, param_6);
+			break;
+		case KEYWORD_FINAL:
+			param_1.min = param_4;
+			param_1.max = param_4;
+			NextToken(param_5, param_6);
+			break;
+		default:
+			throw "Expected time specifier: \"[fade so] at\", \"initial\", or \"[fade so] final\"";
 	}
 
 	return true;
@@ -184,6 +211,7 @@ bool CParticleEmitterTokenizer::ProcessTime(CMinMax<float>& param_1, bool& param
 
 /* 10069510-1006A2DB 00DCB	*/
 void CParticleEmitterTokenizer::DetermineTokenType(CParticleEmitterToken& param_1) {
+	param_1.unk_d5c = UNDEFINED;
 }
 
 /* 1006A2E0-1006A38D 000AD	*/
@@ -196,5 +224,13 @@ void CParticleEmitterTokenizer::AddToken(CParticleEmitterToken param_1) {
 
 /* 1006A390-1006A8B8 00528	*/
 void CParticleEmitterTokenizer::Tokenize(const char* param_1) {
+	std::string local_d84;
+	CParticleEmitterToken local_d6c;
+	if (param_1[0] == '\0') {
+		AddToken(local_d6c);
+		return;
+	}
+
+
 }
 

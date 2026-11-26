@@ -38,7 +38,8 @@ enum TokenType {
 	PARTICLE_VECTOR_PROP = 30,
 	PARTICLE_COLOR_PROP = 31,
 	SEQ_NUMERIC_PROP = 32,
-	SEQ_VECTOR_PROP = 33
+	SEQ_VECTOR_PROP = 33,
+	UNDEFINED = 34
 };
 
 class DLLEXPORT CParticleEmitterToken : public cMagUtility {

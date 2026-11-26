@@ -6,6 +6,11 @@
 #include "CMinMax.h"
 #include "CParticleEmitterToken.h"
 
+struct BLENDINGMODE {
+	char modeName[28];
+	int blendMode;
+};
+
 class DLLEXPORT CParticleEmitterTokenizer : public CParticleEmitterToken {
 public:
 	/* 1001CE20-1001CE4D 0002D	*/
@@ -29,7 +34,12 @@ public:
 
 private:
 	/* 0xd60 */ std::vector<CParticleEmitterToken> unk_d60;
+
+public: 
+	/* 1012F940 */ static BLENDINGMODE const m_BlendingModes[11];
 };
+
+
 
 STATIC_ASSERT(sizeof(CParticleEmitterTokenizer) == 0xd70);
 
