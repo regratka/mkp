@@ -212,6 +212,149 @@ bool CParticleEmitterTokenizer::ProcessTime(CMinMax<float>& param_1, bool& param
 /* 10069510-1006A2DB 00DCB	*/
 void CParticleEmitterTokenizer::DetermineTokenType(CParticleEmitterToken& param_1) {
 	param_1.unk_d5c = UNDEFINED;
+
+	if (isdigit(param_1.unk_d4c[0]) || param_1.unk_d4c[0] == '-') {
+		param_1.unk_d5c = REAL_NUMBER;
+		return;
+	}
+
+	if (param_1.unk_d4c[0] == '=') {
+		param_1.unk_d5c = EQUALS;
+		return;
+	}
+	if (param_1.unk_d4c[0] == ',') {
+		param_1.unk_d5c = COMMA;
+		return;
+	}
+	if (param_1.unk_d4c[0] == '(') {
+		param_1.unk_d5c = OPEN_PAREN;
+		return;
+	}
+	if (param_1.unk_d4c[0] == ')') {
+		param_1.unk_d5c = CLOSE_PAREN;
+		return;
+	}
+	if (param_1.unk_d4c[0] == '{') {
+		param_1.unk_d5c = OPEN_BRACE;
+		return;
+	}
+	if (param_1.unk_d4c[0] == '}') {
+		param_1.unk_d5c = CLOSE_BRACE;
+		return;
+	}
+	if (param_1.unk_d4c[0] == '\"') {
+		param_1.unk_d5c = QUOTE;
+		return;
+	}
+
+	for (int index = 0; index < param_1.unk_d4c.length(); index++) {
+		param_1.unk_d4c[index] = toupper(param_1.unk_d4c[index]);
+	}
+
+	if (param_1.unk_d4c.find("PARTICLESYSTEM") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_PARTICLE_SYSTEM;
+		return;
+	}
+	if (param_1.unk_d4c.find("EVENTSEQUENCE") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_EVENT_SEQUENCE;
+		return;
+	}
+	if (param_1.unk_d4c.find("RANDOM") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_RANDOM;
+		return;
+	}
+	if (param_1.unk_d4c.find("XYZ") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_XYZ;
+		return;
+	}
+	if (param_1.unk_d4c.find("RGBA") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_COLOR;
+		return;
+	}
+	if (param_1.unk_d4c.find("FADE") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_FADE;
+		return;
+	}
+	if (param_1.unk_d4c.find("INITIAL") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_INITIAL;
+		return;
+	}
+	if (param_1.unk_d4c.find("FINAL") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_FINAL;
+		return;
+	}
+	if (param_1.unk_d4c.find("TEXTURE") != std::string::npos) {
+		param_1.unk_d5c = KEYWORD_TEXTURE;
+		return;
+	}
+	if (param_1.IsLoop()) {
+		param_1.unk_d5c = KEYWORD_LOOP;
+		return;
+	}
+	if (param_1.IsAnimFrames()) {
+		param_1.unk_d5c = KEYWORD_ANIM_FRAMES;
+		return;
+	}
+	if (param_1.IsFrameWidth()) {
+		param_1.unk_d5c = KEYWORD_FRAME_WIDTH;
+		return;
+	}
+	if (param_1.IsFrameHeight()) {
+		param_1.unk_d5c = KEYWORD_FRAME_HEIGHT;
+		return;
+	}
+	if (param_1.IsFramesPerLine()) {
+		param_1.unk_d5c = KEYWORD_FRAMES_PER_LINE;
+		return;
+	}
+	if (param_1.IsAnimDelay()) {
+		param_1.unk_d5c = KEYWORD_ANIM_DELAY;
+		return;
+	}
+	if (param_1.unk_d4c.find("SO") != std::string::npos) { // && param_1.unk_d4c.length() == 2
+		param_1.unk_d5c = KEYWORD_SO;
+		return;
+	}
+	if (param_1.unk_d4c.find("AT") != std::string::npos) {  // && param_1.unk_d4c.length() == 2
+		param_1.unk_d5c = KEYWORD_AT;
+		return;
+	}
+	if (param_1.unk_d4c.find("D3DBLEND_") != std::string::npos) {
+		param_1.unk_d5c = ALPHA_BLEND_MODE;
+		return;
+	}
+	
+	if (param_1.IsSrcBlendMode() || param_1.IsDestBlendMode()) {
+		param_1.unk_d5c = SEQ_ALPHA_BLEND_MODE_PROP;
+		return;
+	}
+
+	if (param_1.IsLifeTime() || param_1.IsEmitRate() || param_1.IsLoops()) {
+		param_1.unk_d5c = SEQ_NUMERIC_PROP;
+		return;
+	}
+
+	if (param_1.IsSpawnDir() || param_1.IsGravity() 
+			|| param_1.IsEmitRadius() || param_1.IsPosition()) {
+		param_1.unk_d5c = SEQ_VECTOR_PROP;
+		return;
+	}
+
+	if (param_1.unk_d4c.find("SIZE") != std::string::npos 
+			|| param_1.unk_d4c.find("EVENTTIMER") != std::string::npos) {
+		param_1.unk_d5c = PARTICLE_NUMERIC_PROP;
+		return;
+	}
+
+	if (param_1.unk_d4c.find("VELOCITY") != std::string::npos) {
+		param_1.unk_d5c = PARTICLE_VECTOR_PROP;
+		return;
+	}
+
+	if (param_1.unk_d4c.find("COLOR") != std::string::npos) {
+		param_1.unk_d5c = PARTICLE_COLOR_PROP;
+		return;
+	}
 }
 
 /* 1006A2E0-1006A38D 000AD	*/

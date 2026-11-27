@@ -497,7 +497,7 @@
 ;FUN_10015740;0x10015740;0x2e;__stdcall;;void*;void*;void*;void*
 ;FUN_10015770;0x10015770;0x9c;__thiscall;;void*;void*;uint*;uint
 ;FUN_10015810;0x10015810;0x11;__thiscall;;uchar;void*;int
-;FUN_10015830;0x10015830;0x76;__fastcall;;uchar;void*
+;std::string::_Freeze;0x10015830;0x76;__thiscall;;uchar;void*
 ;FUN_100158b0;0x100158b0;0x118;__thiscall;;uint;void*;uint;char
 ;FUN_100159d0;0x100159d0;0xc9;__fastcall;;uchar;void*
 ;FUN_10015aa0;0x10015aa0;0xe0;__thiscall;;uchar;void*;int;int
@@ -2347,7 +2347,7 @@
 ?Tokenize@CParticleEmitterTokenizer@@QAEXPBD@Z;CParticleEmitterTokenizer::Tokenize;0x1006a390;0x528;__thiscall;;void;CParticleEmitterTokenizer*;char*
 ;FUN_1006a8d0;0x1006a8d0;0x11a;__thiscall;;uchar*;void*;uchar*
 ;FUN_1006a9f0;0x1006a9f0;0xc7;__thiscall;;void*;void*;uint;uchar
-;FUN_1006aac0;0x1006aac0;0x82;__thiscall;;uint;void*;char*;uint;uint
+;std::string::find;0x1006aac0;0x82;__thiscall;;uint;void*;char*;uint;uint
 ;FUN_1006ab50;0x1006ab50;0x3ac;__thiscall;;uchar;void*;cMagGameObject*;uint;cMagUtility*
 ;FUN_1006af40;0x1006af40;0xa;__stdcall;;uchar
 ;FUN_1006af50;0x1006af50;0xc;__stdcall;;uchar
@@ -5314,10 +5314,10 @@
 ;FUN_10110bad;0x10110bad;0xae;__cdecl;;uchar;int;uint
 ;_rand;0x10110c5b;0x22;__cdecl;;int
 ;_isalpha;0x10110c7d;0x2e;__cdecl;;uint;int
-;_islower;0x10110cab;0x28;__cdecl;;uint;int
-;_isupper;0x10110cd3;0x28;__cdecl;;int;int
-;FUN_10110cfb;0x10110cfb;0x28;__thiscall;;uint;void*;int
-;FUN_10110d23;0x10110d23;0x28;__thiscall;;uint;void*;int
+;_isupper;0x10110cab;0x28;__cdecl;;uint;int
+;_islower;0x10110cd3;0x28;__cdecl;;int;int
+;_isdigit;0x10110cfb;0x28;__thiscall;;uint;void*;int
+;_isspace;0x10110d23;0x28;__thiscall;;uint;void*;int
 ;snprintf_2;0x10110d4b;0x51;__cdecl;varargs;int;char*;int;char*
 ;__alldiv;0x10110da0;0xaa;__stdcall;;undefined8;uint;uint;uint;uint
 ;_strncmp;0x10110e50;0x38;__cdecl;;int;char*;char*;uint
